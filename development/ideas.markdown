@@ -3,6 +3,7 @@
 The best way to get starting developing for LiquiBase is to work on a particular bug or feature that would help you.
 
 If you don't know what would help, here are some ideas:
+  * [[../manual/hibernate|Hibernate integration]]
   * DSL alternative(s) to the XML-based changelog
   * Improvements to [[../manual/diff]] tool
   * [[../dotnetport|.Net port]]
@@ -13,4 +14,3 @@ If you don't know what would help, here are some ideas:
   * More change tags ([[http://www.agiledata.org/essays/databaseRefactoringCatalog.html|ideas]]
   * Additional [[../databases|database support]]
   * Unit test improvements
-

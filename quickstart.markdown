@@ -49,7 +49,7 @@ Think of each change set as an atomic change that you want to apply to your data
 
 ===== Step 3: Run the ChangeSet =====
 
-There are many ways to execute your change log including via [[manual/command line]], [[manual/Ant]], [[manual/Maven]], [[manual/Grails]], and a [[manual/servlet listener]].
+There are many ways to execute your change log including via [[manual/command line]], [[manual/Ant]], [[manual/Maven]], [[manual/Grails]], Spring and a [[manual/servlet listener]].
 
 Here is an example for mysql via jdbc:
 

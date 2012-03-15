@@ -29,7 +29,7 @@ Liquibase has been designed for Java 1.5 and greater.
 
 ==== Installation ====
 
-Extract liquibase.zip. In it you will find a //liquibase-VERSION.jar// This jar is all that is needed to run Liquibase from the [[manual/command line]], [[manual/ant|Ant]], [[manual/maven|Maven]], [[manual/spring|Spring]], or a [[manual/servlet_listener|servlet container]]. You can run the [[manual/command_line|command line]] version of the migrator with the same jar file by simply running //java -jar liquibase-VERSION.jar//.
+Extract liquibase.zip. In it you will find a //liquibase-VERSION.jar// This jar is all that is needed to run Liquibase from the [[manual/command line]], [[manual/ant|Ant]], [[manual/maven|Maven]], [[manual/spring|Spring]], , [[manual/cdi|CDI]], or a [[manual/servlet_listener|servlet container]]. You can run the [[manual/command_line|command line]] version of the migrator with the same jar file by simply running //java -jar liquibase-VERSION.jar//.
 
 ===== Source Code Download =====
 

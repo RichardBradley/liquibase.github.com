@@ -29,6 +29,7 @@
       * [[Servlet Listener]]
       * [[Command Line]]
       * [[Spring]]
+      * [[cdi|CDI]]
       * [[Grails]]
     * LiquiBase Development
       * [[Architecture]]

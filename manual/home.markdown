@@ -30,6 +30,7 @@
   * [[Ant]]
   * [[Maven]]
   * [[Spring]]
+  * [[cdi|CDI]]  
   * [[Grails]]
   * [[Servlet Listener]]
   * [[Command Line]]

@@ -1,3 +1,8 @@
+---
+layout: default
+title: FAQ
+---
+
 ====== Database Change Management ======
 
 {{ :sql-database.jpg}} **You never develop code without version control, why do you develop your database without it?**

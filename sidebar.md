@@ -1,16 +1,21 @@
-  * [[home|Home]]
+---
+layout: default
+title: Sidebar
+---
+
+  * [[home.html|Home]]
   * [[http://blog.liquibase.org/|Blog]]
-  * [[Download]]
+  * [[Download.html]]
   * [[http://liquibase.org/extensions|Extension Portal]]
-  * [[quickstart|Quick-Start]]
-  * [[bestpractices|Best Practices]]
-  * [[manual/home|Manual]]
-  * [[Community]]
-  * [[databases|Supported Databases]]
-  * [[faq|FAQ]]
-  * [[Articles]]
-  * [[training|Training Videos]]
-  * [[History]]
-  * [[future|Future Directions]]
+  * [[quickstart.html|Quick-Start]]
+  * [[bestpractices.html|Best Practices]]
+  * [[manual/home.html|Manual]]
+  * [[Community.html]]
+  * [[databases.html|Supported Databases]]
+  * [[faq.html|FAQ]]
+  * [[Articles.html]]
+  * [[training.html|Training Videos]]
+  * [[History.html]]
+  * [[future.html|Future Directions]]
   * [[http://liquibase.jira.com/browse/CORE|Issue Tracker]]
   * [[http://liquibase.com|Support and Training]]

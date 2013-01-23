@@ -1,14 +1,19 @@
-====== Drop Column Refactoring ======
+---
+layout: default
+title: Drop column
+---
+
+# Drop Column Refactoring #
 
 Drops an existing column
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <dropColumn tableName="person" columnName="ssn"/>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName  | Name of the table containing the column to drop **[required]**  | 
 ^ schemaName  | Name of the table schema  | 
@@ -16,7 +21,7 @@ Drops an existing column
 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

@@ -1,8 +1,13 @@
-====== Add Not-Null Constraint ======
+---
+layout: default
+title: Add not-null constraint
+---
+
+# Add Not-Null Constraint #
 
 Adds a not-null constraint to an existing table. If a defaultNullValue attribute is passed, all null values for the column will be updated to the passed value before the constraint is applied.
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <addNotNullConstraint
@@ -11,7 +16,7 @@ Adds a not-null constraint to an existing table. If a defaultNullValue attribute
         defaultNullValue="1" />
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName  | Name of the table to add the constraint to **[required]**  | 
 ^ schemaName  | Name of the table schema  | 
@@ -20,7 +25,7 @@ Adds a not-null constraint to an existing table. If a defaultNullValue attribute
 ^ columnDataType  | Current data type of the column (MySQL & MS-SQL only) **[required]** | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

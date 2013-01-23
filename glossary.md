@@ -1,8 +1,13 @@
-====== Glossary of Terms ======
+---
+layout: default
+title: Glossary
+---
 
-===== A =====
-===== B =====
+# Glossary of Terms #
+
+## A ##
+## B ##
   * [[glossary:Base| Base Database]]
-===== T =====
+## T ##
   * [[glossary:Target| Target Database]]
-===== Z =====
+## Z ##

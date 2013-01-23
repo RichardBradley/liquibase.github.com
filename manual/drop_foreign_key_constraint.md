@@ -1,8 +1,13 @@
-====== Drop Foreign Key Constraint ======
+---
+layout: default
+title: Drop foreign key constraint
+---
+
+# Drop Foreign Key Constraint #
 
 Drops an existing foreign key
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <dropForeignKeyConstraint
@@ -10,14 +15,14 @@ Drops an existing foreign key
     baseTableName="address"/>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ constraintName  | Name of the foreign-key constraint to drop **[required]**  | 
 ^ baseTableName  | Name of the table containing the foreign key **[required]**  | 
 ^ baseTableSchemaName  | Name of the table schema  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

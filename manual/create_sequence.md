@@ -1,8 +1,13 @@
-====== Create Sequence ======
+---
+layout: default
+title: Create sequence
+---
+
+# Create Sequence #
 
 Creates a new database sequence.
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <createSequence sequenceName="seq_employee_id"/>
@@ -10,7 +15,7 @@ Creates a new database sequence.
 
 
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ sequenceName  | Name of the sequence to create **[required]**  |
 ^ schemaName  | Name of the table schema  |
@@ -21,7 +26,7 @@ Creates a new database sequence.
 ^ startValue  | The first sequence number to be generated  |
 
 
-===== Database Compatiblity ======
+## Database Compatiblity #
 
 ^ MySQL  | No Sequence Support in Database  | 
 ^ PostgreSQL  | No Issues  | 

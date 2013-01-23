@@ -1,4 +1,9 @@
-====== Generate LiquiBase changeLogs using Groovy ======
+---
+layout: default
+title: Generate-changelog-with-groovy
+---
+
+# Generate LiquiBase changeLogs using Groovy #
 
 In this tutorial, we will show how you can use a Groovy script to generate Liquibase change logs. Groovy makes it very easy to write XML, and it is a great all-purpose scripting language. There are plenty of tutorials available on Groovy and XML, so we won't cover these subjects here.
 
@@ -10,7 +15,7 @@ In this article, we will populate the table definition objects manually. But it 
 
 
 
-====== The first script ======
+# The first script #
 Our first script will produce a minimal changelog.
 Note that the MarkupBuilder cannot output an XML declaration (unlike the StreamingMarkupBuilder), so the declaration is written to the file before invoking the builder.
 
@@ -58,7 +63,7 @@ In Groovy, this is equivalent to passing a map with 2 entries to the method. We 
 
 
 
-====== Defining the Table class ======
+# Defining the Table class #
 A table object contains several other objects:
   * columns
   * primary key
@@ -179,7 +184,7 @@ The output is:
 
 You can see how concise and readable the Groovy code is.
 
-====== Completing the Table class ======
+# Completing the Table class #
 As the final example, we will complete the Table class with:
   * primary key
   * unique constraints
@@ -319,5 +324,5 @@ class Index {
 }
 </code>
 
-====== Conclusion ======
+# Conclusion #
 If you need to generate a LiquiBase changelog from a structured source, Groovy provides you an easy way to script this task.

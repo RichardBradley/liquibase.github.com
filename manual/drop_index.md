@@ -1,9 +1,14 @@
-====== Drop Index ======
+---
+layout: default
+title: Drop index
+---
+
+# Drop Index #
 
 Drops an existing index
 
 
-===== Sample =====
+## Sample ##
 <!-- Works on Oracle on Liquibase 1.6;  Does not work for SQL Server. -->
 <code xml>
 <dropIndex indexName="idx_user_username"/>
@@ -14,13 +19,13 @@ Drops an existing index
 <dropIndex indexName="idx_user_username" tableName="table_name" />
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ indexName  | Name of the index to drop **[required]**  | 
 ^ tableName  | Name of the indexed table **[required]**  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

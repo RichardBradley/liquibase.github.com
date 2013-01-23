@@ -1,41 +1,45 @@
-====== Liquibase Manual ======
+---
+layout: default
+title: Home
+---
+
+# Liquibase Manual #
 
 
 
-===== Introduction =====
-  * [[Overview]]
+## Introduction ##
+  * [[Overview.html]]
 
 
-===== Building Change-Logs =====
-  * <[[DatabaseChangeLog]]>
-  * <[[ChangeSet]]>
-    * [[Refactoring commands]]
-  * <[[Include]]>
-  * <[[IncludeAll]]>
-  * <[[Preconditions]]>
-  * [[Contexts]]
-  * [[ChangeLog Parameters]]
-  * [[Hibernate|Hibernate Integration]]
-  * [[Formatted SQL Changelogs]]
+## Building Change-Logs ##
+  * <[[DatabaseChangeLog.html]]>
+  * <[[ChangeSet.html]]>
+    * [[Refactoring_commands.html]]
+  * <[[Include.html]]>
+  * <[[IncludeAll.html]]>
+  * <[[Preconditions.html]]>
+  * [[Contexts.html]]
+  * [[ChangeLog_Parameters.html]]
+  * [[Hibernate.html|Hibernate Integration]]
+  * [[Formatted_SQL_Changelogs.html]]
 
-===== Liquibase Functionality =====
-  * [[Update]]
-  * [[Rollback]]
-  * [[Diff]]
-  * [[generating_changelogs|Generate Changelog]]
-  * [[DBDoc]]
-  * [[SQL Output]]
+## Liquibase Functionality ##
+  * [[Update.html]]
+  * [[Rollback.html]]
+  * [[Diff.html]]
+  * [[generating_changelogs.html|Generate Changelog]]
+  * [[DBDoc.html]]
+  * [[SQL_Output.html]]
 
-===== Running Liquibase =====
-  * [[Ant]]
-  * [[Maven]]
-  * [[Spring]]
-  * [[cdi|CDI]]  
-  * [[Grails]]
-  * [[Servlet Listener]]
-  * [[Command Line]]
+## Running Liquibase ##
+  * [[Ant.html]]
+  * [[Maven.html]]
+  * [[Spring.html]]
+  * [[Grails.html]]
+  * [[servlet_listener.html]]
+  * [[command_line.html]]
 
-===== Sample Change Logs =====
+## Sample Change Logs ##
   * [[http://www.liquibase.org/samples/changelogs/mysql.changelog.xml|MySQL]]
   * [[http://www.liquibase.org/samples/changelogs/pgsql.changelog.xml|PostgreSQL]]
   * [[http://www.liquibase.org/samples/changelogs/oracle.changelog.xml|Oracle]]
@@ -43,7 +47,7 @@
   * [[http://www.liquibase.org/samples/changelogs/db2.changelog.xml|DB2]]
   * [[http://www.liquibase.org/samples/changelogs/derby.changelog.xml|Derby]]
   * [[http://www.liquibase.org/samples/changelogs/hsql.changelog.xml|HSQL]]
-===== Liquibase Development =====
-  * [[Development Overview]]
-  * [[Architecture]]
+## Liquibase Development ##
+  * [[Development_Overview.html]]
+  * [[Architecture.html]]
   * [[http://www.liquibase.org/api/index.html|API (Javadoc)]]

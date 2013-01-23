@@ -1,4 +1,9 @@
-====== Create Table ======
+---
+layout: default
+title: Create table
+---
+
+# Create Table #
 
 <createTable tableName="person">
     <column name="id" type="int">
@@ -12,7 +17,7 @@
      <column name="testid" type="int" />
 </createTable>
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <createTable tableName="person">
@@ -29,7 +34,7 @@
 </code>
 
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName  | Name of the table to create **[required]**  | 
 ^ schemaName  | Name of the table schema  | 
@@ -37,16 +42,16 @@
 ^ remarks  | Short description of the table (table comment)  | 
 
 
-===== Available Sub-Tags =====
+## Available Sub-Tags ##
 
-^ column  | Column(s) to create in the table. The Column tag can contain constraint and foreign key information. See the [[column|column tag documentation]] for more information **[required]**  | 
-
-
+^ column  | Column(s) to create in the table. The Column tag can contain constraint and foreign key information. See the [[column.html|column tag documentation]] for more information **[required]**  |
 
 
-===== Database Compatiblity =====
 
-^ MySQL  | Does not support tablespaces.To specify storage engine use [[custom_sql]] tag|
+
+## Database Compatiblity ##
+
+^ MySQL  | Does not support tablespaces.To specify storage engine use [[custom_sql.html]] tag|
 ^ PostgreSQL  | No Issues  | 
 ^ Oracle  | No Issues  | 
 ^ MS-SQL  | No Issues  | 

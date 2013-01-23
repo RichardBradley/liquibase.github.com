@@ -1,4 +1,9 @@
-====== History ======
+---
+layout: default
+title: History
+---
+
+# History #
 **12/19/2010** Version 2.0 was released featuring major changes to codebase, focusing on extension/integration APIs
 
 **1/7/2009** Version 1.9 was released featuring modifySql, enhanced "include" support, and Sybase Adaptive SQL Anywhere support
@@ -38,7 +43,7 @@
 Liquibase tool has been used internally by [[http://www.sundog.net|Sundog]] for a number of years on a wide variety of projects. In 2006 it was released it as an open source tool.
  
 
-====== Contributors ======
+# Contributors #
 
 We would like to thank the following people who have contributed code and time to the Liquibase project over the years:
 

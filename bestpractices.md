@@ -1,10 +1,15 @@
-====== Liquibase Best Practices ======
+---
+layout: default
+title: Bestpractices
+---
+
+# Liquibase Best Practices #
 This page describes a number of best practices that you can apply on your project.
 
-===== Organizing your changeLogs =====
+## Organizing your changeLogs ##
 The most common way to organize your changelogs is by major release.  Choose a package in your classpath to store the changelogs, preferably near your database access classes.  In this example, we will use com/example/db/changelog
 
-==== Directory Structure ====
+### Directory Structure ###
 <code>
 com
   example
@@ -18,7 +23,7 @@ com
       AbstractDAO.java
 </code>
 
-==== db.changelog-master.xml ====
+### db.changelog-master.xml ###
 
 The master.xml includes the changelog for the releases in the correct order. In the example above it could look like this:
 <code>
@@ -37,10 +42,10 @@ The master.xml includes the changelog for the releases in the correct order. In 
 
 The db.changelog-master.xml is the changelog you pass to all Liquibase calls.
 
-===== ChangeSet Ids =====
+## ChangeSet Ids ##
 Choose what works for you.  Some use a sequence number starting from 1 and unique within the changelog, some choose a descriptive name (e.g. 'new-address-table').
 
-===== Procedure for the developer =====
+## Procedure for the developer ##
   - Using his favorite IDE or XML editor, create a new local changeSet containing the change; 
   - Run Liquibase to execute the new changeSet (this tests the SQL code); 
   - Perform the corresponding changes in the application code (e.g., Java code); 

@@ -1,4 +1,9 @@
-====== Maven Liquibase Plugin ======
+---
+layout: default
+title: Maven
+---
+
+# Maven Liquibase Plugin #
 
 Liquibase can be controlled via a Maven plug-in which can be obtained from the central Maven repository.
 
@@ -8,43 +13,43 @@ You can find the all the versions of the Liquibase-core and Maven plugins in the
 
 
 
-===== Goals Available =====
-  * [[maven changeLogSync|liquibase:changeLogSync]]
-  * [[maven changeLogSyncSQL|liquibase:changeLogSyncSQL]]
-  * [[maven clearCheckSums|liquibase:clearCheckSums]]
-  * [[maven dropAll|liquibase:dropAll]]
-  * [[maven listLocks|liquibase:listLocks]]
-  * [[maven releaseLocks|liquibase:releaseLocks]]
-  * [[maven rollback|liquibase:rollback]]
-  * [[maven rollbackSQL|liquibase:rollbackSQL]]
-  * [[maven status|liquibase:status]]
-  * [[maven tag|liquibase:tag]]
-  * [[maven update|liquibase:update]]
-  * [[maven updateSQL|liquibase:updateSQL]]
-  * [[maven updateTestingRollback|liquibase:updateTestingRollback]]
-  * [[maven migrate|liquibase:migrate]] //**DEPRECATED** use update instead//
-  * [[maven migrateSQL|liquibase:migrateSQL]] //**DEPRECATED** use updateSQL instead//
+## Goals Available ##
+  * [[maven_changeLogSync.html|liquibase:changeLogSync]]
+  * [[maven_changeLogSyncSQL.html|liquibase:changeLogSyncSQL]]
+  * [[maven_clearCheckSums.html|liquibase:clearCheckSums]]
+  * [[maven_dropAll.html|liquibase:dropAll]]
+  * [[maven_listLocks.html|liquibase:listLocks]]
+  * [[maven_releaseLocks.html|liquibase:releaseLocks]]
+  * [[maven_rollback.html|liquibase:rollback]]
+  * [[maven_rollbackSQL.html|liquibase:rollbackSQL]]
+  * [[maven_status.html|liquibase:status]]
+  * [[maven_tag.html|liquibase:tag]]
+  * [[maven_update.html|liquibase:update]]
+  * [[maven_updateSQL.html|liquibase:updateSQL]]
+  * [[maven_updateTestingRollback.html|liquibase:updateTestingRollback]]
+  * [[maven_migrate.html|liquibase:migrate]] //**DEPRECATED** use update instead//
+  * [[maven_migrateSQL.html|liquibase:migrateSQL]] //**DEPRECATED** use updateSQL instead//
 
 
-===== Configuration and Usage =====
+## Configuration and Usage ##
 
 Configuration of the plugin is done via the <plugins> section of the pom.xml, specifying the configuration and execution phase to bind the plugin to.
 
 Each goal has its own configuration parameters, but some of which are common to other plugin goals, for more information on all the configuration parameters available for a specific goal click on the link to goal above.
 
 
-=== Paths to files ===
-As of version 1.6.1.0 of the Maven plugin all files are resolved from the maven test classpath for the Maven project or an absolute path. This allows for [[DatabaseChangeLog]]s to be present in other Maven artifacts (on the classpath) and able to be used to invoke liquibase on a database. 
+#### Paths to files ####
+As of version 1.6.1.0 of the Maven plugin all files are resolved from the maven test classpath for the Maven project or an absolute path. This allows for [[DatabaseChangeLog.html]]s to be present in other Maven artifacts (on the classpath) and able to be used to invoke liquibase on a database.
 
 
-=== Using Configuration Property Files ===
+#### Using Configuration Property Files ####
 Configuration settings for the Maven Liquibase plugin can be specified in standard Java Property files. If a [[liquibase.properties|configuration property file]] is specified it will be used to setup the properties for the invocation of the Maven Liquibase plugin. 
 
 For each property defined in the file that matches a property in the goal being invoked that property of the goal will be set. If the property does not match any of the properties for the goal, then a warning will be displayed to the user, but execution will continue.
 
-The reason for only printing a warning is to allow a user to define a single master configuration property file that can be resused for multiple Maven Liquibase goals like [[maven update|liquibase:update]] and [[maven tag|liquibase:tag]].
+The reason for only printing a warning is to allow a user to define a single master configuration property file that can be resused for multiple Maven Liquibase goals like [[maven_update.html|liquibase:update]] and [[maven_update.html|liquibase:tag]].
 
-== Using both a Configuration Property File and specifying Configuration Values ==
+##### Using both a Configuration Property File and specifying Configuration Values #####
 It is possible to specify a Configuration Property File and individual Properties in the <configuration> section of the Maven Liquibase plugin. 
 
 If this is done the properties specified in the <configuration> section will be used in preference over those defined in the properties file. 
@@ -52,7 +57,7 @@ If this is done the properties specified in the <configuration> section will be 
 If this behaviour is not desirable, then the properties file can be setup to override the specified properties in the <configuration> section by adding the following to the <configuration> section; 
 <code xml><propertyFileWillOverride>true</propertyFileWillOverride></code>
 
-=== Example of Maven Liquibase Update ===
+#### Example of Maven Liquibase Update ####
 
 You need to ensure that you include the relevant JDBC driver for your database in the dependency section of Maven POM file.
 
@@ -92,7 +97,7 @@ Oracle example (thin driver):
 </code>
 
 
-The following is a sample configuration for the Liquibase Maven plugin, version 1.6.1.0, showing an example of the [[maven update|liquibase:update]] goal;
+The following is a sample configuration for the Liquibase Maven plugin, version 1.6.1.0, showing an example of the [[maven_update.html|liquibase:update]] goal;
 
 <code xml>
   <project>
@@ -121,7 +126,7 @@ The following is a sample configuration for the Liquibase Maven plugin, version 
   </project>
 </code>
 
-This example configuration will execute the [[maven update|liquibase:update]] goal as part of the process-resources phase of the build. The parameters (database url, password, etc...) for running Liquibase are specified in the src/main/resources/liquibase.properties. 
+This example configuration will execute the [[maven_update.html|liquibase:update]] goal as part of the process-resources phase of the build. The parameters (database url, password, etc...) for running Liquibase are specified in the src/main/resources/liquibase.properties.
 
 Note that the path to the file src/main/resources/liquibase.properties could be shortened to liquibase.properties if there was only one on the classpath.
 
@@ -152,12 +157,12 @@ All the parameters for executing the Maven Liquibase plugin can also be specifie
   [...]
 </code>
 
-=== Further configuration properties ===
+#### Further configuration properties ####
 Add <code xml><promptOnNonLocalDatabase>false</promptOnNonLocalDatabase></code> as configuration parameter to disable the dialog popping up which confirms migrations on non-local databases. 
 
 The maven command <code>mvn help:describe -DgroupId=org.liquibase -DartifactId=liquibase-maven-plugin -Dversion=2.0.1 -Dfull=true</code> will give you hints about all available configuration parameters within the Liquibase maven plugin.
 
-=== Using a global configuration for multiple projects ===
+#### Using a global configuration for multiple projects ####
 edited on [Oct 31th, 2008]
 
 Through the usage of a parent-pom (some call it company super-pom) it is possible to have a centralized Liquibase plugin configuration that applies to all your Maven child projects. For a detailed explanation of the super-pom concept, see [[http://maven.apache.org/guides/introduction/introduction-to-the-pom.html|Maven manual Pom section]].

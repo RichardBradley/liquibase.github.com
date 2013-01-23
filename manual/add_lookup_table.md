@@ -1,8 +1,13 @@
-====== Add Lookup Table ======
+---
+layout: default
+title: Add lookup table
+---
+
+# Add Lookup Table #
 
 Creates a lookup table containing values stored in a column and creates a foreign key to the new table.
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <addLookupTable
@@ -13,7 +18,7 @@ Creates a lookup table containing values stored in a column and creates a foreig
 </code>
 
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ existingTableName  | Name of the table containing the data to extract **[required]**  | 
 ^ existingTableSchemaName  | Name of the existing table schema  | 
@@ -25,7 +30,7 @@ Creates a lookup table containing values stored in a column and creates a foreig
 ^ constraintName  | Name of the foreign-key constraint to create between the existing table and the lookup table **[required]**  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

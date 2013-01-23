@@ -1,9 +1,14 @@
-====== Add Unique Constraint ======
+---
+layout: default
+title: Add unique constraint
+---
+
+# Add Unique Constraint #
 
 Adds a unique constrant to an existing column or set of columns.
 
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <addUniqueConstraint tableName="person"
@@ -11,7 +16,7 @@ Adds a unique constrant to an existing column or set of columns.
     constraintName="pk_person"/>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName  | Name of the table to create the unique constraint on **[required]**  | 
 ^ schemaName  | Name of the table schema
@@ -20,7 +25,7 @@ Adds a unique constrant to an existing column or set of columns.
 ^ tablespace  | "Tablespace" (file group in SQL Server) to create the index in | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | Does not support tablespaces  | 
 ^ PostgreSQL  | No Issues  | 

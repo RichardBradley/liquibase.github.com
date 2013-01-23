@@ -1,4 +1,9 @@
-====== Informix ======
+---
+layout: default
+title: Informix
+---
+
+# Informix #
 
 With the the JDBC located in the same directory as liquibase: 
 

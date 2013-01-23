@@ -1,4 +1,9 @@
-====== LiquiBase Overview ======
+---
+layout: default
+title: Overview
+---
+
+# LiquiBase Overview #
 
 With LiquiBase, developers store database changes in XML-based files on their local development machines and apply them to their local databases. As those changes get committed to the source control system and are distributed to other developers, changes are applied to those local developer databases, to the integration databases, staging databases, and even to live production databases. Changes may be applied through several methods, either via an Ant or Maven task, a command line program, or automatically during application or application server startup.
 

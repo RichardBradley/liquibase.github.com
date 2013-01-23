@@ -1,4 +1,9 @@
-====== Servlet Listener ======
+---
+layout: default
+title: Servlet listener
+---
+
+# Servlet Listener #
 
 LiquiBase can be run via a servlet listener. This allows you to have your database be updated automatically whenever the site is deployed. Since LiquiBase uses distributed locking, this method will work just fine even if you have a cluster of application servers.
 
@@ -70,7 +75,7 @@ To configure the servlet listener, simply add liquibase.jar to your WEB-INF/lib 
 </listener>
 </code>  
 
-===== Available context-parameters: =====
+## Available context-parameters: ##
 
 ^ Param for 1.9.x ^ Param for 2.0 ^ Description ^
 | LIQUIBASE_CHANGELOG | liquibase.changelog | Specifies the changelog file to run **[required]**  | 
@@ -78,6 +83,6 @@ To configure the servlet listener, simply add liquibase.jar to your WEB-INF/lib 
 | LIQUIBASE_HOST_EXCLUDES | liquibase.host.excludes | Specify host names on which you do NO want LiquiBase to run. Specifying this parameter allows you to deploy the same WAR/EAR to multiple machines in different environments and not have LiquiBase run on all of them.  | 
 | LIQUIBASE_HOST_INCLUDES | liquibase.host.includes | Specify the ONLY host names on which want LiquiBase to run. Specifying this parameter allows you to deploy the same WAR/EAR to multiple machines in different environments and not have LiquiBase run on all of them.  | 
 | LIQUIBASE_FAIL_ON_ERROR | liquibase.onerror.fail | Specify if an exception is thrown by LiquiBase if an error occurs. Setting the value to "true" (default) will cause the exception to be thrown and keep the site from initializing properly. Setting the value to "false" will allow the site to deploy as normal, but the database will be in an undefined state.  | 
-| LIQUIBASE_CONTEXTS | liquibase.contexts | A comma separated lists of the [[contexts]] to run in.  | 
+| LIQUIBASE_CONTEXTS | liquibase.contexts | A comma separated lists of the [[contexts.html]] to run in.  |
 
 If you want to control servers that run LiquiBase but don't want to set the LIQUIBASE_HOST_EXCLUDES/LIQUIBASE_HOST_INCLUDES attributes, you can specify the "liquibase.should.run=[true/false]" system property.

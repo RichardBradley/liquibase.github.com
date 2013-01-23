@@ -1,21 +1,26 @@
-====== Rename View ======
+---
+layout: default
+title: Rename view
+---
+
+# Rename View #
 
 Renames an existing view
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <renameView oldViewName="personView" newViewName="people"/>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ oldViewName  | Name of the view to rename **[required]**  | 
 ^ newViewName  | Name to rename the view to **[required]**  | 
 ^ schemaName  | Name of the view schema  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

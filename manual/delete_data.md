@@ -1,8 +1,13 @@
-====== Delete Data ======
+---
+layout: default
+title: Delete data
+---
+
+# Delete Data #
 
 Deletes data from an existing table
 
-===== Samples =====
+## Samples ##
 
 <code xml>
 <delete tableName="People">
@@ -15,17 +20,17 @@ Deletes data from an existing table
 </delete>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName  | Name of the table to delete data from  | 
 ^ schemaName  | Name of the table schema  | 
 
-===== Available Sub-Tags =====
+## Available Sub-Tags ##
 
 ^ where [TEXT]  | Where clause for delete statement | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

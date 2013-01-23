@@ -1,6 +1,11 @@
-====== <changeSet> tag ======
+---
+layout: default
+title: Changeset
+---
 
-The changeSet tag is what you use to group database changes/[[refactoring_commands|refactoring]]s together.
+# <changeSet> tag #
+
+The changeSet tag is what you use to group database changes/[[refactoring_commands.html|refactoring]]s together.
 
 <code xml>
 <?xml version="1.0" encoding="UTF-8"?>
@@ -32,7 +37,7 @@ LiquiBase attempts to execute each changeSet in a transaction that is committed 
 
 
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ id  | An alpha-numeric identifier **[required]** |
 ^ author  | The creator of the change set **[required]**  |
@@ -45,19 +50,19 @@ LiquiBase attempts to execute each changeSet in a transaction that is committed 
 
 
 
-===== Available Sub-Tags =====
+## Available Sub-Tags ##
 
 ^ comment  | A description of the change set.  XML comments will provide the same benefit, future releases of LiquiBase may be able to make use of <comment> tag comments to generate documentation |
-^ preConditions | [[Preconditions]] that must pass before the change set will be executed.  Useful for doing a data sanity check before doing something unrecoverable such as a dropTable //Since 1.7// |
-^ <Any Refactoring Tag(s)>  | The database change(s) to run as part of this change set (so called [[refactoring_commands|refactoring]]s) |
+^ preConditions | [[Preconditions.html]] that must pass before the change set will be executed.  Useful for doing a data sanity check before doing something unrecoverable such as a dropTable //Since 1.7// |
+^ <Any Refactoring Tag(s)>  | The database change(s) to run as part of this change set (so called [[refactoring_commands.html|refactoring]]s) |
 ^ validCheckSum | When comparing the changeSet stored in the database with the checksum generated from the current changeSet, do not consider the changeSet changed if the given validCheckSum is in the database. Use primarily when you need to change a changeSet and don't want errors thrown on databases on which is has already ran (not a recommended procedure).  //Since 1.7// |
-^ rollback | SQL statements or refactoring tags that describe how to [[rollback]] the change set |
+^ rollback | SQL statements or refactoring tags that describe how to [[rollback.html]] the change set |
 
-==== Rollback Tag ====
+### Rollback Tag ###
 
 The rollback tag describes how to roll back a change using SQL statement(s), change tags, or a reference to a previous change set.
 
-=== Rollback Tag Examples ===
+#### Rollback Tag Examples ####
 
 <code xml>
 <changeSet id="1" author="bob">
@@ -86,7 +91,7 @@ The rollback tag describes how to roll back a change using SQL statement(s), cha
 
 
 
-===== ChangeSet Check Sums =====
+## ChangeSet Check Sums ##
 
 When LiquiBase reaches a changeSet, it computes a check sum and stores it in the "databasechangelog". The value of storing the check sum is so that LiquiBase can know if someone changed the changes in the changeSet since it was run. If the changeSet was changed since it was run, LiquiBase will exit the migration with an error because it cannot know what was changed and the database may be in a state different than what the changeLog is expecting. If there was a valid reason for the changeSet to have been changed and you want to ignore this error, update the databasechangelog table so that the row with the corresponding id/author/filepath has a null value for the check sum. The next time LiquiBase runs, it will update the check sum value to the new correct value.
 

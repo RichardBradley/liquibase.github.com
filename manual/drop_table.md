@@ -1,20 +1,25 @@
-====== Drop Table ======
+---
+layout: default
+title: Drop table
+---
+
+# Drop Table #
 
 Drops an existing table.
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <dropTable tableName="person" schemaName="mySchema"/>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName  | Name of the table to drop **[required]**  | 
 ^ schemaName  | Name of the table schema  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

@@ -1,8 +1,13 @@
-====== Liquibase Quick-Start ======
+---
+layout: default
+title: Quickstart
+---
 
-===== Step 1: Create a Changelog File: =====
+# Liquibase Quick-Start #
 
-The [[manual/databasechangelog|database changelog file]] is where all database changes are listed. It is XML based, so start with an empty XML file:
+## Step 1: Create a Changelog File: ##
+
+The [[manual/databasechangelog.html|database changelog file]] is where all database changes are listed. It is XML based, so start with an empty XML file:
 
 <code xml>
 <?xml version="1.0" encoding="UTF-8"?>
@@ -17,9 +22,9 @@ The [[manual/databasechangelog|database changelog file]] is where all database c
 </code>                    
 
 
-===== Step 2: Add a ChangeSet =====
+## Step 2: Add a ChangeSet ##
 
-Each [[manual/changeset|change set]] is uniquely identified by an "id" attribute and an "author" attribute. These two tags, along with the name and package of the changelog file uniquely identify the change. If only an "id" needed to be specified, it would be too easy to accidentally duplicate them, especially when dealing with multiple developers and code branches. Including an "author" attribute minimizes the chances of duplications.
+Each [[manual/changeset.html|change set]] is uniquely identified by an "id" attribute and an "author" attribute. These two tags, along with the name and package of the changelog file uniquely identify the change. If only an "id" needed to be specified, it would be too easy to accidentally duplicate them, especially when dealing with multiple developers and code branches. Including an "author" attribute minimizes the chances of duplications.
 
 Think of each change set as an atomic change that you want to apply to your database. It's usually best to include just one change in your change set, but more are allowed and can make sense if you are inserting multiple rows that should be added as a single transaction.  Liquibase will attempt to run each change set as a single transaction, but many databases will silently commit and resume transactions for certain commands (create table, drop table, etc.)
 
@@ -47,9 +52,9 @@ Think of each change set as an atomic change that you want to apply to your data
 </databaseChangeLog>
 </code>                   
 
-===== Step 3: Run the ChangeSet =====
+## Step 3: Run the ChangeSet ##
 
-There are many ways to execute your change log including via [[manual/command line]], [[manual/Ant]], [[manual/Maven]], [[manual/Grails]], Spring and a [[manual/servlet listener]].
+There are many ways to execute your change log including via [[manual/command_line.html]], [[manual/Ant.html]], [[databases.html]], [[databases.html]], and a [[manual/servlet_listener.html]].
 
 Here is an example for mysql via jdbc:
 
@@ -63,16 +68,16 @@ liquibase --driver=com.mysql.jdbc.Driver \
      migrate
 </code>                    
 
-There are many more databases supported by liquibase. For a list of them and which jdbc driver, url, classpath etc. they need, please visit the [[databases]] section.
+There are many more databases supported by liquibase. For a list of them and which jdbc driver, url, classpath etc. they need, please visit the [[databases.html]] section.
 
-===== Step 4: Check Your Database =====
+## Step 4: Check Your Database ##
 
 You will see that your database now contains a table called "department". Two other tables are created as well: "databasechangelog" and "databasechangeloglock". The databasechangelog table contains a list of all the statements that have been run against the database. The databasechangeloglock table is used to make sure two machines don't attempt to modify the database at the same time.
 
 
 
-===== Next Steps =====
+## Next Steps ##
 
-This quick-start guide is designed to get you started with Liquibase. For a full description of all its capabilities, see the [[manual/home|Liquibase Manual]]. Read [[bestpractices|the best practices]].  For an extensive scenario, see the [[tutorial-using-oracle|tutorial using Oracle]].
+This quick-start guide is designed to get you started with Liquibase. For a full description of all its capabilities, see the [[manual/home.html|Liquibase Manual]]. Read [[bestpractices.html|the best practices]].  For an extensive scenario, see the [[tutorial-using-oracle|tutorial using Oracle]].
 
-You can also view [[training|recorded sessions]] on Liquibase or visit the [[community|forums]].
+You can also view [[training.html|recorded sessions]] on Liquibase or visit the [[community.html|forums]].

@@ -1,8 +1,13 @@
-===== rollbackFutureDatabase Ant Task =====
+---
+layout: default
+title: Rollbackfuturedatabase ant task
+---
 
-Outputs SQL to un-run changes that have not yet been executed.  See [[rollback]] for more information.
+## rollbackFutureDatabase Ant Task ##
 
-==== Sample ====
+Outputs SQL to un-run changes that have not yet been executed.  See [[rollback.html]] for more information.
+
+### Sample ###
 
 <code xml>
 <target name="rollbackFuture" depends="prepare">
@@ -32,7 +37,7 @@ Outputs SQL to un-run changes that have not yet been executed.  See [[rollback]]
 
 
 
-==== Available Parameters ====
+### Available Parameters ###
 
 ^ changeLogFile  | The change log file to run **[required]**  | 
 ^ driver  | The name of the database driver to connect with  | 
@@ -42,14 +47,14 @@ Outputs SQL to un-run changes that have not yet been executed.  See [[rollback]]
 ^ defaultSchemaName  | Schema to use by default for managed database objects and LiquiBase control tables  |
 ^ outputFile  | Save SQL to given file rather than executing  **[required]**  |
 ^ classpathref  | A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file  | 
-^ contexts  | A comma separated list of [[contexts]] to execute. If not specified, all contexts are run.  | 
+^ contexts  | A comma separated list of [[contexts.html]] to execute. If not specified, all contexts are run.  |
 ^ currentDateTimeFunction  | Overrides current date time function used in SQL. Useful for unsupported databases  | 
 ^ databaseChangeLogTableName  | Overrides the name of the databasechangelog table to use //Since LiquiBase 1.9// |
 ^ databaseChangeLogLockTableName  | Overrides the name of the databasechangeloglock table to use //Since LiquiBase 1.9// |
 
-==== Available Sub Tags ====
-^ changeLogProperty  | Sets a [[changelog parameters]] set //Since LiquiBase 1.7// | 
+### Available Sub Tags ###
+^ changeLogProperty  | Sets a [[changelog_parameters.html]] set //Since LiquiBase 1.7// |
 
-=== Available <changeLogProperty> Parameters ===
+#### Available <changeLogProperty> Parameters ####
 ^ name  | The name of the property to set  | 
 ^ value  | The value of the property to set  | 

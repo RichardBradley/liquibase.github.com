@@ -1,17 +1,22 @@
-====== Database "Diff" ======
+---
+layout: default
+title: Diff
+---
+
+# Database "Diff" #
 
 While the best way to track database changes is by adding change sets during development (see [[http://blog.liquibase.org/2007/06/the-problem-with-database-diffs.html|the problem with database diffs]]), there are times when being able to perform database diffs is valuable, particularly near the end of a project as a double-check that all required changes are included in the change log.
 
-===== Hibernate Mapping Diff =====
+## Hibernate Mapping Diff ##
 
-As of 1.6, LiquiBase has the ability to compare an existing database with a Hibernate mapping file.  For more information, visit the [[hibernate|Hibernate integration]] page
+As of 1.6, LiquiBase has the ability to compare an existing database with a Hibernate mapping file.  For more information, visit the [[hibernate.html|Hibernate integration]] page
 
 
-===== Running Diff =====
+## Running Diff ##
 
-Diff command support is available through the [[command line]] and [[ant]] tools.  When diff-ing databases, you specify the target database like you normally do in LiquiBase (--url, --username, etc. flags) and you specify the base database with additional flags after the command name.
+Diff command support is available through the [[command_line.html]] and [[ant.html]] tools.  When diff-ing databases, you specify the target database like you normally do in LiquiBase (--url, --username, etc. flags) and you specify the base database with additional flags after the command name.
 
-===== Example =====
+## Example ##
 
 <code>
 liqubase.sh --driver=oracle.jdbc.OracleDriver \
@@ -25,7 +30,7 @@ liqubase.sh --driver=oracle.jdbc.OracleDriver \
 </code>
 
 
-===== Database Comparisons =====
+## Database Comparisons ##
 
 Currently, LiquiBase runs the following comparisons:
 
@@ -51,7 +56,7 @@ It does not (currently) check
 LiquiBase can diff different database types, but the results may be skewed due to differences in case and data types.
 
 
-===== Controlling Checks (since 1.8) =====
+## Controlling Checks (since 1.8) ##
  What changes are checked for can be controlled with the diffTypes parameter to the diff commands.  The following options are available and can be passed as a comma-separated list:
   * tables //[DEFAULT]//
   * columns //[DEFAULT]//
@@ -66,11 +71,11 @@ If no diffTypes are specified, the checks marked DEFAULT will be run.
 
 Note: This only works with the "generateChangeLog" command, not the "diff" or "diffChangeLog" commands.
 
-==== Output Modes ====
+### Output Modes ###
 
 LiquiBase supports two output modes: report mode ("diff") and change log mode ("diffChangeLog"). In both modes, diff progress is reported to standard error during execution.
 
-==== Report Mode ====
+### Report Mode ###
 
 In report mode, a description of the differences between two databases is reported to standard out.
 
@@ -104,7 +109,7 @@ Missing Sequences: NONE
 Unexpected Sequences: NONE
 </code>
 
-==== ChangeLog Mode ====
+### ChangeLog Mode ###
 
 In change log mode, the an XML change log of what is necessary to upgrade the base database to the target database is sent to standard out. This change log can be included as is, or copied into an existing change log.  If the diff command is passed an existing change log file, the new change sets will be appended to the end of the file.
 

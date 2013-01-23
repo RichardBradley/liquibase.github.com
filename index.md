@@ -1,9 +1,9 @@
 ---
 layout: default
-title: FAQ
+title: Liquibase
 ---
 
-====== Database Change Management ======
+# Database Change Management #
 
 {{ :sql-database.jpg}} **You never develop code without version control, why do you develop your database without it?**
 
@@ -14,24 +14,22 @@ Liquibase Supports:
     * [[http://liquibase.org/extensions|Extensibility]]
     * Merging changes from multiple developers
     * Code branches
-    * [[databases|Multiple Databases]]
+    * [[databases.html|Multiple Databases]]
     * Managing production data as well as various test datasets
     * Cluster-safe database upgrades
     * Automated updates or generation of SQL scripts that can be approved and applied by a DBA
-    * [[manual/rollback|Update rollbacks]]
+    * [[manual/rollback.html|Update rollbacks]]
     * Database "[[manual:diff|diff]]"s
     * Generating starting change logs from existing databases
     * Generating [[manual:dbdoc|database change documentation]]
 
-====== Getting Started ======
+# Getting Started #
 
-[[download|Download Liquibase]] and read the [[quickstart|Quick-Start Guide]].  
+[[download.html|Download Liquibase]] and read the [[training.html|Quick-Start Guide]].
 
-For more information, you can read the [[manual/home]], [[FAQ]], watch the [[training|training videos]], and read 3rd party [[articles]]. If you have questions, visit the [[community|forums]] 
+For more information, you can read the [[manual/home.html]], [[FAQ.html]], watch the [[training.html|training videos]], and read 3rd party [[articles.html]]. If you have questions, visit the [[dotnetport.html|forums]]
 
 
-====== .NET Port ======
+# .NET Port #
 
-A .NET Port of Liquibase is in the very early stages of forming.  If you would like more information or to help out, visit the [[dotnetport|.Net Port page]]
-
-~~NOTOC~~
+A .NET Port of Liquibase is in the very early stages of forming.  If you would like more information or to help out, visit the [[dotnetport.html|.Net Port page]]

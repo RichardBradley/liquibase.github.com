@@ -1,14 +1,19 @@
-====== Add Auto-Increment ======
+---
+layout: default
+title: Add auto-increment
+---
+
+# Add Auto-Increment #
 
 Converts an existing column to be an auto-increment column.
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <addAutoIncrement tableName="person" columnName="id" columnDataType="int"/>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName  | Name of the table to add the auto-increment to **[required]**  | 
 ^ schemaName  | Name of the table schema  | 
@@ -18,7 +23,7 @@ Converts an existing column to be an auto-increment column.
 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

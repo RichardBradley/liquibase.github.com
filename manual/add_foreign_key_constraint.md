@@ -1,8 +1,13 @@
-====== Add Foreign Key Constraint ======
+---
+layout: default
+title: Add foreign key constraint
+---
+
+# Add Foreign Key Constraint #
 
 Adds a foreign key constraint to an existing column.
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <addForeignKeyConstraint constraintName="fk_address_person"
@@ -14,7 +19,7 @@ Adds a foreign key constraint to an existing column.
 
 
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ constraintName  | Name of the new foreign-key constraint **[required]**  | 
 ^ baseTableName  | Name of the table containing the foreign key **[required]**  | 
@@ -30,7 +35,7 @@ Adds a foreign key constraint to an existing column.
 ^ onUpdate  | ON UPDATE functionality.  Possible values: "CASCADE", "SET NULL", "SET DEFAULT", "RESTRICT", "NO ACTION" //Since 1.8//  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

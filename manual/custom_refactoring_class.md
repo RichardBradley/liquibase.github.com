@@ -1,4 +1,9 @@
-====== Custom Refactoring ======
+---
+layout: default
+title: Custom refactoring class
+---
+
+# Custom Refactoring #
 
 Although LiquiBase tries to provide a wide range of database refactorings, there are times you may want to create your own custom refactoring class.
 
@@ -9,7 +14,7 @@ If your change can be rolled back, implement the [[http://www.liquibase.org/manu
 For a sample custom change class, see [[http://www.liquibase.org/manual/latest/api/liquibase/change/custom/ExampleCustomSqlChange.html|liquibase.change.custom.ExampleCustomSqlChange]]
 
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <customChange class="com.example.ExampleCustomChange">
@@ -24,14 +29,14 @@ For a sample custom change class, see [[http://www.liquibase.org/manual/latest/a
     columnName="employee_id"/>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ class  | Name class that implements the custom change. **[required]**  |
 ^ any parameter on custom change subclass  | You can specify parameters on your custom class by passing them as attributes to the <custom> tag  |
 
 
 
-===== Nested "param" Tags =====
+## Nested "param" Tags ##
 
 
 Instead of passing parameters to your custom change class as attributes on the <custom> tag, you can use nested <param> parameters, or a combination of both.

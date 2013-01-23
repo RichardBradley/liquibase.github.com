@@ -1,4 +1,9 @@
-====== Generate LiquiBase changeLogs using JAXB and Groovy ======
+---
+layout: default
+title: Generate-changelog-with-jaxb-and-groovy
+---
+
+# Generate LiquiBase changeLogs using JAXB and Groovy #
 
 In [[generate-changelog-with-groovy|another article]] on this website we saw how we can generate Liquibase changelogs using Groovy and the markupBuilder.
 
@@ -116,7 +121,7 @@ class ChangeLogWriter {
   }
 }
 </code>
-===== Conclusion  =====
+## Conclusion  ##
 
 If you have a well-defined schema as a starting point, JAXB provides the infrastructure to create the content of the XML file and to write it out as valid XML.
 

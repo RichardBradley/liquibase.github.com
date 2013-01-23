@@ -1,4 +1,9 @@
-====== LiquiBase Development ======
+---
+layout: default
+title: Development overview
+---
+
+# LiquiBase Development #
 
 Like all open-source projects, we encourage looking at the code, suggesting ideas, and even implementing fixes and improvements.
 

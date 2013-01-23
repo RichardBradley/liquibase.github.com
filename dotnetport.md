@@ -1,4 +1,9 @@
-{{  :help-wanted.jpg|}}====== LiquiBase .Net Port ======
+---
+layout: default
+title: Dotnetport
+---
+
+{{  :help-wanted.jpg|}}# LiquiBase .Net Port #
 
 While there has been considerable interest in a .Net port of LiquiBase, there is not yet anything functional.  The goal of this page is to provide a general overview of the current state and roadmap for the port.  For more information, or to offer help, visit [[http://liquibase.org/forum/index.php?board=4.0|the LiquiBase .Net Port forum]].  
 
@@ -6,7 +11,7 @@ Our initial (and possibly long-term) goal, is to share as much code as possible 
 
 There is enough work planned on the Java side of LiquiBase that the primary Java LiquiBase developers will not be able to dedicate much time beyond answering questions and general architecture and direction until the second half of 2010.
 
-===== Roadmap =====
+## Roadmap ##
   - Split LiquiBase into "Core", JVM-Specific, and CLR-Specific modules  **[DONE]**
   - Find core group of project leads //[TODO]//
   - Configure build environment to work well for .Net development  **[PARTIAL]**
@@ -18,16 +23,16 @@ There is enough work planned on the Java side of LiquiBase that the primary Java
   - Run LiquiBase unit/integration tests in .Net
   - Iterate bug fixes and feature implementation until feature-complete with Java version.
 
-===== Getting Started =====
+## Getting Started ##
 
 Note: Please improve this documentation as you can
 
-==== Git ====
+### Git ###
 
 Source for LiquiBase can be checked out from **https://github.com/liquibase/liquibase**
 
 
-==== Compiling the Java Library ====
+### Compiling the Java Library ###
 
 Since IKVM compiles java bytecode (not source files) to .Net IL, you need to have enough of a java dev environment to make changes as necessary and recompile the core library.
 
@@ -40,11 +45,11 @@ Just unzip the file to where you want it installed
 
 As the .Net port matures, we will publish a pre-compiled, pre-IKVM-ed build which will remove the need for any Java environments for development.
 
-===== .Net Codebase =====
+## .Net Codebase ##
 
 In the LiquiBase repository, there is a core-clr folder with the .net implementation code, including a is a visual studio solution file
 
-==== Naming Conventions ====
+### Naming Conventions ###
 
 You will notice that all the core liqubase package and method names follow the
 java conventions of lower case first letters.  Eventually we will want to have a .net facade to the library that will completely

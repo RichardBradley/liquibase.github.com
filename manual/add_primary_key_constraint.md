@@ -1,8 +1,13 @@
-====== Add Primary Key ======
+---
+layout: default
+title: Add primary key constraint
+---
+
+# Add Primary Key #
 
 Adds creates a primary key out of an existing column or set of columns.
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <addPrimaryKey tableName="person"
@@ -10,7 +15,7 @@ Adds creates a primary key out of an existing column or set of columns.
     constraintName="pk_person"/>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName  | Name of the table to create the primary key on **[required]**  | 
 ^ schemaName  | Name of the table schema  | 
@@ -19,7 +24,7 @@ Adds creates a primary key out of an existing column or set of columns.
 ^ tablespace  | "Tablespace" (file group in SQL Server) to create the primary key index in  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues, Does not support tablespaces  | 
 ^ PostgreSQL  | No Issues  | 

@@ -1,4 +1,9 @@
-====== Load Update Data ======
+---
+layout: default
+title: Load update data
+---
+
+# Load Update Data #
 
 Loads or updates data from a CSV file into an existing table.  Differs from loadData by issuing a SQL batch that checks for the existence of a record.  If found, the record is UPDATEd, else the record is INSERTed.  Also, generates DELETE statements for a rollback.
 
@@ -7,7 +12,7 @@ A value of //NULL// in a cell will be converted to a database NULL rather than t
 //Since LiquiBase 2.0//
 
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <loadUpdateData tableName="users" file="com/sample/users.csv" primaryKey="id">
@@ -19,7 +24,7 @@ A value of //NULL// in a cell will be converted to a database NULL rather than t
 </code>
 
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName  | Name of the table to insert or update data in **[required]** | 
 ^ schemaName  | Name of the table schema  | 
@@ -27,7 +32,7 @@ A value of //NULL// in a cell will be converted to a database NULL rather than t
 ^ file  | CSV file to load **[required]**  | 
 ^ encoding | Encoding of the CSV file (defaults to UTF-8)  | 
 
-===== Available Sub-Tags =====
+## Available Sub-Tags ##
 
 ^ column  | Defines how the data should be loaded  | 
 
@@ -35,7 +40,7 @@ A value of //NULL// in a cell will be converted to a database NULL rather than t
 
 
 
-===== Available Column Attributes =====
+## Available Column Attributes ##
 
 ^ index | A zero-based index of the column being described **[index or header required]** | 
 ^ header | Data file header row value of column being described **[index or header required]** | 
@@ -43,7 +48,7 @@ A value of //NULL// in a cell will be converted to a database NULL rather than t
 ^ type  | Data type of the column. Possible values: STRING, NUMERIC, DATE, BOOLEAN **[required]**  |
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No support | 
 ^ PostgreSQL  | No support | 

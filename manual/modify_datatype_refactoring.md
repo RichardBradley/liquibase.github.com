@@ -1,17 +1,22 @@
-====== Modify Data Type Refactoring ======
+---
+layout: default
+title: Modify datatype refactoring
+---
+
+# Modify Data Type Refactoring #
 
 ** This page should be reviewed by a senior liquibase developer. Use this information with care. **
 
 Makes changes to an the data type of an existing column.
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <modifyDataType tableName="person" columnName="firstname" newDataType="varchar(500)"/>
 <modifyDataType tableName="person" columnName="firstname" newDataType="java.sql.Types.VARCHAR(500)"/>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName   | Name of the table that the column to modify is in **[required]**   | 
 ^ columnName  | Name of the column to modify **[required]**   | 
@@ -20,10 +25,10 @@ Makes changes to an the data type of an existing column.
 ^ nullable    | If the column is nullable | 
 
 
-===== Available Sub-Tags =====
+## Available Sub-Tags ##
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  |
 ^ PostgreSQL  | No Issues  |

@@ -1,4 +1,9 @@
-====== LiquiBase Ant Tasks ======
+---
+layout: default
+title: Ant
+---
+
+# LiquiBase Ant Tasks #
 
 LiquiBase can be controlled via ant Tasks. To use, simply add the liquibase.jar to your Ant lib directory or the classpath referenced by "classpathref".
 
@@ -9,17 +14,17 @@ LiquiBase can be controlled via ant Tasks. To use, simply add the liquibase.jar 
 </code>
 
 The following tasks are available in Ant
-  * [[updateDatabase Ant Task|updateDatabase]]
-  * [[rollbackDatabase Ant Task|rollbackDatabase]]
-  * [[rollbackFutureDatabase Ant Task|rollbackFutureDatabase]]
-  * [[tagDatabase Ant Task|tagDatabase ]]
-  * [[generateChangeLog Ant Task|generateChangeLog ]]
-  * [[diffDatabase Ant Task|diffDatabase ]]
-  * [[diffDatabaseToChangeLog Ant Task|diffDatabaseToChangeLog ]]
-  * [[dbDoc Ant Task|dbDoc ]]
-  * [[changeLogSync Ant Task|changeLogSync ]]
-  * [[dropAllDatabaseObjects Ant Task|dropAllDatabaseObjects ]]
+  * [[updateDatabase_ant_task.html|updateDatabase]]
+  * [[rollbackDatabase_ant_task.html|rollbackDatabase]]
+  * [[rollbackFutureDatabase_ant_task.html|rollbackFutureDatabase]]
+  * [[tagDatabase_ant_task.html|tagDatabase ]]
+  * [[generateChangeLog_ant_task.html|generateChangeLog ]]
+  * [[diffDatabase_ant_task.html|diffDatabase ]]
+  * [[diffDatabaseToChangeLog_ant_task.html|diffDatabaseToChangeLog ]]
+  * [[dbDoc_ant_task.html|dbDoc ]]
+  * [[changeLogSync_ant_task.html|changeLogSync ]]
+  * [[dropAllDatabaseObjects_ant_task.html|dropAllDatabaseObjects ]]
 
-Additional LiquiBase commands are supported by the [[command line]] that are not supported by the Ant tasks.
+Additional LiquiBase commands are supported by the [[command_line.html]] that are not supported by the Ant tasks.
 
 

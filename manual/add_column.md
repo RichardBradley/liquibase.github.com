@@ -1,8 +1,13 @@
-====== "Add Column" Refactoring ======
+---
+layout: default
+title: Add column
+---
+
+# "Add Column" Refactoring #
 
 Adds a new column to an existing table.
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <addColumn tableName="person">
@@ -10,19 +15,19 @@ Adds a new column to an existing table.
 </addColumn>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName  | Name of the table to add the column to **[required]** |
 ^ schemaName  | Name of the table schema  |
 
 
-===== Available Sub-Tags =====
+## Available Sub-Tags ##
 
-^ column  | Column constraint and foreign key information. Setting the "defaultValue" attribue will specify a default value for the column.  Setting the "value" attribute will set all rows existing to the specified value without modifying the column default.  See the [[column | column tag documentation]] for more information **[required]** |
+^ column  | Column constraint and foreign key information. Setting the "defaultValue" attribue will specify a default value for the column.  Setting the "value" attribute will set all rows existing to the specified value without modifying the column default.  See the [[column.html| column tag documentation]] for more information **[required]** |
 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  |
 ^ PostgreSQL  | No Issues  |

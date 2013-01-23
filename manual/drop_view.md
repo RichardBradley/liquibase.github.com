@@ -1,20 +1,25 @@
-====== Drop View ======
+---
+layout: default
+title: Drop view
+---
+
+# Drop View #
 
 Drops an existing view.
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <dropView viewName="personView"/>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ viewName  | Name of the view to drop **[required]**  | 
 ^ schemaName  | Name of the view schema  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

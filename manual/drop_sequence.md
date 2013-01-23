@@ -1,19 +1,24 @@
-====== Drop Sequence ======
+---
+layout: default
+title: Drop sequence
+---
+
+# Drop Sequence #
 
 Drops an existing Sequence
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <dropSequence sequenceName="seq_employee_id"/>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ sequenceName  | Name of the sequence to drop **[required]**  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | Sequences not supported in database  | 
 ^ PostgreSQL  | No Issues  | 

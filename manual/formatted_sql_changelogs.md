@@ -1,6 +1,11 @@
-====== Formatted SQL Changelogs ======
+---
+layout: default
+title: Formatted sql changelogs
+---
 
-As of LiquiBase 2.0, LiquiBase includes support for "plain SQL" changelog files. These changelogs may be included from XML changelogs and may contain arbitrary SQL statements. The statements are converted to [[Custom SQL]] refactorings.
+# Formatted SQL Changelogs #
+
+As of LiquiBase 2.0, LiquiBase includes support for "plain SQL" changelog files. These changelogs may be included from XML changelogs and may contain arbitrary SQL statements. The statements are converted to [[custom_sql.html]] refactorings.
 
 Formatted SQL files use comments to provide LiquiBase with metadata. Each SQL file must begin with the following comment:
 
@@ -8,7 +13,7 @@ Formatted SQL files use comments to provide LiquiBase with metadata. Each SQL fi
 --liquibase formatted sql
 </code>
 
-===== Changesets =====
+## Changesets ##
 
 Each changeset in a formatted SQL file begins with a comment of the form
 
@@ -19,7 +24,7 @@ Each changeset in a formatted SQL file begins with a comment of the form
 The changeset comment is followed by one or more SQL statements, separated by
 semicolons (or the value of the <endDelimiter> attribute).
 
-==== Available Changeset Attributes =====
+### Available Changeset Attributes ##
 
 The following attributes may be provided on each changeset:
 
@@ -33,14 +38,14 @@ The following attributes may be provided on each changeset:
 ^ failOnError | Should the migration fail if an error occurs while executing the changeSet? |
 ^ dbms  | The type of a database which that changeSet is to be used for. When the migration step is running, it checks the database type against this attribute. Valid database type names are listed on the [[../databases|supported databases page]] |
 
-===== Rollback Actions =====
+## Rollback Actions ##
 
 Changesets may include statements to be applied when rolling back the changeset. Rollback statements are comments of the form
 <code sql>
 --rollback SQL STATEMENT
 </code>
 
-===== Sample Change Log =====
+## Sample Change Log ##
 
 <code sql>
 --liquibase formatted sql

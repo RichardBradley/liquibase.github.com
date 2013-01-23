@@ -1,8 +1,13 @@
-===== dbDoc Ant Task =====
+---
+layout: default
+title: Dbdoc ant task
+---
 
-Generates [[dbdoc]] database documentation for a given database.  
+## dbDoc Ant Task ##
 
-==== Sample ====
+Generates [[dbdoc.html]] database documentation for a given database.
+
+### Sample ###
 
 <code xml>
 <target name="update-database" depends="prepare">
@@ -32,7 +37,7 @@ Generates [[dbdoc]] database documentation for a given database.
 
 
 
-==== Available Parameters ====
+### Available Parameters ###
 
 ^ changeLogFile  | The change log file to run **[required]**  | 
 ^ driver  | The name of the database driver to connect with  | 
@@ -45,9 +50,9 @@ Generates [[dbdoc]] database documentation for a given database.
 ^ databaseChangeLogTableName  | Overrides the name of the databasechangelog table to use //Since LiquiBase 1.9// |
 ^ databaseChangeLogLockTableName  | Overrides the name of the databasechangeloglock table to use //Since LiquiBase 1.9// |
 
-==== Available Sub Tags ====
-^ changeLogProperty  | Sets a [[changelog parameters]] set //Since LiquiBase 1.7// | 
+### Available Sub Tags ###
+^ changeLogProperty  | Sets a [[changelog_parameters.html]] set //Since LiquiBase 1.7// |
 
-=== Available <changeLogProperty> Parameters ===
+#### Available <changeLogProperty> Parameters ####
 ^ name  | The name of the property to set  | 
 ^ value  | The value of the property to set  | 

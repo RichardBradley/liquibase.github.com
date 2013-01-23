@@ -1,4 +1,9 @@
-====== Future Directions ======
+---
+layout: default
+title: Future
+---
+
+# Future Directions #
 
 Additional planned features include:
 
@@ -10,11 +15,11 @@ Additional planned features include:
   * Support for additional DBMSs
   * Database Diagram Generation
 
-Do you have additional ideas you would like to see? [[community|Let us know]].  Interested in helping implement these and other features?  We would [[contributing|love the help]].
+Do you have additional ideas you would like to see? [[community.html|Let us know]].  Interested in helping implement these and other features?  We would [[contributing.html|love the help]].
 
 
 
-====== Users Wishlist ======
+# Users Wishlist #
 
 First:
   * standalone IDE (there exists one but this is an outdated one)

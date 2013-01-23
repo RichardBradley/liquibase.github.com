@@ -1,4 +1,9 @@
-====== Column tag ======
+---
+layout: default
+title: Column
+---
+
+# Column tag #
 
 The "column" tag is a tag that is re-used throughout the LiquiBase XML when column definitions and column information is needed. As a result, not all the attributes of column make sense in each context it is used in.
 
@@ -6,7 +11,7 @@ The "column" tag is a tag that is re-used throughout the LiquiBase XML when colu
 
 
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ name  | Name of the column  |
 ^ type  | Data type of the column.  |
@@ -38,19 +43,19 @@ Also, specifying a java.sql.Types.* type will be converted to the correct type a
   * java.sql.Types.TIMESTAMP
   * java.sql.Types.VARCHAR(255)
 
-===== Available Sub-Tags =====
+## Available Sub-Tags ##
 
 ^ constraints  | Constraint definitions  | 
 
 
-====== Constraints tag ======
+# Constraints tag #
 
 The "constraints" tag contains information about constraints on the column
 
 
 
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ nullable  | Is column nullable?  | 
 ^ primaryKey  | Is column a primary key?  | 

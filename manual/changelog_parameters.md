@@ -1,17 +1,22 @@
-====== Change Log Parameters ======
+---
+layout: default
+title: Changelog parameters
+---
+
+# Change Log Parameters #
 
 //Since LiquiBase 1.7//
 
 LiquiBase allows dynamic substitution of parameters in a changelog.  The parameters to replace are described using the ${} syntax.
 
-===== Configuring parameter values =====
+## Configuring parameter values ##
 
 Parameter values are looked up in the following order:
-  - Passed as a parameter to your LiquiBase runner (see [[Ant]], [[Command Line]], etc. documentation for how to pass them)
+  - Passed as a parameter to your LiquiBase runner (see [[Ant.html]], [[command_line.html]], etc. documentation for how to pass them)
   - As a JVM system property
-  - In the parameters block (<property> Tag) of the [[DatabaseChangeLog]] file itself.  
+  - In the parameters block (<property> Tag) of the [[DatabaseChangeLog.html]] file itself.
 
-=== Examples ===
+#### Examples ####
 
 <code xml>
 <createTable tableName="${table.name}">
@@ -43,11 +48,11 @@ Parameter values are looked up in the following order:
 
 </code>
 
-==== <property> ====
+### <property> ###
 
 Defines a parameter for the changelog. Given a list of contexts and/or databases, the parameter will be only used in those contexts and/or databases.
 
-=== Available Attributes ===
+#### Available Attributes ####
 
 ^ name  | Name of the table's schema **[required]**  |
 ^ value  | Name of the column's table **[required]**  |

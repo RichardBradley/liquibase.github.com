@@ -1,4 +1,9 @@
-====== LiquiBase Architecture ======
+---
+layout: default
+title: Architecture
+---
+
+# LiquiBase Architecture #
 
 The LiquiBase migrator is designed to require no dependencies to run and be easy to integrate into various build and deployment processes.
 

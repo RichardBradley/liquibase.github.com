@@ -1,15 +1,20 @@
-====== Drop Primary Key ======
+---
+layout: default
+title: Drop primary key constraint
+---
+
+# Drop Primary Key #
 
 Drops an existing primary key.
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <dropPrimaryKey tableName="person" constraintName="pk_person"/>
 </code>
 
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName  | Name of the table to drop the primary key of **[required]**  | 
 ^ schemaName  | Name of the table schema  | 
@@ -17,7 +22,7 @@ Drops an existing primary key.
 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | Requires a non-null 'constraintName'  | 

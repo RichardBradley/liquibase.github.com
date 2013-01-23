@@ -1,9 +1,14 @@
-====== Execute Shell Command ======
+---
+layout: default
+title: Execute shell command
+---
+
+# Execute Shell Command #
 
 Executes a system command. Because this refactoring doesn't generate SQL like most, using LiquiBase commands such as migrateSQL may not work as expected. **Therefore, if at all possible use refactorings that generate SQL.**
 
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <executeCommand executable="mysqldump" os="Windows XP">
@@ -13,22 +18,22 @@ Executes a system command. Because this refactoring doesn't generate SQL like mo
 </executeCommand>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ executable  | Name of the executable to run **[required]**  | 
 ^ os  | List of operating systems on which to execute the command (taken from the os.name Java system property)  |  
 
-===== Available Sub-Tags =====
+## Available Sub-Tags ##
 
 ^ arg  | Argument (in the "value" attribute) to pass to the executable.  | 
 
-===== JDK Compatiblity =====
+## JDK Compatiblity ##
 
 ^ JDK 1.4  | Not Supported  | 
 ^ JDK 1.5+  | No Issues  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

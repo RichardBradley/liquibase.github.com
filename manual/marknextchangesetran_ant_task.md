@@ -1,8 +1,13 @@
-===== markNextChangeSetRan Ant Task =====
+---
+layout: default
+title: Marknextchangesetran ant task
+---
+
+## markNextChangeSetRan Ant Task ##
 
 Marks the next change as already ran.  Useful for when a change was made manually and so an update is failing.
 
-==== Sample ====
+### Sample ###
 
 <code xml>
 <target name="markNextChangeSetRan" depends="prepare">
@@ -31,7 +36,7 @@ Marks the next change as already ran.  Useful for when a change was made manuall
 </code>
 
 
-==== Available Parameters ====
+### Available Parameters ###
 
 ^ driver  | The name of the database driver to connect with **[required]**  | 
 ^ url  | The database URL **[required]**  | 

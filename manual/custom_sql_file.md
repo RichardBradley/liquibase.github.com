@@ -1,4 +1,9 @@
-====== Custom SQL File ======
+---
+layout: default
+title: Custom sql file
+---
+
+# Custom SQL File #
 
 The "sqlFile" tag allows you to specify any sql statements and have it stored external in a file. It is useful for complex changes that are not supported through LiquiBase's automated refactoring tags such as stored procedures.
 
@@ -15,7 +20,7 @@ The sql file can also contain comments of either of the following formats:
   - A single line comment starting with <space>--<space> and finishing at the end of the line 
 
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <sqlFile path="sample.sql"/>
@@ -43,7 +48,7 @@ values (2, 'Jim')
 </code>                    
 
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ path  | The name of the SQL file to load  | 
 ^ stripComments  | Set to true to remove any comments in the SQL before executing, otherwise false. Defaults to false if not set  | 
@@ -52,7 +57,7 @@ values (2, 'Jim')
 ^ endDelimiter  | Delimiter to apply to the end of the statement.  Defaults to ";", may be set to "".  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

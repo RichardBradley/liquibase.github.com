@@ -1,8 +1,13 @@
-====== Add Default Value ======
+---
+layout: default
+title: Add default value
+---
+
+# Add Default Value #
 
 Adds a default value to the database definition for the specified column.
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <addDefaultValue tableName="file"
@@ -10,7 +15,7 @@ Adds a default value to the database definition for the specified column.
     defaultValue="New File"/>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName  | Name of the table to containing the column **[required]**  | 
 ^ schemaName  | Name of the table schema  | 
@@ -21,7 +26,7 @@ Adds a default value to the database definition for the specified column.
 ^ defaultValueDate  | Default date and/or time value **[one of defaultValue* required]**  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

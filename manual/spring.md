@@ -1,10 +1,15 @@
-====== Spring Integration ======
+---
+layout: default
+title: Spring
+---
+
+# Spring Integration #
 
 Liquibase can be run in a [[http://www.springframework.org|Spring]] environment by declaring a liquibase.spring.SpringLiquibase bean.
 
 
 
-===== Example =====
+## Example ##
 
 <code xml>
 <bean id="liquibase" class="liquibase.integration.spring.SpringLiquibase">
@@ -19,7 +24,7 @@ Liquibase can be run in a [[http://www.springframework.org|Spring]] environment 
 </code>
 
 
-===== Available Attributes =====
+## Available Attributes ##
 
   * beanName
   * resourceLoader

@@ -1,9 +1,14 @@
-====== Update Data ======
+---
+layout: default
+title: Update data
+---
+
+# Update Data #
 
 Updates data in an existing table
 
 
-===== Samples =====
+## Samples ##
 
 <code xml>
 <update tableName="People">
@@ -28,18 +33,18 @@ Updates data in an existing table
 </update>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName  | Name of the table to update data in  | 
 ^ schemaName  | Name of the table schema  | 
 
-===== Available Sub-Tags =====
+## Available Sub-Tags ##
 
-^ column  | Data to update. See the [[column|column tag documentation]] for more information.  **[required]**  | 
+^ column  | Data to update. See the [[column.html|column tag documentation]] for more information.  **[required]**  |
 ^ where [TEXT]  | Where clause for update statement | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

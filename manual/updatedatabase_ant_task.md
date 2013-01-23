@@ -1,10 +1,15 @@
-===== updateDatabase Ant Task =====
+---
+layout: default
+title: Updatedatabase ant task
+---
+
+## updateDatabase Ant Task ##
 
 Applies un-run changes to the database.  
 
 
 
-==== Sample ====
+### Sample ###
 
 <code xml>
 <target name="update-database" depends="prepare">
@@ -36,7 +41,7 @@ Applies un-run changes to the database.
 
 
 
-==== Available Parameters ====
+### Available Parameters ###
 FIXME: Annotate which is required.
 
 ^ changeLogFile  | The change log file to run  | 
@@ -49,14 +54,14 @@ FIXME: Annotate which is required.
 ^ promptOnNonLocalDatabase  | If set to true (default is false) a dialog box with warn you if you attempt to run the LiquiBase against a database that is not on localhost  | 
 ^ dropFirst  | If set to true, LiquiBase will first drop all database objects owned by the connected user [defaults to FALSE]  | 
 ^ classpathref  | A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file  | 
-^ contexts  | A comma separated list of [[contexts]] to execute. If not specified, all contexts are run.  | 
+^ contexts  | A comma separated list of [[contexts.html]] to execute. If not specified, all contexts are run.  |
 ^ currentDateTimeFunction  | Overrides current date time function used in SQL. Useful for unsupported databases  | 
 ^ databaseChangeLogTableName  | Overrides the name of the databasechangelog table to use  |
 ^ databaseChangeLogLockTableName  | Overrides the name of the databasechangeloglock table to use  |
 
-==== Available Sub Tags ====
-^ changeLogProperty  | Sets a [[changelog parameters]] set //Since LiquiBase 1.7// | 
+### Available Sub Tags ###
+^ changeLogProperty  | Sets a [[changelog_parameters.html]] set //Since LiquiBase 1.7// |
 
-=== Available <changeLogProperty> Parameters ===
+#### Available <changeLogProperty> Parameters ####
 ^ name  | The name of the property to set  | 
 ^ value  | The value of the property to set  | 

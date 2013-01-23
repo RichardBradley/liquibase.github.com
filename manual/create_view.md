@@ -1,8 +1,13 @@
-====== Create View ======
+---
+layout: default
+title: Create view
+---
+
+# Create View #
 
 Creates a new database view.
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <createView viewName="personView">
@@ -12,7 +17,7 @@ Creates a new database view.
 
 
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ viewName  | Name of the view to create **[required]**  | 
 ^ schemaName  | Name of the view schema  | 
@@ -21,7 +26,7 @@ Creates a new database view.
 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

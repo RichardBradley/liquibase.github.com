@@ -1,9 +1,14 @@
-===== generateChangeLog Ant Task =====
+---
+layout: default
+title: Generatechangelog ant task
+---
 
-[[generating changelogs|Generates changelog]] to re-create an existing database.  
+## generateChangeLog Ant Task ##
+
+[[generating_changelogs.html|Generates changelog]] to re-create an existing database.
 
 
-==== Sample ====
+### Sample ###
 
 <code xml>
 <target name="generateChangelog" depends="prepare">
@@ -29,7 +34,7 @@
 
 
 
-==== Available Parameters ====
+### Available Parameters ###
 
 ^ outputFile  | Where to save the generated change log file **[required]**  | 
 ^ driver  | The name of the database driver to connect with  | 
@@ -42,9 +47,9 @@
 ^ databaseChangeLogTableName  | Overrides the name of the databasechangelog table to use //Since LiquiBase 1.9// |
 ^ databaseChangeLogLockTableName  | Overrides the name of the databasechangeloglock table to use //Since LiquiBase 1.9// |
 
-==== Available Sub Tags ====
-^ changeLogProperty  | Sets a [[changelog parameters]] set //Since LiquiBase 1.7// | 
+### Available Sub Tags ###
+^ changeLogProperty  | Sets a [[changelog_parameters.html]] set //Since LiquiBase 1.7// |
 
-=== Available <changeLogProperty> Parameters ===
+#### Available <changeLogProperty> Parameters ####
 ^ name  | The name of the property to set  | 
 ^ value  | The value of the property to set  | 

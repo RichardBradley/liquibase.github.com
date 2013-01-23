@@ -1,4 +1,9 @@
-====== SQLite ======
+---
+layout: default
+title: Sqlite
+---
+
+# SQLite #
 
 SQLite is a single-file database which follows the zero-configuration approach.
 It is furthermore easy to use and is thus perfect for your first experiments with liquibase.

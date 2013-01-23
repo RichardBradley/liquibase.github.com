@@ -1,21 +1,26 @@
-====== Drop Default Value ======
+---
+layout: default
+title: Drop default value
+---
+
+# Drop Default Value #
 
 Removes a database default value for a column.
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <dropDefaultValue tableName="file" columnName="fileName"/>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName  | Name of the table to containing the column **[required]**  | 
 ^ schemaName  | Name of the table schema  | 
 ^ columnName  | Name of column to drop the default value from **[required]**  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

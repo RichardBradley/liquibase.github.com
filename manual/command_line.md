@@ -1,21 +1,26 @@
-====== LiquiBase Command Line ======
+---
+layout: default
+title: Command line
+---
+
+# LiquiBase Command Line #
 
 LiquiBase can be run from the command line by running
-**liquibase [options] [command] [command parameters]** (optionally, replace the liquibase command with java -jar <path-to-liquibase-jar>). The command line migrator works well when you want to do migrations on demand, but don't have Ant or Maven available such as on servers. The command line migrator also gives you more control over the process than the [[Servlet Listener]], [[Ant]], or [[Maven]] do, allowing you to run maintenance commands like outputting SQL and listing/releasing database changelog locks.
+**liquibase [options] [command] [command parameters]** (optionally, replace the liquibase command with java -jar <path-to-liquibase-jar>). The command line migrator works well when you want to do migrations on demand, but don't have Ant or Maven available such as on servers. The command line migrator also gives you more control over the process than the [[servlet_listener.html]], [[Ant.html]], or [[Maven.html]] do, allowing you to run maintenance commands like outputting SQL and listing/releasing database changelog locks.
 
 Any values found after the command on the command line invocation will be considered a command parameter. The command line processor will validate whether the command line parameters are allowed for the current command. If the current command does not allow command line parameters or the parameter appears to be an incorrect format, then an error message of 'unexpected command parmeter' will be logged and the execution will terminate.
 
 The command line migrator also allows you to
 
-  * [[rollback|perform rollback operations and generate rollback scripts]]
-  * [[diff|generate "diff"s]]
-  * [[generating changelogs|generate creation scripts from existing databases]]
-  * [[dbdoc|generate database change documentation]]
+  * [[rollback.html|perform rollback operations and generate rollback scripts]]
+  * [[diff.html|generate "diff"s]]
+  * [[generating_changelogs.html|generate creation scripts from existing databases]]
+  * [[dbdoc.html|generate database change documentation]]
 
 If you run the command line migrator without any arguments, you will get a help message listing these available parameters:
 
 
-===== Database Update Commands =====
+## Database Update Commands ##
 
 ^ update  | Updates database to current version  | 
 ^ updateCount <value>  | Applies the next <value> change sets  | 
@@ -26,7 +31,7 @@ If you run the command line migrator without any arguments, you will get a help 
 
 
 
-===== Database Rollback Commands =====
+## Database Rollback Commands ##
 
 ^ rollback <tag>  | Rolls back the database to the state it was in when the tag was applied  | 
 ^ rollbackToDate <date/time>  | Rolls back the database to the state it was in at the given date/time  | 
@@ -39,13 +44,13 @@ If you run the command line migrator without any arguments, you will get a help 
 ^ generateChangeLog  | generateChangeLog of the database to standard out. v1.8 requires the dataDir parameter currently. | 
 
 
-===== Diff Commands =====
+## Diff Commands ##
 
 ^ diff [diff parameters]  | Writes description of differences to standard out  |
 ^ diffChangeLog [diff parameters]  | Writes Change Log XML to update the base database to the target database to standard out  | 
 
 
-===== Documentation Commands =====
+## Documentation Commands ##
 
 ^ dbDoc <outputDirectory>  | Generates Javadoc-like documentation based on current database and change log  |
 
@@ -53,7 +58,7 @@ If you run the command line migrator without any arguments, you will get a help 
 
 
 
-===== Maintenance Commands =====
+## Maintenance Commands ##
 
 ^ tag <tag>  | 'Tags' the current database state for future rollback  | 
 ^ status  | Outputs count (list if --verbose) of unrun change sets  | 
@@ -66,7 +71,7 @@ If you run the command line migrator without any arguments, you will get a help 
 ^ dropAll  | Drops all database objects owned by the user. Note that functions, procedures and packages are not dropped (limitation in 1.8.1).  | 
 ^ clearCheckSums  | Removes current checksums from database.  On next run checksums will be recomputed  | 
 
-===== Required Parameters =====
+## Required Parameters ##
 
 ^ --changeLogFile=<path and filename>  | The changelog file to use  | 
 ^ --username=<value>  | Database username  | 
@@ -79,7 +84,7 @@ If you run the command line migrator without any arguments, you will get a help 
 
 
 
-===== Optional Parameters =====
+## Optional Parameters ##
 
 ^ --classpath=<value>  | Classpath containing migration files and JDBC Driver.  | 
 ^ --contexts=<value>  | ChangeSet contexts to execute  | 
@@ -93,26 +98,26 @@ If you run the command line migrator without any arguments, you will get a help 
 ^ --help  | Output command line parameter help  | 
 ^ --exportDataDir  | Directory where insert statement csv files will be kept (required by generateChangeLog command)  | 
 
-===== Required Diff Parameters =====
+## Required Diff Parameters ##
 
 ^ --referenceUsername=<value>  | Base Database username  | 
 ^ --referencePassword=<value>  | Base Database password  | 
 ^ --referenceUrl=<value>  | Base Database URL  | 
 
-===== Optional Diff Parameters =====
+## Optional Diff Parameters ##
 
 ^ --referenceDriver=<jdbc.driver.ClassName>  | Base Database driver class name  | 
 
-===== Change Log Properties ===== 
-^ -D<property.name>=<property.value>  | Pass a name/value pair for [[changelog parameters|substitution of ${} blocks]] in the change log(s)  |
+## Change Log Properties ##
+^ -D<property.name>=<property.value>  | Pass a name/value pair for [[changelog_parameters.html|substitution of ${} blocks]] in the change log(s)  |
 
-===== Using a liquibase.properties file =====
+## Using a liquibase.properties file ##
 
 If you do not want to always specify options on the command line, you can create a [[liquibase.properties|properties file]] that contains default values. By default, LiquiBase will look for a file called "liquibase.properties" in the current working directory, but you can specify an alternate location with the --defaultsFile flag. If you have specified an option in a properties file and specify the same option on the command line, the value on the command line will override the properties file value.
 
-===== Examples =====
+## Examples ##
 
-==== Standard Migrator Run ====
+### Standard Migrator Run ###
 
 <code>
 java -jar liquibase.jar \
@@ -125,7 +130,7 @@ java -jar liquibase.jar \
       update
 </code>
 
-==== Run Migrator pulling changelogs from a .WAR file ====
+### Run Migrator pulling changelogs from a .WAR file ###
 
 <code>
 java -jar liquibase.jar \
@@ -138,7 +143,7 @@ java -jar liquibase.jar \
       update
 </code>
 
-==== Run Migrator pulling changelogs from an .EAR file ====
+### Run Migrator pulling changelogs from an .EAR file ###
 
 <code>
 java -jar liquibase.jar \
@@ -150,7 +155,7 @@ java -jar liquibase.jar \
       --password=tiger
 </code>
 
-==== Don't execute changesets, save SQL to /tmp/script.sql ====
+### Don't execute changesets, save SQL to /tmp/script.sql ###
 
 <code>
 java -jar liquibase.jar \
@@ -162,7 +167,7 @@ java -jar liquibase.jar \
         updateSQL > /tmp/script.sql
 </code>
 
-==== List locks on the database change log ====
+### List locks on the database change log ###
 
 <code>
 java -jar liquibase.jar \
@@ -174,7 +179,7 @@ java -jar liquibase.jar \
         listLocks
 </code>
 
-==== Runs LiquiBase using defaults from ./liquibase.properties ====
+### Runs LiquiBase using defaults from ./liquibase.properties ###
 
 <code>
 java -jar liquibase.jar update
@@ -189,14 +194,14 @@ username: scott
 password: tiger
 </code>
 
-==== Export Data from Database ====
+### Export Data from Database ###
 This will export the data from the targeted database and put it in a folder "data" in a file name specified with <insert file name>.
 
 <code>
 java -jar liquibase.jar --changeLogFile="./data/<insert file name> " --diffTypes="data" generateChangeLog
 </code>
 
-==== Update passing changelog parameters ====
+### Update passing changelog parameters ###
 <code>
 liquibase.bat update -Dengine=myisam
 </code>

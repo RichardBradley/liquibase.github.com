@@ -1,14 +1,19 @@
-====== Drop Not-Null Constraint ======
+---
+layout: default
+title: Remove not-null constraint
+---
+
+# Drop Not-Null Constraint #
 
 Makes a column nullable.
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <dropNotNullConstraint tableName="employee" columnName="employer_id"/>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName  | Name of the table containing that the column to drop the constraint from **[required]**  | 
 ^ schemaName  | Name of the table schema  | 
@@ -16,7 +21,7 @@ Makes a column nullable.
 ^ columnDataType  | Current data type of the column [required for MySQL, MS-SQL, & PostgreSQL]  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

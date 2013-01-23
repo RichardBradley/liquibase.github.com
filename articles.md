@@ -1,5 +1,10 @@
-====== Articles ======
-===== Third Party Liquibase Documentation =====
+---
+layout: default
+title: Articles
+---
+
+# Articles #
+## Third Party Liquibase Documentation ##
 
   * [[http://blog.42.nl/articles/automate-liquibase-migrations|Automate Liquibase Migrations]]
   * [[http://blog.42.nl/articles/bridging-the-divide-between-java-and-the-database-with-liquibase|Bridging the divide between Java and the database with Liquibase]]
@@ -10,8 +15,8 @@
   * [[http://codemonkey.nmonta.com/2008/11/07/incorporating-liquibase-into-nant-build/|Incorporating Liquibase into NAnt Builds]]
   * [[http://www.jtpd.org/blogs/84964|Liquibase - Veritabanı Versiyonlama Sistemi (Turkish)]]
 
-If you know of any other good Liquibase resources, please [[community|let us know]] and/or add to this page.
-===== Articles on this wiki =====
+If you know of any other good Liquibase resources, please [[community.html|let us know]] and/or add to this page.
+## Articles on this wiki ##
 
   * [[generate-changelog-with-groovy|Generating changelogs using Groovy]]
   * [[generate-changelog-with-jaxb-and-groovy|Generating changelogs using JAXB and Groovy]]

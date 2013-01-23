@@ -1,8 +1,13 @@
-====== Merge Columns ======
+---
+layout: default
+title: Merge columns
+---
+
+# Merge Columns #
 
 Concatenates the values in two columns, joins them by with string, and stores the resulting value in a new column.
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <mergeColumns tableName="person"
@@ -14,7 +19,7 @@ Concatenates the values in two columns, joins them by with string, and stores th
 />
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName  | Name table containing the columns to join **[required]**  | 
 ^ schemaName  | Name of the table schema  | 
@@ -25,7 +30,7 @@ Concatenates the values in two columns, joins them by with string, and stores th
 ^ finalColumnType  | Datatype of the column to create **[required]**  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

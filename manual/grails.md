@@ -1,12 +1,17 @@
-====== Official Liquibase Grails Integration ======
+---
+layout: default
+title: Grails
+---
+
+# Official Liquibase Grails Integration #
 
 The standard Grails Database Migration Plugin (http://grails-plugins.github.com/grails-database-migration/docs/manual/index.html) is built off Liquibase and is the officially supported Liquibase/Grails integration. 
 
-====== Legacy Liquibase Grails Integration ======
+# Legacy Liquibase Grails Integration #
 
 Prior to the Grails Database Migration Plugin, Liquibase supported a grails integration as well. This plugin has not been updated since version 1.9.
 
-To install, simply run grails install-plugin liquibase and create your [[databasechangelog|change log XML file]] in grails-app/migrations/changelog.xml
+To install, simply run grails install-plugin liquibase and create your [[databasechangelog.html|change log XML file]] in grails-app/migrations/changelog.xml
 
 Run the following command in your project folder to install Liquibase plugin:
 ''grails install-plugin liquibase''
@@ -14,7 +19,7 @@ Run the following command in your project folder to install Liquibase plugin:
 To run any command, simply execute ''grails <commmand_name>'' in root folder of your project.
 
 
-===== Update/Rollback Commands =====
+## Update/Rollback Commands ##
 
 ^ migrate  | Updates database to current version  | 
 ^ migrate-sql  | Writes SQL to update database to current version to STDOUT  | 
@@ -28,12 +33,12 @@ To run any command, simply execute ''grails <commmand_name>'' in root folder of 
 ^ rollback-to-date-sql <date>  | Writes SQL to roll back the database to that state it was in at the given date/time version to STDOUT  | 
 ^ future-rollback-sql  | Writes SQL to roll back the database to the current state after the changes in the changelog have been applied  | 
 
-===== Misc Commands =====
+## Misc Commands ##
 
 ^ db-doc  | Generates Javadoc-like documentation based on current database and change log  | 
 ^ generate-changelog  | Writes Change Log XML to copy the current state of the database to standard out  | 
 
-===== Maintenance Commands =====
+## Maintenance Commands ##
 
 ^ tag  | 'Tags' the current database state for future rollback  | 
 ^ changelog-sync-sql  | Writes SQL to mark all changes as executed in the database to STDOUT  | 
@@ -45,7 +50,7 @@ To run any command, simply execute ''grails <commmand_name>'' in root folder of 
 ^ validate-changelog  | Checks changelog for errors  | 
 ^ db-diff | Generate changeSet(s) to make Test DB match Development |
 
-===== Version Naming Convention =====
+## Version Naming Convention ##
 
 
 The Grails plugin is versioned based off the core Liquibase version. For example, a Grails plug-in version of "1.3.2.0" is the first Grails plug-in release based on the 1.3.2 version of Liquibase. If there is a patch to the Grails plug-in, but not the core Liquibase library, the version will change to "1.3.2.1".

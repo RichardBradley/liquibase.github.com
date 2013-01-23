@@ -1,13 +1,18 @@
-====== Database Documentation Generator ======
+---
+layout: default
+title: Dbdoc
+---
+
+# Database Documentation Generator #
 
 Using change information stored in the change logs and an existing database, LiquiBase can generate database change documentation.
 
-===== Running DBDoc =====
+## Running DBDoc ##
 
-The dbDoc command support is currently available through the [[command line]] only.
+The dbDoc command support is currently available through the [[command_line.html]] only.
 
 
-===== Example =====
+## Example ##
 
 <code>
 liqubase.sh --driver=oracle.jdbc.OracleDriver \
@@ -20,6 +25,6 @@ liqubase.sh --driver=oracle.jdbc.OracleDriver \
 </code>
 
 
-===== Sample Output =====
+## Sample Output ##
 
 The documentation output is based on a "JavaDoc" style documentation. The report of changes from our sample changelog is available [[http://www.liquibase.org/dbdoc/index.html|here]].

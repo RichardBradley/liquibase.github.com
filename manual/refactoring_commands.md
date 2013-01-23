@@ -1,56 +1,61 @@
-===== Available Database Refactorings =====
+---
+layout: default
+title: Refactoring commands
+---
 
-Data refactorings are used in [[ChangeSet]]s.
+## Available Database Refactorings ##
 
-==== Structural Refactorings ====
-  * [[Add Column]]
-  * [[Rename Column]]
-  * [[Modify Column]]
-  * [[Drop Column]]
-  * [[Alter Sequence]]
-  * [[Create Table]]
-  * [[Rename Table]]
-  * [[Drop Table]]
-  * [[Create View]]
-  * [[Rename View]]
-  * [[Drop View]]
-  * [[Merge Columns]]
-  * [[Create Stored Procedure]]
-==== Data Quality Refactorings ====
-  * [[Add Lookup Table]]
-  * [[Add Not-Null Constraint]]
-  * [[Remove Not-Null Constraint]]
-  * [[Add Unique Constraint]]
-  * [[Drop Unique Constraint]]
-  * [[Create Sequence]]
-  * [[Drop Sequence]]
-  * [[Add Auto-Increment]]
-  * [[Add Default Value]]
-  * [[Drop Default Value]]
-==== Referential Integrity Refactorings ====
-  * [[Add Foreign Key Constraint]]
-  * [[Drop Foreign Key Constraint]]
-  * [[Drop All Foreign Key Constraints]]
-  * [[Add Primary Key Constraint]]
-  * [[Drop Primary Key Constraint]]
+Data refactorings are used in [[ChangeSet.html]]s.
+
+### Structural Refactorings ###
+  * [[Add_Column.html]]
+  * [[Rename_Column.html]]
+  * [[Modify_Column.html]]
+  * [[Drop_Column.html]]
+  * [[Alter_Sequence.html]]
+  * [[Create_Table.html]]
+  * [[Rename_Table.html]]
+  * [[Drop_Table.html]]
+  * [[Create_View.html]]
+  * [[Rename_View.html]]
+  * [[Drop_View.html]]
+  * [[Merge_Columns.html]]
+  * [[Create_Stored_Procedure.html]]
+### Data Quality Refactorings ###
+  * [[Add_Lookup_Table.html]]
+  * [[Add Not-Null_Constraint.html]]
+  * [[Remove Not-Null_Constraint.html]]
+  * [[Add_Unique_Constraint.html]]
+  * [[Drop_Unique_Constraint.html]]
+  * [[Create_Sequence.html]]
+  * [[Drop_Sequence.html]]
+  * [[Add Auto-Increment.html]]
+  * [[Add_Default_Value.html]]
+  * [[Drop_Default_Value.html]]
+### Referential Integrity Refactorings ###
+  * [[Add_Foreign_Key_Constraint.html]]
+  * [[Drop_Foreign_Key_Constraint.html]]
+  * [[Drop_All_Foreign_Key_Constraints.html]]
+  * [[Add_Primary_Key_Constraint.html]]
+  * [[Drop_Primary_Key_Constraint.html]]
 
 
 
-==== Non-Refactoring Transformations ====
-  * [[Insert Data]]
-  * [[Load Data]]
-  * [[Load Update Data]]
-  * [[Update Data]]
-  * [[Delete Data]]
-  * [[Tag Database]]
-  * [[Stop]]
+### Non-Refactoring Transformations ###
+  * [[Insert_Data.html]]
+  * [[Load_Data.html]]
+  * [[Load_Update_Data.html]]
+  * [[Update_Data.html]]
+  * [[Delete_Data.html]]
+  * [[Tag_Database.html]]
+  * [[Stop.html]]
 
-==== Architectural Refactorings ====
-  * [[Create Index]]
-  * [[Drop Index]]
-==== Custom Refactorings ====
-  * [[modify sql|Modifying Generated SQL]]
-  * [[Custom SQL]]
-  * [[Custom SQL File]]
-  * [[Custom Refactoring Class]]
-  * [[Execute Shell Command]]
+### Architectural Refactorings ###
+  * [[Create_Index.html]]
+  * [[Drop_Index.html]]
+### Custom Refactorings ###
+  * [[modify_sql.html|Modifying Generated SQL]]
+  * [[custom_sql.html]]
+  * [[Custom_SQL_File.html]]
+  * [[Custom_Refactoring_Class.html]]
+  * [[Execute_Shell_Command.html]]

@@ -1,19 +1,24 @@
-====== Alter Sequence ======
+---
+layout: default
+title: Alter sequence
+---
+
+# Alter Sequence #
 
 Modifies properties of an existing sequence
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <alterSequence sequenceName="seq_employee_id" incrementBy="10"/>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 ^ sequenceName  | Name of the sequence to alter **[required]**  | 
 ^ incrementBy  | New "increment by" value **[required]**  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Sequence Support in Database  | 
 ^ PostgreSQL  | No Issues  | 

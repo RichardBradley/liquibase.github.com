@@ -1,8 +1,13 @@
-====== Create Index ======
+---
+layout: default
+title: Create index
+---
+
+# Create Index #
 
 Creates an index on an existing column or set of columns.
 
-===== Samples =====
+## Samples ##
 
 <code xml>
 <createIndex tableName="user" indexName="idx_user_username">
@@ -18,7 +23,7 @@ Creates an index on an existing column or set of columns.
 </code>
 
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName  | Name of the table to add the index to **[required]**  | 
 ^ schemaName  | Name of the table schema  | 
@@ -26,12 +31,12 @@ Creates an index on an existing column or set of columns.
 ^ tablespace  | "Tablespace" (file group in SQL Server) to create the index in  | 
 ^ unique  | Are the values unique //Since 1.8//  | 
 
-===== Available Sub-Tags =====
+## Available Sub-Tags ##
 
-^ column  | Column(s) to add to the index. See the [[column|column tag documentation]] for more information  | 
+^ column  | Column(s) to add to the index. See the [[column.html|column tag documentation]] for more information  |
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | Does not support tablespaces  | 
 ^ PostgreSQL  | No Issues  | 

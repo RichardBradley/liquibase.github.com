@@ -1,8 +1,13 @@
-===== dropAllDatabaseObjects Ant Task =====
+---
+layout: default
+title: Dropalldatabaseobjects ant task
+---
+
+## dropAllDatabaseObjects Ant Task ##
 
 Drops all database objects owned by the user. Note that functions, procedures and packages are not dropped (limitation in 1.8.1). 
 
-==== Sample ====
+### Sample ###
 
 <code xml>
 <target name="dropAll" depends="prepare">
@@ -29,7 +34,7 @@ Drops all database objects owned by the user. Note that functions, procedures an
 </code>
 
 
-==== Available Parameters ====
+### Available Parameters ###
 
 ^ driver  | The name of the database driver to connect with **[required]**  | 
 ^ url  | The database URL **[required]**  | 
@@ -40,9 +45,9 @@ Drops all database objects owned by the user. Note that functions, procedures an
 ^ promptOnNonLocalDatabase  | If set to true (default is false) a dialog box with warn you if you attempt to run the LiquiBase against a database that is not on localhost  | 
 ^ classpathref  | A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file **[required]**  | 
 
-==== Available Sub Tags ====
-^ changeLogProperty  | Sets a [[changelog parameters]] set //Since LiquiBase 1.7// | 
+### Available Sub Tags ###
+^ changeLogProperty  | Sets a [[changelog_parameters.html]] set //Since LiquiBase 1.7// |
 
-=== Available <changeLogProperty> Parameters ===
+#### Available <changeLogProperty> Parameters ####
 ^ name  | The name of the property to set  | 
 ^ value  | The value of the property to set  | 

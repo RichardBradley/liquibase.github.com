@@ -1,4 +1,9 @@
-====== Load Data ======
+---
+layout: default
+title: Load data
+---
+
+# Load Data #
 
 Loads data from a CSV file into an existing table.  A value of //NULL// in a cell will be converted to a database NULL rather than the string "NULL"
 
@@ -14,7 +19,7 @@ Once the date format string is set, Liquibase will then call the SimpleDateForma
 //Since LiquiBase 1.7//
 
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <loadData tableName="users" file="com/sample/users.csv">
@@ -26,14 +31,14 @@ Once the date format string is set, Liquibase will then call the SimpleDateForma
 </code>
 
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName  | Name of the table to insert data into **[required]** | 
 ^ schemaName  | Name of the table schema  | 
 ^ file  | CSV file to load **[required]**  | 
 ^ encoding | Encoding of the CSV file (defaults to UTF-8)  | 
 
-===== Available Sub-Tags =====
+## Available Sub-Tags ##
 
 ^ column  | Defines how the data should be loaded  | 
 
@@ -41,7 +46,7 @@ Once the date format string is set, Liquibase will then call the SimpleDateForma
 
 
 
-===== Available Column Attributes =====
+## Available Column Attributes ##
 
 ^ index | A zero-based index of the column being described **[index or header required]** | 
 ^ header | Data file header row value of column being described **[index or header required]** | 
@@ -49,7 +54,7 @@ Once the date format string is set, Liquibase will then call the SimpleDateForma
 ^ type  | Data type of the column. Possible values: STRING, NUMERIC, DATE, BOOLEAN **[required]**  |
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

@@ -1,19 +1,24 @@
-====== Stop LiquiBase Execution ======
+---
+layout: default
+title: Stop
+---
+
+# Stop LiquiBase Execution #
 
 Stops LiquiBase execution with a message.  Mainly useful for debugging and stepping through a changelog.  //Since LiquiBase 1.9//
 
-===== Samples =====
+## Samples ##
 
 <code xml>
 <stop>Halted LiquiBase for debugging</stop>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tag text | Message to output when execution stops.  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

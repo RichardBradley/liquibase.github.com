@@ -1,8 +1,13 @@
-===== changeLogSync Ant Task =====
+---
+layout: default
+title: Changelogsync ant task
+---
+
+## changeLogSync Ant Task ##
 
 Marks all change sets as ran against the database.  Useful when you have manually updated your database.  
 
-==== Sample ====
+### Sample ###
 
 <code xml>
 <target name="sync-database" depends="prepare">
@@ -31,7 +36,7 @@ Marks all change sets as ran against the database.  Useful when you have manuall
 
 
 
-==== Available Parameters ====
+### Available Parameters ###
 
 ^ changeLogFile  | The change log file to run  **[required]**  | 
 ^ driver  | The name of the database driver to connect with  | 
@@ -44,9 +49,9 @@ Marks all change sets as ran against the database.  Useful when you have manuall
 ^ databaseChangeLogTableName  | Overrides the name of the databasechangelog table to use //Since LiquiBase 1.9// |
 ^ databaseChangeLogLockTableName  | Overrides the name of the databasechangeloglock table to use //Since LiquiBase 1.9// |
 
-==== Available Sub Tags ====
-^ changeLogProperty  | Sets a [[changelog parameters]] set //Since LiquiBase 1.7// | 
+### Available Sub Tags ###
+^ changeLogProperty  | Sets a [[changelog_parameters.html]] set //Since LiquiBase 1.7// |
 
-=== Available <changeLogProperty> Parameters ===
+#### Available <changeLogProperty> Parameters ####
 ^ name  | The name of the property to set  | 
 ^ value  | The value of the property to set  | 

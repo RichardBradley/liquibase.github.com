@@ -1,8 +1,13 @@
-====== Custom SQL ======
+---
+layout: default
+title: Custom sql
+---
+
+# Custom SQL #
 
 The "sql" tag allows you to specify whatever sql you want. It is useful for complex changes that aren't supported through LiquiBase's automated refactoring tags and to work around bugs and limitations of LiquiBase. The SQL contained in the sql tag can be multi-line.
 
-The [[create stored procedure|createProcedure]] refactoring is the best way to create stored procedures.
+The [[create_stored_procedure.html|createProcedure]] refactoring is the best way to create stored procedures.
 
 The "sql" tag can also support multiline statements in the same file. Statements can either be split using a ; at the end of the last line of the SQL or a go on its own on the line between the statements can be used.Multiline SQL statements are also supported and only a ; or go statement will finish a statement, a new line is not enough. Files containing a single statement do not need to use a ; or go.
 
@@ -13,21 +18,21 @@ The sql change can also contain comments of either of the following formats:
 
 Note: By default it will attempt to split statements on a ";" or "go" at the end of lines. Because of this, if you have a comment or some other non-statement ending ";" or "go", don't have it at the end of a line or you will get invalid SQL.
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <sql>insert into person (id, name) values (1, 'Bob')</sql>
 </code>
 
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ stripComments  | Set to true to remove any comments in the SQL before executing, otherwise false. Defaults to false if not set  | 
 ^ splitStatements  | Set to false to not have liquibase split statements on ;'s and GO's. Defaults to true if not set  | 
 ^ endDelimiter  | Delimiter to apply to the end of the statement.  Defaults to ";", may be set to "".  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 
@@ -45,7 +50,7 @@ Note: By default it will attempt to split statements on a ";" or "go" at the end
 
 Automatic Rollback Support: **NO**
 
-===== Examples =====
+## Examples ##
 The example below shows how you can use the SQL tag to run a PL/SQL block in Oracle. This allows you to perform some dynamic logic in your changelog.
 
 Imagine you want to perform a generic action on all newly created objects.

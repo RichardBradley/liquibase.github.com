@@ -1,8 +1,13 @@
-===== rollbackDatabase Ant Task =====
+---
+layout: default
+title: Rollbackdatabase ant task
+---
 
-Rolls back database changes.  See [[rollback]] page for more information.
+## rollbackDatabase Ant Task ##
 
-==== Sample ====
+Rolls back database changes.  See [[rollback.html]] page for more information.
+
+### Sample ###
 
 <code xml>
 <target name="rollback-database" depends="prepare">
@@ -31,7 +36,7 @@ Rolls back database changes.  See [[rollback]] page for more information.
 
 
 
-==== Available Parameters ====
+### Available Parameters ###
 
 ^ changeLogFile  | The change log file to run  | 
 ^ driver  | The name of the database driver to connect with  | 
@@ -44,13 +49,13 @@ Rolls back database changes.  See [[rollback]] page for more information.
 ^ rollbackTag  | Tag to roll back to  | 
 ^ rollbackDate  | Date to roll back to  | 
 ^ rollbackCount  | Number of changeSets to roll back  | 
-^ contexts  | A comma separated list of [[contexts]] to roll back. If not specified, all contexts are rolled back.  | 
+^ contexts  | A comma separated list of [[contexts.html]] to roll back. If not specified, all contexts are rolled back.  |
 ^ databaseChangeLogTableName  | Overrides the name of the databasechangelog table to use //Since LiquiBase 1.9// |
 ^ databaseChangeLogLockTableName  | Overrides the name of the databasechangeloglock table to use //Since LiquiBase 1.9// |
 
-==== Available Sub Tags ====
-^ changeLogProperty  | Sets a [[changelog parameters]] set //Since LiquiBase 1.7// | 
+### Available Sub Tags ###
+^ changeLogProperty  | Sets a [[changelog_parameters.html]] set //Since LiquiBase 1.7// |
 
-=== Available <changeLogProperty> Parameters ===
+#### Available <changeLogProperty> Parameters ####
 ^ name  | The name of the property to set  | 
 ^ value  | The value of the property to set  | 

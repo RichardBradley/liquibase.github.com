@@ -1,8 +1,13 @@
-====== Insert Data ======
+---
+layout: default
+title: Insert data
+---
+
+# Insert Data #
 
 Inserts data into an existing table
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <insert tableName="People">
@@ -14,17 +19,17 @@ Inserts data into an existing table
 </insert>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName  | Name of the table to insert data into  | 
 ^ schemaName  | Name of the table schema  | 
 
-===== Available Sub-Tags =====
+## Available Sub-Tags ##
 
-^ column  | Data to insert into columns. See the [[column|column tag documentation]] for more information  | 
+^ column  | Data to insert into columns. See the [[column.html|column tag documentation]] for more information  |
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

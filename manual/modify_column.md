@@ -1,10 +1,15 @@
-====== Modify Column Refactoring ======
+---
+layout: default
+title: Modify column
+---
 
-This tag is deprecated in 2.0 see [[Modify Datatype Refactoring]] instead.
+# Modify Column Refactoring #
+
+This tag is deprecated in 2.0 see [[Modify_Datatype_Refactoring.html]] instead.
 
 Makes changes to an existing column such as the data type.
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <modifyColumn tableName="person">
@@ -12,19 +17,19 @@ Makes changes to an existing column such as the data type.
 </modifyColumn>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName  | Name of the table that the column to modify is in **[required]**   | 
 ^ schemaName  | Name of the table schema  | 
 
 
-===== Available Sub-Tags =====
+## Available Sub-Tags ##
 
-^ column  | New column definition See the [[column | column tag documentation]] for more information |
+^ column  | New column definition See the [[column.html| column tag documentation]] for more information |
 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  |
 ^ PostgreSQL  | No Issues  |

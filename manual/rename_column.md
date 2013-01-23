@@ -1,15 +1,20 @@
-====== Rename Column ======
+---
+layout: default
+title: Rename column
+---
+
+# Rename Column #
 
 Renames an existing column
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <renameColumn tableName="person"
     oldColumnName="fname" newColumnName="firstName"/>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 ^ tableName  | Name of the table containing that the column to rename **[required]**  |
 ^ schemaName  | Name of the table schema  |
 ^ oldColumnName  | Existing name of the column to rename **[required]**  |
@@ -19,7 +24,7 @@ Renames an existing column
 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 ^ MySQL  | No Issues  |
 ^ PostgreSQL  | No Issues  |
 ^ Oracle  | No Issues  |

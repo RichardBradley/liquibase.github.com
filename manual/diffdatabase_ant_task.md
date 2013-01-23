@@ -1,8 +1,13 @@
-===== diffDatabase Ant Task =====
+---
+layout: default
+title: Diffdatabase ant task
+---
 
-Outputs a [[diff]] report of the difference between two databases.
+## diffDatabase Ant Task ##
 
-==== Sample ====
+Outputs a [[diff.html]] report of the difference between two databases.
+
+### Sample ###
 
 <code xml>
 <target name="diff-database" depends="prepare">
@@ -32,7 +37,7 @@ Outputs a [[diff]] report of the difference between two databases.
 
 
 
-==== Available Parameters ====
+### Available Parameters ###
 
 ^ driver  | The name of the database driver to connect with  | 
 ^ url  | The target database URL **[required]**  | 
@@ -49,9 +54,9 @@ Outputs a [[diff]] report of the difference between two databases.
 ^ databaseChangeLogTableName  | Overrides the name of the databasechangelog table to use //Since LiquiBase 1.9// |
 ^ databaseChangeLogLockTableName  | Overrides the name of the databasechangeloglock table to use //Since LiquiBase 1.9// |
 
-==== Available Sub Tags ====
-^ changeLogProperty  | Sets a [[changelog parameters]] set //Since LiquiBase 1.7// | 
+### Available Sub Tags ###
+^ changeLogProperty  | Sets a [[changelog_parameters.html]] set //Since LiquiBase 1.7// |
 
-=== Available <changeLogProperty> Parameters ===
+#### Available <changeLogProperty> Parameters ####
 ^ name  | The name of the property to set  | 
 ^ value  | The value of the property to set  | 

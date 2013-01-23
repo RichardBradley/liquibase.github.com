@@ -1,21 +1,26 @@
-====== Drop All Foreign Key Constraints ======
+---
+layout: default
+title: Drop all foreign key constraints
+---
+
+# Drop All Foreign Key Constraints #
 
 Drops all foreign key constraints for a table
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <dropAllForeignKeyConstraints
     baseTableName="address"/>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ baseTableName  | Name of the table containing the foreign key **[required]**  | 
 ^ baseTableSchemaName  | Name of the table schema  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | Requires v5.1.10 (REFERENTIAL_CONSTRAINTS table)  | 
 ^ PostgreSQL  | No Issues(?)  | 

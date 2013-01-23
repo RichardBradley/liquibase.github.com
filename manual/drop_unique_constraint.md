@@ -1,22 +1,27 @@
-====== Drop Unique Constraint ======
+---
+layout: default
+title: Drop unique constraint
+---
+
+# Drop Unique Constraint #
 
 Drops an existing unique constraint.
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <dropUniqueConstraint tableName="person" constraintName="pk_person"/>
 </code>
 
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tableName | Name of the table to drop the unique constraint from **[required]** |
 ^ schemaName | Name of the table schema |
 ^ constraintName | Name of unique constraint to drop **[required]** |
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

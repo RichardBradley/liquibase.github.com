@@ -1,21 +1,26 @@
-====== Rename Table ======
+---
+layout: default
+title: Rename table
+---
+
+# Rename Table #
 
 Renames an existing table.
 
-===== Sample =====
+## Sample ##
 
 <code xml>
 <renameTable oldTableName="employee" newTableName="person"/>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ schemaName  | Name of the table schema  | 
 ^ oldTableName  | Existing name of the table to rename **[required]**  | 
 ^ newTableName  | Name to rename the table to **[required]**  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

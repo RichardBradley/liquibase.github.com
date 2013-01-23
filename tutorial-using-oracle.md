@@ -1,4 +1,9 @@
-====== LiquiBase Tutorial using Oracle ======
+---
+layout: default
+title: Tutorial-using-oracle
+---
+
+# LiquiBase Tutorial using Oracle #
 This is a LiquiBase tutorial that shows you how to manage your database objects using the Oracle database and some Oracle tools. It also shows how branching and merging is performed using Subversion. The tutorial incorporates several best practices. This makes it realistic for the needs of a software development shop. Of course your needs may be simpler. You may not need branching, you may not ever need to deliver a fresh install. In that case, you can just use the best practices and conventions that apply to your situation.
 
 The scenario we will be using for the tutorial assumes we are developing an application for two customers named Solo and Duplex. Each customer has their own upgrade timing.
@@ -47,14 +52,14 @@ The scenario for this tutorial is illustrated in the diagram below. It will be h
 
 {{tutorial-overview.png?800|}}
 
-===== Step 1: Install the software =====
-==== Install Oracle Database ====
+## Step 1: Install the software ##
+### Install Oracle Database ###
 If you don't already have an Oracle database available, then download Oracle XE from the [[http://www.oracle.com/technology|Oracle Technology Network]] and install it on your computer. The XE edition of the database is free to use for development and production purposes.
 
-==== Install SQL Developer ====
+### Install SQL Developer ###
 There are many tools available to manage your database objects. If you haven't already got such a tool, then take a look at SQL Developer. SQL Developer is available as a free download at the [[http://www.oracle.com/technology|Oracle Technology Network]]. 
 
-==== Install JDeveloper ====
+### Install JDeveloper ###
 Oracle JDeveloper is another free tool available from the [[http://www.oracle.com/technology|Oracle Technology Network]]. It has too many features to list here, we will only mention the XML editor. This editor is schema aware, and makes it easy to author your changelogs.
 
 After downloading and installing, start JDeveloper. If you are behind a proxy, configure the proxy using:
@@ -69,11 +74,11 @@ Choose Tools > Preferences > XML Schemas. Select "add". Enter:
 
 Press OK and now your JDeveloper is ready to edit your changelogs. There is no need to create an application or a project. Simply open the XML file you want to edit.
 
-==== Install TortoiseSVN ====
+### Install TortoiseSVN ###
 TortoiseSVN is a graphical front end to Subversion. It also has the capability to create a file based repository. We will use this feature for this tutorial. There is no need for you to have access to a Subversion server. Download TortoiseSVN from [[http://tortoisesvn.net/]].
 Install it and reboot your PC.
 
-==== Create directory structure and Subversion repository ====
+### Create directory structure and Subversion repository ###
 Create the directory structure for this tutorial.
 <code>
 D:
@@ -103,13 +108,13 @@ Return to Windows Explorer, navigate to directory D:\projects\lbdemo and right-c
 
 Press OK. A confirmation window will display to create directory trunk. Select Yes. Press OK. In Windows Explorer, the trunk directory will be displayed with a green icon, indicating that it is a working copy with no changes to commit.
 
-==== Install the JDBC Driver ====
+### Install the JDBC Driver ###
 Download the Oracle JDBC driver here: [[http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/index.html]]
 Click on the link for 10g  Release 2 drivers, and choose ''ojdbc14.jar''.
 
 Save the jar in directory: ''D:\projects\lbdemo''.
 
-==== Install LiquiBase ====
+### Install LiquiBase ###
 Install LiquiBase following the instructions.
 
 Add the directory containing the ''liquibase.bat'' file to your PATH. [[http://redmondlab.net|Redmond Path]] is a handy tool to edit your path; much easier than the standard facility in Windows. 
@@ -150,7 +155,7 @@ Right-click on file ''liquibase.properties.template'' and choose **TortoiseSVN >
 Right-click on directory ''trunk'' and choose **TortoiseSVN > commit**.
 
 
-===== Step 2: Create the initial database schemas =====
+## Step 2: Create the initial database schemas ##
 For our tutorial, we will create these database schemas:
   * **lb_dev** - our development environment
   * **lb_test** - our test environment
@@ -182,7 +187,7 @@ grant connect, resource, create view to lb_duplex;
 
 In SQL Developer, create a connection for each of these users. They will come in handy later.
 
-===== Step 3: Create project directories and standard files =====
+## Step 3: Create project directories and standard files ##
 In this step we will be creating the following directory structure in the ''trunk'' directory:
 
 <code>
@@ -276,14 +281,14 @@ Enter a message like "Initial version", select all files/directories and press O
 
 
 
-===== Step 4: Create database objects =====
+## Step 4: Create database objects ##
 Each change (including initial creations) are related to an issue number: a bug or a project task. Our first task (which happens to have number 73) is to create 2 tables.
 
 The file structure which we will be describing has a certain structure which is easier to see if we visualize it. The white boxes are the directories. The blue boxes are the files within the directories. The arrows indicate that one file calls or includes another file.
 
 {{tutorial-files.png?600|}}
 
-==== Change 73 ====
+### Change 73 ###
 The description of this task is:
   * Create table ''departments'', the primary key is populated using a sequence and a trigger
   * Create table ''employees'' with a foreign key to departments
@@ -406,7 +411,7 @@ After you have completed and tested your changes, commit them to Subversion with
 
 This task is now complete, we will continue to the next task.
 
-==== Change 59 ====
+### Change 59 ###
 This description of this task is:
   * Create package ''departments_pck''
   * Create view ''departments_vw''
@@ -516,10 +521,10 @@ After you have completed and tested your changes, commit them to Subversion with
 
 We could continue in this manner for the remainder of the project. At some point however, the number of changes may become very large and we may want to define a new starting point. This is the topic of the next section.
 
-===== Step 5: Branch major release =====
+## Step 5: Branch major release ##
 We are ready to branch for release 1.x. This will allow us to perform a fresh install of version 1.x, without applying the many changes from 0.0 to 1.0. Of course, for installations running version 0.x, we also provide the incremental migration possibility.
 
-====  Step 5.1: Finalize this version ====
+###  Step 5.1: Finalize this version ###
 The last change to version 0 has been made. After all these changes have been applied, we are effectively at major version 1. The major version is recorded in table databasechangelog. Modify this file to record this version:
 
 
@@ -551,7 +556,7 @@ Run the update command to apply the changeset with the version number:
 lb_update
 </code>
 
-====  Step 5.2: Create fresh-install scripts ====
+###  Step 5.2: Create fresh-install scripts ###
 LiquiBase stores sets of changes in a **changelog**. Although we can create the changelog for the initial objects by hand, it would be nice to be able to generate them from an existing database. The LiquiBase generateChangeLog command does export tables to a changelog file, but it has some significant shortcomings:
   * Everything is dumped into one file. This does not provide much overview in your version control system.
   * It does not export all objects. E.g. triggers and packages are missing.
@@ -638,7 +643,7 @@ Our (manual) utility will create these files:
 
 
 
-====  Step 5.3: Reorganize changelog directories and scripts ====
+###  Step 5.3: Reorganize changelog directories and scripts ###
 Create a new directory for the changelogs from 1.0:
 <code>
 mkdir v001
@@ -708,7 +713,7 @@ Create the ''install.xml''. This file does the fresh install of objects, records
 </databaseChangeLog>
 </code>
 
-====  Step 5.4: Test the Fresh Install ====
+###  Step 5.4: Test the Fresh Install ###
 Modify liquibase.properties and change the username and password:
 <code>
 username: lb_test
@@ -768,7 +773,7 @@ Commit the current version to Subversion. Right-click on directory trunk and sel
 Enter a message like "Finalize 1.x", select all files and press OK. Now the files will also be displayed with a green icon in Windows explorer.
 
 
-====  Step 5.5: Branch version 1.x ====
+###  Step 5.5: Branch version 1.x ###
 Right-click on the ''trunk'' and choose **TortoiseSVN > Repo-browser**. Select ''trunk'' in the left pane. By default we are selecting the HEAD, which is correct. But if someone else commited a change on the trunk in the meantime, you would want to select the revision in which you finalized 1.x.
 
 Right-click on ''trunk'' and choose ''copy to ..''.
@@ -806,7 +811,7 @@ cd \projects\lbdemo\branch_1.x
 lb_install
 </code>
 
-===== Step 6: Create test data =====
+## Step 6: Create test data ##
 In order to test data migration functionality, let's insert some test data. In a SQL Developer session, run this script:
 
 <code>
@@ -819,7 +824,7 @@ commit;
 
 Run this script in the **lb_dev** schema and in the **lb_test** schema. We won't create liquibase scripts for this data, and we won't store the scripts in Subversion. The art of maintaining setup data and test data is worth a separate tutorial, so we won't cover it here. If you are curious, look up the **insert data** and **load data** functionality in the LiquiBase manual.
 
-===== Step 7: Fix bug 102 =====
+## Step 7: Fix bug 102 ##
 The system test on version 1.x has revealed a bug and it needs to be fixed before we can ship version 1.0. We fix bugs on the trunk, and then backport them to the relevant branches.
 
 This change has been registered in our issue tracker with number 102. The change description is:
@@ -907,8 +912,8 @@ ID   ENAME     DPT_ID    FIXED_SALARY   BONUS
 
 Commit these changes using TortoiseSVN. Enter log message: "102: Replace salary by fixed_salary and bonus".
 
-===== Step 8: Backport bug 102 to branch 1.x =====
-=== Perform the merge  ===
+## Step 8: Backport bug 102 to branch 1.x ##
+#### Perform the merge  ####
 Right-click on directory ''branch_1.x'' and choose **TortoiseSVN > Merge...**.
 
 ^Merge type: | Merge a range of revisions |
@@ -928,7 +933,7 @@ In Windows Explorer, you will see that ''2009-10-16-102.xml'' has been added to 
 
 Commit branch_1.x with comment "102: backport".
 
-=== Test the results  ===
+#### Test the results  ####
 Run the update command:
 <code>
 cd D:\projects\lbdemo\branch_1.x
@@ -937,7 +942,7 @@ lb_update
 
 Use SQL Developer to confirm that the employees in schema lb_test now have a fixed salary and a bonus.
 
-=== Tag this revision as 1.0  ===
+#### Tag this revision as 1.0  ####
 The acceptance test has now been completed, so we can label this version as our "1.0" release.
 Right-click on ''branch_1.x'' and choose **TortoiseSVN > Branch/Tag ...**. Fill out the dialogue as shown below:
 
@@ -950,7 +955,7 @@ Press OK and close the repository browser.
 
 We can now deliver version 1.0 to the customer.
 
-===== Step 9: Install 1.0 for Solo =====
+## Step 9: Install 1.0 for Solo ##
 We can now deliver version 1.0 to our customer Solo. Create directory ''D:\projects\lbdemo\solo''. Right-click on this directory and choose TortoiseSVN > Export. Fill out the dialogue as shown below:
 
 ^URL of repository:                  | <nowiki>file:///D:/projects/lbdemo/repo/tags/1.0</nowiki>  |
@@ -969,7 +974,7 @@ Twice, you should receive the confirmation "Migration successful", and Solo is r
 
 
 
-===== Step 10: Further development on the trunk (change 105) =====
+## Step 10: Further development on the trunk (change 105) ##
 The specifications for this change are:
   * add column mgr_id to the departments table. To be populated by the mgr_id of King.
   * add a foreign key: departments.mgr_id -> employees.id
@@ -1030,7 +1035,7 @@ Use SQL Developer to check that the changes have been applied correctly.
 
 Commit these changes using TortoiseSVN, with comment "105: Add mgr_id and foreign key".
 
-===== Step 11: Branch major release 2.x =====
+## Step 11: Branch major release 2.x ##
 This is the same as step 5. Repeat step 5 , replacing 1.x by 2.x.
 
 However, there is a difference. Customers running 1.x need to be able to upgrade to 2.x. We did not cover that aspect previously. If a 1.x customer were simply to run lb_update, then it would fail on the precondition in the master.xml:
@@ -1068,7 +1073,7 @@ call liquibase --changeLogFile=update.xml update
 </code>
 
 
-===== Step 12: Change 114, rename column =====
+## Step 12: Change 114, rename column ##
 Testing on branch 2.x revealed a bug that we want fixed on branch 1.x as well. Column employees.ename needs to be renamed to full_name. Refer to the diagram at the start of this tutorial for a visual overview of this step. By now you should know the routine.
 
 Create the changelog:
@@ -1113,7 +1118,7 @@ Use SQL Developer to check that the changes have been applied correctly.
 
 Commit these changes using TortoiseSVN, with comment "114: Renamed employee.ename to full_name".
 
-===== Step 13: Backport change 114 to branch 1.x =====
+## Step 13: Backport change 114 to branch 1.x ##
 This is the same as step 8 with a major exception. On the trunk, change 114 is recorded in directory v002 and in file v002/master.xml
 
 Branch 1.x does not have a directory v002. We will create this directory to contain the changelog. However, note that we will **not** create a file named ''v002/master.xml''. There should only be one master.xml on a branch, as it contains the order of the changes.
@@ -1139,23 +1144,23 @@ Change 114 will be referenced in ''v001/master.xml'' as follows:
 </databaseChangeLog>
 </code>
 
-===== Step 14: Backport change 114 to branch 2.x =====
+## Step 14: Backport change 114 to branch 2.x ##
 This is the same as step 8.
 
-===== Step 15: Deliver release 1.1 to Solo =====
+## Step 15: Deliver release 1.1 to Solo ##
 This is the same as step 9, except you will run the lb_update command instead of lb_install to update Solo to the latest version of the 1.x branch.
 
-===== Step 16: Deliver 2.0 as a fresh install to customer Duplex =====
+## Step 16: Deliver 2.0 as a fresh install to customer Duplex ##
 This is also the same as step 9, but taking the export from tag 2.0.
 
-===== Step 17: Deliver 2.0 as an upgrade to customer Solo =====
+## Step 17: Deliver 2.0 as an upgrade to customer Solo ##
 The same export created in the previous step can be delivered to customer Solo. 
 
 Customer lb_solo runs the ''lb_upgrade_to_magor'' command.
 
 
-===== Summary of developer procedures =====
-==== Database refactorings ====
+## Summary of developer procedures ##
+### Database refactorings ###
 The default action is to create a change file named <date>-IssueNr>.xml in directory vXXX and specify the change in this file. Example filename: ''v002/2009-12-25-305.xml''
 
 ^ ^Create^Modify^Delete^
@@ -1166,7 +1171,7 @@ The default action is to create a change file named <date>-IssueNr>.xml in direc
 ^Package|Create new file in directory ''latest/pck''. Include this file in the change file. |Modify file in directory ''latest/pck''. Include this file in the change file. |See below |
 
 
-=== Delete object from latest directory (view, trigger, package) ===
+#### Delete object from latest directory (view, trigger, package) ####
 The procedure is described here for a view, and is similar for triggers and packages.
 
 Delete the view from the ''latest/vw'' directory.
@@ -1191,8 +1196,8 @@ Add the changeset to the master.
 Search all changelogs for inclusion of the view definition (which no longer exists). Remove this line from the relevant changelogs.
 
 
-==== Other Procedures (non-refactoring) ====
-=== Branch major release ===
+### Other Procedures (non-refactoring) ###
+#### Branch major release ####
 As an example, let's assume that you are ready to branch for release 4.x.
 
 The trunk will contain:

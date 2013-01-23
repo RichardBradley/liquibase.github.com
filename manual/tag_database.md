@@ -1,19 +1,24 @@
-====== Tag Database ======
+---
+layout: default
+title: Tag database
+---
 
-Applies a tag to the database for future [[rollback]].  Since LiquiBase 1.6
+# Tag Database #
 
-===== Samples =====
+Applies a tag to the database for future [[rollback.html]].  Since LiquiBase 1.6
+
+## Samples ##
 
 <code xml>
 <tagDatabase tag="version_1.3"/>
 </code>
 
-===== Available Attributes =====
+## Available Attributes ##
 
 ^ tag  | tag to apply **[required]**  | 
 
 
-===== Database Compatiblity =====
+## Database Compatiblity ##
 
 ^ MySQL  | No Issues  | 
 ^ PostgreSQL  | No Issues  | 

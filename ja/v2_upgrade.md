@@ -1,6 +1,6 @@
 ====== 1.x から 2.0 のアップグレードガイド ======
 FIXME
-Liquibase 2.0 では、いくつかの互換性のない変更が導入されており、1.9 から 2.0 へのアップグレードで対応が必要となります。新しい問題や回避策を見つけた場合はこの wiki ページを更新してください。2.0 での新機能の一覧は、 [[v2_features|2.0 機能一覧]]を参照してください。
+Liquibase 2.0 では、いくつかの互換性のない変更が導入されており、1.9 から 2.0 へのアップグレードで対応が必要となります。新しい問題や回避策を見つけた場合はこの wiki ページを更新してください。2.0 での新機能の一覧は、 [2.0 機能一覧](v2_features)を参照してください。
 
 **This page will be updated regularly up to and beyond the 2.0 final release.**
 
@@ -21,7 +21,7 @@ XSD 定義のフォーマットが変更されました。新しいフォーマ�
 
 ===== ModifyColumn タグの非推奨 =====
 
-modifyColumn タグは非推奨となり、extension portal に移動されました。現在、modifyColumn を利用している場合は、新しい <modifyDataType> または、ほかの用途が限定されたコマンド (addPrimaryKeyConstraint など) を利用したり、[[http://liquibase.jira.com/wiki/display/CONTRIB/ModifyColumn+Change|modifyColumn library]] をクラスパスに追加したりすることを検討してください。
+modifyColumn タグは非推奨となり、extension portal に移動されました。現在、modifyColumn を利用している場合は、新しい <modifyDataType> または、ほかの用途が限定されたコマンド (addPrimaryKeyConstraint など) を利用したり、[modifyColumn library](http://liquibase.jira.com/wiki/display/CONTRIB/ModifyColumn+Change) をクラスパスに追加したりすることを検討してください。
 
 ===== DATABASECHANGELOG テーブルに追加されたカラム =====
 
@@ -29,7 +29,7 @@ Liquibase 2.0 では自動的に3つのカラムをDATABASECHANGELOG テーブ�
 
 ===== Hibernate 統合の抽出 =====
 
-The Hibernate integration has been moved to be a plugin rather than in the Liquibase core itself.  If you use the Liquibase hibernate support, you'll need to add the jar from [[http://liquibase.jira.com/wiki/display/CONTRIB/Hibernate+Integration|the hibernate extension]] to your classpath.
+The Hibernate integration has been moved to be a plugin rather than in the Liquibase core itself.  If you use the Liquibase hibernate support, you'll need to add the jar from [the hibernate extension](http://liquibase.jira.com/wiki/display/CONTRIB/Hibernate+Integration) to your classpath.
 
 
 ===== Diff パラメータ名称の変更 =====
@@ -59,7 +59,7 @@ SpringLiquibase のクラス名が、liquibase.integration.spring.SpringLiquibas
 
 ===== そのほかパッケージとクラス名の変更 =====
 
-Many other classes changed their packages and/or names significantly.  If you have more complex Liquibase integration and are not sure how to convert your code, post a question on the [[http://liquibase.org/forum|forum]]
+Many other classes changed their packages and/or names significantly.  If you have more complex Liquibase integration and are not sure how to convert your code, post a question on the [forum](http://liquibase.org/forum)
 
 
 ===== MANIFEST.MF requirements for embedding =====

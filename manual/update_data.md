@@ -40,7 +40,7 @@ Updates data in an existing table
 
 ## Available Sub-Tags ##
 
-^ column  | Data to update. See the [[column.html|column tag documentation]] for more information.  **[required]**  |
+^ column  | Data to update. See the [column tag documentation](column.html) for more information.  **[required]**  |
 ^ where [TEXT]  | Where clause for update statement | 
 
 

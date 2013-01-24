@@ -11,4 +11,4 @@ The LiquiBase code is hosted on Jira's SVN repository can be checked out through
 
 <nowiki>svn co http://liquibase.jira.com/svn/CORE/trunk liquibase</nowiki>
 
-If you are interested in contributing to LiquiBase, please contact us via the [[../community|mailing list]].
+If you are interested in contributing to LiquiBase, please contact us via the [mailing list](../community).

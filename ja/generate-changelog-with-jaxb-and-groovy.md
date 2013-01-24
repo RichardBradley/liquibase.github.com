@@ -1,6 +1,6 @@
 ====== JAXB と Groovy を利用したLiquiBase　の変更ログの生成　======
 
-このウェブサイトの [[generate-changelog-with-groovy|ほかの記事]]で、Groovy と　markupBuilder　を利用して LiquiBase の変更ログを生成する方法を紹介しました。
+このウェブサイトの [ほかの記事](generate-changelog-with-groovy)で、Groovy と　markupBuilder　を利用して LiquiBase の変更ログを生成する方法を紹介しました。
 
 In this article we're going to use the Java Architecture for XML Binding (JAXB) xjc tooling to generate the changelog. xjc ユーティリティは、LiquiBase XSD から Java のクラスを作成します。これらのクラスを利用することで、 Groovy スクリプトから LiquiBase の変更ログを簡単に生成できます。
 

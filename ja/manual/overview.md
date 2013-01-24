@@ -6,4 +6,4 @@ LiquiBase Migrator は、コアとなるシステムでアジャイルなメソ�
 
 その変更ログファイルは、INCLUDE タグを利用してネストすることもできます。これは、変更をコンポーネント、プロジェクト、イテレーションなどプロジェクトにもっとも適した単位に分割することができ、たいへん有効です。
 
-このツールを作成するモチベーションは、この本[[http://www.amazon.co.jp/exec/obidos/ASIN/0321293533/liquibaseja-22/ref=nosim | Refactoring Databases: Evolutionary Database Design (Addison Wesley Signature Series)]][[http://www.amazon.co.jp/exec/obidos/ASIN/4894715007/liquibaseja-22/ref=nosim | データベースリファクタリング(日本語訳)]]を読んで、開発環境でなされたデータベースのリファクタリングと同一の変更を稼働している本番システムに適用するのに、ほんとうに役立つツールがないとの記述を見つけて、さらに高まりました。多くの試みがなされていますが、それらは複数の開発者間での利用、コードブランチの利用、異なる複数の DBMS システムへの対応に問題を抱えています。
+このツールを作成するモチベーションは、この本[ Refactoring Databases: Evolutionary Database Design (Addison Wesley Signature Series)](http://www.amazon.co.jp/exec/obidos/ASIN/0321293533/liquibaseja-22/ref=nosim )[ データベースリファクタリング(日本語訳)](http://www.amazon.co.jp/exec/obidos/ASIN/4894715007/liquibaseja-22/ref=nosim )を読んで、開発環境でなされたデータベースのリファクタリングと同一の変更を稼働している本番システムに適用するのに、ほんとうに役立つツールがないとの記述を見つけて、さらに高まりました。多くの試みがなされていますが、それらは複数の開発者間での利用、コードブランチの利用、異なる複数の DBMS システムへの対応に問題を抱えています。

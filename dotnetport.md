@@ -5,9 +5,9 @@ title: Dotnetport
 
 {{  :help-wanted.jpg|}}# LiquiBase .Net Port #
 
-While there has been considerable interest in a .Net port of LiquiBase, there is not yet anything functional.  The goal of this page is to provide a general overview of the current state and roadmap for the port.  For more information, or to offer help, visit [[http://liquibase.org/forum/index.php?board=4.0|the LiquiBase .Net Port forum]].  
+While there has been considerable interest in a .Net port of LiquiBase, there is not yet anything functional.  The goal of this page is to provide a general overview of the current state and roadmap for the port.  For more information, or to offer help, visit [the LiquiBase .Net Port forum](http://liquibase.org/forum/index.php?board=4.0).
 
-Our initial (and possibly long-term) goal, is to share as much code as possible between the .Net and the Java versions of LiquiBase.  There is a large amount of logic in LiquiBase that consists of "if creating a table of database type X, use this SQL" which is the same no matter what platform you are on.  In order to keep that logic as correct and complete as possible, we are writing as much of liquibase as possible in a cross-platform language.  After evaluating available options, we decided on using [[http://www.ikvm.net|IKVM.NET]] to compile Java bytecode to .Net.
+Our initial (and possibly long-term) goal, is to share as much code as possible between the .Net and the Java versions of LiquiBase.  There is a large amount of logic in LiquiBase that consists of "if creating a table of database type X, use this SQL" which is the same no matter what platform you are on.  In order to keep that logic as correct and complete as possible, we are writing as much of liquibase as possible in a cross-platform language.  After evaluating available options, we decided on using [IKVM.NET](http://www.ikvm.net) to compile Java bytecode to .Net.
 
 There is enough work planned on the Java side of LiquiBase that the primary Java LiquiBase developers will not be able to dedicate much time beyond answering questions and general architecture and direction until the second half of 2010.
 
@@ -37,11 +37,11 @@ Source for LiquiBase can be checked out from **https://github.com/liquibase/liqu
 Since IKVM compiles java bytecode (not source files) to .Net IL, you need to have enough of a java dev environment to make changes as necessary and recompile the core library.
 
 You'll need to download and install :
-  * [[http://java.sun.com/javase/downloads/widget/jdk6.jsp|Java Development Kit]]
-  * [[http://maven.apache.org/|Maven]] which we use as our build script.
+  * [Java Development Kit](http://java.sun.com/javase/downloads/widget/jdk6.jsp)
+  * [Maven](http://maven.apache.org/) which we use as our build script.
 Just unzip the file to where you want it installed
-  * [[http://ikvm.net|Ikvm]]Just unzip the file to where you want it installed.
-  * [[http://eclipse.org|Eclipse]] or [[http://intellij.com|Intellij]]
+  * [Ikvm](http://ikvm.net)Just unzip the file to where you want it installed.
+  * [Eclipse](http://eclipse.org) or [Intellij](http://intellij.com)
 
 As the .Net port matures, we will publish a pre-compiled, pre-IKVM-ed build which will remove the need for any Java environments for development.
 

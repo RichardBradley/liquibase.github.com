@@ -5,7 +5,7 @@ title: Modify column
 
 # Modify Column Refactoring #
 
-This tag is deprecated in 2.0 see [[Modify_Datatype_Refactoring.html]] instead.
+This tag is deprecated in 2.0 see [Modify_Datatype_Refactoring](Modify_Datatype_Refactoring.html) instead.
 
 Makes changes to an existing column such as the data type.
 
@@ -25,7 +25,7 @@ Makes changes to an existing column such as the data type.
 
 ## Available Sub-Tags ##
 
-^ column  | New column definition See the [[column.html| column tag documentation]] for more information |
+^ column  | New column definition See the [ column tag documentation](column.html) for more information |
 
 
 

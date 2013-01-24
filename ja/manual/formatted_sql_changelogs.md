@@ -30,7 +30,7 @@ semicolons (or the value of the <endDelimiter> attribute).
 ^ context  | Executes the change if the particular context was passed at runtime. Any string can be used for the context name and they are checked case-insensitively. |
 ^ runInTransaction  | Should the changeSet be ran as a single transaction (if possible)?  Defaults to true.  **Warning: be careful with this attribute.  If set to false and an error occurs part way through running a changeSet containing multiple statements, the LiquiBase databasechangelog table will be left in an invalid state** |
 ^ failOnError | Should the migration fail if an error occurs while executing the changeSet? |
-^ dbms  | The type of a database which that changeSet is to be used for. When the migration step is running, it checks the database type against this attribute. Valid database type names are listed on the [[../databases|supported databases page]] |
+^ dbms  | The type of a database which that changeSet is to be used for. When the migration step is running, it checks the database type against this attribute. Valid database type names are listed on the [supported databases page](../databases) |
 
 ===== Rollback Actions =====
 

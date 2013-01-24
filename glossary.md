@@ -7,7 +7,7 @@ title: Glossary
 
 ## A ##
 ## B ##
-  * [[glossary:Base| Base Database]]
+  * [ Base Database](glossary:Base)
 ## T ##
-  * [[glossary:Target| Target Database]]
+  * [ Target Database](glossary:Target)
 ## Z ##

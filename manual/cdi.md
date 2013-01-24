@@ -1,6 +1,6 @@
 ====== JEE CDI Integration ======
 
-Liquibase can be run in a [[http://seamframework.org/Weld|JEE CDI]] environment by implementing a number of CDI Procducers methods. The CDI Liquibase integration is a simple CDI extension that performs a Liquibase update when the CDI container boots
+Liquibase can be run in a [JEE CDI](http://seamframework.org/Weld) environment by implementing a number of CDI Procducers methods. The CDI Liquibase integration is a simple CDI extension that performs a Liquibase update when the CDI container boots
 
 
 

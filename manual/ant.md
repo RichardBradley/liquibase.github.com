@@ -14,17 +14,17 @@ LiquiBase can be controlled via ant Tasks. To use, simply add the liquibase.jar 
 </code>
 
 The following tasks are available in Ant
-  * [[updateDatabase_ant_task.html|updateDatabase]]
-  * [[rollbackDatabase_ant_task.html|rollbackDatabase]]
-  * [[rollbackFutureDatabase_ant_task.html|rollbackFutureDatabase]]
-  * [[tagDatabase_ant_task.html|tagDatabase ]]
-  * [[generateChangeLog_ant_task.html|generateChangeLog ]]
-  * [[diffDatabase_ant_task.html|diffDatabase ]]
-  * [[diffDatabaseToChangeLog_ant_task.html|diffDatabaseToChangeLog ]]
-  * [[dbDoc_ant_task.html|dbDoc ]]
-  * [[changeLogSync_ant_task.html|changeLogSync ]]
-  * [[dropAllDatabaseObjects_ant_task.html|dropAllDatabaseObjects ]]
+  * [updateDatabase](updateDatabase_ant_task.html)
+  * [rollbackDatabase](rollbackDatabase_ant_task.html)
+  * [rollbackFutureDatabase](rollbackFutureDatabase_ant_task.html)
+  * [tagDatabase ](tagDatabase_ant_task.html)
+  * [generateChangeLog ](generateChangeLog_ant_task.html)
+  * [diffDatabase ](diffDatabase_ant_task.html)
+  * [diffDatabaseToChangeLog ](diffDatabaseToChangeLog_ant_task.html)
+  * [dbDoc ](dbDoc_ant_task.html)
+  * [changeLogSync ](changeLogSync_ant_task.html)
+  * [dropAllDatabaseObjects ](dropAllDatabaseObjects_ant_task.html)
 
-Additional LiquiBase commands are supported by the [[command_line.html]] that are not supported by the Ant tasks.
+Additional LiquiBase commands are supported by the [command_line](command_line.html) that are not supported by the Ant tasks.
 
 

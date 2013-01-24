@@ -5,7 +5,7 @@ title: Spring
 
 # Spring Integration #
 
-Liquibase can be run in a [[http://www.springframework.org|Spring]] environment by declaring a liquibase.spring.SpringLiquibase bean.
+Liquibase can be run in a [Spring](http://www.springframework.org) environment by declaring a liquibase.spring.SpringLiquibase bean.
 
 
 

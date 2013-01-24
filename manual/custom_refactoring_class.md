@@ -7,11 +7,11 @@ title: Custom refactoring class
 
 Although LiquiBase tries to provide a wide range of database refactorings, there are times you may want to create your own custom refactoring class.
 
-To create your own custom refactoring, simply create a class that implements the [[http://www.liquibase.org/manual/latest/api/liquibase/change/custom/CustomSqlChange.html|liquibase.change.custom.CustomSqlChange]] or [[http://www.liquibase.org/manual/latest/api/liquibase/change/custom/CustomTaskChange.html|liquibase.change.custom.CustomTaskChange]] interface and use the <custom> tag in your change set.
+To create your own custom refactoring, simply create a class that implements the [liquibase.change.custom.CustomSqlChange](http://www.liquibase.org/manual/latest/api/liquibase/change/custom/CustomSqlChange.html) or [liquibase.change.custom.CustomTaskChange](http://www.liquibase.org/manual/latest/api/liquibase/change/custom/CustomTaskChange.html) interface and use the <custom> tag in your change set.
 
-If your change can be rolled back, implement the [[http://www.liquibase.org/manual/latest/api/liquibase/change/custom/CustomSqlRollback.html|liquibase.change.custom.CustomSqlRollback]] interface as well.
+If your change can be rolled back, implement the [liquibase.change.custom.CustomSqlRollback](http://www.liquibase.org/manual/latest/api/liquibase/change/custom/CustomSqlRollback.html) interface as well.
 
-For a sample custom change class, see [[http://www.liquibase.org/manual/latest/api/liquibase/change/custom/ExampleCustomSqlChange.html|liquibase.change.custom.ExampleCustomSqlChange]]
+For a sample custom change class, see [liquibase.change.custom.ExampleCustomSqlChange](http://www.liquibase.org/manual/latest/api/liquibase/change/custom/ExampleCustomSqlChange.html)
 
 
 ## Sample ##

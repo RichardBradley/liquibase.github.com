@@ -50,7 +50,7 @@ Marks all change sets as ran against the database.  Useful when you have manuall
 ^ databaseChangeLogLockTableName  | Overrides the name of the databasechangeloglock table to use //Since LiquiBase 1.9// |
 
 ### Available Sub Tags ###
-^ changeLogProperty  | Sets a [[changelog_parameters.html]] set //Since LiquiBase 1.7// |
+^ changeLogProperty  | Sets a [changelog_parameters](changelog_parameters.html) set //Since LiquiBase 1.7// |
 
 #### Available <changeLogProperty> Parameters ####
 ^ name  | The name of the property to set  | 

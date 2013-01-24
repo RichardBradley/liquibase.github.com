@@ -3,46 +3,46 @@ layout: default
 title: Sidebar
 ---
 
-  * [[../home|Home]]
-  * [[http://blog.liquibase.org/search/label/Announcement|News]]
-  * [[http://blog.liquibase.org/|Blog]]
-  * [[../download|Download]]
-  * [[../quickstart|Quick-Start]]
-  * [[../bestpractices|Best Practices]]
-  * [[home.html|Manual]]
+  * [Home](../home)
+  * [News](http://blog.liquibase.org/search/label/Announcement)
+  * [Blog](http://blog.liquibase.org/)
+  * [Download](../download)
+  * [Quick-Start](../quickstart)
+  * [Best Practices](../bestpractices)
+  * [Manual](home.html)
     *  Introduction
-      * [[Overview.html]]
+      * [Hibernate Integration](Overview.html]]
     * Building Change-Logs
-      * <[[DatabaseChangeLog.html]]>
-      * <[[ChangeSet.html]]>
-      * <[[Include.html]]>
-      * <[[Preconditions.html]]>
-      * [[Contexts.html]]
-      * [[ChangeLog_Parameters.html]]
-      * [[hibernate.html|Hibernate Integration]]
-      * [[Formatted_SQL_Changelogs.html]]
+      * <[DatabaseChangeLog](DatabaseChangeLog.html)>
+      * <[ChangeSet](ChangeSet.html)>
+      * <[Include](Include.html)>
+      * <[Preconditions](Preconditions.html)>
+      * [Contexts](Contexts.html)
+      * [ChangeLog_Parameters](ChangeLog_Parameters.html)
+      * [hibernate.html)
+      * [Formatted SQL Changelogs](Formatted_SQL_Changelogs.html)
     * LiquiBase Functionality
-      * [[Update.html]]
-      * [[Rollback.html]]
-      * [[Diff.html]]
-      * [[generating_changelogs.html|Generate Changelog]]
-      * [[DBDoc.html]]
-      * [[SQL_Output.html]]
+      * [Update](Update.html)
+      * [Rollback](Rollback.html)
+      * [Diff](Diff.html)
+      * [Generating Changelogs](generating_changelogs.html)
+      * [DBDoc](dbdoc.html)
+      * [SQL_Output](SQL_Output.html)
     * Running LiquiBase
-      * [[Ant.html]]
-      * [[Maven.html]]
-      * [[servlet_listener.html]]
-      * [[command_line.html]]
-      * [[Spring.html]]
-      * [[Grails.html]]
+      * [Ant](Ant.html)
+      * [Maven](Maven.html)
+      * [servlet_listener](servlet_listener.html)
+      * [command_line](command_line.html)
+      * [Spring](Spring.html)
+      * [Grails](Grails.html)
     * LiquiBase Development
-      * [[Architecture.html]]
-      * [[http://www.liquibase.org/api/index.html|API (Javadoc)]]
-  * [[../community|Community]]
-  * [[../ide/home|Refactoring IDE]]
-  * [[../databases|Supported Databases]]
-  * [[../faq|FAQ]]
-  * [[../training|Training Videos]]
-  * [[../history|History]]
-  * [[../future|Future Directions]]
+      * [Architecture](Architecture.html)
+      * [http://www.liquibase.org/api/index.html](http://www.liquibase.org/api/index.html)
+  * [Community](../community)
+  * [Refactoring IDE](../ide/home)
+  * [Supported Databases](../databases)
+  * [FAQ](../faq)
+  * [Training Videos](../training)
+  * [History](../history)
+  * [Future Directions](../future)
   * [[../Contributing]]

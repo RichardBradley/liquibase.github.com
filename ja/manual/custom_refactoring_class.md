@@ -2,11 +2,11 @@
 
 LiquiBase は、広範囲にわたるデータベースリファクタリングを提供しようと努めていますが、カスタムリファクタリングクラスを書きたくなる場合もあるかもしれません。
 
-カスタムリファクタリングを作成するには、まず、[[http://www.liquibase.org/manual/latest/api/liquibase/change/custom/CustomSqlChange.html|liquibase.change.custom.CustomSqlChange]] か [[http://www.liquibase.org/manual/latest/api/liquibase/change/custom/CustomTaskChange.html|liquibase.change.custom.CustomTaskChange]] インターフェースを実装するクラスを作成し、<custom> タグを利用して変更セットを記述します。
+カスタムリファクタリングを作成するには、まず、[liquibase.change.custom.CustomSqlChange](http://www.liquibase.org/manual/latest/api/liquibase/change/custom/CustomSqlChange.html) か [liquibase.change.custom.CustomTaskChange](http://www.liquibase.org/manual/latest/api/liquibase/change/custom/CustomTaskChange.html) インターフェースを実装するクラスを作成し、<custom> タグを利用して変更セットを記述します。
 
-変更をロールバックしたい場合は、[[http://www.liquibase.org/manual/latest/api/liquibase/change/custom/CustomSqlRollback.html|liquibase.change.custom.CustomSqlRollback]] インターフェースも実装します。
+変更をロールバックしたい場合は、[liquibase.change.custom.CustomSqlRollback](http://www.liquibase.org/manual/latest/api/liquibase/change/custom/CustomSqlRollback.html) インターフェースも実装します。
 
-サンプルカスタムクラスは、 [[http://www.liquibase.org/manual/latest/api/liquibase/change/custom/ExampleCustomSqlChange.html|liquibase.change.custom.ExampleCustomSqlChange]]を参照してください。
+サンプルカスタムクラスは、 [liquibase.change.custom.ExampleCustomSqlChange](http://www.liquibase.org/manual/latest/api/liquibase/change/custom/ExampleCustomSqlChange.html)を参照してください。
 
 
 ===== 例 =====

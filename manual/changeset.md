@@ -5,7 +5,7 @@ title: Changeset
 
 # <changeSet> tag #
 
-The changeSet tag is what you use to group database changes/[[refactoring_commands.html|refactoring]]s together.
+The changeSet tag is what you use to group database changes/[refactoring](refactoring_commands.html)s together.
 
 <code xml>
 <?xml version="1.0" encoding="UTF-8"?>
@@ -41,7 +41,7 @@ LiquiBase attempts to execute each changeSet in a transaction that is committed 
 
 ^ id  | An alpha-numeric identifier **[required]** |
 ^ author  | The creator of the change set **[required]**  |
-^ dbms  | The type of a database which that changeSet is to be used for. When the migration step is running, it checks the database type against this attribute. Valid database type names are listed on the [[../databases|supported databases page]] |
+^ dbms  | The type of a database which that changeSet is to be used for. When the migration step is running, it checks the database type against this attribute. Valid database type names are listed on the [supported databases page](../databases) |
 ^ runAlways  | Executes the change set on every run, even if it has been run before |
 ^ runOnChange  | Executes the change the first time it is seen and each time the change set has been changed |
 ^ context  | Executes the change if the particular context was passed at runtime. Any string can be used for the context name and they are checked case-insensitively. |
@@ -53,10 +53,10 @@ LiquiBase attempts to execute each changeSet in a transaction that is committed 
 ## Available Sub-Tags ##
 
 ^ comment  | A description of the change set.  XML comments will provide the same benefit, future releases of LiquiBase may be able to make use of <comment> tag comments to generate documentation |
-^ preConditions | [[Preconditions.html]] that must pass before the change set will be executed.  Useful for doing a data sanity check before doing something unrecoverable such as a dropTable //Since 1.7// |
-^ <Any Refactoring Tag(s)>  | The database change(s) to run as part of this change set (so called [[refactoring_commands.html|refactoring]]s) |
+^ preConditions | [Preconditions](Preconditions.html) that must pass before the change set will be executed.  Useful for doing a data sanity check before doing something unrecoverable such as a dropTable //Since 1.7// |
+^ <Any Refactoring Tag(s)>  | The database change(s) to run as part of this change set (so called [refactoring](refactoring_commands.html)s) |
 ^ validCheckSum | When comparing the changeSet stored in the database with the checksum generated from the current changeSet, do not consider the changeSet changed if the given validCheckSum is in the database. Use primarily when you need to change a changeSet and don't want errors thrown on databases on which is has already ran (not a recommended procedure).  //Since 1.7// |
-^ rollback | SQL statements or refactoring tags that describe how to [[rollback.html]] the change set |
+^ rollback | SQL statements or refactoring tags that describe how to [rollback](rollback.html) the change set |
 
 ### Rollback Tag ###
 

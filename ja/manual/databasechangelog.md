@@ -11,17 +11,17 @@
 
 ===== 利用可能なサブタグ =====
 
-^ <preConditions>  | 変更ログを実行するのに前提条件が必要な場合 [[preconditions|詳しくは]]  |
-^ <property>  | プロパティに設定する値、, if not set by another means. [[changelog_parameters|Read More]]  |
-^ <changeSet>  | 実行する変更セット[[changeset|詳しくは]]  |
-^ <include>  | 追加の変更セットを含む場合 [[include|詳しくは]]  |
+^ <preConditions>  | 変更ログを実行するのに前提条件が必要な場合 [詳しくは](preconditions)  |
+^ <property>  | プロパティに設定する値、, if not set by another means. [Read More](changelog_parameters)  |
+^ <changeSet>  | 実行する変更セット[詳しくは](changeset)  |
+^ <include>  | 追加の変更セットを含む場合 [詳しくは](include)  |
 
-LiquiBase migrator が実行されるとき、databaseChangeLog タグを解析します。まず、なんらかの前提条件が存在しているかをチェックします。なんらかの[[preconditions | 前提条件]] を満たさなかった場合、LiquiBase は、何が失敗したのかを表すエラーメッセージとともに終了します。前提条件は、実行対象となる DBMS や変更を実施するユーザーといった、期待される事象や仮定を変更ログのライターに記述させたり、強制させたりするのに有効です。
+LiquiBase migrator が実行されるとき、databaseChangeLog タグを解析します。まず、なんらかの前提条件が存在しているかをチェックします。なんらかの[ 前提条件](preconditions ) を満たさなかった場合、LiquiBase は、何が失敗したのかを表すエラーメッセージとともに終了します。前提条件は、実行対象となる DBMS や変更を実施するユーザーといった、期待される事象や仮定を変更ログのライターに記述させたり、強制させたりするのに有効です。
 
 
-すべての前提条件を満たした場合、LiquiBase は、[[changeSet | 変更セット]] と [[include | 追加の変更セット ]] を ** databaseChangeLog ファイルに並んでいる順序の通りに** 実行します。
+すべての前提条件を満たした場合、LiquiBase は、[ 変更セット](changeSet ) と [ 追加の変更セット ](include ) を ** databaseChangeLog ファイルに並んでいる順序の通りに** 実行します。
 
-databaseChangeLog タグ用の XML スキーマはこちらから。[[http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd]]
+databaseChangeLog タグ用の XML スキーマはこちらから。[http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd](http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd)
 
 それぞれの変更セットは、"id" タグと、"author" タグを保持しています。これらのタグは、クラスパスの位置と XML ファイル名とあわせて変更セットを一意に特定します。
 

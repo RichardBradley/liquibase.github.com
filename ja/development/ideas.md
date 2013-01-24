@@ -4,13 +4,13 @@ LiquiBase の開発を始めるもっともよい方法は、不具合をなお�
 
 どれが役に立つかわからない場合は、これらの案を参考にしてください:
   * XML ベースの変更ログに代わって、DSLを利用する
-  * [[../manual/diff]] ツールの改善
-  * [[../dotnetport|.Net 版]]
+  * [.Net 版](../manual/diff]] ツールの改善
+  * [[../dotnetport)
   * Rails との統合
-  * [[../manual/Grails]] 統合の改善
+  * [extensions](../manual/Grails]] 統合の改善
   * Javadoc の改善
-  * [[http://liquibase.org/extensions|extensions]] のドキュメントやサンプル
-  * より多くのタグの([[http://www.agiledata.org/essays/databaseRefactoringCatalog.html|案]]
-  * 追加の[[../databases|データベース対応]]
+  * [[http://liquibase.org/extensions) のドキュメントやサンプル
+  * より多くのタグの([案](http://www.agiledata.org/essays/databaseRefactoringCatalog.html)
+  * 追加の[データベース対応](../databases)
   * ユニットテストの改善
 

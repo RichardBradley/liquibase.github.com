@@ -15,7 +15,7 @@ Additional planned features include:
   * Support for additional DBMSs
   * Database Diagram Generation
 
-Do you have additional ideas you would like to see? [[community.html|Let us know]].  Interested in helping implement these and other features?  We would [[contributing.html|love the help]].
+Do you have additional ideas you would like to see? [Let us know](community.html).  Interested in helping implement these and other features?  We would [love the help](contributing.html).
 
 
 

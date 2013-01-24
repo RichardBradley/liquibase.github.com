@@ -12,9 +12,9 @@ LiquiBase allows dynamic substitution of parameters in a changelog.  The paramet
 ## Configuring parameter values ##
 
 Parameter values are looked up in the following order:
-  - Passed as a parameter to your LiquiBase runner (see [[Ant.html]], [[command_line.html]], etc. documentation for how to pass them)
+  - Passed as a parameter to your LiquiBase runner (see [Ant](Ant.html), [command_line](command_line.html), etc. documentation for how to pass them)
   - As a JVM system property
-  - In the parameters block (<property> Tag) of the [[DatabaseChangeLog.html]] file itself.
+  - In the parameters block (<property> Tag) of the [DatabaseChangeLog](DatabaseChangeLog.html) file itself.
 
 #### Examples ####
 

@@ -5,7 +5,7 @@ title: V2 upgrade
 
 # 1.x to 2.0 Upgrade Guide #
 
-Liquibase 2.0 introduces several non-compatible changes that will require action to upgrade from 1.9 to 2.0.  Please update this wiki page with additional issues or work-arounds you find.  For a list of new features in 2.0, see the [[v2_features|2.0 features list]]
+Liquibase 2.0 introduces several non-compatible changes that will require action to upgrade from 1.9 to 2.0.  Please update this wiki page with additional issues or work-arounds you find.  For a list of new features in 2.0, see the [2.0 features list](v2_features)
 
 **This page will be updated regularly up to and beyond the 2.0 final release.**
 
@@ -26,7 +26,7 @@ The format of the XSD definition has changed.  The new format looks like:
 
 ## ModifyColumn tag Deprecated ##
 
-The modifyColumn tag has been deprecated and moved to the extension portal.  If you are using modifyColumn, consider the new <modifyDataType> or other more specific commands (addPrimaryKeyConstraint, etc).  You can continue to use the modifyColumn tag if you include modify-column-2.0.0.jar in your classpath.  See [[http://liquibase.jira.com/wiki/display/CONTRIB/ModifyColumn+Change|modifyColumn library]] to get this jar.
+The modifyColumn tag has been deprecated and moved to the extension portal.  If you are using modifyColumn, consider the new <modifyDataType> or other more specific commands (addPrimaryKeyConstraint, etc).  You can continue to use the modifyColumn tag if you include modify-column-2.0.0.jar in your classpath.  See [modifyColumn library](http://liquibase.jira.com/wiki/display/CONTRIB/ModifyColumn+Change) to get this jar.
 
 ## Columns added to table DATABASECHANGELOG ##
 
@@ -46,7 +46,7 @@ You should only need to use the above sql for updateSql calls.
 
 ## Hibernate Integration Extracted ##
 
-The Hibernate integration has been moved to be a plugin rather than in the Liquibase core itself.  If you use the Liquibase hibernate support, you'll need to add the jar from [[http://liquibase.jira.com/wiki/display/CONTRIB/Hibernate+Integration|the hibernate extension]] to your classpath.
+The Hibernate integration has been moved to be a plugin rather than in the Liquibase core itself.  If you use the Liquibase hibernate support, you'll need to add the jar from [the hibernate extension](http://liquibase.jira.com/wiki/display/CONTRIB/Hibernate+Integration) to your classpath.
 
 ## Diff parameter naming ##
 
@@ -77,7 +77,7 @@ The class name of the SpringLiquibase class has changed to liquibase.integration
 
 ## Other package and class naming ##
 
-Many other classes changed their packages and/or names significantly.  If you have more complex Liquibase integration and are not sure how to convert your code, post a question on the [[http://liquibase.org/forum|forum]]
+Many other classes changed their packages and/or names significantly.  If you have more complex Liquibase integration and are not sure how to convert your code, post a question on the [forum](http://liquibase.org/forum)
 
 ## MANIFEST.MF requirements for embedding ##
 

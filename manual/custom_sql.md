@@ -7,7 +7,7 @@ title: Custom sql
 
 The "sql" tag allows you to specify whatever sql you want. It is useful for complex changes that aren't supported through LiquiBase's automated refactoring tags and to work around bugs and limitations of LiquiBase. The SQL contained in the sql tag can be multi-line.
 
-The [[create_stored_procedure.html|createProcedure]] refactoring is the best way to create stored procedures.
+The [createProcedure](create_stored_procedure.html) refactoring is the best way to create stored procedures.
 
 The "sql" tag can also support multiline statements in the same file. Statements can either be split using a ; at the end of the last line of the SQL or a go on its own on the line between the statements can be used.Multiline SQL statements are also supported and only a ; or go statement will finish a statement, a new line is not enough. Files containing a single statement do not need to use a ; or go.
 

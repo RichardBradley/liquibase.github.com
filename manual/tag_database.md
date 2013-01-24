@@ -5,7 +5,7 @@ title: Tag database
 
 # Tag Database #
 
-Applies a tag to the database for future [[rollback.html]].  Since LiquiBase 1.6
+Applies a tag to the database for future [rollback](rollback.html).  Since LiquiBase 1.6
 
 ## Samples ##
 

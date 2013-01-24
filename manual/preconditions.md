@@ -5,12 +5,12 @@ title: Preconditions
 
 # LiquiBase: <preConditions> #
 
-Preconditions can be attached to [[databasechangelog.html|change logs]] or [[changeset.html]]s to control the execution of an update based on the state of the database.
+Preconditions can be attached to [change logs](databasechangelog.html) or [changeset](changeset.html)s to control the execution of an update based on the state of the database.
 
 There are several reasons to use preconditions, including:
   * Document what assumptions the writers of the changelog had when creating it.
   * Enforce that those assumptions are not violated by users running the changelog
-  * Perform data checks before performing an unrecoverable change such as [[drop_Table.html]]
+  * Perform data checks before performing an unrecoverable change such as [drop_Table](drop_Table.html)
   * Control what changesets are run and not run based on the state of the database
 
 
@@ -45,7 +45,7 @@ If desired, a precondition can be the only tag in a <changeSet>.
 </databaseChangeLog>
 </code>                    
 
-The above changelog will only run if the database executed against is Oracle and the database user executing the script is "SYSTEM".  It will also only run the [[drop_Table.html]] command if there are no values in the "oldtable".
+The above changelog will only run if the database executed against is Oracle and the database user executing the script is "SYSTEM".  It will also only run the [drop_Table](drop_Table.html) command if there are no values in the "oldtable".
 
 ## Handling Failures and Errors ##
 
@@ -138,7 +138,7 @@ Passes if the database executed against matches the type specified.
 
 #### Available Attributes ####
 
-^ type | Type of [[../databases|database]] expected **[required]**  | 
+^ type | Type of [database](../databases) expected **[required]**  |
 
 ### <runningAs> ###
 
@@ -240,7 +240,7 @@ Executes an SQL string and checks the returned value.  The SQL must return a sin
 
 ### <changeLogPropertyDefined> ###
 
-Checks whether given [[http://www.liquibase.org/manual/changelog_parameters#property|changelog parameter]] is present. If a value is also given, it only fails, if the value is not the same as given. //Since 2.0//
+Checks whether given [changelog parameter](http://www.liquibase.org/manual/changelog_parameters#property) is present. If a value is also given, it only fails, if the value is not the same as given. //Since 2.0//
 
 <code xml>
 <changeLogPropertyDefined property="myproperty"/>
@@ -254,7 +254,7 @@ Checks whether given [[http://www.liquibase.org/manual/changelog_parameters#prop
 
 ### <customPrecondition> ###
 
-Custom preconditions can be created by creating a class that implements the [[http://www.liquibase.org/manual/latest/api/liquibase/precondition/CustomPrecondition.html|liquibase.precondition.CustomPrecondition]] interface.  Parameters on custom classes are set through reflection based on the <param> sub-tags.  Parameters are passed as strings to the custom precondition.
+Custom preconditions can be created by creating a class that implements the [liquibase.precondition.CustomPrecondition](http://www.liquibase.org/manual/latest/api/liquibase/precondition/CustomPrecondition.html) interface.  Parameters on custom classes are set through reflection based on the <param> sub-tags.  Parameters are passed as strings to the custom precondition.
 
 <code xml>
 <customPrecondition className="com.example.CustomTableCheck">

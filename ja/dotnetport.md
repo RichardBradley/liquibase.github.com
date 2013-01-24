@@ -1,8 +1,8 @@
 {{  :help-wanted.jpg|}}====== .Net版 LiquiBase ======
 
-これまでに、.Net 版の LiquiBase に対する少なからぬ興味が持たれてきましたが、まだ動作するものはありません。このページでは、.Net 版の現在の状況とロードマップの概要を提供します。もっと情報が必要だったり、援助をしていただける方は、[[http://liquibase.org/forum/index.php?board=4.0|the LiquiBase .Net 版フォーラム]]までどうぞ。 
+これまでに、.Net 版の LiquiBase に対する少なからぬ興味が持たれてきましたが、まだ動作するものはありません。このページでは、.Net 版の現在の状況とロードマップの概要を提供します。もっと情報が必要だったり、援助をしていただける方は、[the LiquiBase .Net 版フォーラム](http://liquibase.org/forum/index.php?board=4.0)までどうぞ。
 
-最初の(もしかしたら長期の)目的は、.Net 版と Java 版の LiquiBaseでできるだけソースコードを共有することです。LiquiBase には、どのプラットフォーム化に関係なく、"if creating a table of database type X, use this SQL" といったたぐいのロジックが大量に存在しています。ロジックをできるだけ性格で完全なものにするために、liquibase の多くの部分はクロスプラットフォームな言語で書かれています。利用可能なオプションを評価して、[[http://www.ikvm.net|IKVM.NET]] を利用して Java のバイトコードを .Net にすることにしました。
+最初の(もしかしたら長期の)目的は、.Net 版と Java 版の LiquiBaseでできるだけソースコードを共有することです。LiquiBase には、どのプラットフォーム化に関係なく、"if creating a table of database type X, use this SQL" といったたぐいのロジックが大量に存在しています。ロジックをできるだけ性格で完全なものにするために、liquibase の多くの部分はクロスプラットフォームな言語で書かれています。利用可能なオプションを評価して、[IKVM.NET](http://www.ikvm.net) を利用して Java のバイトコードを .Net にすることにしました。
 
 Java 版の LiquiBase に多くの労力を割く計画のため、主要な Java の LiquiBase 開発者は、2010年の後半までは、質問に答えたりする以上の、一般的なアーキテクチャや方向性について以上の貢献は行えません。
 
@@ -34,11 +34,11 @@ liquibase.jira.com の有効なアカウントを持つ人であれば誰でも�
 IKVM は、Javaのバイトコード(ソースコードファイルではなく)を、.Net の IL にコンパイルするため、変更を行ったり、コアライブラリーを変更したりするには、Javaでの開発環境が必要です。
 
 これらをダウンロードしてインストールします :
-  * [[http://java.sun.com/javase/downloads/widget/jdk6.jsp|Java Development Kit]]
-  * [[http://maven.apache.org/|Maven]] which we use as our build script.
+  * [Java Development Kit](http://java.sun.com/javase/downloads/widget/jdk6.jsp)
+  * [Maven](http://maven.apache.org/) which we use as our build script.
 Just unzip the file to where you want it installed
-  * [[http://ikvm.net|Ikvm]]Just unzip the file to where you want it installed.
-  * [[http://eclipse.org|Eclipse]] or [[http://intellij.com|Intellij]]
+  * [Ikvm](http://ikvm.net)Just unzip the file to where you want it installed.
+  * [Eclipse](http://eclipse.org) or [Intellij](http://intellij.com)
 
 .Net 版が熟成してきたら、プレコンパイルされ、IKVM直前のビルドで、Javaの開発環境を必要としないものを提供する予定です。
 

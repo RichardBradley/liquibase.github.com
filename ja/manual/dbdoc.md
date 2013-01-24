@@ -5,7 +5,7 @@
 
 ===== DBDoc の実行 =====
 
-The dbDoc コマンドは、現在のところ[[command line | コマンドライン]] からの実行のみ対応しています。
+The dbDoc コマンドは、現在のところ[ コマンドライン](command line ) からの実行のみ対応しています。
 
 
 ===== 例 =====
@@ -23,4 +23,4 @@ liqubase.sh --driver=oracle.jdbc.OracleDriver \
 
 ===== アウトプットサンプル =====
 
-出力されるドキュメントは、"JavaDoc" のドキュメンテーション形式を元にしています。サンプルの変更ログからの出力例は、 [[http://www.liquibase.org/dbdoc/index.html|こちら]]から取得可能です。
+出力されるドキュメントは、"JavaDoc" のドキュメンテーション形式を元にしています。サンプルの変更ログからの出力例は、 [こちら](http://www.liquibase.org/dbdoc/index.html)から取得可能です。

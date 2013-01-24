@@ -11,7 +11,7 @@ The standard Grails Database Migration Plugin (http://grails-plugins.github.com/
 
 Prior to the Grails Database Migration Plugin, Liquibase supported a grails integration as well. This plugin has not been updated since version 1.9.
 
-To install, simply run grails install-plugin liquibase and create your [[databasechangelog.html|change log XML file]] in grails-app/migrations/changelog.xml
+To install, simply run grails install-plugin liquibase and create your [change log XML file](databasechangelog.html) in grails-app/migrations/changelog.xml
 
 Run the following command in your project folder to install Liquibase plugin:
 ''grails install-plugin liquibase''

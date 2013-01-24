@@ -3,19 +3,19 @@ layout: default
 title: Sidebar
 ---
 
-  * [[home.html|Home]]
-  * [[http://blog.liquibase.org/|Blog]]
-  * [[Download.html]]
-  * [[http://liquibase.org/extensions|Extension Portal]]
-  * [[quickstart.html|Quick-Start]]
-  * [[bestpractices.html|Best Practices]]
-  * [[manual/home.html|Manual]]
-  * [[Community.html]]
-  * [[databases.html|Supported Databases]]
-  * [[faq.html|FAQ]]
-  * [[Articles.html]]
-  * [[training.html|Training Videos]]
-  * [[History.html]]
-  * [[future.html|Future Directions]]
-  * [[http://liquibase.jira.com/browse/CORE|Issue Tracker]]
-  * [[http://liquibase.com|Support and Training]]
+  * [Home](home.html)
+  * [Blog](http://blog.liquibase.org/)
+  * [Extension Portal](Download.html]]
+  * [http://liquibase.org/extensions](http://liquibase.org/extensions)
+  * [Quick-Start](quickstart.html)
+  * [Best Practices](bestpractices.html)
+  * [Manual](manual/home.html)
+  * [Supported Databases](Community.html]]
+  * [databases.html)
+  * [FAQ](faq.html)
+  * (Articles](databases.html)
+  * [Training Videos](training.html)
+  * [History)(history.html)
+  * [Future Directions](future.html)
+  * [Issue Tracker](http://liquibase.jira.com/browse/CORE)
+  * [Commercial Support and Training](http://liquibase.com)

@@ -19,7 +19,7 @@
 
 ===== 利用可能なサブタグ =====
 
-^ column  | カラムの制約と外部キーに関する情報。"defaultValue" 属性を指定することで、カラムのデフォルト値を指定できます。Setting the "value" attribute will set all rows existing to the specified value without modifying the column default.詳細な情報は[[column | カラムタグ]]のドキュメントを参照 [必須] |
+^ column  | カラムの制約と外部キーに関する情報。"defaultValue" 属性を指定することで、カラムのデフォルト値を指定できます。Setting the "value" attribute will set all rows existing to the specified value without modifying the column default.詳細な情報は[ カラムタグ](column )のドキュメントを参照 [必須] |
 
 
 

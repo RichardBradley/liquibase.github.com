@@ -1,6 +1,6 @@
 ====== Spring Integration ======
 
-LiquiBase は [[http://www.springframework.org|Spring]] 環境でも、liquibase.spring.SpringMigrator ビーンを宣言することで利用可能です。
+LiquiBase は [Spring](http://www.springframework.org) 環境でも、liquibase.spring.SpringMigrator ビーンを宣言することで利用可能です。
 
 
 

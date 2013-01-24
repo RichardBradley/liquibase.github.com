@@ -1,6 +1,6 @@
 ====== LiquiBase と Grails 統合 ======
 
-LiquiBase は、 [[http://grails.codehaus.org/|Grails]] プラグインとして利用できます。インストールは、grails で、install-plugin liquibase を実行し、[[databasechangelog|変更ログ XML ファイル]] をgrails-app/migrations/changelog.xml に作成するだけです。
+LiquiBase は、 [Grails](http://grails.codehaus.org/) プラグインとして利用できます。インストールは、grails で、install-plugin liquibase を実行し、[変更ログ XML ファイル](databasechangelog) をgrails-app/migrations/changelog.xml に作成するだけです。
 
 LiquiBase プラグインをインストールするには、プロジェクトフォルダーで、以下のコマンドを実行します:
 ''grails install-plugin liquibase''
@@ -9,7 +9,7 @@ LiquiBase プラグインをインストールするには、プロジェクト�
 
 ===== XML 以外に変更ログ方法を書く方法は?=====
 
-今のところありませんが、XML に代わる LiquiBase 独自の言語に取り組んでいます。XML がほんとうに苦手なら、 [[../ide/home|LiquiBase IDE か Eclipse プラグイン]] もよい選択でしょう。
+今のところありませんが、XML に代わる LiquiBase 独自の言語に取り組んでいます。XML がほんとうに苦手なら、 [LiquiBase IDE か Eclipse プラグイン](../ide/home) もよい選択でしょう。
 
 
 

@@ -9,7 +9,7 @@ Using change information stored in the change logs and an existing database, Liq
 
 ## Running DBDoc ##
 
-The dbDoc command support is currently available through the [[command_line.html]] only.
+The dbDoc command support is currently available through the [here](command_line.html]] only.
 
 
 ## Example ##
@@ -27,4 +27,4 @@ liqubase.sh --driver=oracle.jdbc.OracleDriver \
 
 ## Sample Output ##
 
-The documentation output is based on a "JavaDoc" style documentation. The report of changes from our sample changelog is available [[http://www.liquibase.org/dbdoc/index.html|here]].
+The documentation output is based on a "JavaDoc" style documentation. The report of changes from our sample changelog is available [here](http://www.liquibase.org/dbdoc/index.html).

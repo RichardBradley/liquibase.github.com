@@ -5,7 +5,7 @@ title: Rollback
 
 # Rolling Back ChangeSets #
 
-LiquiBase allows you to undo changes you have made to your database, either automatically or via custom rollback SQL. Rollback support is available in [[command_line.html]], [[Ant.html]], [[Maven.html]], and [[Grails.html]].
+LiquiBase allows you to undo changes you have made to your database, either automatically or via custom rollback SQL. Rollback support is available in [command_line](command_line.html), [Ant](Ant.html), [Maven](Maven.html), and [Grails](Grails.html).
 
 
 ## How Rollback SQL is controlled ##
@@ -90,7 +90,7 @@ You can specify what changes to rollback in three ways:
 
 ### Tag ###
 
-Specifying a tag to rollback to will roll back all change-sets that were executed against the target database after the given tag was applied. See the [[command_line.html]] documentation for how to tag your database.
+Specifying a tag to rollback to will roll back all change-sets that were executed against the target database after the given tag was applied. See the [SOX-compliant](command_line.html]] documentation for how to tag your database.
 
 ### Number of Change Sets ###
 
@@ -110,4 +110,4 @@ Rather than actually updating the database, the SQL required to roll back the da
 
 ### Generating a "Future Rollback" Script ###
 
-This mode is designed to allow you to generate a rollback script at the same time you generate your migration script. It allows you to take an updated application and generate both the SQL to update the database to the new version as well as the SQL to bring that new version back to the current version if needed. This functionality is very useful when a DBA wants to control SQL going into the database, as well as for applications that require rollback documentation for internal and/or [[http://en.wikipedia.org/wiki/Sarbanes-Oxley_Act|SOX-compliant]] processes. You do not need to specify a rollback date, tag, or count in this mode.
+This mode is designed to allow you to generate a rollback script at the same time you generate your migration script. It allows you to take an updated application and generate both the SQL to update the database to the new version as well as the SQL to bring that new version back to the current version if needed. This functionality is very useful when a DBA wants to control SQL going into the database, as well as for applications that require rollback documentation for internal and/or [SOX-compliant](http://en.wikipedia.org/wiki/Sarbanes-Oxley_Act) processes. You do not need to specify a rollback date, tag, or count in this mode.

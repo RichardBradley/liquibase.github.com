@@ -7,7 +7,7 @@ title: Quickstart
 
 ## Step 1: Create a Changelog File: ##
 
-The [[manual/databasechangelog.html|database changelog file]] is where all database changes are listed. It is XML based, so start with an empty XML file:
+The [database changelog file](manual/databasechangelog.html) is where all database changes are listed. It is XML based, so start with an empty XML file:
 
 <code xml>
 <?xml version="1.0" encoding="UTF-8"?>
@@ -24,7 +24,7 @@ The [[manual/databasechangelog.html|database changelog file]] is where all datab
 
 ## Step 2: Add a ChangeSet ##
 
-Each [[manual/changeset.html|change set]] is uniquely identified by an "id" attribute and an "author" attribute. These two tags, along with the name and package of the changelog file uniquely identify the change. If only an "id" needed to be specified, it would be too easy to accidentally duplicate them, especially when dealing with multiple developers and code branches. Including an "author" attribute minimizes the chances of duplications.
+Each [change set](manual/changeset.html) is uniquely identified by an "id" attribute and an "author" attribute. These two tags, along with the name and package of the changelog file uniquely identify the change. If only an "id" needed to be specified, it would be too easy to accidentally duplicate them, especially when dealing with multiple developers and code branches. Including an "author" attribute minimizes the chances of duplications.
 
 Think of each change set as an atomic change that you want to apply to your database. It's usually best to include just one change in your change set, but more are allowed and can make sense if you are inserting multiple rows that should be added as a single transaction.  Liquibase will attempt to run each change set as a single transaction, but many databases will silently commit and resume transactions for certain commands (create table, drop table, etc.)
 
@@ -54,7 +54,7 @@ Think of each change set as an atomic change that you want to apply to your data
 
 ## Step 3: Run the ChangeSet ##
 
-There are many ways to execute your change log including via [[manual/command_line.html]], [[manual/Ant.html]], [[databases.html]], [[databases.html]], and a [[manual/servlet_listener.html]].
+There are many ways to execute your change log including via [Liquibase Manual](manual/command_line.html]], [manual/Ant](manual/Ant.html), [databases](databases.html), [databases](databases.html), and a [manual/servlet_listener](manual/servlet_listener.html).
 
 Here is an example for mysql via jdbc:
 
@@ -66,9 +66,9 @@ liquibase --driver=com.mysql.jdbc.Driver \
      --username=user \
      --password=asdf \
      migrate
-</code>                    
+</code>
 
-There are many more databases supported by liquibase. For a list of them and which jdbc driver, url, classpath etc. they need, please visit the [[databases.html]] section.
+There are many more databases supported by liquibase. For a list of them and which jdbc driver, url, classpath etc. they need, please visit the [databases](databases.html) section.
 
 ## Step 4: Check Your Database ##
 
@@ -78,6 +78,6 @@ You will see that your database now contains a table called "department". Two ot
 
 ## Next Steps ##
 
-This quick-start guide is designed to get you started with Liquibase. For a full description of all its capabilities, see the [[manual/home.html|Liquibase Manual]]. Read [[bestpractices.html|the best practices]].  For an extensive scenario, see the [[tutorial-using-oracle|tutorial using Oracle]].
+This quick-start guide is designed to get you started with Liquibase. For a full description of all its capabilities, see the [Liquibase Manual](manual/home.html). Read [the best practices](bestpractices.html).  For an extensive scenario, see the [tutorial using Oracle](tutorial-using-oracle).
 
-You can also view [[training.html|recorded sessions]] on Liquibase or visit the [[community.html|forums]].
+You can also view [recorded sessions](training.html) on Liquibase or visit the [forums](community.html).

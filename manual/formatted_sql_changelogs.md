@@ -5,7 +5,7 @@ title: Formatted sql changelogs
 
 # Formatted SQL Changelogs #
 
-As of LiquiBase 2.0, LiquiBase includes support for "plain SQL" changelog files. These changelogs may be included from XML changelogs and may contain arbitrary SQL statements. The statements are converted to [[custom_sql.html]] refactorings.
+As of LiquiBase 2.0, LiquiBase includes support for "plain SQL" changelog files. These changelogs may be included from XML changelogs and may contain arbitrary SQL statements. The statements are converted to [custom_sql](custom_sql.html) refactorings.
 
 Formatted SQL files use comments to provide LiquiBase with metadata. Each SQL file must begin with the following comment:
 
@@ -36,7 +36,7 @@ The following attributes may be provided on each changeset:
 ^ context  | Executes the change if the particular context was passed at runtime. Any string can be used for the context name and they are checked case-insensitively. |
 ^ runInTransaction  | Should the changeSet be ran as a single transaction (if possible)?  Defaults to true.  **Warning: be careful with this attribute.  If set to false and an error occurs part way through running a changeSet containing multiple statements, the LiquiBase databasechangelog table will be left in an invalid state** |
 ^ failOnError | Should the migration fail if an error occurs while executing the changeSet? |
-^ dbms  | The type of a database which that changeSet is to be used for. When the migration step is running, it checks the database type against this attribute. Valid database type names are listed on the [[../databases|supported databases page]] |
+^ dbms  | The type of a database which that changeSet is to be used for. When the migration step is running, it checks the database type against this attribute. Valid database type names are listed on the [supported databases page](../databases) |
 
 ## Rollback Actions ##
 

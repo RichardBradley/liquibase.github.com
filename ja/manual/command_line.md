@@ -2,14 +2,14 @@
 
 
 LiquiBase は、下記のように実行することで、コマンドラインから実行できます。
-**liquibase [オプション] [コマンド]** (または、liquibase コマンドをjava -jar <liquibase-jar へのパス> で置き換えることもできます)。コマンドライン migrator は、必要に応じて移行したいが、Ant や Maven などがサーバーにない場合に適しています。 コマンドライン migrator は、[[Servlet Listener | サーブレットリスナー]], [[Ant]], または [[Maven]] よりも多様な制御ができます。たとえば、メンテナンスコマンドを実行して SQL を出力したり、データベースの変更ログのロックを出力したり、解放したりできます。
+**liquibase [オプション] [コマンド]** (または、liquibase コマンドをjava -jar <liquibase-jar へのパス> で置き換えることもできます)。コマンドライン migrator は、必要に応じて移行したいが、Ant や Maven などがサーバーにない場合に適しています。 コマンドライン migrator は、[ サーブレットリスナー](Servlet Listener ), [ 変更の取り消しを行ったり、取り消しのためのスクリプトを生成する](Ant]], または [[Maven]] よりも多様な制御ができます。たとえば、メンテナンスコマンドを実行して SQL を出力したり、データベースの変更ログのロックを出力したり、解放したりできます。
 
 コマンドライン migrator よって下記のことが可能です
 
-  * [[rollback| 変更の取り消しを行ったり、取り消しのためのスクリプトを生成する]]
-  * [[diff| "diff" を生成する]]
-  * [[generating changelogs| 存在するデータベースからデータベース作成のスクリプトを生成する]]
-  * [[dbdoc|データベースの変更履歴ドキュメントを出力する]]
+  * [[rollback)
+  * [ "diff" を生成する](diff)
+  * [ 存在するデータベースからデータベース作成のスクリプトを生成する](generating changelogs)
+  * [データベースの変更履歴ドキュメントを出力する](dbdoc)
 
 コマンドライン migrator を引数なしで実行すると、利用可能なパラメータとともにヘルプメッセージが表示されます:
 
@@ -84,7 +84,7 @@ LiquiBase は、下記のように実行することで、コマンドライン�
 ^ --classpath=<値>  | 移行ファイルと JDBC ドライバを含むクラスパス | 
 ^ --contexts=<値>  | 実行する変更セットコンテキスト  | 
 ^ --defaultSchemaName=<schema>  | 管理対象とするデータベースオブジェクトと LiquiBase コントロールテーブルのデフォルトスキーマを設定 |
-^ --databaseClass=<custom.DatabaseImpl>  | カスタム [[http://www.liquibase.org/api/liquibase/database/Database.html|データベース]] 実装を利用する場合に指定  |
+^ --databaseClass=<custom.DatabaseImpl>  | カスタム [データベース](http://www.liquibase.org/api/liquibase/database/Database.html) 実装を利用する場合に指定  |
 ^ --defaultsFile=<ファイルへのパス>  | デフォルトのオプション設定値を含むファイル名 (デフォルト: ./liquibase.properties)  | 
 ^ --includeSystemClasspath=<true または false>  | LiquiBase クラスパスにシステムクラスパスを含むかどうか (デフォルト: true)  | 
 ^ --promptForNonLocalDatabase=<true または false>  | ローカルホストではないホストで稼働しているデータベースの場合にプロンプトを出力するかどうか (デフォルト: false)  | 

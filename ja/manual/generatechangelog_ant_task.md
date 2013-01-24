@@ -1,6 +1,6 @@
 ===== generateChangeLog Ant Task =====
 
-現存するデータベースを再作成するための[[generating changelogs|変更ログを生成]] 
+現存するデータベースを再作成するための[変更ログを生成](generating changelogs)
 
 
 ==== 例 ====

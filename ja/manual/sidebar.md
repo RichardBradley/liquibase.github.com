@@ -1,43 +1,43 @@
-  * [[../home|ホーム]]
-  * [[http://blog.liquibase.org/search/label/Announcement|ニュース]]
-  * [[http://blog.liquibase.org/|Blog]]
-  * [[../download|ダウンロード]]
-  * [[../quickstart|クイックスタート]]
-  * [[../bestpractices|ベストプラクティス]]
-  * [[home|マニュアル]]
+  * [ホーム](../home)
+  * [ニュース](http://blog.liquibase.org/search/label/Announcement)
+  * [Blog](http://blog.liquibase.org/)
+  * [ダウンロード](../download)
+  * [クイックスタート](../quickstart)
+  * [ベストプラクティス](../bestpractices)
+  * [マニュアル](home)
     *  概要
-      * [[overview | 概要]]
+      * [ 概要](overview )
     * 変更ログの生成
-      * <[[DatabaseChangeLog]]>
+      * <[Hibernate 統合](DatabaseChangeLog]]>
       * <[[ChangeSet]]>
       * <[[Include]]>
       * <[[Preconditions]]>
       * [[Contexts]]
       * [[ChangeLog Parameters]]
-      * [[hibernate|Hibernate 統合]]
-      * [[Formatted SQL Changelogs]]
+      * [[hibernate)
+      * [ データベースの更新](Formatted SQL Changelogs]]
     * LiquiBase の機能
-      * [[Update | データベースの更新]]
-      * [[Rollback | 変更セットの取り消し]]
-      * [[Diff | データベースの "差分(Diff)"]]
-      * [[generating changelogs|変更ログの生成]]
-      * [[DBDoc | データベースドキュメント生成]]
-      * [[SQL Output | SQL アウトプット]]
+      * [[Update )
+      * [ 変更セットの取り消し](Rollback )
+      * [ データベースの "差分(Diff)"](Diff )
+      * [変更ログの生成](generating changelogs)
+      * [ データベースドキュメント生成](DBDoc )
+      * [ SQL アウトプット](SQL Output )
     * LiquiBase の実行
-      * [[Ant]]
+      * [ サーブレットリスナー](Ant]]
       * [[Maven]]
-      * [[Servlet Listener | サーブレットリスナー]]
-      * [[Command Line | コマンドライン]]
-      * [[Spring]]
+      * [[Servlet Listener )
+      * [ コマンドライン](Command Line )
+      * [ アーキテクチャ](Spring]]
       * [[Grails]]
     * LiquiBase の開発
-      * [[Architecture | アーキテクチャ]]
-      * [[http://www.liquibase.org/manual/latest/api/index.html|API (Javadoc)]]
-  * [[../community|コミュニティ]]
-  * [[../ide/home|リファクタリング IDE]]
-  * [[../databases|対応データベース]]
-  * [[../faq|FAQ]]
-  * [[../training|トレーニングビデオ]]
-  * [[../history|履歴]]
-  * [[../future|将来の方向性]]
-  * [[../Contributing | 貢献]]
+      * [[Architecture )
+      * [API (Javadoc)](http://www.liquibase.org/manual/latest/api/index.html)
+  * [コミュニティ](../community)
+  * [リファクタリング IDE](../ide/home)
+  * [対応データベース](../databases)
+  * [FAQ](../faq)
+  * [トレーニングビデオ](../training)
+  * [履歴](../history)
+  * [将来の方向性](../future)
+  * [ 貢献](../Contributing )

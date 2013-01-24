@@ -33,7 +33,7 @@ Creates an index on an existing column or set of columns.
 
 ## Available Sub-Tags ##
 
-^ column  | Column(s) to add to the index. See the [[column.html|column tag documentation]] for more information  |
+^ column  | Column(s) to add to the index. See the [column tag documentation](column.html) for more information  |
 
 
 ## Database Compatiblity ##

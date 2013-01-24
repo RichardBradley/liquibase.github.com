@@ -27,8 +27,8 @@ Although LiquiBase supports most standard SQL statements with its change tags, t
 
 ## Available Attributes ##
 
-^ dbms  | List of [[../databases|database types]] to apply the modification(s) to. If not specified, modification is applied on all runs  |
-^ context  | List of [[contexts.html]] in which to run the sql modification.  If not specified, is applied in all contexts //Since 2.0//  |
+^ dbms  | List of [database types](../databases) to apply the modification(s) to. If not specified, modification is applied on all runs  |
+^ context  | List of [contexts](contexts.html) in which to run the sql modification.  If not specified, is applied in all contexts //Since 2.0//  |
 ^ applyToRollback| Should the sql modification be applied to rollback statements? Default='false' //Since 2.0//  |
 
 

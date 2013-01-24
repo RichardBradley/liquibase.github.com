@@ -80,6 +80,6 @@ LiquiBase は、サーブレットリスナーを経由して実行できます�
 ^ LIQUIBASE_HOST_EXCLUDES  | liquibase.host.excludes | LiquiBase が実行してほしく**ない**ホスト名を指定します。このパラメータを設定することで、同一の WAR/EAR を異なる環境の複数のマシンにデプロイでき、それらのマシンのすべてで LiquiBase を実行する必要がありません。 | 
 ^ LIQUIBASE_HOST_INCLUDES  | liquibase.host.includes | LiquiBase が実行してほしい**特定の** ホスト名を指定します。同一の WAR/EAR を異なる環境の複数のマシンにデプロイでき、それらのマシンのすべてで LiquiBase を実行する必要がありません。 | 
 ^ LIQUIBASE_FAIL_ON_ERROR  | liquibase.onerror.fail | エラーが発生したとき、LiquiBase が 例外をスローするかどうかを指定します。この値を "true" (デフォルト値) にすると、例外がスローされ、環境を初期状態に適切に保つことができます。この値を "false" に設定すると、このサイトは通常通りにデプロイされますが、データベースはただしくない状態に陥るでしょう。 | 
-^ LIQUIBASE_CONTEXTS  | liquibase.contexts | カンマ(,)で分けられた 実行される [[contexts | コンテキスト]] | 
+^ LIQUIBASE_CONTEXTS  | liquibase.contexts | カンマ(,)で分けられた 実行される [ コンテキスト](contexts ) |
 
 サーバーに migrator を実行させたいけれど、LIQUIBASE_HOST_EXCLUDES や LIQUIBASE_HOST_INCLUDES を設定したくない場合は、 "liquibase.should.run=[true/false]" システムプロパティを指定できます。

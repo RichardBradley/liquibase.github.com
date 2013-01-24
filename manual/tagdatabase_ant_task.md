@@ -5,7 +5,7 @@ title: Tagdatabase ant task
 
 ## tagDatabase Ant Task ##
 
-"Tags" the database for possible future rollback.  See [[rollback.html]] for more information.
+"Tags" the database for possible future rollback.  See [rollback](rollback.html) for more information.
 
 ### Sample ###
 
@@ -50,7 +50,7 @@ title: Tagdatabase ant task
 ^ databaseChangeLogLockTableName  | Overrides the name of the databasechangeloglock table to use //Since LiquiBase 1.9// |
 
 ### Available Sub Tags ###
-^ changeLogProperty  | Sets a [[changelog_parameters.html]] set //Since LiquiBase 1.7// |
+^ changeLogProperty  | Sets a [changelog_parameters](changelog_parameters.html) set //Since LiquiBase 1.7// |
 
 #### Available <changeLogProperty> Parameters ####
 ^ name  | The name of the property to set  | 

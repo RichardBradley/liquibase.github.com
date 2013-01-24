@@ -6,50 +6,50 @@ title: Refactorings
 # Supported Refactorings #
 
 ## Structural Refactorings ##
-  * [[manual/Add_Column.html|Add Column]]
-  * [[manual/Rename_Column.html|Rename Column]]
-  * [[manual/Modify_Column.html|Modify Column]]
-  * [[manual/Drop_Column.html|Drop Column]]
-  * [[manual/Alter_Sequence.html|Alter Sequence]]
-  * [[manual/Create_Table.html|Create Table]]
-  * [[manual/Rename_Table.html|Rename Table]]
-  * [[manual/Drop_Table.html|Drop Table]]
-  * [[manual/Create_View.html|Create View]]
-  * [[manual/Rename_View.html|Rename View]]
-  * [[manual/Drop_View.html|Drop View]]
-  * [[manual/Merge_Columns.html|Merge Columns]]
+  * [Add Column](manual/Add_Column.html)
+  * [Rename Column](manual/Rename_Column.html)
+  * [Modify Column](manual/Modify_Column.html)
+  * [Drop Column](manual/Drop_Column.html)
+  * [Alter Sequence](manual/Alter_Sequence.html)
+  * [Create Table](manual/Create_Table.html)
+  * [Rename Table](manual/Rename_Table.html)
+  * [Drop Table](manual/Drop_Table.html)
+  * [Create View](manual/Create_View.html)
+  * [Rename View](manual/Rename_View.html)
+  * [Drop View](manual/Drop_View.html)
+  * [Merge Columns](manual/Merge_Columns.html)
 
 
 ## Data Quality Refactorings ##
 
-  * [[manual/Add_Lookup_Table.html|Add Lookup Table]]
-  * [[manual/Add Not-Null Constraint|Add Not-Null Constraint]]
-  * [[manual/Remove Not-Null Constraint|Remove Not-Null Constraint]]
-  * [[manual/Add_Unique_Constraint.html|Add Unique Constraint]]
-  * [[manual/Drop_Unique_Constraint.html|Drop Unique Constraint]]
-  * [[manual/Create_Sequence.html|Create Sequence]]
-  * [[manual/Drop_Sequence.html|Drop Sequence]]
-  * [[manual/Add Auto-increment|Add Auto-Increment]]
-  * [[manual/Add_Default_Value.html|Add Default Value]]
-  * [[manual/Drop_Default_Value.html|Drop Default Value]]
+  * [Add Lookup Table](manual/Add_Lookup_Table.html)
+  * [Add Not-Null Constraint](manual/Add Not-Null Constraint)
+  * [Remove Not-Null Constraint](manual/Remove Not-Null Constraint)
+  * [Add Unique Constraint](manual/Add_Unique_Constraint.html)
+  * [Drop Unique Constraint](manual/Drop_Unique_Constraint.html)
+  * [Create Sequence](manual/Create_Sequence.html)
+  * [Drop Sequence](manual/Drop_Sequence.html)
+  * [Add Auto-Increment](manual/Add Auto-increment)
+  * [Add Default Value](manual/Add_Default_Value.html)
+  * [Drop Default Value](manual/Drop_Default_Value.html)
 
 
 ## Referential Integrity Refactorings ##
-  * [[manual/Add_Foreign_Key_Constraint.html|Add Foreign Key Constraint]]
-  * [[manual/Drop_Foreign_Key_Constraint.html|Drop Foreign Key Constraint]]
-  * [[manual/Drop_All_Foreign_Key_Constraints.html|Drop All Foreign Key Constraints]]
-  * [[manual/Add_Primary_Key_Constraint.html|Add Primary Key Constraint]]
-  * [[manual/Drop_Primary_Key_Constraint.html|Drop Primary Key Constraint]]
+  * [Add Foreign Key Constraint](manual/Add_Foreign_Key_Constraint.html)
+  * [Drop Foreign Key Constraint](manual/Drop_Foreign_Key_Constraint.html)
+  * [Drop All Foreign Key Constraints](manual/Drop_All_Foreign_Key_Constraints.html)
+  * [Add Primary Key Constraint](manual/Add_Primary_Key_Constraint.html)
+  * [Drop Primary Key Constraint](manual/Drop_Primary_Key_Constraint.html)
 
 ## Non-Refactoring Transformations ##
-  * [[manual/Insert_Data.html|Insert Data]]
+  * [Insert Data](manual/Insert_Data.html)
 ## Architectural Refactorings ##
-  * [[manual/Create_Index.html|Create Index]]
-  * [[manual/Drop_Index.html|Drop Index]]
+  * [Create Index](manual/Create_Index.html)
+  * [Drop Index](manual/Drop_Index.html)
 
 ## Custom Refactorings ##
-  * [[manual/custom_sql.html|Custom SQL]]
-  * [[manual/Custom_SQL_File.html|Execute SQL Script]]
-  * [[manual/Custom_Refactoring_Class.html|Custom Refactoring Class]]
+  * [Custom SQL](manual/custom_sql.html)
+  * [Execute SQL Script](manual/Custom_SQL_File.html)
+  * [Custom Refactoring Class](manual/Custom_Refactoring_Class.html)
 
-More will be included in future releases. Suggestions for additional refactorings are always [[community.html|welcome]]
+More will be included in future releases. Suggestions for additional refactorings are always [welcome](community.html)

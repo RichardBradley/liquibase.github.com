@@ -40,7 +40,7 @@ title: History
 
 **10/16/2006** Version 0.5 was released and the license changed to LGPL.
 
-Liquibase tool has been used internally by [[http://www.sundog.net|Sundog]] for a number of years on a wide variety of projects. In 2006 it was released it as an open source tool.
+Liquibase tool has been used internally by [Sundog](http://www.sundog.net) for a number of years on a wide variety of projects. In 2006 it was released it as an open source tool.
  
 
 # Contributors #

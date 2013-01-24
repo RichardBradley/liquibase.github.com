@@ -5,7 +5,7 @@ title: Diffdatabasetochangelog ant task
 
 ## diffDatabase Ant Task ##
 
-Outputs a [[diff.html]] of the difference between two databases as a change log to bring them into sync.
+Outputs a [diff](diff.html) of the difference between two databases as a change log to bring them into sync.
 
 ### Sample ###
 
@@ -54,7 +54,7 @@ Outputs a [[diff.html]] of the difference between two databases as a change log 
 ^ databaseChangeLogLockTableName  | Overrides the name of the databasechangeloglock table to use //Since LiquiBase 1.9// |
 
 ### Available Sub Tags ###
-^ changeLogProperty  | Sets a [[changelog_parameters.html]] set //Since LiquiBase 1.7// |
+^ changeLogProperty  | Sets a [changelog_parameters](changelog_parameters.html) set //Since LiquiBase 1.7// |
 
 #### Available <changeLogProperty> Parameters ####
 ^ name  | The name of the property to set  | 

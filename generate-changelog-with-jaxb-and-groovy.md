@@ -5,7 +5,7 @@ title: Generate-changelog-with-jaxb-and-groovy
 
 # Generate LiquiBase changeLogs using JAXB and Groovy #
 
-In [[generate-changelog-with-groovy|another article]] on this website we saw how we can generate Liquibase changelogs using Groovy and the markupBuilder.
+In [another article](generate-changelog-with-groovy) on this website we saw how we can generate Liquibase changelogs using Groovy and the markupBuilder.
 
 In this article we're going to use the Java Architecture for XML Binding (JAXB) xjc tooling to generate the changelog. The xjc utility creates Java classes from the Liquibase XSD. These classes can then be used in a Groovy script to create Liquibase changelogs in an easy way.
 

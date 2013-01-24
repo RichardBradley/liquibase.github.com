@@ -2,18 +2,18 @@
 
 
 ===== 構造のリファクタリング =====
-  * [[manual/Add Column| カラムの追加]]
-  * [[manual/Rename Column| カラムの名称変更]]
-  * [[manual/Modify Column| カラムの変更]]
-  * [[manual/Drop Column| カラムの削除]]
-  * [[manual/Alter Sequence| シーケンスの変更]]
-  * [[manual/Create Table| テーブルの作成]]
-  * [[manual/Rename Table| テーブルの名称変更]]
-  * [[manual/Drop Table| テーブルの削除]]
-  * [[manual/Create View| ビューの作成]]
-  * [[manual/Rename View|  ビューの名称変更]]
-  * [[manual/Drop View|ビューの削除]]
-  * [[manual/Merge Columns| 複数カラムの統合]]
+  * [ カラムの追加](manual/Add Column)
+  * [ カラムの名称変更](manual/Rename Column)
+  * [ カラムの変更](manual/Modify Column)
+  * [ カラムの削除](manual/Drop Column)
+  * [ シーケンスの変更](manual/Alter Sequence)
+  * [ テーブルの作成](manual/Create Table)
+  * [ テーブルの名称変更](manual/Rename Table)
+  * [ テーブルの削除](manual/Drop Table)
+  * [ ビューの作成](manual/Create View)
+  * [  ビューの名称変更](manual/Rename View)
+  * [ビューの削除](manual/Drop View)
+  * [ 複数カラムの統合](manual/Merge Columns)
 
 
 
@@ -21,40 +21,40 @@
 
 ===== データクオリティのリファクタリング =====
 
-  * [[manual/Add Lookup Table|参照テーブルの追加]]
-  * [[manual/Add Not-Null Constraint|Not-Null 制約の追加]]
-  * [[manual/Remove Not-Null Constraint|Not-Null 制約の削除]]
-  * [[manual/Add Unique Constraint|一意制約の追加]]
-  * [[manual/Drop Unique Constraint|一意制約の削除]]
-  * [[manual/Create Sequence|シーケンスの作成]]
-  * [[manual/Drop Sequence|シーケンスの削除]]
-  * [[manual/Add Auto-increment|Auto-Increment の追加]]
-  * [[manual/Add Default Value|デフォルト値の追加]]
-  * [[manual/Drop Default Value|デフォルト値の削除]]
+  * [参照テーブルの追加](manual/Add Lookup Table)
+  * [Not-Null 制約の追加](manual/Add Not-Null Constraint)
+  * [Not-Null 制約の削除](manual/Remove Not-Null Constraint)
+  * [一意制約の追加](manual/Add Unique Constraint)
+  * [一意制約の削除](manual/Drop Unique Constraint)
+  * [シーケンスの作成](manual/Create Sequence)
+  * [シーケンスの削除](manual/Drop Sequence)
+  * [Auto-Increment の追加](manual/Add Auto-increment)
+  * [デフォルト値の追加](manual/Add Default Value)
+  * [デフォルト値の削除](manual/Drop Default Value)
 
 
 
 ===== 整合性制約のリファクタリング =====
-  * [[manual/Add Foreign Key Constraint|参照整合性制約の追加]]
-  * [[manual/Drop Foreign Key Constraint|参照整合性制約の削除]]
-  * [[manual/Drop All Foreign Key Constraints|すべての参照整合性制約の削除]]
-  * [[manual/Add Primary Key Constraint|主キー制約の追加]]
-  * [[manual/Drop Primary Key Constraint|主キー制約の削除]]
+  * [参照整合性制約の追加](manual/Add Foreign Key Constraint)
+  * [参照整合性制約の削除](manual/Drop Foreign Key Constraint)
+  * [すべての参照整合性制約の削除](manual/Drop All Foreign Key Constraints)
+  * [主キー制約の追加](manual/Add Primary Key Constraint)
+  * [主キー制約の削除](manual/Drop Primary Key Constraint)
 
 
 ===== リファクタリングではない変更 =====
-  * [[manual/Insert Data|データのインサート]]
+  * [データのインサート](manual/Insert Data)
 
 ===== 構造のリファクタリング =====
-  * [[manual/Create Index|インデックスの作成]]
-  * [[manual/Drop Index|インデックスの削除]]
+  * [インデックスの作成](manual/Create Index)
+  * [インデックスの削除](manual/Drop Index)
 
 
 
 
 ===== カスタムリファクタリング =====
-  * [[manual/Custom SQL|カスタムSQL]]
-  * [[manual/Custom SQL File|SQL スクリプトの実行]]
-  * [[manual/Custom Refactoring Class|カスタムリファクタリングクラス]]
+  * [カスタムSQL](manual/Custom SQL)
+  * [SQL スクリプトの実行](manual/Custom SQL File)
+  * [カスタムリファクタリングクラス](manual/Custom Refactoring Class)
 
-もっと多くのリファクタリングが将来のリリースで導入されるでしょう。追加のリファクタリングに関する提案も[[community|歓迎]] です。
+もっと多くのリファクタリングが将来のリリースで導入されるでしょう。追加のリファクタリングに関する提案も[歓迎](community) です。

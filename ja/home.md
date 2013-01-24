@@ -5,24 +5,24 @@
 Liquibase はオープンソース (Apache 2.0 Licensed) のデータベースへの変更の追跡、管理と適用に関する、データベースに依存しないライブラリです。とてもシンプルな前提のもとに成り立っています: **すべてのデータベースへの変更が、人間が読めて、かつソースコントロールシステムにて履歴が確認できる形で記録されます。**
 
 Liquibase はこれらに対応しています。:
-    * [[http://liquibase.org/extensions|拡張性]]
+    * [拡張性](http://liquibase.org/extensions)
     * 複数の開発者による変更のマージ
     * コードのブランチ分け
-    * [[databases|複数のデータベース]]
+    * [複数のデータベース](databases)
     * テスト用の多様なデータだけでなく、本番環境でのデータの管理
     * Cluster-safe database upgrades
     * 自動化された更新、または DBA による承認のための SQL スクリプトの生成
-    * [[ja/manual/rollback|更新の取り消し]]
-    * データベースの "[[ja/manual:diff|差分]]"
+    * [更新の取り消し](ja/manual/rollback)
+    * データベースの "[差分](ja/manual:diff)"
     * 既存のデータベースから変更ログの記録を開始
-    * [[ja/manual:dbdoc|データベース変更ドキュメント]]の生成
+    * [データベース変更ドキュメント](ja/manual:dbdoc)の生成
 
 ====== はじめましょう ======
 
-[[download|Liquibaseをダウンロード]]して、[[quickstart|クイックスタートガイド]]を読みましょう。
+[Liquibaseをダウンロード](download)して、[クイックスタートガイド](quickstart)を読みましょう。
 
-詳しくは、[[ja/manual/home|マニュアル]]や[[FAQ]]を読んだり、[[training|トレーニングビデオ]]を見たり、第三者からの[[articles|記事]]を読んだりしてみましょう。質問がある場合は、[[community|フォーラム]]へどうぞ。 
+詳しくは、[マニュアル](ja/manual/home)や[トレーニングビデオ](FAQ]]を読んだり、[[training)を見たり、第三者からの[記事](articles)を読んだりしてみましょう。質問がある場合は、[フォーラム](community)へどうぞ。
 
 ====== .NET 版 ======
 
-.NET 版の Liquibase は構想の初期段階にあります。もっと情報が欲しかったり、援助をしたかったなら、[[dotnetport|.Net 版のページ]]までどうぞ。
+.NET 版の Liquibase は構想の初期段階にあります。もっと情報が欲しかったり、援助をしたかったなら、[.Net 版のページ](dotnetport)までどうぞ。

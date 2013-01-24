@@ -1,16 +1,16 @@
-  * [[home|ホーム]]
-  * [[http://blog.liquibase.org/|Blog]]
-  * [[Download]]
-  * [[http://liquibase.org/extensions|Extension ポータル]]
-  * [[quickstart|クイックスタート]]
-  * [[bestpractices|ベストプラクティス]]
-  * [[manual/home|マニュアル]]
-  * [[Community|コミュニティ]]
-  * [[databases|対応データベース]]
-  * [[faq|FAQ]]
-  * [[Articles|紹介記事]]
-  * [[training|トレーニングビデオ]]
-  * [[History|履歴]]
-  * [[future|将来の方向性]]
-  * [[http://liquibase.jira.com/browse/CORE|イシュートラッキング]]
-  * [[http://liquibase.com|サポートとトレーニング]]
+  * [ホーム](home)
+  * [Blog](http://blog.liquibase.org/)
+  * [Extension ポータル](Download]]
+  * [[http://liquibase.org/extensions)
+  * [クイックスタート](quickstart)
+  * [ベストプラクティス](bestpractices)
+  * [マニュアル](manual/home)
+  * [コミュニティ](Community)
+  * [対応データベース](databases)
+  * [FAQ](faq)
+  * [紹介記事](Articles)
+  * [トレーニングビデオ](training)
+  * [履歴](History)
+  * [将来の方向性](future)
+  * [イシュートラッキング](http://liquibase.jira.com/browse/CORE)
+  * [サポートとトレーニング](http://liquibase.com)

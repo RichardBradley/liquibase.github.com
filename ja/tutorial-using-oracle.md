@@ -48,13 +48,13 @@ D:\projects
 
 ===== ステップ 1: ソフトウェアのインストール =====
 ==== Oracle データベースのインストール ====
-Oracle データベースが利用できない場合、Oracle XE を [[http://www.oracle.com/technology|Oracle Technology Network]]からダウンロードしてインストールします。 XE エディションのデータベースは開発と本番環境両方の目的で無償で利用できます。
+Oracle データベースが利用できない場合、Oracle XE を [Oracle Technology Network](http://www.oracle.com/technology)からダウンロードしてインストールします。 XE エディションのデータベースは開発と本番環境両方の目的で無償で利用できます。
 
 ==== SQL Developer のインストール ====
-データベースオブジェクトを管理するための数多くのツールがあります。そのようなツールを持っていない場合は、SQL Developer を使ってみてはどうでしょう。SQL Developer は  [[http://www.oracle.com/technology|Oracle Technology Network]] から無償でダウンロードできます。 
+データベースオブジェクトを管理するための数多くのツールがあります。そのようなツールを持っていない場合は、SQL Developer を使ってみてはどうでしょう。SQL Developer は  [Oracle Technology Network](http://www.oracle.com/technology) から無償でダウンロードできます。
 
 ==== JDeveloper のインストール ====
-Oracle JDeveloper もまた、無償で[[http://www.oracle.com/technology|Oracle Technology Network]]から取得できます。多数の機能がありますが、ここでは XML エディタにのみ触れることにしましょう。このエディタはスキーマに対応しており、変更ログを簡単に記述できます。
+Oracle JDeveloper もまた、無償で[Oracle Technology Network](http://www.oracle.com/technology)から取得できます。多数の機能がありますが、ここでは XML エディタにのみ触れることにしましょう。このエディタはスキーマに対応しており、変更ログを簡単に記述できます。
 
 ダウンロードとインストールが終わったら、JDeveloper を起動します。プロキシー配下にある場合はプロキシを設定します:
 
@@ -69,7 +69,7 @@ Tools > Preferences > XML Schemas. "add" を選び、エンターを押す:
 OK を押せば、JDeveloper で変更ログを編集する準備が出来ました。アプリケーションやプロジェクトを作成する必要はありません。編集したい XML ファイルを開くだけでよいのです。
 
 ==== TortoiseSVN のインストール ====
-TortoiseSVN は Subversion のためのグラフィカルなフロントエンドツールです。ファイルベースのリポジトリを作成する機能も持っています。このチュートリアルではその機能を利用します。Subversion サーバーにアクセスする必要はありません。TortoiseSVN を [[http://tortoisesvn.net/]] からダウンロードしてインストールし、PC を再起動します。
+TortoiseSVN は Subversion のためのグラフィカルなフロントエンドツールです。ファイルベースのリポジトリを作成する機能も持っています。このチュートリアルではその機能を利用します。Subversion サーバーにアクセスする必要はありません。TortoiseSVN を [http://tortoisesvn.net/](http://tortoisesvn.net/) からダウンロードしてインストールし、PC を再起動します。
 
 ==== ディレクトリ構造の作成と Subversion レポジトリ ====
 チュートリアルのために下記のディレクトリを作成します。
@@ -103,7 +103,7 @@ Windows のエクスプローラに戻り、D:\projects\lbdemo に移動して�
 OK を押すと、trunk ディレクトリを作成することの確認画面が表示されます。Yes を選択し、OK を押します。Windows のエクスプローラで、trunk ディレクトリが緑のアイコンで表示されます。これは、コミットする変更がないワーキングコピーであることを示しています。
 
 ==== JDBC Driver のインストール ====
-Oracle JDBC Drive をこちらからダウンロードします: [[http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/index.html]]
+Oracle JDBC Drive をこちらからダウンロードします: [Redmond Path](http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/index.html]]
 10g R2 ドライバのリンクをクリックし、''ojdbc14.jar'' を選択します。
 
 その jar ファイルを ''D:\projects\lbdemo'' ディレクトリに保存します。
@@ -111,7 +111,7 @@ Oracle JDBC Drive をこちらからダウンロードします: [[http://www.or
 ==== LiquiBase のインストール ====
 下記の手順に従って LiquiBase をインストールします。
 
-PATH に"libuibase.bat" ファイルを含むディレクトリを追加します。[[http://sites.google.com/site/redmondlab/path|Redmond Path]] はパスを編集するのに便利なツールです: Windows の標準よりもはるかに便利です。 
+PATH に"libuibase.bat" ファイルを含むディレクトリを追加します。[[http://sites.google.com/site/redmondlab/path) はパスを編集するのに便利なツールです: Windows の標準よりもはるかに便利です。
 
 DOS プロンプトを開いて、''D:\projects\lbdemo\trunk'' ディレクトリに移動し、下記のコマンドを実行します:
 <code>liquibase --version</code>

@@ -44,14 +44,14 @@ title: Create table
 
 ## Available Sub-Tags ##
 
-^ column  | Column(s) to create in the table. The Column tag can contain constraint and foreign key information. See the [[column.html|column tag documentation]] for more information **[required]**  |
+^ column  | Column(s) to create in the table. The Column tag can contain constraint and foreign key information. See the [column tag documentation](column.html) for more information **[required]**  |
 
 
 
 
 ## Database Compatiblity ##
 
-^ MySQL  | Does not support tablespaces.To specify storage engine use [[custom_sql.html]] tag|
+^ MySQL  | Does not support tablespaces.To specify storage engine use [custom_sql](custom_sql.html) tag|
 ^ PostgreSQL  | No Issues  | 
 ^ Oracle  | No Issues  | 
 ^ MS-SQL  | No Issues  | 

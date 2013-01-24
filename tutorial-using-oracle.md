@@ -54,13 +54,13 @@ The scenario for this tutorial is illustrated in the diagram below. It will be h
 
 ## Step 1: Install the software ##
 ### Install Oracle Database ###
-If you don't already have an Oracle database available, then download Oracle XE from the [[http://www.oracle.com/technology|Oracle Technology Network]] and install it on your computer. The XE edition of the database is free to use for development and production purposes.
+If you don't already have an Oracle database available, then download Oracle XE from the [Oracle Technology Network](http://www.oracle.com/technology) and install it on your computer. The XE edition of the database is free to use for development and production purposes.
 
 ### Install SQL Developer ###
-There are many tools available to manage your database objects. If you haven't already got such a tool, then take a look at SQL Developer. SQL Developer is available as a free download at the [[http://www.oracle.com/technology|Oracle Technology Network]]. 
+There are many tools available to manage your database objects. If you haven't already got such a tool, then take a look at SQL Developer. SQL Developer is available as a free download at the [Oracle Technology Network](http://www.oracle.com/technology).
 
 ### Install JDeveloper ###
-Oracle JDeveloper is another free tool available from the [[http://www.oracle.com/technology|Oracle Technology Network]]. It has too many features to list here, we will only mention the XML editor. This editor is schema aware, and makes it easy to author your changelogs.
+Oracle JDeveloper is another free tool available from the [Oracle Technology Network](http://www.oracle.com/technology). It has too many features to list here, we will only mention the XML editor. This editor is schema aware, and makes it easy to author your changelogs.
 
 After downloading and installing, start JDeveloper. If you are behind a proxy, configure the proxy using:
 
@@ -75,7 +75,7 @@ Choose Tools > Preferences > XML Schemas. Select "add". Enter:
 Press OK and now your JDeveloper is ready to edit your changelogs. There is no need to create an application or a project. Simply open the XML file you want to edit.
 
 ### Install TortoiseSVN ###
-TortoiseSVN is a graphical front end to Subversion. It also has the capability to create a file based repository. We will use this feature for this tutorial. There is no need for you to have access to a Subversion server. Download TortoiseSVN from [[http://tortoisesvn.net/]].
+TortoiseSVN is a graphical front end to Subversion. It also has the capability to create a file based repository. We will use this feature for this tutorial. There is no need for you to have access to a Subversion server. Download TortoiseSVN from [http://tortoisesvn.net/](http://tortoisesvn.net/).
 Install it and reboot your PC.
 
 ### Create directory structure and Subversion repository ###
@@ -109,7 +109,7 @@ Return to Windows Explorer, navigate to directory D:\projects\lbdemo and right-c
 Press OK. A confirmation window will display to create directory trunk. Select Yes. Press OK. In Windows Explorer, the trunk directory will be displayed with a green icon, indicating that it is a working copy with no changes to commit.
 
 ### Install the JDBC Driver ###
-Download the Oracle JDBC driver here: [[http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/index.html]]
+Download the Oracle JDBC driver here: [Redmond Path](http://www.oracle.com/technology/software/tech/java/sqlj_jdbc/index.html]]
 Click on the link for 10g  Release 2 drivers, and choose ''ojdbc14.jar''.
 
 Save the jar in directory: ''D:\projects\lbdemo''.
@@ -117,7 +117,7 @@ Save the jar in directory: ''D:\projects\lbdemo''.
 ### Install LiquiBase ###
 Install LiquiBase following the instructions.
 
-Add the directory containing the ''liquibase.bat'' file to your PATH. [[http://redmondlab.net|Redmond Path]] is a handy tool to edit your path; much easier than the standard facility in Windows. 
+Add the directory containing the ''liquibase.bat'' file to your PATH. [Redmond Path](http://redmondlab.net) is a handy tool to edit your path; much easier than the standard facility in Windows.
 
 Test the installation by opening a DOS box in the ''D:\projects\lbdemo\trunk'' directory and entering the following command:
 <code>liquibase --version</code>

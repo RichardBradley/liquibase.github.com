@@ -26,7 +26,7 @@ Inserts data into an existing table
 
 ## Available Sub-Tags ##
 
-^ column  | Data to insert into columns. See the [[column.html|column tag documentation]] for more information  |
+^ column  | Data to insert into columns. See the [column tag documentation](column.html) for more information  |
 
 
 ## Database Compatiblity ##

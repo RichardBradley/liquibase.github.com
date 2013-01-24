@@ -6,16 +6,16 @@ title: Command line
 # LiquiBase Command Line #
 
 LiquiBase can be run from the command line by running
-**liquibase [options] [command] [command parameters]** (optionally, replace the liquibase command with java -jar <path-to-liquibase-jar>). The command line migrator works well when you want to do migrations on demand, but don't have Ant or Maven available such as on servers. The command line migrator also gives you more control over the process than the [[servlet_listener.html]], [[Ant.html]], or [[Maven.html]] do, allowing you to run maintenance commands like outputting SQL and listing/releasing database changelog locks.
+**liquibase [options] [command] [command parameters]** (optionally, replace the liquibase command with java -jar <path-to-liquibase-jar>). The command line migrator works well when you want to do migrations on demand, but don't have Ant or Maven available such as on servers. The command line migrator also gives you more control over the process than the [perform rollback operations and generate rollback scripts](servlet_listener.html]], [Ant](Ant.html), or [Maven](Maven.html) do, allowing you to run maintenance commands like outputting SQL and listing/releasing database changelog locks.
 
 Any values found after the command on the command line invocation will be considered a command parameter. The command line processor will validate whether the command line parameters are allowed for the current command. If the current command does not allow command line parameters or the parameter appears to be an incorrect format, then an error message of 'unexpected command parmeter' will be logged and the execution will terminate.
 
 The command line migrator also allows you to
 
-  * [[rollback.html|perform rollback operations and generate rollback scripts]]
-  * [[diff.html|generate "diff"s]]
-  * [[generating_changelogs.html|generate creation scripts from existing databases]]
-  * [[dbdoc.html|generate database change documentation]]
+  * [perform rollback operations and generate rollback scripts](rollback.html)
+  * [generate "diff"s](diff.html)
+  * [generate creation scripts from existing databases](generating_changelogs.html)
+  * [generate database change documentation](dbdoc.html)
 
 If you run the command line migrator without any arguments, you will get a help message listing these available parameters:
 
@@ -89,7 +89,7 @@ If you run the command line migrator without any arguments, you will get a help 
 ^ --classpath=<value>  | Classpath containing migration files and JDBC Driver.  | 
 ^ --contexts=<value>  | ChangeSet contexts to execute  | 
 ^ --defaultSchemaName=<schema>  | Specifies the default schema to use for managed database objects and for LiquiBase control tables  |
-^ --databaseClass=<custom.DatabaseImpl>  | Specifies a custom [[http://www.liquibase.org/api/liquibase/database/Database.html|Database]] implementation to use  |
+^ --databaseClass=<custom.DatabaseImpl>  | Specifies a custom [Database](http://www.liquibase.org/api/liquibase/database/Database.html) implementation to use  |
 ^ --defaultsFile=</path/to/file>  | File containing default option values (default: ./liquibase.properties)  | 
 ^ --includeSystemClasspath=<true or false>  | Include the system classpath in the LiquiBase classpath (default: true)  | 
 ^ --promptForNonLocalDatabase=<true or false>  | Prompt if non-localhost databases (default: false)  | 
@@ -109,11 +109,11 @@ If you run the command line migrator without any arguments, you will get a help 
 ^ --referenceDriver=<jdbc.driver.ClassName>  | Base Database driver class name  | 
 
 ## Change Log Properties ##
-^ -D<property.name>=<property.value>  | Pass a name/value pair for [[changelog_parameters.html|substitution of ${} blocks]] in the change log(s)  |
+^ -D<property.name>=<property.value>  | Pass a name/value pair for [substitution of ${} blocks](changelog_parameters.html) in the change log(s)  |
 
 ## Using a liquibase.properties file ##
 
-If you do not want to always specify options on the command line, you can create a [[liquibase.properties|properties file]] that contains default values. By default, LiquiBase will look for a file called "liquibase.properties" in the current working directory, but you can specify an alternate location with the --defaultsFile flag. If you have specified an option in a properties file and specify the same option on the command line, the value on the command line will override the properties file value.
+If you do not want to always specify options on the command line, you can create a [properties file](liquibase.properties) that contains default values. By default, LiquiBase will look for a file called "liquibase.properties" in the current working directory, but you can specify an alternate location with the --defaultsFile flag. If you have specified an option in a properties file and specify the same option on the command line, the value on the command line will override the properties file value.
 
 ## Examples ##
 

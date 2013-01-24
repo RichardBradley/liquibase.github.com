@@ -23,7 +23,7 @@ Adds a new column to an existing table.
 
 ## Available Sub-Tags ##
 
-^ column  | Column constraint and foreign key information. Setting the "defaultValue" attribue will specify a default value for the column.  Setting the "value" attribute will set all rows existing to the specified value without modifying the column default.  See the [[column.html| column tag documentation]] for more information **[required]** |
+^ column  | Column constraint and foreign key information. Setting the "defaultValue" attribue will specify a default value for the column.  Setting the "value" attribute will set all rows existing to the specified value without modifying the column default.  See the [ column tag documentation](column.html) for more information **[required]** |
 
 
 

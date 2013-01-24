@@ -83,6 +83,6 @@ To configure the servlet listener, simply add liquibase.jar to your WEB-INF/lib 
 | LIQUIBASE_HOST_EXCLUDES | liquibase.host.excludes | Specify host names on which you do NO want LiquiBase to run. Specifying this parameter allows you to deploy the same WAR/EAR to multiple machines in different environments and not have LiquiBase run on all of them.  | 
 | LIQUIBASE_HOST_INCLUDES | liquibase.host.includes | Specify the ONLY host names on which want LiquiBase to run. Specifying this parameter allows you to deploy the same WAR/EAR to multiple machines in different environments and not have LiquiBase run on all of them.  | 
 | LIQUIBASE_FAIL_ON_ERROR | liquibase.onerror.fail | Specify if an exception is thrown by LiquiBase if an error occurs. Setting the value to "true" (default) will cause the exception to be thrown and keep the site from initializing properly. Setting the value to "false" will allow the site to deploy as normal, but the database will be in an undefined state.  | 
-| LIQUIBASE_CONTEXTS | liquibase.contexts | A comma separated lists of the [[contexts.html]] to run in.  |
+| LIQUIBASE_CONTEXTS | liquibase.contexts | A comma separated lists of the [contexts](contexts.html) to run in.  |
 
 If you want to control servers that run LiquiBase but don't want to set the LIQUIBASE_HOST_EXCLUDES/LIQUIBASE_HOST_INCLUDES attributes, you can specify the "liquibase.should.run=[true/false]" system property.

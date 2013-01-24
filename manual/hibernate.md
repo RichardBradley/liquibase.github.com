@@ -4,20 +4,20 @@ title: Hibernate
 ---
 
 # Hibernate Integration (Since 1.6) #
-The LiquiBase-Hibernate is a replacement to Hibernate's "[[http://www.hibernate.org/hib_docs/v3/api/org/hibernate/tool/hbm2ddl/package-summary.html|hbm2ddl]]" functionality.  
+The LiquiBase-Hibernate is a replacement to Hibernate's "[hbm2ddl](http://www.hibernate.org/hib_docs/v3/api/org/hibernate/tool/hbm2ddl/package-summary.html)" functionality.
 
 
 ## Advantages of LiquiBase over hbm2ddl ##
-While hbm2ddl works in general, it is basically a database diff tool and therefore has all the [[http://blog.liquibase.org/2007/06/the-problem-with-database-diffs.html|problems associated with database diff tools]].
+While hbm2ddl works in general, it is basically a database diff tool and therefore has all the [problems associated with database diff tools](http://blog.liquibase.org/2007/06/the-problem-with-database-diffs.html).
 
 The LiquiBase-Hibernate integration records the database changes required by your current Hibernate mapping to a change log file which you can then inspect and modify as needed before executing.
 
 ## Development Process ##
 Using Hibernate with LiquiBase consists of the following steps:
   - Make needed changes to your Hibernate-mapped objects
-  - Run [[diff.html|diffChangeLog]] between your Hibernate config file and your development database (see examples below)
+  - Run [diffChangeLog](diff.html) between your Hibernate config file and your development database (see examples below)
   - Inspect and modify new change sets (if needed)
-  - [[Update.html]] your database with the new changes
+  - [Update](Update.html) your database with the new changes
 
 ## Example ##
 

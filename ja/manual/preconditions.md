@@ -1,11 +1,11 @@
 ====== <preConditions> タグ======
 
-Preconditions は、[[databasechangelog|変更ログ]] または [[changeset | 変更セット]] に含ませ、データベースの状態に基づいて、データベースへの変更を制御します。
+Preconditions は、[変更ログ](databasechangelog) または [ 変更セット](changeset ) に含ませ、データベースの状態に基づいて、データベースへの変更を制御します。
 
 preconditions タグを利用する主な理由はこちらです。
   * 変更ログの作成者が、作成時に必要な前提条件を記述するため
   * それらの前提条件が、変更ログを実施するユーザーに違反されないことを強制するため
-  * [[drop_Table | テーブルの削除]] のような回復不可能な変更を実施する前にデータのチェックをするため
+  * [ テーブルの削除](drop_Table ) のような回復不可能な変更を実施する前にデータのチェックをするため
   * データベースの状態に基づいて、どの変更セットを実施させ、どれをさせないかを制御するため
 
 お望みであれば、ひとつの <changeSet> タグにひとつの precondition だけにすることもできます。
@@ -38,7 +38,7 @@ preconditions タグを利用する主な理由はこちらです。
 </databaseChangeLog>
 </code>                                       
 
-上記の変更ログは、データベースが Oracle に対して実行され、データベースユーザーが "SYSTEM" で実行されているときにだけ実行されます。また、"oldtable" が何の結果も含まない(レコード数が0の)時だけ、[[drop_Table | テーブルの削除 ]] を行います。
+上記の変更ログは、データベースが Oracle に対して実行され、データベースユーザーが "SYSTEM" で実行されているときにだけ実行されます。また、"oldtable" が何の結果も含まない(レコード数が0の)時だけ、[ テーブルの削除 ](drop_Table ) を行います。
 
 
 
@@ -133,7 +133,7 @@ LiquiBase は、前提条件の "failures" ( failed のチェック) と、"erro
 
 === 利用可能な属性 ===
 
-^ type | [[../databases|データベース]]の種類 **[必須]**  | 
+^ type | [データベース](../databases)の種類 **[必須]**  |
 
 
 
@@ -241,7 +241,7 @@ SQL 文を実行し、戻り値をチェックします。SQL 文は1行の1つ�
 
 ==== <customPrecondition> ====
 
-あなた専用のカスタマイズされた前提条件を作成するには、[[http://www.liquibase.org/manual/latest/api/liquibase/precondition/CustomPrecondition.html|liquibase.precondition.CustomPrecondition]] インターフェースを実装したクラスを作成し、customPrecondition タグ内の className パラメータで参照するだけです。
+あなた専用のカスタマイズされた前提条件を作成するには、[liquibase.precondition.CustomPrecondition](http://www.liquibase.org/manual/latest/api/liquibase/precondition/CustomPrecondition.html) インターフェースを実装したクラスを作成し、customPrecondition タグ内の className パラメータで参照するだけです。
 
 
 

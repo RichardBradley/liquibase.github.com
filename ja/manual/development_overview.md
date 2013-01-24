@@ -6,4 +6,4 @@ LiquiBase のソースコードは、SourceForge の SVN のリポジトリに�
 
 <nowiki>svn co https://liquibase.svn.sourceforge.net/svnroot/liquibase liquibase</nowiki>
 
-LiquiBase への貢献に興味がありましたら、[[../community | メーリングリスト ]] を通じてご連絡ください。
+LiquiBase への貢献に興味がありましたら、[ メーリングリスト ](../community ) を通じてご連絡ください。

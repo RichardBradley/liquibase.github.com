@@ -1,29 +1,21 @@
 ---
 layout: default
-title: Download
+title: Download Liquibase
 ---
-
-# Download Liquibase #
-
-
-
-
-
 
 ## Liquibase Core ##
 
-The current stable version of the Liquibase Core is 2.0.3 (Released Oct 10, 2011)
+The current stable version of the Liquibase Core is 2.0.5 (Released May 2, 2012)
 
 Available Downloads:
-  * [liquibase-2.0.3-bin.zip](https://github.com/downloads/liquibase/liquibase/liquibase-2.0.3-bin.zip)
-  * [liquibase-2.0.3-bin.tar.gz](https://github.com/downloads/liquibase/liquibase/liquibase-2.0.3-bin.tar.gz)
-
+* [liquibase-2.0.5-bin.zip](https://github.com/downloads/liquibase/liquibase/liquibase-2.0.5-bin.zip)
+* [liquibase-2.0.5-bin.tar.gz](https://github.com/downloads/liquibase/liquibase/liquibase-2.0.5-bin.tar.gz)
 
 ### Upgrade Notes ###
-  * 1.9 -> 2.0 introduced several significant changes.  Most will be transparent, but see the [2.0 upgrade guide](v2 upgrade) for full upgrade information
-  * 1.8 -> 1.9 introduced a change to how change set checksum generation is performed for addNotNullConstraint and removeNotNullConstraint. You will get an md5sum error if you use these tags until you either add a validCheckSum tag to the failing changesets using the old checksum (the one listed in the validation failed message) or run "liquibase clearCheckSums" or "UPDATE DATABASECHANGELOG SET MD5SUM=NULL"
-  * 1.5 -> 1.6 introduced a change to how change set checksum generation is performed.  You will get an md5sum error message until you either run "liquibase clearCheckSums" or "UPDATE DATABASECHANGELOG SET MD5SUM=NULL"
-  * 1.4 -> 1.5 introduced changes that may break existing configurations.  See the [1.5 release announcement](http://blog.liquibase.org/2008/01/liquibase-core-150-released.html) for more information
+- 1.9 -&gt; 2.0 introduced several significant changes.  Most will be transparent, but see the [2.0 upgrade guide](v2 upgrade) for full upgrade information
+- 1.8 -&gt; 1.9 introduced a change to how change set checksum generation is performed for addNotNullConstraint and removeNotNullConstraint. You will get an md5sum error if you use these tags until you either add a validCheckSum tag to the failing changesets using the old checksum (the one listed in the validation failed message) or run "liquibase clearCheckSums" or "UPDATE DATABASECHANGELOG SET MD5SUM=NULL"
+- 1.5 -&gt; 1.6 introduced a change to how change set checksum generation is performed.  You will get an md5sum error message until you either run "liquibase clearCheckSums" or "UPDATE DATABASECHANGELOG SET MD5SUM=NULL"
+- 1.4 -&gt; 1.5 introduced changes that may break existing configurations.  See the [1.5 release announcement](http://blog.liquibase.org/2008/01/liquibase-core-150-released.html) for more information
 
 
 ### Requirements ###
@@ -54,7 +46,7 @@ The current version of the [Liquibase Grails plug-in](manual/grails.html) is 1.9
 Feature suggestions, bug reports, and general help should be directed to the [community](community.html).
 
 ## Copyright ##
-Copyright (C) 2006-2011 Nathan Voxland
+Copyright (C) 2006-2013 Nathan Voxland
 
 This library is free software; you can redistribute it and/or modify it under the terms of the Apache License, Version 2.0.
 

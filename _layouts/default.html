@@ -1,335 +1,167 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
- lang="en" dir="ltr">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="verify-v1" content="8/0cgg3zG2QtW4DgN8+0hn6bM4l8Qmi61wDqZ7pdD+I=" />
-   <title>Liquibase | Database Refactoring | {{ page.title }}</title>
- <meta name="robots" content="index,follow" />
-<meta name="keywords" content="home" />
-<link rel="start" href="/" />
-<link rel="stylesheet" media="all" type="text/css" href="css/battlehorse-all.css" />
-<link rel="stylesheet" media="screen" type="text/css" href="css/battlehorse-screen.css" />
-<link rel="stylesheet" media="print" type="text/css" href="css/battlehorse-print.css" />
-<script type="text/javascript" charset="utf-8" src="js/battlehorse.js" ></script>
-
-  
-	<script src="js/prototype.js" type="text/javascript"></script>
-	<script src="js/scriptaculous.js" type="text/javascript"></script>
-		<style type="text/css">
-			#media
-			{
-			   margin-top: 40px;
-         }
-			#noUpdate
-			{
-				margin: 0 auto;
-				font-family:Arial, Helvetica, sans-serif;
-				font-size: x-small;
-				color: #cccccc;
-				text-align: left;
-				width: 210px; 
-				height: 200px;	
-				padding: 40px;
-			}
-		</style>
-</head>
-
-<body>
-<div class="dokuwiki">
-  
-  <div class="stylehead">
-
-    <div class="header">
-      <div class="logo" style="position:relative; left:-20px">
-	<a href="/"  name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]"><img src="custom_images/liquibase_logo.gif" border="0"></a>
-      </div> 
-
-      <div class="clearer"></div>
-    </div>
-
-    
-
-  </div>
-  
-  
-<div class="sideandpage" >
-		      <div class="mainleft" >
-	        <div class="page">
-  
-  {{ content }}
-  
-     </div>
-	        <div class="page_lower_dark"></div>
-	        <div class="page_lower_medium"></div>
-	        <div class="page_lower_light"></div> 
-	     </div>
-	
-			<div class="sideright">
-			
-	<div class="sidebarandshadows" >
-		<table cellspacing="0" cellpadding="0" border="0" width="100%" >
-			<tr>
-				<td>
-					<table  cellspacing="0" cellpadding="0" border="0" width="100%">
-						<tr>
-						<td valign="top">
-							<div class="sidebar">
-							<ul>
-<li class="level1"><div class="li"> <a href="/home" class="wikilink1" title="home">Home</a></div>
-</li>
-<li class="level1"><div class="li"> <a href="http://blog.liquibase.org/" class="urlextern" title="http://blog.liquibase.org/"  rel="nofollow">Blog</a></div>
-</li>
-<li class="level1"><div class="li"> <a href="/download" class="wikilink1" title="download">Download</a></div>
-</li>
-<li class="level1"><div class="li"> <a href="http://liquibase.org/extensions" class="urlextern" title="http://liquibase.org/extensions"  rel="nofollow">Extension Portal</a></div>
-</li>
-<li class="level1"><div class="li"> <a href="/quickstart" class="wikilink1" title="quickstart">Quick-Start</a></div>
-</li>
-<li class="level1"><div class="li"> <a href="/bestpractices" class="wikilink1" title="bestpractices">Best Practices</a></div>
-</li>
-<li class="level1"><div class="li"> <a href="/manual/home" class="wikilink1" title="manual:home">Manual</a></div>
-</li>
-<li class="level1"><div class="li"> <a href="/community" class="wikilink1" title="community">Community</a></div>
-</li>
-<li class="level1"><div class="li"> <a href="/databases" class="wikilink1" title="databases">Supported Databases</a></div>
-</li>
-<li class="level1"><div class="li"> <a href="/faq" class="wikilink1" title="faq">FAQ</a></div>
-</li>
-<li class="level1"><div class="li"> <a href="/articles" class="wikilink1" title="articles">Articles</a></div>
-</li>
-<li class="level1"><div class="li"> <a href="/training" class="wikilink1" title="training">Training Videos</a></div>
-</li>
-<li class="level1"><div class="li"> <a href="/history" class="wikilink1" title="history">History</a></div>
-</li>
-<li class="level1"><div class="li"> <a href="/future" class="wikilink1" title="future">Future Directions</a></div>
-</li>
-<li class="level1"><div class="li"> <a href="http://liquibase.jira.com/browse/CORE" class="urlextern" title="http://liquibase.jira.com/browse/CORE"  rel="nofollow">Issue Tracker</a></div>
-</li>
-<li class="level1"><div class="li"> <a href="http://liquibase.com" class="urlextern" title="http://liquibase.com"  rel="nofollow">Support and Training</a></div>
-</li>
-</ul>
-							</div>
-						</td>
-						</tr>
-					</table>
-				</td>
-				<td class="page_lower_dark" style="width: 1px"></td>
-				<td class="page_lower_medium" style="width: 1px"></td>
-				<td class="page_lower_light" style="width: 1px"></td>
-			</tr>
-			<tr>
-				<td class="page_lower_dark" style="height: 1px" colspan="2"></td>
-				<td class="page_lower_medium" style="width: 1px"></td>
-				<td class="page_lower_light" style="width: 1px"></td>
-			</tr>
-			<tr>
-				<td class="page_lower_medium" style="height: 1px" colspan="3"></td>        
-				<td class="page_lower_light" style="width: 1px"></td>
-			</tr>
-			<tr>
-				<td class="page_lower_light" style="height: 1px" colspan="4"></td>        
-			</tr>						
-		</table>
-	</div> 
-
-	<!-- Begin MailChimp Signup Form -->
-<!--[if IE]>
-<style type="text/css" media="screen">
-	#mc_embed_signup fieldset {position: relative;}
-	#mc_embed_signup legend {position: absolute; top: -1em; left: .2em;}
-</style>
-<![endif]--> 
-<!--[if IE 7]>
-<style type="text/css" media="screen">
-	.mc-field-group {overflow:visible;}
-</style>
-<![endif]-->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
-<script type="text/javascript" src="http://downloads.mailchimp.com/js/jquery.validate.js"></script>
-<script type="text/javascript" src="http://downloads.mailchimp.com/js/jquery.form.js"></script>
-
-<div id="mc_embed_signup">
-<form action="http://liquibase.us2.list-manage.com/subscribe/post?u=c24cd4e0098d3017cc468c324&amp;id=3362c9cd2f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="font: normal 100% Arial, sans-serif;font-size: 10px;">
-	<fieldset style="-moz-border-radius: 4px;border-radius: 4px;-webkit-border-radius: 4px;border: 1px solid #ccc;padding-top: 1.5em;margin: .5em 0;background-color: #fff;color: #000;text-align: left;">
-	<legend style="white-space: normal;text-transform: capitalize;font-weight: bold;color: #000;background: #fff;padding: .5em 1em;border: 1px solid #ccc;-moz-border-radius: 4px;border-radius: 4px;-webkit-border-radius: 4px;font-size: 1.2em;"><span>Receive Liquibase Announcements</span></legend>
-<div class="indicate-required" style="text-align: right;font-style: italic;overflow: hidden;color: #000;margin: 0 9% 0 0;">* indicates required</div>
-<div class="mc-field-group" style="margin: 1.3em 5%;clear: both;overflow: hidden;">
-<label for="mce-EMAIL" style="display: block;margin: .3em 0;line-height: 1em;font-weight: bold;">Email Address <strong class="note-required">*</strong>
-</label>
-<input type="text" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="margin-right: 1.5em;padding: .2em .3em;width: 90%;float: left;z-index: 999;">
-</div>
-		<div id="mce-responses" style="float: left;top: -1.4em;padding: 0em .5em 0em .5em;overflow: hidden;width: 90%;margin: 0 5%;clear: both;">
-			<div class="response" id="mce-error-response" style="display: none;margin: 1em 0;padding: 1em .5em .5em 0;font-weight: bold;float: left;top: -1.5em;z-index: 1;width: 80%;background: FBE3E4;color: #D12F19;"></div>
-			<div class="response" id="mce-success-response" style="display: none;margin: 1em 0;padding: 1em .5em .5em 0;font-weight: bold;float: left;top: -1.5em;z-index: 1;width: 80%;background: #E3FBE4;color: #529214;"></div>
-		</div>
-		<div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn" style="clear: both;width: auto;display: block;margin: 1em 0 1em 5%;"></div>
-	</fieldset>	
-	<a href="#" id="mc_embed_close" class="mc_embed_close" style="display: none;">Close</a>
-</form>
-</div>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Liquibase | Database Refactoring | {{ page.title }}</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+<!--SCRIPT FOR MENU-->
 <script type="text/javascript">
-var fnames = new Array();var ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';var err_style = '';
-try{
-    err_style = mc_custom_error_style;
-} catch(e){
-    err_style = 'margin: 1em 0 0 0; padding: 1em 0.5em 0.5em 0.5em; background: FFEEEE none repeat scroll 0% 0%; font-weight: bold; float: left; z-index: 1; width: 80%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: FF0000;';
-}
-var mce_jQuery = jQuery.noConflict();
-mce_jQuery(document).ready( function($) {
-  var options = { errorClass: 'mce_inline_error', errorElement: 'div', errorStyle: err_style, onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
-  var mce_validator = mce_jQuery("#mc-embedded-subscribe-form").validate(options);
-  options = { url: 'http://liquibase.us2.list-manage.com/subscribe/post-json?u=c24cd4e0098d3017cc468c324&id=3362c9cd2f&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
-                beforeSubmit: function(){
-                    mce_jQuery('#mce_tmp_error_msg').remove();
-                    mce_jQuery('.datefield','#mc_embed_signup').each(
-                        function(){
-                            var txt = 'filled';
-                            var fields = new Array();
-                            var i = 0;
-                            mce_jQuery(':text', this).each(
-                                function(){
-                                    fields[i] = this;
-                                    i++;
-                                });
-                            mce_jQuery(':hidden', this).each(
-                                function(){
-                                	if ( fields[0].value=='MM' && fields[1].value=='DD' && fields[2].value=='YYYY' ){
-                                		this.value = '';
-									} else if ( fields[0].value=='' && fields[1].value=='' && fields[2].value=='' ){
-                                		this.value = '';
-									} else {
-	                                    this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
-	                                }
-                                });
-                        });
-                    return mce_validator.form();
-                }, 
-                success: mce_success_cb
-            };
-  mce_jQuery('#mc-embedded-subscribe-form').ajaxForm(options);
+$(document).ready(function () {
+	
+	$('#menu li').hover(
+		function () {
+			//show its submenu
+			$('ul', this).slideDown();
+			$('ul li ul', this).slideUp(0);
+
+		}, 
+		function () {
+			//hide its submenu
+			$('ul', this).slideUp();
+		}
+	);
 
 });
-function mce_success_cb(resp){
-    mce_jQuery('#mce-success-response').hide();
-    mce_jQuery('#mce-error-response').hide();
-    if (resp.result=="success"){
-        mce_jQuery('#mce-'+resp.result+'-response').show();
-        mce_jQuery('#mce-'+resp.result+'-response').html(resp.msg);
-        mce_jQuery('#mc-embedded-subscribe-form').each(function(){
-            this.reset();
-    	});
-    } else {
-        var index = -1;
-        var msg;
-        try {
-            var parts = resp.msg.split(' - ',2);
-            if (parts[1]==undefined){
-                msg = resp.msg;
-            } else {
-                i = parseInt(parts[0]);
-                if (i.toString() == parts[0]){
-                    index = parts[0];
-                    msg = parts[1];
-                } else {
-                    index = -1;
-                    msg = resp.msg;
-                }
-            }
-        } catch(e){
-            index = -1;
-            msg = resp.msg;
-        }
-        try{
-            if (index== -1){
-                mce_jQuery('#mce-'+resp.result+'-response').show();
-                mce_jQuery('#mce-'+resp.result+'-response').html(msg);            
-            } else {
-                err_id = 'mce_tmp_error_msg';
-                html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
-                
-                var input_id = '#mc_embed_signup';
-                var f = mce_jQuery(input_id);
-                if (ftypes[index]=='address'){
-                    input_id = '#mce-'+fnames[index]+'-addr1';
-                    f = mce_jQuery(input_id).parent().parent().get(0);
-                } else if (ftypes[index]=='date'){
-                    input_id = '#mce-'+fnames[index]+'-month';
-                    f = mce_jQuery(input_id).parent().parent().get(0);
-                } else {
-                    input_id = '#mce-'+fnames[index];
-                    f = mce_jQuery().parent(input_id).get(0);
-                }
-                if (f){
-                    mce_jQuery(f).append(html);
-                    mce_jQuery(input_id).focus();
-                } else {
-                    mce_jQuery('#mce-'+resp.result+'-response').show();
-                    mce_jQuery('#mce-'+resp.result+'-response').html(msg);
-                }
-            }
-        } catch(e){
-            mce_jQuery('#mce-'+resp.result+'-response').show();
-            mce_jQuery('#mce-'+resp.result+'-response').html(msg);
-        }
-    }
-}
-</script>
-<!--End mc_embed_signup-->
-
-
-<!-- start rss and sf logo -->
-	<div class="searchbarandshadows" >
-		<table cellspacing="0" cellpadding="0" border="0" width="100%" >
-			<tr>
-				<td>
-					<table cellspacing="0" cellpadding="0" border="0" width="100%" >
-						<tr>
-						<td valign="top">
-						   <div class="searchbar">
-						   <div class="centeralign">
-							<a href="http://sourceforge.net/donate/index.php?group_id=187970"><img src="http://images.sourceforge.net/images/project-support.jpg" width="88" height="32" border="0" alt="Support This Project" /> </a>
-						   </div>
-						   </div>
-						</td>
-						</tr>
-					</table>
-				</td>
-				<td class="page_lower_dark" style="width: 1px"></td>
-				<td class="page_lower_medium" style="width: 1px"></td>
-				<td class="page_lower_light" style="width: 1px"></td>
-			</tr>
-			<tr>
-				<td class="page_lower_dark" style="height: 1px" colspan="2"></td>
-				<td class="page_lower_medium" style="width: 1px"></td>
-				<td class="page_lower_light" style="width: 1px"></td>
-			</tr>
-			<tr>
-				<td class="page_lower_medium" style="height: 1px" colspan="3"></td>        
-				<td class="page_lower_light" style="width: 1px"></td>
-			</tr>
-			<tr>
-				<td class="page_lower_light" style="height: 1px" colspan="4"></td>        
-			</tr>						
-		</table>
-	</div>
-<!-- end rss and sf logo -->
-
-      </div>
-	 
-      <div class="clearer">&nbsp;</div>
-</div>
-
-
-</div>
-
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
 </script>
 <script type="text/javascript">
-_uacct = "UA-1719178-1";
-urchinTracker();
+$(document).ready(function() {
+
+	$("#topnav li").prepend("<span></span>"); //Throws an empty span tag right before the a tag
+
+	$("#topnav li").each(function() { //For each list item...
+		var linkText = $(this).find("a").html(); //Find the text inside of the <a> tag
+		$(this).find("span").show().html(linkText); //Add the text in the <span> tag
+	}); 
+
+});
 </script>
+</head>
+<body class="inner" >
+<div id="contact"> </div>
+
+<div id="fullwidth" >
+<div id="btm-shadow" class="inner">
+  <div class="main_wrap"> <a href="/index.html" class="logo"></a>
+    <div id="search">
+      <input name="name" type="text" value="" />
+      <input name="name" type="submit" value="Search" class="submit" />
+    </div>
+      <ul id="menu">
+          <li><a href="/download.html"><span>Download</span></a></li>
+          <li class="sep"></li>
+          <li><a href="/quickstart.html"><span>Quick Start</span></a></li>
+          <li class="sep"></li>
+          <li><a href="/documentation/index.html"><span>Documentation</span></a></li>
+          <li class="sep"></li>
+          <li><a href="/community.html"><span>Community</span></a></li>
+          <li class="sep"></li>
+          <li><a href="http://liquibase.com"><span>Support and Training</span></a></li>
+          <li class="sep"></li>
+      </ul>
+
+
+      {% capture url_parts %} {{ page.url | remove: "/index.html" | replace:'/'," " }}{% endcapture %}
+      {% capture num_parts %}{{ url_parts | number_of_words | minus: 1 }}{% endcapture %}
+      {% assign previous="" %}
+      <div class="full_width">
+          <p class="breadcrumb">
+          {% if num_parts != "0" and num_parts != "-1" %}
+          <a href="/">home</a> /
+
+          {% for unused in page.content limit:num_parts %}
+          {% capture first_word %}{{ url_parts | truncatewords:1 | remove:"..."}}{% endcapture %}
+          {% capture previous %}{{ previous }}/{{ first_word }}{% endcapture %}
+
+          <a href="{{previous}}">{{ first_word | capitalize}}</a> /
+
+          {% capture url_parts %}{{ url_parts | remove_first:first_word }}{% endcapture %}
+          {% endfor %}
+
+          {% endif %}
+
+          {{page.title}}
+          </p>
+      </div>
+
+      <!--Content Start-->
+    <div class=" block">
+    
+     <div id="left-navigation">
+      <ul id="topnav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/">Blog</a></li>
+          <li><a href="/">Download</a></li>
+          <li><a href="/">Extension Portal</a></li>
+          <li><a href="/">Quick-Start</a></li>
+          <li><a href="/">Best Practices</a></li>
+          <li><a href="/">Manual</a></li>
+          <li><a href="/">Community</a></li>
+          <li><a href="/">Supported Databases</a></li>
+          <li><a href="/">FAQ</a></li>
+          <li><a href="/">Articles</a></li>
+          <li><a href="/">Training Videos</a></li>
+          <li><a href="/">History</a></li>
+          <li><a href="/">Future Directions</a></li>
+          <li><a href="/">Issue Tracker</a></li>
+          <li><a href="/">Support and Training</a></li>
+    </ul>
+     </div>
+    </div>
+    <div class="right_three r-align  ">
+        <h1>{{page.title}}</h1>
+        {{content}}
+      </div>
+    </div>
+
+</div>
+
+<div id="btm-cnt">
+ <div class="main_wrap">
+ <div class="mini_wrap">
+ <h5>About Us</h5>
+ <img src="images/abt-img.png" alt="" class="box" />
+ <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur proident, sunt in </p>
+ 
+ </div>
+ 
+ <div class="block marlft">
+ <h5>Other Links</h5>
+ <ul class="list2">
+ <li>Donec eget enim nec massa dignissim.</li>
+ <li>Donec rutrum metus ac purus male</li>
+ <li>Duis eleifend urna quis turpis cursus</li>
+ <li>Vivamus vulputate tellus vel massa</li>
+ 
+ </ul>
+ 
+ </div>
+ <div class="block marlft">
+ <h5>About Us</h5>
+
+ <p>Feel free to contact me<br />
+Address: 1090 25th Place,Bradenton<br />
+FL 34203,United States<br />
+Telephone: +123-1234-56789<br />
+FAX: +987-654-321<br />
+<br />
+E-mail: name@sitename.com<br />
+</p>
+ </div>
+ <ul class="nav_a">
+          <li><a href="index.html">Home</a></li>
+          <li class="sep">|</li>
+          <li><a href="short-codes.html">Options</a></li>
+          <li class="sep">|</li>
+          <li><a href="gallery1.html">Gallery</a></li>
+          <li class="sep">|</li>
+          <li><a href="blog.html">Blog</a></li>
+          <li class="sep">|</li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+ </div>
+ </div>
+
+</div>
 </body>
 </html>

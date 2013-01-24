@@ -1,15 +1,12 @@
 ---
 layout: default
-title: Quickstart
+title: Liquibase Quickstart
 ---
-
-# Liquibase Quick-Start #
-
 ## Step 1: Create a Changelog File: ##
 
 The [database changelog file](manual/databasechangelog.html) is where all database changes are listed. It is XML based, so start with an empty XML file:
 
-<code xml>
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 
 <databaseChangeLog
@@ -19,8 +16,7 @@ The [database changelog file](manual/databasechangelog.html) is where all databa
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
 
 </databaseChangeLog>
-</code>                    
-
+{% endhighlight %}
 
 ## Step 2: Add a ChangeSet ##
 
@@ -28,7 +24,7 @@ Each [change set](manual/changeset.html) is uniquely identified by an "id" attri
 
 Think of each change set as an atomic change that you want to apply to your database. It's usually best to include just one change in your change set, but more are allowed and can make sense if you are inserting multiple rows that should be added as a single transaction.  Liquibase will attempt to run each change set as a single transaction, but many databases will silently commit and resume transactions for certain commands (create table, drop table, etc.)
 
-<code xml>
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 
 <databaseChangeLog
@@ -50,7 +46,7 @@ Think of each change set as an atomic change that you want to apply to your data
     </changeSet>
 
 </databaseChangeLog>
-</code>                   
+{% endhighlight %}
 
 ## Step 3: Run the ChangeSet ##
 
@@ -58,7 +54,7 @@ There are many ways to execute your change log including via [Liquibase Manual](
 
 Here is an example for mysql via jdbc:
 
-<code>
+{% highlight batch %}
 liquibase --driver=com.mysql.jdbc.Driver \
      --classpath=/path/to/classes \
      --changeLogFile=com/example/db.changelog.xml \
@@ -66,7 +62,7 @@ liquibase --driver=com.mysql.jdbc.Driver \
      --username=user \
      --password=asdf \
      migrate
-</code>
+{% endhighlight %}
 
 There are many more databases supported by liquibase. For a list of them and which jdbc driver, url, classpath etc. they need, please visit the [databases](databases.html) section.
 

@@ -11,7 +11,7 @@ Applies un-run changes to the database.
 
 ### Sample ###
 
-<code xml>
+{% highlight xml %}
 <target name="update-database" depends="prepare">
     <fail unless="db.changelog.file">db.changelog.file not set</fail>
     <fail unless="database.url">database.url not set</fail>
@@ -36,7 +36,7 @@ Applies un-run changes to the database.
     />
     
 </target>
-</code>
+{% endhighlight %}
 
 
 
@@ -52,7 +52,7 @@ FIXME: Annotate which is required.
 ^ defaultSchemaName  | Schema to use by default for managed database objects and LiquiBase control tables  |
 ^ outputFile  | Save SQL to given file rather than executing  |
 ^ promptOnNonLocalDatabase  | If set to true (default is false) a dialog box with warn you if you attempt to run the LiquiBase against a database that is not on localhost  | 
-^ dropFirst  | If set to true, LiquiBase will first drop all database objects owned by the connected user [defaults to FALSE]  | 
+^ dropFirst  | If set to true, LiquiBase will first drop all database objects owned by the connected user \[defaults to FALSE\]  |
 ^ classpathref  | A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file  | 
 ^ contexts  | A comma separated list of [contexts](contexts.html) to execute. If not specified, all contexts are run.  |
 ^ currentDateTimeFunction  | Overrides current date time function used in SQL. Useful for unsupported databases  | 
@@ -62,6 +62,6 @@ FIXME: Annotate which is required.
 ### Available Sub Tags ###
 ^ changeLogProperty  | Sets a [changelog_parameters](changelog_parameters.html) set //Since LiquiBase 1.7// |
 
-#### Available <changeLogProperty> Parameters ####
+#### Available &lt;changeLogProperty&gt; Parameters ####
 ^ name  | The name of the property to set  | 
 ^ value  | The value of the property to set  | 

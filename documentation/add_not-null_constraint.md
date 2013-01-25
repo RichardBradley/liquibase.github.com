@@ -9,20 +9,20 @@ Adds a not-null constraint to an existing table. If a defaultNullValue attribute
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <addNotNullConstraint
         tableName="employee"
         columnName="employer_id"
         defaultNullValue="1" />
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
-^ tableName  | Name of the table to add the constraint to **[required]**  | 
+^ tableName  | Name of the table to add the constraint to **required**  |
 ^ schemaName  | Name of the table schema  | 
-^ columnName  | Name of the column to add the constraint to **[required]**  | 
+^ columnName  | Name of the column to add the constraint to **required**  |
 ^ defaultNullValue  | Value to set all currently null values to. If not set, change will fail if null values exist  | 
-^ columnDataType  | Current data type of the column (MySQL & MS-SQL only) **[required]** | 
+^ columnDataType  | Current data type of the column (MySQL & MS-SQL only) **required** |
 
 
 ## Database Compatiblity ##

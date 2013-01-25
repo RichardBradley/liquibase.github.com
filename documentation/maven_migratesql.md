@@ -3,4 +3,4 @@ layout: default
 title: Maven migratesql
 ---
 
-<phpinc=migrateSQL-mojo.html>
+INCLUDE migrateSQL-mojo.html

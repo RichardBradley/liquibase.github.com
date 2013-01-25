@@ -12,12 +12,12 @@ Our initial (and possibly long-term) goal, is to share as much code as possible 
 There is enough work planned on the Java side of LiquiBase that the primary Java LiquiBase developers will not be able to dedicate much time beyond answering questions and general architecture and direction until the second half of 2010.
 
 ## Roadmap ##
-  - Split LiquiBase into "Core", JVM-Specific, and CLR-Specific modules  **[DONE]**
-  - Find core group of project leads //[TODO]//
-  - Configure build environment to work well for .Net development  **[PARTIAL]**
-  - Initialize ServiceLocator and other primary LiquiBase objects  **[PARTIAL]**
+  - Split LiquiBase into "Core", JVM-Specific, and CLR-Specific modules  **\[DONE\]**
+  - Find core group of project leads //\[TODO\]//
+  - Configure build environment to work well for .Net development  **\[PARTIAL\]**
+  - Initialize ServiceLocator and other primary LiquiBase objects  **\[PARTIAL\]**
   - Rename ClrClasspathScanner to ClrServiceLocator and create unit tests around them to make sure that the ServiceLocator calls work correctly.  Once done, you should be able to look up liquibase.database.Database and liquibase.change.Change implementations.  ServiceLocation.java will need to modified based on your new class name.
-  - Implement DatabaseConnection, ChangeLogParser, and Database Metadata reading using CLR native libraries  **[PARTIAL]**
+  - Implement DatabaseConnection, ChangeLogParser, and Database Metadata reading using CLR native libraries  **\[PARTIAL\]**
   - Improve, rename, and fully implement the DatabaseConnection
   - Be able to call DatabaseFactory.getInstance().getDatabase(yourLiquibaseConnectionObject).checkDatabaseChangeLogTable() and have it create the databasechangelog table if it does not exists, and just return if it does not.
   - Run LiquiBase unit/integration tests in .Net

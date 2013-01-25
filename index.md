@@ -27,7 +27,7 @@ Liquibase Supports:
 
 [Download Liquibase](download.html) and read the [Quick-Start Guide](training.html).
 
-For more information, you can read the [manual](manual/home.html),[FAQ][faq.html] watch the [training videos](training.html]], and read 3rd party [articles](articles.html). If you have questions, visit the [forums](forums.html))
+For more information, you can read the [manual](manual/home.html),[FAQ](faq.html) watch the ["training videos"](training.html), and read 3rd party [articles](articles.html). If you have questions, visit the [forums](forums.html))
 
 
 # .NET Port #

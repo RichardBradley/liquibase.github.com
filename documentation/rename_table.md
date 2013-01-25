@@ -9,15 +9,15 @@ Renames an existing table.
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <renameTable oldTableName="employee" newTableName="person"/>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
 ^ schemaName  | Name of the table schema  | 
-^ oldTableName  | Existing name of the table to rename **[required]**  | 
-^ newTableName  | Name to rename the table to **[required]**  | 
+^ oldTableName  | Existing name of the table to rename **required**  |
+^ newTableName  | Name to rename the table to **required**  |
 
 
 ## Database Compatiblity ##

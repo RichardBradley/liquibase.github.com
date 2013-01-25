@@ -9,21 +9,21 @@ Adds a new column to an existing table.
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <addColumn tableName="person">
     <column name="firstname" type="varchar(255)"/>
 </addColumn>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
-^ tableName  | Name of the table to add the column to **[required]** |
+^ tableName  | Name of the table to add the column to **required** |
 ^ schemaName  | Name of the table schema  |
 
 
 ## Available Sub-Tags ##
 
-^ column  | Column constraint and foreign key information. Setting the "defaultValue" attribue will specify a default value for the column.  Setting the "value" attribute will set all rows existing to the specified value without modifying the column default.  See the [ column tag documentation](column.html) for more information **[required]** |
+^ column  | Column constraint and foreign key information. Setting the "defaultValue" attribue will specify a default value for the column.  Setting the "value" attribute will set all rows existing to the specified value without modifying the column default.  See the [ column tag documentation](column.html) for more information **required** |
 
 
 

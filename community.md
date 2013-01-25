@@ -18,10 +18,8 @@ Check the status of existing feature requests and bug submissions or submit your
 
 ## Version control system ##
 
-<del>[Browse](http://liquibase.jira.com/source/browse/CORE) the Liquibase source or check it out from http://liquibase.jira.com/svn/CORE/trunk</del>
-
 The liquibase source is now officially hosted at https://github.com/liquibase/liquibase
 
 ## Lead Developer ##
 
-If you would like to contact the lead Liquibase developer directly, you can email him at nathan [at] voxland.net.
+If you would like to contact the lead Liquibase developer directly, you can email him at nathan.voxland@liquibase.org.

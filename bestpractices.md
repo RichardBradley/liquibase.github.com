@@ -10,7 +10,7 @@ This page describes a number of best practices that you can apply on your projec
 The most common way to organize your changelogs is by major release.  Choose a package in your classpath to store the changelogs, preferably near your database access classes.  In this example, we will use com/example/db/changelog
 
 ### Directory Structure ###
-<code>
+``
 com
   example
     db
@@ -21,12 +21,13 @@ com
         db.changelog-2.0.xml
       DatabasePool.java
       AbstractDAO.java
-</code>
+``
 
 ### db.changelog-master.xml ###
 
 The master.xml includes the changelog for the releases in the correct order. In the example above it could look like this:
-<code>
+
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?> 
 <databaseChangeLog 
   xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
@@ -38,7 +39,7 @@ The master.xml includes the changelog for the releases in the correct order. In 
   <include file="com/example/db/changelog/db.changelog-1.1.xml"/> 
   <include file="com/example/db/changelog/db.changelog-2.0.xml"/> 
 </databaseChangeLog> 
-</code>
+{% endhighlight %}
 
 The db.changelog-master.xml is the changelog you pass to all Liquibase calls.
 

@@ -9,7 +9,7 @@ Marks the next change as already ran.  Useful for when a change was made manuall
 
 ### Sample ###
 
-<code xml>
+{% highlight xml %}
 <target name="markNextChangeSetRan" depends="prepare">
     <fail unless="database.url">database.url not set</fail>
 
@@ -33,17 +33,17 @@ Marks the next change as already ran.  Useful for when a change was made manuall
             >
     </markNextChangeSetRan>
 </target>
-</code>
+{% endhighlight %}
 
 
 ### Available Parameters ###
 
-^ driver  | The name of the database driver to connect with **[required]**  | 
-^ url  | The database URL **[required]**  | 
-^ username  | The database username to connect with **[required]**  | 
-^ password  | The password to use when connecting to the database **[required]**  | 
-^ changeLog| The change log file to execute **[required]**  | 
+^ driver  | The name of the database driver to connect with **required**  |
+^ url  | The database URL **required**  |
+^ username  | The database username to connect with **required**  |
+^ password  | The password to use when connecting to the database **required**  |
+^ changeLog| The change log file to execute **required**  |
 ^ defaultSchemaName  | Schema to drop objects in  |
 ^ outputFile  | Save SQL to given file rather than executing  |
-^ classpathref  | A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file **[required]**  | 
+^ classpathref  | A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file **required**  |
 

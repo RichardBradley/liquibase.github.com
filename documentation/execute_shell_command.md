@@ -10,17 +10,17 @@ Executes a system command. Because this refactoring doesn't generate SQL like mo
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <executeCommand executable="mysqldump" os="Windows XP">
     <arg value="--add-drop-database"/>
     <arg value="--compress"/>
     <arg value="dbName"/>
 </executeCommand>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
-^ executable  | Name of the executable to run **[required]**  | 
+^ executable  | Name of the executable to run **required**  |
 ^ os  | List of operating systems on which to execute the command (taken from the os.name Java system property)  |  
 
 ## Available Sub-Tags ##

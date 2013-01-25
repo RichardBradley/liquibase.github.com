@@ -9,13 +9,13 @@ Modifies properties of an existing sequence
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <alterSequence sequenceName="seq_employee_id" incrementBy="10"/>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
-^ sequenceName  | Name of the sequence to alter **[required]**  | 
-^ incrementBy  | New "increment by" value **[required]**  | 
+^ sequenceName  | Name of the sequence to alter **required**  |
+^ incrementBy  | New "increment by" value **required**  |
 
 
 ## Database Compatiblity ##

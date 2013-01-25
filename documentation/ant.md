@@ -7,11 +7,11 @@ title: Ant
 
 LiquiBase can be controlled via ant Tasks. To use, simply add the liquibase.jar to your Ant lib directory or the classpath referenced by "classpathref".
 
-<code xml>
+{% highlight xml %}
     <taskdef resource="liquibasetasks.properties">
         <classpath refid="classpath"/>
     </taskdef>
-</code>
+{% endhighlight %}
 
 The following tasks are available in Ant
   * [updateDatabase](updateDatabase_ant_task.html)

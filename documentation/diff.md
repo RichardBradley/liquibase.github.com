@@ -18,7 +18,7 @@ Diff command support is available through the [command_line](command_line.html) 
 
 ## Example ##
 
-<code>
+``
 liqubase.sh --driver=oracle.jdbc.OracleDriver \
         --url=jdbc:oracle:thin:@testdb:1521:test \
         --username=bob \
@@ -27,7 +27,7 @@ liqubase.sh --driver=oracle.jdbc.OracleDriver \
         --referenceUrl=jdbc:oracle:thin:@localhost/XE \
         --referenceUsername=bob \
         --referencePassword=bob
-</code>
+``
 
 
 ## Database Comparisons ##
@@ -58,13 +58,13 @@ LiquiBase can diff different database types, but the results may be skewed due t
 
 ## Controlling Checks (since 1.8) ##
  What changes are checked for can be controlled with the diffTypes parameter to the diff commands.  The following options are available and can be passed as a comma-separated list:
-  * tables //[DEFAULT]//
-  * columns //[DEFAULT]//
-  * views //[DEFAULT]//
-  * primaryKeys //[DEFAULT]//
-  * indexes //[DEFAULT]//
-  * foreignKeys //[DEFAULT]//
-  * sequences //[DEFAULT]//
+  * tables //\[DEFAULT\]//
+  * columns //\[DEFAULT\]//
+  * views //\[DEFAULT\]//
+  * primaryKeys //\[DEFAULT\]//
+  * indexes //\[DEFAULT\]//
+  * foreignKeys //\[DEFAULT\]//
+  * sequences //\[DEFAULT\]//
   * data
 
 If no diffTypes are specified, the checks marked DEFAULT will be run.
@@ -79,7 +79,7 @@ LiquiBase supports two output modes: report mode ("diff") and change log mode ("
 
 In report mode, a description of the differences between two databases is reported to standard out.
 
-<code>
+``
 Base Database: BOB jdbc:oracle:thin:@testdb:1521:latest
 Target Database: BOB jdbc:oracle:thin:@localhost/XE
 Product Name: EQUAL
@@ -107,13 +107,13 @@ Missing Indexes: NONE
 Unexpected Indexes: NONE
 Missing Sequences: NONE
 Unexpected Sequences: NONE
-</code>
+``
 
 ### ChangeLog Mode ###
 
 In change log mode, the an XML change log of what is necessary to upgrade the base database to the target database is sent to standard out. This change log can be included as is, or copied into an existing change log.  If the diff command is passed an existing change log file, the new change sets will be appended to the end of the file.
 
-<code xml>
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <databaseChangeLog
     xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.1"
@@ -148,5 +148,5 @@ In change log mode, the an XML change log of what is necessary to upgrade the ba
                      constraintName="FK_NAME"/>
     </changeSet>
 </databaseChangeLog>
-</code>
+{% endhighlight %}
 

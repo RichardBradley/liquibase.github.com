@@ -3,4 +3,4 @@ layout: default
 title: Maven rollbacksql
 ---
 
-<phpinc=rollbackSQL-mojo.html>
+INCLUDE rollbackSQL-mojo.html

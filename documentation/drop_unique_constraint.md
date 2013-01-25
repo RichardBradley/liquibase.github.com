@@ -9,16 +9,16 @@ Drops an existing unique constraint.
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <dropUniqueConstraint tableName="person" constraintName="pk_person"/>
-</code>
+{% endhighlight %}
 
 
 ## Available Attributes ##
 
-^ tableName | Name of the table to drop the unique constraint from **[required]** |
+^ tableName | Name of the table to drop the unique constraint from **required** |
 ^ schemaName | Name of the table schema |
-^ constraintName | Name of unique constraint to drop **[required]** |
+^ constraintName | Name of unique constraint to drop **required** |
 
 
 ## Database Compatiblity ##

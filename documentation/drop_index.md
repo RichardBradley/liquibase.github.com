@@ -10,19 +10,19 @@ Drops an existing index
 
 ## Sample ##
 <!-- Works on Oracle on Liquibase 1.6;  Does not work for SQL Server. -->
-<code xml>
+{% highlight xml %}
 <dropIndex indexName="idx_user_username"/>
-</code>
+{% endhighlight %}
 
 <!-- Works on Oracle and SQL Server on Liquibase 1.6; -->
-<code xml>
+{% highlight xml %}
 <dropIndex indexName="idx_user_username" tableName="table_name" />
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
-^ indexName  | Name of the index to drop **[required]**  | 
-^ tableName  | Name of the indexed table **[required]**  | 
+^ indexName  | Name of the index to drop **required**  |
+^ tableName  | Name of the indexed table **required**  |
 
 
 ## Database Compatiblity ##

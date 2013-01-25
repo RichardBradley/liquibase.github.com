@@ -14,7 +14,7 @@ If you don't assign a context to a changeSet, it will run all the time, regardle
 If you do not specify a context when you run the migrator, ALL contexts will be run.
 
 Here is an example of a change set using the context attribute:
-<code>
+{% highlight xml %}
    <changeSet id="2" author="bob" context="test">
         <insert tableName="news">
             <column name="id" value="1"/>
@@ -25,7 +25,7 @@ Here is an example of a change set using the context attribute:
             <column name="title" value="Liquibase 0.9 Released"/>
         </insert>
     </changeSet>
-</code>
+{% endhighlight %}
 
 ## Using Contexts for Test Data ##
 

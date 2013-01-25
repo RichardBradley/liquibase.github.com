@@ -3,8 +3,6 @@ layout: default
 title: Preconditions
 ---
 
-# LiquiBase: <preConditions> #
-
 Preconditions can be attached to [change logs](databasechangelog.html) or [changeset](changeset.html)s to control the execution of an update based on the state of the database.
 
 There are several reasons to use preconditions, including:
@@ -14,7 +12,7 @@ There are several reasons to use preconditions, including:
   * Control what changesets are run and not run based on the state of the database
 
 
-If desired, a precondition can be the only tag in a <changeSet>.
+If desired, a precondition can be the only tag in a `<changeSet>`.
 
 
 
@@ -22,7 +20,7 @@ If desired, a precondition can be the only tag in a <changeSet>.
 
 ## Sample With Preconditions ##
 
-<code xml>
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 
 <databaseChangeLog
@@ -43,13 +41,13 @@ If desired, a precondition can be the only tag in a <changeSet>.
         <dropTable tableName="oldtable"/>
     </changeSet>
 </databaseChangeLog>
-</code>                    
+{% endhighlight %}
 
 The above changelog will only run if the database executed against is Oracle and the database user executing the script is "SYSTEM".  It will also only run the [drop_Table](drop_Table.html) command if there are no values in the "oldtable".
 
 ## Handling Failures and Errors ##
 
-LiquiBase distinguishes between precondition "failures" (check failed) and "errors" (exception thrown in execution of check) and the reaction to both can be controlled via the "onFail" and "onError" attributes on the <preConditions> tag.  //Since 1.8//
+LiquiBase distinguishes between precondition "failures" (check failed) and "errors" (exception thrown in execution of check) and the reaction to both can be controlled via the "onFail" and "onError" attributes on the `<preConditions>` tag.  //Since 1.8//
 
 #### Available attributes ####
 
@@ -62,7 +60,7 @@ LiquiBase distinguishes between precondition "failures" (check failed) and "erro
 
 #### Possible onFail/onError values ####
 
-^ HALT | Immediately halt execution of entire change log **[default]**  | 
+^ HALT | Immediately halt execution of entire change log **\[DEFAULT\]**  |
 ^ CONTINUE | Skip over change set.  Execution of change set will be attempted again on the next update.  Continue with change log.| 
 ^ MARK_RAN | Skip over change set, but mark it as ran.  Continue with change log| 
 ^ WARN | Output warning and continue executing change set as normal.  | 
@@ -78,40 +76,40 @@ Outside a changeset (e.g. at the beginning of the change log) only HALT and WARN
 
 ## AND/OR/NOT Logic ##
 
-Conditional logic can be applied to preconditions using nestable <and>, <or> and <not> tags. **If no conditional tags are specified, it defaults to AND**.
+Conditional logic can be applied to preconditions using nestable `<and>`, `<or>` and `<not>` tags. **If no conditional tags are specified, it defaults to AND**.
 
 Examples:
 
-<code xml>
+{% highlight xml %}
     <preConditions onFail="WARN">
         <dbms type="oracle" />
         <runningAs username="SYSTEM" />
     </preConditions>
-</code>                    
+{% endhighlight %}
 
 Will check that the update is running on Oracle AND with the SYSTEM user, but will only generate a warning if the precondition fails.
 
-<code xml>
+{% highlight xml %}
  <preConditions>
      <dbms type="oracle" />
      <dbms type="mysql" />
  </preConditions>
-</code>                 
+{% endhighlight %}
 
 Will require running on Oracle AND MySQL, which will always be false, unless a huge and unexpected merger takes place.
 
-<code xml>
+{% highlight xml %}
  <preConditions>
      <or>
          <dbms type="oracle" />
          <dbms type="mysql" />
      </or>
  </preConditions>
-</code>                 
+{% endhighlight %}
 
 Will require running on Oracle OR MySQL which makes more sense than the above example.
 
-<code xml>
+{% highlight xml %}
  <preConditions>
      <or>
          <and>
@@ -124,7 +122,7 @@ Will require running on Oracle OR MySQL which makes more sense than the above ex
          </and>
      </or>
  </preConditions>
-</code>                 
+{% endhighlight %}
 
 Will require running as SYSTEM if executing against an Oracle database or running as SA if running against a MS-SQL database.
 
@@ -132,140 +130,140 @@ Will require running as SYSTEM if executing against an Oracle database or runnin
 ## Available Preconditions ##
 
 
-### <dbms> ###
+### &lt;dbms&gt; ###
 
 Passes if the database executed against matches the type specified.
 
 #### Available Attributes ####
 
-^ type | Type of [database](../databases) expected **[required]**  |
+^ type | Type of [database](../databases) expected **required**  |
 
-### <runningAs> ###
+### &lt;runningAs&gt; ###
 
 Passes if the database user executed under matches the username specified.
 
 #### Available Attributes ####
 
-^ username | Database user script is expected to run as **[required]**  | 
+^ username | Database user script is expected to run as **required**  |
 
-### <changeSetExecuted> ###
+### &lt;changeSetExecuted&gt; ###
 
 Passes if the specified change set has already been executed. //Since 1.8//
 
 #### Available Attributes ####
 
-^ id  | Change set "id" **[required]**  | 
-^ author  | Change set "author" **[required]**  | 
-^ changeLogFile  | File name (including classpath relative path) of change set **[required]**  | 
+^ id  | Change set "id" **required**  |
+^ author  | Change set "author" **required**  |
+^ changeLogFile  | File name (including classpath relative path) of change set **required**  |
 
-### <columnExists> ###
+### &lt;columnExists&gt; ###
 
 Passes if the specified column exists in the database. //Since 1.8//
 
 #### Available Attributes ####
 
-^ schemaName  | Name of the table's schema **[required]**  | 
-^ tableName  | Name of the column's table **[required]**  | 
-^ columnName  | Name of column **[required]**  | 
+^ schemaName  | Name of the table's schema **required**  |
+^ tableName  | Name of the column's table **required**  |
+^ columnName  | Name of column **required**  |
 
-### <tableExists> ###
+### &lt;tableExists&gt; ###
 
 Passes if the specified table exists in the database. //Since 1.8//
 
 #### Available Attributes ####
 
-^ schemaName  | Name of the table's schema **[required]**  | 
-^ tableName  | Name of the table **[required]**  | 
+^ schemaName  | Name of the table's schema **required**  |
+^ tableName  | Name of the table **required**  |
 
-### <viewExists> ###
+### &lt;viewExists&gt; ###
 
 Passes if the specified view exists in the database. //Since 1.8//
 
 #### Available Attributes ####
 
-^ schemaName  | Name of the view's schema **[required]**  | 
-^ viewName  | Name of the view **[required]**  | 
+^ schemaName  | Name of the view's schema **required**  |
+^ viewName  | Name of the view **required**  |
 
 
-### <foreignKeyConstraintExists> ###
+### &lt;foreignKeyConstraintExists&gt; ###
 
 Passes if the specified foreign key exists in the database. //Since 1.8//
 
 #### Available Attributes ####
 
-^ schemaName  | Name of the foreign key's schema **[required]**  | 
-^ foreignKeyName  | Name of the foreign key **[required]**  | 
+^ schemaName  | Name of the foreign key's schema **required**  |
+^ foreignKeyName  | Name of the foreign key **required**  |
 
 
-### <indexExists> ###
+### &lt;indexExists&gt; ###
 
 Passes if the specified index exists in the database. //Since 1.8//
 
 #### Available Attributes ####
 
-^ schemaName  | Name of the index's schema **[required]**  | 
-^ indexName  | Name of the index **[required]**  | 
+^ schemaName  | Name of the index's schema **required**  |
+^ indexName  | Name of the index **required**  |
 
-### <sequenceExists> ###
+### &lt;sequenceExists&gt; ###
 
 Passes if the specified sequence exists in the database. //Since 1.8//
 
 #### Available Attributes ####
 
-^ schemaName  | Name of the sequences's schema **[required]**  | 
-^ sequenceName  | Name of the sequence **[required]**  | 
+^ schemaName  | Name of the sequences's schema **required**  |
+^ sequenceName  | Name of the sequence **required**  |
 
 
-### <primaryKeyExists> ###
+### &lt;primaryKeyExists&gt; ###
 
 Passes if the specified primary key exists in the database.  //Since 1.8//
 
 #### Available Attributes ####
 
 ^ schemaName  | Name of the primary key's schema  | 
-^ primaryKeyName  | Name of the primary key **[tableName OR primaryKeyName required]**  | 
-^ tableName  | Name of the table containing primary key **[tableName OR primaryKeyName required]** //Since 1.9// | 
+^ primaryKeyName  | Name of the primary key **tableName OR primaryKeyName required**  |
+^ tableName  | Name of the table containing primary key **tableName OR primaryKeyName required** //Since 1.9// |
 
-### <sqlCheck> ###
+### &lt;sqlCheck&gt; ###
 
 Executes an SQL string and checks the returned value.  The SQL must return a single row with a single value.  To check numbers of rows, use the "count" SQL function.  To check for ranges of values, perform the check in the SQL and return a value that can be easily compared against.
 
-<code xml>
+{% highlight xml %}
 <sqlCheck expectedResult="1">SELECT COUNT(1) FROM pg_tables WHERE TABLENAME = 'myRequiredTable'</sqlCheck>
-</code>
+{% endhighlight %}
 
 #### Available Attributes ####
 
-^ expectedResult  | Value to compare the SQL result to. **[required]**  | 
+^ expectedResult  | Value to compare the SQL result to. **required**  |
 
-### <changeLogPropertyDefined> ###
+### &lt;changeLogPropertyDefined&gt; ###
 
 Checks whether given [changelog parameter](http://www.liquibase.org/manual/changelog_parameters#property) is present. If a value is also given, it only fails, if the value is not the same as given. //Since 2.0//
 
-<code xml>
+{% highlight xml %}
 <changeLogPropertyDefined property="myproperty"/>
 <changeLogPropertyDefined property="myproperty" value="requiredvalue"/>
-</code>
+{% endhighlight %}
 
 #### Available Attributes ####
 
-^ property  | Name of the property to check for. **[required]**  | 
+^ property  | Name of the property to check for. **required**  |
 ^ value  | Required value for given property.  | 
 
-### <customPrecondition> ###
+### &lt;customPrecondition&gt; ###
 
-Custom preconditions can be created by creating a class that implements the [liquibase.precondition.CustomPrecondition](http://www.liquibase.org/manual/latest/api/liquibase/precondition/CustomPrecondition.html) interface.  Parameters on custom classes are set through reflection based on the <param> sub-tags.  Parameters are passed as strings to the custom precondition.
+Custom preconditions can be created by creating a class that implements the [liquibase.precondition.CustomPrecondition](http://www.liquibase.org/manual/latest/api/liquibase/precondition/CustomPrecondition.html) interface.  Parameters on custom classes are set through reflection based on the &lt;param&gt; sub-tags.  Parameters are passed as strings to the custom precondition.
 
-<code xml>
+{% highlight xml %}
 <customPrecondition className="com.example.CustomTableCheck">
     <param name="tableName" value="our_table"/>
     <param name="count" value="42"/>
 </customPrecondition>
-</code>
+{% endhighlight %}
 
 #### Available Attributes ####
 
-^ className  | Name of custom precondition class. **[required]**  | 
+^ className  | Name of custom precondition class. **required**  |
 
 #### Available Sub-Tags ####
 
@@ -273,8 +271,8 @@ Custom preconditions can be created by creating a class that implements the [liq
 
 ##### Available "param" sub-tag Attributes #####
 
-^ name  | Name of the parameter to set. **[required]**  | 
-^ value | String value to set parameter to. **[required]**  | 
+^ name  | Name of the parameter to set. **required**  |
+^ value | String value to set parameter to. **required**  |
 
 ## Implementation Notes ##
 

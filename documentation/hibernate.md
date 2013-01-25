@@ -25,7 +25,7 @@ Using Hibernate with LiquiBase consists of the following steps:
 
 
 ### Command Line ###
-<code>
+``
 liquibase \
         --classpath=jdbcdriver.jar:hibernate.jar \
         --changeLogFile=path/to/changelog \
@@ -35,10 +35,10 @@ liquibase \
         --referenceUrl=jdbc:oracle:thin:@localhost:1521:oracle \
         --referenceUsername=scott \
         --referencePassword=tiger
-</code>
+``
 
 ### Ant ###
-<code xml>
+{% highlight xml %}
 <target name="hibernate-update" depends="prepare">
  
     <taskdef resource="liquibasetasks.properties">
@@ -59,7 +59,7 @@ liquibase \
             >
     </diffDatabaseToChangeLog>
 </target>
-</code>
+{% endhighlight %}
 
 
 

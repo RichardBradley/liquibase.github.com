@@ -9,14 +9,14 @@ Renames an existing view
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <renameView oldViewName="personView" newViewName="people"/>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
-^ oldViewName  | Name of the view to rename **[required]**  | 
-^ newViewName  | Name to rename the view to **[required]**  | 
+^ oldViewName  | Name of the view to rename **required**  |
+^ newViewName  | Name to rename the view to **required**  |
 ^ schemaName  | Name of the view schema  | 
 
 

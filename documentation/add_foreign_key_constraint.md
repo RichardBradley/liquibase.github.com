@@ -9,28 +9,28 @@ Adds a foreign key constraint to an existing column.
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <addForeignKeyConstraint constraintName="fk_address_person"
     baseTableName="address" baseColumnNames="person_id"
     referencedTableName="person" referencedColumnNames="id"
 />
-</code>
+{% endhighlight %}
 
 
 
 
 ## Available Attributes ##
 
-^ constraintName  | Name of the new foreign-key constraint **[required]**  | 
-^ baseTableName  | Name of the table containing the foreign key **[required]**  | 
+^ constraintName  | Name of the new foreign-key constraint **required**  |
+^ baseTableName  | Name of the table containing the foreign key **required**  |
 ^ baseTableSchemaName  | Name of the base table schema  | 
-^ baseColumnNames  | Name of column(s) (comma-separate if multiple) to place the foreign key on **[required]**  | 
-^ referencedTableName  | Name of table the foreign key points to **[required]**  | 
+^ baseColumnNames  | Name of column(s) (comma-separate if multiple) to place the foreign key on **required**  |
+^ referencedTableName  | Name of table the foreign key points to **required**  |
 ^ referencedTableSchemaName  | Name of the referenced table schema  | 
-^ referencedColumnNames  | Column(s) (comma-separate if multiple) the foreign key points to **[required]**  | 
+^ referencedColumnNames  | Column(s) (comma-separate if multiple) the foreign key points to **required**  |
 ^ deferrable  | Is the foreign key deferrable  | 
 ^ initiallyDeferred  | Is the foreign key initially deferred  | 
-^ deleteCascade  | Should the constraint be marked "on delete cascade" //[deprecated in favor on onDelete="CASCADE"]// | 
+^ deleteCascade  | Should the constraint be marked "on delete cascade" //deprecated in favor on onDelete="CASCADE"// |
 ^ onDelete  | ON DELETE functionality.  Possible values: "CASCADE", "SET NULL", "SET DEFAULT", "RESTRICT", "NO ACTION" //Since 1.8//  | 
 ^ onUpdate  | ON UPDATE functionality.  Possible values: "CASCADE", "SET NULL", "SET DEFAULT", "RESTRICT", "NO ACTION" //Since 1.8//  | 
 

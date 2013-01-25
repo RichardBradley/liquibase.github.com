@@ -9,7 +9,7 @@ Although LiquiBase supports most standard SQL statements with its change tags, t
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <changeSet id="1" author="nvoxland">
     <createTable tableName="person">
         <column name="id" type="bigint"/>
@@ -23,7 +23,7 @@ Although LiquiBase supports most standard SQL statements with its change tags, t
          <append value=" engine innodb"/>
     </modifySql>
 </changeSet>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 

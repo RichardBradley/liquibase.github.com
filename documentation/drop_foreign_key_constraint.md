@@ -9,16 +9,16 @@ Drops an existing foreign key
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <dropForeignKeyConstraint
     constraintName="fk_address_person"
     baseTableName="address"/>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
-^ constraintName  | Name of the foreign-key constraint to drop **[required]**  | 
-^ baseTableName  | Name of the table containing the foreign key **[required]**  | 
+^ constraintName  | Name of the foreign-key constraint to drop **required**  |
+^ baseTableName  | Name of the table containing the foreign key **required**  |
 ^ baseTableSchemaName  | Name of the table schema  | 
 
 

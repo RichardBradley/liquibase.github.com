@@ -22,7 +22,3 @@ Love LiquiBase?  Tell your friends.  Blog us.  We don't have an advertising budg
 ## User Feedback ##
 
 If you find a bug or know of a feature that would be useful to you, [let us know](community.html).  We try to guess at what end-users want and need, but real feedback from real users is extremely valuable and makes LiquiBase better for everyone.
-
-## Donation ##
-
-Tips are never expected, but always appreciated.  All donations go toward LiquiBase hosting and development costs. <phpinc=donate.html>

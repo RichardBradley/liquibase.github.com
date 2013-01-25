@@ -9,7 +9,7 @@ title: Tagdatabase ant task
 
 ### Sample ###
 
-<code xml>
+{% highlight xml %}
 <target name="tag" depends="prepare">
     <fail unless="db.changelog.file">db.changelog.file not set</fail>
     <fail unless="database.url">database.url not set</fail>
@@ -32,7 +32,7 @@ title: Tagdatabase ant task
             >
     </tagDatabase>
 </target>
-</code>
+{% endhighlight %}
 
 
 
@@ -40,11 +40,11 @@ title: Tagdatabase ant task
 
 ^ tag  | Tag to apply to the database  |
 ^ driver  | The name of the database driver to connect with  | 
-^ url  | The database URL **[required]**  | 
-^ username  | The database username to connect with **[required]**  | 
-^ password  | The password to use when connecting to the database **[required]**  | 
+^ url  | The database URL **required**  |
+^ username  | The database username to connect with **required**  |
+^ password  | The password to use when connecting to the database **required**  |
 ^ defaultSchemaName  | Schema to use for LiquiBase control tables  |
-^ classpathref  | A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file **[required]**  | 
+^ classpathref  | A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file **required**  |
 ^ currentDateTimeFunction  | Overrides current date time function used in SQL. Useful for unsupported databases  | 
 ^ databaseChangeLogTableName  | Overrides the name of the databasechangelog table to use //Since LiquiBase 1.9// |
 ^ databaseChangeLogLockTableName  | Overrides the name of the databasechangeloglock table to use //Since LiquiBase 1.9// |
@@ -52,6 +52,6 @@ title: Tagdatabase ant task
 ### Available Sub Tags ###
 ^ changeLogProperty  | Sets a [changelog_parameters](changelog_parameters.html) set //Since LiquiBase 1.7// |
 
-#### Available <changeLogProperty> Parameters ####
+#### Available &lt;changeLogProperty&gt; Parameters ####
 ^ name  | The name of the property to set  | 
 ^ value  | The value of the property to set  | 

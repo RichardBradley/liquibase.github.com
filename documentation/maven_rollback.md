@@ -3,4 +3,4 @@ layout: default
 title: Maven rollback
 ---
 
-<phpinc=rollback-mojo.html>
+INCLUDE rollback-mojo.html

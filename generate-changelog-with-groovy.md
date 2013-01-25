@@ -20,7 +20,8 @@ Our first script will produce a minimal changelog.
 Note that the MarkupBuilder cannot output an XML declaration (unlike the StreamingMarkupBuilder), so the declaration is written to the file before invoking the builder.
 
 **sample1.groovy**
-<code>
+
+{% highlight groovy %}
 def writer = new FileWriter('sample1.xml')
 
 def eol = System.properties.'line.separator'
@@ -38,11 +39,11 @@ xml.databaseChangeLog( xmlns : "http://www.liquibase.org/xml/ns/dbchangelog/1.9"
     }
   }
 }
-</code>
+{% endhighlight %}
 Run this script in Groovy, and the following output is produced:
 
 **sample1.xml**
-<code>
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns='http://www.liquibase.org/xml/ns/dbchangelog/1.9' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd'>
   <changeSet author='jsmith' id='1'>
@@ -52,12 +53,12 @@ Run this script in Groovy, and the following output is produced:
     </createTable>
   </changeSet>
 </databaseChangeLog>
-</code>
+{% endhighlight %}
 
 Note that the column tag has a variable number of attributes. The attributes are produced from the parameters on the call to the column method in the builder, e.g.:
-<code>
+{% highlight groovy %}
 column(name:'id', type:'number(4,0)' )
-</code>
+{% endhighlight %}
  
 In Groovy, this is equivalent to passing a map with 2 entries to the method. We will use a map in subsequent code, because it is easy to create a map with a variable number of entries.
 
@@ -73,7 +74,7 @@ A table object contains several other objects:
 First we will create a Table class that only supports columns:
 
 **Listing 1**
-<code>
+{% highlight groovy %}
 class Table {
   Map attributes = [:]
   List columns = []
@@ -81,13 +82,13 @@ class Table {
     attributes = attribs
   }
 }
-</code>
+{% endhighlight %}
 The map contains the XML attributes as defined by the LiquiBase tags.
 
 A similar class for columns:
 
 **Listing 2**
-<code>
+{% highlight groovy %}
 class Column {
   Map attributes = [:]
   Map constraintsAttributes = [:]
@@ -96,14 +97,15 @@ class Column {
     constraintsAttributes = attribs.findAll{it.key in ['nullable']}
   }
 }
-</code>
+{% endhighlight %}
 For columns, we separate the attributes into 2 maps because they are required for 2 separate XML tags: column and constraints.
 
 
 Now let's create a test script that uses these classes:
 
 **Listing 3**
-<code>
+
+{% highlight groovy %}
 def writer = new FileWriter('sample2.xml')
 
 // Define 2 tables
@@ -151,13 +153,14 @@ class ChangelogCreateTable {
     }
   }
 }
-</code>
+{% endhighlight %}
 To run this as a Groovy script, concatenate these 3 listings in a single file, e.g. sample2.groovy, and run it.
 
 The output is:
 
 **Sample2.xml**
-<code>
+
+{% highlight groovy %}
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns='http://www.liquibase.org/xml/ns/dbchangelog/1.9' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd'>
   <changeSet author='james' id='1'>
@@ -180,7 +183,7 @@ The output is:
     </createTable>
   </changeSet>
 </databaseChangeLog>
-</code>
+{% endhighlight %}
 
 You can see how concise and readable the Groovy code is.
 
@@ -193,7 +196,8 @@ As the final example, we will complete the Table class with:
 Note that the Groovy script first creates changeSets to create the tables with unique constraints and indexes. After all tables have been created, the foreign key constraints are created.
 
 **sample3.groovy**
-<code>
+
+{% highlight groovy %}
 def writer = new FileWriter('sample3.xml')
 
 def tables =[]
@@ -322,7 +326,7 @@ class Index {
     attributes = attribs
   }
 }
-</code>
+{% endhighlight %}
 
 # Conclusion #
 If you need to generate a LiquiBase changelog from a structured source, Groovy provides you an easy way to script this task.

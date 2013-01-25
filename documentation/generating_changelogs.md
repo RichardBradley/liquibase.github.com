@@ -13,7 +13,7 @@ Note that this command currently has some limitations. It does not export the fo
 
 ## Example ##
 
-<code>
+``
 liquibase --driver=oracle.jdbc.OracleDriver \
       --classpath=\path\to\classes:jdbcdriver.jar \
       --changeLogFile=com/example/db.changelog.xml \
@@ -21,9 +21,9 @@ liquibase --driver=oracle.jdbc.OracleDriver \
       --username=scott \
       --password=tiger \
       generateChangeLog
-</code>
+``
 
-<code xml>
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <databaseChangeLog
     xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.1"
@@ -86,4 +86,4 @@ liquibase --driver=oracle.jdbc.OracleDriver \
         <addPrimaryKey columnNames="EMPNO" tableName="EMP"/>
     </changeSet>
 </databaseChangeLog>
-</code>
+{% endhighlight %}

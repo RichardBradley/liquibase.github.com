@@ -18,11 +18,11 @@ Create a new directory for this project.
 Download the Liquibase XSD file from http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
 Create a simple batch file in the directory as follows:
 
-<code>
+{% highlight groovy %}
 @echo off
 xjc dbchangelog-2.0.xsd
 javac org\liquibase\xml\ns\dbchangelog\*.java
-</code>
+{% endhighlight %}
 
 
 After you run this file, you will see that many .java files have been created in directory org\liquibase\xml\ns\dbchangelog.
@@ -30,7 +30,7 @@ After you run this file, you will see that many .java files have been created in
 The file that we will be generating looks like this:
 
 **sample1.xml**
-<code>
+{% highlight groovy %}
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog">
     <changeSet author="Bob" id="1">
@@ -45,27 +45,28 @@ The file that we will be generating looks like this:
         </createTable>
     </changeSet>
 </databaseChangeLog>
-</code>
+{% endhighlight %}
 
 To generate this file, we'll write out the structure of the file in a Groovy script using the JAXB generated classes. Feel free to look into the generated .java files to discover the names of the available attributes.
 
 We're using a few neat Groovy features here:
 
 Create a new object and providing the attributes on one go:
-<code>
+{% highlight groovy %}
 c = Column( name: "id", type: "int" )
-</code>
+{% endhighlight %}
 
 Using the << operator to add to a list
-<code>
+{% highlight groovy %}
 ct.column << new Column( ... )
-</code>
+{% endhighlight %}
 
 
 Our full Groovy script looks like this:
 
 **sample1.groovy**
-<code>
+
+{% highlight groovy %}
 import org.liquibase.xml.ns.dbchangelog.*
 
 ct = new CreateTable( tableName: "department"
@@ -98,12 +99,13 @@ databaseChangeLog = new DatabaseChangeLog( changeSetOrIncludeOrIncludeAll : [cha
 
 writer = new ChangeLogWriter()
 writer.write( databaseChangeLog, "sample.xml" )
-</code>
+{% endhighlight %}
 
 You'll notice that this Groovy script uses a little helper script:
 
 **ChangeLogWriter.groovy**
-<code>
+
+{% highlight groovy %}
 import javax.xml.bind.*
 
 class ChangeLogWriter {
@@ -120,7 +122,7 @@ class ChangeLogWriter {
     }
   }
 }
-</code>
+{% endhighlight %}
 ## Conclusion  ##
 
 If you have a well-defined schema as a starting point, JAXB provides the infrastructure to create the content of the XML file and to write it out as valid XML.

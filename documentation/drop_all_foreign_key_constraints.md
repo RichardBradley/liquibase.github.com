@@ -9,14 +9,14 @@ Drops all foreign key constraints for a table
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <dropAllForeignKeyConstraints
     baseTableName="address"/>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
-^ baseTableName  | Name of the table containing the foreign key **[required]**  | 
+^ baseTableName  | Name of the table containing the foreign key **required**  |
 ^ baseTableSchemaName  | Name of the table schema  | 
 
 

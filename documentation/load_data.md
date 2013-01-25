@@ -21,21 +21,21 @@ Once the date format string is set, Liquibase will then call the SimpleDateForma
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <loadData tableName="users" file="com/sample/users.csv">
     <column name="id" type="NUMERIC"/>
     <column name="firstname" type="STRING"/>
     <column name="lastname" type="STRING"/>
     <column name="username" type="STRING"/>
 </loadData>
-</code>
+{% endhighlight %}
 
 
 ## Available Attributes ##
 
-^ tableName  | Name of the table to insert data into **[required]** | 
+^ tableName  | Name of the table to insert data into **required** |
 ^ schemaName  | Name of the table schema  | 
-^ file  | CSV file to load **[required]**  | 
+^ file  | CSV file to load **required**  |
 ^ encoding | Encoding of the CSV file (defaults to UTF-8)  | 
 
 ## Available Sub-Tags ##
@@ -48,10 +48,10 @@ Once the date format string is set, Liquibase will then call the SimpleDateForma
 
 ## Available Column Attributes ##
 
-^ index | A zero-based index of the column being described **[index or header required]** | 
-^ header | Data file header row value of column being described **[index or header required]** | 
+^ index | A zero-based index of the column being described **index or header required** |
+^ header | Data file header row value of column being described **index or header required** |
 ^ name  | Name of the column to insert into.  Defaults to the header value in the file |
-^ type  | Data type of the column. Possible values: STRING, NUMERIC, DATE, BOOLEAN **[required]**  |
+^ type  | Data type of the column. Possible values: STRING, NUMERIC, DATE, BOOLEAN **required**  |
 
 
 ## Database Compatiblity ##

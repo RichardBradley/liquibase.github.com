@@ -16,36 +16,36 @@ The "sqlFile" tag can also support multiline statements in the same file. Statem
 
 The sql file can also contain comments of either of the following formats:
 
-  - A multiline comment that starts with /* and ends with */.
-  - A single line comment starting with <space>--<space> and finishing at the end of the line 
+  - A multiline comment that starts with /\* and ends with \*/.
+  - A single line comment starting with `--` and finishing at the end of the line
 
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <sqlFile path="sample.sql"/>
-</code>
+{% endhighlight %}
 
 where sample.sql can contain:
-<code sql>
+{% highlight sql %}
 insert into person (id, name) values (1, 'Bob')
-</code>
+{% endhighlight %}
 
 A multiline sample.sql might look like:
-<code sql>
+{% highlight sql %}
 insert into person (id,name) values (1, 'George');
 insert into person (id,name) values (2, 'Jim')
-</code>
+{% endhighlight %}
 
 For MSSQL you could also use go  for multiline support and 
 have statements split across many lines:
-<code sql>
+{% highlight sql %}
 insert into person (id,name) 
 values (1, 'George')
 go
 insert into person (id,name) 
 values (2, 'Jim')
-</code>                    
+{% endhighlight %}
 
 
 ## Available Attributes ##

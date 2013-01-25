@@ -1,1 +1,0 @@
-Thanks for shranig. What a pleasure to read!

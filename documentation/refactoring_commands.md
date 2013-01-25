@@ -5,7 +5,7 @@ title: Refactoring commands
 
 ## Available Database Refactorings ##
 
-Data refactorings are used in [Modifying Generated SQL](ChangeSet.html]]s.
+Data refactorings are used in [changeSetss](ChangeSet.html).
 
 ### Structural Refactorings ###
   * [Add_Column](Add_Column.html)
@@ -23,13 +23,13 @@ Data refactorings are used in [Modifying Generated SQL](ChangeSet.html]]s.
   * [Create_Stored_Procedure](Create_Stored_Procedure.html)
 ### Data Quality Refactorings ###
   * [Add_Lookup_Table](Add_Lookup_Table.html)
-  * [Add Not-Null_Constraint](Add Not-Null_Constraint.html)
-  * [Remove Not-Null_Constraint](Remove Not-Null_Constraint.html)
+  * ["Add Not-Null_Constraint"](Add_Not-Null_Constraint.html)
+  * [Remove Not-Null_Constraint](Remove_Not-Null_Constraint.html)
   * [Add_Unique_Constraint](Add_Unique_Constraint.html)
   * [Drop_Unique_Constraint](Drop_Unique_Constraint.html)
   * [Create_Sequence](Create_Sequence.html)
   * [Drop_Sequence](Drop_Sequence.html)
-  * [Add Auto-Increment](Add Auto-Increment.html)
+  * ["Add Auto-Increment"](Add_Auto-Increment.html)
   * [Add_Default_Value](Add_Default_Value.html)
   * [Drop_Default_Value](Drop_Default_Value.html)
 ### Referential Integrity Refactorings ###
@@ -55,7 +55,7 @@ Data refactorings are used in [Modifying Generated SQL](ChangeSet.html]]s.
   * [Drop_Index](Drop_Index.html)
 ### Custom Refactorings ###
   * [Modify Generated SQL](modify_sql.html)
-  * [[Custom SQL](custom_sql.html)
+  * [Custom SQL](custom_sql.html)
   * [Custom_SQL_File](Custom_SQL_File.html)
   * [Custom_Refactoring_Class](Custom_Refactoring_Class.html)
   * [Execute_Shell_Command](Execute_Shell_Command.html)

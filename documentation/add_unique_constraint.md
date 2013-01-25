@@ -10,18 +10,18 @@ Adds a unique constrant to an existing column or set of columns.
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <addUniqueConstraint tableName="person"
     columnNames="id"
     constraintName="pk_person"/>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
-^ tableName  | Name of the table to create the unique constraint on **[required]**  | 
+^ tableName  | Name of the table to create the unique constraint on **required**  |
 ^ schemaName  | Name of the table schema
-^ columnNames  | Name of the column(s) (comma separated if mulitiple) to create the unique constraint on **[required]**  | 
-^ constraintName  | Name of unique constraint **[required]**  | 
+^ columnNames  | Name of the column(s) (comma separated if mulitiple) to create the unique constraint on **required**  |
+^ constraintName  | Name of unique constraint **required**  |
 ^ tablespace  | "Tablespace" (file group in SQL Server) to create the index in | 
 
 

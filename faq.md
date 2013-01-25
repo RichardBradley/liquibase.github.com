@@ -34,7 +34,7 @@ There are times an organization would not want to have changes tied back to a pa
 
 
 ### How can I specify vendor specific features such as ENGINE=InnoDB in MySQL? ###
-We do not currently have a way to specify vendor specific extensions to the create table tag, and so you would need to use the <sql> tag and specify your create table statement manually. Of course you would be able to configure your mysql install to use innodb as the
+We do not currently have a way to specify vendor specific extensions to the create table tag, and so you would need to use the `<sql>` tag and specify your create table statement manually. Of course you would be able to configure your mysql install to use innodb as the
 default storage engine with default-storage-engine=INNODB.
 
 Since 1.9, the <[manual/modify_sql](manual/modify_sql.html)> tag can be used to modify the generated SQL.

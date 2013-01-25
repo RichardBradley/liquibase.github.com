@@ -3,4 +3,4 @@ layout: default
 title: Maven listlocks
 ---
 
-<phpinc=listLocks-mojo.html>
+INCLUDE listLocks-mojo.html

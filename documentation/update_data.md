@@ -10,28 +10,28 @@ Updates data in an existing table
 
 ## Samples ##
 
-<code xml>
+{% highlight xml %}
 <update tableName="People">
     <column name="firstname" value="Fred"/>
     <column name="lastname" value="Johnson"/>
     <column name="username" value="fjohnson"/>
     <where>id=2</where>
 </update>
-</code>
+{% endhighlight %}
 
-<code xml>
+{% highlight xml %}
 <update tableName="People">
     <column name="downsized" valueBoolean="true"/>
 </update>
-</code>
+{% endhighlight %}
 
-<code xml>
+{% highlight xml %}
 <comment>Example with text update</comment>
 <update tableName="ProductSettings">
     <column name="property" value="vatCategory"/>
     <where>property='vat'</where>
 </update>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
@@ -40,8 +40,8 @@ Updates data in an existing table
 
 ## Available Sub-Tags ##
 
-^ column  | Data to update. See the [column tag documentation](column.html) for more information.  **[required]**  |
-^ where [TEXT]  | Where clause for update statement | 
+^ column  | Data to update. See the [column tag documentation](column.html) for more information.  **required**  |
+^ where \[TEXT\]  | Where clause for update statement |
 
 
 ## Database Compatiblity ##

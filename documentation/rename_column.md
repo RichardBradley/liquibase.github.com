@@ -9,16 +9,16 @@ Renames an existing column
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <renameColumn tableName="person"
     oldColumnName="fname" newColumnName="firstName"/>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
-^ tableName  | Name of the table containing that the column to rename **[required]**  |
+^ tableName  | Name of the table containing that the column to rename **required**  |
 ^ schemaName  | Name of the table schema  |
-^ oldColumnName  | Existing name of the column to rename **[required]**  |
-^ newColumnName  | Name to rename the column to **[required]**  |
+^ oldColumnName  | Existing name of the column to rename **required**  |
+^ newColumnName  | Name to rename the column to **required**  |
 ^ columnDataType  | Current data type of the column (MySQL only)  |
 
 

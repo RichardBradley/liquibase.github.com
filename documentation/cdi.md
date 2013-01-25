@@ -6,7 +6,7 @@ Liquibase can be run in a [JEE CDI](http://seamframework.org/Weld) environment b
 
 ===== How to Configure Liquibase =====
 
-<code java>
+{% highlight java %}
 /**
  * A Simple CDI Producer to configure the CDI Liquibase integration
  *
@@ -34,7 +34,7 @@ public class LiquibaseProducer {
     }
 
 }
-</code>
+{% endhighlight %}
 
 
 ===== CDILiquibaseConfig Available Attributes =====

@@ -9,18 +9,18 @@ Adds creates a primary key out of an existing column or set of columns.
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <addPrimaryKey tableName="person"
     columnNames="id"
     constraintName="pk_person"/>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
-^ tableName  | Name of the table to create the primary key on **[required]**  | 
+^ tableName  | Name of the table to create the primary key on **required**  |
 ^ schemaName  | Name of the table schema  | 
-^ columnNames  | Name of the column(s) (comma separated if multiple) to create the primary key on **[required]**  | 
-^ constraintName  | Name of primary key constraint **[required]**  | 
+^ columnNames  | Name of the column(s) (comma separated if multiple) to create the primary key on **required**  |
+^ constraintName  | Name of primary key constraint **required**  |
 ^ tablespace  | "Tablespace" (file group in SQL Server) to create the primary key index in  | 
 
 

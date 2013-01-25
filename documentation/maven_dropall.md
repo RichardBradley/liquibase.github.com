@@ -3,4 +3,4 @@ layout: default
 title: Maven dropall
 ---
 
-<phpinc=dropAll-mojo.html>
+INCLUDE dropAll-mojo.html

@@ -9,13 +9,13 @@ Applies a tag to the database for future [rollback](rollback.html).  Since Liqui
 
 ## Samples ##
 
-<code xml>
+{% highlight xml %}
 <tagDatabase tag="version_1.3"/>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
-^ tag  | tag to apply **[required]**  | 
+^ tag  | tag to apply **required**  |
 
 
 ## Database Compatiblity ##

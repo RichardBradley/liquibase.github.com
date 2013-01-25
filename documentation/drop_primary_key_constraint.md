@@ -9,14 +9,14 @@ Drops an existing primary key.
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <dropPrimaryKey tableName="person" constraintName="pk_person"/>
-</code>
+{% endhighlight %}
 
 
 ## Available Attributes ##
 
-^ tableName  | Name of the table to drop the primary key of **[required]**  | 
+^ tableName  | Name of the table to drop the primary key of **required**  |
 ^ schemaName  | Name of the table schema  | 
 ^ constraintName  | Name of primary key constraint to drop  | 
 

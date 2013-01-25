@@ -9,21 +9,21 @@ Adds a default value to the database definition for the specified column.
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <addDefaultValue tableName="file"
     columnName="fileName"
     defaultValue="New File"/>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
-^ tableName  | Name of the table to containing the column **[required]**  | 
+^ tableName  | Name of the table to containing the column **required**  |
 ^ schemaName  | Name of the table schema  | 
-^ columnName  | Name of column to add a default value to **[required]**  | 
-^ defaultValue  | Default value **[one of defaultValue* required]**  | 
-^ defaultValueNumeric  | Default numeric value **[one of defaultValue* required]**  | 
-^ defaultValueBoolean  | Default boolean value **[one of defaultValue* required]**  | 
-^ defaultValueDate  | Default date and/or time value **[one of defaultValue* required]**  | 
+^ columnName  | Name of column to add a default value to **required**  |
+^ defaultValue  | Default value **one of defaultValue required**  |
+^ defaultValueNumeric  | Default numeric value **one of defaultValue required**  |
+^ defaultValueBoolean  | Default boolean value **one of defaultValue required**  |
+^ defaultValueDate  | Default date and/or time value **one of defaultValue required**  |
 
 
 ## Database Compatiblity ##

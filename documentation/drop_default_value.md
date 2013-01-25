@@ -9,15 +9,15 @@ Removes a database default value for a column.
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <dropDefaultValue tableName="file" columnName="fileName"/>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
-^ tableName  | Name of the table to containing the column **[required]**  | 
+^ tableName  | Name of the table to containing the column **required**  |
 ^ schemaName  | Name of the table schema  | 
-^ columnName  | Name of column to drop the default value from **[required]**  | 
+^ columnName  | Name of column to drop the default value from **required**  |
 
 
 ## Database Compatiblity ##

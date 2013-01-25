@@ -3,4 +3,4 @@ layout: default
 title: Maven changelogsyncsql
 ---
 
-<phpinc=changelogSyncSQL-mojo.html>
+INCLUDE changelogSyncSQL-mojo.html

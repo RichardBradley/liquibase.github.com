@@ -1,13 +1,12 @@
 ---
 layout: default
-title: Include
+title: Include tag
 ---
 
-# <include> tag #
 
 The include tag allows you to break up your change-logs into more manageable pieces.
 
-<code xml>
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 
 <databaseChangeLog
@@ -18,7 +17,7 @@ The include tag allows you to break up your change-logs into more manageable pie
     <include file="com/example/news/news.changelog.xml"/>
     <include file="com/example/directory/directory.changelog.xml"/>
 </databaseChangeLog>
-</code>                    
+{% endhighlight %}
 
 As projects grow, the number of changeSets in a changeLog can grow unwieldy. To help ease this problem, and to make management of changes easier, databaseChangeLogs can be included to create a tree of change-logs. In the example above, the root change log includes first the changes in com/example/news/news.changelog.xml then the changes in com/example/directory/directory.changelog.xml.
 
@@ -26,11 +25,11 @@ Included change-logs are run in the order they are found so care does need to be
 
 Any [preconditions](preconditions.html) defined at the changelog level in sub changelog files will be evaluated //before// any changesets are ran.
 
-The reason to use the <include> tag rather than using XML's built-in include functionality is that with the built-in functionality the parser sees just one big XML document. We uniquely identify each change with the id, the author, and the file name so you only have to ensure that the id/author combinations are unique within each file, not across all change logs.
+The reason to use the `<include>` tag rather than using XML's built-in include functionality is that with the built-in functionality the parser sees just one big XML document. We uniquely identify each change with the id, the author, and the file name so you only have to ensure that the id/author combinations are unique within each file, not across all change logs.
 
 ## Available Attributes ##
 
-^ file  | Name of the file to import **[required]** |
+^ file  | Name of the file to import **required** |
 ^ relativeToChangelogFile | Is the file path relative to the root changelog file rather than to the classpath.  Defaults to "false" //since 1.9// |
 
 

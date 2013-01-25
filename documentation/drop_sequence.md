@@ -9,13 +9,13 @@ Drops an existing Sequence
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <dropSequence sequenceName="seq_employee_id"/>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
-^ sequenceName  | Name of the sequence to drop **[required]**  | 
+^ sequenceName  | Name of the sequence to drop **required**  |
 
 
 ## Database Compatiblity ##

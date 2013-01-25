@@ -3,4 +3,4 @@ layout: default
 title: Maven updatetestingrollback
 ---
 
-<phpinc=updateTestingRollback-mojo.html>
+INCLUDE updateTestingRollback-mojo.html

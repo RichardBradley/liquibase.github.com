@@ -9,7 +9,7 @@ Rolls back database changes.  See [rollback](rollback.html) page for more inform
 
 ### Sample ###
 
-<code xml>
+{% highlight xml %}
 <target name="rollback-database" depends="prepare">
     <fail unless="db.changelog.file">db.changelog.files not set</fail>
     <fail unless="database.url">database.url not set</fail>
@@ -32,7 +32,7 @@ Rolls back database changes.  See [rollback](rollback.html) page for more inform
             >
     </rollbackDatabase>
 </target>
-</code>
+{% endhighlight %}
 
 
 
@@ -56,6 +56,6 @@ Rolls back database changes.  See [rollback](rollback.html) page for more inform
 ### Available Sub Tags ###
 ^ changeLogProperty  | Sets a [changelog_parameters](changelog_parameters.html) set //Since LiquiBase 1.7// |
 
-#### Available <changeLogProperty> Parameters ####
+#### Available &lt;changeLogProperty&gt; Parameters ####
 ^ name  | The name of the property to set  | 
 ^ value  | The value of the property to set  | 

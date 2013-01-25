@@ -11,7 +11,7 @@ Often times it is best to use the CREATE OR REPLACE syntax along with the runOnC
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <createProcedure>
     CREATE OR REPLACE PROCEDURE testHello
     IS
@@ -19,7 +19,7 @@ Often times it is best to use the CREATE OR REPLACE syntax along with the runOnC
       DBMS_OUTPUT.PUT_LINE('Hello From The Database!');
     END;
 </createProcedure>
-</code>
+{% endhighlight %}
 
 
 

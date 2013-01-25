@@ -9,15 +9,15 @@ Drops an existing column
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <dropColumn tableName="person" columnName="ssn"/>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
-^ tableName  | Name of the table containing the column to drop **[required]**  | 
+^ tableName  | Name of the table containing the column to drop **required**  |
 ^ schemaName  | Name of the table schema  | 
-^ columnName  | Name of the column to drop **[required]**  | 
+^ columnName  | Name of the column to drop **required**  |
 
 
 

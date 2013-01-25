@@ -9,9 +9,9 @@ Stops LiquiBase execution with a message.  Mainly useful for debugging and stepp
 
 ## Samples ##
 
-<code xml>
+{% highlight xml %}
 <stop>Halted LiquiBase for debugging</stop>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 

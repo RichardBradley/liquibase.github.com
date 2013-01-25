@@ -50,7 +50,7 @@ Think of each change set as an atomic change that you want to apply to your data
 
 ## Step 3: Run the ChangeSet ##
 
-There are many ways to execute your change log including via [Liquibase Manual](manual/command_line.html]], [manual/Ant](manual/Ant.html), [databases](databases.html), [databases](databases.html), and a [manual/servlet_listener](manual/servlet_listener.html).
+There are many ways to execute your change log including via ["command line"](manual/command_line.html), [manual/Ant](manual/Ant.html), [databases](databases.html), [databases](databases.html), and a [manual/servlet_listener](manual/servlet_listener.html).
 
 Here is an example for mysql via jdbc:
 

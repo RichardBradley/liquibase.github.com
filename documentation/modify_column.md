@@ -11,15 +11,15 @@ Makes changes to an existing column such as the data type.
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <modifyColumn tableName="person">
     <column name="firstname" type="varchar(5000)"/>
 </modifyColumn>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
-^ tableName  | Name of the table that the column to modify is in **[required]**   | 
+^ tableName  | Name of the table that the column to modify is in **required**   |
 ^ schemaName  | Name of the table schema  | 
 
 

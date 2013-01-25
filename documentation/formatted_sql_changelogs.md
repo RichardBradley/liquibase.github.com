@@ -9,20 +9,20 @@ As of LiquiBase 2.0, LiquiBase includes support for "plain SQL" changelog files.
 
 Formatted SQL files use comments to provide LiquiBase with metadata. Each SQL file must begin with the following comment:
 
-<code sql>
+{% highlight sql %}
 --liquibase formatted sql
-</code>
+{% endhighlight %}
 
 ## Changesets ##
 
 Each changeset in a formatted SQL file begins with a comment of the form
 
-<code sql>
+{% highlight sql %}
 --changeset author:id attribute1:value1 attribute2:value2 [...]
-</code>
+{% endhighlight %}
 
 The changeset comment is followed by one or more SQL statements, separated by
-semicolons (or the value of the <endDelimiter> attribute).
+semicolons (or the value of the `<endDelimiter>` attribute).
 
 ### Available Changeset Attributes ##
 
@@ -41,13 +41,13 @@ The following attributes may be provided on each changeset:
 ## Rollback Actions ##
 
 Changesets may include statements to be applied when rolling back the changeset. Rollback statements are comments of the form
-<code sql>
+{% highlight sql %}
 --rollback SQL STATEMENT
-</code>
+{% endhighlight %}
 
 ## Sample Change Log ##
 
-<code sql>
+{% highlight sql %}
 --liquibase formatted sql
 
 --changeset nvoxland:1
@@ -63,4 +63,4 @@ insert into test1 (id, name) values (2, ‘name 2′);
 
 --changeset nvoxland:3 dbms:oracle
 create sequence seq_test;
-</code>
+{% endhighlight %}

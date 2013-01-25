@@ -13,16 +13,16 @@ The "sql" tag can also support multiline statements in the same file. Statements
 
 The sql change can also contain comments of either of the following formats:
 
-  - A multiline comment that starts with /* and ends with */.
-  - A single line comment starting with <space>--<space> and finishing at the end of the line 
+  - A multiline comment that starts with /\* and ends with \*/.
+  - A single line comment starting with `--` and finishing at the end of the line
 
 Note: By default it will attempt to split statements on a ";" or "go" at the end of lines. Because of this, if you have a comment or some other non-statement ending ";" or "go", don't have it at the end of a line or you will get invalid SQL.
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <sql>insert into person (id, name) values (1, 'Bob')</sql>
-</code>
+{% endhighlight %}
 
 
 ## Available Attributes ##
@@ -63,7 +63,7 @@ For this example, let's assume that we want a view to be created for each table.
 We will implement that by running a changeset at the end of each changelog with the runalways attribute.
 We select all tables which do not have a corresponding view, and then create that view. 
 
-<code xml>
+{% highlight xml %}
   <changeSet author='jsmith' id='1' runAlways='true'>
     <sql splitStatements="false">
       DECLARE
@@ -83,4 +83,4 @@ We select all tables which do not have a corresponding view, and then create tha
     </sql>
   </changeSet>
 
-</code>
+{% endhighlight %}

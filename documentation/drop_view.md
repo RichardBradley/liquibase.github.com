@@ -9,13 +9,13 @@ Drops an existing view.
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <dropView viewName="personView"/>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
-^ viewName  | Name of the view to drop **[required]**  | 
+^ viewName  | Name of the view to drop **required**  |
 ^ schemaName  | Name of the view schema  | 
 
 

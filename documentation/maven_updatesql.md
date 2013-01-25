@@ -3,4 +3,4 @@ layout: default
 title: Maven updatesql
 ---
 
-<phpinc=updateSQL-mojo.html>
+INCLUDE updateSQL-mojo.html

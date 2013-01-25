@@ -23,15 +23,15 @@ title: Refactorings
 ## Data Quality Refactorings ##
 
   * [Add Lookup Table](manual/Add_Lookup_Table.html)
-  * [Add Not-Null Constraint](manual/Add Not-Null Constraint)
-  * [Remove Not-Null Constraint](manual/Remove Not-Null Constraint)
-  * [Add Unique Constraint](manual/Add_Unique_Constraint.html)
-  * [Drop Unique Constraint](manual/Drop_Unique_Constraint.html)
-  * [Create Sequence](manual/Create_Sequence.html)
-  * [Drop Sequence](manual/Drop_Sequence.html)
-  * [Add Auto-Increment](manual/Add Auto-increment)
-  * [Add Default Value](manual/Add_Default_Value.html)
-  * [Drop Default Value](manual/Drop_Default_Value.html)
+  * ["Add Not-Null Constraint"](manual/Add_Not-Null_Constraint.html)
+  * ["Remove Not-Null Constraint"](manual/Remove_Not-Null_Constraint.html)
+  * ["Add Unique Constraint"](manual/Add_Unique_Constraint.html)
+  * ["Drop Unique Constraint"](manual/Drop_Unique_Constraint.html)
+  * ["Create Sequence"](manual/Create_Sequence.html)
+  * ["Drop Sequence"](manual/Drop_Sequence.html)
+  * ["Add Auto-Increment"](manual/Add_Auto-increment)
+  * ["Add Default Value"](manual/Add_Default_Value.html)
+  * ["Drop Default Value"](manual/Drop_Default_Value.html)
 
 
 ## Referential Integrity Refactorings ##

@@ -9,13 +9,13 @@ Drops an existing table.
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <dropTable tableName="person" schemaName="mySchema"/>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
-^ tableName  | Name of the table to drop **[required]**  | 
+^ tableName  | Name of the table to drop **required**  |
 ^ schemaName  | Name of the table schema  | 
 
 

@@ -9,7 +9,7 @@ Inserts data into an existing table
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <insert tableName="People">
     <column name="id" valueNumeric="2"/>
     <column name="firstname" value="Fred"/>
@@ -17,7 +17,7 @@ Inserts data into an existing table
     <column name="username" value="fjohnson"/>
     <column name="testid" valueNumeric="2"/>
 </insert>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 

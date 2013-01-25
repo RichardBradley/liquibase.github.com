@@ -26,16 +26,16 @@ Other refactorings such as "drop table" and "insert data" have no corresponding 
 ## Samples ##
 
 Many change tags do not need a rollback tag.  They can be generated from the update statement.
-<code xml>
+{% highlight xml %}
     <changeSet id="changeRollback2-create" author="nvoxland">
         <createTable tableName="changeRollback2">
             <column name="id" type="int"/>
         </createTable>
     </changeSet>
-</code>
+{% endhighlight %}
 
-Standard change tags can be used in a <rollback> tag
-<code xml>
+Standard change tags can be used in a `<rollback>` tag
+{% highlight xml %}
     <changeSet id="changeRollback" author="nvoxland">
         <createTable tableName="changeRollback1">
             <column name="id" type="int"/>
@@ -44,10 +44,10 @@ Standard change tags can be used in a <rollback> tag
             <dropTable tableName="changeRollback1"/>
         </rollback>
     </changeSet>
-</code>
+{% endhighlight %}
 
-Multiple statements can be included in one <rollback> tag.  Multiple rollback tags can be specified in one changeSet.
-<code xml>
+Multiple statements can be included in one `<rollback>` tag.  Multiple rollback tags can be specified in one changeSet.
+{% highlight xml %}
 <changeSet id="multiRollbackTest" author="rs">
         <createTable tableName="multiRollback1">
             <column name="id" type="int"/>
@@ -64,23 +64,23 @@ Multiple statements can be included in one <rollback> tag.  Multiple rollback ta
         </rollback>
         <rollback>drop table multiRollback3</rollback>
     </changeSet>
-</code>
+{% endhighlight %}
 
 A rollback tag can reference the changeSet the originally created a statement.
-<code xml>
+{% highlight xml %}
     <changeSet id="changeRollback2-drop" author="nvoxland">
         <dropTable tableName="changeRollback2"/>
         <rollback changeSetId="changeRollback2-create" changeSetAuthor="nvoxland"/>
     </changeSet>
-</code>
+{% endhighlight %}
 
 Rollback tags can be empty if no rollback is possible/needed
-<code xml>
+{% highlight xml %}
     <changeSet id="noRollback" author="nvoxland">
         <sql>insert into multiRollback3 (id) values (1)</sql>
         <rollback/>
     </changeSet>
-</code>
+{% endhighlight %}
 
 ## "Roll Back To" Modes ##
 
@@ -90,7 +90,7 @@ You can specify what changes to rollback in three ways:
 
 ### Tag ###
 
-Specifying a tag to rollback to will roll back all change-sets that were executed against the target database after the given tag was applied. See the [SOX-compliant](command_line.html]] documentation for how to tag your database.
+Specifying a tag to rollback to will roll back all change-sets that were executed against the target database after the given tag was applied. See the ["command line"](command_line.html) documentation for how to tag your database.
 
 ### Number of Change Sets ###
 
@@ -110,4 +110,4 @@ Rather than actually updating the database, the SQL required to roll back the da
 
 ### Generating a "Future Rollback" Script ###
 
-This mode is designed to allow you to generate a rollback script at the same time you generate your migration script. It allows you to take an updated application and generate both the SQL to update the database to the new version as well as the SQL to bring that new version back to the current version if needed. This functionality is very useful when a DBA wants to control SQL going into the database, as well as for applications that require rollback documentation for internal and/or [SOX-compliant](http://en.wikipedia.org/wiki/Sarbanes-Oxley_Act) processes. You do not need to specify a rollback date, tag, or count in this mode.
+This mode is designed to allow you to generate a rollback script at the same time you generate your migration script. It allows you to take an updated application and generate both the SQL to update the database to the new version as well as the SQL to bring that new version back to the current version if needed. This functionality is very useful when a DBA wants to control SQL going into the database, as well as for applications that require rollback documentation for internal and/or ["SOX-compliant"](http://en.wikipedia.org/wiki/Sarbanes-Oxley_Act) processes. You do not need to specify a rollback date, tag, or count in this mode.

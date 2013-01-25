@@ -9,25 +9,25 @@ Creates a lookup table containing values stored in a column and creates a foreig
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <addLookupTable
     existingTableName="address" existingColumnName="state"
     newTableName="state" newColumnName="abbreviation"
     constraintName="fk_address_state"
 />
-</code>
+{% endhighlight %}
 
 
 ## Available Attributes ##
 
-^ existingTableName  | Name of the table containing the data to extract **[required]**  | 
+^ existingTableName  | Name of the table containing the data to extract **required**  |
 ^ existingTableSchemaName  | Name of the existing table schema  | 
-^ existingColumnName  | Name of the column containing the data to extract **[required]**  | 
-^ newTableName  | Name of lookup table to create **[required]**  | 
+^ existingColumnName  | Name of the column containing the data to extract **required**  |
+^ newTableName  | Name of lookup table to create **required**  |
 ^ newTableSchemaName  | Name of the table schema  | 
-^ newColumnName  | Name of the column in the new table to create **[required]**  | 
+^ newColumnName  | Name of the column in the new table to create **required**  |
 ^ newColumnDataType  | Data type of the new table column.  Required for MySQL and MS-SQL. |
-^ constraintName  | Name of the foreign-key constraint to create between the existing table and the lookup table **[required]**  | 
+^ constraintName  | Name of the foreign-key constraint to create between the existing table and the lookup table **required**  |
 
 
 ## Database Compatiblity ##

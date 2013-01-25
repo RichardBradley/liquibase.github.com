@@ -10,11 +10,11 @@ title: History
 
 **9/20/2008** Version 1.8 was released featuring enhanced precondition support, and SQLite support
 
-**6/25/2008** Version 1.7 was released featuring changelog parameters, preconditions, and <loadData>, 
+**6/25/2008** Version 1.7 was released featuring changelog parameters, preconditions, and `<loadData>`,
 
-**3/27/2008** Version 1.6 was released featuring Hibernate integration, and <tagDatabase>
+**3/27/2008** Version 1.6 was released featuring Hibernate integration, and `<tagDatabase>`
 
-**1/29/2008** Version 1.5 was released featuring a more extensible code base, schema support, <update>, <delete>, and additional commands
+**1/29/2008** Version 1.5 was released featuring a more extensible code base, schema support, `<update>`, `<delete>`, and additional commands
 
 **12/6/2007** Official Maven support released
 
@@ -22,9 +22,9 @@ title: History
 
 **12/8/2007** Grails plug-in released
 
-**9/27/2008** Version 1.3 was released featuring <custom> tag, dbdoc generator, Spring integration, and tablespace support
+**9/27/2008** Version 1.3 was released featuring &lt;custom&gt; tag, dbdoc generator, Spring integration, and tablespace support
 
-**8/29/2007** Version 1.2 was released featuring support for additional databases, <sqlfile>, and bug fixes.
+**8/29/2007** Version 1.2 was released featuring support for additional databases, `<sqlfile>`, and bug fixes.
 
 **7/23/2007** Version 1.1 was released featuring support for additional databases and the database diff tool.
 

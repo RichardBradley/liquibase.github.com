@@ -19,7 +19,7 @@ title: Create table
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <createTable tableName="person">
     <column name="id" type="int">
         <constraints primaryKey="true" nullable="false"/>
@@ -31,12 +31,12 @@ title: Create table
     </column>
      <column name="testid" type="int" />
 </createTable>
-</code>
+{% endhighlight %}
 
 
 ## Available Attributes ##
 
-^ tableName  | Name of the table to create **[required]**  | 
+^ tableName  | Name of the table to create **required**  |
 ^ schemaName  | Name of the table schema  | 
 ^ tablespace  | "Tablespace" (file group in SQL Server) to create the table in  | 
 ^ remarks  | Short description of the table (table comment)  | 
@@ -44,7 +44,7 @@ title: Create table
 
 ## Available Sub-Tags ##
 
-^ column  | Column(s) to create in the table. The Column tag can contain constraint and foreign key information. See the [column tag documentation](column.html) for more information **[required]**  |
+^ column  | Column(s) to create in the table. The Column tag can contain constraint and foreign key information. See the [column tag documentation](column.html) for more information **required**  |
 
 
 

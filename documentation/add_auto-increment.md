@@ -9,16 +9,16 @@ Converts an existing column to be an auto-increment column.
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <addAutoIncrement tableName="person" columnName="id" columnDataType="int"/>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
-^ tableName  | Name of the table to add the auto-increment to **[required]**  | 
+^ tableName  | Name of the table to add the auto-increment to **required**  |
 ^ schemaName  | Name of the table schema  | 
-^ columnName  | Name of column to make auto-increment **[required]**  | 
-^ columnDataType  | Current data type of the column to make auto-increment **[required]**  | 
+^ columnName  | Name of column to make auto-increment **required**  |
+^ columnDataType  | Current data type of the column to make auto-increment **required**  |
 
 
 

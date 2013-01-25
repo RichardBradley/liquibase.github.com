@@ -9,16 +9,16 @@ Deletes data from an existing table
 
 ## Samples ##
 
-<code xml>
+{% highlight xml %}
 <delete tableName="People">
     <where>id=2</where>
 </delete>
-</code>
+{% endhighlight %}
 
-<code xml>
+{% highlight xml %}
 <delete tableName="People">
 </delete>
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
@@ -27,7 +27,7 @@ Deletes data from an existing table
 
 ## Available Sub-Tags ##
 
-^ where [TEXT]  | Where clause for delete statement | 
+^ where \[TEXT\]  | Where clause for delete statement |
 
 
 ## Database Compatiblity ##

@@ -9,15 +9,15 @@ Creates a new database sequence.
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <createSequence sequenceName="seq_employee_id"/>
-</code>
+{% endhighlight %}
 
 
 
 ## Available Attributes ##
 
-^ sequenceName  | Name of the sequence to create **[required]**  |
+^ sequenceName  | Name of the sequence to create **required**  |
 ^ schemaName  | Name of the table schema  |
 ^ incrementBy  | The interval between sequence numbers  |
 ^ minValue  | The minimum value of the sequence  |

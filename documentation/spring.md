@@ -11,7 +11,7 @@ Liquibase can be run in a [Spring](http://www.springframework.org) environment b
 
 ## Example ##
 
-<code xml>
+{% highlight xml %}
 <bean id="liquibase" class="liquibase.integration.spring.SpringLiquibase">
       <property name="dataSource" ref="myDataSource" />
       <property name="changeLog" value="classpath:db-changelog.xml" />
@@ -21,7 +21,7 @@ Liquibase can be run in a [Spring](http://www.springframework.org) environment b
       -->
       <property name="contexts" value="test, production" />
  </bean>
-</code>
+{% endhighlight %}
 
 
 ## Available Attributes ##

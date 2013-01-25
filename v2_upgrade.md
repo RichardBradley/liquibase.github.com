@@ -26,7 +26,7 @@ The format of the XSD definition has changed.  The new format looks like:
 
 ## ModifyColumn tag Deprecated ##
 
-The modifyColumn tag has been deprecated and moved to the extension portal.  If you are using modifyColumn, consider the new <modifyDataType> or other more specific commands (addPrimaryKeyConstraint, etc).  You can continue to use the modifyColumn tag if you include modify-column-2.0.0.jar in your classpath.  See [modifyColumn library](http://liquibase.jira.com/wiki/display/CONTRIB/ModifyColumn+Change) to get this jar.
+The modifyColumn tag has been deprecated and moved to the extension portal.  If you are using modifyColumn, consider the new `<modifyDataType`> or other more specific commands (addPrimaryKeyConstraint, etc).  You can continue to use the modifyColumn tag if you include modify-column-2.0.0.jar in your classpath.  See [modifyColumn library](http://liquibase.jira.com/wiki/display/CONTRIB/ModifyColumn+Change) to get this jar.
 
 ## Columns added to table DATABASECHANGELOG ##
 

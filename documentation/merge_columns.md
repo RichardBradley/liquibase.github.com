@@ -9,7 +9,7 @@ Concatenates the values in two columns, joins them by with string, and stores th
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <mergeColumns tableName="person"
     column1Name="phoneAreaCode"
     joinString="-"
@@ -17,17 +17,17 @@ Concatenates the values in two columns, joins them by with string, and stores th
     finalColumnName="phone"
     finalColumnType="varchar(50)"
 />
-</code>
+{% endhighlight %}
 
 ## Available Attributes ##
 
-^ tableName  | Name table containing the columns to join **[required]**  | 
+^ tableName  | Name table containing the columns to join **required**  |
 ^ schemaName  | Name of the table schema  | 
-^ column1Name  | Name column containing the first half of the data **[required]**  | 
-^ joinString  | String to place include between the values from column1 and column2 (may be empty) **[required]**  | 
-^ column2Name  | Name column containing the second half of the data **[required]**  | 
-^ finalColumnName  | Name of the column to create **[required]**  | 
-^ finalColumnType  | Datatype of the column to create **[required]**  | 
+^ column1Name  | Name column containing the first half of the data **required**  |
+^ joinString  | String to place include between the values from column1 and column2 (may be empty) **required**  |
+^ column2Name  | Name column containing the second half of the data **required**  |
+^ finalColumnName  | Name of the column to create **required**  |
+^ finalColumnType  | Datatype of the column to create **required**  |
 
 
 ## Database Compatiblity ##

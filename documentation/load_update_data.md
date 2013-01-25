@@ -14,22 +14,22 @@ A value of //NULL// in a cell will be converted to a database NULL rather than t
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <loadUpdateData tableName="users" file="com/sample/users.csv" primaryKey="id">
     <column name="id" type="NUMERIC"/>
     <column name="firstname" type="STRING"/>
     <column name="lastname" type="STRING"/>
     <column name="username" type="STRING"/>
 </loadUpdateData>
-</code>
+{% endhighlight %}
 
 
 ## Available Attributes ##
 
-^ tableName  | Name of the table to insert or update data in **[required]** | 
+^ tableName  | Name of the table to insert or update data in **required** |
 ^ schemaName  | Name of the table schema  | 
-^ primaryKey | Comma delimited list of the columns for the primary key **[required]**  | 
-^ file  | CSV file to load **[required]**  | 
+^ primaryKey | Comma delimited list of the columns for the primary key **required**  |
+^ file  | CSV file to load **required**  |
 ^ encoding | Encoding of the CSV file (defaults to UTF-8)  | 
 
 ## Available Sub-Tags ##
@@ -42,10 +42,10 @@ A value of //NULL// in a cell will be converted to a database NULL rather than t
 
 ## Available Column Attributes ##
 
-^ index | A zero-based index of the column being described **[index or header required]** | 
-^ header | Data file header row value of column being described **[index or header required]** | 
+^ index | A zero-based index of the column being described **index or header required** |
+^ header | Data file header row value of column being described **index or header required** |
 ^ name  | Name of the column to insert or update.  Defaults to the header value in the file |
-^ type  | Data type of the column. Possible values: STRING, NUMERIC, DATE, BOOLEAN **[required]**  |
+^ type  | Data type of the column. Possible values: STRING, NUMERIC, DATE, BOOLEAN **required**  |
 
 
 ## Database Compatiblity ##

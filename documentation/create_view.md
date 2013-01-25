@@ -9,20 +9,20 @@ Creates a new database view.
 
 ## Sample ##
 
-<code xml>
+{% highlight xml %}
 <createView viewName="personView">
     select id, firstname from person
 </createView>
-</code>
+{% endhighlight %}
 
 
 
 ## Available Attributes ##
 
-^ viewName  | Name of the view to create **[required]**  | 
+^ viewName  | Name of the view to create **required**  |
 ^ schemaName  | Name of the view schema  | 
 ^ replaceIfExists  | Use "create or replace" syntax, introduced in v1.5 (="true"/"false")  |
-^ NESTED TEXT  | SQL for generating the view **[required]**  | 
+^ NESTED TEXT  | SQL for generating the view **required**  |
 
 
 

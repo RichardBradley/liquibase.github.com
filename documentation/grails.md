@@ -16,21 +16,21 @@ To install, simply run grails install-plugin liquibase and create your [change l
 Run the following command in your project folder to install Liquibase plugin:
 ''grails install-plugin liquibase''
 
-To run any command, simply execute ''grails <commmand_name>'' in root folder of your project.
+To run any command, simply execute `grails <commmand_name>` in root folder of your project.
 
 
 ## Update/Rollback Commands ##
 
 ^ migrate  | Updates database to current version  | 
 ^ migrate-sql  | Writes SQL to update database to current version to STDOUT  | 
-^ migrate-count <num> | Applies <num> changes to the database  | 
-^ migrate-count-sql <num>  | Writes SQL to apply the next <num> changes to STDOUT  | 
-^ rollback <tag>  | Rolls back the database to the the state is was when the tag was applied  | 
-^ rollback-sql <tag>  | Writes SQL to roll back the database to that state it was in when the tag was applied to STDOUT  | 
-^ rollback-count <num>  | Rolls back the last <num> change sets applied to the database  | 
-^ rollback-count-sql <num>  | Writes SQL to roll back the last <num> change sets to STDOUT applied to the database  | 
-^ rollback-to-date <date>  | Rolls back the database to the the state is was at the given date/time. Date Format: yyyy-MM-dd HH:mm:ss  | 
-^ rollback-to-date-sql <date>  | Writes SQL to roll back the database to that state it was in at the given date/time version to STDOUT  | 
+^ migrate-count `<num>` | Applies `<num>` changes to the database  |
+^ migrate-count-sql `<num>`  | Writes SQL to apply the next `<num>` changes to STDOUT  |
+^ rollback &lt;tag&gt;  | Rolls back the database to the the state is was when the tag was applied  |
+^ rollback-sql &lt;tag&gt;  | Writes SQL to roll back the database to that state it was in when the tag was applied to STDOUT  |
+^ rollback-count `<num>`  | Rolls back the last `<num>` change sets applied to the database  |
+^ rollback-count-sql `<num>`  | Writes SQL to roll back the last `<num>` change sets to STDOUT applied to the database  |
+^ rollback-to-date `<date>`  | Rolls back the database to the the state is was at the given date/time. Date Format: yyyy-MM-dd HH:mm:ss  |
+^ rollback-to-date-sql `<date>`  | Writes SQL to roll back the database to that state it was in at the given date/time version to STDOUT  |
 ^ future-rollback-sql  | Writes SQL to roll back the database to the current state after the changes in the changelog have been applied  | 
 
 ## Misc Commands ##

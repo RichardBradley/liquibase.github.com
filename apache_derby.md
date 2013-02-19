@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Apache derby
+root: .
 ---
 
 # Apache Derby #

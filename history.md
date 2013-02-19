@@ -1,6 +1,7 @@
 ---
 layout: default
 title: History
+root: .
 ---
 
 # History #

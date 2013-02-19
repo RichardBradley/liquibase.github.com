@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Generate-changelog-with-jaxb-and-groovy
+root: .
 ---
 
 # Generate LiquiBase changeLogs using JAXB and Groovy #

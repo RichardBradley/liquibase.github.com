@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Informix
+root: .
 ---
 
 With the the JDBC located in the same directory as liquibase:

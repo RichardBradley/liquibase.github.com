@@ -1,167 +1,91 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Liquibase | Database Refactoring | {{ page.title }}</title>
-<link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
-<!--SCRIPT FOR MENU-->
-<script type="text/javascript">
-$(document).ready(function () {
-	
-	$('#menu li').hover(
-		function () {
-			//show its submenu
-			$('ul', this).slideDown();
-			$('ul li ul', this).slideUp(0);
-
-		}, 
-		function () {
-			//hide its submenu
-			$('ul', this).slideUp();
-		}
-	);
-
-});
-</script>
-<script type="text/javascript">
-$(document).ready(function() {
-
-	$("#topnav li").prepend("<span></span>"); //Throws an empty span tag right before the a tag
-
-	$("#topnav li").each(function() { //For each list item...
-		var linkText = $(this).find("a").html(); //Find the text inside of the <a> tag
-		$(this).find("span").show().html(linkText); //Add the text in the <span> tag
-	}); 
-
-});
-</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Liquibase | Database Refactoring | {{ page.title }}</title>
+    <link href="{{ page.root }}/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <script type="text/javascript" src="{{ page.root }}/js/jquery-1.4.2.min.js"></script>
 </head>
-<body class="inner" >
-<div id="contact"> </div>
+<body class="inner">
+<div id="contact"></div>
 
-<div id="fullwidth" >
-<div id="btm-shadow" class="inner">
-  <div class="main_wrap"> <a href="/index.html" class="logo"></a>
-    <div id="search">
-      <input name="name" type="text" value="" />
-      <input name="name" type="submit" value="Search" class="submit" />
+<div id="fullwidth">
+    <div id="btm-shadow" class="inner">
+        <div class="main_wrap"><a href="{{ page.root }}/index.html" class="logo"></a>
+
+            <div id="search">
+                <input name="name" type="text" value=""/>
+                <input name="name" type="submit" value="Search" class="submit"/>
+            </div>
+            <ul id="menu">
+                <li><a href="{{ page.root }}/download.html"><span>Download</span></a></li>
+                <li class="sep"></li>
+                <li><a href="{{ page.root }}/quickstart.html"><span>Quick Start</span></a></li>
+                <li class="sep"></li>
+                <li><a href="{{ page.root }}/documentation/index.html"><span>Documentation</span></a></li>
+                <li class="sep"></li>
+                <li><a href="{{ page.root }}/community.html"><span>Community</span></a></li>
+                <li class="sep"></li>
+                <li><a href="http://liquibase.com"><span>Support and Training</span></a></li>
+                <li class="sep"></li>
+            </ul>
+
+
+            {% capture url_parts %} {{ page.url | remove: "/index.html" | replace:'/'," " }}{% endcapture %}
+            {% capture num_parts %}{{ url_parts | number_of_words | minus: 1 }}{% endcapture %}
+            {% assign previous="" %}
+            {% if num_parts != "0" and num_parts != "-1" %}
+            <div class="full_width">
+                <p class="breadcrumb">
+                    <a href="/">Home</a> /
+
+                    {% for unused in page.content limit:num_parts %}
+                    {% capture first_word %}{{ url_parts | truncatewords:1 | remove:"..."}}{% endcapture %}
+                    {% capture previous %}{{ previous }}/{{ first_word }}{% endcapture %}
+
+                    <a href="{{previous}}">{{ first_word | capitalize}}</a> /
+
+                    {% capture url_parts %}{{ url_parts | remove_first:first_word }}{% endcapture %}
+                    {% endfor %}
+
+                    {{page.title}}
+                </p>
+            </div>
+            {% endif %}
+
+
+            <!--Content Start-->
+            <div class=" block">
+
+                <div id="left-navigation">
+                    <ul id="topnav">
+                        <li><a href="{{page.root}}/"><span>Home</span></a></li>
+                        <li><a href="{{page.root}}/"><span>Blog</span></a></li>
+                        <li><a href="{{page.root}}/"><span>Download</span></a></li>
+                        <li><a href="{{page.root}}/"><span>Extension Portal</span></a></li>
+                        <li><a href="{{page.root}}/"><span>Quick-Start</span></a></li>
+                        <li><a href="{{page.root}}/"><span>Best Practices</span></a></li>
+                        <li><a href="{{page.root}}/"><span>Manual</span></a></li>
+                        <li><a href="{{page.root}}/"><span>Community</span></a></li>
+                        <li><a href="{{page.root}}/"><span>Supported Databases</span></a></li>
+                        <li><a href="{{page.root}}/"><span>FAQ</span></a></li>
+                        <li><a href="{{page.root}}/"><span>Articles</span></a></li>
+                        <li><a href="{{page.root}}/"><span>Training Videos</span></a></li>
+                        <li><a href="{{page.root}}/"><span>History</span></a></li>
+                        <li><a href="{{page.root}}/"><span>Future Directions</span></a></li>
+                        <li><a href="{{page.root}}/"><span>Issue Tracker</span></a></li>
+                        <li><a href="{{page.root}}/"><span>Support and Training</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right_three r-align  ">
+                {{content}}
+            </div>
+        </div>
+
     </div>
-      <ul id="menu">
-          <li><a href="/download.html"><span>Download</span></a></li>
-          <li class="sep"></li>
-          <li><a href="/quickstart.html"><span>Quick Start</span></a></li>
-          <li class="sep"></li>
-          <li><a href="/documentation/index.html"><span>Documentation</span></a></li>
-          <li class="sep"></li>
-          <li><a href="/community.html"><span>Community</span></a></li>
-          <li class="sep"></li>
-          <li><a href="http://liquibase.com"><span>Support and Training</span></a></li>
-          <li class="sep"></li>
-      </ul>
-
-
-      {% capture url_parts %} {{ page.url | remove: "/index.html" | replace:'/'," " }}{% endcapture %}
-      {% capture num_parts %}{{ url_parts | number_of_words | minus: 1 }}{% endcapture %}
-      {% assign previous="" %}
-      <div class="full_width">
-          <p class="breadcrumb">
-          {% if num_parts != "0" and num_parts != "-1" %}
-          <a href="/">home</a> /
-
-          {% for unused in page.content limit:num_parts %}
-          {% capture first_word %}{{ url_parts | truncatewords:1 | remove:"..."}}{% endcapture %}
-          {% capture previous %}{{ previous }}/{{ first_word }}{% endcapture %}
-
-          <a href="{{previous}}">{{ first_word | capitalize}}</a> /
-
-          {% capture url_parts %}{{ url_parts | remove_first:first_word }}{% endcapture %}
-          {% endfor %}
-
-          {% endif %}
-
-          {{page.title}}
-          </p>
-      </div>
-
-      <!--Content Start-->
-    <div class=" block">
-    
-     <div id="left-navigation">
-      <ul id="topnav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/">Blog</a></li>
-          <li><a href="/">Download</a></li>
-          <li><a href="/">Extension Portal</a></li>
-          <li><a href="/">Quick-Start</a></li>
-          <li><a href="/">Best Practices</a></li>
-          <li><a href="/">Manual</a></li>
-          <li><a href="/">Community</a></li>
-          <li><a href="/">Supported Databases</a></li>
-          <li><a href="/">FAQ</a></li>
-          <li><a href="/">Articles</a></li>
-          <li><a href="/">Training Videos</a></li>
-          <li><a href="/">History</a></li>
-          <li><a href="/">Future Directions</a></li>
-          <li><a href="/">Issue Tracker</a></li>
-          <li><a href="/">Support and Training</a></li>
-    </ul>
-     </div>
-    </div>
-    <div class="right_three r-align  ">
-        <h1>{{page.title}}</h1>
-        {{content}}
-      </div>
-    </div>
-
-</div>
-
-<div id="btm-cnt">
- <div class="main_wrap">
- <div class="mini_wrap">
- <h5>About Us</h5>
- <img src="/images/abt-img.png" alt="" class="box" />
- <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur proident, sunt in </p>
- 
- </div>
- 
- <div class="block marlft">
- <h5>Other Links</h5>
- <ul class="list2">
- <li>Donec eget enim nec massa dignissim.</li>
- <li>Donec rutrum metus ac purus male</li>
- <li>Duis eleifend urna quis turpis cursus</li>
- <li>Vivamus vulputate tellus vel massa</li>
- 
- </ul>
- 
- </div>
- <div class="block marlft">
- <h5>About Us</h5>
-
- <p>Feel free to contact me<br />
-Address: 1090 25th Place,Bradenton<br />
-FL 34203,United States<br />
-Telephone: +123-1234-56789<br />
-FAX: +987-654-321<br />
-<br />
-E-mail: name@sitename.com<br />
-</p>
- </div>
- <ul class="nav_a">
-          <li><a href="index.html">Home</a></li>
-          <li class="sep">|</li>
-          <li><a href="short-codes.html">Options</a></li>
-          <li class="sep">|</li>
-          <li><a href="gallery1.html">Gallery</a></li>
-          <li class="sep">|</li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="sep">|</li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
- </div>
- </div>
-
 </div>
 </body>
 </html>

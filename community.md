@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Community
+root: .
 ---
 
 # Interacting with the Liquibase Community #

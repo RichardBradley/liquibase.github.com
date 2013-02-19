@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Refactorings
+root: .
 ---
 
 # Supported Refactorings #

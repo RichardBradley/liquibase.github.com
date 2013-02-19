@@ -161,7 +161,7 @@ a.logo {
 	width:211px;
 	height:38px;
 	float:left;
-	background:url(/custom_images/liquibase_logo-40.png) no-repeat;
+	background:url(../custom_images/liquibase_logo-40.png) no-repeat;
 	margin-top:25px
 }
 #search {
@@ -2057,7 +2057,7 @@ ul#topnav a, ul#topnav span { /*--The <a> and <span> share the same properties s
 	float: left;
 	text-decoration: none;
 	color: #fff;
-	background: url(../images/a_bg.png) repeat-x;
+	/*background: url(../images/a_bg.png) repeat-x;*/
 	text-transform: uppercase;
 	clear: both;
 	width: 100%;
@@ -2135,7 +2135,7 @@ html ul.tabs li.active a, html ul.tabs li a:hover { /*--Makes sure that the acti
 .tab_container.inner {
 	width:940px;
 	border:none;
-	background:url(../images/tabs-bg.png) no-repeat right bottom;
+	background:url(../images/tab-bg.png) no-repeat right bottom;
 	padding-bottom:60px;
 	border: #5D7595 solid 1px;
 }

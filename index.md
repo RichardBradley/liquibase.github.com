@@ -1,27 +1,28 @@
 ---
 layout: default
 title: Liquibase
+root: .
 ---
 
-# Database Change Management #
-
-{{ :sql-database.jpg}} **You never develop code without version control, why do you develop your database without it?**
+### You never develop code without version control.<br>Why do you develop your database without it?
 
 Liquibase is an open source (Apache 2.0 Licensed), database-independent library for tracking, managing and applying database changes. It is built on a simple premise: **All database changes are stored in a human readable yet trackable form and checked into source control.**
 
-Liquibase Supports:
+### Liquibase Supports
 
-    * [Extensibility](http://liquibase.org/extensions)
-    * Merging changes from multiple developers
-    * Code branches
-    * [Multiple Databases](databases.html)
-    * Managing production data as well as various test datasets
-    * Cluster-safe database upgrades
-    * Automated updates or generation of SQL scripts that can be approved and applied by a DBA
-    * [Update rollbacks](manual/rollback.html)
-    * Database "[diff](manual:diff)"s
-    * Generating starting change logs from existing databases
-    * Generating [database change documentation](manual:dbdoc)
+<p>
+* Extensibility
+* Merging changes from multiple developers
+* Code branches
+* [Multiple Databases](databases.html)
+* Managing production data as well as various test datasets
+* Cluster-safe database upgrades
+* Automated updates or generation of SQL scripts that can be approved and applied by a DBA
+* [Update rollbacks](manual/rollback.html)
+* Database "[diff](manual:diff)"s
+* Generating starting change logs from existing databases
+* Generating [database change documentation](manual:dbdoc)
+</p>
 
 # Getting Started #
 

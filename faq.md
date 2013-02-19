@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Faq
+root: .
 ---
 
 # FAQ #

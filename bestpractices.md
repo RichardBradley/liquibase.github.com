@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Bestpractices
+root: .
 ---
 
 # Liquibase Best Practices #

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Thanks
+root: .
 ---
 
 # Thank You #

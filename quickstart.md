@@ -55,7 +55,7 @@ There are many ways to execute your change log including via ["command line"](ma
 
 Here is an example for mysql via jdbc:
 
-{% highlight batch %}
+{% highlight bat %}
 liquibase --driver=com.mysql.jdbc.Driver \
      --classpath=/path/to/classes \
      --changeLogFile=com/example/db.changelog.xml \

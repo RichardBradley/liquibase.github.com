@@ -1,0 +1,235 @@
+body
+{
+    background:url(../images/header-bg-2.png) repeat-x;
+}
+
+a.logo {
+    width:211px;
+    height:38px;
+    float:left;
+    background:url(../custom_images/liquibase_logo-40.png) no-repeat;
+    margin-top:25px
+}
+
+#search {
+    width:250px;
+    float:right;
+    margin-top:20px
+}
+#search input {
+    width:160px;
+    height:24px;
+    float:left;
+    background:url(../images/input.png) no-repeat;
+    border:none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#search input.submit {
+    width:68px;
+    height:25px;
+    float:left;
+    background:url(../images/search.png) no-repeat;
+    text-align:center;
+    line-height:14px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left:20px;
+    cursor:pointer;
+    padding:0px;
+}
+
+
+
+
+
+ul#menu {
+    width: auto;
+    float:left;
+    margin:35px 0 0 0px;
+    clear:left
+}
+ul#menu li {
+    width:auto;
+    float:left;
+    list-style:none;
+    position:relative;
+    padding:0 0 0 19px;
+    height:35px;
+}
+ul#menu li.sep
+{
+    width:auto;
+    float:left;
+    background:none;
+    margin:0 15px
+}
+ul#menu li.sep:hover
+{
+    background:none;
+}
+ul#menu li a{
+    width:auto;
+    float:left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:13px;
+    color:#444444;
+    text-shadow:#fff 1px 1px 1px;
+    text-transform:uppercase;
+    height:35px;
+    padding:0 19px 0 0;
+    line-height:32px;
+}
+ul#menu li:hover, ul#menu li.active {
+    width:auto;
+    float:left;
+    background:url(../images/menu-lft.png) no-repeat left 0;
+}
+ul#menu li:hover a, ul#menu li.active a {
+    background:url(../images/menu-rht.png) no-repeat right 0;
+    color:#fff;
+    text-shadow:none;
+}
+ul#menu li:hover span, ul#menu li.active span {
+    background:url(../images/menu-center.png) repeat-x left 0;
+}
+ul#menu li span {
+    width:auto;
+    height:35px;
+    float:left;
+}
+ul#menu li ul {
+    width:149px;
+    float:left;
+    margin:0;
+    position:absolute;
+    left:0px;
+    top:25px;
+    display:none;
+    z-index:80000;
+    padding:0 0px;
+    margin-top:-4px;
+
+}
+ul#menu li ul li {
+    width:149px;
+    height:auto;
+    float:left;
+    margin:0;
+    z-index:0;
+    color:#333;
+    padding:0px;
+    text-indent:10px;
+    background:url(../images/ul-center.png) repeat-y;
+
+
+
+}
+
+ul#menu li ul li.edge{
+    background:none;
+    border:none
+}
+ul#menu li ul li.edge:hover{
+    background:none;
+}
+ul#menu li ul li:hover{
+    background:none;
+}
+ul#menu li ul li img
+{
+    width:auto;
+    float:left;
+    background:none;
+    border:none
+}
+ul#menu li ul li a {
+    width:129px;
+    height: auto;
+    float:left;
+    padding:0px;
+    color:#717171;
+    font-size:12px;
+    margin-top:0px;
+    padding:3px 5px;
+    line-height:32px;
+    text-shadow:none;
+    text-indent:10px;
+    text-transform:none;
+    margin:0 5px 0 5px;
+    border-top:#74A2CF dotted 1px;
+
+
+}
+ul#menu li ul li a.nobd
+{
+    border:none;
+}
+ul#menu li:hover ul li a {
+    background:url(../images/ul-center.png) repeat-y;
+    color:#fff
+}
+ul#menu li ul li a:hover {
+    background:#7DAEDF ;
+    color:#fff
+}
+ul#menu li ul li:first-child {
+    border:0
+}
+ul#menu li ul li:first-child a {
+    border:0
+}
+ul#menu li ul li ul {
+    left:149px;
+    top:-2px
+}/*Level 1*/
+ul#menu li ul li:hover{
+    background:url(../images/ul-center.png) repeat-y;
+}
+
+
+
+
+ul#leftnav {
+    padding-bottom: 100px;
+    list-style: none;
+    float: left;
+    font-size: 1.1em;
+    width:200px;
+}
+ul#leftnav li {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;  /*--Important - Masking out the hover state by default--*/
+    float: left;
+    height:30px;
+    width:200px;
+    border-top:#A3A095 solid 1px;
+}
+ul#leftnav li:first-child {
+    border:0;
+}
+ul#leftnav a, ul#leftnav span { /*--The <a> and <span> share the same properties since the <span>  will be a duplicate of the <a> tag--*/
+    padding: 7px 10px;
+    float: left;
+    text-decoration: none;
+    color: #fff;
+    /*background: url(../images/a_bg.png) repeat-x;*/
+    text-transform: uppercase;
+    clear: both;
+    width: 100%;
+    height: 20px;
+    cursor:pointer;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    line-height:28px;
+    font-weight:bold;
+    line-height: 16px; /*--Vertical alignment of text--*/
+}
+ul#leftnav a { /*--This is basically the hover state of navigation--*/
+    background-position: left top;
+}
+ul#leftnav span { /*--Default state of navigation--*/
+    color: #747373;
+    background:none;
+}

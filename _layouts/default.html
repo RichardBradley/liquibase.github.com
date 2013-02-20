@@ -1,91 +1,92 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Liquibase | Database Refactoring | {{ page.title }}</title>
+        <meta name="description" content="{{ page.title }}">
+        <meta name="viewport" content="width=device-width">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Liquibase | Database Refactoring | {{ page.title }}</title>
-    <link href="{{ page.root }}/css/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <script type="text/javascript" src="{{ page.root }}/js/jquery-1.4.2.min.js"></script>
-</head>
-<body class="inner">
-<div id="contact"></div>
+        <link rel="stylesheet" href="{{page.root}}/css/normalize.css">
+        <link rel="stylesheet" href="{{page.root}}/css/main.css">
 
-<div id="fullwidth">
-    <div id="btm-shadow" class="inner">
-        <div class="main_wrap"><a href="{{ page.root }}/index.html" class="logo"></a>
+        <link rel="stylesheet" href="{{page.root}}/css/blueprint/screen.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="{{page.root}}/css/blueprint/print.css" type="text/css" media="print">
+        <!--[if lt IE 8]>
+        <link rel="stylesheet" href="{{page.root}}/css/blueprint/ie.css" type="text/css" media="screen, projection">
+        <![endif]-->
 
-            <div id="search">
-                <input name="name" type="text" value=""/>
-                <input name="name" type="submit" value="Search" class="submit"/>
-            </div>
-            <ul id="menu">
-                <li><a href="{{ page.root }}/download.html"><span>Download</span></a></li>
-                <li class="sep"></li>
-                <li><a href="{{ page.root }}/quickstart.html"><span>Quick Start</span></a></li>
-                <li class="sep"></li>
-                <li><a href="{{ page.root }}/documentation/index.html"><span>Documentation</span></a></li>
-                <li class="sep"></li>
-                <li><a href="{{ page.root }}/community.html"><span>Community</span></a></li>
-                <li class="sep"></li>
-                <li><a href="http://liquibase.com"><span>Support and Training</span></a></li>
-                <li class="sep"></li>
-            </ul>
+        <link rel="stylesheet" href="{{page.root}}/css/liquibase.css">
 
+        <script src="{{page.root}}/js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
 
-            {% capture url_parts %} {{ page.url | remove: "/index.html" | replace:'/'," " }}{% endcapture %}
-            {% capture num_parts %}{{ url_parts | number_of_words | minus: 1 }}{% endcapture %}
-            {% assign previous="" %}
-            {% if num_parts != "0" and num_parts != "-1" %}
-            <div class="full_width">
-                <p class="breadcrumb">
-                    <a href="/">Home</a> /
+        <div class="container">
+            <div class="span-24">
+                <a href="{{ page.root }}/index.html" class="logo"></a>
 
-                    {% for unused in page.content limit:num_parts %}
-                    {% capture first_word %}{{ url_parts | truncatewords:1 | remove:"..."}}{% endcapture %}
-                    {% capture previous %}{{ previous }}/{{ first_word }}{% endcapture %}
-
-                    <a href="{{previous}}">{{ first_word | capitalize}}</a> /
-
-                    {% capture url_parts %}{{ url_parts | remove_first:first_word }}{% endcapture %}
-                    {% endfor %}
-
-                    {{page.title}}
-                </p>
-            </div>
-            {% endif %}
-
-
-            <!--Content Start-->
-            <div class=" block">
-
-                <div id="left-navigation">
-                    <ul id="topnav">
-                        <li><a href="{{page.root}}/"><span>Home</span></a></li>
-                        <li><a href="{{page.root}}/"><span>Blog</span></a></li>
-                        <li><a href="{{page.root}}/"><span>Download</span></a></li>
-                        <li><a href="{{page.root}}/"><span>Extension Portal</span></a></li>
-                        <li><a href="{{page.root}}/"><span>Quick-Start</span></a></li>
-                        <li><a href="{{page.root}}/"><span>Best Practices</span></a></li>
-                        <li><a href="{{page.root}}/"><span>Manual</span></a></li>
-                        <li><a href="{{page.root}}/"><span>Community</span></a></li>
-                        <li><a href="{{page.root}}/"><span>Supported Databases</span></a></li>
-                        <li><a href="{{page.root}}/"><span>FAQ</span></a></li>
-                        <li><a href="{{page.root}}/"><span>Articles</span></a></li>
-                        <li><a href="{{page.root}}/"><span>Training Videos</span></a></li>
-                        <li><a href="{{page.root}}/"><span>History</span></a></li>
-                        <li><a href="{{page.root}}/"><span>Future Directions</span></a></li>
-                        <li><a href="{{page.root}}/"><span>Issue Tracker</span></a></li>
-                        <li><a href="{{page.root}}/"><span>Support and Training</span></a></li>
-                    </ul>
+                <div id="search">
+                    <input name="name" type="text" value=""/>
+                    <input name="name" type="submit" value="Search" class="submit"/>
                 </div>
             </div>
-            <div class="right_three r-align  ">
+
+            <div class="span-24">
+                <ul id="menu">
+                    <li><a href="{{ page.root }}/download.html"><span>Download</span></a></li>
+                    <li class="sep"></li>
+                    <li><a href="{{ page.root }}/quickstart.html"><span>Quick Start</span></a></li>
+                    <li class="sep"></li>
+                    <li><a href="{{ page.root }}/documentation/index.html"><span>Documentation</span></a></li>
+                    <li class="sep"></li>
+                    <li><a href="{{ page.root }}/community.html"><span>Community</span></a></li>
+                    <li class="sep"></li>
+                    <li><a href="http://liquibase.com"><span>Support and Training</span></a></li>
+                    <li class="sep"></li>
+                </ul>
+            </div>
+
+            <div class="span-6 border">
+                <ul id="leftnav">
+                <li><a href="{{page.root}}/"><span>Home</span></a></li>
+                <li><a href="{{page.root}}/"><span>Blog</span></a></li>
+                <li><a href="{{page.root}}/"><span>Download</span></a></li>
+                <li><a href="{{page.root}}/"><span>Extension Portal</span></a></li>
+                <li><a href="{{page.root}}/"><span>Quick-Start</span></a></li>
+                <li><a href="{{page.root}}/"><span>Best Practices</span></a></li>
+                <li><a href="{{page.root}}/"><span>Manual</span></a></li>
+                <li><a href="{{page.root}}/"><span>Community</span></a></li>
+                <li><a href="{{page.root}}/"><span>Supported Databases</span></a></li>
+                <li><a href="{{page.root}}/"><span>FAQ</span></a></li>
+                <li><a href="{{page.root}}/"><span>Articles</span></a></li>
+                <li><a href="{{page.root}}/"><span>Training Videos</span></a></li>
+                <li><a href="{{page.root}}/"><span>History</span></a></li>
+                <li><a href="{{page.root}}/"><span>Future Directions</span></a></li>
+                <li><a href="{{page.root}}/"><span>Issue Tracker</span></a></li>
+                <li><a href="{{page.root}}/"><span>Support and Training</span></a></li>
+                </ul>
+            </div>
+            <div class="span-18 last">
                 {{content}}
             </div>
         </div>
 
-    </div>
-</div>
-</body>
+        <script src="{{page.root}}/js/vendor/jquery-1.9.0.min.js"></script>
+        <script src="{{page.root}}/js/plugins.js"></script>
+        <script src="{{page.root}}/js/main.js"></script>
+
+        <!--<script>-->
+            <!--var _gaq=[['_setAccount','UA-1719178-1'],['_trackPageview']];-->
+            <!--(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];-->
+            <!--g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';-->
+            <!--s.parentNode.insertBefore(g,s)}(document,'script'));-->
+        <!--</script>-->
+    </body>
 </html>

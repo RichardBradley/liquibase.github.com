@@ -8,9 +8,6 @@ root: ../..
 
 Create Procedure
 
-* Hi
-* there
-
 ## Sample ##
 
 {% highlight xml %}
@@ -20,7 +17,7 @@ Create Procedure
 ## Available Attributes ##
 
 <table>
-<tr><th>Name</th><th>Description</th><th>Required For</th></tr>
-<tr><td>procedureBody</td><td>A Desription</td><td>all</td></tr>
+<tr><th>Name</th><th>Description</th><th>Required For Database</th></tr>
 <tr><td>comments</td><td>A Desription</td><td></td></tr>
+<tr><td>procedureBody</td><td>A Desription</td><td>all</td></tr>
 </table>

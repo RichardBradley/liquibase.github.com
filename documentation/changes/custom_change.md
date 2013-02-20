@@ -8,9 +8,6 @@ root: ../..
 
 Custom Change
 
-* Hi
-* there
-
 ## Sample ##
 
 {% highlight xml %}
@@ -20,5 +17,5 @@ Custom Change
 ## Available Attributes ##
 
 <table>
-<tr><th>Name</th><th>Description</th><th>Required For</th></tr>
+<tr><th>Name</th><th>Description</th><th>Required For Database</th></tr>
 </table>

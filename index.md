@@ -4,9 +4,13 @@ title: Liquibase
 root: .
 ---
 
+<div class="highlight" style="padding:10px; margin:20px; text-align:center"><b>WARNING!!!<br><br>UNDER CONSTRUCTION.<br>REAL DOCUMENTATION IS AT <a href="http://liquibase.org">http://liquibase.org</a></b></div>
+
 # Source Control for your Database
 
-Liquibase is an open source (Apache 2.0 Licensed), database-independent library for tracking, managing and applying database changes. It is built on a simple premise: **All database changes are stored in a human readable yet trackable form and checked into source control.**
+Liquibase is an open source, database-independent library for tracking, managing and applying database changes.
+
+It is built on a simple premise: **All database changes are stored in a human readable yet trackable form and checked into source control.**
 
 # Features
 

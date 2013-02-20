@@ -8,9 +8,6 @@ root: ../..
 
 Execute Shell Command
 
-* Hi
-* there
-
 ## Sample ##
 
 {% highlight xml %}
@@ -20,6 +17,6 @@ Execute Shell Command
 ## Available Attributes ##
 
 <table>
-<tr><th>Name</th><th>Description</th><th>Required For</th></tr>
+<tr><th>Name</th><th>Description</th><th>Required For Database</th></tr>
 <tr><td>executable</td><td>A Desription</td><td>all</td></tr>
 </table>

@@ -8,9 +8,6 @@ root: ../..
 
 Stop Execution
 
-* Hi
-* there
-
 ## Sample ##
 
 {% highlight xml %}
@@ -20,6 +17,6 @@ Stop Execution
 ## Available Attributes ##
 
 <table>
-<tr><th>Name</th><th>Description</th><th>Required For</th></tr>
+<tr><th>Name</th><th>Description</th><th>Required For Database</th></tr>
 <tr><td>message</td><td>A Desription</td><td></td></tr>
 </table>

@@ -4,7 +4,7 @@ title: Liquibase
 root: .
 ---
 
-<div class="highlight" style="padding:10px; margin:20px; text-align:center"><b>WARNING!!!<br><br>UNDER CONSTRUCTION.<br>REAL DOCUMENTATION IS AT <a href="http://liquibase.org">http://liquibase.org</a></b></div>
+<div class="highlight" style="background-color:yellow;padding:10px; margin:20px; text-align:center"><b>WARNING!!!<br><br>UNDER CONSTRUCTION.<br>REAL DOCUMENTATION IS AT <a href="http://liquibase.org">http://liquibase.org</a></b></div>
 
 # Source Control for your Database
 

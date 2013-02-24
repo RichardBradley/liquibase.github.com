@@ -2,6 +2,7 @@
 layout: default
 title: Change delete
 root: ../..
+subnav: subnav_change.md
 ---
 
 <!-- ====================================================== -->

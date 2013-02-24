@@ -17,9 +17,7 @@ import liquibase.sqlgenerator.SqlGeneratorFactory;
 import liquibase.statement.SqlStatement;
 import liquibase.util.StringUtils;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 public class ChangeDocGenerator {
@@ -33,6 +31,22 @@ public class ChangeDocGenerator {
                 return o1.getDatabaseProductName().compareTo(o2.getDatabaseProductName());
             }
         });
+
+        writeChangeNav(definedChanges);
+        writeChangePages(definedChanges, databases);
+    }
+
+    private static void writeChangeNav(Map<String, SortedSet<Class<? extends Change>>> definedChanges) throws IOException {
+        String content = "";
+
+        for (String changeName : new TreeSet<String>(definedChanges.keySet())) {
+            content += "<li><a href='"+getChangeDocFileName(changeName)+".html'><span>"+changeName.replaceAll("([A-Z])", " $1") + "</span></a></li>\n";
+        }
+        File file = new File("_includes/subnav_change.md");
+        new FileOutputStream(file).write(content.getBytes());
+    }
+
+    private static void writeChangePages(Map<String, SortedSet<Class<? extends Change>>> definedChanges, List<Database> databases) throws UnsupportedChangeException, IOException {
         List<Database> exampleDatabases = new ArrayList<Database>(databases);
         exampleDatabases.add(0, new HsqlDatabase());
         exampleDatabases.add(0, new OracleDatabase());
@@ -65,6 +79,7 @@ public class ChangeDocGenerator {
                     "layout: default\n" +
                     "title: Change " + changeMetaData.getName() + "\n" +
                     "root: ../..\n"+
+                    "subnav: subnav_change.md\n"+
                     "---\n\n";
 
             content += "<!-- ====================================================== -->\n";
@@ -187,11 +202,16 @@ public class ChangeDocGenerator {
 
             System.out.println(content);
 
-            File file = new File("documentation/changes/" + changeMetaData.getName().replaceAll("([A-Z])", "_$1").toLowerCase() + ".md");
+            String changename = changeMetaData.getName();
+            File file = new File("documentation/changes/" + getChangeDocFileName(changename)+".md");
             new FileOutputStream(file).write(content.getBytes());
 
 
 
         }
+    }
+
+    private static String getChangeDocFileName(String changename) {
+        return changename.replaceAll("([A-Z])", "_$1").toLowerCase();
     }
 }

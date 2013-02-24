@@ -2,6 +2,7 @@
 layout: default
 title: Change dropNotNullConstraint
 root: ../..
+subnav: subnav_change.md
 ---
 
 <!-- ====================================================== -->

@@ -2,6 +2,7 @@
 layout: default
 title: Change dropView
 root: ../..
+subnav: subnav_change.md
 ---
 
 <!-- ====================================================== -->

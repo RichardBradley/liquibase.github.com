@@ -2,6 +2,7 @@
 layout: default
 title: Change dropSequence
 root: ../..
+subnav: subnav_change.md
 ---
 
 <!-- ====================================================== -->

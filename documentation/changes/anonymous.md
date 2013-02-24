@@ -2,6 +2,7 @@
 layout: default
 title: Change anonymous
 root: ../..
+subnav: subnav_change.md
 ---
 
 <!-- ====================================================== -->

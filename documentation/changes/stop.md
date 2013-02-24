@@ -2,6 +2,7 @@
 layout: default
 title: Change stop
 root: ../..
+subnav: subnav_change.md
 ---
 
 <!-- ====================================================== -->

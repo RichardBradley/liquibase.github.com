@@ -2,6 +2,7 @@
 layout: default
 title: Change addLookupTable
 root: ../..
+subnav: subnav_change.md
 ---
 
 <!-- ====================================================== -->

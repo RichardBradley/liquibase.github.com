@@ -2,6 +2,7 @@
 layout: default
 title: Change dropColumn
 root: ../..
+subnav: subnav_change.md
 ---
 
 <!-- ====================================================== -->

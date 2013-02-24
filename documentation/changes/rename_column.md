@@ -2,6 +2,7 @@
 layout: default
 title: Change renameColumn
 root: ../..
+subnav: subnav_change.md
 ---
 
 <!-- ====================================================== -->

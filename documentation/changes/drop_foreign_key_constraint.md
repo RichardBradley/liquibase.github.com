@@ -2,6 +2,7 @@
 layout: default
 title: Change dropForeignKeyConstraint
 root: ../..
+subnav: subnav_change.md
 ---
 
 <!-- ====================================================== -->

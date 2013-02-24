@@ -47,7 +47,7 @@ The above changelog will only run if the database executed against is Oracle and
 
 ## Handling Failures and Errors ##
 
-LiquiBase distinguishes between precondition "failures" (check failed) and "errors" (exception thrown in execution of check) and the reaction to both can be controlled via the "onFail" and "onError" attributes on the `<preConditions>` tag.  //Since 1.8//
+Liquibase distinguishes between precondition "failures" (check failed) and "errors" (exception thrown in execution of check) and the reaction to both can be controlled via the "onFail" and "onError" attributes on the `<preConditions>` tag.  //Since 1.8//
 
 #### Available attributes ####
 

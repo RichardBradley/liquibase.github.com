@@ -19,9 +19,9 @@ The `<databaseChangeLog>` tag is the root tag of all change log XML files.
 ^ `<changeSet>`  | The change sets to execute. [Read More](changeset.html)  |
 ^ `<include>`  | Additional files containing change sets to execute [Read More](include.html)  |
 
-When the LiquiBase migrator runs, it parses the databaseChangeLog tag. It first checks any preconditions specified. If any of the [preconditions](preconditions.html) fail, the LiquiBase will exit with an error message explaining what failed. Preconditions are useful for both documenting and enforcing expectations and assumptions of the changelog writer such as the DBMS to be run against or the user the changes are run as.
+When the Liquibase migrator runs, it parses the databaseChangeLog tag. It first checks any preconditions specified. If any of the [preconditions](preconditions.html) fail, the Liquibase will exit with an error message explaining what failed. Preconditions are useful for both documenting and enforcing expectations and assumptions of the changelog writer such as the DBMS to be run against or the user the changes are run as.
 
-If all preconditions are met, LiquiBase will then begin running [changeSet](changeSet.html) and [include](include.html) tags **in the order they appear in the databaseChangeLog file**.
+If all preconditions are met, Liquibase will then begin running [changeSet](changeSet.html) and [include](include.html) tags **in the order they appear in the databaseChangeLog file**.
 
 The XML schema for the databaseChangeLog tag is available at
   * [http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd](http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd) //Since 1.9//

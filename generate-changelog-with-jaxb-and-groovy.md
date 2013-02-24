@@ -4,7 +4,7 @@ title: Generate-changelog-with-jaxb-and-groovy
 root: .
 ---
 
-# Generate LiquiBase changeLogs using JAXB and Groovy #
+# Generate Liquibase changeLogs using JAXB and Groovy #
 
 In [another article](generate-changelog-with-groovy) on this website we saw how we can generate Liquibase changelogs using Groovy and the markupBuilder.
 

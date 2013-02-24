@@ -21,21 +21,21 @@ title: Sidebar
       * \[ChangeLog_Parameters\](ChangeLog_Parameters.html)
       * \[hibernate.html)
       * \[Formatted SQL Changelogs\](Formatted_SQL_Changelogs.html)
-    * LiquiBase Functionality
+    * Liquibase Functionality
       * \[Update\](Update.html)
       * \[Rollback\](Rollback.html)
       * \[Diff\](Diff.html)
       * \[Generating Changelogs\](generating_changelogs.html)
       * \[DBDoc\](dbdoc.html)
       * \[SQL_Output\](SQL_Output.html)
-    * Running LiquiBase
+    * Running Liquibase
       * \[Ant\](Ant.html)
       * \[Maven\](Maven.html)
       * \[servlet_listener\](servlet_listener.html)
       * \[command_line\](command_line.html)
       * \[Spring\](Spring.html)
       * \[Grails\](Grails.html)
-    * LiquiBase Development
+    * Liquibase Development
       * \[Architecture\](Architecture.html)
       * \[http://www.liquibase.org/api/index.html\](http://www.liquibase.org/api/index.html)
   * \[Community\](../community)

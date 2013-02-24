@@ -4,9 +4,9 @@ title: Contributing
 root: .
 ---
 
-# Contributing to LiquiBase #
+# Contributing to Liquibase #
 
-Like any open source application, LiquiBase is built by many people, usually in their spare time.  While we are proud of what we have accomplished so far, there is still much to do and we are always looking for new people to help out.  
+Like any open source application, Liquibase is built by many people, usually in their spare time.  While we are proud of what we have accomplished so far, there is still much to do and we are always looking for new people to help out.
 
 ## Coding ##
 
@@ -18,8 +18,8 @@ Face it, we all like coding more than documenting.  To the end user, however, th
 
 ## Evangelizing ##
 
-Love LiquiBase?  Tell your friends.  Blog us.  We don't have an advertising budget, so word of mouth is what we need.  
+Love Liquibase?  Tell your friends.  Blog us.  We don't have an advertising budget, so word of mouth is what we need.
 
 ## User Feedback ##
 
-If you find a bug or know of a feature that would be useful to you, [let us know](community.html).  We try to guess at what end-users want and need, but real feedback from real users is extremely valuable and makes LiquiBase better for everyone.
+If you find a bug or know of a feature that would be useful to you, [let us know](community.html).  We try to guess at what end-users want and need, but real feedback from real users is extremely valuable and makes Liquibase better for everyone.

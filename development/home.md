@@ -15,10 +15,10 @@ Bugs and features are managed at [http://liquibase.jira.com/browse/CORE](http://
 
 [More information on working with jira](jira.html)
 
-## Additional LiquiBase Development Resources ##
+## Additional Liquibase Development Resources ##
   * [Source Layout](src.html)
   * ["Dev/Build Environment"](build.html)
-  * [LiquiBase Architecture](architecture.html)
+  * [Liquibase Architecture](architecture.html)
   * [Plug-in Architecture](extensibility.html)
   * [Javadoc] (Javadoc.html)
   * [ideas](ideas.html)

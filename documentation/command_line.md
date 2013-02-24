@@ -3,9 +3,9 @@ layout: default
 title: Command line
 ---
 
-# LiquiBase Command Line #
+# Liquibase Command Line #
 
-LiquiBase can be run from the command line by running
+Liquibase can be run from the command line by running
 **liquibase \[options\] \[command\] \[command parameters\]** (optionally, replace the liquibase command with java -jar &lt;path-to-liquibase-jar&gt;). The command line migrator works well when you want to do migrations on demand, but don't have Ant or Maven available such as on servers. The command line migrator also gives you more control over the process than the ["servlet listener"](servlet_listener.html), [Ant](Ant.html), or [Maven](Maven.html) do, allowing you to run maintenance commands like outputting SQL and listing/releasing database changelog locks.
 
 Any values found after the command on the command line invocation will be considered a command parameter. The command line processor will validate whether the command line parameters are allowed for the current command. If the current command does not allow command line parameters or the parameter appears to be an incorrect format, then an error message of 'unexpected command parmeter' will be logged and the execution will terminate.
@@ -88,10 +88,10 @@ If you run the command line migrator without any arguments, you will get a help 
 
 ^ --classpath=&lt;value&gt;  | Classpath containing migration files and JDBC Driver.  |
 ^ --contexts=&lt;value&gt;  | ChangeSet contexts to execute  |
-^ --defaultSchemaName=&lt;schema&gt;  | Specifies the default schema to use for managed database objects and for LiquiBase control tables  |
+^ --defaultSchemaName=&lt;schema&gt;  | Specifies the default schema to use for managed database objects and for Liquibase control tables  |
 ^ --databaseClass=&lt;custom.DatabaseImpl&gt;  | Specifies a custom [Database](http://www.liquibase.org/api/liquibase/database/Database.html) implementation to use  |
 ^ --defaultsFile=&lt;/path/to/file&gt;  | File containing default option values (default: ./liquibase.properties)  |
-^ --includeSystemClasspath=&lt;true or false&gt;  | Include the system classpath in the LiquiBase classpath (default: true)  |
+^ --includeSystemClasspath=&lt;true or false&gt;  | Include the system classpath in the Liquibase classpath (default: true)  |
 ^ --promptForNonLocalDatabase=&lt;true or false&gt;  | Prompt if non-localhost databases (default: false)  |
 ^ --currentDateTimeFunction=&lt;value&gt;  | Overrides current date time function used in SQL. Useful for unsupported databases  |
 ^ --logLevel=&lt;level&gt;  | Execution log level (debug, info, warning, severe, off)  |
@@ -113,7 +113,7 @@ If you run the command line migrator without any arguments, you will get a help 
 
 ## Using a liquibase.properties file ##
 
-If you do not want to always specify options on the command line, you can create a [properties file](liquibase.properties) that contains default values. By default, LiquiBase will look for a file called "liquibase.properties" in the current working directory, but you can specify an alternate location with the --defaultsFile flag. If you have specified an option in a properties file and specify the same option on the command line, the value on the command line will override the properties file value.
+If you do not want to always specify options on the command line, you can create a [properties file](liquibase.properties) that contains default values. By default, Liquibase will look for a file called "liquibase.properties" in the current working directory, but you can specify an alternate location with the --defaultsFile flag. If you have specified an option in a properties file and specify the same option on the command line, the value on the command line will override the properties file value.
 
 ## Examples ##
 
@@ -179,7 +179,7 @@ java -jar liquibase.jar \
         listLocks
 ``
 
-### Runs LiquiBase using defaults from ./liquibase.properties ###
+### Runs Liquibase using defaults from ./liquibase.properties ###
 
 ``
 java -jar liquibase.jar update

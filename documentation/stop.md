@@ -3,14 +3,14 @@ layout: default
 title: Stop
 ---
 
-# Stop LiquiBase Execution #
+# Stop Liquibase Execution #
 
-Stops LiquiBase execution with a message.  Mainly useful for debugging and stepping through a changelog.  //Since LiquiBase 1.9//
+Stops Liquibase execution with a message.  Mainly useful for debugging and stepping through a changelog.  //Since Liquibase 1.9//
 
 ## Samples ##
 
 {% highlight xml %}
-<stop>Halted LiquiBase for debugging</stop>
+<stop>Halted Liquibase for debugging</stop>
 {% endhighlight %}
 
 ## Available Attributes ##

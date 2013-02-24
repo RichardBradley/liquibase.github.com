@@ -16,7 +16,7 @@ Once the date format string is set, Liquibase will then call the SimpleDateForma
 
 
 
-//Since LiquiBase 1.7//
+//Since Liquibase 1.7//
 
 
 ## Sample ##

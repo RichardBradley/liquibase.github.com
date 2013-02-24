@@ -5,7 +5,7 @@ title: Custom refactoring class
 
 # Custom Refactoring #
 
-Although LiquiBase tries to provide a wide range of database refactorings, there are times you may want to create your own custom refactoring class.
+Although Liquibase tries to provide a wide range of database refactorings, there are times you may want to create your own custom refactoring class.
 
 To create your own custom refactoring, simply create a class that implements the [liquibase.change.custom.CustomSqlChange](http://www.liquibase.org/manual/latest/api/liquibase/change/custom/CustomSqlChange.html) or [liquibase.change.custom.CustomTaskChange](http://www.liquibase.org/manual/latest/api/liquibase/change/custom/CustomTaskChange.html) interface and use the &lt;custom&gt; tag in your change set.
 

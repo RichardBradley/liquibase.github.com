@@ -5,14 +5,14 @@ title: Changelog parameters
 
 # Change Log Parameters #
 
-//Since LiquiBase 1.7//
+//Since Liquibase 1.7//
 
-LiquiBase allows dynamic substitution of parameters in a changelog.  The parameters to replace are described using the ${} syntax.
+Liquibase allows dynamic substitution of parameters in a changelog.  The parameters to replace are described using the ${} syntax.
 
 ## Configuring parameter values ##
 
 Parameter values are looked up in the following order:
-  - Passed as a parameter to your LiquiBase runner (see [Ant](Ant.html), [command_line](command_line.html), etc. documentation for how to pass them)
+  - Passed as a parameter to your Liquibase runner (see [Ant](Ant.html), [command_line](command_line.html), etc. documentation for how to pass them)
   - As a JVM system property
   - In the parameters block (&lt;property&gt; Tag) of the [DatabaseChangeLog](DatabaseChangeLog.html) file itself.
 

@@ -4,7 +4,7 @@ title: Generate-changelog-with-groovy
 root: .
 ---
 
-# Generate LiquiBase changeLogs using Groovy #
+# Generate Liquibase changeLogs using Groovy #
 
 In this tutorial, we will show how you can use a Groovy script to generate Liquibase change logs. Groovy makes it very easy to write XML, and it is a great all-purpose scripting language. There are plenty of tutorials available on Groovy and XML, so we won't cover these subjects here.
 
@@ -84,7 +84,7 @@ class Table {
   }
 }
 {% endhighlight %}
-The map contains the XML attributes as defined by the LiquiBase tags.
+The map contains the XML attributes as defined by the Liquibase tags.
 
 A similar class for columns:
 
@@ -330,4 +330,4 @@ class Index {
 {% endhighlight %}
 
 # Conclusion #
-If you need to generate a LiquiBase changelog from a structured source, Groovy provides you an easy way to script this task.
+If you need to generate a Liquibase changelog from a structured source, Groovy provides you an easy way to script this task.

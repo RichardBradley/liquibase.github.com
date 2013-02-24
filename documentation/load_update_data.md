@@ -9,7 +9,7 @@ Loads or updates data from a CSV file into an existing table.  Differs from load
 
 A value of //NULL// in a cell will be converted to a database NULL rather than the string "NULL"
 
-//Since LiquiBase 2.0//
+//Since Liquibase 2.0//
 
 
 ## Sample ##

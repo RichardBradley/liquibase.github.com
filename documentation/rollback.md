@@ -5,7 +5,7 @@ title: Rollback
 
 # Rolling Back ChangeSets #
 
-LiquiBase allows you to undo changes you have made to your database, either automatically or via custom rollback SQL. Rollback support is available in [command_line](command_line.html), [Ant](Ant.html), [Maven](Maven.html), and [Grails](Grails.html).
+Liquibase allows you to undo changes you have made to your database, either automatically or via custom rollback SQL. Rollback support is available in [command_line](command_line.html), [Ant](Ant.html), [Maven](Maven.html), and [Grails](Grails.html).
 
 
 ## How Rollback SQL is controlled ##
@@ -17,7 +17,7 @@ Other refactorings such as "drop table" and "insert data" have no corresponding 
 
 ## Rollback Tag Available Attributes ##
 
-^ nested tags | Standard LiquiBase change tags to generate rollback statements  |
+^ nested tags | Standard Liquibase change tags to generate rollback statements  |
 ^ tag text | SQL to run to rollback this change  |
 ^ changeSetId  | Id of changeset to rerun in order to rollback this change.  Example: for rolling back a dropTable change, reference the changeSet that created the table.  |
 ^ changeSetAuthor  | Author of changeset to rerun in order to rollback this change  |
@@ -98,7 +98,7 @@ You can specify the number of change-sets to rollback.
 
 ## Roll back Execution Modes ##
 
-LiquiBase has three modes for managing rollbacks:
+Liquibase has three modes for managing rollbacks:
 
 ### Execute Rollback Directly ###
 

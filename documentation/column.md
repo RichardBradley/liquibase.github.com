@@ -5,7 +5,7 @@ title: Column
 
 # Column tag #
 
-The "column" tag is a tag that is re-used throughout the LiquiBase XML when column definitions and column information is needed. As a result, not all the attributes of column make sense in each context it is used in.
+The "column" tag is a tag that is re-used throughout the Liquibase XML when column definitions and column information is needed. As a result, not all the attributes of column make sense in each context it is used in.
 
 
 

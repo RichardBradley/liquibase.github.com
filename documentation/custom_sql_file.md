@@ -5,7 +5,7 @@ title: Custom sql file
 
 # Custom SQL File #
 
-The "sqlFile" tag allows you to specify any sql statements and have it stored external in a file. It is useful for complex changes that are not supported through LiquiBase's automated refactoring tags such as stored procedures.
+The "sqlFile" tag allows you to specify any sql statements and have it stored external in a file. It is useful for complex changes that are not supported through Liquibase's automated refactoring tags such as stored procedures.
 
 The sqlFile refactoring finds the file by searching in the following order:
 

@@ -10,7 +10,7 @@ root: .
 
 The Liquibase [user forums and discussion groups](http://liquibase.org/forum/) are available for any questions and comments.  [An RSS feed is available](http://liquibase.org/forum/index.php?type=rss;action=.xml)
 
-These boards replaced mailing lists on sourceforge.  Archives of the lists are available for [liquibase-user](http://www.nabble.com/LiquiBase---User-f23276.html),  [liquibase-devel](http://www.nabble.com/LiquiBase---Development-f23277.html)
+These boards replaced mailing lists on sourceforge.  Archives of the lists are available for [liquibase-user](http://www.nabble.com/Liquibase---User-f23276.html),  [liquibase-devel](http://www.nabble.com/Liquibase---Development-f23277.html)
 
 ## Issue Tracking ##
 

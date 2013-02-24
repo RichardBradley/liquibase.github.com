@@ -5,7 +5,7 @@ title: Ideas
 
 # Feature Ideas #
 
-The best way to get starting developing for LiquiBase is to work on a particular bug or feature that would help you.
+The best way to get starting developing for Liquibase is to work on a particular bug or feature that would help you.
 
 If you don't know what would help, here are some ideas:
   * DSL alternative(s) to the XML-based changelog

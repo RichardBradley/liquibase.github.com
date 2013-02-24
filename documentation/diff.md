@@ -9,12 +9,12 @@ While the best way to track database changes is by adding change sets during dev
 
 ## Hibernate Mapping Diff ##
 
-As of 1.6, LiquiBase has the ability to compare an existing database with a Hibernate mapping file.  For more information, visit the [Hibernate integration](hibernate.html) page
+As of 1.6, Liquibase has the ability to compare an existing database with a Hibernate mapping file.  For more information, visit the [Hibernate integration](hibernate.html) page
 
 
 ## Running Diff ##
 
-Diff command support is available through the [command_line](command_line.html) and [ant](ant.html) tools.  When diff-ing databases, you specify the target database like you normally do in LiquiBase (--url, --username, etc. flags) and you specify the base database with additional flags after the command name.
+Diff command support is available through the [command_line](command_line.html) and [ant](ant.html) tools.  When diff-ing databases, you specify the target database like you normally do in Liquibase (--url, --username, etc. flags) and you specify the base database with additional flags after the command name.
 
 ## Example ##
 
@@ -32,7 +32,7 @@ liqubase.sh --driver=oracle.jdbc.OracleDriver \
 
 ## Database Comparisons ##
 
-Currently, LiquiBase runs the following comparisons:
+Currently, Liquibase runs the following comparisons:
 
   * Version Differences
   * Missing/unexpected tables
@@ -53,7 +53,7 @@ It does not (currently) check
   * Stored Procedures
   * Data type length
 
-LiquiBase can diff different database types, but the results may be skewed due to differences in case and data types.
+Liquibase can diff different database types, but the results may be skewed due to differences in case and data types.
 
 
 ## Controlling Checks (since 1.8) ##
@@ -73,7 +73,7 @@ Note: This only works with the "generateChangeLog" command, not the "diff" or "d
 
 ### Output Modes ###
 
-LiquiBase supports two output modes: report mode ("diff") and change log mode ("diffChangeLog"). In both modes, diff progress is reported to standard error during execution.
+Liquibase supports two output modes: report mode ("diff") and change log mode ("diffChangeLog"). In both modes, diff progress is reported to standard error during execution.
 
 ### Report Mode ###
 

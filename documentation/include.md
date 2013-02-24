@@ -37,6 +37,6 @@ The reason to use the `<include>` tag rather than using XML's built-in include f
 
 Currently there is no checking for looping changelogs or double inclusion of changelogs.
 
-If you include a changelog twice, you shouldn't run into problems because the second time around, LiquiBase will know that the changeSets have been run and won't run them again (unless there is a runAlways tag). Do not rely on this functionality remaining constant.
+If you include a changelog twice, you shouldn't run into problems because the second time around, Liquibase will know that the changeSets have been run and won't run them again (unless there is a runAlways tag). Do not rely on this functionality remaining constant.
 
 If you create a changeLog loop (root.changelog.xml includes news.changelog.xml which includes root.changelog.xml) you will get an infinite loop. Checks for loops is a feature on our list of enhancements, but is currently not implemented

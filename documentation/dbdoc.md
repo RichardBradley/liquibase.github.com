@@ -5,7 +5,7 @@ title: Dbdoc
 
 # Database Documentation Generator #
 
-Using change information stored in the change logs and an existing database, LiquiBase can generate database change documentation.
+Using change information stored in the change logs and an existing database, Liquibase can generate database change documentation.
 
 ## Running DBDoc ##
 

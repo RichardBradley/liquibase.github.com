@@ -5,7 +5,7 @@ title: Modify sql
 
 # Modifying Generated SQL #
 
-Although LiquiBase supports most standard SQL statements with its change tags, there are times when the generated SQL needs to be slightly different for your particular needs.  Examples include changing datatypes or adding additional vendor-specific clauses such as "ENGINE INNODB" to CREATE TABLE statements.  //Since 1.9//
+Although Liquibase supports most standard SQL statements with its change tags, there are times when the generated SQL needs to be slightly different for your particular needs.  Examples include changing datatypes or adding additional vendor-specific clauses such as "ENGINE INNODB" to CREATE TABLE statements.  //Since 1.9//
 
 ## Sample ##
 

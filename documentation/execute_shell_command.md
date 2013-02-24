@@ -5,7 +5,7 @@ title: Execute shell command
 
 # Execute Shell Command #
 
-Executes a system command. Because this refactoring doesn't generate SQL like most, using LiquiBase commands such as migrateSQL may not work as expected. **Therefore, if at all possible use refactorings that generate SQL.**
+Executes a system command. Because this refactoring doesn't generate SQL like most, using Liquibase commands such as migrateSQL may not work as expected. **Therefore, if at all possible use refactorings that generate SQL.**
 
 
 ## Sample ##

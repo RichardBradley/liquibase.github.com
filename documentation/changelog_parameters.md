@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Changelog parameters
+root: ..
 ---
 
 # Change Log Parameters #

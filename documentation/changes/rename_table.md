@@ -2,7 +2,6 @@
 layout: default
 title: Change renameTable
 root: ../..
-subnav: subnav_change.md
 ---
 
 <!-- ====================================================== -->

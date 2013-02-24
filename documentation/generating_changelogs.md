@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Generating changelogs
+root: ..
 ---
 
 # Generating Change Logs #

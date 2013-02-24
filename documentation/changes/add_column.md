@@ -2,7 +2,6 @@
 layout: default
 title: Change addColumn
 root: ../..
-subnav: subnav_change.md
 ---
 
 <!-- ====================================================== -->

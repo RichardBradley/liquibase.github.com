@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Hibernate
+root: ..
 ---
 
 # Hibernate Integration (Since 1.6) #

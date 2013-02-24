@@ -66,10 +66,12 @@
             <div class="span-6 border">
                 <ul id="leftnav">
 
-                    {% if page.subnav == "subnav_change.md"%}
-                    {% include subnav_change.md %}
+                    {% if page.url contains "/documentation/changes/" %}
+                        {% include subnav_change.md %}
+                    {% elsif page.url contains "/documentation/""%}
+                        {% include subnav_doc.md %}
                     {% else %}
-                    {% include subnav_main.md %}
+                        {% include subnav_main.md %}
                     {% endif %}
                 </ul>
             </div>

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Liquibase.properties
+root: ..
 ---
 
 # The liquibase.properties configuration file #

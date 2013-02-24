@@ -79,7 +79,6 @@ public class ChangeDocGenerator {
                     "layout: default\n" +
                     "title: Change " + changeMetaData.getName() + "\n" +
                     "root: ../..\n"+
-                    "subnav: subnav_change.md\n"+
                     "---\n\n";
 
             content += "<!-- ====================================================== -->\n";

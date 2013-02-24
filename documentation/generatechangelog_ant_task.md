@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Generatechangelog ant task
+root: ..
 ---
 
 ## generateChangeLog Ant Task ##

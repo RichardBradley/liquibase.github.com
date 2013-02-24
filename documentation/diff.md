@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Diff
+root: ..
 ---
 
 # Database "Diff" #

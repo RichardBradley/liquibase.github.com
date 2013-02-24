@@ -2,7 +2,6 @@
 layout: default
 title: Change alterSequence
 root: ../..
-subnav: subnav_change.md
 ---
 
 <!-- ====================================================== -->

@@ -2,7 +2,6 @@
 layout: default
 title: Change renameView
 root: ../..
-subnav: subnav_change.md
 ---
 
 <!-- ====================================================== -->

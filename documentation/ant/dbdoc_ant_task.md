@@ -1,16 +1,18 @@
 ---
 layout: default
-title: Dropalldatabaseobjects ant task
+title: Dbdoc ant task
+root: ..
 ---
 
-## dropAllDatabaseObjects Ant Task ##
+## dbDoc Ant Task ##
 
-Drops all database objects owned by the user. Note that functions, procedures and packages are not dropped (limitation in 1.8.1). 
+Generates [dbdoc](dbdoc.html) database documentation for a given database.
 
 ### Sample ###
 
 {% highlight xml %}
-<target name="dropAll" depends="prepare">
+<target name="update-database" depends="prepare">
+    <fail unless="db.changelog.file">db.changelog.file not set</fail>
     <fail unless="database.url">database.url not set</fail>
 
     <fail unless="database.username">database.username not set</fail>
@@ -21,29 +23,33 @@ Drops all database objects owned by the user. Note that functions, procedures an
 
     </taskdef>
 
-    <dropAllDatabaseObjects 
+    <dbDoc
+            changeLogFile="${db.changelog.file}"
             driver="${database.driver}"
             url="${database.url}"
             username="${database.username}"
             password="${database.password}"
-            promptOnNonLocalDatabase="${prompt.user.if.not.local.database}"
+            outputDirectory="/path/to/doc/root/directory"
             classpathref="classpath"
             >
-    </dropAllDatabaseObjects >
+    </dbDoc>
 </target>
 {% endhighlight %}
 
 
+
 ### Available Parameters ###
 
-^ driver  | The name of the database driver to connect with **required**  |
+^ changeLogFile  | The change log file to run **required**  |
+^ driver  | The name of the database driver to connect with  | 
 ^ url  | The database URL **required**  |
 ^ username  | The database username to connect with **required**  |
 ^ password  | The password to use when connecting to the database **required**  |
-^ defaultSchemaName  | Schema to drop objects in  |
-^ outputFile  | Save SQL to given file rather than executing  |
-^ promptOnNonLocalDatabase  | If set to true (default is false) a dialog box with warn you if you attempt to run the Liquibase against a database that is not on localhost  |
+^ defaultSchemaName  | Schema to use by default for managed database objects and Liquibase control tables  |
+^ outputDirectory  | Directory to save report in **required**  |
 ^ classpathref  | A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file **required**  |
+^ databaseChangeLogTableName  | Overrides the name of the databasechangelog table to use //Since Liquibase 1.9// |
+^ databaseChangeLogLockTableName  | Overrides the name of the databasechangeloglock table to use //Since Liquibase 1.9// |
 
 ### Available Sub Tags ###
 ^ changeLogProperty  | Sets a [changelog_parameters](changelog_parameters.html) set //Since Liquibase 1.7// |

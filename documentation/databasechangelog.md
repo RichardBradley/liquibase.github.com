@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Databasechangelog
+root: ..
 ---
 
 The `<databaseChangeLog>` tag is the root tag of all change log XML files.

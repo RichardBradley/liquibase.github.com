@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Grails
+root: ..
 ---
 
 # Official Liquibase Grails Integration #

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Maven
+root: ..
 ---
 
 # Maven Liquibase Plugin #

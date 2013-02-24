@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Include tag
+root: ..
 ---
 
 

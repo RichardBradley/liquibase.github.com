@@ -1,16 +1,17 @@
 ---
 layout: default
-title: Marknextchangesetran ant task
+title: Dropalldatabaseobjects ant task
+root: ..
 ---
 
-## markNextChangeSetRan Ant Task ##
+## dropAllDatabaseObjects Ant Task ##
 
-Marks the next change as already ran.  Useful for when a change was made manually and so an update is failing.
+Drops all database objects owned by the user. Note that functions, procedures and packages are not dropped (limitation in 1.8.1). 
 
 ### Sample ###
 
 {% highlight xml %}
-<target name="markNextChangeSetRan" depends="prepare">
+<target name="dropAll" depends="prepare">
     <fail unless="database.url">database.url not set</fail>
 
     <fail unless="database.username">database.username not set</fail>
@@ -21,17 +22,15 @@ Marks the next change as already ran.  Useful for when a change was made manuall
 
     </taskdef>
 
-    <markNextChangeSetRan
+    <dropAllDatabaseObjects 
             driver="${database.driver}"
             url="${database.url}"
             username="${database.username}"
             password="${database.password}"
             promptOnNonLocalDatabase="${prompt.user.if.not.local.database}"
-            dropFirst="false"
             classpathref="classpath"
-            changeLog="${changelog.file}"
             >
-    </markNextChangeSetRan>
+    </dropAllDatabaseObjects >
 </target>
 {% endhighlight %}
 
@@ -42,8 +41,14 @@ Marks the next change as already ran.  Useful for when a change was made manuall
 ^ url  | The database URL **required**  |
 ^ username  | The database username to connect with **required**  |
 ^ password  | The password to use when connecting to the database **required**  |
-^ changeLog| The change log file to execute **required**  |
 ^ defaultSchemaName  | Schema to drop objects in  |
 ^ outputFile  | Save SQL to given file rather than executing  |
+^ promptOnNonLocalDatabase  | If set to true (default is false) a dialog box with warn you if you attempt to run the Liquibase against a database that is not on localhost  |
 ^ classpathref  | A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file **required**  |
 
+### Available Sub Tags ###
+^ changeLogProperty  | Sets a [changelog_parameters](changelog_parameters.html) set //Since Liquibase 1.7// |
+
+#### Available &lt;changeLogProperty&gt; Parameters ####
+^ name  | The name of the property to set  | 
+^ value  | The value of the property to set  | 

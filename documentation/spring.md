@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Spring
+root: ..
 ---
 
 # Spring Integration #

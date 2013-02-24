@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Changeset
+root: ..
 ---
 
 # &lt;changeSet&gt; tag #

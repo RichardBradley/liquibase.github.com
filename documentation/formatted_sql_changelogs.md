@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Formatted sql changelogs
+root: ..
 ---
 
 # Formatted SQL Changelogs #

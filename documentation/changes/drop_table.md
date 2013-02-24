@@ -2,7 +2,6 @@
 layout: default
 title: Change dropTable
 root: ../..
-subnav: subnav_change.md
 ---
 
 <!-- ====================================================== -->

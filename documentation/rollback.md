@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Rollback
+root: ..
 ---
 
 # Rolling Back ChangeSets #

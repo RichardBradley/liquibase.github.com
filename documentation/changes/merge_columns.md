@@ -2,7 +2,6 @@
 layout: default
 title: Change mergeColumns
 root: ../..
-subnav: subnav_change.md
 ---
 
 <!-- ====================================================== -->

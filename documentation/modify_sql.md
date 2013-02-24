@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Modify sql
+root: ..
 ---
 
 # Modifying Generated SQL #

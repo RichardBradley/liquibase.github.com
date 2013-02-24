@@ -2,7 +2,6 @@
 layout: default
 title: Change empty
 root: ../..
-subnav: subnav_change.md
 ---
 
 <!-- ====================================================== -->

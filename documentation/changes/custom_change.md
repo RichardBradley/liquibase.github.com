@@ -2,7 +2,6 @@
 layout: default
 title: Change customChange
 root: ../..
-subnav: subnav_change.md
 ---
 
 <!-- ====================================================== -->

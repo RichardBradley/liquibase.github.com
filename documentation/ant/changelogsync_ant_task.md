@@ -1,36 +1,37 @@
 ---
 layout: default
-title: Diffdatabasetochangelog ant task
+title: Changelogsync ant task
+root: ..
 ---
 
-## diffDatabase Ant Task ##
+## changeLogSync Ant Task ##
 
-Outputs a [diff](diff.html) of the difference between two databases as a change log to bring them into sync.
+Marks all change sets as ran against the database.  Useful when you have manually updated your database.  
 
 ### Sample ###
 
 {% highlight xml %}
-<target name="diff-database" depends="prepare">
+<target name="sync-database" depends="prepare">
+    <fail unless="db.changelog.file">db.changelog.file not set</fail>
+    <fail unless="database.url">database.url not set</fail>
+
+    <fail unless="database.username">database.username not set</fail>
+    <fail unless="database.password">database.password not set</fail>
 
     <taskdef resource="liquibasetasks.properties">
         <classpath refid="classpath"/>
 
     </taskdef>
 
-    <diffDatabaseToChangeLog
+    <changeLogSync
+            changeLogFile="${db.changelog.file}"
             driver="${database.driver}"
             url="${database.url}"
             username="${database.username}"
             password="${database.password}"
-
-            referenceUrl="${database.url}"
-            referenceUsername="${database.username}"
-            referencePassword="${database.password}"
-
-            outputFile="path/to/newchangelog.xml"
             classpathref="classpath"
             >
-    </diffDatabaseToChangeLog>
+    </changeLogSync>
 </target>
 {% endhighlight %}
 
@@ -38,17 +39,13 @@ Outputs a [diff](diff.html) of the difference between two databases as a change 
 
 ### Available Parameters ###
 
+^ changeLogFile  | The change log file to run  **required**  |
 ^ driver  | The name of the database driver to connect with  | 
-^ url  | The target database URL **required**  |
-^ username  | The target database username to connect with **required**  |
-^ password  | The target database password **required**  |
+^ url  | The database URL **required**  |
+^ username  | The database username to connect with **required**  |
+^ password  | The password to use when connecting to the database **required**  |
 ^ defaultSchemaName  | Schema to use by default for managed database objects and Liquibase control tables  |
-^ baseDriver  | The name of the database driver to connect with  | 
-^ referenceUrl  | The base database URL **required**  |
-^ referenceUsername  | The base database username to connect with **required**  |
-^ referencePassword  | The base database password **required**  |
-^ baseDefaultSchemaName  | Schema to use by default for managed database objects and Liquibase control tables  |
-^ outputFile  | Location of file to save change log to **required**  |
+^ outputFile  | Save SQL to given file rather than executing **required**  |
 ^ classpathref  | A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file **required**  |
 ^ databaseChangeLogTableName  | Overrides the name of the databasechangelog table to use //Since Liquibase 1.9// |
 ^ databaseChangeLogLockTableName  | Overrides the name of the databasechangeloglock table to use //Since Liquibase 1.9// |

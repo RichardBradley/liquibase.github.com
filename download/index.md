@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Download Liquibase
-root: .
+root: ../..
 ---
 
 ## Liquibase Core ##
@@ -47,7 +47,7 @@ The current version of the [Liquibase Grails plug-in](manual/grails.html) is 1.9
 Feature suggestions, bug reports, and general help should be directed to the [community](community.html).
 
 ## Copyright ##
-Copyright (C) 2006-2013 Nathan Voxland
+Copyright (C) 2006-{{ site.time | date: "%Y" }}  Nathan Voxland
 
 This library is free software; you can redistribute it and/or modify it under the terms of the Apache License, Version 2.0.
 

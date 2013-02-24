@@ -43,13 +43,13 @@ a.logo {
 
 
 
-ul#menu {
+div#menu div {
     width: auto;
     float:left;
-    margin:35px 0 0 0px;
-    clear:left
+    margin-top:35px;
+    margin-bottom: 30px;
 }
-ul#menu li {
+div#menu div li {
     width:auto;
     float:left;
     list-style:none;
@@ -57,18 +57,18 @@ ul#menu li {
     padding:0 0 0 19px;
     height:35px;
 }
-ul#menu li.sep
+div#menu div li.sep
 {
     width:auto;
     float:left;
     background:none;
     margin:0 15px
 }
-ul#menu li.sep:hover
+div#menu div li.sep:hover
 {
     background:none;
 }
-ul#menu li a{
+div#menu div li a{
     width:auto;
     float:left;
     font-family: Arial, Helvetica, sans-serif;
@@ -80,25 +80,25 @@ ul#menu li a{
     padding:0 19px 0 0;
     line-height:32px;
 }
-ul#menu li:hover, ul#menu li.active {
+div#menu div li:hover, div#menu div li.active {
     width:auto;
     float:left;
     background:url(../images/menu-lft.png) no-repeat left 0;
 }
-ul#menu li:hover a, ul#menu li.active a {
+div#menu div li:hover a, div#menu div li.active a {
     background:url(../images/menu-rht.png) no-repeat right 0;
     color:#fff;
     text-shadow:none;
 }
-ul#menu li:hover span, ul#menu li.active span {
+div#menu div li:hover span, div#menu div li.active span {
     background:url(../images/menu-center.png) repeat-x left 0;
 }
-ul#menu li span {
+div#menu div li span {
     width:auto;
     height:35px;
     float:left;
 }
-ul#menu li ul {
+div#menu div li ul {
     width:149px;
     float:left;
     margin:0;
@@ -111,7 +111,7 @@ ul#menu li ul {
     margin-top:-4px;
 
 }
-ul#menu li ul li {
+div#menu div li ul li {
     width:149px;
     height:auto;
     float:left;
@@ -126,24 +126,24 @@ ul#menu li ul li {
 
 }
 
-ul#menu li ul li.edge{
+div#menu div li ul li.edge{
     background:none;
     border:none
 }
-ul#menu li ul li.edge:hover{
+div#menu div li ul li.edge:hover{
     background:none;
 }
-ul#menu li ul li:hover{
+div#menu div li ul li:hover{
     background:none;
 }
-ul#menu li ul li img
+div#menu div li ul li img
 {
     width:auto;
     float:left;
     background:none;
     border:none
 }
-ul#menu li ul li a {
+div#menu div li ul li a {
     width:129px;
     height: auto;
     float:left;
@@ -161,29 +161,29 @@ ul#menu li ul li a {
 
 
 }
-ul#menu li ul li a.nobd
+div#menu div li ul li a.nobd
 {
     border:none;
 }
-ul#menu li:hover ul li a {
+div#menu div li:hover ul li a {
     background:url(../images/ul-center.png) repeat-y;
     color:#fff
 }
-ul#menu li ul li a:hover {
+div#menu div li ul li a:hover {
     background:#7DAEDF ;
     color:#fff
 }
-ul#menu li ul li:first-child {
+div#menu div li ul li:first-child {
     border:0
 }
-ul#menu li ul li:first-child a {
+div#menu div li ul li:first-child a {
     border:0
 }
-ul#menu li ul li ul {
+div#menu div li ul li ul {
     left:149px;
     top:-2px
 }/*Level 1*/
-ul#menu li ul li:hover{
+div#menu div li ul li:hover{
     background:url(../images/ul-center.png) repeat-y;
 }
 

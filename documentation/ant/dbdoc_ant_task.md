@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Dbdoc ant task
-root: ..
 ---
 
 ## dbDoc Ant Task ##

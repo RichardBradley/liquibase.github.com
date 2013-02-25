@@ -78,7 +78,6 @@ public class ChangeDocGenerator {
             String content = "---\n" +
                     "layout: default\n" +
                     "title: Change " + changeMetaData.getName() + "\n" +
-                    "root: ../..\n"+
                     "---\n\n";
 
             content += "<!-- ====================================================== -->\n";
@@ -119,25 +118,26 @@ public class ChangeDocGenerator {
             content += "</table>\n\n";
 
 
-            content += "## Nested Properties ##\n\n";
-            content += "<table>\n";
-            content += "<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>\n";
+            if (nestedParams.size() > 0) {
+                content += "## Nested Properties ##\n\n";
+                content += "<table>\n";
+                content += "<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>\n";
 
-            for (ChangeParameterMetaData param : nestedParams) {
-                boolean list = param.getDataType().startsWith("list of");
+                for (ChangeParameterMetaData param : nestedParams) {
+                    boolean list = param.getDataType().startsWith("list of");
 
-                Set<String> requiredForDatabase = param.getRequiredForDatabase();
-                String required = StringUtils.trimToEmpty(StringUtils.join(requiredForDatabase, ", "));
+                    Set<String> requiredForDatabase = param.getRequiredForDatabase();
+                    String required = StringUtils.trimToEmpty(StringUtils.join(requiredForDatabase, ", "));
 
-                String description = param.getDescription();
-                if (param.getDataType().endsWith("columnConfig")) {
-                    description += "<br><br>See the <a href='../columnConfig.html'>column tag</a> documentation for more information";
+                    String description = param.getDescription();
+                    if (param.getDataType().endsWith("columnConfig")) {
+                        description += "<br><br>See the <a href='../columnConfig.html'>column tag</a> documentation for more information";
+                    }
+
+                    content += "<tr><td style='vertical-align: top'>"+ param.getParameterName() + "</td><td>" + description + "</td><td style='vertical-align: top'>" + required+"</td><td style='vertical-align: top'>"+(list?"yes":"no")+"</td><td style='vertical-align: top'>"+StringUtils.trimToEmpty(param.getSince())+"</td></tr>\n";
                 }
-
-                content += "<tr><td style='vertical-align: top'>"+ param.getParameterName() + "</td><td>" + description + "</td><td style='vertical-align: top'>" + required+"</td><td style='vertical-align: top'>"+(list?"yes":"no")+"</td><td style='vertical-align: top'>"+StringUtils.trimToEmpty(param.getSince())+"</td></tr>\n";
+                content += "</table>\n";
             }
-            content += "</table>\n";
-
 
 
             Database exampleDatabase = null;

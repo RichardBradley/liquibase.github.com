@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Databases
-root: .
 ---
 
 # Supported Databases #

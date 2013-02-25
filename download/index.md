@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Download Liquibase
-root: ..
 ---
 
 ## Liquibase Core ##

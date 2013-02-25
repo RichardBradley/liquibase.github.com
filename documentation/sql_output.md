@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Sql output
-root: ..
 ---
 
 # SQL Output #

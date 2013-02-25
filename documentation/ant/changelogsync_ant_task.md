@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Changelogsync ant task
-root: ..
 ---
 
 ## changeLogSync Ant Task ##

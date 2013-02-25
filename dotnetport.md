@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Dotnetport
-root: .
 ---
 
 {{  :help-wanted.jpg|}}# Liquibase .Net Port #

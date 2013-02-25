@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Contexts
-root: ..
 ---
 
 # Contexts #

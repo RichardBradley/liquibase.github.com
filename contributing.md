@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Contributing
-root: .
 ---
 
 # Contributing to Liquibase #

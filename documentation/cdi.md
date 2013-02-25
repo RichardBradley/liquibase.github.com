@@ -1,7 +1,6 @@
 ---
 layout: default
 title: JEE CDI Integration
-root: ..
 ---
 # JEE CDI Integration #
 

@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Architecture
-root: ..
 ---
 
 # Liquibase Architecture #

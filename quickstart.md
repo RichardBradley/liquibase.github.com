@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Liquibase Quickstart
-root: .
 ---
 ## Step 1: Create a Changelog File: ##
 

@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Future
-root: .
 ---
 
 # Future Directions #

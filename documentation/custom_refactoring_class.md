@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Custom refactoring class
-root: ..
 ---
 
 # Custom Refactoring #

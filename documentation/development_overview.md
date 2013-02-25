@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Development overview
-root: ..
 ---
 
 # Liquibase Development #

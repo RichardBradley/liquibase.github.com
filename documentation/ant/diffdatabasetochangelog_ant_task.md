@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Diffdatabasetochangelog ant task
-root: ..
 ---
 
 ## diffDatabase Ant Task ##

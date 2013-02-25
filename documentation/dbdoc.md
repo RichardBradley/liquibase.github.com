@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Dbdoc
-root: ..
 ---
 
 # Database Documentation Generator #

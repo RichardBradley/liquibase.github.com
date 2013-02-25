@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Change stop
-root: ../..
 ---
 
 <!-- ====================================================== -->
@@ -25,11 +24,6 @@ Stop Execution
 <tr><td style='vertical-align: top'>message</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 </table>
 
-## Nested Properties ##
-
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>
-</table>
 ## Database Support
 
 <table style='border:1;'>

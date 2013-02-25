@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Change customChange
-root: ../..
 ---
 
 <!-- ====================================================== -->
@@ -24,11 +23,6 @@ Custom Change
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
 </table>
 
-## Nested Properties ##
-
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>
-</table>
 ## Database Support
 
 <table style='border:1;'>

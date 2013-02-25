@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Change renameTable
-root: ../..
 ---
 
 <!-- ====================================================== -->
@@ -31,11 +30,6 @@ Rename Table
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 </table>
 
-## Nested Properties ##
-
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>
-</table>
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}

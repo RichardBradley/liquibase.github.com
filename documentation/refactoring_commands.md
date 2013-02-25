@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Refactoring commands
-root: ..
 ---
 
 ## Available Database Refactorings ##

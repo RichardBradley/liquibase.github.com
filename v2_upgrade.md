@@ -1,7 +1,6 @@
 ---
 layout: default
 title: V2 upgrade
-root: .
 ---
 
 # 1.x to 2.0 Upgrade Guide #

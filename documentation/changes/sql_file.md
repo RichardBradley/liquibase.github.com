@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Change sqlFile
-root: ../..
 ---
 
 <!-- ====================================================== -->
@@ -36,11 +35,6 @@ SQL From File
 <tr><td style='vertical-align: top'>stripComments</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 </table>
 
-## Nested Properties ##
-
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>
-</table>
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}

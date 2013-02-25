@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Servlet listener
-root: ..
 ---
 
 # Servlet Listener #

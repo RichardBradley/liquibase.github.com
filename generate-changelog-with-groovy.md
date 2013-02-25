@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Generate-changelog-with-groovy
-root: .
 ---
 
 # Generate Liquibase changeLogs using Groovy #

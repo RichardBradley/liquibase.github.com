@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Preconditions
-root: ..
 ---
 
 Preconditions can be attached to [change logs](databasechangelog.html) or [changeset](changeset.html)s to control the execution of an update based on the state of the database.

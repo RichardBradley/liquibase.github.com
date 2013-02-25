@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Column
-root: ..
 ---
 
 # Column tag #

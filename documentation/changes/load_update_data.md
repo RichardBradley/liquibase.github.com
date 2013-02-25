@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Change loadUpdateData
-root: ../..
 ---
 
 <!-- ====================================================== -->
@@ -39,11 +38,6 @@ Smart Load Data
 <tr><td style='vertical-align: top'>tableName</td><td>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
-## Nested Properties ##
-
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>
-</table>
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}

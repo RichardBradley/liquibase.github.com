@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Overview
-root: ..
 ---
 
 # Liquibase Overview #

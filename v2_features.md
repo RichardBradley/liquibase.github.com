@@ -1,7 +1,6 @@
 ---
 layout: default
 title: V2 features
-root: .
 ---
 
 # Features and Changes between Liquibase 1.9 and 2.0 #

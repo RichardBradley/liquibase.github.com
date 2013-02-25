@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Dropalldatabaseobjects ant task
-root: ..
 ---
 
 ## dropAllDatabaseObjects Ant Task ##

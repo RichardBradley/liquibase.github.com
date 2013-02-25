@@ -20,16 +20,16 @@ It is built on a simple premise: **All database changes are stored in a human re
 * Managing production data as well as various test datasets
 * Cluster-safe database upgrades
 * Automated updates or generation of SQL scripts that can be approved and applied by a DBA
-* [Update rollbacks](manual/rollback.html)
-* Database "[diff](manual:diff)"s
+* [Update rollbacks](documentation/rollback.html)
+* Database "[diff](documentation/diff.html)"s
 * Generating starting change logs from existing databases
-* Generating [database change documentation](manual:dbdoc)
+* Generating [database change documentation](documentation/dbdoc.html)
 
 # Getting Started #
 
-[Download Liquibase](download.html) and read the [Quick-Start Guide](training.html).
+[Download Liquibase](download/index.html) and read the [Quick-Start Guide](training.html).
 
-For more information, you can read the [manual](manual/home.html),[FAQ](faq.html) watch the ["training videos"](training.html), and read 3rd party [articles](articles.html). If you have questions, visit the [forums](forums.html))
+For more information, you can read the [manual](documentation/index.html),[FAQ](faq.html) watch the ["training videos"](training.html), and read 3rd party [articles](articles.html). If you have questions, visit the [forums](community/index.html))
 
 
 # .NET Port #

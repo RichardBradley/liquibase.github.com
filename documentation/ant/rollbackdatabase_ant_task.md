@@ -5,7 +5,7 @@ title: Rollbackdatabase ant task
 
 ## rollbackDatabase Ant Task ##
 
-Rolls back database changes.  See [rollback](rollback.html) page for more information.
+Rolls back database changes.  See [rollback](../rollback.html) page for more information.
 
 ### Sample ###
 
@@ -49,12 +49,12 @@ Rolls back database changes.  See [rollback](rollback.html) page for more inform
 ^ rollbackTag  | Tag to roll back to  | 
 ^ rollbackDate  | Date to roll back to  | 
 ^ rollbackCount  | Number of changeSets to roll back  | 
-^ contexts  | A comma separated list of [contexts](contexts.html) to roll back. If not specified, all contexts are rolled back.  |
+^ contexts  | A comma separated list of [contexts](../contexts.html) to roll back. If not specified, all contexts are rolled back.  |
 ^ databaseChangeLogTableName  | Overrides the name of the databasechangelog table to use //Since Liquibase 1.9// |
 ^ databaseChangeLogLockTableName  | Overrides the name of the databasechangeloglock table to use //Since Liquibase 1.9// |
 
 ### Available Sub Tags ###
-^ changeLogProperty  | Sets a [changelog_parameters](changelog_parameters.html) set //Since Liquibase 1.7// |
+^ changeLogProperty  | Sets a [changelog_parameters](../changelog_parameters.html) set //Since Liquibase 1.7// |
 
 #### Available &lt;changeLogProperty&gt; Parameters ####
 ^ name  | The name of the property to set  | 

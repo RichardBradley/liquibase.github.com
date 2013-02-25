@@ -5,7 +5,7 @@ title: Grails
 
 # Official Liquibase Grails Integration #
 
-The standard Grails Database Migration Plugin (http://grails-plugins.github.com/grails-database-migration/docs/manual/index.html) is built off Liquibase and is the officially supported Liquibase/Grails integration. 
+The standard Grails Database Migration Plugin (http://grails-plugins.github.com/grails-database-migration/docs/documentation/index.html) is built off Liquibase and is the officially supported Liquibase/Grails integration.
 
 # Legacy Liquibase Grails Integration #
 

@@ -8,35 +8,35 @@ title: Home
 
 
 ## Introduction ##
-* [Overview](Overview.html)
+* [Overview](overview.html)
 
 
 ## Building Change-Logs ##
-* <[DatabaseChangeLog](DatabaseChangeLog.html)>
-* <[ChangeSet](ChangeSet.html)>
-* [Refactoring_commands](Refactoring_commands.html)
-* <[Include](Include.html)>
-* <[IncludeAll](IncludeAll.html)>
-* <[Preconditions](Preconditions.html)>
-* [Contexts](Contexts.html)
-* [ChangeLog_Parameters](ChangeLog_Parameters.html)
-* [Hibernate.html](Hibernate.html)
-* [Generate Changelog](Formatted_SQL_Changelogs)
-* [Formatted SQL Changelogs](Formatted_SQL_Changelogs.html)
+* <[DatabaseChangeLog](databasechangelog.html)>
+* <[ChangeSet](changeset.html)>
+* [Refactoring_commands](refactoring_commands.html)
+* <[Include](include.html)>
+* <[IncludeAll](includeall.html)>
+* <[Preconditions](preconditions.html)>
+* [Contexts](contexts.html)
+* [ChangeLog_Parameters](changelog_parameters.html)
+* [Hibernate.html](hibernate.html)
+* [Generate Changelog](generating_changelogs.html)
+* [Formatted SQL Changelogs](formatted_sql_changelogs.html)
 
 ## Liquibase Functionality ##
-* [Update](Update.html)
-* [Rollback](Rollback.html)
-* [Diff](Diff.html)
+* [Update](update.html)
+* [Rollback](rollback.html)
+* [Diff](diff.html)
 * [generating_changelogs.html](generating_changelogs.html)
-* [DBDoc](DBDoc.html)
-* [SQL_Output](SQL_Output.html)
+* [DBDoc](dbdoc.html)
+* [SQL_Output](sql_output.html)
 
 ## Running Liquibase ##
-* [Ant](Ant.html)
-* [Maven](Maven.html)
-* [Spring](Spring.html)
-* [Grails](Grails.html)
+* [Ant](ant/index.html)
+* [Maven](maven/index.html)
+* [Spring](spring.html)
+* [Grails](grails.html)
 * [servlet_listener](servlet_listener.html)
 * [command_line](command_line.html)
 
@@ -50,6 +50,6 @@ title: Home
 * [HSQL](http://www.liquibase.org/samples/changelogs/hsql.changelog.xml)
 
 ## Liquibase Development ##
-* [Development Overview](Development_Overview.html)
-* [Architecture](Architecture.html)
-* [API (Javadoc)](http://www.liquibase.org/api/index.html)
+* [Development Overview](../development/index.html)
+* [Architecture](../development/architecture.html)
+* [API (Javadoc)](http://www.liquibase.org/javadoc/index.html)

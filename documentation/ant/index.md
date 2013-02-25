@@ -25,6 +25,6 @@ The following tasks are available in Ant
   * [changeLogSync ](changeLogSync_ant_task.html)
   * [dropAllDatabaseObjects ](dropAllDatabaseObjects_ant_task.html)
 
-Additional Liquibase commands are supported by the [command_line](command_line.html) that are not supported by the Ant tasks.
+Additional Liquibase commands are supported by the [command_line](../command_line.html) that are not supported by the Ant tasks.
 
 

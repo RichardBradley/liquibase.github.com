@@ -5,7 +5,7 @@ title: V2 upgrade
 
 # 1.x to 2.0 Upgrade Guide #
 
-Liquibase 2.0 introduces several non-compatible changes that will require action to upgrade from 1.9 to 2.0.  Please update this wiki page with additional issues or work-arounds you find.  For a list of new features in 2.0, see the [2.0 features list](v2_features)
+Liquibase 2.0 introduces several non-compatible changes that will require action to upgrade from 1.9 to 2.0.  Please update this wiki page with additional issues or work-arounds you find.  For a list of new features in 2.0, see the [2.0 features list](v2_features.html)
 
 **This page will be updated regularly up to and beyond the 2.0 final release.**
 

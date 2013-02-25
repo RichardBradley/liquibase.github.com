@@ -5,7 +5,7 @@ title: Generatechangelog ant task
 
 ## generateChangeLog Ant Task ##
 
-[Generates changelog](generating_changelogs.html) to re-create an existing database.
+[Generates changelog](../generating_changelogs.html) to re-create an existing database.
 
 
 ### Sample ###
@@ -48,7 +48,7 @@ title: Generatechangelog ant task
 ^ databaseChangeLogLockTableName  | Overrides the name of the databasechangeloglock table to use //Since Liquibase 1.9// |
 
 ### Available Sub Tags ###
-^ changeLogProperty  | Sets a [changelog_parameters](changelog_parameters.html) set //Since Liquibase 1.7// |
+^ changeLogProperty  | Sets a [changelog_parameters](../changelog_parameters.html) set //Since Liquibase 1.7// |
 
 #### Available &lt;changeLogProperty&gt; Parameters ####
 ^ name  | The name of the property to set  | 

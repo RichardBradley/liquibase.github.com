@@ -5,7 +5,7 @@ title: V2 features
 
 # Features and Changes between Liquibase 1.9 and 2.0 #
 
-Liquibase 2.0 is a significant upgrade both in features and in community support.  For help in upgrading to version 2.0, see the [Version 2.0 upgrade guide](v2_upgrade)
+Liquibase 2.0 is a significant upgrade both in features and in community support.  For help in upgrading to version 2.0, see the [Version 2.0 upgrade guide](v2_upgrade.html)
 
 **This page will be updated regularly up to and beyond the 2.0 final release.**
 
@@ -36,7 +36,7 @@ For more information on extending Liquibase for your own use, or to create a pub
   * Informix support
   * Ability to specify databases and contexts in which to specify changelog parameters
   * Ability to specify contexts on modifySql
-  * [ChangeLogPropertyDefined](http://www.liquibase.org/manual/preconditions#changelogpropertydefined) precondition
+  * [ChangeLogPropertyDefined](http://www.liquibase.org/documentation/preconditions#changelogpropertydefined) precondition
   * Performance improvements
   * Lots of bug fixes
 

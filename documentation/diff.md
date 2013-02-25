@@ -14,7 +14,7 @@ As of 1.6, Liquibase has the ability to compare an existing database with a Hibe
 
 ## Running Diff ##
 
-Diff command support is available through the [command_line](command_line.html) and [ant](ant.html) tools.  When diff-ing databases, you specify the target database like you normally do in Liquibase (--url, --username, etc. flags) and you specify the base database with additional flags after the command name.
+Diff command support is available through the [command_line](command_line.html) and [ant](ant/index.html) tools.  When diff-ing databases, you specify the target database like you normally do in Liquibase (--url, --username, etc. flags) and you specify the base database with additional flags after the command name.
 
 ## Example ##
 

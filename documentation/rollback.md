@@ -5,7 +5,7 @@ title: Rollback
 
 # Rolling Back ChangeSets #
 
-Liquibase allows you to undo changes you have made to your database, either automatically or via custom rollback SQL. Rollback support is available in [command_line](command_line.html), [Ant](Ant.html), [Maven](Maven.html), and [Grails](Grails.html).
+Liquibase allows you to undo changes you have made to your database, either automatically or via custom rollback SQL. Rollback support is available in [command_line](command_line.html), [Ant](ant/index.html), [Maven](maven/index.html), and [Grails](Grails.html).
 
 
 ## How Rollback SQL is controlled ##

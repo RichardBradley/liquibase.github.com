@@ -15,9 +15,9 @@ title: Articles
   * [Incorporating Liquibase into NAnt Builds](http://codemonkey.nmonta.com/2008/11/07/incorporating-liquibase-into-nant-build/)
   * [Liquibase - Veritabanı Versiyonlama Sistemi (Turkish)](http://www.jtpd.org/blogs/84964)
 
-If you know of any other good Liquibase resources, please [let us know](community.html) and/or add to this page.
+If you know of any other good Liquibase resources, please [let us know](community/index.html) and/or add to this page.
 ## Articles on this wiki ##
 
-  * [Generating changelogs using Groovy](generate-changelog-with-groovy)
-  * [Generating changelogs using JAXB and Groovy](generate-changelog-with-jaxb-and-groovy)
-  * [Tutorial using Oracle](tutorial-using-oracle)
+  * [Generating changelogs using Groovy](generate-changelog-with-groovy.html)
+  * [Generating changelogs using JAXB and Groovy](generate-changelog-with-jaxb-and-groovy.html)
+  * [Tutorial using Oracle](tutorial-using-oracle.html)

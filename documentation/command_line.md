@@ -6,7 +6,7 @@ title: Command line
 # Liquibase Command Line #
 
 Liquibase can be run from the command line by running
-**liquibase \[options\] \[command\] \[command parameters\]** (optionally, replace the liquibase command with java -jar &lt;path-to-liquibase-jar&gt;). The command line migrator works well when you want to do migrations on demand, but don't have Ant or Maven available such as on servers. The command line migrator also gives you more control over the process than the ["servlet listener"](servlet_listener.html), [Ant](Ant.html), or [Maven](Maven.html) do, allowing you to run maintenance commands like outputting SQL and listing/releasing database changelog locks.
+**liquibase \[options\] \[command\] \[command parameters\]** (optionally, replace the liquibase command with java -jar &lt;path-to-liquibase-jar&gt;). The command line migrator works well when you want to do migrations on demand, but don't have Ant or Maven available such as on servers. The command line migrator also gives you more control over the process than the ["servlet listener"](servlet_listener.html), [Ant](ant/index.html), or [Maven](maven/index.html) do, allowing you to run maintenance commands like outputting SQL and listing/releasing database changelog locks.
 
 Any values found after the command on the command line invocation will be considered a command parameter. The command line processor will validate whether the command line parameters are allowed for the current command. If the current command does not allow command line parameters or the parameter appears to be an incorrect format, then an error message of 'unexpected command parmeter' will be logged and the execution will terminate.
 
@@ -113,7 +113,7 @@ If you run the command line migrator without any arguments, you will get a help 
 
 ## Using a liquibase.properties file ##
 
-If you do not want to always specify options on the command line, you can create a [properties file](liquibase.properties) that contains default values. By default, Liquibase will look for a file called "liquibase.properties" in the current working directory, but you can specify an alternate location with the --defaultsFile flag. If you have specified an option in a properties file and specify the same option on the command line, the value on the command line will override the properties file value.
+If you do not want to always specify options on the command line, you can create a [properties file](liquibase.properties.html) that contains default values. By default, Liquibase will look for a file called "liquibase.properties" in the current working directory, but you can specify an alternate location with the --defaultsFile flag. If you have specified an option in a properties file and specify the same option on the command line, the value on the command line will override the properties file value.
 
 ## Examples ##
 

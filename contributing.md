@@ -9,7 +9,7 @@ Like any open source application, Liquibase is built by many people, usually in 
 
 ## Coding ##
 
-As a software application, there is always a need for coding.  Take a look at the [German](community.html) mailing list.
+As a software application, there is always a need for coding.  Take a look at the [German](community/index.html) mailing list.
 
 ## Documentation ##
 
@@ -21,4 +21,4 @@ Love Liquibase?  Tell your friends.  Blog us.  We don't have an advertising budg
 
 ## User Feedback ##
 
-If you find a bug or know of a feature that would be useful to you, [let us know](community.html).  We try to guess at what end-users want and need, but real feedback from real users is extremely valuable and makes Liquibase better for everyone.
+If you find a bug or know of a feature that would be useful to you, [let us know](community/index.html).  We try to guess at what end-users want and need, but real feedback from real users is extremely valuable and makes Liquibase better for everyone.

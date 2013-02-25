@@ -46,7 +46,7 @@ Drops all database objects owned by the user. Note that functions, procedures an
 ^ classpathref  | A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file **required**  |
 
 ### Available Sub Tags ###
-^ changeLogProperty  | Sets a [changelog_parameters](changelog_parameters.html) set //Since Liquibase 1.7// |
+^ changeLogProperty  | Sets a [changelog_parameters](../changelog_parameters.html) set //Since Liquibase 1.7// |
 
 #### Available &lt;changeLogProperty&gt; Parameters ####
 ^ name  | The name of the property to set  | 

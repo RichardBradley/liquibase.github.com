@@ -41,7 +41,7 @@ Liquibase attempts to execute each changeSet in a transaction that is committed 
 
 ^ id  | An alpha-numeric identifier **required** |
 ^ author  | The creator of the change set **required**  |
-^ dbms  | The type of a database which that changeSet is to be used for. When the migration step is running, it checks the database type against this attribute. Valid database type names are listed on the [supported databases page](../databases) |
+^ dbms  | The type of a database which that changeSet is to be used for. When the migration step is running, it checks the database type against this attribute. Valid database type names are listed on the [supported databases page](../databases.html) |
 ^ runAlways  | Executes the change set on every run, even if it has been run before |
 ^ runOnChange  | Executes the change the first time it is seen and each time the change set has been changed |
 ^ context  | Executes the change if the particular context was passed at runtime. Any string can be used for the context name and they are checked case-insensitively. |

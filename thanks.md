@@ -7,4 +7,4 @@ title: Thanks
 
 Thank you for your generous support, we hope to continue providing a tool that you find very useful.  
 
-As always, if you have any questions or comments, please [contact us](community.html).
+As always, if you have any questions or comments, please [contact us](community/index.html).

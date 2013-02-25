@@ -20,5 +20,5 @@ Note that paths are relative to the current directory.
 For each property defined in the file that matches a property in the goal being invoked that property of the goal will be set.
 
 ### See Also ###
-   * [Using a liquibase.properties file in the command  line](command_line#using_a_liquibase.properties_file)
-   * [Using a liquibase.properties file with the maven plugin](maven#using_configuration_property_files)
+   * [Using a liquibase.properties file in the command  line](command_line.html#using_a_liquibase.properties_file)
+   * [Using a liquibase.properties file with the maven plugin](maven/index.html#using_configuration_property_files)

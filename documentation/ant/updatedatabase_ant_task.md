@@ -54,13 +54,13 @@ FIXME: Annotate which is required.
 ^ promptOnNonLocalDatabase  | If set to true (default is false) a dialog box with warn you if you attempt to run the Liquibase against a database that is not on localhost  |
 ^ dropFirst  | If set to true, Liquibase will first drop all database objects owned by the connected user \[defaults to FALSE\]  |
 ^ classpathref  | A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file  | 
-^ contexts  | A comma separated list of [contexts](contexts.html) to execute. If not specified, all contexts are run.  |
+^ contexts  | A comma separated list of [contexts](../contexts.html) to execute. If not specified, all contexts are run.  |
 ^ currentDateTimeFunction  | Overrides current date time function used in SQL. Useful for unsupported databases  | 
 ^ databaseChangeLogTableName  | Overrides the name of the databasechangelog table to use  |
 ^ databaseChangeLogLockTableName  | Overrides the name of the databasechangeloglock table to use  |
 
 ### Available Sub Tags ###
-^ changeLogProperty  | Sets a [changelog_parameters](changelog_parameters.html) set //Since Liquibase 1.7// |
+^ changeLogProperty  | Sets a [changelog_parameters](../changelog_parameters.html) set //Since Liquibase 1.7// |
 
 #### Available &lt;changeLogProperty&gt; Parameters ####
 ^ name  | The name of the property to set  | 

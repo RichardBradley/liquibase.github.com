@@ -17,7 +17,7 @@ Using Hibernate with Liquibase consists of the following steps:
   - Make needed changes to your Hibernate-mapped objects
   - Run [diffChangeLog](diff.html) between your Hibernate config file and your development database (see examples below)
   - Inspect and modify new change sets (if needed)
-  - [Update](Update.html) your database with the new changes
+  - [Update](update.html) your database with the new changes
 
 ## Example ##
 

@@ -13,7 +13,7 @@ Liquibase is released under the Apache License, version 2.0.
 
 
 ### Where can I get the source code? ###
-The source is available from the main [download](download.html) page
+The source is available from the main [download](download/index.html) page
 
 ### How does Liquibase compare to tools that compare development database with production databases to generate change lists? ###
 Liquibase works better because it //understands// what the changes are. For example, a database comparison program would simply see the "person" table on integration has a "firstname" and a "lastname" column, but on live, the "person" table has a "name" column. It would report that you need to drop the "name" column and add a "firstname" and a "lastname" column. While this would leave you with the correct schema, you would lose everyone's name in the process. With Liquibase, you would have a changeset that says "rename 'name' to 'lastname' and add a 'firstname' column" or, even better, "split the name column on a space and place the values in new 'firstname' and 'lastname' columns, then drop the 'name' column." Knowing //why// they are different allows changes to production databases without the fear of losing valuable data.
@@ -37,4 +37,4 @@ There are times an organization would not want to have changes tied back to a pa
 We do not currently have a way to specify vendor specific extensions to the create table tag, and so you would need to use the `<sql>` tag and specify your create table statement manually. Of course you would be able to configure your mysql install to use innodb as the
 default storage engine with default-storage-engine=INNODB.
 
-Since 1.9, the <[manual/modify_sql](manual/modify_sql.html)> tag can be used to modify the generated SQL.
+Since 1.9, the <[documentation/modify_sql](documentation/modify_sql.html)> tag can be used to modify the generated SQL.

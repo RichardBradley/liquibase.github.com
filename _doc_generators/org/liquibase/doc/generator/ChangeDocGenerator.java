@@ -42,7 +42,7 @@ public class ChangeDocGenerator {
         for (String changeName : new TreeSet<String>(definedChanges.keySet())) {
             content += "<li><a href='"+getChangeDocFileName(changeName)+".html'><span>"+changeName.replaceAll("([A-Z])", " $1") + "</span></a></li>\n";
         }
-        File file = new File("_includes/subnav_change.md");
+        File file = new File("_includes/subnav_documentation_changes.md");
         new FileOutputStream(file).write(content.getBytes());
     }
 

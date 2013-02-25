@@ -79,16 +79,34 @@
             </div>
 
             <div class="span-6 border">
-                {{root }}
                 <ul id="leftnav">
 
-                    {% if page.url contains "/documentation/changes/" %}
-                        {% include subnav_change.md %}
-                    {% elsif page.url contains "/documentation/""%}
-                        {% include subnav_doc.md %}
+                    {% if page.subnav %}
+                        {% assign navPage = page.subnav %}
                     {% else %}
-                        {% include subnav_main.md %}
+                        {% assign navPage = "subnav" %}
+                        {% for dir in dirs offset:1%}
+                            {% if forloop.last %}
+                            {% else %}
+                                {% capture navPage %}{{navPage}}_{{dir}}{%endcapture %}
+                            {% endif %}
+                        {% endfor %}
+                        {% capture navPage %}{{navPage}}.md{%endcapture %}
+                        {% if navPage == "subnav.md" %}
+                            {% assign navPage = "subnav_main.md" %}
+                        {% endif %}
                     {% endif %}
+
+                    {% case navPage %}
+                    {% when "subnav_main.md" %}
+                        {% include subnav_main.md %}
+                    {% when "subnav_documentation.md" %}
+                        {% include subnav_documentation.md %}
+                    {% when "subnav_documentation_changes.md" %}
+                        {% include subnav_documentation_changes.md %}
+                    {% else %}
+                        Unknown Nav {{navPage}}
+                    {% endcase %}
                 </ul>
             </div>
             <div class="span-18 last">

@@ -53,17 +53,17 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: createView-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "createView-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        createView: {
-          catalogName: cat,
-          replaceIfExists: true,
-          schemaName: public,
-          selectQuery: 'select id, name from person where id > 10',
-          viewName: A String
+        "createView": {
+          "catalogName": "cat",
+          "replaceIfExists": !!bool "true",
+          "schemaName": "public",
+          "selectQuery": "select id, name from person where id > 10",
+          "viewName": "A String"
         }
       }]
     

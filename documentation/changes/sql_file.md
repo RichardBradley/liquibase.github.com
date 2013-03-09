@@ -70,19 +70,19 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: sqlFile-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "sqlFile-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        sqlFile: {
-          encoding: A String,
-          endDelimiter: A String,
-          path: A String,
-          relativeToChangelogFile: true,
-          splitStatements: true,
-          sql: A String,
-          stripComments: true
+        "sqlFile": {
+          "encoding": "A String",
+          "endDelimiter": "A String",
+          "path": "A String",
+          "relativeToChangelogFile": !!bool "true",
+          "splitStatements": !!bool "true",
+          "sql": "A String",
+          "stripComments": !!bool "true"
         }
       }]
     

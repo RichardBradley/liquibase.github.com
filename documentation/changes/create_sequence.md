@@ -66,21 +66,21 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: createSequence-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "createSequence-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        createSequence: {
-          catalogName: cat,
-          cycle: true,
-          incrementBy: 2,
-          maxValue: 1000,
-          minValue: 10,
-          ordered: true,
-          schemaName: public,
-          sequenceName: A String,
-          startValue: 5
+        "createSequence": {
+          "catalogName": "cat",
+          "cycle": !!bool "true",
+          "incrementBy": !!int "2",
+          "maxValue": !!int "1000",
+          "minValue": !!int "10",
+          "ordered": !!bool "true",
+          "schemaName": "public",
+          "sequenceName": "A String",
+          "startValue": !!int "5"
         }
       }]
     

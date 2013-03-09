@@ -57,18 +57,18 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: addPrimaryKey-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "addPrimaryKey-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        addPrimaryKey: {
-          catalogName: cat,
-          columnNames: A String,
-          constraintName: pk_person,
-          schemaName: public,
-          tableName: person,
-          tablespace: A String
+        "addPrimaryKey": {
+          "catalogName": "cat",
+          "columnNames": "A String",
+          "constraintName": "pk_person",
+          "schemaName": "public",
+          "tableName": "person",
+          "tablespace": "A String"
         }
       }]
     

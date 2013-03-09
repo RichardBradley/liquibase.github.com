@@ -57,18 +57,18 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: renameColumn-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "renameColumn-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        renameColumn: {
-          catalogName: cat,
-          columnDataType: A String,
-          newColumnName: A String,
-          oldColumnName: A String,
-          schemaName: public,
-          tableName: person
+        "renameColumn": {
+          "catalogName": "cat",
+          "columnDataType": "A String",
+          "newColumnName": "A String",
+          "oldColumnName": "A String",
+          "schemaName": "public",
+          "tableName": "person"
         }
       }]
     

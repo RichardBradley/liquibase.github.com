@@ -51,16 +51,16 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: dropTable-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "dropTable-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        dropTable: {
-          cascadeConstraints: true,
-          catalogName: cat,
-          schemaName: public,
-          tableName: person
+        "dropTable": {
+          "cascadeConstraints": !!bool "true",
+          "catalogName": "cat",
+          "schemaName": "public",
+          "tableName": "person"
         }
       }]
     

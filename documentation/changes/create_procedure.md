@@ -55,14 +55,14 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: createProcedure-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "createProcedure-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        createProcedure: {
-          comments: A String,
-          procedureBody: "CREATE OR REPLACE PROCEDURE testHello\n    IS\n    BEGIN\n\
+        "createProcedure": {
+          "comments": "A String",
+          "procedureBody": "CREATE OR REPLACE PROCEDURE testHello\n    IS\n    BEGIN\n\
             \      DBMS_OUTPUT.PUT_LINE('Hello From The Database!');\n    END;"
         }
       }]

@@ -60,19 +60,19 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: addAutoIncrement-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "addAutoIncrement-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        addAutoIncrement: {
-          catalogName: cat,
-          columnDataType: int,
-          columnName: id,
-          incrementBy: 1,
-          schemaName: public,
-          startWith: 100,
-          tableName: person
+        "addAutoIncrement": {
+          "catalogName": "cat",
+          "columnDataType": "int",
+          "columnName": "id",
+          "incrementBy": !!int "1",
+          "schemaName": "public",
+          "startWith": !!int "100",
+          "tableName": "person"
         }
       }]
     

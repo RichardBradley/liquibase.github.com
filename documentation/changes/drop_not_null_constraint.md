@@ -54,17 +54,17 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: dropNotNullConstraint-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "dropNotNullConstraint-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        dropNotNullConstraint: {
-          catalogName: cat,
-          columnDataType: A String,
-          columnName: id,
-          schemaName: public,
-          tableName: person
+        "dropNotNullConstraint": {
+          "catalogName": "cat",
+          "columnDataType": "A String",
+          "columnName": "id",
+          "schemaName": "public",
+          "tableName": "person"
         }
       }]
     

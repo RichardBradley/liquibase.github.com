@@ -54,17 +54,17 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: dropDefaultValue-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "dropDefaultValue-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        dropDefaultValue: {
-          catalogName: cat,
-          columnDataType: A String,
-          columnName: id,
-          schemaName: public,
-          tableName: person
+        "dropDefaultValue": {
+          "catalogName": "cat",
+          "columnDataType": "A String",
+          "columnName": "id",
+          "schemaName": "public",
+          "tableName": "person"
         }
       }]
     

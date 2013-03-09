@@ -40,12 +40,12 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: anonymous-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "anonymous-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        anonymous: {
+        "anonymous": {
           }
       }]
     

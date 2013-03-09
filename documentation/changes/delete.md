@@ -52,16 +52,16 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: delete-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "delete-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        delete: {
-          catalogName: cat,
-          schemaName: public,
-          tableName: person,
-          whereClause: A String
+        "delete": {
+          "catalogName": "cat",
+          "schemaName": "public",
+          "tableName": "person",
+          "whereClause": "A String"
         }
       }]
     

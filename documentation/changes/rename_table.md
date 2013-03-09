@@ -51,16 +51,16 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: renameTable-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "renameTable-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        renameTable: {
-          catalogName: cat,
-          newTableName: A String,
-          oldTableName: A String,
-          schemaName: public
+        "renameTable": {
+          "catalogName": "cat",
+          "newTableName": "A String",
+          "oldTableName": "A String",
+          "schemaName": "public"
         }
       }]
     

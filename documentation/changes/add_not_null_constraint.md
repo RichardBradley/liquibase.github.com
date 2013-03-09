@@ -57,18 +57,18 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: addNotNullConstraint-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "addNotNullConstraint-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        addNotNullConstraint: {
-          catalogName: cat,
-          columnDataType: A String,
-          columnName: id,
-          defaultNullValue: A String,
-          schemaName: public,
-          tableName: person
+        "addNotNullConstraint": {
+          "catalogName": "cat",
+          "columnDataType": "A String",
+          "columnName": "id",
+          "defaultNullValue": "A String",
+          "schemaName": "public",
+          "tableName": "person"
         }
       }]
     

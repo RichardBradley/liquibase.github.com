@@ -66,25 +66,25 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: createTable-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "createTable-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        createTable: {
-          catalogName: cat,
-          column: [
+        "createTable": {
+          "catalogName": "cat",
+          "column": [
             {
-              column: {
-                name: address,
-                type: varchar(255)
+              "column": {
+                "name": "address",
+                "type": "varchar(255)"
               }
             }]
           ,
-          remarks: A String,
-          schemaName: public,
-          tableName: person,
-          tablespace: A String
+          "remarks": "A String",
+          "schemaName": "public",
+          "tableName": "person",
+          "tablespace": "A String"
         }
       }]
     

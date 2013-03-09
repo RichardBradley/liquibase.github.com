@@ -51,16 +51,16 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: dropPrimaryKey-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "dropPrimaryKey-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        dropPrimaryKey: {
-          catalogName: cat,
-          constraintName: A String,
-          schemaName: public,
-          tableName: person
+        "dropPrimaryKey": {
+          "catalogName": "cat",
+          "constraintName": "A String",
+          "schemaName": "public",
+          "tableName": "person"
         }
       }]
     

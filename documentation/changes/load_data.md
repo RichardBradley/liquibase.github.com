@@ -66,19 +66,19 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: loadData-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "loadData-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        loadData: {
-          catalogName: cat,
-          encoding: UTF-8,
-          file: com/example/users.csv,
-          quotchar: A String,
-          schemaName: public,
-          separator: A String,
-          tableName: person
+        "loadData": {
+          "catalogName": "cat",
+          "encoding": "UTF-8",
+          "file": "com/example/users.csv",
+          "quotchar": "A String",
+          "schemaName": "public",
+          "separator": "A String",
+          "tableName": "person"
         }
       }]
     

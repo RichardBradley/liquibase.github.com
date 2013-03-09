@@ -69,26 +69,26 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: createIndex-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "createIndex-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        createIndex: {
-          catalogName: cat,
-          column: [
+        "createIndex": {
+          "catalogName": "cat",
+          "column": [
             {
-              column: {
-                name: address,
-                type: varchar(255)
+              "column": {
+                "name": "address",
+                "type": "varchar(255)"
               }
             }]
           ,
-          indexName: A String,
-          schemaName: public,
-          tableName: user,
-          tablespace: A String,
-          unique: true
+          "indexName": "A String",
+          "schemaName": "public",
+          "tableName": "user",
+          "tablespace": "A String",
+          "unique": !!bool "true"
         }
       }]
     

@@ -54,17 +54,17 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: dropUniqueConstraint-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "dropUniqueConstraint-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        dropUniqueConstraint: {
-          catalogName: cat,
-          constraintName: A String,
-          schemaName: public,
-          tableName: person,
-          uniqueColumns: A String
+        "dropUniqueConstraint": {
+          "catalogName": "cat",
+          "constraintName": "A String",
+          "schemaName": "public",
+          "tableName": "person",
+          "uniqueColumns": "A String"
         }
       }]
     

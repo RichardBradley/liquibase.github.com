@@ -54,17 +54,17 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: modifyDataType-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "modifyDataType-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        modifyDataType: {
-          catalogName: cat,
-          columnName: id,
-          newDataType: A String,
-          schemaName: public,
-          tableName: person
+        "modifyDataType": {
+          "catalogName": "cat",
+          "columnName": "id",
+          "newDataType": "A String",
+          "schemaName": "public",
+          "tableName": "person"
         }
       }]
     

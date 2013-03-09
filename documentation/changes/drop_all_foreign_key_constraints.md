@@ -48,15 +48,15 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: dropAllForeignKeyConstraints-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "dropAllForeignKeyConstraints-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        dropAllForeignKeyConstraints: {
-          baseTableCatalogName: A String,
-          baseTableName: A String,
-          baseTableSchemaName: A String
+        "dropAllForeignKeyConstraints": {
+          "baseTableCatalogName": "A String",
+          "baseTableName": "A String",
+          "baseTableSchemaName": "A String"
         }
       }]
     

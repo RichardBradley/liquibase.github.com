@@ -48,15 +48,15 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: dropSequence-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "dropSequence-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        dropSequence: {
-          catalogName: cat,
-          schemaName: public,
-          sequenceName: A String
+        "dropSequence": {
+          "catalogName": "cat",
+          "schemaName": "public",
+          "sequenceName": "A String"
         }
       }]
     

@@ -42,13 +42,13 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: stop-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "stop-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        stop: {
-          message: 'What just happened???'
+        "stop": {
+          "message": "What just happened???"
         }
       }]
     

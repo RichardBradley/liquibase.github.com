@@ -81,26 +81,26 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: addForeignKeyConstraint-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "addForeignKeyConstraint-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        addForeignKeyConstraint: {
-          baseColumnNames: person_id,
-          baseTableCatalogName: A String,
-          baseTableName: address,
-          baseTableSchemaName: A String,
-          constraintName: fk_address_person,
-          deferrable: true,
-          initiallyDeferred: true,
-          onDelete: CASCADE,
-          onUpdate: RESTRICT,
-          referencedColumnNames: id,
-          referencedTableCatalogName: A String,
-          referencedTableName: person,
-          referencedTableSchemaName: A String,
-          referencesUniqueColumn: true
+        "addForeignKeyConstraint": {
+          "baseColumnNames": "person_id",
+          "baseTableCatalogName": "A String",
+          "baseTableName": "address",
+          "baseTableSchemaName": "A String",
+          "constraintName": "fk_address_person",
+          "deferrable": !!bool "true",
+          "initiallyDeferred": !!bool "true",
+          "onDelete": "CASCADE",
+          "onUpdate": "RESTRICT",
+          "referencedColumnNames": "id",
+          "referencedTableCatalogName": "A String",
+          "referencedTableName": "person",
+          "referencedTableSchemaName": "A String",
+          "referencesUniqueColumn": !!bool "true"
         }
       }]
     

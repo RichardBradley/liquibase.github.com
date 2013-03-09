@@ -42,13 +42,13 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: executeCommand-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "executeCommand-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        executeCommand: {
-          executable: mysqldump
+        "executeCommand": {
+          "executable": "mysqldump"
         }
       }]
     

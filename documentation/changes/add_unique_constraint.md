@@ -66,21 +66,21 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: addUniqueConstraint-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "addUniqueConstraint-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        addUniqueConstraint: {
-          catalogName: cat,
-          columnNames: A String,
-          constraintName: A String,
-          deferrable: true,
-          disabled: true,
-          initiallyDeferred: true,
-          schemaName: public,
-          tableName: person,
-          tablespace: A String
+        "addUniqueConstraint": {
+          "catalogName": "cat",
+          "columnNames": "A String",
+          "constraintName": "A String",
+          "deferrable": !!bool "true",
+          "disabled": !!bool "true",
+          "initiallyDeferred": !!bool "true",
+          "schemaName": "public",
+          "tableName": "person",
+          "tablespace": "A String"
         }
       }]
     

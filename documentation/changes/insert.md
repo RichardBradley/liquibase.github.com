@@ -60,23 +60,23 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: insert-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "insert-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        insert: {
-          catalogName: cat,
-          column: [
+        "insert": {
+          "catalogName": "cat",
+          "column": [
             {
-              column: {
-                name: address,
-                type: varchar(255)
+              "column": {
+                "name": "address",
+                "type": "varchar(255)"
               }
             }]
           ,
-          schemaName: public,
-          tableName: person
+          "schemaName": "public",
+          "tableName": "person"
         }
       }]
     

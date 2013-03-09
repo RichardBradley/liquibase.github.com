@@ -63,20 +63,20 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: mergeColumns-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "mergeColumns-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        mergeColumns: {
-          catalogName: cat,
-          column1Name: first_name,
-          column2Name: last_name,
-          finalColumnName: full_name,
-          finalColumnType: varchar(255),
-          joinString: A String,
-          schemaName: public,
-          tableName: person
+        "mergeColumns": {
+          "catalogName": "cat",
+          "column1Name": "first_name",
+          "column2Name": "last_name",
+          "finalColumnName": "full_name",
+          "finalColumnType": "varchar(255)",
+          "joinString": "A String",
+          "schemaName": "public",
+          "tableName": "person"
         }
       }]
     

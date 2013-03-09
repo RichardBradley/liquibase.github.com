@@ -42,13 +42,13 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: tagDatabase-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "tagDatabase-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        tagDatabase: {
-          tag: version_1.3
+        "tagDatabase": {
+          "tag": "version_1.3"
         }
       }]
     

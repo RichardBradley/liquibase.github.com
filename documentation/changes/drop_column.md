@@ -51,16 +51,16 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: dropColumn-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "dropColumn-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        dropColumn: {
-          catalogName: cat,
-          columnName: id,
-          schemaName: public,
-          tableName: person
+        "dropColumn": {
+          "catalogName": "cat",
+          "columnName": "id",
+          "schemaName": "public",
+          "tableName": "person"
         }
       }]
     

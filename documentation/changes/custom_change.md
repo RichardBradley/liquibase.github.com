@@ -47,13 +47,13 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: customChange-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "customChange-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        customChange: {
-          param: {
+        "customChange": {
+          "param": {
             }
         }
       }]

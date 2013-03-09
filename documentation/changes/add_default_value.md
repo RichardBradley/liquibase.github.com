@@ -73,25 +73,25 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: addDefaultValue-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "addDefaultValue-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        addDefaultValue: {
-          catalogName: cat,
-          columnDataType: A String,
-          columnName: fileName,
-          defaultValue: newfile.txt,
-          defaultValueBoolean: true,
-          defaultValueComputed: !!liquibase.statement.DatabaseFunction {
+        "addDefaultValue": {
+          "catalogName": "cat",
+          "columnDataType": "A String",
+          "columnName": "fileName",
+          "defaultValue": "newfile.txt",
+          "defaultValueBoolean": !!bool "true",
+          "defaultValueComputed": !!liquibase.statement.DatabaseFunction {
             },
-          defaultValueDate: A String,
-          defaultValueNumeric: A String,
-          defaultValueSequenceNext: !!liquibase.statement.SequenceNextValueFunction {
+          "defaultValueDate": "A String",
+          "defaultValueNumeric": "A String",
+          "defaultValueSequenceNext": !!liquibase.statement.SequenceNextValueFunction {
             },
-          schemaName: public,
-          tableName: file
+          "schemaName": "public",
+          "tableName": "file"
         }
       }]
     

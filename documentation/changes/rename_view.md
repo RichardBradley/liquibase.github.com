@@ -51,16 +51,16 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: renameView-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "renameView-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        renameView: {
-          catalogName: cat,
-          newViewName: A String,
-          oldViewName: A String,
-          schemaName: public
+        "renameView": {
+          "catalogName": "cat",
+          "newViewName": "A String",
+          "oldViewName": "A String",
+          "schemaName": "public"
         }
       }]
     

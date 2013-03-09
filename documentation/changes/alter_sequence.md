@@ -60,19 +60,19 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: alterSequence-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "alterSequence-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        alterSequence: {
-          catalogName: cat,
-          incrementBy: 371717,
-          maxValue: 371717,
-          minValue: 371717,
-          ordered: true,
-          schemaName: public,
-          sequenceName: A String
+        "alterSequence": {
+          "catalogName": "cat",
+          "incrementBy": !!int "371717",
+          "maxValue": !!int "371717",
+          "minValue": !!int "371717",
+          "ordered": !!bool "true",
+          "schemaName": "public",
+          "sequenceName": "A String"
         }
       }]
     

@@ -63,17 +63,17 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: sql-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "sql-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        sql: {
-          comments: A String,
-          endDelimiter: A String,
-          splitStatements: true,
-          sql: A String,
-          stripComments: true
+        "sql": {
+          "comments": "A String",
+          "endDelimiter": "A String",
+          "splitStatements": !!bool "true",
+          "sql": "A String",
+          "stripComments": !!bool "true"
         }
       }]
     

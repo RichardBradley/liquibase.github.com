@@ -69,22 +69,22 @@ changeSet:
 
 {% highlight json %}
 {
-  changeSet: {
-    id: addLookupTable-example,
-    author: liquibase-docs,
-    changes: [
+  "changeSet": {
+    "id": "addLookupTable-example",
+    "author": "liquibase-docs",
+    "changes": [
       {
-        addLookupTable: {
-          constraintName: fk_address_state,
-          existingColumnName: state,
-          existingTableCatalogName: A String,
-          existingTableName: address,
-          existingTableSchemaName: A String,
-          newColumnDataType: char(2),
-          newColumnName: abbreviation,
-          newTableCatalogName: A String,
-          newTableName: state,
-          newTableSchemaName: A String
+        "addLookupTable": {
+          "constraintName": "fk_address_state",
+          "existingColumnName": "state",
+          "existingTableCatalogName": "A String",
+          "existingTableName": "address",
+          "existingTableSchemaName": "A String",
+          "newColumnDataType": "char(2)",
+          "newColumnName": "abbreviation",
+          "newTableCatalogName": "A String",
+          "newTableName": "state",
+          "newTableSchemaName": "A String"
         }
       }]
     

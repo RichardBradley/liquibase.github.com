@@ -9,17 +9,7 @@ title: Change update
 
 # Change: 'update'
 
-Update Data
-
-## XML Sample ##
-
-{% highlight xml %}
-<update catalogName="cat"
-        schemaName="public"
-        tableName="person">
-    <whereClause>A String</whereClause>
-</update>
-{% endhighlight %}
+Updates data in an existing table
 
 ## Available Attributes ##
 
@@ -31,10 +21,48 @@ Update Data
 <tr><td style='vertical-align: top'>whereClause</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 </table>
 
+## Nested Properties ##
+
+<table>
+<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>
+<tr><td style='vertical-align: top'>column</td><td>Data to update<br><br>See the <a href='../columnConfig.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td><td style='vertical-align: top'></td></tr>
+</table>
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <update catalogName="cat"
+            schemaName="public"
+            tableName="person">
+        <whereClause>A String</whereClause>
+        <column name="address" type="varchar(255)"/>
+    </update>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - update:
+      catalogName: cat
+      column:
+      - column:
+          name: address
+          type: varchar(255)
+      schemaName: public
+      tableName: person
+      whereClause: A String
+
+{% endhighlight %}
+
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-UPDATE cat.person SET WHERE A String;
+UPDATE cat.person SET address = NULL WHERE A String;
 
 
 {% endhighlight %}

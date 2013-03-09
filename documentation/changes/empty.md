@@ -11,17 +11,30 @@ title: Change empty
 
 empty
 
-## XML Sample ##
-
-{% highlight xml %}
-<empty/>
-{% endhighlight %}
-
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <empty/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - empty: {}
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (MySQL)
 

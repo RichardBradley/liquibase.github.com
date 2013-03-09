@@ -9,20 +9,34 @@ title: Change stop
 
 # Change: 'stop'
 
-Stop Execution
-
-## XML Sample ##
-
-{% highlight xml %}
-<stop message="A String"/>
-{% endhighlight %}
+Stops Liquibase execution with a message. Mainly useful for debugging and stepping through a changelog
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>message</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>message</td><td>Message to output when execution stops</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <stop message="What just happened???"/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - stop:
+      message: What just happened???
+
+{% endhighlight %}
 
 ## Database Support
 

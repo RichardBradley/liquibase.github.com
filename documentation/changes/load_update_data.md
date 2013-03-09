@@ -9,34 +9,57 @@ title: Change loadUpdateData
 
 # Change: 'loadUpdateData'
 
-Smart Load Data
+Loads or updates data from a CSV file into an existing table. Differs from loadData by issuing a SQL batch that checks for the existence of a record. If found, the record is UPDATEd, else the record is INSERTed. Also, generates DELETE statements for a rollback.
 
-## XML Sample ##
-
-{% highlight xml %}
-<loadUpdateData catalogName="cat"
-        encoding="UTF-8"
-        file="A String"
-        primaryKey="A String"
-        quotchar="A String"
-        schemaName="public"
-        separator="A String"
-        tableName="person"/>
-{% endhighlight %}
+A value of NULL in a cell will be converted to a database NULL rather than the string 'NULL'
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>encoding</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>file</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>primaryKey</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
+<tr><td style='vertical-align: top'>encoding</td><td>Encoding of the CSV file (defaults to UTF-8)</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>file</td><td>CSV file to load</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>primaryKey</td><td>Comma delimited list of the columns for the primary key</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>quotchar</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>separator</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>tableName</td><td>Name of the table to insert or update data in</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <loadUpdateData catalogName="cat"
+            encoding="UTF-8"
+            file="com/example/users.csv"
+            primaryKey="A String"
+            quotchar="A String"
+            schemaName="public"
+            separator="A String"
+            tableName="person"/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - loadUpdateData:
+      catalogName: cat
+      encoding: UTF-8
+      file: com/example/users.csv
+      primaryKey: A String
+      quotchar: A String
+      schemaName: public
+      separator: A String
+      tableName: person
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (MySQL)
 

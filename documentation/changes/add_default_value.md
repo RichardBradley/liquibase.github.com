@@ -9,45 +9,70 @@ title: Change addDefaultValue
 
 # Change: 'addDefaultValue'
 
-Add Default Value
-
-## XML Sample ##
-
-{% highlight xml %}
-<addDefaultValue catalogName="cat"
-        columnDataType="A String"
-        columnName="id"
-        defaultValue="A String"
-        defaultValueBoolean="true"
-        defaultValueComputed="now"
-        defaultValueDate="A String"
-        defaultValueNumeric="A String"
-        defaultValueSequenceNext="seq_name"
-        schemaName="public"
-        tableName="person"/>
-{% endhighlight %}
+Adds a default value to the database definition for the specified column.
+One of defaultValue, defaultValueNumeric, defaultValueBoolean or defaultValueDate must be set
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>columnDataType</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>columnName</td><td>Name of the column</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>defaultValue</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>columnName</td><td>Name of the column to add a default value to</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>defaultValue</td><td>Default value</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>defaultValueBoolean</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>defaultValueComputed</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>defaultValueDate</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>defaultValueNumeric</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>defaultValueSequenceNext</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>tableName</td><td>Name of the table to containing the column</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <addDefaultValue catalogName="cat"
+            columnDataType="A String"
+            columnName="fileName"
+            defaultValue="newfile.txt"
+            defaultValueBoolean="true"
+            defaultValueComputed="now"
+            defaultValueDate="A String"
+            defaultValueNumeric="A String"
+            defaultValueSequenceNext="seq_name"
+            schemaName="public"
+            tableName="file"/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - addDefaultValue:
+      catalogName: cat
+      columnDataType: A String
+      columnName: fileName
+      defaultValue: newfile.txt
+      defaultValueBoolean: true
+      defaultValueComputed: !!liquibase.statement.DatabaseFunction {}
+      defaultValueDate: A String
+      defaultValueNumeric: A String
+      defaultValueSequenceNext: !!liquibase.statement.SequenceNextValueFunction {}
+      schemaName: public
+      tableName: file
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE cat.person ALTER id SET DEFAULT 'A String';
+ALTER TABLE cat.file ALTER fileName SET DEFAULT 'newfile.txt';
 
 
 {% endhighlight %}

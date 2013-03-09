@@ -9,35 +9,66 @@ title: Change createIndex
 
 # Change: 'createIndex'
 
-Create Index
-
-## XML Sample ##
-
-{% highlight xml %}
-<createIndex catalogName="cat"
-        indexName="A String"
-        schemaName="public"
-        tableName="person"
-        tablespace="A String"
-        unique="true"/>
-{% endhighlight %}
+Creates an index on an existing column or set of columns.
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>indexName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
+<tr><td style='vertical-align: top'>indexName</td><td>Name of the index to create</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tablespace</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>unique</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>tableName</td><td>Name of the table to add the index to</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>tablespace</td><td>Tablepace to create the index in.</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>unique</td><td>Unique values index</td><td style='vertical-align: top'></td><td style='vertical-align: top'>1.8</td></tr>
 </table>
+
+## Nested Properties ##
+
+<table>
+<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>
+<tr><td style='vertical-align: top'>column</td><td>Column(s) to add to the index<br><br>See the <a href='../columnConfig.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td><td style='vertical-align: top'></td></tr>
+</table>
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <createIndex catalogName="cat"
+            indexName="A String"
+            schemaName="public"
+            tableName="user"
+            tablespace="A String"
+            unique="true">
+        <column name="address" type="varchar(255)"/>
+    </createIndex>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - createIndex:
+      catalogName: cat
+      column:
+      - column:
+          name: address
+          type: varchar(255)
+      indexName: A String
+      schemaName: public
+      tableName: user
+      tablespace: A String
+      unique: true
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-CREATE UNIQUE INDEX A String ON cat.person();
+CREATE UNIQUE INDEX A String ON cat.user(address);
 
 
 {% endhighlight %}

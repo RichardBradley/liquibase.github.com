@@ -9,26 +9,43 @@ title: Change dropIndex
 
 # Change: 'dropIndex'
 
-Drop Index
-
-## XML Sample ##
-
-{% highlight xml %}
-<dropIndex catalogName="cat"
-        indexName="A String"
-        schemaName="public"
-        tableName="person"/>
-{% endhighlight %}
+Drops an existing index
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>indexName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
+<tr><td style='vertical-align: top'>indexName</td><td>Name of the index to drop</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>tableName</td><td>Name fo the indexed table.</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <dropIndex catalogName="cat"
+            indexName="A String"
+            schemaName="public"
+            tableName="person"/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - dropIndex:
+      catalogName: cat
+      indexName: A String
+      schemaName: public
+      tableName: person
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (MySQL)
 

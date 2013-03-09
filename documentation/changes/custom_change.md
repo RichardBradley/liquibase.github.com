@@ -9,19 +9,39 @@ title: Change customChange
 
 # Change: 'customChange'
 
-Custom Change
+Although Liquibase tries to provide a wide range of database refactorings, there are times you may want to create your own custom refactoring class.
 
-## XML Sample ##
+To create your own custom refactoring, simply create a class that implements the liquibase.change.custom.CustomSqlChange or liquibase.change.custom.CustomTaskChange interface and use the &lt;custom&gt; tag in your change set.
 
-{% highlight xml %}
-<customChange/>
-{% endhighlight %}
+If your change can be rolled back, implement the liquibase.change.custom.CustomSqlRollback interface as well.
+
+For a sample custom change class, see liquibase.change.custom.ExampleCustomSqlChange
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <customChange/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - customChange:
+      param: {}
+
+{% endhighlight %}
 
 ## Database Support
 

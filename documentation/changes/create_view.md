@@ -9,32 +9,51 @@ title: Change createView
 
 # Change: 'createView'
 
-Create View
-
-## XML Sample ##
-
-{% highlight xml %}
-<createView catalogName="cat"
-        replaceIfExists="true"
-        schemaName="public"
-        viewName="A String">A String</createView>
-{% endhighlight %}
+Create a new database view
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>replaceIfExists</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
+<tr><td style='vertical-align: top'>replaceIfExists</td><td>Use 'create or replace' syntax</td><td style='vertical-align: top'></td><td style='vertical-align: top'>1.5</td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>selectQuery</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>viewName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>selectQuery</td><td>SQL for generating the view</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>viewName</td><td>Name of the view to create</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <createView catalogName="cat"
+            replaceIfExists="true"
+            schemaName="public"
+            viewName="A String">select id, name from person where id > 10</createView>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - createView:
+      catalogName: cat
+      replaceIfExists: true
+      schemaName: public
+      selectQuery: select id, name from person where id > 10
+      viewName: A String
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-CREATE OR REPLACE VIEW cat.A String AS A String;
+CREATE OR REPLACE VIEW cat.A String AS select id,
+ name from person where id > 10;
 
 
 {% endhighlight %}

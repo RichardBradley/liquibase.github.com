@@ -9,20 +9,34 @@ title: Change executeCommand
 
 # Change: 'executeCommand'
 
-Execute Shell Command
-
-## XML Sample ##
-
-{% highlight xml %}
-<executeCommand executable="A String"/>
-{% endhighlight %}
+Executes a system command. Because this refactoring doesn't generate SQL like most, using LiquiBase commands such as migrateSQL may not work as expected. Therefore, if at all possible use refactorings that generate SQL.
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>executable</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>executable</td><td>Name of the executable to run</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <executeCommand executable="mysqldump"/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - executeCommand:
+      executable: mysqldump
+
+{% endhighlight %}
 
 ## Database Support
 

@@ -9,32 +9,52 @@ title: Change alterSequence
 
 # Change: 'alterSequence'
 
-Alter Sequence
-
-## XML Sample ##
-
-{% highlight xml %}
-<alterSequence catalogName="cat"
-        incrementBy="371717"
-        maxValue="371717"
-        minValue="371717"
-        ordered="true"
-        schemaName="public"
-        sequenceName="A String"/>
-{% endhighlight %}
+Alter properties of an existing sequence
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>incrementBy</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>maxValue</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>minValue</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>ordered</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
+<tr><td style='vertical-align: top'>incrementBy</td><td>New amount the sequence should increment by</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>maxValue</td><td>New maximum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>minValue</td><td>New minimum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>ordered</td><td>Does the sequence need to be guaranteed to be genererated inm the order of request?</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>sequenceName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <alterSequence catalogName="cat"
+            incrementBy="371717"
+            maxValue="371717"
+            minValue="371717"
+            ordered="true"
+            schemaName="public"
+            sequenceName="A String"/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - alterSequence:
+      catalogName: cat
+      incrementBy: 371717
+      maxValue: 371717
+      minValue: 371717
+      ordered: true
+      schemaName: public
+      sequenceName: A String
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (Oracle)
 

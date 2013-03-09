@@ -9,29 +9,57 @@ title: Change insert
 
 # Change: 'insert'
 
-Insert Row
-
-## XML Sample ##
-
-{% highlight xml %}
-<insert catalogName="cat"
-        schemaName="public"
-        tableName="person"/>
-{% endhighlight %}
+Inserts data into an existing table
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>tableName</td><td>Name of the table to insert data into</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
+
+## Nested Properties ##
+
+<table>
+<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>
+<tr><td style='vertical-align: top'>column</td><td>Data to insert into columns<br><br>See the <a href='../columnConfig.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td><td style='vertical-align: top'></td></tr>
+</table>
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <insert catalogName="cat"
+            schemaName="public"
+            tableName="person">
+        <column name="address" type="varchar(255)"/>
+    </insert>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - insert:
+      catalogName: cat
+      column:
+      - column:
+          name: address
+          type: varchar(255)
+      schemaName: public
+      tableName: person
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-INSERT INTO cat.person() VALUES();
+INSERT INTO cat.person (address) VALUES (NULL);
 
 
 {% endhighlight %}

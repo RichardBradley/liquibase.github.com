@@ -9,24 +9,40 @@ title: Change dropAllForeignKeyConstraints
 
 # Change: 'dropAllForeignKeyConstraints'
 
-Drop All Foreign Key Constraints
-
-## XML Sample ##
-
-{% highlight xml %}
-<dropAllForeignKeyConstraints baseTableCatalogName="A String"
-        baseTableName="A String"
-        baseTableSchemaName="A String"/>
-{% endhighlight %}
+Drops all foreign key constraints for a table
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>baseTableCatalogName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>baseTableCatalogName</td><td>Name of the table containing columns constrained by foreign keys</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>baseTableName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>baseTableSchemaName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <dropAllForeignKeyConstraints baseTableCatalogName="A String"
+            baseTableName="A String"
+            baseTableSchemaName="A String"/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - dropAllForeignKeyConstraints:
+      baseTableCatalogName: A String
+      baseTableName: A String
+      baseTableSchemaName: A String
+
+{% endhighlight %}
 
 ## Database Support
 

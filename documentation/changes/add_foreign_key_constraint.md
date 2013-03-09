@@ -9,51 +9,78 @@ title: Change addForeignKeyConstraint
 
 # Change: 'addForeignKeyConstraint'
 
-Add Foreign Key Constraint
-
-## XML Sample ##
-
-{% highlight xml %}
-<addForeignKeyConstraint baseColumnNames="A String"
-        baseTableCatalogName="A String"
-        baseTableName="A String"
-        baseTableSchemaName="A String"
-        constraintName="A String"
-        deferrable="true"
-        initiallyDeferred="true"
-        onDelete="A String"
-        onUpdate="A String"
-        referencedColumnNames="A String"
-        referencedTableCatalogName="A String"
-        referencedTableName="A String"
-        referencedTableSchemaName="A String"
-        referencesUniqueColumn="true"/>
-{% endhighlight %}
+Adds a foreign key constraint to an existing column
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>baseColumnNames</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>baseTableCatalogName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>baseTableName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>baseColumnNames</td><td>Name of column(s) to place the foreign key constraint on. Comma-separate if multiple</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>baseTableCatalogName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
+<tr><td style='vertical-align: top'>baseTableName</td><td>Name of the table containing the column to constrain</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>baseTableSchemaName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>constraintName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>constraintName</td><td>Name of the new foreign key constraint</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>deferrable</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>initiallyDeferred</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>onDelete</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>onUpdate</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>referencedColumnNames</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>referencedTableCatalogName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>referencedTableName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>onDelete</td><td>ON DELETE functionality. Possible values: 'CASCADE', 'SET NULL', 'SET DEFAULT', 'RESTRICT', 'NO ACTION'</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>onUpdate</td><td>ON UPDATE functionality. Possible values: 'CASCADE', 'SET NULL', 'SET DEFAULT', 'RESTRICT', 'NO ACTION'</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>referencedColumnNames</td><td>Column(s) the foreign key points to. Comma-separate if multiple</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>referencedTableCatalogName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
+<tr><td style='vertical-align: top'>referencedTableName</td><td>Name of the table the foreign key points to</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>referencedTableSchemaName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>referencesUniqueColumn</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 </table>
 
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <addForeignKeyConstraint baseColumnNames="person_id"
+            baseTableCatalogName="A String"
+            baseTableName="address"
+            baseTableSchemaName="A String"
+            constraintName="fk_address_person"
+            deferrable="true"
+            initiallyDeferred="true"
+            onDelete="CASCADE"
+            onUpdate="RESTRICT"
+            referencedColumnNames="id"
+            referencedTableCatalogName="A String"
+            referencedTableName="person"
+            referencedTableSchemaName="A String"
+            referencesUniqueColumn="true"/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - addForeignKeyConstraint:
+      baseColumnNames: person_id
+      baseTableCatalogName: A String
+      baseTableName: address
+      baseTableSchemaName: A String
+      constraintName: fk_address_person
+      deferrable: true
+      initiallyDeferred: true
+      onDelete: CASCADE
+      onUpdate: RESTRICT
+      referencedColumnNames: id
+      referencedTableCatalogName: A String
+      referencedTableName: person
+      referencedTableSchemaName: A String
+      referencesUniqueColumn: true
+
+{% endhighlight %}
+
 ## SQL Generated From Above Sample (Oracle)
 
 {% highlight sql %}
-ALTER TABLE A String.A String ADD CONSTRAINT A String FOREIGN KEY (A String) REFERENCES A String.A String (A String) ON DELETE A String DEFERRABLE INITIALLY DEFERRED;
+ALTER TABLE A String.address ADD CONSTRAINT fk_address_person FOREIGN KEY (person_id) REFERENCES A String.person (id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED;
 
 
 {% endhighlight %}

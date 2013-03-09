@@ -9,31 +9,48 @@ title: Change dropForeignKeyConstraint
 
 # Change: 'dropForeignKeyConstraint'
 
-Drop Foreign Key Constraint
-
-## XML Sample ##
-
-{% highlight xml %}
-<dropForeignKeyConstraint baseTableCatalogName="A String"
-        baseTableName="A String"
-        baseTableSchemaName="A String"
-        constraintName="A String"/>
-{% endhighlight %}
+Drops an existing foreign key
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>baseTableCatalogName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>baseTableName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>baseTableCatalogName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
+<tr><td style='vertical-align: top'>baseTableName</td><td>Name of the table containing the column constrained by the foreign key</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>baseTableSchemaName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>constraintName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>constraintName</td><td>Name of the foreign key constraint to drop</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <dropForeignKeyConstraint baseTableCatalogName="A String"
+            baseTableName="A String"
+            baseTableSchemaName="A String"
+            constraintName="fk_address_person"/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - dropForeignKeyConstraint:
+      baseTableCatalogName: A String
+      baseTableName: A String
+      baseTableSchemaName: A String
+      constraintName: fk_address_person
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE A String.A String DROP FOREIGN KEY A String;
+ALTER TABLE A String.A String DROP FOREIGN KEY fk_address_person;
 
 
 {% endhighlight %}

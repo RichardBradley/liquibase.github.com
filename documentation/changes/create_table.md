@@ -11,31 +11,61 @@ title: Change createTable
 
 Create Table
 
-## XML Sample ##
-
-{% highlight xml %}
-<createTable catalogName="cat"
-        remarks="A String"
-        schemaName="public"
-        tableName="person"
-        tablespace="A String"/>
-{% endhighlight %}
-
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>remarks</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tablespace</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 </table>
 
+## Nested Properties ##
+
+<table>
+<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>
+<tr><td style='vertical-align: top'>column</td><td>null<br><br>See the <a href='../columnConfig.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td><td style='vertical-align: top'></td></tr>
+</table>
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <createTable catalogName="cat"
+            remarks="A String"
+            schemaName="public"
+            tableName="person"
+            tablespace="A String">
+        <column name="address" type="varchar(255)"/>
+    </createTable>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - createTable:
+      catalogName: cat
+      column:
+      - column:
+          name: address
+          type: varchar(255)
+      remarks: A String
+      schemaName: public
+      tableName: person
+      tablespace: A String
+
+{% endhighlight %}
+
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-CREATE TABLE cat.person ();
+CREATE TABLE cat.person (address VARCHAR(255) NULL);
 
 ALTER TABLE cat.person COMMENT = 'A String';
 

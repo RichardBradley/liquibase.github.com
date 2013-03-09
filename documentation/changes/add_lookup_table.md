@@ -9,49 +9,72 @@ title: Change addLookupTable
 
 # Change: 'addLookupTable'
 
-Add Lookup Table
-
-## XML Sample ##
-
-{% highlight xml %}
-<addLookupTable constraintName="A String"
-        existingColumnName="A String"
-        existingTableCatalogName="A String"
-        existingTableName="A String"
-        existingTableSchemaName="A String"
-        newColumnDataType="A String"
-        newColumnName="A String"
-        newTableCatalogName="A String"
-        newTableName="A String"
-        newTableSchemaName="A String"/>
-{% endhighlight %}
+Creates a lookup table containing values stored in a column and creates a foreign key to the new table.
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>constraintName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>existingColumnName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>constraintName</td><td>Name of the foreign-key constraint to create between the existing table and the lookup table</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>existingColumnName</td><td>Name of the column containing the data to extract</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>existingTableCatalogName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>existingTableName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>existingTableName</td><td>Name of the table containing the data to extract</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>existingTableSchemaName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>newColumnDataType</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>newColumnName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>newTableCatalogName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>newTableName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>newColumnDataType</td><td>Data type of the new table column</td><td style='vertical-align: top'>informix,mysql,mssql</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>newColumnName</td><td>Name of the column in the new table to create</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>newTableCatalogName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
+<tr><td style='vertical-align: top'>newTableName</td><td>Name of lookup table to create</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>newTableSchemaName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <addLookupTable constraintName="fk_address_state"
+            existingColumnName="state"
+            existingTableCatalogName="A String"
+            existingTableName="address"
+            existingTableSchemaName="A String"
+            newColumnDataType="char(2)"
+            newColumnName="abbreviation"
+            newTableCatalogName="A String"
+            newTableName="state"
+            newTableSchemaName="A String"/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - addLookupTable:
+      constraintName: fk_address_state
+      existingColumnName: state
+      existingTableCatalogName: A String
+      existingTableName: address
+      existingTableSchemaName: A String
+      newColumnDataType: char(2)
+      newColumnName: abbreviation
+      newTableCatalogName: A String
+      newTableName: state
+      newTableSchemaName: A String
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-CREATE TABLE A String.A String AS SELECT DISTINCT A String AS A String FROM A String.A String WHERE A String IS NOT NULL;
+CREATE TABLE A String.state AS SELECT DISTINCT state AS abbreviation FROM A String.address WHERE state IS NOT NULL;
 
-ALTER TABLE A String.A String MODIFY A String A STRING NOT NULL;
+ALTER TABLE A String.state MODIFY abbreviation CHAR(2) NOT NULL;
 
-ALTER TABLE A String.A String ADD PRIMARY KEY (A String);
+ALTER TABLE A String.state ADD PRIMARY KEY (abbreviation);
 
-ALTER TABLE A String.A String ADD CONSTRAINT A String FOREIGN KEY (A String) REFERENCES A String.A String (A String);
+ALTER TABLE A String.address ADD CONSTRAINT fk_address_state FOREIGN KEY (state) REFERENCES A String.state (abbreviation);
 
 
 {% endhighlight %}

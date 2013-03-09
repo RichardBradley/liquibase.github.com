@@ -9,26 +9,43 @@ title: Change renameView
 
 # Change: 'renameView'
 
-Rename View
-
-## XML Sample ##
-
-{% highlight xml %}
-<renameView catalogName="cat"
-        newViewName="A String"
-        oldViewName="A String"
-        schemaName="public"/>
-{% endhighlight %}
+Renames an existing view
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>newViewName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>oldViewName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
+<tr><td style='vertical-align: top'>newViewName</td><td>Name to rename the view to</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>oldViewName</td><td>Name of the view to rename</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <renameView catalogName="cat"
+            newViewName="A String"
+            oldViewName="A String"
+            schemaName="public"/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - renameView:
+      catalogName: cat
+      newViewName: A String
+      oldViewName: A String
+      schemaName: public
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (MySQL)
 

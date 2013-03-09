@@ -9,36 +9,58 @@ title: Change addUniqueConstraint
 
 # Change: 'addUniqueConstraint'
 
-Add Unique Constraint
-
-## XML Sample ##
-
-{% highlight xml %}
-<addUniqueConstraint catalogName="cat"
-        columnNames="A String"
-        constraintName="A String"
-        deferrable="true"
-        disabled="true"
-        initiallyDeferred="true"
-        schemaName="public"
-        tableName="person"
-        tablespace="A String"/>
-{% endhighlight %}
+Adds a unique constrant to an existing column or set of columns.
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>columnNames</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>constraintName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
+<tr><td style='vertical-align: top'>columnNames</td><td>Name of the column(s) to create the unique constraint on. Comma separated if multiple</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>constraintName</td><td>Name of the unique constraint</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>deferrable</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>disabled</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>initiallyDeferred</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tablespace</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>tableName</td><td>Name of the table to create the unique constraint on</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>tablespace</td><td>'Tablespace' to create the index in. Corresponds to file group in mssql</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <addUniqueConstraint catalogName="cat"
+            columnNames="A String"
+            constraintName="A String"
+            deferrable="true"
+            disabled="true"
+            initiallyDeferred="true"
+            schemaName="public"
+            tableName="person"
+            tablespace="A String"/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - addUniqueConstraint:
+      catalogName: cat
+      columnNames: A String
+      constraintName: A String
+      deferrable: true
+      disabled: true
+      initiallyDeferred: true
+      schemaName: public
+      tableName: person
+      tablespace: A String
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (MySQL)
 

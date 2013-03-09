@@ -9,28 +9,46 @@ title: Change dropDefaultValue
 
 # Change: 'dropDefaultValue'
 
-Drop Default Value
-
-## XML Sample ##
-
-{% highlight xml %}
-<dropDefaultValue catalogName="cat"
-        columnDataType="A String"
-        columnName="id"
-        schemaName="public"
-        tableName="person"/>
-{% endhighlight %}
+Removes the database default value for a column
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>columnDataType</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>columnName</td><td>Name of the column</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>columnName</td><td>Name of column to drop the default value from</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>tableName</td><td>Name of the table to containing the column</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <dropDefaultValue catalogName="cat"
+            columnDataType="A String"
+            columnName="id"
+            schemaName="public"
+            tableName="person"/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - dropDefaultValue:
+      catalogName: cat
+      columnDataType: A String
+      columnName: id
+      schemaName: public
+      tableName: person
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (MySQL)
 

@@ -9,17 +9,7 @@ title: Change delete
 
 # Change: 'delete'
 
-Delete Data
-
-## XML Sample ##
-
-{% highlight xml %}
-<delete catalogName="cat"
-        schemaName="public"
-        tableName="person">
-    <whereClause>A String</whereClause>
-</delete>
-{% endhighlight %}
+Deletes data from an existing table
 
 ## Available Attributes ##
 
@@ -30,6 +20,33 @@ Delete Data
 <tr><td style='vertical-align: top'>tableName</td><td>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>whereClause</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <delete catalogName="cat"
+            schemaName="public"
+            tableName="person">
+        <whereClause>A String</whereClause>
+    </delete>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - delete:
+      catalogName: cat
+      schemaName: public
+      tableName: person
+      whereClause: A String
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (MySQL)
 

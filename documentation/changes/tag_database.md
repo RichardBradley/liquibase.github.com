@@ -9,25 +9,39 @@ title: Change tagDatabase
 
 # Change: 'tagDatabase'
 
-Tag Database
-
-## XML Sample ##
-
-{% highlight xml %}
-<tagDatabase tag="A String"/>
-{% endhighlight %}
+Applies a tag to the database for future rollback
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>tag</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>tag</td><td>Tag to apply</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <tagDatabase tag="version_1.3"/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - tagDatabase:
+      tag: version_1.3
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-UPDATE DATABASECHANGELOG SET TAG = 'A String' WHERE DATEEXECUTED = (SELECT MAX(DATEEXECUTED) FROM (SELECT DATEEXECUTED FROM DATABASECHANGELOG) AS X);
+UPDATE DATABASECHANGELOG SET TAG = 'version_1.3' WHERE DATEEXECUTED = (SELECT MAX(DATEEXECUTED) FROM (SELECT DATEEXECUTED FROM DATABASECHANGELOG) AS X);
 
 
 {% endhighlight %}

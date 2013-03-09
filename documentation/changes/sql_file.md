@@ -9,31 +9,62 @@ title: Change sqlFile
 
 # Change: 'sqlFile'
 
-SQL From File
+The 'sqlFile' tag allows you to specify any sql statements and have it stored external in a file. It is useful for complex changes that are not supported through LiquiBase's automated refactoring tags such as stored procedures.
 
-## XML Sample ##
+The sqlFile refactoring finds the file by searching in the following order:
 
-{% highlight xml %}
-<sqlFile encoding="A String"
-        endDelimiter="A String"
-        path="A String"
-        relativeToChangelogFile="true"
-        splitStatements="true"
-        stripComments="true">A String</sqlFile>
-{% endhighlight %}
+The file is searched for in the classpath. This can be manually set and by default the liquibase startup script adds the current directory when run.
+The file is searched for using the file attribute as a file name. This allows absolute paths to be used or relative paths to the working directory to be used.
+The 'sqlFile' tag can also support multiline statements in the same file. Statements can either be split using a ; at the end of the last line of the SQL or a go on its own on the line between the statements can be used.Multiline SQL statements are also supported and only a ; or go statement will finish a statement, a new line is not enough. Files containing a single statement do not need to use a ; or go.
+
+The sql file can also contain comments of either of the following formats:
+
+A multiline comment that starts with /\* and ends with \*/.
+A single line comment starting with &lt;space&gt;--&lt;space&gt; and finishing at the end of the line
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>encoding</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>endDelimiter</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>path</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>endDelimiter</td><td>Delimiter to apply to the end of the statement. Defaults to ';', may be set to ''.</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>path</td><td>The file path of the SQL file to load</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>relativeToChangelogFile</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>splitStatements</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>splitStatements</td><td>Set to false to not have liquibase split statements on ;'s and GO's. Defaults to true if not set</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>sql</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>stripComments</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>stripComments</td><td>Set to true to remove any comments in the SQL before executing, otherwise false. Defaults to false if not set</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <sqlFile encoding="A String"
+            endDelimiter="A String"
+            path="A String"
+            relativeToChangelogFile="true"
+            splitStatements="true"
+            stripComments="true">A String</sqlFile>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - sqlFile:
+      encoding: A String
+      endDelimiter: A String
+      path: A String
+      relativeToChangelogFile: true
+      splitStatements: true
+      sql: A String
+      stripComments: true
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (MySQL)
 

@@ -9,47 +9,68 @@ title: Change mergeColumns
 
 # Change: 'mergeColumns'
 
-Merge Column
-
-## XML Sample ##
-
-{% highlight xml %}
-<mergeColumns catalogName="cat"
-        column1Name="A String"
-        column2Name="A String"
-        finalColumnName="A String"
-        finalColumnType="A String"
-        joinString="A String"
-        schemaName="public"
-        tableName="person"/>
-{% endhighlight %}
+Concatenates the values in two columns, joins them by with string, and stores the resulting value in a new column.
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>column1Name</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>column2Name</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>finalColumnName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>finalColumnType</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>joinString</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>column1Name</td><td>Name of the column containing the first half of the data</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>column2Name</td><td>Name of the column containing the second half of the data</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>finalColumnName</td><td>Name of the column to create</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>finalColumnType</td><td>Data type of the column to create</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>joinString</td><td>String to place include between the values from column1 and column2 (may be empty)</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>tableName</td><td>Name of the table containing the columns to join</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <mergeColumns catalogName="cat"
+            column1Name="first_name"
+            column2Name="last_name"
+            finalColumnName="full_name"
+            finalColumnType="varchar(255)"
+            joinString="A String"
+            schemaName="public"
+            tableName="person"/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - mergeColumns:
+      catalogName: cat
+      column1Name: first_name
+      column2Name: last_name
+      finalColumnName: full_name
+      finalColumnType: varchar(255)
+      joinString: A String
+      schemaName: public
+      tableName: person
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE public.person ADD A String A STRING;
+ALTER TABLE public.person ADD full_name VARCHAR(255);
 
-UPDATE cat.person SET A String = CONCAT_WS(A String,
+UPDATE cat.person SET full_name = CONCAT_WS(first_name,
  'A String',
- A String);
+ last_name);
 
-ALTER TABLE public.person DROP COLUMN A String;
+ALTER TABLE public.person DROP COLUMN first_name;
 
-ALTER TABLE public.person DROP COLUMN A String;
+ALTER TABLE public.person DROP COLUMN last_name;
 
 
 {% endhighlight %}

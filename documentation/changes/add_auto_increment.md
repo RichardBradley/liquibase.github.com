@@ -11,23 +11,11 @@ title: Change addAutoIncrement
 
 Converts an existing column to be an auto-increment (a.k.a 'identity') column
 
-## XML Sample ##
-
-{% highlight xml %}
-<addAutoIncrement catalogName="cat"
-        columnDataType="int"
-        columnName="id"
-        incrementBy="1"
-        schemaName="public"
-        startWith="100"
-        tableName="person"/>
-{% endhighlight %}
-
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>columnDataType</td><td>Current data type fo the column to make auto-increment</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>columnName</td><td>Name of the column</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>incrementBy</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
@@ -35,6 +23,38 @@ Converts an existing column to be an auto-increment (a.k.a 'identity') column
 <tr><td style='vertical-align: top'>startWith</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <addAutoIncrement catalogName="cat"
+            columnDataType="int"
+            columnName="id"
+            incrementBy="1"
+            schemaName="public"
+            startWith="100"
+            tableName="person"/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - addAutoIncrement:
+      catalogName: cat
+      columnDataType: int
+      columnName: id
+      incrementBy: 1
+      schemaName: public
+      startWith: 100
+      tableName: person
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (MySQL)
 

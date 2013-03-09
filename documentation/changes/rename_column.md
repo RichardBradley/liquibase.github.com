@@ -9,30 +9,49 @@ title: Change renameColumn
 
 # Change: 'renameColumn'
 
-Rename Column
-
-## XML Sample ##
-
-{% highlight xml %}
-<renameColumn catalogName="cat"
-        columnDataType="A String"
-        newColumnName="A String"
-        oldColumnName="A String"
-        schemaName="public"
-        tableName="person"/>
-{% endhighlight %}
+Renames an existing column
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>columnDataType</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>newColumnName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>oldColumnName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
+<tr><td style='vertical-align: top'>columnDataType</td><td>Data type of the column</td><td style='vertical-align: top'>mysql</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>newColumnName</td><td>Name to rename the column to</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>oldColumnName</td><td>Name of the existing column to rename</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>tableName</td><td>Name of the table containing that the column to rename</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <renameColumn catalogName="cat"
+            columnDataType="A String"
+            newColumnName="A String"
+            oldColumnName="A String"
+            schemaName="public"
+            tableName="person"/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - renameColumn:
+      catalogName: cat
+      columnDataType: A String
+      newColumnName: A String
+      oldColumnName: A String
+      schemaName: public
+      tableName: person
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (MySQL)
 

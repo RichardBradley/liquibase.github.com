@@ -11,17 +11,30 @@ title: Change anonymous
 
 Anonymous change
 
-## XML Sample ##
-
-{% highlight xml %}
-<anonymous/>
-{% endhighlight %}
-
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <anonymous/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - anonymous: {}
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (MySQL)
 

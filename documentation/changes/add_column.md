@@ -11,17 +11,6 @@ title: Change addColumn
 
 Adds a new column to an existing table
 
-## XML Sample ##
-
-{% highlight xml %}
-<addColumn catalogName="cat"
-        schemaName="public"
-        tableName="person">
-    <column name="address"
-            type="varchar(255)"/>
-</addColumn>
-{% endhighlight %}
-
 ## Available Attributes ##
 
 <table>
@@ -35,8 +24,38 @@ Adds a new column to an existing table
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>column</td><td>Column constraint and foreign key information. Setting the "defaultValue" attribute will specify a default value for the column. Setting the "value" attribute will set all rows existing to the specified value without modifying the column default.<br><br>See the <a href='../column.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>column</td><td>Column constraint and foreign key information. Setting the "defaultValue" attribute will specify a default value for the column. Setting the "value" attribute will set all rows existing to the specified value without modifying the column default.<br><br>See the <a href='../columnConfig.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td><td style='vertical-align: top'></td></tr>
 </table>
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <addColumn catalogName="cat"
+            schemaName="public"
+            tableName="person">
+        <column name="address" type="varchar(255)"/>
+    </addColumn>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - addColumn:
+      catalogName: cat
+      column:
+      - column:
+          name: address
+          type: varchar(255)
+      schemaName: public
+      tableName: person
+
+{% endhighlight %}
+
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}

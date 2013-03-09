@@ -9,26 +9,43 @@ title: Change renameTable
 
 # Change: 'renameTable'
 
-Rename Table
-
-## XML Sample ##
-
-{% highlight xml %}
-<renameTable catalogName="cat"
-        newTableName="A String"
-        oldTableName="A String"
-        schemaName="public"/>
-{% endhighlight %}
+Renames an existing table
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>newTableName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>oldTableName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>newTableName</td><td>New name for the table</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>oldTableName</td><td>Name of the table to rename</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 </table>
+
+## XML Sample ##
+
+{% highlight xml %}
+<changeSet author="fred" id="example">
+    <renameTable catalogName="cat"
+            newTableName="A String"
+            oldTableName="A String"
+            schemaName="public"/>
+</changeSet>
+{% endhighlight %}
+
+## YAML Sample ##
+
+{% highlight yaml %}
+changeSet:
+  id: example
+  author: fred
+  changes:
+  - renameTable:
+      catalogName: cat
+      newTableName: A String
+      oldTableName: A String
+      schemaName: public
+
+{% endhighlight %}
 
 ## SQL Generated From Above Sample (MySQL)
 

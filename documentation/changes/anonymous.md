@@ -20,7 +20,7 @@ Anonymous change
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="anonymous-example">
     <anonymous/>
 </changeSet>
 {% endhighlight %}
@@ -29,10 +29,28 @@ Anonymous change
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: anonymous-example
+  author: liquibase-docs
   changes:
   - anonymous: {}
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: anonymous-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        anonymous: {
+          }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

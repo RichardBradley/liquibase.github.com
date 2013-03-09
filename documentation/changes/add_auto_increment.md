@@ -27,7 +27,7 @@ Converts an existing column to be an auto-increment (a.k.a 'identity') column
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="addAutoIncrement-example">
     <addAutoIncrement catalogName="cat"
             columnDataType="int"
             columnName="id"
@@ -42,8 +42,8 @@ Converts an existing column to be an auto-increment (a.k.a 'identity') column
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: addAutoIncrement-example
+  author: liquibase-docs
   changes:
   - addAutoIncrement:
       catalogName: cat
@@ -53,6 +53,31 @@ changeSet:
       schemaName: public
       startWith: 100
       tableName: person
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: addAutoIncrement-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        addAutoIncrement: {
+          catalogName: cat,
+          columnDataType: int,
+          columnName: id,
+          incrementBy: 1,
+          schemaName: public,
+          startWith: 100,
+          tableName: person
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

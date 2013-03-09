@@ -20,7 +20,7 @@ empty
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="empty-example">
     <empty/>
 </changeSet>
 {% endhighlight %}
@@ -29,10 +29,28 @@ empty
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: empty-example
+  author: liquibase-docs
   changes:
   - empty: {}
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: empty-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        empty: {
+          }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

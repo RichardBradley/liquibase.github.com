@@ -25,7 +25,7 @@ Removes the database default value for a column
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="dropDefaultValue-example">
     <dropDefaultValue catalogName="cat"
             columnDataType="A String"
             columnName="id"
@@ -38,8 +38,8 @@ Removes the database default value for a column
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: dropDefaultValue-example
+  author: liquibase-docs
   changes:
   - dropDefaultValue:
       catalogName: cat
@@ -47,6 +47,29 @@ changeSet:
       columnName: id
       schemaName: public
       tableName: person
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: dropDefaultValue-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        dropDefaultValue: {
+          catalogName: cat,
+          columnDataType: A String,
+          columnName: id,
+          schemaName: public,
+          tableName: person
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

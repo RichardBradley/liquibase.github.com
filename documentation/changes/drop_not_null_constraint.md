@@ -25,7 +25,7 @@ Makes a column nullable
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="dropNotNullConstraint-example">
     <dropNotNullConstraint catalogName="cat"
             columnDataType="A String"
             columnName="id"
@@ -38,8 +38,8 @@ Makes a column nullable
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: dropNotNullConstraint-example
+  author: liquibase-docs
   changes:
   - dropNotNullConstraint:
       catalogName: cat
@@ -47,6 +47,29 @@ changeSet:
       columnName: id
       schemaName: public
       tableName: person
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: dropNotNullConstraint-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        dropNotNullConstraint: {
+          catalogName: cat,
+          columnDataType: A String,
+          columnName: id,
+          schemaName: public,
+          tableName: person
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

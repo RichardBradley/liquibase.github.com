@@ -32,7 +32,7 @@ Creates an index on an existing column or set of columns.
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="createIndex-example">
     <createIndex catalogName="cat"
             indexName="A String"
             schemaName="public"
@@ -48,8 +48,8 @@ Creates an index on an existing column or set of columns.
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: createIndex-example
+  author: liquibase-docs
   changes:
   - createIndex:
       catalogName: cat
@@ -62,6 +62,38 @@ changeSet:
       tableName: user
       tablespace: A String
       unique: true
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: createIndex-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        createIndex: {
+          catalogName: cat,
+          column: [
+            {
+              column: {
+                name: address,
+                type: varchar(255)
+              }
+            }]
+          ,
+          indexName: A String,
+          schemaName: public,
+          tableName: user,
+          tablespace: A String,
+          unique: true
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

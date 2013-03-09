@@ -30,7 +30,7 @@ Updates data in an existing table
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="update-example">
     <update catalogName="cat"
             schemaName="public"
             tableName="person">
@@ -44,8 +44,8 @@ Updates data in an existing table
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: update-example
+  author: liquibase-docs
   changes:
   - update:
       catalogName: cat
@@ -56,6 +56,36 @@ changeSet:
       schemaName: public
       tableName: person
       whereClause: A String
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: update-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        update: {
+          catalogName: cat,
+          column: [
+            {
+              column: {
+                name: address,
+                type: varchar(255)
+              }
+            }]
+          ,
+          schemaName: public,
+          tableName: person,
+          whereClause: A String
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

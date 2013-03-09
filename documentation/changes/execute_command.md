@@ -21,7 +21,7 @@ Executes a system command. Because this refactoring doesn't generate SQL like mo
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="executeCommand-example">
     <executeCommand executable="mysqldump"/>
 </changeSet>
 {% endhighlight %}
@@ -30,11 +30,30 @@ Executes a system command. Because this refactoring doesn't generate SQL like mo
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: executeCommand-example
+  author: liquibase-docs
   changes:
   - executeCommand:
       executable: mysqldump
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: executeCommand-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        executeCommand: {
+          executable: mysqldump
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

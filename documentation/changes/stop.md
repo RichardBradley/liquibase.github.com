@@ -21,7 +21,7 @@ Stops Liquibase execution with a message. Mainly useful for debugging and steppi
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="stop-example">
     <stop message="What just happened???"/>
 </changeSet>
 {% endhighlight %}
@@ -30,11 +30,30 @@ Stops Liquibase execution with a message. Mainly useful for debugging and steppi
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: stop-example
+  author: liquibase-docs
   changes:
   - stop:
       message: What just happened???
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: stop-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        stop: {
+          message: 'What just happened???'
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

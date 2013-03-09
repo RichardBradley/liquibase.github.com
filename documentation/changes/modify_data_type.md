@@ -25,7 +25,7 @@ Modify data type
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="modifyDataType-example">
     <modifyDataType catalogName="cat"
             columnName="id"
             newDataType="A String"
@@ -38,8 +38,8 @@ Modify data type
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: modifyDataType-example
+  author: liquibase-docs
   changes:
   - modifyDataType:
       catalogName: cat
@@ -47,6 +47,29 @@ changeSet:
       newDataType: A String
       schemaName: public
       tableName: person
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: modifyDataType-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        modifyDataType: {
+          catalogName: cat,
+          columnName: id,
+          newDataType: A String,
+          schemaName: public,
+          tableName: person
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

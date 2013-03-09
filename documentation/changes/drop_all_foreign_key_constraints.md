@@ -23,7 +23,7 @@ Drops all foreign key constraints for a table
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="dropAllForeignKeyConstraints-example">
     <dropAllForeignKeyConstraints baseTableCatalogName="A String"
             baseTableName="A String"
             baseTableSchemaName="A String"/>
@@ -34,13 +34,34 @@ Drops all foreign key constraints for a table
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: dropAllForeignKeyConstraints-example
+  author: liquibase-docs
   changes:
   - dropAllForeignKeyConstraints:
       baseTableCatalogName: A String
       baseTableName: A String
       baseTableSchemaName: A String
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: dropAllForeignKeyConstraints-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        dropAllForeignKeyConstraints: {
+          baseTableCatalogName: A String,
+          baseTableName: A String,
+          baseTableSchemaName: A String
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

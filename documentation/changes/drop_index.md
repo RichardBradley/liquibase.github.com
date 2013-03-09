@@ -24,7 +24,7 @@ Drops an existing index
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="dropIndex-example">
     <dropIndex catalogName="cat"
             indexName="A String"
             schemaName="public"
@@ -36,14 +36,36 @@ Drops an existing index
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: dropIndex-example
+  author: liquibase-docs
   changes:
   - dropIndex:
       catalogName: cat
       indexName: A String
       schemaName: public
       tableName: person
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: dropIndex-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        dropIndex: {
+          catalogName: cat,
+          indexName: A String,
+          schemaName: public,
+          tableName: person
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

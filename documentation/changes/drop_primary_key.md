@@ -24,7 +24,7 @@ Drops an existing primary key
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="dropPrimaryKey-example">
     <dropPrimaryKey catalogName="cat"
             constraintName="A String"
             schemaName="public"
@@ -36,14 +36,36 @@ Drops an existing primary key
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: dropPrimaryKey-example
+  author: liquibase-docs
   changes:
   - dropPrimaryKey:
       catalogName: cat
       constraintName: A String
       schemaName: public
       tableName: person
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: dropPrimaryKey-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        dropPrimaryKey: {
+          catalogName: cat,
+          constraintName: A String,
+          schemaName: public,
+          tableName: person
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

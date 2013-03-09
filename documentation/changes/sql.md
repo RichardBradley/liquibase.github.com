@@ -35,7 +35,7 @@ Note: By default it will attempt to split statements on a ';' or 'go' at the end
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="sql-example">
     <sql comments="A String"
             endDelimiter="A String"
             splitStatements="true"
@@ -47,8 +47,8 @@ Note: By default it will attempt to split statements on a ';' or 'go' at the end
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: sql-example
+  author: liquibase-docs
   changes:
   - sql:
       comments: A String
@@ -56,6 +56,29 @@ changeSet:
       splitStatements: true
       sql: A String
       stripComments: true
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: sql-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        sql: {
+          comments: A String,
+          endDelimiter: A String,
+          splitStatements: true,
+          sql: A String,
+          stripComments: true
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

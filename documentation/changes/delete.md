@@ -24,7 +24,7 @@ Deletes data from an existing table
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="delete-example">
     <delete catalogName="cat"
             schemaName="public"
             tableName="person">
@@ -37,14 +37,36 @@ Deletes data from an existing table
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: delete-example
+  author: liquibase-docs
   changes:
   - delete:
       catalogName: cat
       schemaName: public
       tableName: person
       whereClause: A String
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: delete-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        delete: {
+          catalogName: cat,
+          schemaName: public,
+          tableName: person,
+          whereClause: A String
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

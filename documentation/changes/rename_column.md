@@ -26,7 +26,7 @@ Renames an existing column
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="renameColumn-example">
     <renameColumn catalogName="cat"
             columnDataType="A String"
             newColumnName="A String"
@@ -40,8 +40,8 @@ Renames an existing column
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: renameColumn-example
+  author: liquibase-docs
   changes:
   - renameColumn:
       catalogName: cat
@@ -50,6 +50,30 @@ changeSet:
       oldColumnName: A String
       schemaName: public
       tableName: person
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: renameColumn-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        renameColumn: {
+          catalogName: cat,
+          columnDataType: A String,
+          newColumnName: A String,
+          oldColumnName: A String,
+          schemaName: public,
+          tableName: person
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

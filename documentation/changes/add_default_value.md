@@ -32,7 +32,7 @@ One of defaultValue, defaultValueNumeric, defaultValueBoolean or defaultValueDat
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="addDefaultValue-example">
     <addDefaultValue catalogName="cat"
             columnDataType="A String"
             columnName="fileName"
@@ -51,8 +51,8 @@ One of defaultValue, defaultValueNumeric, defaultValueBoolean or defaultValueDat
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: addDefaultValue-example
+  author: liquibase-docs
   changes:
   - addDefaultValue:
       catalogName: cat
@@ -66,6 +66,37 @@ changeSet:
       defaultValueSequenceNext: !!liquibase.statement.SequenceNextValueFunction {}
       schemaName: public
       tableName: file
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: addDefaultValue-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        addDefaultValue: {
+          catalogName: cat,
+          columnDataType: A String,
+          columnName: fileName,
+          defaultValue: newfile.txt,
+          defaultValueBoolean: true,
+          defaultValueComputed: !!liquibase.statement.DatabaseFunction {
+            },
+          defaultValueDate: A String,
+          defaultValueNumeric: A String,
+          defaultValueSequenceNext: !!liquibase.statement.SequenceNextValueFunction {
+            },
+          schemaName: public,
+          tableName: file
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

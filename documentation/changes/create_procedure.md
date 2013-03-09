@@ -24,7 +24,7 @@ Often times it is best to use the CREATE OR REPLACE syntax along with setting ru
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="createProcedure-example">
     <createProcedure comments="A String">CREATE OR REPLACE PROCEDURE testHello
     IS
     BEGIN
@@ -37,8 +37,8 @@ Often times it is best to use the CREATE OR REPLACE syntax along with setting ru
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: createProcedure-example
+  author: liquibase-docs
   changes:
   - createProcedure:
       comments: A String
@@ -48,6 +48,27 @@ changeSet:
             BEGIN
               DBMS_OUTPUT.PUT_LINE('Hello From The Database!');
             END;
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: createProcedure-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        createProcedure: {
+          comments: A String,
+          procedureBody: "CREATE OR REPLACE PROCEDURE testHello\n    IS\n    BEGIN\n\
+            \      DBMS_OUTPUT.PUT_LINE('Hello From The Database!');\n    END;"
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

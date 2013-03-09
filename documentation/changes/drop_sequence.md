@@ -23,7 +23,7 @@ Drop an existing sequence
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="dropSequence-example">
     <dropSequence catalogName="cat"
             schemaName="public"
             sequenceName="A String"/>
@@ -34,13 +34,34 @@ Drop an existing sequence
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: dropSequence-example
+  author: liquibase-docs
   changes:
   - dropSequence:
       catalogName: cat
       schemaName: public
       sequenceName: A String
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: dropSequence-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        dropSequence: {
+          catalogName: cat,
+          schemaName: public,
+          sequenceName: A String
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

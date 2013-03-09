@@ -24,7 +24,7 @@ Renames an existing view
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="renameView-example">
     <renameView catalogName="cat"
             newViewName="A String"
             oldViewName="A String"
@@ -36,14 +36,36 @@ Renames an existing view
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: renameView-example
+  author: liquibase-docs
   changes:
   - renameView:
       catalogName: cat
       newViewName: A String
       oldViewName: A String
       schemaName: public
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: renameView-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        renameView: {
+          catalogName: cat,
+          newViewName: A String,
+          oldViewName: A String,
+          schemaName: public
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

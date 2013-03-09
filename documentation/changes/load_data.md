@@ -33,7 +33,7 @@ Once the date format string is set, Liquibase will then call the SimpleDateForma
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="loadData-example">
     <loadData catalogName="cat"
             encoding="UTF-8"
             file="com/example/users.csv"
@@ -48,8 +48,8 @@ Once the date format string is set, Liquibase will then call the SimpleDateForma
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: loadData-example
+  author: liquibase-docs
   changes:
   - loadData:
       catalogName: cat
@@ -59,6 +59,31 @@ changeSet:
       schemaName: public
       separator: A String
       tableName: person
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: loadData-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        loadData: {
+          catalogName: cat,
+          encoding: UTF-8,
+          file: com/example/users.csv,
+          quotchar: A String,
+          schemaName: public,
+          separator: A String,
+          tableName: person
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

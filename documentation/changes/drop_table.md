@@ -24,7 +24,7 @@ Drops an existing table
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="dropTable-example">
     <dropTable cascadeConstraints="true"
             catalogName="cat"
             schemaName="public"
@@ -36,14 +36,36 @@ Drops an existing table
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: dropTable-example
+  author: liquibase-docs
   changes:
   - dropTable:
       cascadeConstraints: true
       catalogName: cat
       schemaName: public
       tableName: person
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: dropTable-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        dropTable: {
+          cascadeConstraints: true,
+          catalogName: cat,
+          schemaName: public,
+          tableName: person
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

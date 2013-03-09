@@ -30,7 +30,7 @@ Creates a lookup table containing values stored in a column and creates a foreig
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="addLookupTable-example">
     <addLookupTable constraintName="fk_address_state"
             existingColumnName="state"
             existingTableCatalogName="A String"
@@ -48,8 +48,8 @@ Creates a lookup table containing values stored in a column and creates a foreig
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: addLookupTable-example
+  author: liquibase-docs
   changes:
   - addLookupTable:
       constraintName: fk_address_state
@@ -62,6 +62,34 @@ changeSet:
       newTableCatalogName: A String
       newTableName: state
       newTableSchemaName: A String
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: addLookupTable-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        addLookupTable: {
+          constraintName: fk_address_state,
+          existingColumnName: state,
+          existingTableCatalogName: A String,
+          existingTableName: address,
+          existingTableSchemaName: A String,
+          newColumnDataType: char(2),
+          newColumnName: abbreviation,
+          newTableCatalogName: A String,
+          newTableName: state,
+          newTableSchemaName: A String
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

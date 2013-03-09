@@ -24,7 +24,7 @@ Drop an existing column
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="dropColumn-example">
     <dropColumn catalogName="cat"
             columnName="id"
             schemaName="public"
@@ -36,14 +36,36 @@ Drop an existing column
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: dropColumn-example
+  author: liquibase-docs
   changes:
   - dropColumn:
       catalogName: cat
       columnName: id
       schemaName: public
       tableName: person
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: dropColumn-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        dropColumn: {
+          catalogName: cat,
+          columnName: id,
+          schemaName: public,
+          tableName: person
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

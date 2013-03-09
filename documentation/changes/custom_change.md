@@ -26,7 +26,7 @@ For a sample custom change class, see liquibase.change.custom.ExampleCustomSqlCh
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="customChange-example">
     <customChange/>
 </changeSet>
 {% endhighlight %}
@@ -35,11 +35,31 @@ For a sample custom change class, see liquibase.change.custom.ExampleCustomSqlCh
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: customChange-example
+  author: liquibase-docs
   changes:
   - customChange:
       param: {}
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: customChange-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        customChange: {
+          param: {
+            }
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

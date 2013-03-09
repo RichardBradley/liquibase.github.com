@@ -29,7 +29,7 @@ Creates a new database sequence
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="createSequence-example">
     <createSequence catalogName="cat"
             cycle="true"
             incrementBy="2"
@@ -46,8 +46,8 @@ Creates a new database sequence
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: createSequence-example
+  author: liquibase-docs
   changes:
   - createSequence:
       catalogName: cat
@@ -59,6 +59,33 @@ changeSet:
       schemaName: public
       sequenceName: A String
       startValue: 5
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: createSequence-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        createSequence: {
+          catalogName: cat,
+          cycle: true,
+          incrementBy: 2,
+          maxValue: 1000,
+          minValue: 10,
+          ordered: true,
+          schemaName: public,
+          sequenceName: A String,
+          startValue: 5
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

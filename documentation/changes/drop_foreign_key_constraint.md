@@ -24,7 +24,7 @@ Drops an existing foreign key
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="dropForeignKeyConstraint-example">
     <dropForeignKeyConstraint baseTableCatalogName="A String"
             baseTableName="A String"
             baseTableSchemaName="A String"
@@ -36,14 +36,36 @@ Drops an existing foreign key
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: dropForeignKeyConstraint-example
+  author: liquibase-docs
   changes:
   - dropForeignKeyConstraint:
       baseTableCatalogName: A String
       baseTableName: A String
       baseTableSchemaName: A String
       constraintName: fk_address_person
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: dropForeignKeyConstraint-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        dropForeignKeyConstraint: {
+          baseTableCatalogName: A String,
+          baseTableName: A String,
+          baseTableSchemaName: A String,
+          constraintName: fk_address_person
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

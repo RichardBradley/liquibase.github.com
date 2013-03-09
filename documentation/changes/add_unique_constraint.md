@@ -29,7 +29,7 @@ Adds a unique constrant to an existing column or set of columns.
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="addUniqueConstraint-example">
     <addUniqueConstraint catalogName="cat"
             columnNames="A String"
             constraintName="A String"
@@ -46,8 +46,8 @@ Adds a unique constrant to an existing column or set of columns.
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: addUniqueConstraint-example
+  author: liquibase-docs
   changes:
   - addUniqueConstraint:
       catalogName: cat
@@ -59,6 +59,33 @@ changeSet:
       schemaName: public
       tableName: person
       tablespace: A String
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: addUniqueConstraint-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        addUniqueConstraint: {
+          catalogName: cat,
+          columnNames: A String,
+          constraintName: A String,
+          deferrable: true,
+          disabled: true,
+          initiallyDeferred: true,
+          schemaName: public,
+          tableName: person,
+          tablespace: A String
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

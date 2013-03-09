@@ -25,7 +25,7 @@ Drops an existing unique constraint
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="dropUniqueConstraint-example">
     <dropUniqueConstraint catalogName="cat"
             constraintName="A String"
             schemaName="public"
@@ -38,8 +38,8 @@ Drops an existing unique constraint
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: dropUniqueConstraint-example
+  author: liquibase-docs
   changes:
   - dropUniqueConstraint:
       catalogName: cat
@@ -47,6 +47,29 @@ changeSet:
       schemaName: public
       tableName: person
       uniqueColumns: A String
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: dropUniqueConstraint-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        dropUniqueConstraint: {
+          catalogName: cat,
+          constraintName: A String,
+          schemaName: public,
+          tableName: person,
+          uniqueColumns: A String
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

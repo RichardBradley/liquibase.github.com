@@ -29,7 +29,7 @@ Adds a new column to an existing table
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="addColumn-example">
     <addColumn catalogName="cat"
             schemaName="public"
             tableName="person">
@@ -42,8 +42,8 @@ Adds a new column to an existing table
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: addColumn-example
+  author: liquibase-docs
   changes:
   - addColumn:
       catalogName: cat
@@ -53,6 +53,35 @@ changeSet:
           type: varchar(255)
       schemaName: public
       tableName: person
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: addColumn-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        addColumn: {
+          catalogName: cat,
+          column: [
+            {
+              column: {
+                name: address,
+                type: varchar(255)
+              }
+            }]
+          ,
+          schemaName: public,
+          tableName: person
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

@@ -25,7 +25,7 @@ Create a new database view
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="createView-example">
     <createView catalogName="cat"
             replaceIfExists="true"
             schemaName="public"
@@ -37,8 +37,8 @@ Create a new database view
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: createView-example
+  author: liquibase-docs
   changes:
   - createView:
       catalogName: cat
@@ -46,6 +46,29 @@ changeSet:
       schemaName: public
       selectQuery: select id, name from person where id > 10
       viewName: A String
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: createView-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        createView: {
+          catalogName: cat,
+          replaceIfExists: true,
+          schemaName: public,
+          selectQuery: 'select id, name from person where id > 10',
+          viewName: A String
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

@@ -27,7 +27,7 @@ Alter properties of an existing sequence
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="alterSequence-example">
     <alterSequence catalogName="cat"
             incrementBy="371717"
             maxValue="371717"
@@ -42,8 +42,8 @@ Alter properties of an existing sequence
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: alterSequence-example
+  author: liquibase-docs
   changes:
   - alterSequence:
       catalogName: cat
@@ -53,6 +53,31 @@ changeSet:
       ordered: true
       schemaName: public
       sequenceName: A String
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: alterSequence-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        alterSequence: {
+          catalogName: cat,
+          incrementBy: 371717,
+          maxValue: 371717,
+          minValue: 371717,
+          ordered: true,
+          schemaName: public,
+          sequenceName: A String
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

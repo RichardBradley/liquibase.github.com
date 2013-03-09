@@ -24,7 +24,7 @@ Renames an existing table
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="renameTable-example">
     <renameTable catalogName="cat"
             newTableName="A String"
             oldTableName="A String"
@@ -36,14 +36,36 @@ Renames an existing table
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: renameTable-example
+  author: liquibase-docs
   changes:
   - renameTable:
       catalogName: cat
       newTableName: A String
       oldTableName: A String
       schemaName: public
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: renameTable-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        renameTable: {
+          catalogName: cat,
+          newTableName: A String,
+          oldTableName: A String,
+          schemaName: public
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

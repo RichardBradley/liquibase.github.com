@@ -38,7 +38,7 @@ A single line comment starting with &lt;space&gt;--&lt;space&gt; and finishing a
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="sqlFile-example">
     <sqlFile encoding="A String"
             endDelimiter="A String"
             path="A String"
@@ -52,8 +52,8 @@ A single line comment starting with &lt;space&gt;--&lt;space&gt; and finishing a
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: sqlFile-example
+  author: liquibase-docs
   changes:
   - sqlFile:
       encoding: A String
@@ -63,6 +63,31 @@ changeSet:
       splitStatements: true
       sql: A String
       stripComments: true
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: sqlFile-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        sqlFile: {
+          encoding: A String,
+          endDelimiter: A String,
+          path: A String,
+          relativeToChangelogFile: true,
+          splitStatements: true,
+          sql: A String,
+          stripComments: true
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

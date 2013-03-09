@@ -26,7 +26,7 @@ Adds a not-null constraint to an existing table. If a defaultNullValue attribute
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="addNotNullConstraint-example">
     <addNotNullConstraint catalogName="cat"
             columnDataType="A String"
             columnName="id"
@@ -40,8 +40,8 @@ Adds a not-null constraint to an existing table. If a defaultNullValue attribute
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: addNotNullConstraint-example
+  author: liquibase-docs
   changes:
   - addNotNullConstraint:
       catalogName: cat
@@ -50,6 +50,30 @@ changeSet:
       defaultNullValue: A String
       schemaName: public
       tableName: person
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: addNotNullConstraint-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        addNotNullConstraint: {
+          catalogName: cat,
+          columnDataType: A String,
+          columnName: id,
+          defaultNullValue: A String,
+          schemaName: public,
+          tableName: person
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

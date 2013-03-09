@@ -26,7 +26,7 @@ Adds creates a primary key out of an existing column or set of columns.
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="addPrimaryKey-example">
     <addPrimaryKey catalogName="cat"
             columnNames="A String"
             constraintName="pk_person"
@@ -40,8 +40,8 @@ Adds creates a primary key out of an existing column or set of columns.
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: addPrimaryKey-example
+  author: liquibase-docs
   changes:
   - addPrimaryKey:
       catalogName: cat
@@ -50,6 +50,30 @@ changeSet:
       schemaName: public
       tableName: person
       tablespace: A String
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: addPrimaryKey-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        addPrimaryKey: {
+          catalogName: cat,
+          columnNames: A String,
+          constraintName: pk_person,
+          schemaName: public,
+          tableName: person,
+          tablespace: A String
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

@@ -23,7 +23,7 @@ Drops an existing view
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="dropView-example">
     <dropView catalogName="cat"
             schemaName="public"
             viewName="A String"/>
@@ -34,13 +34,34 @@ Drops an existing view
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: dropView-example
+  author: liquibase-docs
   changes:
   - dropView:
       catalogName: cat
       schemaName: public
       viewName: A String
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: dropView-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        dropView: {
+          catalogName: cat,
+          schemaName: public,
+          viewName: A String
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

@@ -28,7 +28,7 @@ Concatenates the values in two columns, joins them by with string, and stores th
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="mergeColumns-example">
     <mergeColumns catalogName="cat"
             column1Name="first_name"
             column2Name="last_name"
@@ -44,8 +44,8 @@ Concatenates the values in two columns, joins them by with string, and stores th
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: mergeColumns-example
+  author: liquibase-docs
   changes:
   - mergeColumns:
       catalogName: cat
@@ -56,6 +56,32 @@ changeSet:
       joinString: A String
       schemaName: public
       tableName: person
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: mergeColumns-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        mergeColumns: {
+          catalogName: cat,
+          column1Name: first_name,
+          column2Name: last_name,
+          finalColumnName: full_name,
+          finalColumnType: varchar(255),
+          joinString: A String,
+          schemaName: public,
+          tableName: person
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

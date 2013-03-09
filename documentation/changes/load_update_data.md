@@ -30,7 +30,7 @@ A value of NULL in a cell will be converted to a database NULL rather than the s
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="loadUpdateData-example">
     <loadUpdateData catalogName="cat"
             encoding="UTF-8"
             file="com/example/users.csv"
@@ -46,8 +46,8 @@ A value of NULL in a cell will be converted to a database NULL rather than the s
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: loadUpdateData-example
+  author: liquibase-docs
   changes:
   - loadUpdateData:
       catalogName: cat
@@ -58,6 +58,32 @@ changeSet:
       schemaName: public
       separator: A String
       tableName: person
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: loadUpdateData-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        loadUpdateData: {
+          catalogName: cat,
+          encoding: UTF-8,
+          file: com/example/users.csv,
+          primaryKey: A String,
+          quotchar: A String,
+          schemaName: public,
+          separator: A String,
+          tableName: person
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

@@ -21,7 +21,7 @@ Applies a tag to the database for future rollback
 ## XML Sample ##
 
 {% highlight xml %}
-<changeSet author="fred" id="example">
+<changeSet author="liquibase-docs" id="tagDatabase-example">
     <tagDatabase tag="version_1.3"/>
 </changeSet>
 {% endhighlight %}
@@ -30,11 +30,30 @@ Applies a tag to the database for future rollback
 
 {% highlight yaml %}
 changeSet:
-  id: example
-  author: fred
+  id: tagDatabase-example
+  author: liquibase-docs
   changes:
   - tagDatabase:
       tag: version_1.3
+
+{% endhighlight %}
+
+## JSON Sample ##
+
+{% highlight json %}
+{
+  changeSet: {
+    id: tagDatabase-example,
+    author: liquibase-docs,
+    changes: [
+      {
+        tagDatabase: {
+          tag: version_1.3
+        }
+      }]
+    
+  }
+}
 
 {% endhighlight %}
 

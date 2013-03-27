@@ -1,4 +1,4 @@
-<li><a href="{{pageRoot}}/documentation/overview.html"><span>Overview</span></a></li>
+<li><a href="{{pageRoot}}/documentation/index.html"><span>Documentation Home</span></a></li>
 <li><a href="{{pageRoot}}/documentation/databasechangelog.html"><span>DatabaseChangeLog</span></a></li>
 <li><a href="{{pageRoot}}/documentation/changeset.html"><span>ChangeSet</span></a></li>
 <li><a href="{{pageRoot}}/documentation/include.html"><span>Include</span></a></li>

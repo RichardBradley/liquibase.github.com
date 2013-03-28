@@ -10,7 +10,7 @@ title: Home
 <h2>TL;DR</h2>
 <ol>
 <li>Create new changelog file in <a href="xml_format.html">XML</a>, <a href="yaml_format.html">YAML</a>, <a href="json_format.html">JSON</a> or <a href="sql_format.html">SQL</a>format</li>
-<li>Add <a href="changeset.html">changeset</a> to <a href="changelog.html">changelog</a> file</li>
+<li>Add <a href="changeset.html">changeset</a> to <a href="databasechangelog.html">changelog</a> file</li>
 <li>Run <a href="command_line.html">Liquibase Update command</a></li>
 <li>Commit changelog file to source control</li>
 <li>Repeat</li>
@@ -20,7 +20,7 @@ See the <a href="../quickstart.html">Quick Start Guide</a> for more information
 
 <h2>Building Changelogs</h2>
 <ul>
-<li><a href="changelog.html">Changelog file</a>
+<li><a href="databasechangelog.html">Changelog file</a>
 <ul>
     <li><a href="xml_format.html">XML Format</a></li>
     <li><a href="yaml_format.html">YAML Format</a></li>
@@ -64,14 +64,14 @@ See the <a href="../quickstart.html">Quick Start Guide</a> for more information
 <h3>Changelog file</h3>
 <p>
 Developers store database changes in text-based files on their local development machines and apply them to their local databases.
-Changelog files can be be arbitrarily nested for better management. <a href="changelog.html">[more]</a>
+Changelog files can be be arbitrarily nested for better management. <a href="databasechangelog.html">[more]</a>
 </p>
 
 <h3>Change Set</h3>
 <p>
 Change Sets are uniquely identified by the "author" and "id" attribute along with with the location of the changelog file and are the units Liquibase tracks execution of.
 When Liquibase runs, it queries the DATABASECHANGELOG table for the changesets that are marked as executed and then executes all changesets in the changelog file that have not yet been executed.
- <a href="changelog.html">[more]</a>
+ <a href="databasechangelog.html">[more]</a>
 </p>
 
 <h3>Changes</h3>

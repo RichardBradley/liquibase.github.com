@@ -6,18 +6,6 @@ title: Home
 <div class="container">
 <div class="span-10 append-1">
 
-<div class='highlight'>
-<h2>TL;DR</h2>
-<ol>
-<li>Create new changelog file in <a href="xml_format.html">XML</a>, <a href="yaml_format.html">YAML</a>, <a href="json_format.html">JSON</a> or <a href="sql_format.html">SQL</a>format</li>
-<li>Add <a href="changeset.html">changeset</a> to <a href="databasechangelog.html">changelog</a> file</li>
-<li>Run <a href="command_line.html">Liquibase Update command</a></li>
-<li>Commit changelog file to source control</li>
-<li>Repeat</li>
-</ol>
-See the <a href="../quickstart.html">Quick Start Guide</a> for more information
-</div>
-
 <h2>Building Changelogs</h2>
 <ul>
 <li><a href="databasechangelog.html">Changelog file</a>

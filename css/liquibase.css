@@ -12,36 +12,10 @@ a.logo {
 }
 
 #search {
-    width:250px;
+    width:450px;
     float:right;
     margin-top:20px
 }
-#search input {
-    width:160px;
-    height:24px;
-    float:left;
-    background:url(../images/input.png) no-repeat;
-    border:none;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-#search input.submit {
-    width:68px;
-    height:25px;
-    float:left;
-    background:url(../images/search.png) no-repeat;
-    text-align:center;
-    line-height:14px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left:20px;
-    cursor:pointer;
-    padding:0px;
-}
-
-
-
-
 
 div#menu div {
     width: auto;

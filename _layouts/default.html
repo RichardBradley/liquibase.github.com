@@ -55,8 +55,19 @@
                 <a href="{{ pageRoot }}/index.html" class="logo"></a>
 
                 <div id="search">
-                    <input name="name" type="text" value=""/>
-                    <input name="name" type="submit" value="Search" class="submit"/>
+                    <script>
+                        (function() {
+                            var cx = '003757264142562231070:jzcpdy3d77s';
+                            var gcse = document.createElement('script');
+                            gcse.type = 'text/javascript';
+                            gcse.async = true;
+                            gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                                    '//www.google.com/cse/cse.js?cx=' + cx;
+                            var s = document.getElementsByTagName('script')[0];
+                            s.parentNode.insertBefore(gcse, s);
+                        })();
+                    </script>
+                    <gcse:searchbox-only></gcse:searchbox-only>
                 </div>
             </div>
 

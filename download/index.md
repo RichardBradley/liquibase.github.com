@@ -4,43 +4,34 @@ title: Download Liquibase
 subnav: subnav_main.md
 ---
 
+# Liquibase Downloads
+
 ## Liquibase Core ##
 
-The current stable version of the Liquibase Core is 2.0.5 (Released May 2, 2012)
-
-Available Downloads:
+The current stable version of the Liquibase Core is 2.0.5 (Released May 2, 2012).
 * [liquibase-2.0.5-bin.zip](https://github.com/downloads/liquibase/liquibase/liquibase-2.0.5-bin.zip)
 * [liquibase-2.0.5-bin.tar.gz](https://github.com/downloads/liquibase/liquibase/liquibase-2.0.5-bin.tar.gz)
 
-### Upgrade Notes ###
-- 1.9 -&gt; 2.0 introduced several significant changes.  Most will be transparent, but see the ["2.0 upgrade guide"](../v2_upgrade.html) for full upgrade information
-- 1.8 -&gt; 1.9 introduced a change to how change set checksum generation is performed for addNotNullConstraint and removeNotNullConstraint. You will get an md5sum error if you use these tags until you either add a validCheckSum tag to the failing changesets using the old checksum (the one listed in the validation failed message) or run "liquibase clearCheckSums" or "UPDATE DATABASECHANGELOG SET MD5SUM=NULL"
-- 1.5 -&gt; 1.6 introduced a change to how change set checksum generation is performed.  You will get an md5sum error message until you either run "liquibase clearCheckSums" or "UPDATE DATABASECHANGELOG SET MD5SUM=NULL"
-- 1.4 -&gt; 1.5 introduced changes that may break existing configurations.  See the [1.5 release announcement](http://blog.liquibase.org/2008/01/liquibase-core-150-released.html) for more information
+Beta Builds
 
-
-### Requirements ###
-
-Liquibase has been designed for Java 1.5 and greater. 
-
-
-
-### Installation ###
-
-Extract liquibase.zip. In it you will find a //liquibase-VERSION.jar// This jar is all that is needed to run Liquibase from the ["command line"](../documentation/command_line.html), [ant](../documentation/ant/index.html), [Maven](../documentation/grails.html), [Spring](../documentation/grails.html), or a [servlet container](../documentation/servlet_listener.html). You can run the [command line](../documentation/command_line.html) version of the migrator with the same jar file by simply running //java -jar liquibase-VERSION.jar//.
-
-## Source Code Download ##
-
-Browse  the Liquibase source or check it out from https://github.com/liquibase/liquibase
+* [liquibase-3.0.0-beta1-bin.zip](liquibase.org/liquibase-3.0.0-beta1.bin.zip)
+* [liquibase-3.0.0-beta2-bin.zip](liquibase.org/liquibase-3.0.0-beta2.bin.zip)
 
 ## Liquibase Extension Portal ##
 
-Liquibase 2.0 and beyond supports 3rd-party extensions and integrations.  Visit the [Extension Portal](http://www.liquibase.org/extensions) for more information.
+Liquibase 2.0 and beyond supports 3rd-party extensions and integrations.  Visit the [Extension Portal](http://www.liquibase.org/extensions) to download extensions.
 
-## Grails ##
+## Requirements ##
 
-The current version of the [Liquibase Grails plug-in](../documentation/grails.html) is 1.9.3.4 which is available though the standard Grails plug-in system.
+Liquibase 2.x requires Java 1.5+. Liquibase 3.x requires Java 1.6+
 
+## Installation ##
+
+Extract liquibase.zip. In it you will find a **liquibase-VERSION.jar** This jar is all that is needed to run Liquibase from the ["command line"](../documentation/command_line.html), [ant](../documentation/ant/index.html), [Maven](../documentation/grails.html), [Spring](../documentation/grails.html), or a [servlet container](../documentation/servlet_listener.html). You can run the [command line](../documentation/command_line.html) version of the migrator with the same jar file by simply running **java -jar liquibase-VERSION.jar**.
+
+## Source Code Download ##
+
+Browse the Liquibase source or check it out from [https://github.com/liquibase/liquibase](https://github.com/liquibase/liquibase)
 
 ## Liquibase Community ##
 

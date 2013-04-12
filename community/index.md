@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Community
+subnav: subnav_main.md
 ---
 
 # Interacting with the Liquibase Community #

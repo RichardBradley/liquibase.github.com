@@ -12,10 +12,10 @@ Any values found after the command on the command line invocation will be consid
 
 The command line migrator also allows you to
 
-  * [perform rollback operations and generate rollback scripts](rollback.html)
-  * [generate "diff"s](diff.html)
-  * [generate creation scripts from existing databases](generating_changelogs.html)
-  * [generate database change documentation](dbdoc.html)
+* [perform rollback operations and generate rollback scripts](rollback.html)
+* [generate "diff"s](diff.html)
+* [generate creation scripts from existing databases](generating_changelogs.html)
+* [generate database change documentation](dbdoc.html)
 
 If you run the command line migrator without any arguments, you will get a help message listing these available parameters:
 

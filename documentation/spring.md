@@ -26,11 +26,11 @@ Liquibase can be run in a [Spring](http://www.springframework.org) environment b
 
 ## Available Attributes ##
 
-  * beanName
-  * resourceLoader
-  * dataSource
-  * changeLog
-  * contexts
-  * parameters
-  * defaultSchema
-  * dropFirst //since 2.0.2//
+* beanName
+* resourceLoader
+* dataSource
+* changeLog
+* contexts
+* parameters
+* defaultSchema
+* dropFirst //since 2.0.2//

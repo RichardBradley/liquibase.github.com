@@ -6,10 +6,10 @@ title: Preconditions
 Preconditions can be attached to [change logs](databasechangelog.html) or [changeset](changeset.html)s to control the execution of an update based on the state of the database.
 
 There are several reasons to use preconditions, including:
-  * Document what assumptions the writers of the changelog had when creating it.
-  * Enforce that those assumptions are not violated by users running the changelog
-  * Perform data checks before performing an unrecoverable change such as [drop_Table](changes/drop_table.html)
-  * Control what changesets are run and not run based on the state of the database
+* Document what assumptions the writers of the changelog had when creating it.
+* Enforce that those assumptions are not violated by users running the changelog
+* Perform data checks before performing an unrecoverable change such as [drop_Table](changes/drop_table.html)
+* Control what changesets are run and not run based on the state of the database
 
 
 If desired, a precondition can be the only tag in a `<changeSet>`.

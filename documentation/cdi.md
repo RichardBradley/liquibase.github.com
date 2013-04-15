@@ -43,10 +43,10 @@ public class LiquibaseProducer {
 
 ## CDILiquibaseConfig Available Attributes ##
 
-  * changeLog
-  * contexts
-  * parameters
-  * defaultSchema
-  * dropFirst //since 2.0.2//
+* changeLog
+* contexts
+* parameters
+* defaultSchema
+* dropFirst //since 2.0.2//
 
 If you don't want Liquibase to run you can configure the follow system property liquibase.should.run=false

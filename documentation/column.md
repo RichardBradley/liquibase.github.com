@@ -29,19 +29,19 @@ The "column" tag is a tag that is re-used throughout the Liquibase XML when colu
 ^ remarks  | Short description of the column (column comment)  | 
 
 To help make scripts database-independent, the following "generic" data types   will be converted to the correct database implementation: 
-  * BOOLEAN
-  * CURRENCY
-  * UUID
-  * CLOB
-  * BLOB
-  * DATE
-  * DATETIME
-  * TIME
-  * BIGINT  
+* BOOLEAN
+* CURRENCY
+* UUID
+* CLOB
+* BLOB
+* DATE
+* DATETIME
+* TIME
+* BIGINT
 
 Also, specifying a java.sql.Types.* type will be converted to the correct type as well. If needed, precision can be included.
-  * java.sql.Types.TIMESTAMP
-  * java.sql.Types.VARCHAR(255)
+* java.sql.Types.TIMESTAMP
+* java.sql.Types.VARCHAR(255)
 
 ## Available Sub-Tags ##
 

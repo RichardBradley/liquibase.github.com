@@ -58,15 +58,15 @@ The artifact name of the Maven plugin changed to "org.liquibase : liquibase-mave
 
 ## Servlet Listener ##
 
-  * The class name of LiquibaseServletListener changed to liquibase.integration.servlet.LiquibaseServletListener.  
-  * The context parameter names changed:
-    * LIQUIBASE_DATA_SOURCE -> liquibase.datasource
-    * LIQUIBASE_CHANGELOG -> liquibase.changelog
-    * LIQUIBASE_CONTEXTS -> liquibase.contexts
-    * LIQUIBASE_DEFAULT_SCHEMA -> liquibase.schema.default
-    * LIQUIBASE_HOST_INCLUDES -> liquibase.host.includes
-    * LIQUIBASE_HOST_EXCLUDES -> liquibase.host.excludes
-    * LIQUIBASE_FAIL_ON_ERROR-> liquibase.onerror.fail
+* The class name of LiquibaseServletListener changed to liquibase.integration.servlet.LiquibaseServletListener.
+* The context parameter names changed:
+  * LIQUIBASE_DATA_SOURCE -> liquibase.datasource
+  * LIQUIBASE_CHANGELOG -> liquibase.changelog
+  * LIQUIBASE_CONTEXTS -> liquibase.contexts
+  * LIQUIBASE_DEFAULT_SCHEMA -> liquibase.schema.default
+  * LIQUIBASE_HOST_INCLUDES -> liquibase.host.includes
+  * LIQUIBASE_HOST_EXCLUDES -> liquibase.host.excludes
+  * LIQUIBASE_FAIL_ON_ERROR-> liquibase.onerror.fail
 
 
 

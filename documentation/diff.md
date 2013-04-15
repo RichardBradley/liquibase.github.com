@@ -34,38 +34,38 @@ liqubase.sh --driver=oracle.jdbc.OracleDriver \
 
 Currently, Liquibase runs the following comparisons:
 
-  * Version Differences
-  * Missing/unexpected tables
-  * Missing/unexpected views
-  * Missing/unexpected columns
-  * Missing/unexpected primary keys
-  * Missing/unexpected unique constraints
-  * Missing/unexpected foreign Keys
-  * Missing/unexpected sequences
-  * Missing/unexpected indexes
-  * Column definition differences (data type, auto-increment, etc.)
-  * View definition differences
-  * Data differences (limited), not checked by default 
+* Version Differences
+* Missing/unexpected tables
+* Missing/unexpected views
+* Missing/unexpected columns
+* Missing/unexpected primary keys
+* Missing/unexpected unique constraints
+* Missing/unexpected foreign Keys
+* Missing/unexpected sequences
+* Missing/unexpected indexes
+* Column definition differences (data type, auto-increment, etc.)
+* View definition differences
+* Data differences (limited), not checked by default
 
 It does not (currently) check
 
-  * Non-foreign key constraints (check, etc)
-  * Stored Procedures
-  * Data type length
+* Non-foreign key constraints (check, etc)
+* Stored Procedures
+* Data type length
 
 Liquibase can diff different database types, but the results may be skewed due to differences in case and data types.
 
 
 ## Controlling Checks (since 1.8) ##
  What changes are checked for can be controlled with the diffTypes parameter to the diff commands.  The following options are available and can be passed as a comma-separated list:
-  * tables //\[DEFAULT\]//
-  * columns //\[DEFAULT\]//
-  * views //\[DEFAULT\]//
-  * primaryKeys //\[DEFAULT\]//
-  * indexes //\[DEFAULT\]//
-  * foreignKeys //\[DEFAULT\]//
-  * sequences //\[DEFAULT\]//
-  * data
+* tables //\[DEFAULT\]//
+* columns //\[DEFAULT\]//
+* views //\[DEFAULT\]//
+* primaryKeys //\[DEFAULT\]//
+* indexes //\[DEFAULT\]//
+* foreignKeys //\[DEFAULT\]//
+* sequences //\[DEFAULT\]//
+* data
 
 If no diffTypes are specified, the checks marked DEFAULT will be run.
 

@@ -5,7 +5,7 @@ title: Changelog parameters
 
 # Change Log Parameters #
 
-//Since Liquibase 1.7//
+**Since Liquibase 1.7**
 
 Liquibase allows dynamic substitution of parameters in a changelog.  The parameters to replace are described using the ${} syntax.
 

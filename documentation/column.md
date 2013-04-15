@@ -59,7 +59,7 @@ The "constraints" tag contains information about constraints on the column
 
 ^ nullable  | Is column nullable?  | 
 ^ primaryKey  | Is column a primary key?  | 
-^ primaryKeyName  | Primary key name //Since 1.6//  |
+^ primaryKeyName  | Primary key name **Since 1.6**  |
 ^ unique  | Should a unique clause be applied  |
 ^ uniqueConstraintName  | Unique constraint name  | 
 ^ references  | Foreign key definition  | 

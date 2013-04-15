@@ -5,7 +5,7 @@ title: Modify sql
 
 # Modifying Generated SQL #
 
-Although Liquibase supports most standard SQL statements with its change tags, there are times when the generated SQL needs to be slightly different for your particular needs.  Examples include changing datatypes or adding additional vendor-specific clauses such as "ENGINE INNODB" to CREATE TABLE statements.  //Since 1.9//
+Although Liquibase supports most standard SQL statements with its change tags, there are times when the generated SQL needs to be slightly different for your particular needs.  Examples include changing datatypes or adding additional vendor-specific clauses such as "ENGINE INNODB" to CREATE TABLE statements.  **Since 1.9**
 
 ## Sample ##
 
@@ -28,8 +28,8 @@ Although Liquibase supports most standard SQL statements with its change tags, t
 ## Available Attributes ##
 
 ^ dbms  | List of [database types](../databases.html) to apply the modification(s) to. If not specified, modification is applied on all runs  |
-^ context  | List of [contexts](contexts.html) in which to run the sql modification.  If not specified, is applied in all contexts //Since 2.0//  |
-^ applyToRollback| Should the sql modification be applied to rollback statements? Default='false' //Since 2.0//  |
+^ context  | List of [contexts](contexts.html) in which to run the sql modification.  If not specified, is applied in all contexts **Since 2.0**  |
+^ applyToRollback| Should the sql modification be applied to rollback statements? Default='false' **Since 2.0**  |
 
 
 ## Available Sub-Tags ##

@@ -47,15 +47,15 @@ The above changelog will only run if the database executed against is Oracle and
 
 ## Handling Failures and Errors ##
 
-Liquibase distinguishes between precondition "failures" (check failed) and "errors" (exception thrown in execution of check) and the reaction to both can be controlled via the "onFail" and "onError" attributes on the `<preConditions>` tag.  //Since 1.8//
+Liquibase distinguishes between precondition "failures" (check failed) and "errors" (exception thrown in execution of check) and the reaction to both can be controlled via the "onFail" and "onError" attributes on the `<preConditions>` tag.  **Since 1.8**
 
 #### Available attributes ####
 
 ^ onFail | What to do when preconditions fail (see below)  | 
 ^ onError | What to do when preconditions error (see below) | 
-^ onUpdateSQL | What to do in updateSQL mode (see below) //Since 1.9.5// | 
-^ onFailMessage | Custom message to output when preconditions fail //Since 2.0// | 
-^ onErrorMessage | Custom message to output when preconditions fail //Since 2.0//  | 
+^ onUpdateSQL | What to do in updateSQL mode (see below) **Since 1.9.5** |
+^ onFailMessage | Custom message to output when preconditions fail **Since 2.0** |
+^ onErrorMessage | Custom message to output when preconditions fail **Since 2.0**  |
 
 
 #### Possible onFail/onError values ####
@@ -148,7 +148,7 @@ Passes if the database user executed under matches the username specified.
 
 ### &lt;changeSetExecuted&gt; ###
 
-Passes if the specified change set has already been executed. //Since 1.8//
+Passes if the specified change set has already been executed. **Since 1.8**
 
 #### Available Attributes ####
 
@@ -158,7 +158,7 @@ Passes if the specified change set has already been executed. //Since 1.8//
 
 ### &lt;columnExists&gt; ###
 
-Passes if the specified column exists in the database. //Since 1.8//
+Passes if the specified column exists in the database. **Since 1.8**
 
 #### Available Attributes ####
 
@@ -168,7 +168,7 @@ Passes if the specified column exists in the database. //Since 1.8//
 
 ### &lt;tableExists&gt; ###
 
-Passes if the specified table exists in the database. //Since 1.8//
+Passes if the specified table exists in the database. **Since 1.8**
 
 #### Available Attributes ####
 
@@ -177,7 +177,7 @@ Passes if the specified table exists in the database. //Since 1.8//
 
 ### &lt;viewExists&gt; ###
 
-Passes if the specified view exists in the database. //Since 1.8//
+Passes if the specified view exists in the database. **Since 1.8**
 
 #### Available Attributes ####
 
@@ -187,7 +187,7 @@ Passes if the specified view exists in the database. //Since 1.8//
 
 ### &lt;foreignKeyConstraintExists&gt; ###
 
-Passes if the specified foreign key exists in the database. //Since 1.8//
+Passes if the specified foreign key exists in the database. **Since 1.8**
 
 #### Available Attributes ####
 
@@ -197,7 +197,7 @@ Passes if the specified foreign key exists in the database. //Since 1.8//
 
 ### &lt;indexExists&gt; ###
 
-Passes if the specified index exists in the database. //Since 1.8//
+Passes if the specified index exists in the database. **Since 1.8**
 
 #### Available Attributes ####
 
@@ -206,7 +206,7 @@ Passes if the specified index exists in the database. //Since 1.8//
 
 ### &lt;sequenceExists&gt; ###
 
-Passes if the specified sequence exists in the database. //Since 1.8//
+Passes if the specified sequence exists in the database. **Since 1.8**
 
 #### Available Attributes ####
 
@@ -216,13 +216,13 @@ Passes if the specified sequence exists in the database. //Since 1.8//
 
 ### &lt;primaryKeyExists&gt; ###
 
-Passes if the specified primary key exists in the database.  //Since 1.8//
+Passes if the specified primary key exists in the database.  **Since 1.8**
 
 #### Available Attributes ####
 
 ^ schemaName  | Name of the primary key's schema  | 
 ^ primaryKeyName  | Name of the primary key **tableName OR primaryKeyName required**  |
-^ tableName  | Name of the table containing primary key **tableName OR primaryKeyName required** //Since 1.9// |
+^ tableName  | Name of the table containing primary key **tableName OR primaryKeyName required** **Since 1.9** |
 
 ### &lt;sqlCheck&gt; ###
 
@@ -238,7 +238,7 @@ Executes an SQL string and checks the returned value.  The SQL must return a sin
 
 ### &lt;changeLogPropertyDefined&gt; ###
 
-Checks whether given [changelog parameter](http://www.liquibase.org/documentation/changelog_parameters#property) is present. If a value is also given, it only fails, if the value is not the same as given. //Since 2.0//
+Checks whether given [changelog parameter](http://www.liquibase.org/documentation/changelog_parameters#property) is present. If a value is also given, it only fails, if the value is not the same as given. **Since 2.0**
 
 {% highlight xml %}
 <changeLogPropertyDefined property="myproperty"/>

@@ -60,7 +60,7 @@ FIXME: Annotate which is required.
 ^ databaseChangeLogLockTableName  | Overrides the name of the databasechangeloglock table to use  |
 
 ### Available Sub Tags ###
-^ changeLogProperty  | Sets a [changelog_parameters](../changelog_parameters.html) set //Since Liquibase 1.7// |
+^ changeLogProperty  | Sets a [changelog_parameters](../changelog_parameters.html) set **Since Liquibase 1.7** |
 
 #### Available &lt;changeLogProperty&gt; Parameters ####
 ^ name  | The name of the property to set  | 

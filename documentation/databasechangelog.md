@@ -27,8 +27,8 @@ When the Liquibase migrator runs, it parses the databaseChangeLog tag. It first 
 If all preconditions are met, Liquibase will then begin running [changeSet](changeSet.html) and [include](include.html) tags **in the order they appear in the databaseChangeLog file**.
 
 The XML schema for the databaseChangeLog tag is available at
-* [http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd](http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd) //Since 1.9//
-* [http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd](http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd) //Since 2.0//
+* [http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd](http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd) **Since 1.9**
+* [http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd](http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd) **Since 2.0**
 
 Each changeSet contains an "id" tag and an "author" tag. These tags, along with the classpath location and name of the XML file create a unique identifier for that changeSet.
 

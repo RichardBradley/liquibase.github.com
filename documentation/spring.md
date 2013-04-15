@@ -33,4 +33,4 @@ Liquibase can be run in a [Spring](http://www.springframework.org) environment b
 * contexts
 * parameters
 * defaultSchema
-* dropFirst //since 2.0.2//
+* dropFirst **since 2.0.2**

@@ -38,12 +38,13 @@ Marks the next change as already ran.  Useful for when a change was made manuall
 
 ### Available Parameters ###
 
-^ driver  | The name of the database driver to connect with **required**  |
-^ url  | The database URL **required**  |
-^ username  | The database username to connect with **required**  |
-^ password  | The password to use when connecting to the database **required**  |
-^ changeLog| The change log file to execute **required**  |
-^ defaultSchemaName  | Schema to drop objects in  |
-^ outputFile  | Save SQL to given file rather than executing  |
-^ classpathref  | A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file **required**  |
-
+<table>
+<tr><td>driver</td><td>The name of the database driver to connect with **required**  </td></tr>
+<tr><td>url</td><td>The database URL **required**  </td></tr>
+<tr><td>username</td><td>The database username to connect with **required**  </td></tr>
+<tr><td>password</td><td>The password to use when connecting to the database **required**  </td></tr>
+<tr><td>changeLog| The change log file to execute **required**  </td></tr>
+<tr><td>defaultSchemaName</td><td>Schema to drop objects in  </td></tr>
+<tr><td>outputFile</td><td>Save SQL to given file rather than executing  </td></tr>
+<tr><td>classpathref</td><td>A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file **required**  </td></tr>
+</table>

@@ -27,10 +27,11 @@ Although Liquibase supports most standard SQL statements with its change tags, t
 
 ## Available Attributes ##
 
-^ dbms  | List of [database types](../databases.html) to apply the modification(s) to. If not specified, modification is applied on all runs  |
-^ context  | List of [contexts](contexts.html) in which to run the sql modification.  If not specified, is applied in all contexts **Since 2.0**  |
-^ applyToRollback| Should the sql modification be applied to rollback statements? Default='false' **Since 2.0**  |
-
+<table>
+<tr><td>dbms</td><td>List of [database types](../databases.html) to apply the modification(s) to. If not specified, modification is applied on all runs  </td></tr>
+<tr><td>context</td><td>List of [contexts](contexts.html) in which to run the sql modification.  If not specified, is applied in all contexts **Since 2.0**  </td></tr>
+<tr><td>applyToRollback| Should the sql modification be applied to rollback statements? Default='false' **Since 2.0**  </td></tr>
+</table>
 
 ## Available Sub-Tags ##
 
@@ -38,24 +39,32 @@ Although Liquibase supports most standard SQL statements with its change tags, t
 Adds SQL to the beginning of the statement.
 
 #### Available Attributes ####
-^ value | Text to add to beginning of statement  |
+<table>
+<tr><td>value</td><td>Text to add to beginning of statement  </td></tr>
+</table>
 
 ### append ###
 Adds SQL to the end of the statement.
 
 #### Available Attributes ####
-^ value | Text to add to end of statement  |
+<table>
+<tr><td>value</td><td>Text to add to end of statement  </td></tr>
+</table>
 
 ### replace ###
 Replaces all instances of the text specified.
 
 #### Available Attributes ####
-^ replace | Text to replace  |
-^ with | Text to replace with |
+<table>
+<tr><td>replace</td><td>Text to replace  </td></tr>
+<tr><td>with</td><td>Text to replace with </td></tr>
+</table>
 
 ### regExpReplace ###
 Replaces all instances of the regular expression specified.
 
 #### Available Attributes ####
-^ replace | Regular expression specifying text to replace  |
-^ with | Text to replace with |
+<table>
+<tr><td>replace</td><td>Regular expression specifying text to replace  </td></tr>
+<tr><td>with</td><td>Text to replace with </td></tr>
+</table>

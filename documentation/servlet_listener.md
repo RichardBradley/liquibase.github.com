@@ -77,12 +77,14 @@ To configure the servlet listener, simply add liquibase.jar to your WEB-INF/lib 
 
 ## Available context-parameters: ##
 
-^ Param for 1.9.x ^ Param for 2.0 ^ Description ^
-| LIQUIBASE_CHANGELOG | liquibase.changelog | Specifies the changelog file to run **required**  |
-| LIQUIBASE_DATA_SOURCE | liquibase.datasource | JNDI datasource to use for running Liquibase. Note that the LIQUIBASE_DATA_SOURCE can be different than the data source the rest of your web app uses if that data source does not have sufficient privileges to create/alter tables etc. **required**  |
-| LIQUIBASE_HOST_EXCLUDES | liquibase.host.excludes | Specify host names on which you do NO want Liquibase to run. Specifying this parameter allows you to deploy the same WAR/EAR to multiple machines in different environments and not have Liquibase run on all of them.  |
-| LIQUIBASE_HOST_INCLUDES | liquibase.host.includes | Specify the ONLY host names on which want Liquibase to run. Specifying this parameter allows you to deploy the same WAR/EAR to multiple machines in different environments and not have Liquibase run on all of them.  |
-| LIQUIBASE_FAIL_ON_ERROR | liquibase.onerror.fail | Specify if an exception is thrown by Liquibase if an error occurs. Setting the value to "true" (default) will cause the exception to be thrown and keep the site from initializing properly. Setting the value to "false" will allow the site to deploy as normal, but the database will be in an undefined state.  |
-| LIQUIBASE_CONTEXTS | liquibase.contexts | A comma separated lists of the [contexts](contexts.html) to run in.  |
+<table>
+<tr><td>Param for 1.9.x</td><td>Param for 2.0</td><td>Description</td></tr>
+<tr><td>LIQUIBASE_CHANGELOG</td><td>liquibase.changelog</td><td>Specifies the changelog file to run **required**</td></tr>
+<tr><td>LIQUIBASE_DATA_SOURCE</td><td>liquibase.datasource</td><td>JNDI datasource to use for running Liquibase. Note that the LIQUIBASE_DATA_SOURCE can be different than the data source the rest of your web app uses if that data source does not have sufficient privileges to create/alter tables etc. **required**</td></tr>
+<tr><td>LIQUIBASE_HOST_EXCLUDES</td><td>liquibase.host.excludes</td><td>Specify host names on which you do NO want Liquibase to run. Specifying this parameter allows you to deploy the same WAR/EAR to multiple machines in different environments and not have Liquibase run on all of them.</td></tr>
+<tr><td>LIQUIBASE_HOST_INCLUDES</td><td>liquibase.host.includes</td><td>Specify the ONLY host names on which want Liquibase to run. Specifying this parameter allows you to deploy the same WAR/EAR to multiple machines in different environments and not have Liquibase run on all of them.</td></tr>
+<tr><td>LIQUIBASE_FAIL_ON_ERROR</td><td>liquibase.onerror.fail</td><td>Specify if an exception is thrown by Liquibase if an error occurs. Setting the value to "true" (default) will cause the exception to be thrown and keep the site from initializing properly. Setting the value to "false" will allow the site to deploy as normal, but the database will be in an undefined state.</td></tr>
+<tr><td>LIQUIBASE_CONTEXTS</td><td>liquibase.contexts</td><td>A comma separated lists of the [contexts](contexts.html) to run in.</td></tr>
+</table>
 
 If you want to control servers that run Liquibase but don't want to set the LIQUIBASE_HOST_EXCLUDES/LIQUIBASE_HOST_INCLUDES attributes, you can specify the "liquibase.should.run=\[true/false\]" system property.

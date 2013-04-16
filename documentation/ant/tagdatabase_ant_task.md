@@ -38,20 +38,26 @@ title: Tagdatabase ant task
 
 ### Available Parameters ###
 
-^ tag  | Tag to apply to the database  |
-^ driver  | The name of the database driver to connect with  | 
-^ url  | The database URL **required**  |
-^ username  | The database username to connect with **required**  |
-^ password  | The password to use when connecting to the database **required**  |
-^ defaultSchemaName  | Schema to use for Liquibase control tables  |
-^ classpathref  | A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file **required**  |
-^ currentDateTimeFunction  | Overrides current date time function used in SQL. Useful for unsupported databases  | 
-^ databaseChangeLogTableName  | Overrides the name of the databasechangelog table to use **Since Liquibase 1.9** |
-^ databaseChangeLogLockTableName  | Overrides the name of the databasechangeloglock table to use **Since Liquibase 1.9** |
+<table>
+<tr><td>tag</td><td>Tag to apply to the database  </td></tr>
+<tr><td>driver</td><td>The name of the database driver to connect with</td></tr>
+<tr><td>url</td><td>The database URL **required**  </td></tr>
+<tr><td>username</td><td>The database username to connect with **required**  </td></tr>
+<tr><td>password</td><td>The password to use when connecting to the database **required**  </td></tr>
+<tr><td>defaultSchemaName</td><td>Schema to use for Liquibase control tables  </td></tr>
+<tr><td>classpathref</td><td>A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file **required**  </td></tr>
+<tr><td>currentDateTimeFunction</td><td>Overrides current date time function used in SQL. Useful for unsupported databases</td></tr>
+<tr><td>databaseChangeLogTableName</td><td>Overrides the name of the databasechangelog table to use **Since Liquibase 1.9** </td></tr>
+<tr><td>databaseChangeLogLockTableName</td><td>Overrides the name of the databasechangeloglock table to use **Since Liquibase 1.9** </td></tr>
+</table>
 
 ### Available Sub Tags ###
-^ changeLogProperty  | Sets a [changelog_parameters](../changelog_parameters.html) set **Since Liquibase 1.7** |
+<table>
+<tr><td>changeLogProperty</td><td>Sets a [changelog_parameters](../changelog_parameters.html) set **Since Liquibase 1.7** </td></tr>
+</table>
 
 #### Available &lt;changeLogProperty&gt; Parameters ####
-^ name  | The name of the property to set  | 
-^ value  | The value of the property to set  | 
+<table>
+<tr><td>name</td><td>The name of the property to set</td></tr>
+<tr><td>value</td><td>The value of the property to set</td></tr>
+</table>

@@ -51,28 +51,30 @@ Liquibase distinguishes between precondition "failures" (check failed) and "erro
 
 #### Available attributes ####
 
-^ onFail | What to do when preconditions fail (see below)  | 
-^ onError | What to do when preconditions error (see below) | 
-^ onUpdateSQL | What to do in updateSQL mode (see below) **Since 1.9.5** |
-^ onFailMessage | Custom message to output when preconditions fail **Since 2.0** |
-^ onErrorMessage | Custom message to output when preconditions fail **Since 2.0**  |
-
+<table>
+<tr><td>onFail</td><td>What to do when preconditions fail (see below)</td><td>onError</td><td>What to do when preconditions error (see below)</td><td>onUpdateSQL</td><td>What to do in updateSQL mode (see below) **Since 1.9.5** </td></tr>
+<tr><td>onFailMessage</td><td>Custom message to output when preconditions fail **Since 2.0** </td></tr>
+<tr><td>onErrorMessage</td><td>Custom message to output when preconditions fail **Since 2.0**  </td></tr>
+</table>
 
 #### Possible onFail/onError values ####
 
-^ HALT | Immediately halt execution of entire change log **\[DEFAULT\]**  |
-^ CONTINUE | Skip over change set.  Execution of change set will be attempted again on the next update.  Continue with change log.| 
-^ MARK_RAN | Skip over change set, but mark it as ran.  Continue with change log| 
-^ WARN | Output warning and continue executing change set as normal.  | 
+<table>
+<tr><td>HALT</td><td>Immediately halt execution of entire change log **\[DEFAULT\]**  </td></tr>
+<tr><td>CONTINUE</td><td>Skip over change set.  Execution of change set will be attempted again on the next update.  Continue with change log.</td></tr>
+<tr><td>MARK_RAN</td><td>Skip over change set, but mark it as ran.  Continue with change log</td></tr>
+<tr><td>WARN</td><td>Output warning and continue executing change set as normal.</td><td>Outside a changeset (e.g. at the beginning of the change log) only HALT and WARN are possible values.</td></tr>
+</table>
 
 Outside a changeset (e.g. at the beginning of the change log) only HALT and WARN are possible values.
 
 #### Possible onUpdateSQL values ####
 
-^ RUN | Run the changeSet in updateSQL mode|
-^ FAIL | Fail the preCondition in updateSQL mode|
-^ IGNORE | Ignore the preCondition in updateSQL mode|
-
+<table>
+<tr><td>RUN</td><td>Run the changeSet in updateSQL mode</td></tr>
+<tr><td>FAIL</td><td>Fail the preCondition in updateSQL mode</td></tr>
+<tr><td>IGNORE</td><td>Ignore the preCondition in updateSQL mode</td></tr>
+</table>
 
 ## AND/OR/NOT Logic ##
 
@@ -135,36 +137,40 @@ Will require running as SYSTEM if executing against an Oracle database or runnin
 Passes if the database executed against matches the type specified.
 
 #### Available Attributes ####
-
-^ type | Type of [database](../databases.html) expected **required**  |
+<table>
+<tr><td>type</td><td>Type of [database](../databases.html) expected **required**  </td></tr>
+</table>
 
 ### &lt;runningAs&gt; ###
 
 Passes if the database user executed under matches the username specified.
 
 #### Available Attributes ####
-
-^ username | Database user script is expected to run as **required**  |
+<table>
+<tr><td>username</td><td>Database user script is expected to run as **required**  </td></tr>
+</table>
 
 ### &lt;changeSetExecuted&gt; ###
 
 Passes if the specified change set has already been executed. **Since 1.8**
 
 #### Available Attributes ####
-
-^ id  | Change set "id" **required**  |
-^ author  | Change set "author" **required**  |
-^ changeLogFile  | File name (including classpath relative path) of change set **required**  |
+<table>
+<tr><td>id</td><td>Change set "id" **required**  </td></tr>
+<tr><td>author</td><td>Change set "author" **required**  </td></tr>
+<tr><td>changeLogFile</td><td>File name (including classpath relative path) of change set **required**  </td></tr>
+</table>
 
 ### &lt;columnExists&gt; ###
 
 Passes if the specified column exists in the database. **Since 1.8**
 
 #### Available Attributes ####
-
-^ schemaName  | Name of the table's schema **required**  |
-^ tableName  | Name of the column's table **required**  |
-^ columnName  | Name of column **required**  |
+<table>
+<tr><td>schemaName</td><td>Name of the table's schema **required**  </td></tr>
+<tr><td>tableName</td><td>Name of the column's table **required**  </td></tr>
+<tr><td>columnName</td><td>Name of column **required**  </td></tr>
+</table>
 
 ### &lt;tableExists&gt; ###
 
@@ -172,8 +178,10 @@ Passes if the specified table exists in the database. **Since 1.8**
 
 #### Available Attributes ####
 
-^ schemaName  | Name of the table's schema **required**  |
-^ tableName  | Name of the table **required**  |
+<table>
+<tr><td>schemaName</td><td>Name of the table's schema **required**  </td></tr>
+<tr><td>tableName</td><td>Name of the table **required**  </td></tr>
+</table>
 
 ### &lt;viewExists&gt; ###
 
@@ -181,9 +189,10 @@ Passes if the specified view exists in the database. **Since 1.8**
 
 #### Available Attributes ####
 
-^ schemaName  | Name of the view's schema **required**  |
-^ viewName  | Name of the view **required**  |
-
+<table>
+<tr><td>schemaName</td><td>Name of the view's schema **required**  </td></tr>
+<tr><td>viewName</td><td>Name of the view **required**  </td></tr>
+</table>
 
 ### &lt;foreignKeyConstraintExists&gt; ###
 
@@ -191,9 +200,10 @@ Passes if the specified foreign key exists in the database. **Since 1.8**
 
 #### Available Attributes ####
 
-^ schemaName  | Name of the foreign key's schema **required**  |
-^ foreignKeyName  | Name of the foreign key **required**  |
-
+<table>
+<tr><td>schemaName</td><td>Name of the foreign key's schema **required**  </td></tr>
+<tr><td>foreignKeyName</td><td>Name of the foreign key **required**  </td></tr>
+</table>
 
 ### &lt;indexExists&gt; ###
 
@@ -201,8 +211,10 @@ Passes if the specified index exists in the database. **Since 1.8**
 
 #### Available Attributes ####
 
-^ schemaName  | Name of the index's schema **required**  |
-^ indexName  | Name of the index **required**  |
+<table>
+<tr><td>schemaName</td><td>Name of the index's schema **required**  </td></tr>
+<tr><td>indexName</td><td>Name of the index **required**  </td></tr>
+</table>
 
 ### &lt;sequenceExists&gt; ###
 
@@ -210,9 +222,10 @@ Passes if the specified sequence exists in the database. **Since 1.8**
 
 #### Available Attributes ####
 
-^ schemaName  | Name of the sequences's schema **required**  |
-^ sequenceName  | Name of the sequence **required**  |
-
+<table>
+<tr><td>schemaName</td><td>Name of the sequences's schema **required**  </td></tr>
+<tr><td>sequenceName</td><td>Name of the sequence **required**  </td></tr>
+</table>
 
 ### &lt;primaryKeyExists&gt; ###
 
@@ -220,9 +233,10 @@ Passes if the specified primary key exists in the database.  **Since 1.8**
 
 #### Available Attributes ####
 
-^ schemaName  | Name of the primary key's schema  | 
-^ primaryKeyName  | Name of the primary key **tableName OR primaryKeyName required**  |
-^ tableName  | Name of the table containing primary key **tableName OR primaryKeyName required** **Since 1.9** |
+<table>
+<tr><td>schemaName</td><td>Name of the primary key's schema</td><td>primaryKeyName</td><td>Name of the primary key **tableName OR primaryKeyName required**  </td></tr>
+<tr><td>tableName</td><td>Name of the table containing primary key **tableName OR primaryKeyName required** **Since 1.9** </td></tr>
+</table>
 
 ### &lt;sqlCheck&gt; ###
 
@@ -234,7 +248,9 @@ Executes an SQL string and checks the returned value.  The SQL must return a sin
 
 #### Available Attributes ####
 
-^ expectedResult  | Value to compare the SQL result to. **required**  |
+<table>
+<tr><td>expectedResult</td><td>Value to compare the SQL result to. **required**  </td></tr>
+</table>
 
 ### &lt;changeLogPropertyDefined&gt; ###
 
@@ -247,8 +263,10 @@ Checks whether given [changelog parameter](http://www.liquibase.org/documentatio
 
 #### Available Attributes ####
 
-^ property  | Name of the property to check for. **required**  |
-^ value  | Required value for given property.  | 
+<table>
+<tr><td>property</td><td>Name of the property to check for. **required**  </td></tr>
+<tr><td>value</td><td>Required value for given property.</td></tr>
+</table>
 
 ### &lt;customPrecondition&gt; ###
 
@@ -263,16 +281,22 @@ Custom preconditions can be created by creating a class that implements the [liq
 
 #### Available Attributes ####
 
-^ className  | Name of custom precondition class. **required**  |
+<table>
+<tr><td>className</td><td>Name of custom precondition class. **required**  </td></tr>
+</table>
 
 #### Available Sub-Tags ####
 
-^ param  | Parameter to pass to the custom precondition.  | 
+<table>
+<tr><td>param</td><td>Parameter to pass to the custom precondition.</td></tr>
+</table>
 
 ##### Available "param" sub-tag Attributes #####
 
-^ name  | Name of the parameter to set. **required**  |
-^ value | String value to set parameter to. **required**  |
+<table>
+<tr><td>name</td><td>Name of the parameter to set. **required**  </td></tr>
+<tr><td>value</td><td>String value to set parameter to. **required**  </td></tr>
+</table>
 
 ## Implementation Notes ##
 

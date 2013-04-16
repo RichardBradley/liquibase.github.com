@@ -17,11 +17,12 @@ Other refactorings such as "drop table" and "insert data" have no corresponding 
 
 ## Rollback Tag Available Attributes ##
 
-^ nested tags | Standard Liquibase change tags to generate rollback statements  |
-^ tag text | SQL to run to rollback this change  |
-^ changeSetId  | Id of changeset to rerun in order to rollback this change.  Example: for rolling back a dropTable change, reference the changeSet that created the table.  |
-^ changeSetAuthor  | Author of changeset to rerun in order to rollback this change  |
-
+<table>
+<tr><td>nested tags</td><td>Standard Liquibase change tags to generate rollback statements  </td></tr>
+<tr><td>tag text</td><td>SQL to run to rollback this change  </td></tr>
+<tr><td>changeSetId</td><td>Id of changeset to rerun in order to rollback this change.  Example: for rolling back a dropTable change, reference the changeSet that created the table.  </td></tr>
+<tr><td>changeSetAuthor</td><td>Author of changeset to rerun in order to rollback this change  </td></tr>
+</table>
 
 ## Samples ##
 

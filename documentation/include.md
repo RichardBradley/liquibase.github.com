@@ -29,8 +29,10 @@ The reason to use the `<include>` tag rather than using XML's built-in include f
 
 ## Available Attributes ##
 
-^ file  | Name of the file to import **required** |
-^ relativeToChangelogFile | Is the file path relative to the root changelog file rather than to the classpath.  Defaults to "false" **since 1.9** |
+<table>
+<tr><td>file</td><td>Name of the file to import **required** </td></tr>
+<tr><td>relativeToChangelogFile</td><td>Is the file path relative to the root changelog file rather than to the classpath.  Defaults to "false" **since 1.9** </td></tr>
+</table>
 
 
 ## Implementation Notes ##

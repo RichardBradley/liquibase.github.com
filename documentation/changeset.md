@@ -39,24 +39,27 @@ Liquibase attempts to execute each changeSet in a transaction that is committed 
 
 ## Available Attributes ##
 
-^ id  | An alpha-numeric identifier **required** |
-^ author  | The creator of the change set **required**  |
-^ dbms  | The type of a database which that changeSet is to be used for. When the migration step is running, it checks the database type against this attribute. Valid database type names are listed on the [supported databases page](../databases.html) |
-^ runAlways  | Executes the change set on every run, even if it has been run before |
-^ runOnChange  | Executes the change the first time it is seen and each time the change set has been changed |
-^ context  | Executes the change if the particular context was passed at runtime. Any string can be used for the context name and they are checked case-insensitively. |
-^ runInTransaction  | Should the changeSet be ran as a single transaction (if possible)?  Defaults to true.  **Warning: be careful with this attribute.  If set to false and an error occurs part way through running a changeSet containing multiple statements, the Liquibase databasechangelog table will be left in an invalid state** **Since 1.9** |
-^ failOnError | Should the migration fail if an error occurs while executing the changeSet? |
-
+<table>
+<tr><td>id</td><td>An alpha-numeric identifier **required** </td></tr>
+<tr><td>author</td><td>The creator of the change set **required**  </td></tr>
+<tr><td>dbms</td><td>The type of a database which that changeSet is to be used for. When the migration step is running, it checks the database type against this attribute. Valid database type names are listed on the [supported databases page](../databases.html) </td></tr>
+<tr><td>runAlways</td><td>Executes the change set on every run, even if it has been run before </td></tr>
+<tr><td>runOnChange</td><td>Executes the change the first time it is seen and each time the change set has been changed </td></tr>
+<tr><td>context</td><td>Executes the change if the particular context was passed at runtime. Any string can be used for the context name and they are checked case-insensitively. </td></tr>
+<tr><td>runInTransaction</td><td>Should the changeSet be ran as a single transaction (if possible)?  Defaults to true.  **Warning: be careful with this attribute.  If set to false and an error occurs part way through running a changeSet containing multiple statements, the Liquibase databasechangelog table will be left in an invalid state** **Since 1.9** </td></tr>
+<tr><td>failOnError</td><td>Should the migration fail if an error occurs while executing the changeSet? </td></tr>
+</table>
 
 
 ## Available Sub-Tags ##
 
-^ comment  | A description of the change set.  XML comments will provide the same benefit, future releases of Liquibase may be able to make use of &lt;comment&gt; tag comments to generate documentation |
-^ preConditions | [Preconditions](Preconditions.html) that must pass before the change set will be executed.  Useful for doing a data sanity check before doing something unrecoverable such as a dropTable **Since 1.7** |
-^ &lt;Any Refactoring Tag(s)&gt;  | The database change(s) to run as part of this change set (so called [refactoring](refactoring_commands.html)s) |
-^ validCheckSum | When comparing the changeSet stored in the database with the checksum generated from the current changeSet, do not consider the changeSet changed if the given validCheckSum is in the database. Use primarily when you need to change a changeSet and don't want errors thrown on databases on which is has already ran (not a recommended procedure).  **Since 1.7** |
-^ rollback | SQL statements or refactoring tags that describe how to [rollback](rollback.html) the change set |
+<table>
+<tr><td>comment</td><td>A description of the change set.  XML comments will provide the same benefit, future releases of Liquibase may be able to make use of &lt;comment&gt; tag comments to generate documentation </td></tr>
+<tr><td>preConditions</td><td>[Preconditions](Preconditions.html) that must pass before the change set will be executed.  Useful for doing a data sanity check before doing something unrecoverable such as a dropTable **Since 1.7** </td></tr>
+<tr><td>&lt;Any Refactoring Tag(s)&gt;</td><td>The database change(s) to run as part of this change set (so called [refactoring](refactoring_commands.html)s) </td></tr>
+<tr><td>validCheckSum</td><td>When comparing the changeSet stored in the database with the checksum generated from the current changeSet, do not consider the changeSet changed if the given validCheckSum is in the database. Use primarily when you need to change a changeSet and don't want errors thrown on databases on which is has already ran (not a recommended procedure).  **Since 1.7** </td></tr>
+<tr><td>rollback</td><td>SQL statements or refactoring tags that describe how to [rollback](rollback.html) the change set </td></tr>
+</table>
 
 ### Rollback Tag ###
 

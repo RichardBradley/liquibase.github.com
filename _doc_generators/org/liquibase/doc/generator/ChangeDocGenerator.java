@@ -42,7 +42,7 @@ public class ChangeDocGenerator {
     private static void writeChangeNav(Map<String, SortedSet<Class<? extends Change>>> definedChanges) throws IOException {
         String content = "";
         content = addGeneratedHeader(content);
-        content += "<h3>Bundled Changes</h3>";
+        content += "{% include subnav_documentation.md %}\n\n<hr>\n<h3 style='color: #747373'>Bundled Changes</h3>\n\n";
 
         for (String changeName : new TreeSet<String>(definedChanges.keySet())) {
             content += "<li><a href='"+getChangeDocFileName(changeName)+".html'><span>"+changeName.replaceAll("([A-Z])", " $1") + "</span></a></li>\n";

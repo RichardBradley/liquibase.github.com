@@ -74,6 +74,6 @@ You will see that your database now contains a table called "department". Two ot
 
 ## Next Steps ##
 
-This quick-start guide is designed to get you started with Liquibase. For a full description of all its capabilities, see the [Liquibase Manual](documentation/index.html). Read [the best practices](bestpractices.html).  For an extensive scenario, see the [tutorial using Oracle](tutorial-using-oracle.html).
+This quick-start guide is designed to get you started with Liquibase. For a full description of all its capabilities, see the [Liquibase Manual](documentation/index.html). Read [the best practices](bestpractices.html).
 
 You can also view [recorded sessions](training.html) on Liquibase or visit the [forums](community/index.html).

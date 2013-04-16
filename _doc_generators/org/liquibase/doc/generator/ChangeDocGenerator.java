@@ -138,7 +138,7 @@ public class ChangeDocGenerator {
 
                     String description = param.getDescription();
                     if (param.getDataType().endsWith("columnConfig")) {
-                        description += "<br><br>See the <a href='../columnConfig.html'>column tag</a> documentation for more information";
+                        description += "<br><br>See the <a href='../column.html'>column tag</a> documentation for more information";
                     }
 
                     content += "<tr><td style='vertical-align: top'>"+ param.getParameterName() + "</td><td>" + description + "</td><td style='vertical-align: top'>" + required+"</td><td style='vertical-align: top'>"+(list?"yes":"no")+"</td><td style='vertical-align: top'>"+StringUtils.trimToEmpty(param.getSince())+"</td></tr>\n";

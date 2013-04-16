@@ -4,7 +4,7 @@ title: Include tag
 ---
 
 
-The include tag allows you to break up your change-logs into more manageable pieces.
+The include tag allows you to break up your change-logs into more manageable pieces. To easily include multiple files, use the [includeAll](includeall.html) tag.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>

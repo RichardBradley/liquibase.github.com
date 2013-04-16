@@ -34,7 +34,7 @@ Each changeSet contains an "id" tag and an "author" tag. These tags, along with 
 
 
 
-## Sample Empty Change Log (v2.0) ##
+## Sample Empty Change Log ##
 
 <div id='changelog-tabs'>
 <ul>

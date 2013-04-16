@@ -27,7 +27,7 @@ Liquibase 2.x requires Java 1.5+. Liquibase 3.x requires Java 1.6+
 
 ## Installation ##
 
-Extract liquibase.zip. In it you will find a **liquibase-VERSION.jar** This jar is all that is needed to run Liquibase from the ["command line"](../documentation/command_line.html), [ant](../documentation/ant/index.html), [Maven](../documentation/grails.html), [Spring](../documentation/grails.html), or a [servlet container](../documentation/servlet_listener.html). You can run the [command line](../documentation/command_line.html) version of the migrator with the same jar file by simply running **java -jar liquibase-VERSION.jar**.
+Extract liquibase.zip. In it you will find a **liquibase-VERSION.jar** This jar is all that is needed to run Liquibase from the ["command line"](../documentation/command_line.html), [ant](../documentation/ant/index.html), [Maven](../documentation/maven/index.html), [Spring](../documentation/spring.html), or a [servlet container](../documentation/servlet_listener.html). You can run the [command line](../documentation/command_line.html) version of the migrator with the same jar file by simply running **java -jar liquibase-VERSION.jar**.
 
 ## Source Code Download ##
 

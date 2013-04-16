@@ -19,7 +19,7 @@ public class DocChecker {
             checkLinks(file, seenFiles);
         }
         for (File file : files) {
-            if (!seenFiles.contains(file.getCanonicalPath())) {
+            if (!file.getAbsolutePath().contains("javadoc") && !seenFiles.contains(file.getCanonicalPath())) {
                 System.out.println("Found no references to "+file.getAbsolutePath());
             }
         }
@@ -39,11 +39,20 @@ public class DocChecker {
             if (url.startsWith("http")) {
                 continue;
             }
+            if (url.startsWith("mailto")) {
+                continue;
+            }
             if (url.endsWith(".md")) {
                 System.out.println("Reference to markdown "+url+" in "+file.getAbsolutePath());
             }
             File referencedFile = new File(dir, url);
-            seenFiles.add(referencedFile.getCanonicalPath());
+            try {
+                seenFiles.add(referencedFile.getCanonicalPath());
+            } catch (IOException e) {
+                System.out.println("Bad file "+referencedFile);
+                e.printStackTrace();
+                continue;
+            }
             if (referencedFile.isDirectory()) {
                 System.out.println("Reference to directory "+url+" in "+file.getAbsolutePath());
             }

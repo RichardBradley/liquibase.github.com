@@ -33,7 +33,7 @@ Create Table
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>columns</td><td>null<br><br>See the <a href='../columnConfig.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>columns</td><td>null<br><br>See the <a href='../column.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td><td style='vertical-align: top'></td></tr>
 </table>
 <div id='changelog-tabs'>
 <ul>

@@ -17,7 +17,7 @@ title: Home
     <li><a href="other_formats.html">Other Formats</a></li>
 </ul></li>
 <li><a href="changeset.html">Changesets</a></li>
-<li><a href="changes.html">Changes/refactoring commands</a></li>
+<li><a href="changes/index.html">Changes/refactoring commands</a></li>
 <li><a href="include.html">Including/nesting changelogs</a></li>
 <li><a href="preconditions.html">Preconditions</a></li>
 <li><a href="contexts.html">Contexts</a></li>
@@ -37,11 +37,11 @@ title: Home
 <h2>Running Liquibase</h2>
 <ul>
 <li><a href="command_line.html">Command Line</a></li>
-<li><a href="ant.html">Ant</a></li>
-<li><a href="maven.html">Maven</a></li>
+<li><a href="ant/index.html">Ant</a></li>
+<li><a href="maven/index.html">Maven</a></li>
 <li><a href="spring.html">Spring</a></li>
-<li><a href="grails.html">Grails</a></li>
 <li><a href="servlet_listener.html">Servlet Listener</a></li>
+<li><a href="cdi.html">CDI Environment</a></li>
 </ul>
 
 </div>
@@ -72,7 +72,7 @@ Generally there should be just one change per changeset to avoid failed autocomm
 <h3>Preconditions</h3>
 <p>
 Preconditions can be applied to either the changelog as a whole or individual change sets. If a precondition fails, Liquibase will stop execution.
- <a href="preconditions/index.html">[more]</a>
+ <a href="preconditions.html">[more]</a>
 </p>
 
 <h3>Contexts</h3>

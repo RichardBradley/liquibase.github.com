@@ -5,7 +5,7 @@ title: Changeset
 
 # &lt;changeSet&gt; tag #
 
-The changeSet tag is what you use to group database changes/[refactoring](refactoring_commands.html)s together.
+The changeSet tag is what you use to group database changes/[refactoring](changes/index.html)s together.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>

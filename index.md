@@ -27,7 +27,7 @@ title: Liquibase
 
 <h3>Powerful refactoring commands</h3>
 <ul>
-    <li>Simple commands like <a href="documentation/changes/add_table.html">Add Table</a> and <a href="documentation/changes/drop_column.html">Drop Column</a></li>
+    <li>Simple commands like <a href="documentation/changes/create_table.html">Create Table</a> and <a href="documentation/changes/drop_column.html">Drop Column</a></li>
     <li>Complex commands like <a href="documentation/changes/add_lookup_table.html">Add Lookup Table</a> and <a href="documentation/changes/merge_columns.html">Merge Columns</a></li>
     <li>Plus the ability to <a href="documentation/rollback.html">Generate and manage rollback logic</a></li>
 </ul>

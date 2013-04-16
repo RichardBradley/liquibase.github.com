@@ -1,4 +1,5 @@
 <li><a href="{{pageRoot}}/documentation/index.html"><span>Documentation Home</span></a></li>
+<li><a href="{{pageRoot}}/documentation/changes/index.html"><span>Changes / Refactorings</span></a></li>
 <li><a href="{{pageRoot}}/documentation/databasechangelog.html"><span>DatabaseChangeLog</span></a></li>
 <li><a href="{{pageRoot}}/documentation/changeset.html"><span>ChangeSet</span></a></li>
 <li><a href="{{pageRoot}}/documentation/include.html"><span>Include</span></a></li>
@@ -6,7 +7,6 @@
 <li><a href="{{pageRoot}}/documentation/contexts.html"><span>Contexts</span></a></li>
 <li><a href="{{pageRoot}}/documentation/changelog_parameters.html"><span>ChangeLog Parameters</span></a></li>
 <li><a href="{{pageRoot}}/documentation/hibernate.html"><span>Hibernate Integration</span></a></li>
-<li><a href="{{pageRoot}}/documentation/formatted_sql_changelogs.html"><span>Formatted SQL Changelogs</span></a></li>
 <li><a href="{{pageRoot}}/documentation/update.html"><span>Update</span></a></li>
 <li><a href="{{pageRoot}}/documentation/rollback.html"><span>Rollback</span></a></li>
 <li><a href="{{pageRoot}}/documentation/diff.html"><span>Diff</span></a></li>

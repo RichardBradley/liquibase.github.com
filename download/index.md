@@ -9,13 +9,13 @@ subnav: subnav_main.md
 ## Liquibase Core ##
 
 The current stable version of the Liquibase Core is 2.0.5 (Released May 2, 2012).
-* [liquibase-2.0.5-bin.zip](https://github.com/downloads/liquibase/liquibase/liquibase-2.0.5-bin.zip)
-* [liquibase-2.0.5-bin.tar.gz](https://github.com/downloads/liquibase/liquibase/liquibase-2.0.5-bin.tar.gz)
+* [liquibase-2.0.5-bin.zip](http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-2.0.5-bin.zip/download)
+* [liquibase-2.0.5-bin.tar.gz](http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-2.0.5-bin.tar.gz/download)
 
 Beta Builds
 
-* [liquibase-3.0.0-beta1-bin.zip](liquibase.org/liquibase-3.0.0-beta1.bin.zip)
-* [liquibase-3.0.0-beta2-bin.zip](liquibase.org/liquibase-3.0.0-beta2.bin.zip)
+* [liquibase-3.0.0-beta1-bin.zip](http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.0.0-beta1-bin.zip/download)
+* [liquibase-3.0.0-beta2-bin.zip](http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.0.0-beta2-bin.zip/download)
 
 ## Liquibase Extension Portal ##
 

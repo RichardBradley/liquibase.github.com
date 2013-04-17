@@ -28,4 +28,14 @@ title: History
 
 **7/23/2007** Version 1.1 was released featuring support for additional databases and the database diff tool.
 
-**6/25/2007** Version 1.0. Initial functionality included rollback support, pre-condition, execution contexts, failOnError control, and cluster support
+**6/25/2007** Version 1.0. was released after two release candidates.
+
+**5/14/2007 Version 0.9 was released focusing on adding roll-back support, new refactorings, and final pre-1.0 features.
+
+**4/22/2007 Version 0.8 Changes included: pre-condition, execution contexts, failOnError tag, add/dropNotNullConstraints, and improved documentation.
+
+**3/5/2007 Version 0.7 was released.
+
+**11/10/2006 Version 0.6 was released with clustering support.
+
+**10/16/2006 Version 0.5 was released under the LGPL.

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Maven migrate
+subnav: subnav_documentation.md
 ---
 
-INCLUDE migrate-mojo.html
+<iframe class="maven" src="generated/migrate-mojo.html"></iframe>

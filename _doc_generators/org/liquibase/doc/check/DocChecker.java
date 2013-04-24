@@ -17,12 +17,28 @@ public class DocChecker {
         Set<String> seenFiles = new HashSet<String>();
         for (File file : files) {
             checkLinks(file, seenFiles);
+            checkContent(file);
         }
         for (File file : files) {
             if (!file.getAbsolutePath().contains("javadoc") && !seenFiles.contains(file.getCanonicalPath())) {
                 System.out.println("Found no references to "+file.getAbsolutePath());
             }
         }
+    }
+
+    private static void checkContent(File file) throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(file));
+        String line;
+        String contents = "";
+        while ((line = reader.readLine()) != null) {
+            contents += line;
+        }
+
+        if (contents.contains("Unknown nav")) {
+            System.out.println("Problem with navigation in "+file.getAbsolutePath());
+        }
+
+
     }
 
     private static void checkLinks(File file, Set<String> seenFiles) throws Exception {

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Maven update
+subnav: subnav_documentation.md
 ---
 
-INCLUDE update-mojo.html
+<iframe class="maven" src="generated/update-mojo.html"></iframe>

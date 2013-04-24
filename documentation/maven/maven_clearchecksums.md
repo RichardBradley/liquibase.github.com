@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Maven clearchecksums
+subnav: subnav_documentation.md
 ---
 
-INCLUDE clearCheckSums-mojo.html
+<iframe class="maven" src="generated/clearCheckSums-mojo.html"></iframe>

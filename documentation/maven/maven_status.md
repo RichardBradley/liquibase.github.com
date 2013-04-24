@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Maven status
+subnav: subnav_documentation.md
 ---
 
-INCLUDE status-mojo.html
+<iframe class="maven" src="generated/status-mojo.html"></iframe>

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Maven dropall
+subnav: subnav_documentation.md
 ---
 
-INCLUDE dropAll-mojo.html
+<iframe class="maven" src="generated/dropAll-mojo.html"></iframe>

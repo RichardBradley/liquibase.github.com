@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Maven rollbacksql
+subnav: subnav_documentation.md
 ---
 
-INCLUDE rollbackSQL-mojo.html
+<iframe class="maven" src="generated/rollbackSQL-mojo.html

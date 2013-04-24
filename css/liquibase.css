@@ -11,6 +11,11 @@ a.logo {
     margin-top:25px
 }
 
+iframe.maven {
+    width: 750px;
+    height: 900px;
+}
+
 #mc_embed_signup .button:hover {
     background-color: #777;
 }

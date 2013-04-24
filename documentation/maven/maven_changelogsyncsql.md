@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Maven changelogsyncsql
+subnav: subnav_documentation.md
 ---
 
-INCLUDE changelogSyncSQL-mojo.html
+<iframe class="maven" src="generated/changelogSyncSQL-mojo.html"></iframe>

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Maven rollback
+subnav: subnav_documentation.md
 ---
 
-INCLUDE rollback-mojo.html
+<iframe class="maven" src="generated/rollback-mojo.html"></iframe>

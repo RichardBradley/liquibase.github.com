@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Maven tag
+subnav: subnav_documentation.md
 ---
 
-INCLUDE tag-mojo.html
+<iframe class="maven" src="generated/tag-mojo.html"></iframe>

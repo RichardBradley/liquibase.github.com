@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Maven releaselocks
+subnav: subnav_documentation.md
 ---
 
-How could any of this be betetr stated? It couldn't.
+<iframe class="maven" src="generated/releaseLocks-mojo.html"></iframe>

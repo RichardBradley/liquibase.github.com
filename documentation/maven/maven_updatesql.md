@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Maven updatesql
+subnav: subnav_documentation.md
 ---
 
-INCLUDE updateSQL-mojo.html
+<iframe class="maven" src="generated/updateSQL-mojo.html"></iframe>

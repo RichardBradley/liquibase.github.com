@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Maven updatetestingrollback
+subnav: subnav_documentation.md
 ---
 
-INCLUDE updateTestingRollback-mojo.html
+<iframe class="maven" src="generated/updateTestingRollback-mojo.html"></iframe>

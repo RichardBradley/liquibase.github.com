@@ -123,6 +123,20 @@
                         Unknown Nav {{navPage}}
                     {% endcase %}
                 </ul>
+
+                <!-- Begin MailChimp Signup Form -->
+                        <!-- Begin MailChimp Signup Form -->
+                        <div id="mc_embed_signup" style="padding-right: 10px">
+                            <form action="http://liquibase.us2.list-manage1.com/subscribe/post?u=c24cd4e0098d3017cc468c324&amp;id=3362c9cd2f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                <fieldset style="color: #747373">
+                                    <legend>Announcements</legend>
+                                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" title="Email Address" size="30">
+                                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                                </fieldset>
+                            </form>
+                        </div>
+
+                        <!--End mc_embed_signup-->
             </div>
             <div class="span-18 last">
                 <div style="margin-left: 20px; padding-bottom: 100px">
@@ -133,12 +147,42 @@
 
         <div style="width: 100%; text-align: right; padding-bottom: 20px">
             <hr>
-            <span style="margin-right: 20px">Missing, incomplete or wrong information? <a href="https://github.com/liquibase/liquibase.github.com">Please send a pull request</a></span>
+            <span style="margin-right: 20px; font-weight: bold">Missing, incomplete or wrong information? <a href="https://github.com/liquibase/liquibase.github.com">Please send a pull request</a></span>
         </div>
 
+        <script>
+            $(document).ready(function(){
+                $('input[type=text][title],input[type=password][title],textarea[title]').each(function(i){
+                    $(this).addClass('input-prompt-' + i);
+                    var promptSpan = $('<span class="input-prompt"/>');
+                    $(promptSpan).attr('id', 'input-prompt-' + i);
+                    $(promptSpan).append($(this).attr('title'));
+                    $(promptSpan).click(function(){
+                        $(this).hide();
+                        $('.' + $(this).attr('id')).focus();
+                    });
+                    if($(this).val() != ''){
+                        $(promptSpan).hide();
+                    }
+                    $(this).before(promptSpan);
+                    $(this).focus(function(){
+                        $('#input-prompt-' + i).hide();
+                    });
+                    $(this).blur(function(){
+                        if($(this).val() == ''){
+                            $('#input-prompt-' + i).show();
+                        }
+                    });
+                });
+            });
+        </script>
+
         <script type="text/javascript">
+
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-1719178-1']);
+            _gaq.push(['_setDomainName', 'liquibase.org']);
+            _gaq.push(['_setAllowLinker', true]);
             _gaq.push(['_trackPageview']);
 
             (function() {
@@ -146,6 +190,7 @@
                 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
             })();
+
         </script>
     </body>
 </html>

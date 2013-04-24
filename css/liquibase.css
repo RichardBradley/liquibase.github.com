@@ -11,6 +11,31 @@ a.logo {
     margin-top:25px
 }
 
+#mc_embed_signup .button:hover {
+    background-color: #777;
+}
+
+#mc_embed_signup .button {
+    clear: both;
+    background-color: #aaa;
+    border: 0 none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 5px 10px 0;
+    padding: 0 22px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    white-space: nowrap;
+    width: auto;
+}
+
 #search {
     width:450px;
     float:right;
@@ -165,7 +190,7 @@ div#menu div li ul li:hover{
 
 
 ul#leftnav {
-    padding-bottom: 100px;
+    padding-bottom: 10px;
     list-style: none;
     float: left;
     font-size: 1.1em;
@@ -206,4 +231,11 @@ ul#leftnav a { /*--This is basically the hover state of navigation--*/
 ul#leftnav span { /*--Default state of navigation--*/
     color: #747373;
     background:none;
+}
+
+.input-prompt {
+    position: absolute;
+    font-style: italic;
+    color: #aaa;
+    margin: 0.2em 0 0 0.5em;
 }

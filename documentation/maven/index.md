@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Maven
+subnav: subnav_documentation.md
 ---
 
 # Maven Liquibase Plugin #
@@ -14,19 +15,19 @@ You can find the all the versions of the Liquibase-core and Maven plugins in the
 
 
 ## Goals Available ##
-* [liquibase:changeLogSync](maven_changeLogSync.html)
-* [liquibase:changeLogSyncSQL](maven_changeLogSyncSQL.html)
-* [liquibase:clearCheckSums](maven_clearCheckSums.html)
-* [liquibase:dropAll](maven_dropAll.html)
-* [liquibase:listLocks](maven_listLocks.html)
-* [liquibase:releaseLocks](maven_releaseLocks.html)
+* [liquibase:changeLogSync](maven_changelogsync.html)
+* [liquibase:changeLogSyncSQL](maven_changelogsyncsql.html)
+* [liquibase:clearCheckSums](maven_clearchecksums.html)
+* [liquibase:dropAll](maven_dropall.html)
+* [liquibase:listLocks](maven_listlocks.html)
+* [liquibase:releaseLocks](maven_releaselocks.html)
 * [liquibase:rollback](maven_rollback.html)
-* [liquibase:rollbackSQL](maven_rollbackSQL.html)
+* [liquibase:rollbackSQL](maven_rollbacksql.html)
 * [liquibase:status](maven_status.html)
 * [liquibase:tag](maven_tag.html)
 * [liquibase:update](maven_update.html)
-* [liquibase:updateSQL](maven_updateSQL.html)
-* [liquibase:updateTestingRollback](maven_updateTestingRollback.html)
+* [liquibase:updateSQL](maven_updatesql.html)
+* [liquibase:updateTestingRollback](maven_updatetestingrollback.html)
 * [liquibase:migrate](maven_migrate.html) //**DEPRECATED** use update instead//
 * [liquibase:migrateSQL](maven_migrateSQL.html) //**DEPRECATED** use updateSQL instead//
 

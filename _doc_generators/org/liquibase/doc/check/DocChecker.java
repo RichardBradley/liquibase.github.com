@@ -34,7 +34,7 @@ public class DocChecker {
             contents += line;
         }
 
-        if (contents.contains("Unknown nav")) {
+        if (contents.contains("Unknown Nav")) {
             System.out.println("Problem with navigation in "+file.getAbsolutePath());
         }
 
@@ -48,9 +48,7 @@ public class DocChecker {
         while ((line = reader.readLine()) != null) {
             contents += line;
         }
-        Matcher matcher = Pattern.compile("href=[\"']?([\\w:/\\.\\-]+)[\"']?").matcher(contents);
-        while (matcher.find()) {
-            String url = matcher.group(1);
+        for (String url : findUrls(contents)) {
             File dir = file.getParentFile();
             if (url.startsWith("http")) {
                 continue;
@@ -76,6 +74,21 @@ public class DocChecker {
                 System.out.println("Reference to missing "+url+" in "+file.getAbsolutePath());
             }
         }
+    }
+
+    private static Set<String> findUrls(String contents) {
+        Set<String> returnSet = new HashSet<String>();
+        Matcher matcher = Pattern.compile("href=[\"']?([\\w:/\\.\\-]+)[\"']?").matcher(contents);
+        while (matcher.find()) {
+            returnSet.add(matcher.group(1));
+        }
+
+        matcher = Pattern.compile("src=[\"']?([\\w:/\\.\\-]+)[\"']?").matcher(contents);
+        while (matcher.find()) {
+            returnSet.add(matcher.group(1));
+        }
+
+        return returnSet;
     }
 
     private static void findFiles(File dir, Set<File> files) {

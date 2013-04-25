@@ -11,7 +11,7 @@ As an open-source projects, we encourage looking any help you can give to the pr
 
 The main Liquibase source repository is at [http://github.com/liquibase/liquibase](http://github.com/liquibase/liquibase). To contribute changes, fork the Liquibase repository and send us your pull requests. See [Github help](https://help.github.com/) for more information.
 
-Other Liquibase-related projects and extensions (including this site's source) can be found at [http://github.com/liquibase](http://github.com/liquibase/liquibase)
+Other Liquibase-related projects and extensions (including this site's source) can be found at [http://github.com/liquibase](http://github.com/liquibase)
 
 ## Issue Tracking ##
 

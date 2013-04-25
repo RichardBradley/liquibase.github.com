@@ -19,7 +19,7 @@ Diff command support is available through the [command_line](command_line.html) 
 ## Example ##
 
 ``
-liqubase.sh --driver=oracle.jdbc.OracleDriver \
+liquibase.sh --driver=oracle.jdbc.OracleDriver \
         --url=jdbc:oracle:thin:@testdb:1521:test \
         --username=bob \
         --password=bob \

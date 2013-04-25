@@ -15,7 +15,7 @@ The dbDoc command support is currently available through the ["command line"](co
 ## Example ##
 
 ``
-liqubase.sh --driver=oracle.jdbc.OracleDriver \
+liquibase.sh --driver=oracle.jdbc.OracleDriver \
         --url=jdbc:oracle:thin:@testdb:1521:test \
         --username=bob \
         --password=bob \

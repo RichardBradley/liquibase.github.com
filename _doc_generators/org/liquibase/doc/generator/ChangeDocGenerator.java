@@ -10,7 +10,6 @@ import liquibase.database.core.HsqlDatabase;
 import liquibase.database.core.MSSQLDatabase;
 import liquibase.database.core.MySQLDatabase;
 import liquibase.database.core.OracleDatabase;
-import liquibase.exception.UnsupportedChangeException;
 import liquibase.resource.ClassLoaderResourceAccessor;
 import liquibase.serializer.core.json.JsonChangeLogSerializer;
 import liquibase.serializer.core.xml.XMLChangeLogSerializer;
@@ -25,7 +24,7 @@ import java.util.*;
 
 public class ChangeDocGenerator {
 
-    public static void main(String[] args) throws IOException, UnsupportedChangeException {
+    public static void main(String[] args) throws IOException {
         Map<String, SortedSet<Class<? extends Change>>> definedChanges = ChangeFactory.getInstance().getRegistry();
         List<Database> databases = DatabaseFactory.getInstance().getImplementedDatabases();
         Collections.sort(databases, new Comparator<Database>() {
@@ -51,7 +50,7 @@ public class ChangeDocGenerator {
         new FileOutputStream(file).write(content.getBytes());
     }
 
-    private static void writeChangePages(Map<String, SortedSet<Class<? extends Change>>> definedChanges, List<Database> databases) throws UnsupportedChangeException, IOException {
+    private static void writeChangePages(Map<String, SortedSet<Class<? extends Change>>> definedChanges, List<Database> databases) throws IOException {
         List<Database> exampleDatabases = new ArrayList<Database>(databases);
         exampleDatabases.add(0, new HsqlDatabase());
         exampleDatabases.add(0, new OracleDatabase());
@@ -63,7 +62,7 @@ public class ChangeDocGenerator {
             System.out.println("--------------------");
 
             Change exampleChange = ChangeFactory.getInstance().create(changeName);
-            ChangeMetaData changeMetaData = exampleChange.getChangeMetaData();
+            ChangeMetaData changeMetaData = ChangeFactory.getInstance().getChangeMetaData(exampleChange);
 
             for (ChangeParameterMetaData param : changeMetaData.getParameters().values()) {
                 if (param.getDataType().matches(".* of .*")) {

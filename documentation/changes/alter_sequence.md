@@ -22,7 +22,6 @@ Alter properties of an existing sequence
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>dbms</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>incrementBy</td><td>New amount the sequence should increment by</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>maxValue</td><td>New maximum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>minValue</td><td>New minimum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
@@ -41,7 +40,6 @@ Alter properties of an existing sequence
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="alterSequence-example">
     <alterSequence catalogName="cat"
-            dbms="h2, oracle"
             incrementBy="371717"
             maxValue="371717"
             minValue="371717"
@@ -59,7 +57,6 @@ changeSet:
   changes:
   - alterSequence:
       catalogName: cat
-      dbms: h2, oracle
       incrementBy: 371717
       maxValue: 371717
       minValue: 371717
@@ -79,7 +76,6 @@ changeSet:
       {
         "alterSequence": {
           "catalogName": "cat",
-          "dbms": "h2, oracle",
           "incrementBy": 371717,
           "maxValue": 371717,
           "minValue": 371717,

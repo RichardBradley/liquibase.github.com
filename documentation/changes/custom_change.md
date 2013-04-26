@@ -27,7 +27,6 @@ For a sample custom change class, see liquibase.change.custom.ExampleCustomSqlCh
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>dbms</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 </table>
 
 <div id='changelog-tabs'>

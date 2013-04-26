@@ -16,7 +16,6 @@
 <li><a href='add_primary_key.html'><span>add Primary Key</span></a></li>
 <li><a href='add_unique_constraint.html'><span>add Unique Constraint</span></a></li>
 <li><a href='alter_sequence.html'><span>alter Sequence</span></a></li>
-<li><a href='anonymous.html'><span>anonymous</span></a></li>
 <li><a href='create_index.html'><span>create Index</span></a></li>
 <li><a href='create_procedure.html'><span>create Procedure</span></a></li>
 <li><a href='create_sequence.html'><span>create Sequence</span></a></li>

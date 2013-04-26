@@ -23,7 +23,6 @@ Renames an existing column
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>columnDataType</td><td>Data type of the column</td><td style='vertical-align: top'>mysql</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>dbms</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>newColumnName</td><td>Name to rename the column to</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>oldColumnName</td><td>Name of the existing column to rename</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
@@ -41,7 +40,6 @@ Renames an existing column
 <changeSet author="liquibase-docs" id="renameColumn-example">
     <renameColumn catalogName="cat"
             columnDataType="A String"
-            dbms="h2, oracle"
             newColumnName="A String"
             oldColumnName="A String"
             schemaName="public"
@@ -58,7 +56,6 @@ changeSet:
   - renameColumn:
       catalogName: cat
       columnDataType: A String
-      dbms: h2, oracle
       newColumnName: A String
       oldColumnName: A String
       schemaName: public
@@ -77,7 +74,6 @@ changeSet:
         "renameColumn": {
           "catalogName": "cat",
           "columnDataType": "A String",
-          "dbms": "h2, oracle",
           "newColumnName": "A String",
           "oldColumnName": "A String",
           "schemaName": "public",

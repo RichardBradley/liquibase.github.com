@@ -24,7 +24,6 @@ Drops all foreign key constraints for a table
 <tr><td style='vertical-align: top'>baseTableCatalogName</td><td>Name of the table containing columns constrained by foreign keys</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>baseTableName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>baseTableSchemaName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>dbms</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -38,8 +37,7 @@ Drops all foreign key constraints for a table
 <changeSet author="liquibase-docs" id="dropAllForeignKeyConstraints-example">
     <dropAllForeignKeyConstraints baseTableCatalogName="A String"
             baseTableName="A String"
-            baseTableSchemaName="A String"
-            dbms="h2, oracle"/>
+            baseTableSchemaName="A String"/>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -53,7 +51,6 @@ changeSet:
       baseTableCatalogName: A String
       baseTableName: A String
       baseTableSchemaName: A String
-      dbms: h2, oracle
 
 {% endhighlight %}
 </div>
@@ -68,8 +65,7 @@ changeSet:
         "dropAllForeignKeyConstraints": {
           "baseTableCatalogName": "A String",
           "baseTableName": "A String",
-          "baseTableSchemaName": "A String",
-          "dbms": "h2, oracle"
+          "baseTableSchemaName": "A String"
         }
       }]
     

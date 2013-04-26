@@ -22,7 +22,6 @@ Drops an existing index
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>dbms</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>indexName</td><td>Name of the index to drop</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td>Name fo the indexed table.</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
@@ -38,7 +37,6 @@ Drops an existing index
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="dropIndex-example">
     <dropIndex catalogName="cat"
-            dbms="h2, oracle"
             indexName="A String"
             schemaName="public"
             tableName="person"/>
@@ -53,7 +51,6 @@ changeSet:
   changes:
   - dropIndex:
       catalogName: cat
-      dbms: h2, oracle
       indexName: A String
       schemaName: public
       tableName: person
@@ -70,7 +67,6 @@ changeSet:
       {
         "dropIndex": {
           "catalogName": "cat",
-          "dbms": "h2, oracle",
           "indexName": "A String",
           "schemaName": "public",
           "tableName": "person"

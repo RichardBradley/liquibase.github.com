@@ -21,7 +21,6 @@ Stops Liquibase execution with a message. Mainly useful for debugging and steppi
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>dbms</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>message</td><td>Message to output when execution stops</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 </table>
 
@@ -34,7 +33,7 @@ Stops Liquibase execution with a message. Mainly useful for debugging and steppi
 <div id='tab-xml'>
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="stop-example">
-    <stop dbms="h2, oracle" message="What just happened???"/>
+    <stop message="What just happened???"/>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -45,7 +44,6 @@ changeSet:
   author: liquibase-docs
   changes:
   - stop:
-      dbms: h2, oracle
       message: What just happened???
 
 {% endhighlight %}
@@ -59,7 +57,6 @@ changeSet:
     "changes": [
       {
         "stop": {
-          "dbms": "h2, oracle",
           "message": "What just happened???"
         }
       }]

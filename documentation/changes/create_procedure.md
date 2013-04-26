@@ -24,7 +24,6 @@ Often times it is best to use the CREATE OR REPLACE syntax along with setting ru
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>comments</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>dbms</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>procedureBody</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
@@ -37,7 +36,7 @@ Often times it is best to use the CREATE OR REPLACE syntax along with setting ru
 <div id='tab-xml'>
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="createProcedure-example">
-    <createProcedure comments="A String" dbms="h2, oracle">CREATE OR REPLACE PROCEDURE testHello
+    <createProcedure comments="A String">CREATE OR REPLACE PROCEDURE testHello
     IS
     BEGIN
       DBMS_OUTPUT.PUT_LINE('Hello From The Database!');
@@ -53,7 +52,6 @@ changeSet:
   changes:
   - createProcedure:
       comments: A String
-      dbms: h2, oracle
       procedureBody: |-
         CREATE OR REPLACE PROCEDURE testHello
             IS
@@ -73,7 +71,6 @@ changeSet:
       {
         "createProcedure": {
           "comments": "A String",
-          "dbms": "h2, oracle",
           "procedureBody": "CREATE OR REPLACE PROCEDURE testHello\n    IS\n    BEGIN\n\
             \      DBMS_OUTPUT.PUT_LINE('Hello From The Database!');\n    END;"
         }

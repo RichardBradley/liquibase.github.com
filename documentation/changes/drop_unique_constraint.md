@@ -23,7 +23,6 @@ Drops an existing unique constraint
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>constraintName</td><td>Name of unique constraint to drop</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>dbms</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td>Name of the table to drop the unique constraint from</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>uniqueColumns</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
@@ -40,7 +39,6 @@ Drops an existing unique constraint
 <changeSet author="liquibase-docs" id="dropUniqueConstraint-example">
     <dropUniqueConstraint catalogName="cat"
             constraintName="A String"
-            dbms="h2, oracle"
             schemaName="public"
             tableName="person"
             uniqueColumns="A String"/>
@@ -56,7 +54,6 @@ changeSet:
   - dropUniqueConstraint:
       catalogName: cat
       constraintName: A String
-      dbms: h2, oracle
       schemaName: public
       tableName: person
       uniqueColumns: A String
@@ -74,7 +71,6 @@ changeSet:
         "dropUniqueConstraint": {
           "catalogName": "cat",
           "constraintName": "A String",
-          "dbms": "h2, oracle",
           "schemaName": "public",
           "tableName": "person",
           "uniqueColumns": "A String"

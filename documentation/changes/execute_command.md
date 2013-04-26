@@ -21,7 +21,6 @@ Executes a system command. Because this refactoring doesn't generate SQL like mo
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>dbms</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>executable</td><td>Name of the executable to run</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
@@ -34,7 +33,7 @@ Executes a system command. Because this refactoring doesn't generate SQL like mo
 <div id='tab-xml'>
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="executeCommand-example">
-    <executeCommand dbms="h2, oracle" executable="mysqldump"/>
+    <executeCommand executable="mysqldump"/>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -45,7 +44,6 @@ changeSet:
   author: liquibase-docs
   changes:
   - executeCommand:
-      dbms: h2, oracle
       executable: mysqldump
 
 {% endhighlight %}
@@ -59,7 +57,6 @@ changeSet:
     "changes": [
       {
         "executeCommand": {
-          "dbms": "h2, oracle",
           "executable": "mysqldump"
         }
       }]

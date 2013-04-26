@@ -23,7 +23,6 @@ Modify data type
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>columnName</td><td>Name of the column</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>dbms</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>newDataType</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
@@ -40,7 +39,6 @@ Modify data type
 <changeSet author="liquibase-docs" id="modifyDataType-example">
     <modifyDataType catalogName="cat"
             columnName="id"
-            dbms="h2, oracle"
             newDataType="A String"
             schemaName="public"
             tableName="person"/>
@@ -56,7 +54,6 @@ changeSet:
   - modifyDataType:
       catalogName: cat
       columnName: id
-      dbms: h2, oracle
       newDataType: A String
       schemaName: public
       tableName: person
@@ -74,7 +71,6 @@ changeSet:
         "modifyDataType": {
           "catalogName": "cat",
           "columnName": "id",
-          "dbms": "h2, oracle",
           "newDataType": "A String",
           "schemaName": "public",
           "tableName": "person"

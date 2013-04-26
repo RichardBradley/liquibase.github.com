@@ -28,7 +28,6 @@ Once the date format string is set, Liquibase will then call the SimpleDateForma
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>dbms</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>encoding</td><td>Encoding of the CSV file (defaults to UTF-8)</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>file</td><td>CSV file to load</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>quotchar</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
@@ -47,7 +46,6 @@ Once the date format string is set, Liquibase will then call the SimpleDateForma
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="loadData-example">
     <loadData catalogName="cat"
-            dbms="h2, oracle"
             encoding="UTF-8"
             file="com/example/users.csv"
             quotchar="A String"
@@ -65,7 +63,6 @@ changeSet:
   changes:
   - loadData:
       catalogName: cat
-      dbms: h2, oracle
       encoding: UTF-8
       file: com/example/users.csv
       quotchar: A String
@@ -85,7 +82,6 @@ changeSet:
       {
         "loadData": {
           "catalogName": "cat",
-          "dbms": "h2, oracle",
           "encoding": "UTF-8",
           "file": "com/example/users.csv",
           "quotchar": "A String",

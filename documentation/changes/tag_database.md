@@ -21,7 +21,6 @@ Applies a tag to the database for future rollback
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>dbms</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>tag</td><td>Tag to apply</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
@@ -34,7 +33,7 @@ Applies a tag to the database for future rollback
 <div id='tab-xml'>
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="tagDatabase-example">
-    <tagDatabase dbms="h2, oracle" tag="version_1.3"/>
+    <tagDatabase tag="version_1.3"/>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -45,7 +44,6 @@ changeSet:
   author: liquibase-docs
   changes:
   - tagDatabase:
-      dbms: h2, oracle
       tag: version_1.3
 
 {% endhighlight %}
@@ -59,7 +57,6 @@ changeSet:
     "changes": [
       {
         "tagDatabase": {
-          "dbms": "h2, oracle",
           "tag": "version_1.3"
         }
       }]

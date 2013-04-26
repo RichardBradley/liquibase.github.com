@@ -23,7 +23,6 @@ Creates a new database sequence
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>cycle</td><td>Can the sequence cycle when it hits the max value?</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>dbms</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>incrementBy</td><td>Interval between sequence numbers</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>maxValue</td><td>The maximum value of the sequence</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>minValue</td><td>The minimum value of the sequence</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
@@ -44,7 +43,6 @@ Creates a new database sequence
 <changeSet author="liquibase-docs" id="createSequence-example">
     <createSequence catalogName="cat"
             cycle="true"
-            dbms="h2, oracle"
             incrementBy="2"
             maxValue="1000"
             minValue="10"
@@ -64,7 +62,6 @@ changeSet:
   - createSequence:
       catalogName: cat
       cycle: true
-      dbms: h2, oracle
       incrementBy: 2
       maxValue: 1000
       minValue: 10
@@ -86,7 +83,6 @@ changeSet:
         "createSequence": {
           "catalogName": "cat",
           "cycle": true,
-          "dbms": "h2, oracle",
           "incrementBy": 2,
           "maxValue": 1000,
           "minValue": 10,

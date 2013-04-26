@@ -22,9 +22,8 @@ Converts an existing column to be an auto-increment (a.k.a 'identity') column
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>columnDataType</td><td>Current data type fo the column to make auto-increment</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>columnDataType</td><td>Current data type of the column to make auto-increment</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>columnName</td><td>Name of the column</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>dbms</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>incrementBy</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>startWith</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
@@ -43,7 +42,6 @@ Converts an existing column to be an auto-increment (a.k.a 'identity') column
     <addAutoIncrement catalogName="cat"
             columnDataType="int"
             columnName="id"
-            dbms="h2, oracle"
             incrementBy="1"
             schemaName="public"
             startWith="100"
@@ -61,7 +59,6 @@ changeSet:
       catalogName: cat
       columnDataType: int
       columnName: id
-      dbms: h2, oracle
       incrementBy: 1
       schemaName: public
       startWith: 100
@@ -81,7 +78,6 @@ changeSet:
           "catalogName": "cat",
           "columnDataType": "int",
           "columnName": "id",
-          "dbms": "h2, oracle",
           "incrementBy": 1,
           "schemaName": "public",
           "startWith": 100,

@@ -22,7 +22,6 @@ Creates an index on an existing column or set of columns.
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>dbms</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>indexName</td><td>Name of the index to create</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td>Name of the table to add the index to</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
@@ -46,7 +45,6 @@ Creates an index on an existing column or set of columns.
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="createIndex-example">
     <createIndex catalogName="cat"
-            dbms="h2, oracle"
             indexName="A String"
             schemaName="public"
             tableName="user"
@@ -69,7 +67,6 @@ changeSet:
       - column:
           name: address
           type: varchar(255)
-      dbms: h2, oracle
       indexName: A String
       schemaName: public
       tableName: user
@@ -96,7 +93,6 @@ changeSet:
               }
             }]
           ,
-          "dbms": "h2, oracle",
           "indexName": "A String",
           "schemaName": "public",
           "tableName": "user",

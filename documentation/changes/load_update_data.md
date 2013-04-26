@@ -24,14 +24,13 @@ A value of NULL in a cell will be converted to a database NULL rather than the s
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>dbms</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>encoding</td><td>Encoding of the CSV file (defaults to UTF-8)</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>file</td><td>CSV file to load</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>primaryKey</td><td>Comma delimited list of the columns for the primary key</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>quotchar</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>separator</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td>Name of the table to insert or update data in</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>tableName</td><td>Name of the table to insert or update data in</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -44,7 +43,6 @@ A value of NULL in a cell will be converted to a database NULL rather than the s
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="loadUpdateData-example">
     <loadUpdateData catalogName="cat"
-            dbms="h2, oracle"
             encoding="UTF-8"
             file="com/example/users.csv"
             primaryKey="A String"
@@ -63,7 +61,6 @@ changeSet:
   changes:
   - loadUpdateData:
       catalogName: cat
-      dbms: h2, oracle
       encoding: UTF-8
       file: com/example/users.csv
       primaryKey: A String
@@ -84,7 +81,6 @@ changeSet:
       {
         "loadUpdateData": {
           "catalogName": "cat",
-          "dbms": "h2, oracle",
           "encoding": "UTF-8",
           "file": "com/example/users.csv",
           "primaryKey": "A String",

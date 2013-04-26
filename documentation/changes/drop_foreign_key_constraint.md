@@ -25,7 +25,6 @@ Drops an existing foreign key
 <tr><td style='vertical-align: top'>baseTableName</td><td>Name of the table containing the column constrained by the foreign key</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>baseTableSchemaName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>constraintName</td><td>Name of the foreign key constraint to drop</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>dbms</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -40,8 +39,7 @@ Drops an existing foreign key
     <dropForeignKeyConstraint baseTableCatalogName="A String"
             baseTableName="A String"
             baseTableSchemaName="A String"
-            constraintName="fk_address_person"
-            dbms="h2, oracle"/>
+            constraintName="fk_address_person"/>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -56,7 +54,6 @@ changeSet:
       baseTableName: A String
       baseTableSchemaName: A String
       constraintName: fk_address_person
-      dbms: h2, oracle
 
 {% endhighlight %}
 </div>
@@ -72,8 +69,7 @@ changeSet:
           "baseTableCatalogName": "A String",
           "baseTableName": "A String",
           "baseTableSchemaName": "A String",
-          "constraintName": "fk_address_person",
-          "dbms": "h2, oracle"
+          "constraintName": "fk_address_person"
         }
       }]
     

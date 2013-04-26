@@ -24,7 +24,6 @@ Concatenates the values in two columns, joins them by with string, and stores th
 <tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>column1Name</td><td>Name of the column containing the first half of the data</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>column2Name</td><td>Name of the column containing the second half of the data</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>dbms</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>finalColumnName</td><td>Name of the column to create</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>finalColumnType</td><td>Data type of the column to create</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>joinString</td><td>String to place include between the values from column1 and column2 (may be empty)</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
@@ -44,7 +43,6 @@ Concatenates the values in two columns, joins them by with string, and stores th
     <mergeColumns catalogName="cat"
             column1Name="first_name"
             column2Name="last_name"
-            dbms="h2, oracle"
             finalColumnName="full_name"
             finalColumnType="varchar(255)"
             joinString="A String"
@@ -63,7 +61,6 @@ changeSet:
       catalogName: cat
       column1Name: first_name
       column2Name: last_name
-      dbms: h2, oracle
       finalColumnName: full_name
       finalColumnType: varchar(255)
       joinString: A String
@@ -84,7 +81,6 @@ changeSet:
           "catalogName": "cat",
           "column1Name": "first_name",
           "column2Name": "last_name",
-          "dbms": "h2, oracle",
           "finalColumnName": "full_name",
           "finalColumnType": "varchar(255)",
           "joinString": "A String",

@@ -21,7 +21,6 @@ empty
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>dbms</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -33,7 +32,7 @@ empty
 <div id='tab-xml'>
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="empty-example">
-    <empty dbms="h2, oracle"/>
+    <empty/>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -43,8 +42,7 @@ changeSet:
   id: empty-example
   author: liquibase-docs
   changes:
-  - empty:
-      dbms: h2, oracle
+  - empty: {}
 
 {% endhighlight %}
 </div>
@@ -57,8 +55,7 @@ changeSet:
     "changes": [
       {
         "empty": {
-          "dbms": "h2, oracle"
-        }
+          }
       }]
     
   }

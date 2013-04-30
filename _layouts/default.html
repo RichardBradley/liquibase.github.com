@@ -137,6 +137,10 @@
                         </div>
 
                         <!--End mc_embed_signup-->
+
+                {% if (page.url != "/index.html" && page.url != "/") %}
+                <a class="kickstarter" href="http://www.kickstarter.com/projects/149257506/liquibench" style="border:none;"><img src="{{pageRoot}}/custom_images/kickstarter225.png" onmouseover="this.src='{{pageRoot}}/custom_images/kickstarter225-hover.png'" onmouseout="this.src='{{pageRoot}}/custom_images/kickstarter225.png'"></a>
+                {% endif %}
             </div>
             <div class="span-18 last">
                 <div style="margin-left: 20px; padding-bottom: 100px">

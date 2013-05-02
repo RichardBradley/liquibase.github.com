@@ -26,7 +26,7 @@ Creates a lookup table containing values stored in a column and creates a foreig
 <tr><td style='vertical-align: top'>existingTableCatalogName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>existingTableName</td><td>Name of the table containing the data to extract</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>existingTableSchemaName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>newColumnDataType</td><td>Data type of the new table column</td><td style='vertical-align: top'>informix, mssql, derby, h2, mysql</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>newColumnDataType</td><td>Data type of the new table column</td><td style='vertical-align: top'>informix, mssql, mysql, h2</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>newColumnName</td><td>Name of the column in the new table to create</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>newTableCatalogName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>newTableName</td><td>Name of lookup table to create</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>

@@ -20,8 +20,8 @@ Stops Liquibase execution with a message. Mainly useful for debugging and steppi
 ## Available Attributes ##
 
 <table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>message</td><td>Message to output when execution stops</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
+<tr><td style='vertical-align: top'>message</td><td style='vertical-align: top'>Message to output when execution stops</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>

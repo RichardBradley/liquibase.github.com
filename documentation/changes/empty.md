@@ -20,7 +20,7 @@ empty
 ## Available Attributes ##
 
 <table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
+<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 </table>
 
 <div id='changelog-tabs'>

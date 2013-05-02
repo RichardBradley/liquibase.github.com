@@ -100,7 +100,7 @@ public class ChangeDocGenerator {
 
             content += "## Available Attributes ##\n\n";
             content += "<table>\n";
-            content += "<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>\n";
+            content += "<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>\n";
             List<ChangeParameterMetaData> params = new ArrayList<ChangeParameterMetaData>(changeMetaData.getParameters().values());
             Collections.sort(params, new Comparator<ChangeParameterMetaData>() {
                 @Override
@@ -119,7 +119,10 @@ public class ChangeDocGenerator {
                 Set<String> requiredForDatabase = param.getRequiredForDatabase();
                 String required = StringUtils.trimToEmpty(StringUtils.join(requiredForDatabase, ", "));
 
-                content += "<tr><td style='vertical-align: top'>"+param.getParameterName() + "</td><td>" + param.getDescription() + "</td><td style='vertical-align: top'>" + required+"</td><td style='vertical-align: top'>"+StringUtils.trimToEmpty(param.getSince())+"</td></tr>\n";
+                Set<String> supportsDatabase = param.getSupportedDatabases();
+                String supports = StringUtils.trimToEmpty(StringUtils.join(supportsDatabase, ", "));
+
+                content += "<tr><td style='vertical-align: top'>"+param.getParameterName() + "</td><td style='vertical-align: top'>" + param.getDescription() + "</td><td style='vertical-align: top'>" + required+"</td><td style='vertical-align:top'>"+supports+"</td><td style='vertical-align: top'>"+StringUtils.trimToEmpty(param.getSince())+"</td></tr>\n";
             }
             content += "</table>\n\n";
 
@@ -127,7 +130,7 @@ public class ChangeDocGenerator {
             if (nestedParams.size() > 0) {
                 content += "## Nested Properties ##\n\n";
                 content += "<table>\n";
-                content += "<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>\n";
+                content += "<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>\n";
 
                 for (ChangeParameterMetaData param : nestedParams) {
                     boolean list = param.getDataType().startsWith("list of");
@@ -135,12 +138,15 @@ public class ChangeDocGenerator {
                     Set<String> requiredForDatabase = param.getRequiredForDatabase();
                     String required = StringUtils.trimToEmpty(StringUtils.join(requiredForDatabase, ", "));
 
+                    Set<String> supportsDatabase = param.getSupportedDatabases();
+                    String supports = StringUtils.trimToEmpty(StringUtils.join(supportsDatabase, ", "));
+
                     String description = param.getDescription();
                     if (param.getDataType().endsWith("columnConfig")) {
                         description += "<br><br>See the <a href='../column.html'>column tag</a> documentation for more information";
                     }
 
-                    content += "<tr><td style='vertical-align: top'>"+ param.getParameterName() + "</td><td>" + description + "</td><td style='vertical-align: top'>" + required+"</td><td style='vertical-align: top'>"+(list?"yes":"no")+"</td><td style='vertical-align: top'>"+StringUtils.trimToEmpty(param.getSince())+"</td></tr>\n";
+                    content += "<tr><td style='vertical-align: top'>"+ param.getParameterName() + "</td><td style='vertical-align: top'>" + description + "</td><td style='vertical-align: top'>" + required+"</td><td style='vertical-align: top'>"+supports+"</td><td style='vertical-align: top'>"+(list?"yes":"no")+"</td><td style='vertical-align: top'>"+StringUtils.trimToEmpty(param.getSince())+"</td></tr>\n";
                 }
                 content += "</table>\n";
             }

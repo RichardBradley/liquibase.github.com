@@ -20,14 +20,14 @@ Alter properties of an existing sequence
 ## Available Attributes ##
 
 <table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>incrementBy</td><td>New amount the sequence should increment by</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>maxValue</td><td>New maximum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>minValue</td><td>New minimum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>ordered</td><td>Does the sequence need to be guaranteed to be genererated inm the order of request?</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>sequenceName</td><td>null</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
+<tr><td style='vertical-align: top'>incrementBy</td><td style='vertical-align: top'>New amount the sequence should increment by</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, db2i, postgresql, firebird, oracle, db2, maxdb</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>maxValue</td><td style='vertical-align: top'>New maximum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, db2i, postgresql, firebird, oracle, db2, maxdb</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>minValue</td><td style='vertical-align: top'>New minimum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, db2i, hsqldb, postgresql, firebird, oracle, db2, maxdb</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>ordered</td><td style='vertical-align: top'>Does the sequence need to be guaranteed to be genererated inm the order of request?</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, hsqldb, postgresql, firebird, oracle, h2</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>sequenceName</td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>

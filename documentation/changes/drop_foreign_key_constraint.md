@@ -20,11 +20,11 @@ Drops an existing foreign key
 ## Available Attributes ##
 
 <table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>baseTableCatalogName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>baseTableName</td><td>Name of the table containing the column constrained by the foreign key</td><td style='vertical-align: top'>informix, sybase, cache, unsupported, asany, postgresql, oracle, firebird, maxdb, db2i, mssql, hsqldb, db2, mysql, derby, h2</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>baseTableSchemaName</td><td>null</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>constraintName</td><td>Name of the foreign key constraint to drop</td><td style='vertical-align: top'>informix, sybase, cache, unsupported, asany, postgresql, oracle, firebird, maxdb, db2i, mssql, hsqldb, db2, mysql, derby, h2</td><td style='vertical-align: top'></td></tr>
+<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
+<tr><td style='vertical-align: top'>baseTableCatalogName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
+<tr><td style='vertical-align: top'>baseTableName</td><td style='vertical-align: top'>Name of the table containing the column constrained by the foreign key</td><td style='vertical-align: top'>informix, sybase, cache, unsupported, asany, postgresql, firebird, oracle, maxdb, db2i, mssql, hsqldb, db2, mysql, h2, derby</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>baseTableSchemaName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of the foreign key constraint to drop</td><td style='vertical-align: top'>informix, sybase, cache, unsupported, asany, postgresql, firebird, oracle, maxdb, db2i, mssql, hsqldb, db2, mysql, h2, derby</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>

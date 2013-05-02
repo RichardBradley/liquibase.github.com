@@ -20,16 +20,16 @@ Creates a new database sequence
 ## Available Attributes ##
 
 <table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>cycle</td><td>Can the sequence cycle when it hits the max value?</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>incrementBy</td><td>Interval between sequence numbers</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>maxValue</td><td>The maximum value of the sequence</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>minValue</td><td>The minimum value of the sequence</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>ordered</td><td>Does the sequence need to be guaranteed to be genererated inm the order of request?</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>sequenceName</td><td>Name of the sequence to create</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>startValue</td><td>The first sequence number to be generated.</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td></tr>
+<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
+<tr><td style='vertical-align: top'>cycle</td><td style='vertical-align: top'>Can the sequence cycle when it hits the max value?</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>incrementBy</td><td style='vertical-align: top'>Interval between sequence numbers</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, db2i, hsqldb, postgresql, oracle, db2, h2, maxdb</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>maxValue</td><td style='vertical-align: top'>The maximum value of the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, db2i, postgresql, oracle, db2, maxdb</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>minValue</td><td style='vertical-align: top'>The minimum value of the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, db2i, postgresql, oracle, db2, maxdb</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>ordered</td><td style='vertical-align: top'>Does the sequence need to be guaranteed to be genererated inm the order of request?</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, hsqldb, postgresql, firebird, oracle, h2</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>sequenceName</td><td style='vertical-align: top'>Name of the sequence to create</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>startValue</td><td style='vertical-align: top'>The first sequence number to be generated.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, db2i, hsqldb, postgresql, oracle, db2, h2, maxdb</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>

@@ -9,13 +9,13 @@ subnav: subnav_main.md
 ## Liquibase Core ##
 
 The current stable version of the Liquibase Core is 2.0.5 (Released May 2, 2012).
-* [liquibase-2.0.5-bin.zip](http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-2.0.5-bin.zip/download)
-* [liquibase-2.0.5-bin.tar.gz](http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-2.0.5-bin.tar.gz/download)
+* <a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-2.0.5-bin.zip/download" onclick="trackOutboundLink(this, 'Download 2.0.5', 'sourceforge.net'); return false;">liquibase-2.0.5-bin.zip</a>
+* <a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-2.0.5-bin.tar.gz/download" onclick="trackOutboundLink(this, 'Download 2.0.5', 'sourceforge.net'); return false;">liquibase-2.0.5-bin.tar.gz</a>
 
 Beta Builds
 
-* [liquibase-3.0.0-beta1-bin.zip](http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.0.0-beta1-bin.zip/download)
-* [liquibase-3.0.0-beta2-bin.zip](http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.0.0-beta2-bin.zip/download)
+* <a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.0.0-beta1-bin.zip/download" onclick="trackOutboundLink(this, 'Download 3.0-beta1', 'sourceforge.net'); return false;">liquibase-3.0.0-beta1-bin.zip</a>
+* <a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.0.0-beta2-bin.zip/download" onclick="trackOutboundLink(this, 'Download 3.0-beta2', 'sourceforge.net'); return false;">liquibase-3.0.0-beta2-bin.zip</a>
 
 ## Liquibase Extension Portal ##
 

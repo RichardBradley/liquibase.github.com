@@ -127,7 +127,7 @@
                 <!-- Begin MailChimp Signup Form -->
                         <!-- Begin MailChimp Signup Form -->
                         <div id="mc_embed_signup" style="padding-right: 10px; float: left">
-                            <form action="http://liquibase.us2.list-manage1.com/subscribe/post?u=c24cd4e0098d3017cc468c324&amp;id=3362c9cd2f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <form action="http://liquibase.us2.list-manage1.com/subscribe/post?u=c24cd4e0098d3017cc468c324&amp;id=3362c9cd2f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate onsubmit="trackOutboundLink(this, 'Mailing List', 'liquibase.us2.list-manage1.com'); return false;">
                                 <fieldset style="color: #747373;">
                                     <legend>Announcements</legend>
                                     <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" title="Email Address" size="30">
@@ -139,7 +139,7 @@
                         <!--End mc_embed_signup-->
 
                 {% if (page.url != "/index.html" && page.url != "/") %}
-                <a class="kickstarter" href="http://www.kickstarter.com/projects/149257506/liquibench" style="border:none;"><img src="{{pageRoot}}/custom_images/kickstarter225.png" onmouseover="this.src='{{pageRoot}}/custom_images/kickstarter225-hover.png'" onmouseout="this.src='{{pageRoot}}/custom_images/kickstarter225.png'"></a>
+                <a class="kickstarter" href="http://www.kickstarter.com/projects/149257506/liquibench" style="border:none;" onClick="trackOutboundLink(this, 'Kickstarter', 'kickstarter.com'); return false;"><img src="{{pageRoot}}/custom_images/kickstarter225.png" onmouseover="this.src='{{pageRoot}}/custom_images/kickstarter225-hover.png'" onmouseout="this.src='{{pageRoot}}/custom_images/kickstarter225.png'"></a>
                 {% endif %}
             </div>
             <div class="span-18 last">
@@ -194,6 +194,17 @@
                 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
             })();
+
+                function trackOutboundLink(link, category, action) {
+
+                    try {
+                        _gaq.push(['_trackEvent', category , action]);
+                    } catch(err){}
+
+                    setTimeout(function() {
+                        document.location.href = link.href;
+                    }, 100);
+                }
 
         </script>
     </body>

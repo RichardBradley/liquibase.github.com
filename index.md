@@ -69,7 +69,7 @@ title: Liquibase
 <a href="quickstart.html">Quick Start Guide</a> | <a href="documentation/index.html">Full Documentation</a>
 </div>
 
-<a class="kickstarter" href="http://www.kickstarter.com/projects/149257506/liquibench" style="border:none;"><img src="custom_images/kickstarter400.png" style="margin-left:-50px" onmouseover="this.src='custom_images/kickstarter400-hover.png'" onmouseout="this.src='custom_images/kickstarter400.png'"></a>
+<a class="kickstarter" href="http://www.kickstarter.com/projects/149257506/liquibench" style="border:none;" onClick="trackOutboundLink(this, 'Kickstarter', 'kickstarter.com'); return false;"><img src="custom_images/kickstarter400.png" style="margin-left:-50px" onmouseover="this.src='custom_images/kickstarter400-hover.png'" onmouseout="this.src='custom_images/kickstarter400.png'"></a>
 
 </div>
 

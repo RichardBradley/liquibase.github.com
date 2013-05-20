@@ -14,7 +14,7 @@ The current stable version of the Liquibase Core is 2.0.5 (Released May 2, 2012)
 <li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-2.0.5-bin.tar.gz/download" onclick="trackOutboundLink(this, 'Download 2.0.5', 'sourceforge.net'); return false;">liquibase-2.0.5-bin.tar.gz</a></li>
 </ul>
 
-3.0 RC and Beta Builds
+RC and Beta Builds for 3.0
 
 <ul>
 <li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.0.0-rc1-bin.zip/download" onclick="trackOutboundLink(this, 'Download 3.0-rc1', 'sourceforge.net'); return false;">liquibase-3.0.0-rc1-bin.zip</a></li>

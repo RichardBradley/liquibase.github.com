@@ -50,7 +50,7 @@ Think of each change set as an atomic change that you want to apply to your data
 
 ## Step 3: Run the ChangeSet ##
 
-There are many ways to execute your change log including via ["command line"](documentation/command_line.html), [documentation/Ant](documentation/ant/index.html), [databases](databases.html), [databases](databases.html), and a [documentation/servlet_listener](documentation/servlet_listener.html).
+There are many ways to execute your change log including via [command line](documentation/command_line.html), [Ant](documentation/ant/index.html), [Maven](documentation/maven/index.html), [Spring](documentation/spring.html), a [servlet listener](documentation/servlet_listener.html), and a [CDI Environment](documentation/cdi.html).
 
 Here is an example for mysql via jdbc:
 

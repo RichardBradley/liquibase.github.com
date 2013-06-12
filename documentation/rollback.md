@@ -97,6 +97,10 @@ Specifying a tag to rollback to will roll back all change-sets that were execute
 
 You can specify the number of change-sets to rollback.
 
+### Date ###
+
+You can specify the date to roll back to.
+
 ## Roll back Execution Modes ##
 
 Liquibase has three modes for managing rollbacks:

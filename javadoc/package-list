@@ -23,9 +23,6 @@ liquibase.diff.output.report
 liquibase.exception
 liquibase.executor
 liquibase.executor.jvm
-liquibase.informix.datatype
-liquibase.informix.datatype.core
-liquibase.informix.sqlgenerator.core
 liquibase.integration.ant
 liquibase.integration.cdi
 liquibase.integration.cdi.annotations

@@ -19,6 +19,10 @@ If you have a code change, you should create a pull request on github.
 
 Bugs and feature requests should be entered directly into [Liquibase Jira](http://liquibase.jira.com/browse/CORE) so they can be tracked better than is possible as a user forum question.
 
+## Liquibase Blog and Mailing List ##
+
+Liquibase release announcements as well as general project news and articles are cross posted to the Liquibase blog at [http://blog.liquibase.org](http://blog.liquibase.org) and the mailing list. To subscribe to the mailing list, use the form in the left navigation.
+
 ## Code ##
 
 The Liquibase source is hosted at [https://github.com/liquibase/liquibase](https://github.com/liquibase/liquibase). Code submissions should go through the standard GitHub pull request system.

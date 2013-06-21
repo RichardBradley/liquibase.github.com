@@ -1,40 +1,38 @@
 ---
 layout: default
-title: Home
+title: Liquibase Development
 ---
 
 # Liquibase Development
 
-As an open-source projects, we encourage looking any help you can give to the project.
-
 ## Source Code ##
 
-The main Liquibase source repository is at [http://github.com/liquibase/liquibase](http://github.com/liquibase/liquibase). To contribute changes, fork the Liquibase repository and send us your pull requests. See [Github help](https://help.github.com/) for more information.
+The core Liquibase source code is at [http://github.com/liquibase/liquibase](http://github.com/liquibase/liquibase).
 
-Other Liquibase-related projects and extensions (including this site's source) can be found at [http://github.com/liquibase](http://github.com/liquibase)
+All standard extensions are a part of the [http://github.com/liquibase](http://github.com/liquibase).
+
+* [How to Contribute Code](contribute.html)
+* [Branch Structure](branches.html)
+* [Code Organization](code_organization.html)
+* [Javadoc](../javadoc/index.html)
+
+## Extensions vs. Core
+
+Liquibase is designed to support adding, enhancing, and overriding standard functionality through our extension framework.
+Often times, the best way to add new functionality is to create a new extension or add to an existing one rather than modifying the base library.
+
+For more information on how to write extensions, see [the extension portal](../extensions/index.html).
 
 ## Issue Tracking ##
 
-Bugs and features are managed at [http://liquibase.jira.com/browse/CORE](http://liquibase.jira.com/browse/CORE).  If you have a specific feature or bug, logging it in jira is the best approach.  It allows us to track it and for you to watch it better than on the general forum.  If you are unsure if it is a bug or want more discussion around it, [post it as a question](../community/index.html).
+**Liquibase Core**
 
-## Contributing to Liquibase #
+Bugs and features for the core Liquibase project are managed at [http://liquibase.jira.com/browse/CORE](http://liquibase.jira.com/browse/CORE).
 
-Like any open source application, Liquibase is built by many people, usually in their spare time.  While we are proud of what we have accomplished so far, there is still much to do and we are always looking for new people to help out.
+For more information, see [Liquibase Jira Workflow](jira.html)
 
-### Coding ##
+**Extensions**
 
-As a software application, there is always a need for coding.  Take a look at the [German](../community/index.html) mailing list.
+Issue tracking for extensions are handled as they see fit.
 
-### Documentation ##
-
-Face it, we all like coding more than documenting.  To the end user, however, the documentation is what makes a tool usable.  The liquibase.org site is implemented as a wiki to allow anyone to quickly and easily add to and fix the site, so feel free.
-
-### Evangelizing ##
-
-Love Liquibase?  Tell your friends.  Blog us.  We don't have an advertising budget, so word of mouth is what we need.
-
-### User Feedback ##
-
-If you find a bug or know of a feature that would be useful to you, [let us know](../community/index.html).  We try to guess at what end-users want and need, but real feedback from real users is extremely valuable and makes Liquibase better for everyone.
-
-
+For more information, see the individual extension pages on the [the extension portal](../extensions/index.html).

@@ -13,7 +13,7 @@ All standard extensions are a part of the [http://github.com/liquibase](http://g
 
 * [How to Contribute Code](contribute.html)
 * [Branch Structure](branches.html)
-* [Code Organization](code_organization.html)
+* [Code Organization](code_org.html)
 * [Javadoc](../javadoc/index.html)
 
 ## Extensions vs. Core

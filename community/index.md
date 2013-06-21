@@ -1,26 +1,33 @@
 ---
 layout: default
 title: Community
-subnav: subnav_main.md
 ---
 
-# Interacting with the Liquibase Community #
+# Liquibase User and Developer Community #
 
 ## Forums ##
 
-The Liquibase [user forums and discussion groups](http://liquibase.org/forum/) are available for any questions and comments.  [An RSS feed is available](http://liquibase.org/forum/index.php?type=rss;action=.xml)
+The purpose of the forums is to be a place for general purpose discussion, questions, and feedback.
+If you believe you found a bug or have a specific feature request, you should enter it in Jira.
+If you have a code change, you should create a pull request on github.
 
-These boards replaced mailing lists on sourceforge.  Archives of the lists are available for [liquibase-user](http://www.nabble.com/Liquibase---User-f23276.html),  [liquibase-devel](http://www.nabble.com/Liquibase---Development-f23277.html)
+**Available Forums**
+- [Liquibase Users](http://forum.liquibase.org/#Forum/liquibase-users) for topics related to using Liquibase and writing extensions.
+- [Liquibase Developers](http://forum.liquibase.org/#Forum/liquibase-development) for topics related to working on the Liquibase codebase.
 
-## Issue Tracking ##
+## Bug and Feature Tracking ##
 
-Check the status of existing feature requests and bug submissions or submit your own.  [View Tracker](http://liquibase.jira.com/browse/CORE)
+Bugs and feature requests should be entered directly into [Liquibase Jira](http://liquibase.jira.com/browse/CORE) so they can be tracked better than is possible as a user forum question.
 
+## Code ##
 
-## Version control system ##
+The Liquibase source is hosted at [https://github.com/liquibase/liquibase](https://github.com/liquibase/liquibase). Code submissions should go through the standard GitHub pull request system.
+For more information, see the [developer documentation](../development/index.html)
 
-The liquibase source is now officially hosted at https://github.com/liquibase/liquibase
+## Project Lead ##
 
-## Lead Developer ##
+You can email the Nathan Voxland, Liquibase creator and project lead at nathan.voxland@liquibase.org
 
-If you would like to contact the lead Liquibase developer directly, you can email him at nathan.voxland@liquibase.org.
+## Commercial training and support ##
+
+Commercial training and support beyond what is available in the forums is available at [liquibase.com](http://liquibase.com)

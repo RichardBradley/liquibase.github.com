@@ -22,7 +22,7 @@ Adds a not-null constraint to an existing table. If a defaultNullValue attribute
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>columnDataType</td><td style='vertical-align: top'>Current data type of the column</td><td style='vertical-align: top'>informix, mssql, h2, mysql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>columnDataType</td><td style='vertical-align: top'>Current data type of the column</td><td style='vertical-align: top'>informix, mssql, mysql, h2</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>columnName</td><td style='vertical-align: top'>Name of the column to add the constraint to</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>defaultNullValue</td><td style='vertical-align: top'>Value to set all currently null values to. If not set, change will fail if null values exist</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
@@ -39,7 +39,7 @@ Adds a not-null constraint to an existing table. If a defaultNullValue attribute
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="addNotNullConstraint-example">
     <addNotNullConstraint catalogName="cat"
-            columnDataType="A String"
+            columnDataType="int"
             columnName="id"
             defaultNullValue="A String"
             schemaName="public"
@@ -55,7 +55,7 @@ changeSet:
   changes:
   - addNotNullConstraint:
       catalogName: cat
-      columnDataType: A String
+      columnDataType: int
       columnName: id
       defaultNullValue: A String
       schemaName: public
@@ -73,7 +73,7 @@ changeSet:
       {
         "addNotNullConstraint": {
           "catalogName": "cat",
-          "columnDataType": "A String",
+          "columnDataType": "int",
           "columnName": "id",
           "defaultNullValue": "A String",
           "schemaName": "public",
@@ -92,9 +92,9 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-UPDATE cat.person SET id = '''A String''' WHERE id IS NULL;
+UPDATE cat.person SET id = 'A String' WHERE id IS NULL;
 
-ALTER TABLE cat.person MODIFY id A STRING NOT NULL;
+ALTER TABLE cat.person MODIFY id INT NOT NULL;
 
 
 {% endhighlight %}

@@ -25,7 +25,7 @@ Adds a foreign key constraint to an existing column
 <tr><td style='vertical-align: top'>baseTableCatalogName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>baseTableName</td><td style='vertical-align: top'>Name of the table containing the column to constrain</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>baseTableSchemaName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of the new foreign key constraint</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of the new foreign key constraint</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>deferrable</td><td style='vertical-align: top'>Is the foreign key deferrable</td><td style='vertical-align: top'></td><td style='vertical-align:top'>postgresql, oracle</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>initiallyDeferred</td><td style='vertical-align: top'>Is the foreign key initially deferred</td><td style='vertical-align: top'></td><td style='vertical-align:top'>postgresql, oracle</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>onDelete</td><td style='vertical-align: top'>ON DELETE functionality. Possible values: 'CASCADE', 'SET NULL', 'SET DEFAULT', 'RESTRICT', 'NO ACTION'</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
@@ -34,7 +34,6 @@ Adds a foreign key constraint to an existing column
 <tr><td style='vertical-align: top'>referencedTableCatalogName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>referencedTableName</td><td style='vertical-align: top'>Name of the table the foreign key points to</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>referencedTableSchemaName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>referencesUniqueColumn</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -58,8 +57,7 @@ Adds a foreign key constraint to an existing column
             referencedColumnNames="id"
             referencedTableCatalogName="A String"
             referencedTableName="person"
-            referencedTableSchemaName="A String"
-            referencesUniqueColumn="true"/>
+            referencedTableSchemaName="A String"/>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -83,7 +81,6 @@ changeSet:
       referencedTableCatalogName: A String
       referencedTableName: person
       referencedTableSchemaName: A String
-      referencesUniqueColumn: true
 
 {% endhighlight %}
 </div>
@@ -108,8 +105,7 @@ changeSet:
           "referencedColumnNames": "id",
           "referencedTableCatalogName": "A String",
           "referencedTableName": "person",
-          "referencedTableSchemaName": "A String",
-          "referencesUniqueColumn": true
+          "referencedTableSchemaName": "A String"
         }
       }]
     
@@ -121,10 +117,10 @@ changeSet:
 </div>
 
 
-## SQL Generated From Above Sample (Oracle)
+## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE A String.address ADD CONSTRAINT fk_address_person FOREIGN KEY (person_id) REFERENCES A String.person (id) ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED;
+ALTER TABLE A String.address ADD CONSTRAINT fk_address_person FOREIGN KEY (person_id) REFERENCES A String.person (id) ON UPDATE RESTRICT ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED;
 
 
 {% endhighlight %}
@@ -133,20 +129,20 @@ ALTER TABLE A String.address ADD CONSTRAINT fk_address_person FOREIGN KEY (perso
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>Cache</td><td>Not Supported</td><td><b>Yes</b></td></tr>
-<tr><td>DB2</td><td>Not Supported</td><td><b>Yes</b></td></tr>
-<tr><td>DB2i</td><td>Not Supported</td><td><b>Yes</b></td></tr>
-<tr><td>Derby</td><td>Not Supported</td><td><b>Yes</b></td></tr>
-<tr><td>Firebird</td><td>Not Supported</td><td><b>Yes</b></td></tr>
-<tr><td>H2</td><td>Not Supported</td><td><b>Yes</b></td></tr>
-<tr><td>HyperSQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
-<tr><td>Informix</td><td>Not Supported</td><td><b>Yes</b></td></tr>
-<tr><td>MySQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>Cache</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2i</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>Firebird</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>HyperSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>Informix</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>MySQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>PostgreSQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
-<tr><td>SAP DB</td><td>Not Supported</td><td><b>Yes</b></td></tr>
-<tr><td>SQL Server</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>SAP DB</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>SQL Server</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>SQLite</td><td>Not Supported</td><td><b>Yes</b></td></tr>
-<tr><td>Sybase</td><td>Not Supported</td><td><b>Yes</b></td></tr>
-<tr><td>Sybase Anywhere</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>Sybase</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>Sybase Anywhere</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 </table>

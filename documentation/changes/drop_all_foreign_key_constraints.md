@@ -36,7 +36,7 @@ Drops all foreign key constraints for a table
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="dropAllForeignKeyConstraints-example">
     <dropAllForeignKeyConstraints baseTableCatalogName="A String"
-            baseTableName="A String"
+            baseTableName="person"
             baseTableSchemaName="A String"/>
 </changeSet>
 {% endhighlight %}
@@ -49,7 +49,7 @@ changeSet:
   changes:
   - dropAllForeignKeyConstraints:
       baseTableCatalogName: A String
-      baseTableName: A String
+      baseTableName: person
       baseTableSchemaName: A String
 
 {% endhighlight %}
@@ -64,7 +64,7 @@ changeSet:
       {
         "dropAllForeignKeyConstraints": {
           "baseTableCatalogName": "A String",
-          "baseTableName": "A String",
+          "baseTableName": "person",
           "baseTableSchemaName": "A String"
         }
       }]

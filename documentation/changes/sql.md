@@ -35,7 +35,7 @@ Note: By default it will attempt to split statements on a ';' or 'go' at the end
 <tr><td style='vertical-align: top'>dbms</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>endDelimiter</td><td style='vertical-align: top'>Delimiter to apply to the end of the statement. Defaults to ';', may be set to ''.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>splitStatements</td><td style='vertical-align: top'>Set to false to not have liquibase split statements on ;'s and GO's. Defaults to true if not set</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>sql</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>sql</td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>stripComments</td><td style='vertical-align: top'>Set to true to remove any comments in the SQL before executing, otherwise false. Defaults to false if not set</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
@@ -48,11 +48,12 @@ Note: By default it will attempt to split statements on a ';' or 'go' at the end
 <div id='tab-xml'>
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="sql-example">
-    <sql comment="A String"
-            dbms="h2, oracle"
-            endDelimiter="A String"
+    <sql dbms="h2, oracle"
+            endDelimiter="\nGO"
             splitStatements="true"
-            stripComments="true">A String</sql>
+            stripComments="true">insert into person (name) values ('Bob')
+        <comment>What about Bob?</comment>
+    </sql>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -63,11 +64,11 @@ changeSet:
   author: liquibase-docs
   changes:
   - sql:
-      comment: A String
+      comment: What about Bob?
       dbms: h2, oracle
-      endDelimiter: A String
+      endDelimiter: \nGO
       splitStatements: true
-      sql: A String
+      sql: insert into person (name) values ('Bob')
       stripComments: true
 
 {% endhighlight %}
@@ -81,11 +82,11 @@ changeSet:
     "changes": [
       {
         "sql": {
-          "comment": "A String",
+          "comment": "What about Bob?",
           "dbms": "h2, oracle",
-          "endDelimiter": "A String",
+          "endDelimiter": "\\nGO",
           "splitStatements": true,
-          "sql": "A String",
+          "sql": "insert into person (name) values ('Bob')",
           "stripComments": true
         }
       }]
@@ -101,6 +102,9 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
+insert into person (name) values ('Bob')
+GO
+
 
 {% endhighlight %}
 

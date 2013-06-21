@@ -52,9 +52,9 @@ A single line comment starting with &lt;space&gt;--&lt;space&gt; and finishing a
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="sqlFile-example">
     <sqlFile dbms="h2, oracle"
-            encoding="A String"
-            endDelimiter="A String"
-            path="A String"
+            encoding="utf8"
+            endDelimiter="\nGO"
+            path="my/path/file.sql"
             relativeToChangelogFile="true"
             splitStatements="true"
             stripComments="true">A String</sqlFile>
@@ -69,9 +69,9 @@ changeSet:
   changes:
   - sqlFile:
       dbms: h2, oracle
-      encoding: A String
-      endDelimiter: A String
-      path: A String
+      encoding: utf8
+      endDelimiter: \nGO
+      path: my/path/file.sql
       relativeToChangelogFile: true
       splitStatements: true
       sql: A String
@@ -89,9 +89,9 @@ changeSet:
       {
         "sqlFile": {
           "dbms": "h2, oracle",
-          "encoding": "A String",
-          "endDelimiter": "A String",
-          "path": "A String",
+          "encoding": "utf8",
+          "endDelimiter": "\\nGO",
+          "path": "my/path/file.sql",
           "relativeToChangelogFile": true,
           "splitStatements": true,
           "sql": "A String",
@@ -110,6 +110,9 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
+A String
+GO
+
 
 {% endhighlight %}
 

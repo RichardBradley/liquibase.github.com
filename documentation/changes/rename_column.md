@@ -39,9 +39,9 @@ Renames an existing column
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="renameColumn-example">
     <renameColumn catalogName="cat"
-            columnDataType="A String"
-            newColumnName="A String"
-            oldColumnName="A String"
+            columnDataType="int"
+            newColumnName="id"
+            oldColumnName="id"
             schemaName="public"
             tableName="person"/>
 </changeSet>
@@ -55,9 +55,9 @@ changeSet:
   changes:
   - renameColumn:
       catalogName: cat
-      columnDataType: A String
-      newColumnName: A String
-      oldColumnName: A String
+      columnDataType: int
+      newColumnName: id
+      oldColumnName: id
       schemaName: public
       tableName: person
 
@@ -73,9 +73,9 @@ changeSet:
       {
         "renameColumn": {
           "catalogName": "cat",
-          "columnDataType": "A String",
-          "newColumnName": "A String",
-          "oldColumnName": "A String",
+          "columnDataType": "int",
+          "newColumnName": "id",
+          "oldColumnName": "id",
           "schemaName": "public",
           "tableName": "person"
         }
@@ -92,7 +92,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE cat.person CHANGE A String A String A String;
+ALTER TABLE cat.person CHANGE id id int;
 
 
 {% endhighlight %}
@@ -102,8 +102,8 @@ ALTER TABLE cat.person CHANGE A String A String A String;
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>Cache</td><td>Not Supported</td><td><b>Yes</b></td></tr>
-<tr><td>DB2</td><td>Not Supported</td><td><b>Yes</b></td></tr>
-<tr><td>DB2i</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2i</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>

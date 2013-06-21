@@ -37,7 +37,7 @@ Drop an existing sequence
 <changeSet author="liquibase-docs" id="dropSequence-example">
     <dropSequence catalogName="cat"
             schemaName="public"
-            sequenceName="A String"/>
+            sequenceName="seq_id"/>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -50,7 +50,7 @@ changeSet:
   - dropSequence:
       catalogName: cat
       schemaName: public
-      sequenceName: A String
+      sequenceName: seq_id
 
 {% endhighlight %}
 </div>
@@ -65,7 +65,7 @@ changeSet:
         "dropSequence": {
           "catalogName": "cat",
           "schemaName": "public",
-          "sequenceName": "A String"
+          "sequenceName": "seq_id"
         }
       }]
     
@@ -80,7 +80,7 @@ changeSet:
 ## SQL Generated From Above Sample (Oracle)
 
 {% highlight sql %}
-DROP SEQUENCE cat.A String;
+DROP SEQUENCE cat.seq_id;
 
 
 {% endhighlight %}

@@ -39,7 +39,7 @@ Adds creates a primary key out of an existing column or set of columns.
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="addPrimaryKey-example">
     <addPrimaryKey catalogName="cat"
-            columnNames="A String"
+            columnNames="id, name"
             constraintName="pk_person"
             schemaName="public"
             tableName="person"
@@ -55,7 +55,7 @@ changeSet:
   changes:
   - addPrimaryKey:
       catalogName: cat
-      columnNames: A String
+      columnNames: id, name
       constraintName: pk_person
       schemaName: public
       tableName: person
@@ -73,7 +73,7 @@ changeSet:
       {
         "addPrimaryKey": {
           "catalogName": "cat",
-          "columnNames": "A String",
+          "columnNames": "id, name",
           "constraintName": "pk_person",
           "schemaName": "public",
           "tableName": "person",
@@ -92,7 +92,8 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE cat.person ADD PRIMARY KEY (A String);
+ALTER TABLE cat.person ADD PRIMARY KEY (id,
+ name);
 
 
 {% endhighlight %}

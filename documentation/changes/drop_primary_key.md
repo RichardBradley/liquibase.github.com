@@ -37,7 +37,7 @@ Drops an existing primary key
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="dropPrimaryKey-example">
     <dropPrimaryKey catalogName="cat"
-            constraintName="A String"
+            constraintName="const_name"
             schemaName="public"
             tableName="person"/>
 </changeSet>
@@ -51,7 +51,7 @@ changeSet:
   changes:
   - dropPrimaryKey:
       catalogName: cat
-      constraintName: A String
+      constraintName: const_name
       schemaName: public
       tableName: person
 
@@ -67,7 +67,7 @@ changeSet:
       {
         "dropPrimaryKey": {
           "catalogName": "cat",
-          "constraintName": "A String",
+          "constraintName": "const_name",
           "schemaName": "public",
           "tableName": "person"
         }

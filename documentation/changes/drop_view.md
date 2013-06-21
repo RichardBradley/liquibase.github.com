@@ -37,7 +37,7 @@ Drops an existing view
 <changeSet author="liquibase-docs" id="dropView-example">
     <dropView catalogName="cat"
             schemaName="public"
-            viewName="A String"/>
+            viewName="v_person"/>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -50,7 +50,7 @@ changeSet:
   - dropView:
       catalogName: cat
       schemaName: public
-      viewName: A String
+      viewName: v_person
 
 {% endhighlight %}
 </div>
@@ -65,7 +65,7 @@ changeSet:
         "dropView": {
           "catalogName": "cat",
           "schemaName": "public",
-          "viewName": "A String"
+          "viewName": "v_person"
         }
       }]
     
@@ -80,7 +80,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-DROP VIEW cat.A String;
+DROP VIEW cat.v_person;
 
 
 {% endhighlight %}

@@ -39,7 +39,7 @@ Modify data type
 <changeSet author="liquibase-docs" id="modifyDataType-example">
     <modifyDataType catalogName="cat"
             columnName="id"
-            newDataType="A String"
+            newDataType="int"
             schemaName="public"
             tableName="person"/>
 </changeSet>
@@ -54,7 +54,7 @@ changeSet:
   - modifyDataType:
       catalogName: cat
       columnName: id
-      newDataType: A String
+      newDataType: int
       schemaName: public
       tableName: person
 
@@ -71,7 +71,7 @@ changeSet:
         "modifyDataType": {
           "catalogName": "cat",
           "columnName": "id",
-          "newDataType": "A String",
+          "newDataType": "int",
           "schemaName": "public",
           "tableName": "person"
         }
@@ -88,7 +88,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE cat.person MODIFY id A STRING;
+ALTER TABLE cat.person MODIFY id INT;
 
 
 {% endhighlight %}

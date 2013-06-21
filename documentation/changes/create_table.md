@@ -24,7 +24,7 @@ Create Table
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>remarks</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table</td><td style='vertical-align: top'>sybase, cache, unsupported, asany, postgresql, firebird, oracle, sqlite, maxdb, db2i, mssql, hsqldb, db2, derby, mysql, h2</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tablespace</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 

@@ -42,8 +42,8 @@ Adds a unique constrant to an existing column or set of columns.
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="addUniqueConstraint-example">
     <addUniqueConstraint catalogName="cat"
-            columnNames="A String"
-            constraintName="A String"
+            columnNames="id, name"
+            constraintName="const_name"
             deferrable="true"
             disabled="true"
             initiallyDeferred="true"
@@ -61,8 +61,8 @@ changeSet:
   changes:
   - addUniqueConstraint:
       catalogName: cat
-      columnNames: A String
-      constraintName: A String
+      columnNames: id, name
+      constraintName: const_name
       deferrable: true
       disabled: true
       initiallyDeferred: true
@@ -82,8 +82,8 @@ changeSet:
       {
         "addUniqueConstraint": {
           "catalogName": "cat",
-          "columnNames": "A String",
-          "constraintName": "A String",
+          "columnNames": "id, name",
+          "constraintName": "const_name",
           "deferrable": true,
           "disabled": true,
           "initiallyDeferred": true,
@@ -104,7 +104,8 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE cat.person ADD CONSTRAINT A String UNIQUE (A String);
+ALTER TABLE cat.person ADD CONSTRAINT const_name UNIQUE (id,
+ name);
 
 
 {% endhighlight %}

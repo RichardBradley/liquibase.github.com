@@ -22,7 +22,7 @@ Create a new database view
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>replaceIfExists</td><td style='vertical-align: top'>Use 'create or replace' syntax</td><td style='vertical-align: top'></td><td style='vertical-align:top'>sybase, mssql, postgresql, firebird, oracle, sqlite, maxdb, mysql</td><td style='vertical-align: top'>1.5</td></tr>
+<tr><td style='vertical-align: top'>replaceIfExists</td><td style='vertical-align: top'>Use 'create or replace' syntax</td><td style='vertical-align: top'></td><td style='vertical-align:top'>sybase, mssql, postgresql, oracle, firebird, sqlite, mysql, maxdb</td><td style='vertical-align: top'>1.5</td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>selectQuery</td><td style='vertical-align: top'>SQL for generating the view</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>viewName</td><td style='vertical-align: top'>Name of the view to create</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
@@ -40,7 +40,7 @@ Create a new database view
     <createView catalogName="cat"
             replaceIfExists="true"
             schemaName="public"
-            viewName="A String">select id, name from person where id > 10</createView>
+            viewName="v_person">select id, name from person where id > 10</createView>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -55,7 +55,7 @@ changeSet:
       replaceIfExists: true
       schemaName: public
       selectQuery: select id, name from person where id > 10
-      viewName: A String
+      viewName: v_person
 
 {% endhighlight %}
 </div>
@@ -72,7 +72,7 @@ changeSet:
           "replaceIfExists": true,
           "schemaName": "public",
           "selectQuery": "select id, name from person where id > 10",
-          "viewName": "A String"
+          "viewName": "v_person"
         }
       }]
     
@@ -87,7 +87,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-CREATE OR REPLACE VIEW cat.A String AS select id,
+CREATE OR REPLACE VIEW cat.v_person AS select id,
  name from person where id > 10;
 
 

@@ -37,8 +37,8 @@ Renames an existing table
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="renameTable-example">
     <renameTable catalogName="cat"
-            newTableName="A String"
-            oldTableName="A String"
+            newTableName="person"
+            oldTableName="person"
             schemaName="public"/>
 </changeSet>
 {% endhighlight %}
@@ -51,8 +51,8 @@ changeSet:
   changes:
   - renameTable:
       catalogName: cat
-      newTableName: A String
-      oldTableName: A String
+      newTableName: person
+      oldTableName: person
       schemaName: public
 
 {% endhighlight %}
@@ -67,8 +67,8 @@ changeSet:
       {
         "renameTable": {
           "catalogName": "cat",
-          "newTableName": "A String",
-          "oldTableName": "A String",
+          "newTableName": "person",
+          "oldTableName": "person",
           "schemaName": "public"
         }
       }]
@@ -84,7 +84,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE cat.A String RENAME cat.A String;
+ALTER TABLE cat.person RENAME cat.person;
 
 
 {% endhighlight %}

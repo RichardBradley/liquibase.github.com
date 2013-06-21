@@ -45,7 +45,7 @@ A value of NULL in a cell will be converted to a database NULL rather than the s
     <loadUpdateData catalogName="cat"
             encoding="UTF-8"
             file="com/example/users.csv"
-            primaryKey="A String"
+            primaryKey="pk_id"
             quotchar="A String"
             schemaName="public"
             separator="A String"
@@ -63,7 +63,7 @@ changeSet:
       catalogName: cat
       encoding: UTF-8
       file: com/example/users.csv
-      primaryKey: A String
+      primaryKey: pk_id
       quotchar: A String
       schemaName: public
       separator: A String
@@ -83,7 +83,7 @@ changeSet:
           "catalogName": "cat",
           "encoding": "UTF-8",
           "file": "com/example/users.csv",
-          "primaryKey": "A String",
+          "primaryKey": "pk_id",
           "quotchar": "A String",
           "schemaName": "public",
           "separator": "A String",

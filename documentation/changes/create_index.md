@@ -45,7 +45,7 @@ Creates an index on an existing column or set of columns.
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="createIndex-example">
     <createIndex catalogName="cat"
-            indexName="A String"
+            indexName="idx_address"
             schemaName="public"
             tableName="user"
             tablespace="A String"
@@ -67,7 +67,7 @@ changeSet:
       - column:
           name: address
           type: varchar(255)
-      indexName: A String
+      indexName: idx_address
       schemaName: public
       tableName: user
       tablespace: A String
@@ -93,7 +93,7 @@ changeSet:
               }
             }]
           ,
-          "indexName": "A String",
+          "indexName": "idx_address",
           "schemaName": "public",
           "tableName": "user",
           "tablespace": "A String",
@@ -112,7 +112,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-CREATE UNIQUE INDEX A String ON cat.user(address);
+CREATE UNIQUE INDEX idx_address ON cat.user(address);
 
 
 {% endhighlight %}

@@ -38,7 +38,7 @@ Removes the database default value for a column
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="dropDefaultValue-example">
     <dropDefaultValue catalogName="cat"
-            columnDataType="A String"
+            columnDataType="int"
             columnName="id"
             schemaName="public"
             tableName="person"/>
@@ -53,7 +53,7 @@ changeSet:
   changes:
   - dropDefaultValue:
       catalogName: cat
-      columnDataType: A String
+      columnDataType: int
       columnName: id
       schemaName: public
       tableName: person
@@ -70,7 +70,7 @@ changeSet:
       {
         "dropDefaultValue": {
           "catalogName": "cat",
-          "columnDataType": "A String",
+          "columnDataType": "int",
           "columnName": "id",
           "schemaName": "public",
           "tableName": "person"

@@ -24,7 +24,7 @@ Renames an existing view
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>newViewName</td><td style='vertical-align: top'>Name to rename the view to</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>oldViewName</td><td style='vertical-align: top'>Name of the view to rename</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>sybase, mssql, postgresql, sqlite, maxdb, mysql</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>sybase, mssql, postgresql, sqlite, mysql, maxdb</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -37,8 +37,8 @@ Renames an existing view
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="renameView-example">
     <renameView catalogName="cat"
-            newViewName="A String"
-            oldViewName="A String"
+            newViewName="v_person"
+            oldViewName="v_person"
             schemaName="public"/>
 </changeSet>
 {% endhighlight %}
@@ -51,8 +51,8 @@ changeSet:
   changes:
   - renameView:
       catalogName: cat
-      newViewName: A String
-      oldViewName: A String
+      newViewName: v_person
+      oldViewName: v_person
       schemaName: public
 
 {% endhighlight %}
@@ -67,8 +67,8 @@ changeSet:
       {
         "renameView": {
           "catalogName": "cat",
-          "newViewName": "A String",
-          "oldViewName": "A String",
+          "newViewName": "v_person",
+          "oldViewName": "v_person",
           "schemaName": "public"
         }
       }]
@@ -84,7 +84,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-RENAME TABLE cat.A String TO cat.A String;
+RENAME TABLE cat.v_person TO cat.v_person;
 
 
 {% endhighlight %}

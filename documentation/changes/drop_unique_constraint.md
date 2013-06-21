@@ -22,7 +22,7 @@ Drops an existing unique constraint
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of unique constraint to drop</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of unique constraint to drop</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table to drop the unique constraint from</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>uniqueColumns</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
@@ -38,7 +38,7 @@ Drops an existing unique constraint
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="dropUniqueConstraint-example">
     <dropUniqueConstraint catalogName="cat"
-            constraintName="A String"
+            constraintName="const_name"
             schemaName="public"
             tableName="person"
             uniqueColumns="A String"/>
@@ -53,7 +53,7 @@ changeSet:
   changes:
   - dropUniqueConstraint:
       catalogName: cat
-      constraintName: A String
+      constraintName: const_name
       schemaName: public
       tableName: person
       uniqueColumns: A String
@@ -70,7 +70,7 @@ changeSet:
       {
         "dropUniqueConstraint": {
           "catalogName": "cat",
-          "constraintName": "A String",
+          "constraintName": "const_name",
           "schemaName": "public",
           "tableName": "person",
           "uniqueColumns": "A String"
@@ -88,7 +88,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE cat.person DROP KEY A String;
+ALTER TABLE cat.person DROP KEY const_name;
 
 
 {% endhighlight %}

@@ -37,7 +37,7 @@ Drops an existing index
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="dropIndex-example">
     <dropIndex catalogName="cat"
-            indexName="A String"
+            indexName="idx_address"
             schemaName="public"
             tableName="person"/>
 </changeSet>
@@ -51,7 +51,7 @@ changeSet:
   changes:
   - dropIndex:
       catalogName: cat
-      indexName: A String
+      indexName: idx_address
       schemaName: public
       tableName: person
 
@@ -67,7 +67,7 @@ changeSet:
       {
         "dropIndex": {
           "catalogName": "cat",
-          "indexName": "A String",
+          "indexName": "idx_address",
           "schemaName": "public",
           "tableName": "person"
         }
@@ -84,7 +84,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-DROP INDEX A String ON cat.person;
+DROP INDEX idx_address ON cat.person;
 
 
 {% endhighlight %}

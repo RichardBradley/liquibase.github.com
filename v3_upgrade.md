@@ -19,7 +19,7 @@ To better support escaping objects, we removed the generic escapeDatabaseObject 
 
 **Database.escape * Name(schema, tableName)**
 
-In 3.0, we now support "catalogs" in addition to "schemas" and so all the escape*Name methods such as escapeTableName, escapeColumnName etc. take an additional catalog parameter now.
+In 3.0, we now support "catalogs" in addition to "schemas" and so all the escapeTYPEName methods such as escapeTableName, escapeColumnName etc. take an additional catalog parameter now.
 
 **AbstractChange constructor**
 
@@ -27,21 +27,17 @@ In 2.x, change metadata such as priority, name, and description was passed in th
 
 For example, in 2.x you would create a class as:
 
-{% highlight %}
     public AddCheckChange() {
         super("addCheck", "Add Check", ChangeMetaData.PRIORITY_DEFAULT);
     }
-{% endhighlight %}
 
 
 but in 3.x you would have a no-arg constructor and instead add
 
-{% highlight %}
     @DatabaseChange(
         name="addCheck",
         description = "Add Check",
         priority = ChangeMetaData.PRIORITY_DEFAULT)
-{% endhighlight %}
 
 to the class definition.
 

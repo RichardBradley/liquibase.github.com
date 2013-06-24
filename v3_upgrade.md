@@ -27,7 +27,7 @@ In 2.x, change metadata such as priority, name, and description was passed in th
 
 For example, in 2.x you would create a class as:
 
-{% highlight java %}
+{% highlight %}
     public AddCheckChange() {
         super("addCheck", "Add Check", ChangeMetaData.PRIORITY_DEFAULT);
     }
@@ -36,7 +36,7 @@ For example, in 2.x you would create a class as:
 
 but in 3.x you would have a no-arg constructor and instead add
 
-{% highlight java %}
+{% highlight %}
     @DatabaseChange(
         name="addCheck",
         description = "Add Check",

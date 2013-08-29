@@ -9,7 +9,39 @@ Liquibase can be run via a servlet listener. This allows you to have your databa
 
 To configure the servlet listener, simply add liquibase.jar to your WEB-INF/lib directory and the following to your web.xml file:
 
-**Liquibase 1.9.x**
+{% highlight xml %}
+<context-param>
+    <param-name>liquibase.changelog</param-name>
+    <param-value>com/example/db.changelog.xml</param-value>
+</context-param>
+
+<context-param>
+    <param-name>liquibase.datasource</param-name>
+    <param-value>java:comp/env/jdbc/default</param-value>
+</context-param>
+
+<context-param>
+    <param-name>liquibase.host.includes</param-name>
+    <param-value>production1.example.com, production2.example.com</param-value>
+</context-param>
+
+<context-param>
+    <param-name>liquibase.onerror.fail</param-name>
+    <param-value>true</param-value>
+</context-param>
+
+<context-param>
+    <param-name>liquibase.contexts</param-name>
+    <param-value>production</param-value>
+</context-param>
+
+<listener>
+    <listener-class>liquibase.integration.servlet.LiquibaseServletListener</listener-class>
+</listener>
+{% endhighlight %}
+
+
+**If using Liquibase 1.9.x**
 
 {% highlight xml %}
 <context-param>
@@ -42,38 +74,6 @@ To configure the servlet listener, simply add liquibase.jar to your WEB-INF/lib 
 </listener>
 {% endhighlight %}
 
-**Liquibase 2.0**
-
-{% highlight xml %}
-<context-param>
-    <param-name>liquibase.changelog</param-name>
-    <param-value>com/example/db.changelog.xml</param-value>
-</context-param>
-
-<context-param>
-    <param-name>liquibase.datasource</param-name>
-    <param-value>java:comp/env/jdbc/default</param-value>
-</context-param>
-
-<context-param>
-    <param-name>liquibase.host.includes</param-name>
-    <param-value>production1.example.com, production2.example.com</param-value>
-</context-param>
-
-<context-param>
-    <param-name>liquibase.onerror.fail</param-name>
-    <param-value>true</param-value>
-</context-param>
-
-<context-param>
-    <param-name>liquibase.contexts</param-name>
-    <param-value>production</param-value>
-</context-param>
-
-<listener>
-    <listener-class>liquibase.integration.servlet.LiquibaseServletListener</listener-class>
-</listener>
-{% endhighlight %}
 
 ## Available context-parameters: ##
 

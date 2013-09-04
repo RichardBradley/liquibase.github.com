@@ -8,10 +8,10 @@ subnav: subnav_main.md
 
 ## Liquibase Core ##
 
-The current stable version of Liquibase Core is 3.0.2 (Released July 11, 2013).
+The current stable version of Liquibase Core is 3.0.3 (Released August 29, 2013).
 <ul>
-<li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.0.2-bin.zip/download" onclick="trackOutboundLink(this, 'Download 3.0.2', 'sourceforge.net'); return false;">liquibase-3.0.2-bin.zip</a></li>
-<li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.0.2-bin.tar.gz/download" onclick="trackOutboundLink(this, 'Download 3.0.2', 'sourceforge.net'); return false;">liquibase-3.0.2-bin.tar.gz</a></li>
+<li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.0.3-bin.zip/download" onclick="trackOutboundLink(this, 'Download 3.0.3', 'sourceforge.net'); return false;">liquibase-3.0.3-bin.zip</a></li>
+<li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.0.3-bin.tar.gz/download" onclick="trackOutboundLink(this, 'Download 3.0.3', 'sourceforge.net'); return false;">liquibase-3.0.3-bin.tar.gz</a></li>
 </ul>
 
 Previous stable version of Liquibase Core.

@@ -14,8 +14,8 @@ title: Liquibase
 
 <img src="custom_images/home_tagline.png" alt="Source Control For Your Database: Liquibase is an open source, database-independent library for tracking, managing and applying database changes">
 
-<div class="container">
-<div class="span-14 append-1">
+<div>
+<div class="span-8 append-1">
 
 <h3>Works with your development style</h3>
 <ul>
@@ -50,7 +50,7 @@ title: Liquibase
 
 </div>
 
-<div class="span-9 last">
+<div class="span-8 last">
 <div class='highlight'>
 <h2>Get Started</h2>
 <ol>
@@ -65,7 +65,7 @@ title: Liquibase
 </div>
 </div>
 
-<div class="span-24 last">
+<div class="span-17 last">
 <div id='changelog-tabs'>
 <ul>
     <li><a href="#tab-xml">XML Format</a></li>

@@ -24,7 +24,7 @@ Deletes data from an existing table
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>whereClause</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>where</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -39,7 +39,7 @@ Deletes data from an existing table
     <delete catalogName="cat"
             schemaName="public"
             tableName="person">
-        <whereClause>A String</whereClause>
+        <where>A String</where>
     </delete>
 </changeSet>
 {% endhighlight %}
@@ -54,7 +54,7 @@ changeSet:
       catalogName: cat
       schemaName: public
       tableName: person
-      whereClause: A String
+      where: A String
 
 {% endhighlight %}
 </div>
@@ -70,7 +70,7 @@ changeSet:
           "catalogName": "cat",
           "schemaName": "public",
           "tableName": "person",
-          "whereClause": "A String"
+          "where": "A String"
         }
       }]
     

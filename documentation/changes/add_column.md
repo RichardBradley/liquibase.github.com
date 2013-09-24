@@ -100,7 +100,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE cat.person ADD address VARCHAR(255);
+ALTER TABLE cat.person ADD address VARCHAR(255) NULL;
 
 
 {% endhighlight %}

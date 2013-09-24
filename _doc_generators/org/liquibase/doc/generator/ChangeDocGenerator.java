@@ -92,7 +92,7 @@ public class ChangeDocGenerator {
                     "  });\n" +
                     "</script>\n\n";
 
-            ChangeSet exampleChangeSet = new ChangeSet(exampleChange.getSerializedObjectName()+"-example", "liquibase-docs", false, false, null, null, null);
+            ChangeSet exampleChangeSet = new ChangeSet(exampleChange.getSerializedObjectName()+"-example", "liquibase-docs", false, false, null, null, null, null);
             exampleChangeSet.addChange(exampleChange);
 
             content += "# Change: '" + changeMetaData.getName() + "'\n\n";

@@ -24,7 +24,7 @@ Updates data in an existing table
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>whereClause</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>where</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 ## Nested Properties ##
@@ -45,8 +45,8 @@ Updates data in an existing table
     <update catalogName="cat"
             schemaName="public"
             tableName="person">
-        <whereClause>A String</whereClause>
         <column name="address" type="varchar(255)"/>
+        <where>A String</where>
     </update>
 </changeSet>
 {% endhighlight %}
@@ -65,7 +65,7 @@ changeSet:
           type: varchar(255)
       schemaName: public
       tableName: person
-      whereClause: A String
+      where: A String
 
 {% endhighlight %}
 </div>
@@ -89,7 +89,7 @@ changeSet:
           ,
           "schemaName": "public",
           "tableName": "person",
-          "whereClause": "A String"
+          "where": "A String"
         }
       }]
     

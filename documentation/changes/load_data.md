@@ -36,6 +36,12 @@ Once the date format string is set, Liquibase will then call the SimpleDateForma
 <tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table to insert data into</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
+## Nested Properties ##
+
+<table>
+<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>
+<tr><td style='vertical-align: top'>columns</td><td style='vertical-align: top'>Defines how the data should be loaded.</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td><td style='vertical-align: top'></td></tr>
+</table>
 <div id='changelog-tabs'>
 <ul>
     <li><a href="#tab-xml">XML Sample</a></li>

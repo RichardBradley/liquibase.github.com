@@ -47,7 +47,7 @@ Creates an index on an existing column or set of columns.
     <createIndex catalogName="cat"
             indexName="idx_address"
             schemaName="public"
-            tableName="user"
+            tableName="person"
             tablespace="A String"
             unique="true">
         <column name="address" type="varchar(255)"/>
@@ -69,7 +69,7 @@ changeSet:
           type: varchar(255)
       indexName: idx_address
       schemaName: public
-      tableName: user
+      tableName: person
       tablespace: A String
       unique: true
 
@@ -95,7 +95,7 @@ changeSet:
           ,
           "indexName": "idx_address",
           "schemaName": "public",
-          "tableName": "user",
+          "tableName": "person",
           "tablespace": "A String",
           "unique": true
         }
@@ -112,7 +112,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-CREATE UNIQUE INDEX idx_address ON cat.user(address);
+CREATE UNIQUE INDEX idx_address ON cat.person(address);
 
 
 {% endhighlight %}

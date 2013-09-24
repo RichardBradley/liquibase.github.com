@@ -100,7 +100,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE public.person ADD full_name VARCHAR(255);
+ALTER TABLE public.person ADD full_name VARCHAR(255) NULL;
 
 UPDATE cat.person SET full_name = CONCAT_WS(first_name,
  'A String',

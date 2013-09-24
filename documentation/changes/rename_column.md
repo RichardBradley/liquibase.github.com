@@ -92,7 +92,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE cat.person CHANGE id id int;
+ALTER TABLE cat.person CHANGE id id INT;
 
 
 {% endhighlight %}

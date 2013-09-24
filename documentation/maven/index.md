@@ -15,10 +15,14 @@ You can find the all the versions of the Liquibase-core and Maven plugins in the
 
 
 ## Goals Available ##
-* [liquibase:changeLogSync](maven_changelogsync.html)
-* [liquibase:changeLogSyncSQL](maven_changelogsyncsql.html)
+* [liquibase:changelogSync](maven_changelogsync.html)
+* [liquibase:changelogSyncSQL](maven_changelogsyncsql.html)
 * [liquibase:clearCheckSums](maven_clearchecksums.html)
+* [liquibase:dbDoc](maven_dbDoc.html)
+* [liquibase:diff](maven_diff.html)
 * [liquibase:dropAll](maven_dropall.html)
+* [liquibase:generateChangeLog](maven_generateChangeLog.html)
+* [liquibase:help](maven_help.html)
 * [liquibase:listLocks](maven_listlocks.html)
 * [liquibase:releaseLocks](maven_releaselocks.html)
 * [liquibase:rollback](maven_rollback.html)

@@ -5,29 +5,35 @@ title: Apache derby
 
 # Apache Derby #
 
-Apache Derby's can be downloaded here: http://db.apache.org/derby/derby_downloads.html
+Apache Derby can be downloaded here: [http://db.apache.org/derby/derby_downloads.html](http://db.apache.org/derby/derby_downloads.html)
 
-To use derby with liquibase you will need the following information:
+To use Derby with liquibase you will need the following information:
 
 **jars for the classpath:**
-derby.jar derbyclient.jar 
+ * derby.jar
+ * derbyclient.jar 
 
 **jdbc driver name:**
-org.apache.derby.jdbc.EmbeddedDriver
+ * org.apache.derby.jdbc.EmbeddedDriver
 
 **jdbc url:**
-jdbc:derby:DATABASENAME
+ * jdbc:derby:DATABASENAME
 
-Creating a database with derby, can be done with a tool called ij provided by derby.
-(There are other ways as well though)
+Creating a database with Derby can be done with a tool called "ij" provided by Derby, as well as other ways.
 
+{% highlight %}
 ij> CONNECT 'jdbc:derby:exampledb;create=true';
-
-A run of liquibase with derby, having both derby jars and the an exampledb database folder in the current directory, could look like this:
-
-``
-java -jar liquibase.jar --classpath=derby.jar:derbyclient.jar --driver=org.apache.derby.jdbc.EmbeddedDriver --url="jdbc:derby:exampledb" --changeLogFile=db-changelog.xml migrate
-``
+{% endhighlight %}
 
 
-For further arguments you can pass to derby, please have a look at derby's documentation: http://db.apache.org/derby/manuals/index.html
+A run of liquibase with Derby, having both Derby jars and using the exampledb database folder in the current directory, could look like this:
+
+{% highlight %}
+java -jar liquibase.jar 
+  --classpath=derby.jar:derbyclient.jar 
+  --driver=org.apache.derby.jdbc.EmbeddedDriver 
+  --url="jdbc:derby:exampledb" 
+  --changeLogFile=db-changelog.xml migrate
+{% endhighlight %}
+
+For further arguments you can pass to Derby, please have a look at Derby's documentation: [http://db.apache.org/derby/manuals/index.html](http://db.apache.org/derby/manuals/index.html)

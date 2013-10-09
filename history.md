@@ -4,7 +4,31 @@ title: History
 ---
 
 # History #
-**12/19/2010** Version 2.0 was released featuring major changes to codebase, focusing on extension/integration APIs
+For the most up-to-date history, please see the [liquibase blog](http://blog.liquibase.org/) for announcements.
+
+**10/9/2013** [Version 3.0.6 released](http://blog.liquibase.org/2013/10/liquibase-3-0-6-released.html)
+
+**9/24/2013** [Version 3.0.5 released](http://blog.liquibase.org/2013/09/liquibase-3-0-5-released.html)
+
+**9/6/2013** [Version 3.0.4 released](http://blog.liquibase.org/2013/09/liquibase-3-0-4-released.html)
+
+**8/29/2013** [Version 3.0.3 released](http://blog.liquibase.org/2013/08/liquibase-3-0-3-released.html)
+
+**7/12/2013** [Version 3.0.2 released](http://blog.liquibase.org/2013/07/liquibase-3-0-2-released.html)
+
+**6/18/2013** [Version 3.0.0 released](http://blog.liquibase.org/2013/06/liquibase-3-0-0-released.html) featuring additional extension support, additional integration support, and many end user improvements.
+
+**2/5/2012** [Version 2.0.5 released](http://blog.liquibase.org/2012/05/liquibase-2-0-5-released.html)
+
+**4/19/2012**  [Version 2.0.4 released](http://blog.liquibase.org/2012/04/liquibase-2-0-4-released-2.html)
+
+**10/10/2011** [Version 2.0.3 released](http://blog.liquibase.org/2011/10/liquibase-2-0-4-released.html)
+
+**9/16/2011** [Version 2.0.2 released](http://blog.liquibase.org/2011/09/liquibase-2-0-2-released.html)
+
+**1/27/2011** Version 2.0.1 released
+
+**12/19/2010** [Version 2.0 was released](http://blog.liquibase.org/2011/01/liquibase-2-0-officially-released.html) featuring major changes to codebase, focusing on extension/integration APIs
 
 **1/7/2009** Version 1.9 was released featuring modifySql, enhanced "include" support, and Sybase Adaptive SQL Anywhere support
 

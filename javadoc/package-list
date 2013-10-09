@@ -24,8 +24,6 @@ liquibase.exception
 liquibase.executor
 liquibase.executor.jvm
 liquibase.integration.ant
-liquibase.integration.cdi
-liquibase.integration.cdi.annotations
 liquibase.integration.commandline
 liquibase.integration.servlet
 liquibase.integration.spring

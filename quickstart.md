@@ -74,4 +74,4 @@ You will see that your database now contains a table called "department". Two ot
 
 ## Next Steps ##
 
-This quick-start guide is designed to get you started with Liquibase. For a full description of all its capabilities, see the [Liquibase Manual](documentation/index.html), read [the best practices](bestpractices.html) and visit the [forums](community/index.html). If you are interested in commercial support, training or consulting visit [liquibase.com](http://liquibase.com).
+This quick-start guide is designed to get you started with Liquibase. For a full description of all its capabilities, see the [Liquibase Manual](documentation/index.html), read [the best practices](bestpractices.html) and visit the [forums](community/index.html). If you are interested in commercial support, training or consulting visit [datical.com](http://www.datical.com/liquibase-support-training-datical/).

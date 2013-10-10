@@ -34,4 +34,4 @@ You can email the Nathan Voxland, Liquibase creator and project lead at nathan.v
 
 ## Commercial training and support ##
 
-Commercial training and support beyond what is available in the forums is available at [liquibase.com](http://liquibase.com)
+Commercial training and support beyond what is available in the forums is available at [datical.com](http://www.datical.com/liquibase-support-training-datical/)

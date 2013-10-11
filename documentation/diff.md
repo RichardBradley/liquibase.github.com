@@ -7,11 +7,6 @@ title: Diff
 
 While the best way to track database changes is by adding change sets during development (see [the problem with database diffs](http://blog.liquibase.org/2007/06/the-problem-with-database-diffs.html)), there are times when being able to perform database diffs is valuable, particularly near the end of a project as a double-check that all required changes are included in the change log.
 
-## Hibernate Mapping Diff ##
-
-As of 1.6, Liquibase has the ability to compare an existing database with a Hibernate mapping file.  For more information, visit the [Hibernate integration](hibernate.html) page
-
-
 ## Running Diff ##
 
 Diff command support is available through the [command_line](command_line.html) and [ant](ant/index.html) tools.  When diff-ing databases, you specify the target database like you normally do in Liquibase (--url, --username, etc. flags) and you specify the base database with additional flags after the command name.

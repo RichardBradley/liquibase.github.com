@@ -7,13 +7,11 @@ title: Liquibase.properties
 
 Liquibase can read paramaters for its execution from standard Java Property files. A simple liquibase.properties file would look like this:
 
-``
-driver: oracle.jdbc.OracleDriver
-classpath: ../ojdbc14.jar
-url: jdbc:oracle:thin:@localhost:1521:XE
-username: tbd
-password: tbd
-``
+    driver: oracle.jdbc.OracleDriver
+    classpath: ../ojdbc14.jar
+    url: jdbc:oracle:thin:@localhost:1521:XE
+    username: tbd
+    password: tbd
 
 Note that paths are relative to the current directory.
 

@@ -48,4 +48,5 @@ Marks the next change as already ran.  Useful for when a change was made manuall
 <tr><td>defaultSchemaName</td><td>Schema to drop objects in  </td></tr>
 <tr><td>outputFile</td><td>Save SQL to given file rather than executing  </td></tr>
 <tr><td>classpathref</td><td>A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file **required**  </td></tr>
+<tr><td>logLevel</td><td>Specifies one of the following logging levels: debug, info, warning, severe, off. The default level is info.</td></tr>
 </table>

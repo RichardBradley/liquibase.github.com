@@ -30,7 +30,7 @@ For more information, see the [developer documentation](../development/index.htm
 
 ## Benevolent Dictator for Life ##
 
-You can email the Nathan Voxland, Liquibase creator and project lead at nathan.voxland@liquibase.org or on twitter at @nvoxland
+You can email the Nathan Voxland, Liquibase creator and project lead at <a href="mailto:nathan.voxland@liquibase.org">nathan.voxland@liquibase.org</a> or on twitter at <a href="https://twitter.com/nvoxland">@nvoxland</a>
 
 ## Commercial training and support ##
 

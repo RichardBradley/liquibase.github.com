@@ -28,9 +28,9 @@ Liquibase release announcements as well as general project news and articles are
 The Liquibase source is hosted at [https://github.com/liquibase/liquibase](https://github.com/liquibase/liquibase). Code submissions should go through the standard GitHub pull request system.
 For more information, see the [developer documentation](../development/index.html)
 
-## Project Lead ##
+## Benevolent Dictator for Life ##
 
-You can email the Nathan Voxland, Liquibase creator and project lead at nathan.voxland@liquibase.org
+You can email the Nathan Voxland, Liquibase creator and project lead at nathan.voxland@liquibase.org or on twitter at @nvoxland
 
 ## Commercial training and support ##
 

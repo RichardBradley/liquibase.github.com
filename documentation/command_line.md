@@ -179,7 +179,7 @@ java -jar liquibase.jar \
         --url=jdbc:oracle:thin:@localhost:1521:oracle \
         --username=scott \
         --password=tiger \
-        updateSQL &gt; /tmp/script.sql
+        updateSQL > /tmp/script.sql
 ``
 
 ### List locks on the database change log ###
@@ -213,7 +213,7 @@ password: tiger
 This will export the data from the targeted database and put it in a folder "data" in a file name specified with &lt;insert file name&gt;.
 
 ``
-java -jar liquibase.jar --changeLogFile="./data/&lt;insert file name&gt; " --diffTypes="data" generateChangeLog
+java -jar liquibase.jar --changeLogFile="./data/<insert file name> " --diffTypes="data" generateChangeLog
 ``
 
 ### Update passing changelog parameters ###

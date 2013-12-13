@@ -109,22 +109,22 @@ The following is a sample configuration for the Liquibase Maven plugin, version 
     [...]
     <build>
       <plugins>
-        <plugin>
-          <groupId>org.liquibase</groupId>
-          <artifactId>liquibase-maven-plugin</artifactId>
-          <version>2.0.1</version>
-          <executions>
-            <execution>
-              <phase>process-resources</phase>
-              <configuration>
-                <propertyFile>src/main/resources/liquibase.properties</propertyFile>
-              </configuration>
-              <goals>
-                <goal>update</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
+		<plugin>
+		   <groupId>org.liquibase</groupId>
+		   <artifactId>liquibase-maven-plugin</artifactId>
+		   <version>3.0.5</version>
+		   <configuration>                  
+			  <propertyFile>src/main/resources/liquibase/liquibase.properties</propertyFile>
+		   </configuration>                
+		   <executions>
+			 <execution>
+			   <phase>process-resources</phase>                                                                  
+			   <goals>
+				 <goal>update</goal>
+			   </goals>
+			 </execution>
+		   </executions>
+		</plugin> 	
       </plugins>
     </build>
     [...]
@@ -142,7 +142,7 @@ All the parameters for executing the Maven Liquibase plugin can also be specifie
     <plugin>
       <groupId>org.liquibase</groupId>
       <artifactId>liquibase-maven-plugin</artifactId>
-      <version>2.0.1</version>
+      <version>3.0.5</version>
       <executions>
         <execution>
           <phase>process-resources</phase>

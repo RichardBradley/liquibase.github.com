@@ -16,7 +16,7 @@ The most common way to organize your changelogs is by major release.  Choose a p
           changelog
             db.changelog-master.xml
             db.changelog-1.0.xml
-            db.changelog*1.1.xml
+            db.changelog-1.1.xml
             db.changelog-2.0.xml
           DatabasePool.java
           AbstractDAO.java

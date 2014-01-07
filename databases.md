@@ -22,9 +22,7 @@ Please find further information about which jdbc driver, url, classes etc. these
 <tr><td>HSQL</td><td>hsqldb</td><td>No Issues</td></tr>
 <tr><td>H2</td><td>h2</td><td>No Issues</td></tr>
 <tr><td><a href="informix.html">Informix</a></td><td>informix</td><td>No Issues</td></tr>
-<tr><td>InterSystems Caché</td><td>cache</td><td>No Issues</td></tr>
 <tr><td>Firebird</td><td>firebird</td><td>No Issues</td></tr>
-<tr><td>MaxDB / SAPDB</td><td>maxdb</td><td>No Issues</td></tr>
 <tr><td><a href="sqlite.html">SQLite</a></td><td>sqlite</td><td>No Issues</td></tr>
 </table>
 

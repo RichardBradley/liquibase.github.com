@@ -135,7 +135,7 @@ Tools &gt; Preferences &gt; Web Browser and Proxy
 
 <p>
 Next we will add the Liquibase <acronym title="XML (Extensible Markup Language) Schema Definition">XSD</acronym> so that the editor becomes aware of the Liquibase schema.
-Choose Tools &gt; Preferences &gt; <acronym title="Extensible Markup Language">XML</acronym> Schemas. Select “add”. Enter:
+Choose Tools &gt; Preferences &gt; <acronym title="Extensible Markup Language">XML</acronym> Schemas. Select "add". Enter:
 </p>
 <div ><table >
 	<tr >
@@ -196,7 +196,7 @@ Close the repository browser.
 </p>
 
 <p>
-Return to Windows Explorer, navigate to directory D:\projects\lbdemo and right-click in the right panel. Choose <strong>SVN Checkout …</strong>. In the panel that appears, enter:
+Return to Windows Explorer, navigate to directory D:\projects\lbdemo and right-click in the right panel. Choose <strong>SVN Checkout</strong>. In the panel that appears, enter:
 </p>
 <div ><table >
 	<tr >
@@ -307,7 +307,7 @@ For our tutorial, we will create these database schemas:
 </ul>
 
 <p>
-Open <acronym title="Structured Query Language">SQL</acronym> Developer and create a connection to your database using the “system” username.
+Open <acronym title="Structured Query Language">SQL</acronym> Developer and create a connection to your database using the "system" username.
 </p>
 
 <p>
@@ -362,7 +362,7 @@ We will create a separate install directory for the installation of non-replacea
 </p>
 
 <p>
-Under latest, we have a directory for each type of “replaceable” database object. By “replaceable” we mean that the object can be updated by simply replacing it by a new version. The <acronym title="Structured Query Language">SQL</acronym> syntax for these objects starts with <code>create or replace</code>.
+Under latest, we have a directory for each type of "replaceable" database object. By "replaceable" we mean that the object can be updated by simply replacing it by a new version. The <acronym title="Structured Query Language">SQL</acronym> syntax for these objects starts with <code>create or replace</code>.
 </p>
 
 <p>
@@ -448,11 +448,11 @@ You may be wondering why this file contains a preCondition. Doesn&#039;t Liquiba
 </p>
 
 <p>
-Commit the current version to Subversion. Right-click on directory trunk and select <strong>SVN Commit…</strong>
+Commit the current version to Subversion. Right-click on directory trunk and select <strong>SVN Commit</strong>
 </p>
 
 <p>
-Enter a message like “Initial version”, select all files/directories and press OK. Now the files/directories will also be displayed with a green icon in Windows explorer.
+Enter a message like "Initial version", select all files/directories and press OK. Now the files/directories will also be displayed with a green icon in Windows explorer.
 </p>
 
 </div>
@@ -576,7 +576,7 @@ end;
 &lt;/databaseChangeLog&gt;</pre>
 
 <p>
-Note the runOnChange=“true” attribute. This ensures that we can make future changes in this file and these changes will be applied automatically. Note also that in the file above, we have provided an explicit rollback statement to undo this change. Liquibase can automatically generate rollback statements for many commands, but not for <acronym title="Structured Query Language">SQL</acronym> blocks in which anything may happen.
+Note the runOnChange="true" attribute. This ensures that we can make future changes in this file and these changes will be applied automatically. Note also that in the file above, we have provided an explicit rollback statement to undo this change. Liquibase can automatically generate rollback statements for many commands, but not for <acronym title="Structured Query Language">SQL</acronym> blocks in which anything may happen.
 </p>
 
 <p>
@@ -621,7 +621,7 @@ To actually perform the rollback:
 <pre >Liquibase --changeLogFile=update.xml rollbackCount 3</pre>
 
 <p>
-After you have completed and tested your changes, commit them to Subversion with this comment: “73: Create tables departments &amp; employees”. The current state is represented by the first box on the diagram at the start of this tutorial.
+After you have completed and tested your changes, commit them to Subversion with this comment: "73: Create tables departments &amp; employees". The current state is represented by the first box on the diagram at the start of this tutorial.
 </p>
 
 <p>
@@ -644,7 +644,7 @@ This description of this task is:
 </ul>
 
 <p>
-Both objects are of the “replaceable” type, i.e. a new version can simply replace an older version. The files will therefore go into the <code>latest</code> directory. Create/update the following files:
+Both objects are of the "replaceable" type, i.e. a new version can simply replace an older version. The files will therefore go into the <code>latest</code> directory. Create/update the following files:
 </p>
 
 <p>
@@ -749,7 +749,7 @@ Now examine the contents of table DATABASECHANGELOG using <acronym title="Struct
 <pre >Liquibase --changeLogFile=update.xml rollbackCount 3</pre>
 
 <p>
-After you have completed and tested your changes, commit them to Subversion with comment:“59: create departments_pck and departments_vw”.
+After you have completed and tested your changes, commit them to Subversion with comment:"59: create departments_pck and departments_vw".
 </p>
 
 <p>
@@ -825,7 +825,7 @@ So there is room here for a new utility (watch this space!).
 For now, we will create the installation changelogs manually. The organization of the changelogs is as follows:
 </p>
 <ul>
-<li ><div > The “replaceable” objects are stored in the <code>latest</code> directory, as we have seen before.</div>
+<li ><div > The "replaceable" objects are stored in the <code>latest</code> directory, as we have seen before.</div>
 </li>
 <li ><div > Other objects are stored in the <code>install</code> directory.</div>
 </li>
@@ -964,7 +964,7 @@ call Liquibase --changeLogFile=install.xml update
 call Liquibase --changeLogFile=update.xml  update</pre>
 
 <p>
-As you can see above, after the installation of 1.x, we run the updates from 1.x to the latest version. You may wonder: why not include the update at the end of the install.xml file as: <code>&lt;include file=“v001/master.xml” /&gt;</code> ? That would be equally valid. However, for some reason, if we do that then the precondition in master.xml fails.
+As you can see above, after the installation of 1.x, we run the updates from 1.x to the latest version. You may wonder: why not include the update at the end of the install.xml file as: <code>&lt;include file="v001/master.xml" /&gt;</code> ? That would be equally valid. However, for some reason, if we do that then the precondition in master.xml fails.
 </p>
 
 <p>
@@ -1056,11 +1056,11 @@ Release 1.x is technically correct now, ready for branching.
 </p>
 
 <p>
-Commit the current version to Subversion. Right-click on directory trunk and select <strong>SVN Commit…</strong>. Include all the newly created files.
+Commit the current version to Subversion. Right-click on directory trunk and select <strong>SVN Commit</strong>. Include all the newly created files.
 </p>
 
 <p>
-Enter a message like “Finalize 1.x”, select all files and press OK. Now the files will also be displayed with a green icon in Windows explorer.
+Enter a message like "Finalize 1.x", select all files and press OK. Now the files will also be displayed with a green icon in Windows explorer.
 </p>
 
 </div>
@@ -1086,11 +1086,11 @@ Fill in:
 </table></div>
 
 <p>
-Enter log message “Branched 1.x” and press OK.
+Enter log message "Branched 1.x" and press OK.
 </p>
 
 <p>
-In the left pane under branches you will now see a folder named 1.x. Right-click on <code>branches/1.x</code> and choose <strong>Checkout …</strong>.
+In the left pane under branches you will now see a folder named 1.x. Right-click on <code>branches/1.x</code> and choose <strong>Checkout</strong>.
 </p>
 <div ><table >
 	<tr >
@@ -1251,7 +1251,7 @@ ID   ENAME     DPT_ID    FIXED_SALARY   BONUS
 2 rows selected</pre>
 
 <p>
-Commit these changes using TortoiseSVN. Enter log message: “102: Replace salary by fixed_salary and bonus”.
+Commit these changes using TortoiseSVN. Enter log message: "102: Replace salary by fixed_salary and bonus".
 </p>
 
 </div>
@@ -1262,7 +1262,7 @@ Commit these changes using TortoiseSVN. Enter log message: “102: Replace salar
 <div >
 
 <p>
-Right-click on directory <code>branch_1.x</code> and choose <strong>TortoiseSVN &gt; Merge…</strong>.
+Right-click on directory <code>branch_1.x</code> and choose <strong>TortoiseSVN &gt; Merge</strong>.
 </p>
 <div ><table >
 	<tr >
@@ -1299,7 +1299,7 @@ In Windows Explorer, you will see that <code>2009-10-16-102.xml</code> has been 
 </p>
 
 <p>
-Commit branch_1.x with comment “102: backport”.
+Commit branch_1.x with comment "102: backport".
 </p>
 
 </div>
@@ -1323,8 +1323,8 @@ Use <acronym title="Structured Query Language">SQL</acronym> Developer to confir
 <div >
 
 <p>
-The acceptance test has now been completed, so we can label this version as our “1.0” release.
-Right-click on <code>branch_1.x</code> and choose <strong>TortoiseSVN &gt; Branch/Tag …</strong>. Fill out the dialogue as shown below:
+The acceptance test has now been completed, so we can label this version as our "1.0" release.
+Right-click on <code>branch_1.x</code> and choose <strong>TortoiseSVN &gt; Branch/Tag</strong>. Fill out the dialogue as shown below:
 </p>
 <div ><table >
 	<tr >
@@ -1381,7 +1381,7 @@ Apply the changeLog for the initial installation and the patches of version 1.0 
 lb_install</pre>
 
 <p>
-Twice, you should receive the confirmation “Migration successful”, and Solo is running on 1.0.
+Twice, you should receive the confirmation "Migration successful", and Solo is running on 1.0.
 </p>
 
 </div>
@@ -1395,7 +1395,7 @@ The specifications for this change are:
 <ul>
 <li ><div > add column mgr_id to the departments table. To be populated by the mgr_id of King.</div>
 </li>
-<li ><div > add a foreign key: departments.mgr_id → employees.id</div>
+<li ><div > add a foreign key: departments.mgr_id -> employees.id</div>
 </li>
 </ul>
 
@@ -1460,7 +1460,7 @@ Use <acronym title="Structured Query Language">SQL</acronym> Developer to check 
 </p>
 
 <p>
-Commit these changes using TortoiseSVN, with comment “105: Add mgr_id and foreign key”.
+Commit these changes using TortoiseSVN, with comment "105: Add mgr_id and foreign key".
 </p>
 
 </div>
@@ -1485,7 +1485,7 @@ However, there is a difference. Customers running 1.x need to be able to upgrade
     &lt;/preConditions&gt;</pre>
 
 <p>
-So how do we ensure that all the changes between “finalize 1.x” and “finalize 2.x” have been applied before applying the 2.x changes? If you look at the diagram at the beginning of this tutorial, you will see that we are talking about change 105. Change 105 was never delivered in the 1.x branch and it is not contained in the v002/master.xml.
+So how do we ensure that all the changes between "finalize 1.x" and "finalize 2.x" have been applied before applying the 2.x changes? If you look at the diagram at the beginning of this tutorial, you will see that we are talking about change 105. Change 105 was never delivered in the 1.x branch and it is not contained in the v002/master.xml.
 </p>
 
 <p>
@@ -1566,7 +1566,7 @@ Use <acronym title="Structured Query Language">SQL</acronym> Developer to check 
 </p>
 
 <p>
-Commit these changes using TortoiseSVN, with comment “114: Renamed employee.ename to full_name”.
+Commit these changes using TortoiseSVN, with comment "114: Renamed employee.ename to full_name".
 </p>
 
 </div>
@@ -1754,7 +1754,7 @@ On the trunk, perform the following actions:
 </ol>
 
 <p>
-Create a branch from this revision with name “4.x”. The x indicates that all further patches on 4.0 will take place on this branch. Development of 4.1 will take place on the trunk.
+Create a branch from this revision with name "4.x". The x indicates that all further patches on 4.0 will take place on this branch. Development of 4.1 will take place on the trunk.
 </p>
 
 </div>

@@ -21,14 +21,14 @@ To use Derby with liquibase you will need the following information:
 
 Creating a database with Derby can be done with a tool called "ij" provided by Derby, as well as other ways.
 
-{% highlight %}
+{% highlight console %}
 ij> CONNECT 'jdbc:derby:exampledb;create=true';
 {% endhighlight %}
 
 
 A run of liquibase with Derby, having both Derby jars and using the exampledb database folder in the current directory, could look like this:
 
-{% highlight %}
+{% highlight console %}
 java -jar liquibase.jar 
   --classpath=derby.jar:derbyclient.jar 
   --driver=org.apache.derby.jdbc.EmbeddedDriver 

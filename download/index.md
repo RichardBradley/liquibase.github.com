@@ -6,38 +6,44 @@ subnav: subnav_main.md
 
 # Liquibase Downloads
 
-## Liquibase Core ##
+## Current Liquibase Core Release: 3.1.0 (Jan 8, 2014)
 
-The current stable version of Liquibase Core is 3.0.8 (Released Dec 12, 2013).
+<ul>
+<li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.1.0-bin.zip/download" onclick="trackOutboundLink(this, 'Download 3.1.0', 'sourceforge.net'); return false;">liquibase-3.1.0-bin.zip</a></li>
+<li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.1.0-bin.tar.gz/download" onclick="trackOutboundLink(this, 'Download 3.1.0', 'sourceforge.net'); return false;">liquibase-3.1.0-bin.tar.gz</a></li>
+</ul>
+
+## Extensions
+
+Liquibase supports a powerful plugin/extension framework to add new features or override standard logic. Visit the [Extension Portal](http://www.liquibase.org/extensions) for more information.
+
+## Previous Releases:
 
 <ul>
 <li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.0.8-bin.zip/download" onclick="trackOutboundLink(this, 'Download 3.0.8', 'sourceforge.net'); return false;">liquibase-3.0.8-bin.zip</a></li>
 <li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.0.8-bin.tar.gz/download" onclick="trackOutboundLink(this, 'Download 3.0.8', 'sourceforge.net'); return false;">liquibase-3.0.8-bin.tar.gz</a></li>
 </ul>
-
-The most recent 2.x version of Liquibase Core is 2.0.5.
-
 <ul>
 <li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-2.0.5-bin.zip/download" onclick="trackOutboundLink(this, 'Download 2.0.5', 'sourceforge.net'); return false;">liquibase-2.0.5-bin.zip</a></li>
 <li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-2.0.5-bin.tar.gz/download" onclick="trackOutboundLink(this, 'Download 2.0.5', 'sourceforge.net'); return false;">liquibase-2.0.5-bin.tar.gz</a></li>
+</ul>
+<ul>
 <li><a href="https://sourceforge.net/projects/liquibase/files/Liquibase%20Core/">All previous versions</a></li>
 </ul>
 
-## Liquibase Extension Portal ##
+## Installation ##
 
-Liquibase 2.0 and beyond supports 3rd-party extensions and integrations.  Visit the [Extension Portal](http://www.liquibase.org/extensions) to download extensions.
+- **Command line:**  Extract the liquibase-VERSION.zip or liquibase-VERSION.tar.gz file to a local directory. The extracted files contain a `liquibase.bat` and `liquibase` shell script for Windows and Mac/UNIX systems
+- **Maven:** Liquibase Core, the Liquibase Maven plugin, and standard Liquibase Extensions are available through the central maven repository under the "org.liquibase" organization. See <a href="../documentation/maven/index.html">the Liquibase Maven documentation</a> for more information.
+- **Other:** Within the liquibase-VERSION.zip or liquibase-VERSION.tar.gz file is the liquibase.jar file to add to your classpath. If you are using JSON/YAML based changelogs you also need to add the snakeyaml.jar found in the included lib directory.
 
 ## Requirements ##
 
 Liquibase 2.x requires Java 1.5+. Liquibase 3.x requires Java 1.6+
 
-## Installation ##
+## Source Code ##
 
-Extract liquibase.zip. In it you will find a **liquibase-VERSION.jar** This jar is all that is needed to run Liquibase from the ["command line"](../documentation/command_line.html), [ant](../documentation/ant/index.html), [Maven](../documentation/maven/index.html), [Spring](../documentation/spring.html), or a [servlet container](../documentation/servlet_listener.html). You can run the [command line](../documentation/command_line.html) version of the migrator with the same jar file by simply running **java -jar liquibase-VERSION.jar**.
-
-## Source Code Download ##
-
-Browse the Liquibase source or check it out from [https://github.com/liquibase/liquibase](https://github.com/liquibase/liquibase)
+Browse the Liquibase source or clone it out from [https://github.com/liquibase/liquibase](https://github.com/liquibase/liquibase)
 
 ## Liquibase Community ##
 

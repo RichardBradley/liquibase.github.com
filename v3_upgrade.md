@@ -9,6 +9,8 @@ For the normal Liquibase end user, Liquibase 3.0.0 is a drop-in replacement for 
 
 For developers of Liquibase extensions, there has been some Java API changes that may impact your code. This page continue to be updated with those changes.
 
+<a href="v2_upgrade.html">1.x to 2.x upgrade guide</a>
+
 ## runOnChange and Other Checksum Related Functionality##
 
 There was a change in how checksums are computed between 2.x and 3.x. We try to keep these changes to a minimum, but unfortunately they do happen, especially when there

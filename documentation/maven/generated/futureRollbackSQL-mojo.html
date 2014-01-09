@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Liquibase Maven Plugin - 
-    liquibase:releaseLocks</title>
+    liquibase:futureRollbackSQL</title>
     <style type="text/css" media="all">
       @import url("./css/maven-base.css");
       @import url("./css/maven-theme.css");
@@ -70,15 +70,16 @@
         
   
     <div class="section">
-<h2>liquibase:releaseLocks<a name="liquibase:releaseLocks"></a></h2>
+<h2>liquibase:futureRollbackSQL<a name="liquibase:futureRollbackSQL"></a></h2>
       
 <p><b>Full name</b>:</p>
       
-<p>org.liquibase:liquibase-maven-plugin:3.1.0:releaseLocks</p>
+<p>org.liquibase:liquibase-maven-plugin:3.1.0:futureRollbackSQL</p>
       
 <p><b>Description</b>:</p>
       
-<div>Removes any Liquibase updater locks from the current database.</div>
+<div>Generates the SQL that is required to rollback the database to
+current state after the next update.</div>
       
 <p><b>Attributes</b>:</p>
       
@@ -107,18 +108,18 @@
           
 <tr class="b">
             
-<td><b><a href="#changelogCatalogName">changelogCatalogName</a></b></td>
+<td><b><a href="#changeLogFile">changeLogFile</a></b></td>
             
 <td><tt>String</tt></td>
             
 <td><tt>-</tt></td>
             
-<td>Schema against which Liquibase changelog tables will be created.<br /></td>
+<td>Specifies the change log file to use for Liquibase.<br /></td>
           </tr>
           
 <tr class="a">
             
-<td><b><a href="#changelogSchemaName">changelogSchemaName</a></b></td>
+<td><b><a href="#changelogCatalogName">changelogCatalogName</a></b></td>
             
 <td><tt>String</tt></td>
             
@@ -129,6 +130,17 @@
           
 <tr class="b">
             
+<td><b><a href="#changelogSchemaName">changelogSchemaName</a></b></td>
+            
+<td><tt>String</tt></td>
+            
+<td><tt>-</tt></td>
+            
+<td>Schema against which Liquibase changelog tables will be created.<br /></td>
+          </tr>
+          
+<tr class="a">
+            
 <td><b><a href="#clearCheckSums">clearCheckSums</a></b></td>
             
 <td><tt>boolean</tt></td>
@@ -137,6 +149,19 @@
             
 <td>Flag for forcing the checksums to be cleared from teh
 DatabaseChangeLog table.<br /><b>Default value is</b>: <tt>false</tt>.</td>
+          </tr>
+          
+<tr class="b">
+            
+<td><b><a href="#contexts">contexts</a></b></td>
+            
+<td><tt>String</tt></td>
+            
+<td><tt>-</tt></td>
+            
+<td>The Liquibase contexts to execute, which can be &quot;,&quot; separated if
+multiple contexts are required. If no context is specified then ALL
+contexts will be executed.<br /></td>
           </tr>
           
 <tr class="a">
@@ -280,6 +305,18 @@ value is case insensitive.<br /><b>Default value is</b>: <tt>INFO</tt>.</td>
           
 <tr class="a">
             
+<td><b><a href="#outputFile">outputFile</a></b></td>
+            
+<td><tt>File</tt></td>
+            
+<td><tt>-</tt></td>
+            
+<td>The file to output the Rollback SQL script to, if it exists it will
+be overwritten.<br /><b>Default value is</b>: <tt>${project.build.directory}/liquibase/migrate.sql</tt>.</td>
+          </tr>
+          
+<tr class="b">
+            
 <td><b><a href="#outputFileEncoding">outputFileEncoding</a></b></td>
             
 <td><tt>String</tt></td>
@@ -290,7 +327,7 @@ value is case insensitive.<br /><b>Default value is</b>: <tt>INFO</tt>.</td>
 Liquibase during the updateSQL phase.<br /></td>
           </tr>
           
-<tr class="b">
+<tr class="a">
             
 <td><b><a href="#password">password</a></b></td>
             
@@ -301,7 +338,7 @@ Liquibase during the updateSQL phase.<br /></td>
 <td>The database password to use to connect to the specified database.<br /></td>
           </tr>
           
-<tr class="a">
+<tr class="b">
             
 <td><b><a href="#promptOnNonLocalDatabase">promptOnNonLocalDatabase</a></b></td>
             
@@ -314,7 +351,7 @@ want to run the changes on a database that is not local to the
 machine that the user is current executing the plugin on.<br /><b>Default value is</b>: <tt>true</tt>.</td>
           </tr>
           
-<tr class="b">
+<tr class="a">
             
 <td><b><a href="#propertyFile">propertyFile</a></b></td>
             
@@ -326,7 +363,7 @@ machine that the user is current executing the plugin on.<br /><b>Default value 
 <tt>Liquibase</tt>.<br /></td>
           </tr>
           
-<tr class="a">
+<tr class="b">
             
 <td><b><a href="#propertyFileWillOverride">propertyFileWillOverride</a></b></td>
             
@@ -338,6 +375,41 @@ machine that the user is current executing the plugin on.<br /><b>Default value 
 settings provided in the Maven plugin configuration. By default if
 a property is explicity specified it is not overridden if it also
 appears in the properties file.<br /><b>Default value is</b>: <tt>false</tt>.</td>
+          </tr>
+          
+<tr class="a">
+            
+<td><b><a href="#rollbackCount">rollbackCount</a></b></td>
+            
+<td><tt>int</tt></td>
+            
+<td><tt>-</tt></td>
+            
+<td>The number of change sets to rollback.<br /><b>Default value is</b>: <tt>-1</tt>.</td>
+          </tr>
+          
+<tr class="b">
+            
+<td><b><a href="#rollbackDate">rollbackDate</a></b></td>
+            
+<td><tt>String</tt></td>
+            
+<td><tt>-</tt></td>
+            
+<td>The date to rollback the database to. The format of the date must
+match that of the <tt>DateFormat.getDateInstance()</tt> for the
+platform the plugin is executing on.<br /></td>
+          </tr>
+          
+<tr class="a">
+            
+<td><b><a href="#rollbackTag">rollbackTag</a></b></td>
+            
+<td><tt>String</tt></td>
+            
+<td><tt>-</tt></td>
+            
+<td>The tag to roll the database back to.<br /></td>
           </tr>
           
 <tr class="b">
@@ -412,6 +484,18 @@ RECOMMENDED, but quite convenient on occasion.<br /></td>
 <div class="section">
 <h3>Parameter Details<a name="Parameter_Details"></a></h3>
         
+<p><b><a name="changeLogFile">changeLogFile</a>:</b></p>
+        
+<div>Specifies the change log file to use for Liquibase.</div>
+        
+<ul>
+          
+<li><b>Type</b>: <tt>java.lang.String</tt></li>
+          
+<li><b>Required</b>: <tt>No</tt></li>
+          
+<li><b>Expression</b>: <tt>${liquibase.changeLogFile}</tt></li>
+        </ul><hr />
 <p><b><a name="changelogCatalogName">changelogCatalogName</a>:</b></p>
         
 <div>Schema against which Liquibase changelog tables will be created.</div>
@@ -450,6 +534,20 @@ DatabaseChangeLog table.</div>
 <li><b>Expression</b>: <tt>${liquibase.clearCheckSums}</tt></li>
           
 <li><b>Default</b>: <tt>false</tt></li>
+        </ul><hr />
+<p><b><a name="contexts">contexts</a>:</b></p>
+        
+<div>The Liquibase contexts to execute, which can be &quot;,&quot; separated if
+multiple contexts are required. If no context is specified then ALL
+contexts will be executed.</div>
+        
+<ul>
+          
+<li><b>Type</b>: <tt>java.lang.String</tt></li>
+          
+<li><b>Required</b>: <tt>No</tt></li>
+          
+<li><b>Expression</b>: <tt>${liquibase.contexts}</tt></li>
         </ul><hr />
 <p><b><a name="databaseClass">databaseClass</a>:</b></p>
         
@@ -610,6 +708,21 @@ value is case insensitive.</div>
           
 <li><b>Expression</b>: <tt>${liquibase.outputDefaultSchema}</tt></li>
         </ul><hr />
+<p><b><a name="outputFile">outputFile</a>:</b></p>
+        
+<div>The file to output the Rollback SQL script to, if it exists it will
+be overwritten.</div>
+        
+<ul>
+          
+<li><b>Type</b>: <tt>java.io.File</tt></li>
+          
+<li><b>Required</b>: <tt>No</tt></li>
+          
+<li><b>Expression</b>: <tt>${liquibase.outputFile}</tt></li>
+          
+<li><b>Default</b>: <tt>${project.build.directory}/liquibase/migrate.sql</tt></li>
+        </ul><hr />
 <p><b><a name="outputFileEncoding">outputFileEncoding</a>:</b></p>
         
 <div>Flag to set the character encoding of the output file produced by
@@ -680,6 +793,46 @@ appears in the properties file.</div>
 <li><b>Expression</b>: <tt>${liquibase.propertyFileWillOverride}</tt></li>
           
 <li><b>Default</b>: <tt>false</tt></li>
+        </ul><hr />
+<p><b><a name="rollbackCount">rollbackCount</a>:</b></p>
+        
+<div>The number of change sets to rollback.</div>
+        
+<ul>
+          
+<li><b>Type</b>: <tt>int</tt></li>
+          
+<li><b>Required</b>: <tt>No</tt></li>
+          
+<li><b>Expression</b>: <tt>${liquibase.rollbackCount}</tt></li>
+          
+<li><b>Default</b>: <tt>-1</tt></li>
+        </ul><hr />
+<p><b><a name="rollbackDate">rollbackDate</a>:</b></p>
+        
+<div>The date to rollback the database to. The format of the date must
+match that of the <tt>DateFormat.getDateInstance()</tt> for the
+platform the plugin is executing on.</div>
+        
+<ul>
+          
+<li><b>Type</b>: <tt>java.lang.String</tt></li>
+          
+<li><b>Required</b>: <tt>No</tt></li>
+          
+<li><b>Expression</b>: <tt>${liquibase.rollbackDate}</tt></li>
+        </ul><hr />
+<p><b><a name="rollbackTag">rollbackTag</a>:</b></p>
+        
+<div>The tag to roll the database back to.</div>
+        
+<ul>
+          
+<li><b>Type</b>: <tt>java.lang.String</tt></li>
+          
+<li><b>Required</b>: <tt>No</tt></li>
+          
+<li><b>Expression</b>: <tt>${liquibase.rollbackTag}</tt></li>
         </ul><hr />
 <p><b><a name="server">server</a>:</b></p>
         

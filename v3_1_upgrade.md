@@ -5,11 +5,27 @@ title: Liquibase version 3.1 Upgrade Guide
 
 # 3.0 to 3.1 Upgrade Guide #
 
-For the normal Liquibase end user, Liquibase 3.1 is a drop-in replacement for any Liquibase 3.0 version. If you are running against InterSystems Cache, SAP MaxDB or IBM DB2 for iSeries see the note below.
+For must Liquibase end users, Liquibase 3.1 is a drop-in replacement for any Liquibase 3.0 version.
+
+If you are using <includeAll> with relative paths or running against InterSystems Cache, SAP MaxDB or IBM DB2 for iSeries see the notes below.
 
 For developers of Liquibase extensions, there has been some Java API changes that may impact your code.
 
 <a href="v3_upgrade.html">2.x to 3.0 upgrade guide</a>
+
+## Change to how <includeAll> referenced files are tracked.
+
+With certain builds in 3.0.x, using <includeAll> with relativeToChangeLog caused the file path stored in DATABASECHANGELOG to have the full physical path, rather than classpath relative paths.
+
+With 3.1.0, this bug is fixed, but if you have changeLogs that have already ran, liquibase may attempt to re-execute them because the filepath column is part of the changeSet identifier and it now sees it as different.
+
+You can resolve the problem in one of two ways:
+
+- Set a "logicalFilePath" in the included changeLogs equal to the full path as it was stored before
+
+- Manually update your DATABASECHANGELOG table to strip off the extra portion of the path. The SQL will vary by database, but an example for mysql would be:
+
+  `update DATABASECHANGELOG set FILENAME=REPLACE(filename, 'c:\my\root\path', '')`
 
 ## Less common database support moved to extensions
 

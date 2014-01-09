@@ -38,12 +38,25 @@ Each changeSet contains an "id" tag and an "author" tag. These tags, along with 
 
 <div id='changelog-tabs'>
 <ul>
-    <li><a href="#tab-xmlv2">XML Format (v2.0)</a></li>
     <li><a href="#tab-xmlv3">XML Format (v3.0)</a></li>
+    <li><a href="#tab-xmlv2">XML Format (v2.0)</a></li>
     <li><a href="#tab-yaml">YAML Format</a></li>
     <li><a href="#tab-json">JSON Format</a></li>
     <li><a href="#tab-sql">SQL Format</a></li>
   </ul>
+
+<div id="tab-xmlv3">
+{% highlight xml %}
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+</databaseChangeLog>
+{% endhighlight %}
+</div>
+
 <div id='tab-xmlv2'>
 
 {% highlight xml %}
@@ -56,16 +69,6 @@ Each changeSet contains an "id" tag and an "author" tag. These tags, along with 
 </databaseChangeLog>
 {% endhighlight %}
 
-</div>
-<div id="tab-xmlv3">
-{% highlight xml %}
-<databaseChangeLog
-        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
-        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
-        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
-{% endhighlight %}
 </div>
 <div id="tab-yaml">
 {% highlight yaml %}

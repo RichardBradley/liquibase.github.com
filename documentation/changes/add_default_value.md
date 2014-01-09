@@ -122,9 +122,7 @@ ALTER TABLE cat.file ALTER fileName SET DEFAULT 'Something Else';
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>Cache</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>DB2i</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
@@ -133,7 +131,6 @@ ALTER TABLE cat.file ALTER fileName SET DEFAULT 'Something Else';
 <tr><td>MySQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>SAP DB</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>SQL Server</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>SQLite</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Sybase</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>

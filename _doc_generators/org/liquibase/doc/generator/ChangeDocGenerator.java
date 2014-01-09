@@ -2,7 +2,10 @@ package org.liquibase.doc.generator;
 
 
 import liquibase.change.*;
+import liquibase.change.core.CreateProcedureChange;
 import liquibase.change.core.LoadDataChange;
+import liquibase.change.core.LoadDataColumnConfig;
+import liquibase.change.core.SQLFileChange;
 import liquibase.changelog.ChangeSet;
 import liquibase.database.Database;
 import liquibase.database.DatabaseFactory;
@@ -73,9 +76,31 @@ public class ChangeDocGenerator {
                         List cols = new ArrayList();
                         cols.add(columnConfig);
                         param.setValue(exampleChange, cols);
+                    } else if (param.getDataType().endsWith(" of addColumnConfig")) {
+                        AddColumnConfig columnConfig = new AddColumnConfig();
+                        columnConfig.setName("address");
+                        columnConfig.setType("varchar(255)");
+                        List cols = new ArrayList();
+                        cols.add(columnConfig);
+                        param.setValue(exampleChange, cols);
+                    } else if (param.getDataType().endsWith(" of loadDataColumnConfig")) {
+                        LoadDataColumnConfig columnConfig = new LoadDataColumnConfig();
+                        columnConfig.setName("address");
+                        columnConfig.setType("varchar(255)");
+                        List cols = new ArrayList();
+                        cols.add(columnConfig);
+                        param.setValue(exampleChange, cols);
+                    } else {
+                        System.out.println("Unknown data type: "+param.getDataType());
                     }
                 } else {
-                    param.setValue(exampleChange, param.getExampleValue());
+                    Object exampleValue = param.getExampleValue();
+                    if (exampleValue != null && exampleValue.equals("A String")) {
+                        if (param.getParameterName().toLowerCase().contains("schema") || param.getParameterName().toLowerCase().contains("catalog")) {
+                            exampleValue = null;
+                        }
+                    }
+                    param.setValue(exampleChange, exampleValue);
                 }
             }
 
@@ -92,7 +117,7 @@ public class ChangeDocGenerator {
                     "  });\n" +
                     "</script>\n\n";
 
-            ChangeSet exampleChangeSet = new ChangeSet(exampleChange.getSerializedObjectName()+"-example", "liquibase-docs", false, false, null, null, null, null);
+            ChangeSet exampleChangeSet = new ChangeSet(exampleChange.getSerializedObjectName()+"-example", "liquibase-docs", false, false, "changelog.xml", null, null, null);
             exampleChangeSet.addChange(exampleChange);
 
             content += "# Change: '" + changeMetaData.getName() + "'\n\n";
@@ -142,7 +167,7 @@ public class ChangeDocGenerator {
                     String supports = StringUtils.trimToEmpty(StringUtils.join(supportsDatabase, ", "));
 
                     String description = param.getDescription();
-                    if (param.getDataType().endsWith("columnConfig")) {
+                    if (param.getDataType().endsWith("olumnConfig")) {
                         description += "<br><br>See the <a href='../column.html'>column tag</a> documentation for more information";
                     }
 
@@ -177,8 +202,15 @@ public class ChangeDocGenerator {
 
             content += "</div>\n\n\n";
 
+            exampleChange.setResourceAccessor(new ClassLoaderResourceAccessor(ChangeDocGenerator.class.getClassLoader()));
+
             Database exampleDatabase = null;
             for (Database db : exampleDatabases) {
+                if (exampleChange instanceof CreateProcedureChange) {
+                     exampleDatabase = db;
+                     break;
+                }
+
                 if (exampleChange.supports(db)) {
                     exampleDatabase = db;
                     break;
@@ -186,11 +218,10 @@ public class ChangeDocGenerator {
             }
 
             if (exampleChange instanceof LoadDataChange) {
-                exampleChange.setResourceAccessor(new ClassLoaderResourceAccessor(ChangeDocGenerator.class.getClassLoader()));
                 ((LoadDataChange) exampleChange).setFile("org/liquibase/doc/generator/example.csv");
             }
 
-            if (!exampleChange.generateStatementsVolatile(exampleDatabase)) {
+            if (!(exampleChange instanceof CreateProcedureChange) && !exampleChange.generateStatementsVolatile(exampleDatabase)) {
                 if (exampleDatabase != null) {
                     String sql = "";
                     for (SqlStatement statement : exampleChange.generateStatements(exampleDatabase)) {
@@ -215,7 +246,7 @@ public class ChangeDocGenerator {
                 }
 
                 String supported;
-                if (exampleChange.supports(database)) {
+                if (exampleChange instanceof CreateProcedureChange || exampleChange.supports(database)) {
                     supported = "<b>Supported</b>";
                 } else {
                     supported = "Not Supported";

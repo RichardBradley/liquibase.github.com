@@ -96,7 +96,9 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE cat.person MODIFY id INT AUTO_INCREMENT=100;
+ALTER TABLE cat.person MODIFY id INT AUTO_INCREMENT;
+
+ALTER TABLE cat.person AUTO_INCREMENT=100;
 
 
 {% endhighlight %}
@@ -105,9 +107,7 @@ ALTER TABLE cat.person MODIFY id INT AUTO_INCREMENT=100;
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>Cache</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>DB2i</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Firebird</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
@@ -116,7 +116,6 @@ ALTER TABLE cat.person MODIFY id INT AUTO_INCREMENT=100;
 <tr><td>MySQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Oracle</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>SAP DB</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>SQL Server</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>SQLite</td><td><b>Supported</b>: If the column type is not INTEGER it is converted to INTEGER</td><td>No</td></tr>
 <tr><td>Sybase</td><td><b>Supported</b></td><td>No</td></tr>

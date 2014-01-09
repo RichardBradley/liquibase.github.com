@@ -38,7 +38,6 @@ A single line comment starting with &lt;space&gt;--&lt;space&gt; and finishing a
 <tr><td style='vertical-align: top'>path</td><td style='vertical-align: top'>The file path of the SQL file to load</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>relativeToChangelogFile</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>splitStatements</td><td style='vertical-align: top'>Set to false to not have liquibase split statements on ;'s and GO's. Defaults to true if not set</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>sql</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>stripComments</td><td style='vertical-align: top'>Set to true to remove any comments in the SQL before executing, otherwise false. Defaults to false if not set</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
@@ -57,7 +56,7 @@ A single line comment starting with &lt;space&gt;--&lt;space&gt; and finishing a
             path="my/path/file.sql"
             relativeToChangelogFile="true"
             splitStatements="true"
-            stripComments="true">A String</sqlFile>
+            stripComments="true"/>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -74,7 +73,6 @@ changeSet:
       path: my/path/file.sql
       relativeToChangelogFile: true
       splitStatements: true
-      sql: A String
       stripComments: true
 
 {% endhighlight %}
@@ -94,7 +92,6 @@ changeSet:
           "path": "my/path/file.sql",
           "relativeToChangelogFile": true,
           "splitStatements": true,
-          "sql": "A String",
           "stripComments": true
         }
       }]
@@ -110,9 +107,6 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-A String
-GO
-
 
 {% endhighlight %}
 
@@ -120,9 +114,7 @@ GO
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>Cache</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>DB2i</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
@@ -131,7 +123,6 @@ GO
 <tr><td>MySQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>SAP DB</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>SQL Server</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>SQLite</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Sybase</td><td><b>Supported</b></td><td>No</td></tr>

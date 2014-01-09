@@ -23,13 +23,13 @@ Creates a new database sequence
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>cycle</td><td style='vertical-align: top'>Can the sequence cycle when it hits the max value?</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>incrementBy</td><td style='vertical-align: top'>Interval between sequence numbers</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, db2i, hsqldb, postgresql, db2, oracle, h2, maxdb</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>maxValue</td><td style='vertical-align: top'>The maximum value of the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, db2i, postgresql, db2, oracle, maxdb</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>minValue</td><td style='vertical-align: top'>The minimum value of the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, db2i, postgresql, db2, oracle, maxdb</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>incrementBy</td><td style='vertical-align: top'>Interval between sequence numbers</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, hsqldb, postgresql, db2, oracle, h2</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>maxValue</td><td style='vertical-align: top'>The maximum value of the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, postgresql, db2, oracle</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>minValue</td><td style='vertical-align: top'>The minimum value of the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, postgresql, db2, oracle</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>ordered</td><td style='vertical-align: top'>Does the sequence need to be guaranteed to be genererated inm the order of request?</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, hsqldb, postgresql, oracle, firebird, h2</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>sequenceName</td><td style='vertical-align: top'>Name of the sequence to create</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>startValue</td><td style='vertical-align: top'>The first sequence number to be generated.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, db2i, hsqldb, postgresql, db2, oracle, h2, maxdb</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>startValue</td><td style='vertical-align: top'>The first sequence number to be generated.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, hsqldb, postgresql, db2, oracle, h2</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -113,9 +113,7 @@ CREATE SEQUENCE cat.seq_id START WITH 5 INCREMENT BY 2 MINVALUE 10 MAXVALUE 1000
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>Cache</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>DB2i</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
@@ -124,7 +122,6 @@ CREATE SEQUENCE cat.seq_id START WITH 5 INCREMENT BY 2 MINVALUE 10 MAXVALUE 1000
 <tr><td>MySQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>SAP DB</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>SQL Server</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>SQLite</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Sybase</td><td>Not Supported</td><td><b>Yes</b></td></tr>

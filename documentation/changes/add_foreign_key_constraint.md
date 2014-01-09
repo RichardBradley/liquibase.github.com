@@ -47,18 +47,14 @@ Adds a foreign key constraint to an existing column
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="addForeignKeyConstraint-example">
     <addForeignKeyConstraint baseColumnNames="person_id"
-            baseTableCatalogName="A String"
             baseTableName="address"
-            baseTableSchemaName="A String"
             constraintName="fk_address_person"
             deferrable="true"
             initiallyDeferred="true"
             onDelete="CASCADE"
             onUpdate="RESTRICT"
             referencedColumnNames="id"
-            referencedTableCatalogName="A String"
-            referencedTableName="person"
-            referencedTableSchemaName="A String"/>
+            referencedTableName="person"/>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -70,18 +66,14 @@ changeSet:
   changes:
   - addForeignKeyConstraint:
       baseColumnNames: person_id
-      baseTableCatalogName: A String
       baseTableName: address
-      baseTableSchemaName: A String
       constraintName: fk_address_person
       deferrable: true
       initiallyDeferred: true
       onDelete: CASCADE
       onUpdate: RESTRICT
       referencedColumnNames: id
-      referencedTableCatalogName: A String
       referencedTableName: person
-      referencedTableSchemaName: A String
 
 {% endhighlight %}
 </div>
@@ -95,18 +87,14 @@ changeSet:
       {
         "addForeignKeyConstraint": {
           "baseColumnNames": "person_id",
-          "baseTableCatalogName": "A String",
           "baseTableName": "address",
-          "baseTableSchemaName": "A String",
           "constraintName": "fk_address_person",
           "deferrable": true,
           "initiallyDeferred": true,
           "onDelete": "CASCADE",
           "onUpdate": "RESTRICT",
           "referencedColumnNames": "id",
-          "referencedTableCatalogName": "A String",
-          "referencedTableName": "person",
-          "referencedTableSchemaName": "A String"
+          "referencedTableName": "person"
         }
       }]
     
@@ -121,7 +109,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE A String.address ADD CONSTRAINT fk_address_person FOREIGN KEY (person_id) REFERENCES A String.person (id) ON UPDATE RESTRICT ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED;
+ALTER TABLE address ADD CONSTRAINT fk_address_person FOREIGN KEY (person_id) REFERENCES person (id) ON UPDATE RESTRICT ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED;
 
 
 {% endhighlight %}
@@ -130,9 +118,7 @@ ALTER TABLE A String.address ADD CONSTRAINT fk_address_person FOREIGN KEY (perso
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>Cache</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>DB2i</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
@@ -141,7 +127,6 @@ ALTER TABLE A String.address ADD CONSTRAINT fk_address_person FOREIGN KEY (perso
 <tr><td>MySQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>SAP DB</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>SQL Server</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>SQLite</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Sybase</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>

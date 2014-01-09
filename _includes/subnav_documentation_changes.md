@@ -30,6 +30,7 @@
 <li><a href='drop_index.html'><span>drop Index</span></a></li>
 <li><a href='drop_not_null_constraint.html'><span>drop Not Null Constraint</span></a></li>
 <li><a href='drop_primary_key.html'><span>drop Primary Key</span></a></li>
+<li><a href='drop_procedure.html'><span>drop Procedure</span></a></li>
 <li><a href='drop_sequence.html'><span>drop Sequence</span></a></li>
 <li><a href='drop_table.html'><span>drop Table</span></a></li>
 <li><a href='drop_unique_constraint.html'><span>drop Unique Constraint</span></a></li>

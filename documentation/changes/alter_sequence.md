@@ -22,9 +22,9 @@ Alter properties of an existing sequence
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>incrementBy</td><td style='vertical-align: top'>New amount the sequence should increment by</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, db2i, postgresql, db2, oracle, firebird, maxdb</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>maxValue</td><td style='vertical-align: top'>New maximum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, db2i, postgresql, db2, oracle, firebird, maxdb</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>minValue</td><td style='vertical-align: top'>New minimum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, db2i, hsqldb, postgresql, db2, oracle, firebird, maxdb</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>incrementBy</td><td style='vertical-align: top'>New amount the sequence should increment by</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, postgresql, db2, oracle, firebird</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>maxValue</td><td style='vertical-align: top'>New maximum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, postgresql, db2, oracle, firebird</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>minValue</td><td style='vertical-align: top'>New minimum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, hsqldb, postgresql, db2, oracle, firebird</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>ordered</td><td style='vertical-align: top'>Does the sequence need to be guaranteed to be genererated inm the order of request?</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, hsqldb, postgresql, oracle, firebird, h2</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>sequenceName</td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
@@ -105,9 +105,7 @@ ALTER SEQUENCE cat.seq_id INCREMENT BY 371717 MINVALUE 371717 MAXVALUE 371717 OR
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>Cache</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>DB2i</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
@@ -116,7 +114,6 @@ ALTER SEQUENCE cat.seq_id INCREMENT BY 371717 MINVALUE 371717 MAXVALUE 371717 OR
 <tr><td>MySQL</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>SAP DB</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>SQL Server</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>SQLite</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Sybase</td><td>Not Supported</td><td>No</td></tr>

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change dropPrimaryKey
+title: Change dropProcedure
 ---
 
 <!-- ====================================================== -->
@@ -13,18 +13,17 @@ title: Change dropPrimaryKey
   });
 </script>
 
-# Change: 'dropPrimaryKey'
+# Change: 'dropProcedure'
 
-Drops an existing primary key
+Drops an existing procedure
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of the primary key</td><td style='vertical-align: top'>informix, firebird</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>procedureName</td><td style='vertical-align: top'>Name of the stored procedure to drop</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table to drop the primary key of</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -35,25 +34,23 @@ Drops an existing primary key
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="dropPrimaryKey-example">
-    <dropPrimaryKey catalogName="cat"
-            constraintName="const_name"
-            schemaName="public"
-            tableName="person"/>
+<changeSet author="liquibase-docs" id="dropProcedure-example">
+    <dropProcedure catalogName="cat"
+            procedureName="full_name"
+            schemaName="public"/>
 </changeSet>
 {% endhighlight %}
 </div>
 <div id='tab-yaml'>
 {% highlight yaml %}
 changeSet:
-  id: dropPrimaryKey-example
+  id: dropProcedure-example
   author: liquibase-docs
   changes:
-  - dropPrimaryKey:
+  - dropProcedure:
       catalogName: cat
-      constraintName: const_name
+      procedureName: full_name
       schemaName: public
-      tableName: person
 
 {% endhighlight %}
 </div>
@@ -61,15 +58,14 @@ changeSet:
 {% highlight json %}
 {
   "changeSet": {
-    "id": "dropPrimaryKey-example",
+    "id": "dropProcedure-example",
     "author": "liquibase-docs",
     "changes": [
       {
-        "dropPrimaryKey": {
+        "dropProcedure": {
           "catalogName": "cat",
-          "constraintName": "const_name",
-          "schemaName": "public",
-          "tableName": "person"
+          "procedureName": "full_name",
+          "schemaName": "public"
         }
       }]
     
@@ -84,7 +80,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE cat.person DROP PRIMARY KEY;
+DROP PROCEDURE cat.full_name;
 
 
 {% endhighlight %}

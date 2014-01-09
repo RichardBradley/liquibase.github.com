@@ -25,6 +25,7 @@ Renames an existing column
 <tr><td style='vertical-align: top'>columnDataType</td><td style='vertical-align: top'>Data type of the column</td><td style='vertical-align: top'>mysql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>newColumnName</td><td style='vertical-align: top'>Name to rename the column to</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>oldColumnName</td><td style='vertical-align: top'>Name of the existing column to rename</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>remarks</td><td style='vertical-align: top'>Remarks of the column</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table containing that the column to rename</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
@@ -42,6 +43,7 @@ Renames an existing column
             columnDataType="int"
             newColumnName="id"
             oldColumnName="id"
+            remarks="A String"
             schemaName="public"
             tableName="person"/>
 </changeSet>
@@ -58,6 +60,7 @@ changeSet:
       columnDataType: int
       newColumnName: id
       oldColumnName: id
+      remarks: A String
       schemaName: public
       tableName: person
 
@@ -76,6 +79,7 @@ changeSet:
           "columnDataType": "int",
           "newColumnName": "id",
           "oldColumnName": "id",
+          "remarks": "A String",
           "schemaName": "public",
           "tableName": "person"
         }
@@ -92,7 +96,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE cat.person CHANGE id id INT;
+ALTER TABLE cat.person CHANGE id id INT COMMENT 'A String';
 
 
 {% endhighlight %}
@@ -101,9 +105,7 @@ ALTER TABLE cat.person CHANGE id id INT;
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>Cache</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>DB2i</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
@@ -112,7 +114,6 @@ ALTER TABLE cat.person CHANGE id id INT;
 <tr><td>MySQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>SAP DB</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>SQL Server</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>SQLite</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Sybase</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>

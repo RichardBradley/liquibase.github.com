@@ -40,7 +40,7 @@ Once the date format string is set, Liquibase will then call the SimpleDateForma
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>columns</td><td style='vertical-align: top'>Defines how the data should be loaded.</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>columns</td><td style='vertical-align: top'>Defines how the data should be loaded.<br><br>See the <a href='../column.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td><td style='vertical-align: top'></td></tr>
 </table>
 <div id='changelog-tabs'>
 <ul>
@@ -57,7 +57,9 @@ Once the date format string is set, Liquibase will then call the SimpleDateForma
             quotchar="A String"
             schemaName="public"
             separator="A String"
-            tableName="person"/>
+            tableName="person">
+        <column name="address" type="varchar(255)"/>
+    </loadData>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -69,6 +71,10 @@ changeSet:
   changes:
   - loadData:
       catalogName: cat
+      columns:
+      - column:
+          name: address
+          type: varchar(255)
       encoding: UTF-8
       file: com/example/users.csv
       quotchar: A String
@@ -88,6 +94,14 @@ changeSet:
       {
         "loadData": {
           "catalogName": "cat",
+          "columns": [
+            {
+              "column": {
+                "name": "address",
+                "type": "varchar(255)"
+              }
+            }]
+          ,
           "encoding": "UTF-8",
           "file": "com/example/users.csv",
           "quotchar": "A String",
@@ -108,21 +122,21 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-INSERT INTO cat.person (id,
+INSERT INTO cat.person (`id,
  name,
- age) VALUES ('1,
+ age`) VALUES ('1,
  Fred,
  21');
 
-INSERT INTO cat.person (id,
+INSERT INTO cat.person (`id,
  name,
- age) VALUES ('2,
+ age`) VALUES ('2,
  Wilma,
  22');
 
-INSERT INTO cat.person (id,
+INSERT INTO cat.person (`id,
  name,
- age) VALUES ('3,
+ age`) VALUES ('3,
  Barney,
  42');
 
@@ -133,9 +147,7 @@ INSERT INTO cat.person (id,
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>Cache</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>DB2i</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
@@ -144,7 +156,6 @@ INSERT INTO cat.person (id,
 <tr><td>MySQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>SAP DB</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>SQL Server</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>SQLite</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Sybase</td><td><b>Supported</b></td><td>No</td></tr>

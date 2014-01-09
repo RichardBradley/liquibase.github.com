@@ -44,14 +44,10 @@ Creates a lookup table containing values stored in a column and creates a foreig
 <changeSet author="liquibase-docs" id="addLookupTable-example">
     <addLookupTable constraintName="fk_address_state"
             existingColumnName="state"
-            existingTableCatalogName="A String"
             existingTableName="address"
-            existingTableSchemaName="A String"
             newColumnDataType="char(2)"
             newColumnName="abbreviation"
-            newTableCatalogName="A String"
-            newTableName="state"
-            newTableSchemaName="A String"/>
+            newTableName="state"/>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -64,14 +60,10 @@ changeSet:
   - addLookupTable:
       constraintName: fk_address_state
       existingColumnName: state
-      existingTableCatalogName: A String
       existingTableName: address
-      existingTableSchemaName: A String
       newColumnDataType: char(2)
       newColumnName: abbreviation
-      newTableCatalogName: A String
       newTableName: state
-      newTableSchemaName: A String
 
 {% endhighlight %}
 </div>
@@ -86,14 +78,10 @@ changeSet:
         "addLookupTable": {
           "constraintName": "fk_address_state",
           "existingColumnName": "state",
-          "existingTableCatalogName": "A String",
           "existingTableName": "address",
-          "existingTableSchemaName": "A String",
           "newColumnDataType": "char(2)",
           "newColumnName": "abbreviation",
-          "newTableCatalogName": "A String",
-          "newTableName": "state",
-          "newTableSchemaName": "A String"
+          "newTableName": "state"
         }
       }]
     
@@ -108,13 +96,13 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-CREATE TABLE A String.state AS SELECT DISTINCT state AS abbreviation FROM A String.address WHERE state IS NOT NULL;
+CREATE TABLE state AS SELECT DISTINCT state AS abbreviation FROM address WHERE state IS NOT NULL;
 
-ALTER TABLE A String.state MODIFY abbreviation CHAR(2) NOT NULL;
+ALTER TABLE state MODIFY abbreviation CHAR(2) NOT NULL;
 
-ALTER TABLE A String.state ADD PRIMARY KEY (abbreviation);
+ALTER TABLE state ADD PRIMARY KEY (abbreviation);
 
-ALTER TABLE A String.address ADD CONSTRAINT fk_address_state FOREIGN KEY (state) REFERENCES A String.state (abbreviation);
+ALTER TABLE address ADD CONSTRAINT fk_address_state FOREIGN KEY (state) REFERENCES state (abbreviation);
 
 
 {% endhighlight %}
@@ -123,9 +111,7 @@ ALTER TABLE A String.address ADD CONSTRAINT fk_address_state FOREIGN KEY (state)
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>Cache</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>DB2i</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
@@ -134,7 +120,6 @@ ALTER TABLE A String.address ADD CONSTRAINT fk_address_state FOREIGN KEY (state)
 <tr><td>MySQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>SAP DB</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>SQL Server</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>SQLite</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Sybase</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>

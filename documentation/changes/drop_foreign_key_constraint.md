@@ -22,9 +22,9 @@ Drops an existing foreign key
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>baseTableCatalogName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>baseTableName</td><td style='vertical-align: top'>Name of the table containing the column constrained by the foreign key</td><td style='vertical-align: top'>informix, sybase, cache, unsupported, asany, postgresql, firebird, oracle, maxdb, db2i, mssql, hsqldb, db2, h2, derby, mysql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>baseTableName</td><td style='vertical-align: top'>Name of the table containing the column constrained by the foreign key</td><td style='vertical-align: top'>informix, sybase, unsupported, asany, postgresql, firebird, oracle, mssql, hsqldb, db2, mysql, h2, derby</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>baseTableSchemaName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of the foreign key constraint to drop</td><td style='vertical-align: top'>informix, sybase, cache, unsupported, asany, postgresql, firebird, oracle, maxdb, db2i, mssql, hsqldb, db2, h2, derby, mysql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of the foreign key constraint to drop</td><td style='vertical-align: top'>informix, sybase, unsupported, asany, postgresql, firebird, oracle, mssql, hsqldb, db2, mysql, h2, derby</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -36,10 +36,7 @@ Drops an existing foreign key
 <div id='tab-xml'>
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="dropForeignKeyConstraint-example">
-    <dropForeignKeyConstraint baseTableCatalogName="A String"
-            baseTableName="person"
-            baseTableSchemaName="A String"
-            constraintName="fk_address_person"/>
+    <dropForeignKeyConstraint baseTableName="person" constraintName="fk_address_person"/>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -50,9 +47,7 @@ changeSet:
   author: liquibase-docs
   changes:
   - dropForeignKeyConstraint:
-      baseTableCatalogName: A String
       baseTableName: person
-      baseTableSchemaName: A String
       constraintName: fk_address_person
 
 {% endhighlight %}
@@ -66,9 +61,7 @@ changeSet:
     "changes": [
       {
         "dropForeignKeyConstraint": {
-          "baseTableCatalogName": "A String",
           "baseTableName": "person",
-          "baseTableSchemaName": "A String",
           "constraintName": "fk_address_person"
         }
       }]
@@ -84,7 +77,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE A String.person DROP FOREIGN KEY fk_address_person;
+ALTER TABLE person DROP FOREIGN KEY fk_address_person;
 
 
 {% endhighlight %}
@@ -93,9 +86,7 @@ ALTER TABLE A String.person DROP FOREIGN KEY fk_address_person;
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>Cache</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>DB2i</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
@@ -104,7 +95,6 @@ ALTER TABLE A String.person DROP FOREIGN KEY fk_address_person;
 <tr><td>MySQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>SAP DB</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>SQL Server</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>SQLite</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Sybase</td><td><b>Supported</b></td><td>No</td></tr>

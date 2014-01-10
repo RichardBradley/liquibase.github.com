@@ -9,7 +9,8 @@ title: Architecture
 
 All Liquibase code is accessible from [github.com/liquibase](http://github.com/liquibase).
 
-The [github.com/liquibase/liquibase](http://github.com/liquibase/liquibase) repository contains the core Liquibase library. This includes
+The [github.com/liquibase/liquibase](http://github.com/liquibase/liquibase) repository contains the core Liquibase library. This includes:
+
 * Code for supported Databases
 * Standard Change/Refactoring code
 * Code for running Liquibase through the command prompt, Ant, Maven, a servlet container, and Spring.
@@ -62,6 +63,7 @@ Because most packages support extensions, you will normally find a \*Factory cla
 Interfaces and other classes needed for given feature are generally within the second level package.
 
 For example:
+
 * The liquibase-core/src/main/java/liquibase/change directory contains all "change" related logic
 * liquibase/change contains ChangeFactory.java which will find all available Change implementations.
 * liquibase/change contains Change.java, AbstractChange.java, CheckSum.java and other classes used by core and extension Change classes.

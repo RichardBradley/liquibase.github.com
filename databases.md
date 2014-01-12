@@ -7,7 +7,7 @@ title: Databases
 
 Due to variations in data types and SQL syntax, the following databases are currently supported out of the box.  Additional databases as well as enhancements to support for the below databases are available through [Liquibase extensions](http://liquibase.org/extensions)
 
-Please find further information about which jdbc driver, url, classes etc. these databases need, by clicking on the database-specific links in the table below.
+Please find further information about which JDBC driver, URL, classes etc. these databases need, by clicking on the database-specific links in the table below.
 
 <table>
 <tr><th>Database</th><th>Type Name</th><th>Notes</th></tr>
@@ -25,6 +25,14 @@ Please find further information about which jdbc driver, url, classes etc. these
 <tr><td>Firebird</td><td>firebird</td><td>No Issues</td></tr>
 <tr><td><a href="sqlite.html">SQLite</a></td><td>sqlite</td><td>No Issues</td></tr>
 </table>
+
+As of Liquibase v3.1, support for some less common databases has been moved out of Liquibase core and into extensions.
+
+To re-enable support for these databases, install the corresponding extension:
+
+- <a href="https://github.com/liquibase/liquibase-cache">InterSystems Cache</a>
+- <a href="https://github.com/liquibase/liquibase-maxdb">SAP MaxDB</a>
+- <a href="https://github.com/liquibase/liquibase-db2i">IBM DB2 for iSeries</a>
 
 # Using Unsupported Databases #
 

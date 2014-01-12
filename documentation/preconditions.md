@@ -14,6 +14,8 @@ There are several reasons to use preconditions, including:
 
 If desired, a precondition can be the only tag in a `<changeSet>`.
 
+Preconditions at the changelog level apply to **all** changesets, not just those listed in the current changelog or its child changelogs.
+
 ## Sample With Preconditions ##
 
 {% highlight xml %}

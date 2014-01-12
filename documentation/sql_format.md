@@ -41,6 +41,14 @@ The following attributes may be provided on each changeset:
 <tr><td>dbms</td><td>The type of a database which that changeSet is to be used for. When the migration step is running, it checks the database type against this attribute. Valid database type names are listed on the [supported databases page](../databases.html) </td></tr>
 </table>
 
+## Preconditions ##
+Preconditions can be specified for each changeset. Currently, only the SQL Check precondition is supported.
+
+{% highlight sql %}
+--preconditions onFail=HALT onError=HALT
+--precondition-sql-check expectedResult=0 SELECT COUNT(*) FROM my_table
+{% endhighlight %}
+
 ## Rollback Actions ##
 
 Changesets may include statements to be applied when rolling back the changeset. Rollback statements are comments of the form

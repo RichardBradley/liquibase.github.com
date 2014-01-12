@@ -28,20 +28,19 @@ When the Liquibase migrator runs, it parses the databaseChangeLog tag. It first 
 
 If all preconditions are met, Liquibase will then begin running [changeSet](changeset.html) and [include](include.html) tags **in the order they appear in the databaseChangeLog file**.
 
-The XML schema for the databaseChangeLog tag is available at
-* [http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd](http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd) **Since 1.9**
-* [http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd](http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd) **Since 2.0**
+The XML schema for the databaseChangeLog tag is available at:
+
+* [http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd](http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd) **Since 3.1**
+
+Some legacy XSDs are listed on [the XML Format page](xml_format.html).
 
 Each changeSet contains an "id" tag and an "author" tag. These tags, along with the classpath location and name of the XML file create a unique identifier for that changeSet.
-
-
 
 ## Sample Empty Change Log ##
 
 <div id='changelog-tabs'>
 <ul>
-    <li><a href="#tab-xmlv3">XML Format (v3.0)</a></li>
-    <li><a href="#tab-xmlv2">XML Format (v2.0)</a></li>
+    <li><a href="#tab-xmlv3">XML Format</a></li>
     <li><a href="#tab-yaml">YAML Format</a></li>
     <li><a href="#tab-json">JSON Format</a></li>
     <li><a href="#tab-sql">SQL Format</a></li>
@@ -50,28 +49,15 @@ Each changeSet contains an "id" tag and an "author" tag. These tags, along with 
 <div id="tab-xmlv3">
 {% highlight xml %}
 <databaseChangeLog
-        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
-        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
-        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
-</databaseChangeLog>
-{% endhighlight %}
-</div>
-
-<div id='tab-xmlv2'>
-
-{% highlight xml %}
-<databaseChangeLog
     xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
-    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 </databaseChangeLog>
 {% endhighlight %}
-
 </div>
+
 <div id="tab-yaml">
 {% highlight yaml %}
 databaseChangeLog:

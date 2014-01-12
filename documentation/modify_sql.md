@@ -28,9 +28,10 @@ Although Liquibase supports most standard SQL statements with its change tags, t
 ## Available Attributes ##
 
 <table>
+<tr><th>Attribute</th><th>Description</th></tr>
 <tr><td>dbms</td><td>List of [database types](../databases.html) to apply the modification(s) to. If not specified, modification is applied on all runs  </td></tr>
-<tr><td>context</td><td>List of [contexts](contexts.html) in which to run the sql modification.  If not specified, is applied in all contexts **Since 2.0**  </td></tr>
-<tr><td>applyToRollback| Should the sql modification be applied to rollback statements? Default='false' **Since 2.0**  </td></tr>
+<tr><td>context</td><td>List of [contexts](contexts.html) in which to run the sql modification.  If not specified, is applied in all contexts <b>Since 2.0</b>  </td></tr>
+<tr><td>applyToRollback| Should the sql modification be applied to rollback statements? Default='false' <b>Since 2.0</b>  </td></tr>
 </table>
 
 ## Available Sub-Tags ##
@@ -40,6 +41,7 @@ Adds SQL to the beginning of the statement.
 
 #### Available Attributes ####
 <table>
+<tr><th>Attribute</th><th>Description</th></tr>
 <tr><td>value</td><td>Text to add to beginning of statement  </td></tr>
 </table>
 
@@ -48,6 +50,7 @@ Adds SQL to the end of the statement.
 
 #### Available Attributes ####
 <table>
+<tr><th>Attribute</th><th>Description</th></tr>
 <tr><td>value</td><td>Text to add to end of statement  </td></tr>
 </table>
 
@@ -56,6 +59,7 @@ Replaces all instances of the text specified.
 
 #### Available Attributes ####
 <table>
+<tr><th>Attribute</th><th>Description</th></tr>
 <tr><td>replace</td><td>Text to replace  </td></tr>
 <tr><td>with</td><td>Text to replace with </td></tr>
 </table>
@@ -65,6 +69,7 @@ Replaces all instances of the regular expression specified.
 
 #### Available Attributes ####
 <table>
+<tr><th>Attribute</th><th>Description</th></tr>
 <tr><td>replace</td><td>Regular expression specifying text to replace  </td></tr>
 <tr><td>with</td><td>Text to replace with </td></tr>
 </table>

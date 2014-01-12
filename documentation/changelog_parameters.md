@@ -55,8 +55,9 @@ Defines a parameter for the changelog. Given a list of contexts and/or databases
 #### Available Attributes ####
 
 <table>
-<tr><td>name</td><td>Name of the table's schema **required**  </td></tr>
-<tr><td>value</td><td>Name of the column's table **required**  </td></tr>
+<tr><th>Attribute</th><th>Description</th></tr>
+<tr><td>name</td><td>Name of the table's schema <b>required</b>  </td></tr>
+<tr><td>value</td><td>Name of the column's table <b>required</b>  </td></tr>
 <tr><td>context</td><td>Contexts given as comma separated list.  </td></tr>
 <tr><td>dbms</td><td>Database types given as comma separated list.  </td></tr>
 </table>

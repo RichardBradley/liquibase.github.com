@@ -29,13 +29,14 @@ semicolons (or the value of the `<endDelimiter>` attribute).
 The following attributes may be provided on each changeset:
 
 <table>
+<tr><th>Attribute</th><th>Description</th></tr>
 <tr><td>stripComments</td><td>Set to true to remove any comments in the SQL before executing, otherwise false. Defaults to true if not set</td></tr>
 <tr><td>splitStatements</td><td>Set to false to not have liquibase split statements on ;'s and GO's. Defaults to true if not set</td></tr>
 <tr><td>endDelimiter</td><td>Delimiter to apply to the end of the statement.  Defaults to ";", may be set to "".</td></tr>
 <tr><td>runAlways</td><td>Executes the change set on every run, even if it has been run before </td></tr>
 <tr><td>runOnChange</td><td>Executes the change the first time it is seen and each time the change set has been changed </td></tr>
 <tr><td>context</td><td>Executes the change if the particular context was passed at runtime. Any string can be used for the context name and they are checked case-insensitively. </td></tr>
-<tr><td>runInTransaction</td><td>Should the changeSet be ran as a single transaction (if possible)?  Defaults to true.  **Warning: be careful with this attribute.  If set to false and an error occurs part way through running a changeSet containing multiple statements, the Liquibase databasechangelog table will be left in an invalid state** </td></tr>
+<tr><td>runInTransaction</td><td>Should the changeSet be ran as a single transaction (if possible)?  Defaults to true.  <b>Warning: be careful with this attribute.  If set to false and an error occurs part way through running a changeSet containing multiple statements, the Liquibase databasechangelog table will be left in an invalid state</b> </td></tr>
 <tr><td>failOnError</td><td>Should the migration fail if an error occurs while executing the changeSet? </td></tr>
 <tr><td>dbms</td><td>The type of a database which that changeSet is to be used for. When the migration step is running, it checks the database type against this attribute. Valid database type names are listed on the [supported databases page](../databases.html) </td></tr>
 </table>

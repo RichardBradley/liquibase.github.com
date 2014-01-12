@@ -40,6 +40,7 @@ Rolls back database changes.  See [rollback](../rollback.html) page for more inf
 ### Available Parameters ###
 
 <table>
+<tr><th>Attribute</th><th>Description</th></tr>
 <tr><td>changeLogFile</td><td>The change log file to run</td></tr>
 <tr><td>driver</td><td>The name of the database driver to connect with</td></tr>
 <tr><td>url</td><td>The database URL</td></tr>
@@ -52,18 +53,20 @@ Rolls back database changes.  See [rollback](../rollback.html) page for more inf
 <tr><td>rollbackDate</td><td>Date to roll back to</td></tr>
 <tr><td>rollbackCount</td><td>Number of changeSets to roll back</td></tr>
 <tr><td>contexts</td><td>A comma separated list of [contexts](../contexts.html) to roll back. If not specified, all contexts are rolled back.  </td></tr>
-<tr><td>databaseChangeLogTableName</td><td>Overrides the name of the databasechangelog table to use **Since Liquibase 1.9** </td></tr>
-<tr><td>databaseChangeLogLockTableName</td><td>Overrides the name of the databasechangeloglock table to use **Since Liquibase 1.9** </td></tr>
+<tr><td>databaseChangeLogTableName</td><td>Overrides the name of the databasechangelog table to use <b>Since Liquibase 1.9</b> </td></tr>
+<tr><td>databaseChangeLogLockTableName</td><td>Overrides the name of the databasechangeloglock table to use <b>Since Liquibase 1.9</b> </td></tr>
 <tr><td>logLevel</td><td>Specifies one of the following logging levels: debug, info, warning, severe, off. The default level is info.</td></tr>
 </table>
 
 ### Available Sub Tags ###
 <table>
-<tr><td>changeLogProperty</td><td>Sets a [changelog_parameters](../changelog_parameters.html) set **Since Liquibase 1.7** </td></tr>
+<tr><th>Tag</th><th>Description</th></tr>
+<tr><td>changeLogProperty</td><td>Sets a [changelog_parameters](../changelog_parameters.html) set <b>Since Liquibase 1.7</b> </td></tr>
 </table>
 
 #### Available &lt;changeLogProperty&gt; Parameters ####
 <table>
+<tr><th>Attribute</th><th>Description</th></tr>
 <tr><td>name</td><td>The name of the property to set</td></tr>
 <tr><td>value</td><td>The value of the property to set</td></tr>
 </table>

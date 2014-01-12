@@ -9,12 +9,11 @@ Using change information stored in the change logs and an existing database, Liq
 
 ## Running DBDoc ##
 
-The dbDoc command support is currently available through the ["command line"](command_line.html) only.
-
+The dbDoc command support is currently available through the [command line](command_line.html) only.
 
 ## Example ##
 
-``
+{% highlight sh %}
 liquibase.sh --driver=oracle.jdbc.OracleDriver \
         --url=jdbc:oracle:thin:@testdb:1521:test \
         --username=bob \
@@ -22,8 +21,7 @@ liquibase.sh --driver=oracle.jdbc.OracleDriver \
         --changeLogFile=path/to/changelog.xml
     dbDoc \
         /docs/dbdoc
-``
-
+{% endhighlight %}
 
 ## Sample Output ##
 

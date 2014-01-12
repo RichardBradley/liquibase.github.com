@@ -9,7 +9,6 @@ subnav: subnav_documentation.md
 Applies un-run changes to the database.  
 
 
-
 ### Sample ###
 
 {% highlight xml %}
@@ -40,12 +39,11 @@ Applies un-run changes to the database.
 {% endhighlight %}
 
 
-
-
 ### Available Parameters ###
 FIXME: Annotate which is required.
 
 <table>
+<tr><th>Attribute</th><th>Description</th></tr>
 <tr><td>changeLogFile</td><td>The change log file to run</td></tr>
 <tr><td>driver</td><td>The name of the database driver to connect with</td></tr>
 <tr><td>url</td><td>The database URL</td></tr>
@@ -65,11 +63,13 @@ FIXME: Annotate which is required.
 
 ### Available Sub Tags ###
 <table>
-<tr><td>changeLogProperty</td><td>Sets a [changelog_parameters](../changelog_parameters.html) set **Since Liquibase 1.7** </td></tr>
+<tr><th>Tag</th><th>Description</th></tr>
+<tr><td>changeLogProperty</td><td>Sets a [changelog_parameters](../changelog_parameters.html) set <b>Since Liquibase 1.7</b> </td></tr>
 </table>
 
 #### Available &lt;changeLogProperty&gt; Parameters ####
 <table>
+<tr><th>Attribute</th><th>Description</th></tr>
 <tr><td>name</td><td>The name of the property to set</td></tr>
 <tr><td>value</td><td>The value of the property to set</td></tr>
 </table>

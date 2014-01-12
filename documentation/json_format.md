@@ -9,7 +9,7 @@ Liquibase supports JSON as a format for storing your changelog files.
 
 ## Requirements
 
-To use JSON-based changelogs, you must include <a href="https://code.google.com/p/snakeyaml/">snakeyaml-1.12.jar</a> in your classpath.
+To use JSON-based changelogs, you must include [snakeyaml-1.12.jar](https://code.google.com/p/snakeyaml/) in your classpath.
 
 ## Limitations
 

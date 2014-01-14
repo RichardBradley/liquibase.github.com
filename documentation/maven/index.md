@@ -8,7 +8,7 @@ subnav: subnav_documentation.md
 
 Liquibase can be controlled via a Maven plug-in which can be obtained from the central Maven repository.
 
-You can find the all the versions of the Liquibase-core and Maven plugins in the central repository by going [ here](http://mvnrepository.com/artifact/org.liquibase/liquibase-core ).
+You can find the all the versions of the Liquibase-core and Maven plugins in the central repository by going [here](http://mvnrepository.com/artifact/org.liquibase/liquibase-core).
 
 ## Goals Available ##
 
@@ -30,8 +30,8 @@ You can find the all the versions of the Liquibase-core and Maven plugins in the
 * [liquibase:updateSQL](maven_updatesql.html)
 * [liquibase:updateTestingRollback](maven_updatetestingrollback.html)
 * [liquibase:futureRollbackSQL](maven_futurerollbacksql.html)
-* [liquibase:migrate](maven_migrate.html) //**DEPRECATED** use update instead//
-* [liquibase:migrateSQL](maven_migrateSQL.html) //**DEPRECATED** use updateSQL instead//
+* [liquibase:migrate](maven_migrate.html) **DEPRECATED** use update instead
+* [liquibase:migrateSQL](maven_migrateSQL.html) **DEPRECATED** use updateSQL instead
 
 
 ## Configuration and Usage ##
@@ -54,6 +54,7 @@ For each property defined in the file that matches a property in the goal being 
 
 The reason for only printing a warning is to allow a user to define a single master configuration property file that can be resused for multiple Maven Liquibase goals like [liquibase:update](maven_update.html) and [liquibase:tag](maven_update.html).
 
+
 ##### Using both a Configuration Property File and specifying Configuration Values #####
 
 It is possible to specify a Configuration Property File and individual Properties in the `<configuration>` section of the Maven Liquibase plugin.
@@ -61,7 +62,11 @@ It is possible to specify a Configuration Property File and individual Propertie
 If this is done the properties specified in the `<configuration>` section will be used in preference over those defined in the properties file.
 
 If this behaviour is not desirable, then the properties file can be setup to override the specified properties in the `<configuration>` section by adding the following to the `<configuration>` section;
-{% highlight xml %}<propertyFileWillOverride>true</propertyFileWillOverride>{% endhighlight %}
+
+{% highlight xml %}
+<propertyFileWillOverride>true</propertyFileWillOverride>
+{% endhighlight %}
+
 
 #### Example of Maven Liquibase Update ####
 
@@ -151,11 +156,13 @@ All the parameters for executing the Maven Liquibase plugin can also be specifie
     </plugin>
 {% endhighlight %}
 
+
 #### Further configuration properties ####
 
 Add `<promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>` as configuration parameter to disable the dialog popping up which confirms migrations on non-local databases.
 
 The maven command `mvn help:describe -DgroupId=org.liquibase -DartifactId=liquibase-maven-plugin -Dversion=2.0.1 -Dfull=true` will give you hints about all available configuration parameters within the Liquibase maven plugin.
+
 
 #### Using a global configuration for multiple projects ####
 
@@ -184,20 +191,21 @@ Parent `pom.xml` configuration:
 {% endhighlight %}
 
 You want to replace x.x.x.x by the most recent version of the plugin.
+
 As shown above, you may want to add an `<executions>` section, or put more configuration properties in the ``<configuration>`` section. Keep in mind that any modification will apply to all child projects. It is possible to some extent to override this global configuration in your local `liquibase.properties` file as `<propertyFileWillOverride>` is set to `true`. If you have a few exceptions among your projects but want to keep a global config for all the others, you can always add the `<plugin>` section to your child `pom.xml`. This will override the global config.
 
 The `liquibase.properties` must be put in the `src/main/resources` folder, as well as your `db.changelog.xml`. It can hold as many properties as you need. Here's an already quite complete example:
 
-``
-contexts ${liquibase.contexts} 
-changeLogFile com/company/client/project/db.changelog.xml 
-driver ${dataSource.project.driverClass} 
-url ${dataSource.project.jdbcURL} 
-username ${dataSource.project.user} 
-password ${dataSource.project.password} 
-verbose true 
-dropFirst false 
-``
+{% highlight properties %}
+contexts: ${liquibase.contexts} 
+changeLogFile: com/company/client/project/db.changelog.xml 
+driver: ${dataSource.project.driverClass} 
+url: ${dataSource.project.jdbcURL} 
+username: ${dataSource.project.user} 
+password: ${dataSource.project.password} 
+verbose: true 
+dropFirst: false 
+{% endhighlight %}
 
 The placeholders are filtered by the Maven resource filtering system. In order to get your Maven standard `resources/` folder filtered you need to have this config in your `pom.xml`:
 {% highlight xml %}
@@ -214,8 +222,11 @@ The placeholders are filtered by the Maven resource filtering system. In order t
 See [How do I filter resource files](http://maven.apache.org/guides/getting-started/index.html#How_do_I_filter_resource_files) for more details.
 
 In this particular setup, the project jdbc url, database driver, username and password are used for Liquibase as well.
+
 The placeholders are replaced by values found in filter property files located in `src/main/filters`.
+
 You can have as many property file filters as you need. To specify the filter to use on Maven execution, you need to use [Maven profiles](http://maven.apache.org/guides/introduction/introduction-to-profiles.html).
+
 A typical invocation would look like this:
 
 `mvn resources:resources liquibase:update -P<profile_name>`
@@ -224,9 +235,7 @@ Invoking the `resources` is necessary in order to have the `liquibase.properties
 
 If you don't need the filtering capabilities, you can replace in the super-pom plugin configuration `<propertyFile>target/classes/liquibase.properties</propertyFile>` by `<propertyFile>src/main/resources/liquibase.properties</propertyFile>`
 
-Invocation is then simplified to a mere `mvn liquibase:update`
-
-
+Invocation is then simplified to a mere `mvn liquibase:update`.
 
 The main advantages of this setup are:
 * no Liquibase plugin configuration in your projects. Only the `liquibase.properties` is required.

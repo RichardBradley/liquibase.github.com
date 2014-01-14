@@ -5,11 +5,11 @@ title: YAML Format
 
 # YAML Format
 
-Liquibase supports <a href="http://www.yaml.org">YAML</a> as a format for storing your changelog files.
+Liquibase supports [YAML](http://www.yaml.org) as a format for storing your changelog files.
 
 ## Requirements
 
-To use YAML-based changelogs, you must include <a href="https://code.google.com/p/snakeyaml/">snakeyaml-1.12.jar</a> in your classpath.
+To use YAML-based changelogs, you must include [snakeyaml-1.12.jar](https://code.google.com/p/snakeyaml/) in your classpath.
 
 ## Limitations
 

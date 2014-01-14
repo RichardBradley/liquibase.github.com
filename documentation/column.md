@@ -88,7 +88,7 @@ Also, specifying a java.sql.Types.* type will be converted to the correct type a
 <table>
   <thead>
     <tr>
-      <th>sub-tag name</th>
+      <th>Tag</th>
       <th>Description</th>
     </tr>
   </thead>

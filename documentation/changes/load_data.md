@@ -17,7 +17,7 @@ title: Change loadData
 
 Loads data from a CSV file into an existing table. A value of NULL in a cell will be converted to a database NULL rather than the string 'NULL'
 
-Date/Time values included in the CSV file should be in ISO formathttp://en.wikipedia.org/wiki/ISO_8601 in order to be parsed correctly by Liquibase. Liquibase will initially set the date format to be 'yyyy-MM-dd'T'HH:mm:ss' and then it checks for two special cases which will override the data format string.
+Date/Time values included in the CSV file should be in [ISO format](http://en.wikipedia.org/wiki/ISO_8601) in order to be parsed correctly by Liquibase. Liquibase will initially set the date format to be 'yyyy-MM-dd'T'HH:mm:ss' and then it checks for two special cases which will override the data format string.
 
 If the string representing the date/time includes a '.', then the date format is changed to 'yyyy-MM-dd'T'HH:mm:ss.SSS'
 If the string representing the date/time includes a space, then the date format is changed to 'yyyy-MM-dd HH:mm:ss'

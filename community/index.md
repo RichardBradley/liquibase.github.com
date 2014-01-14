@@ -8,12 +8,15 @@ title: Community
 ## Forums ##
 
 The purpose of the forums is to be a place for general purpose discussion, questions, and feedback.
-If you believe you found a bug or have a specific feature request, you should enter it in Jira.
-If you have a code change, you should create a pull request on github.
 
-**Available Forums**
-- [Liquibase Users](http://forum.liquibase.org/#Forum/liquibase-users) for topics related to using Liquibase and writing extensions.
-- [Liquibase Developers](http://forum.liquibase.org/#Forum/liquibase-development) for topics related to working on the Liquibase codebase.
+If you believe you found a bug or have a specific feature request, you should enter it in [Jira](http://liquibase.jira.com/browse/CORE).
+
+If you have a code change, you should create a pull request on [github](https://github.com/liquibase/liquibase).
+
+### Available Forums ###
+
+* [Liquibase Users](http://forum.liquibase.org/#Forum/liquibase-users) - for topics related to using Liquibase and writing extensions.
+* [Liquibase Developers](http://forum.liquibase.org/#Forum/liquibase-development) - for topics related to working on the Liquibase codebase.
 
 ## Bug and Feature Tracking ##
 
@@ -21,11 +24,14 @@ Bugs and feature requests should be entered directly into [Liquibase Jira](http:
 
 ## Liquibase Blog and Mailing List ##
 
-Liquibase release announcements as well as general project news and articles are cross posted to the Liquibase blog at [http://blog.liquibase.org](http://blog.liquibase.org) and the mailing list. To subscribe to the mailing list, use the form in the left navigation.
+Liquibase release announcements as well as general project news and articles are cross posted to the Liquibase blog at [http://blog.liquibase.org](http://blog.liquibase.org) and the mailing list. 
+
+To subscribe to the mailing list, use the form in the left navigation.
 
 ## Code ##
 
 The Liquibase source is hosted at [https://github.com/liquibase/liquibase](https://github.com/liquibase/liquibase). Code submissions should go through the standard GitHub pull request system.
+
 For more information, see the [developer documentation](../development/index.html)
 
 ## Benevolent Dictator for Life ##

@@ -7,8 +7,6 @@ title: Spring
 
 Liquibase can be run in a [Spring](http://www.springframework.org) environment by declaring a liquibase.spring.SpringLiquibase bean.
 
-
-
 ## Example ##
 
 {% highlight xml %}
@@ -23,14 +21,13 @@ Liquibase can be run in a [Spring](http://www.springframework.org) environment b
  </bean>
 {% endhighlight %}
 
-
 ## Available Attributes ##
 
 * beanName
-* resourceLoader
-* dataSource
 * changeLog
 * contexts
-* parameters
+* dataSource
 * defaultSchema
 * dropFirst **since 2.0.2**
+* parameters
+* resourceLoader

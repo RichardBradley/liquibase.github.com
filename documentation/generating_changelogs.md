@@ -8,12 +8,13 @@ title: Generating changelogs
 When starting to use Liquibase on an existing database, it is often useful, particularly for testing, to have a way to generate the change log to create the current database schema. Liquibase allows you to do this with the "generateChangeLog" [command_line](command_line.html) command.
 
 Note that this command currently has some limitations. It does not export the following types of objects:
+
 * Stored procedures, functions, packages
 * Triggers
 
 ## Example ##
 
-``
+{% highlight bat %}
 liquibase --driver=oracle.jdbc.OracleDriver \
       --classpath=\path\to\classes:jdbcdriver.jar \
       --changeLogFile=com/example/db.changelog.xml \
@@ -21,7 +22,7 @@ liquibase --driver=oracle.jdbc.OracleDriver \
       --username=scott \
       --password=tiger \
       generateChangeLog
-``
+{% endhighlight %}
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>

@@ -79,8 +79,8 @@ To configure the servlet listener, simply add liquibase.jar to your WEB-INF/lib 
 
 <table>
 <tr><td>Parameter</td><td>1.9 version</td><td>Description</td></tr>
-<tr><td>liquibase.changelog</td><td>LIQUIBASE_CHANGELOG</td><td>Specifies the changelog file to run **required**</td></tr>
-<tr><td>liquibase.datasource</td><td>LIQUIBASE_DATA_SOURCE</td><td>JNDI datasource to use for running Liquibase. Note that the LIQUIBASE_DATA_SOURCE can be different than the data source the rest of your web app uses if that data source does not have sufficient privileges to create/alter tables etc. **required**</td></tr>
+<tr><td>liquibase.changelog</td><td>LIQUIBASE_CHANGELOG</td><td>Specifies the changelog file to run <b>required</b></td></tr>
+<tr><td>liquibase.datasource</td><td>LIQUIBASE_DATA_SOURCE</td><td>JNDI datasource to use for running Liquibase. Note that the LIQUIBASE_DATA_SOURCE can be different than the data source the rest of your web app uses if that data source does not have sufficient privileges to create/alter tables etc. <b>required</b></td></tr>
 <tr><td>liquibase.host.excludes</td><td>LIQUIBASE_HOST_EXCLUDES</td><td>Specify host names on which you do NO want Liquibase to run. Specifying this parameter allows you to deploy the same WAR/EAR to multiple machines in different environments and not have Liquibase run on all of them.</td></tr>
 <tr><td>liquibase.host.includes</td><td>LIQUIBASE_HOST_INCLUDES</td><td>Specify the ONLY host names on which want Liquibase to run. Specifying this parameter allows you to deploy the same WAR/EAR to multiple machines in different environments and not have Liquibase run on all of them.</td></tr>
 <tr><td>liquibase.onerror.fail</td><td>LIQUIBASE_FAIL_ON_ERROR</td><td>Specify if an exception is thrown by Liquibase if an error occurs. Setting the value to "true" (default) will cause the exception to be thrown and keep the site from initializing properly. Setting the value to "false" will allow the site to deploy as normal, but the database will be in an undefined state.</td></tr>

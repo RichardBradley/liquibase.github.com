@@ -13,7 +13,7 @@ The [database changelog file](documentation/databasechangelog.html) is where all
   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
 </databaseChangeLog>
 {% endhighlight %}
@@ -31,7 +31,7 @@ Think of each change set as an atomic change that you want to apply to your data
   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
     <changeSet id="1" author="bob">
         <createTable tableName="department">
@@ -69,8 +69,6 @@ There are many more databases supported by liquibase. For a list of them and whi
 ## Step 4: Check Your Database ##
 
 You will see that your database now contains a table called "department". Two other tables are created as well: "databasechangelog" and "databasechangeloglock". The databasechangelog table contains a list of all the statements that have been run against the database. The databasechangeloglock table is used to make sure two machines don't attempt to modify the database at the same time.
-
-
 
 ## Next Steps ##
 

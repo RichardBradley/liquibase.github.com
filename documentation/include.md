@@ -23,15 +23,16 @@ As projects grow, the number of changeSets in a changeLog can grow unwieldy. To 
 
 Included change-logs are run in the order they are found so care does need to be taken to make sure that the included changelogs are either completely independent, or that any required changelogs are run first.
 
-Any [preconditions](preconditions.html) defined at the changelog level in sub changelog files will be evaluated //before// any changesets are ran.
+Any [preconditions](preconditions.html) defined at the changelog level in sub changelog files will be evaluated *before* any changesets are ran.
 
 The reason to use the `<include>` tag rather than using XML's built-in include functionality is that with the built-in functionality the parser sees just one big XML document. We uniquely identify each change with the id, the author, and the file name so you only have to ensure that the id/author combinations are unique within each file, not across all change logs.
 
 ## Available Attributes ##
 
 <table>
-<tr><td>file</td><td>Name of the file to import **required** </td></tr>
-<tr><td>relativeToChangelogFile</td><td>Is the file path relative to the root changelog file rather than to the classpath.  Defaults to "false" **since 1.9** </td></tr>
+<tr><th>Attribute</th><th>Description</th></tr>
+<tr><td>file</td><td>Name of the file to import <b>required</b> </td></tr>
+<tr><td>relativeToChangelogFile</td><td>Is the file path relative to the root changelog file rather than to the classpath.  Defaults to "false" <b>since 1.9</b> </td></tr>
 </table>
 
 

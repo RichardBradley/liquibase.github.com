@@ -11,6 +11,7 @@ Liquibase supports XML as a format for storing your changelog files.
 
 XSD schema definitions are available for each Liquibase version. Since there are no changelog format changes in patch versions, there are only xsd files that correspond to major.minor versions.
 
+* http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
 * http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
 * http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
 * http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd

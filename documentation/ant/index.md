@@ -14,7 +14,8 @@ Liquibase can be controlled via ant Tasks. To use, simply add the liquibase.jar 
     </taskdef>
 {% endhighlight %}
 
-The following tasks are available in Ant
+The following tasks are available in Ant:
+
 * [updateDatabase](updatedatabase_ant_task.html)
 * [rollbackDatabase](rollbackdatabase_ant_task.html)
 * [rollbackFutureDatabase](rollbackfuturedatabase_ant_task.html)

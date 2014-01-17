@@ -65,6 +65,19 @@ The "column" tag is a tag that is re-used throughout the Liquibase XML when colu
       <td>remarks</td>
       <td>Short description of the column (column comment)</td>
     </tr>
+    <tr>
+      <td>beforeColumn</td>
+      <td>If used in an 'addColumn' command, this attribute allows you to control where in the table column order the new column goes. Only one of beforeColumn, afterColumn or position are allowed. <i>Since 3.1</i></td>
+    </tr>
+    <tr>
+      <td>afterColumn</td>
+      <td>If used in an 'addColumn' command, this attribute allows you to control where in the table column order the new column goes. Only one of beforeColumn, afterColumn or position are allowed. <i>Since 3.1</i></td>
+    </tr>
+    <tr>
+      <td>position</td>
+      <td>If used in an 'addColumn' command, this attribute allows you to control where in the table column order the new column goes. Only one of beforeColumn, afterColumn or position are allowed. Expects a one based index <i>Since 3.1</i></td>
+    </tr>
+
   </tbody>
 </table>
 

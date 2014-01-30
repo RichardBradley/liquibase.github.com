@@ -3,41 +3,37 @@ layout: default
 title: Community
 ---
 
-# Liquibase User and Developer Community #
+# User and Developer Community #
 
-## Forums ##
+**Have Question On How To Use Liquibase?**
 
-The purpose of the forums is to be a place for general purpose discussion, questions, and feedback.
+Most questions on general Liquibase usage are best handled on Stack Overflow using the "liquibase" tag [http://stackoverflow.com/tags/liquibase](http://stackoverflow.com/tags/liquibase).
 
-If you believe you found a bug or have a specific feature request, you should enter it in [Jira](http://liquibase.jira.com/browse/CORE).
+**Have A Feature Idea? Did You Find A Bug In Liquibase?**
 
-If you have a code change, you should create a pull request on [github](https://github.com/liquibase/liquibase).
+Log it in [Liquibase Jira](http://liquibase.jira.com/browse/CORE).
 
-### Available Forums ###
+**Looking for Liquibase News?**
 
-* [Liquibase Users](http://forum.liquibase.org/#Forum/liquibase-users) - for topics related to using Liquibase and writing extensions.
-* [Liquibase Developers](http://forum.liquibase.org/#Forum/liquibase-development) - for topics related to working on the Liquibase codebase.
+Liquibase release announcements as well as general project news and articles are cross posted to the Liquibase blog at [http://blog.liquibase.org](http://blog.liquibase.org) and the mailing list.
 
-## Bug and Feature Tracking ##
+To subscribe to the mailing list, use the "Announcements" form to your left.
 
-Bugs and feature requests should be entered directly into [Liquibase Jira](http://liquibase.jira.com/browse/CORE) so they can be tracked better than is possible as a user forum question.
-
-## Liquibase Blog and Mailing List ##
-
-Liquibase release announcements as well as general project news and articles are cross posted to the Liquibase blog at [http://blog.liquibase.org](http://blog.liquibase.org) and the mailing list. 
-
-To subscribe to the mailing list, use the form in the left navigation.
-
-## Code ##
+**Looking for the Liquibase Source Code?**
 
 The Liquibase source is hosted at [https://github.com/liquibase/liquibase](https://github.com/liquibase/liquibase). Code submissions should go through the standard GitHub pull request system.
 
 For more information, see the [developer documentation](../development/index.html)
 
-## Benevolent Dictator for Life ##
+**Looking To Discussions Beyond The Scope Of Stack Overflow?**
 
-You can email the Nathan Voxland, Liquibase creator and project lead at <a href="mailto:nathan.voxland@liquibase.org">nathan.voxland@liquibase.org</a> or on twitter at <a href="https://twitter.com/nvoxland">@nvoxland</a>
+* [Liquibase Users](http://forum.liquibase.org/#Forum/liquibase-users) - for topics related to using Liquibase and writing extensions.
+* [Liquibase Developers](http://forum.liquibase.org/#Forum/liquibase-development) - for topics related to working on the Liquibase codebase.
 
-## Commercial training and support ##
+**Need To Go Right To The Top?**
 
-Commercial training and support beyond what is available in the forums is available at [datical.com](http://www.datical.com/liquibase-support-training-datical/)
+You can always contact Nathan Voxland, Liquibase Benevolent Dictator for Life at <a href="mailto:nathan.voxland@liquibase.org">nathan.voxland@liquibase.org</a> or <a href="https://twitter.com/nvoxland">@nvoxland</a>
+
+**Looking To Pay For Support?**
+
+Commercial training and support is available from [datical.com](http://www.datical.com/liquibase-support-training-datical/)

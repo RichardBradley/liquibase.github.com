@@ -27,11 +27,11 @@ The master.xml includes the changelog for the releases in the correct order. In 
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?> 
-<databaseChangeLog 
-  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
-                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
   <include file="com/example/db/changelog/db.changelog-1.0.xml"/> 
   <include file="com/example/db/changelog/db.changelog-1.1.xml"/> 

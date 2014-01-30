@@ -60,7 +60,7 @@ None
                                 {
                                     "column": {
                                         "name": "lastname",
-                                        "type": "varchar(50)"
+                                        "type": "varchar(50)",
                                         "constraints": {
                                             "nullable": false
                                         },
@@ -108,7 +108,6 @@ None
                 "changes": [
                     {
                         "addLookupTable": {
-                            "tableName": "person",
                             "existingTableName": "person",
                             "existingColumnName":"state",
                             "newTableName": "state",

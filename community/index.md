@@ -11,7 +11,12 @@ Most questions on general Liquibase usage are best handled on Stack Overflow usi
 
 **Have A Feature Idea? Did You Find A Bug In Liquibase?**
 
-Log it in [Liquibase Jira](http://liquibase.jira.com/browse/CORE).
+If it is a bug in the main Liquibase library, log it in [Liquibase Jira](http://liquibase.jira.com/browse/CORE).
+
+If it is a bug with an extension, log it issues section of the extension's github page.
+For example [https://github.com/liquibase/liquibase-hibernate/issues](https://github.com/liquibase/liquibase-hibernate/issues) or [https://github.com/liquibase/liquibase-oracle/issues](https://github.com/liquibase/liquibase-oracle/issues).
+
+All Liquibase-managed extensions can be found in the [Liquibase GitHub group](https://github.com/liquibase)
 
 **Looking for Liquibase News?**
 

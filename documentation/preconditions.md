@@ -235,7 +235,7 @@ Passes if the specified sequence exists in the database. **Since 1.8**
 
 <table>
 <tr><th>Attribute</th><th>Description</th></tr>
-<tr><td>schemaName</td><td>Name of the sequences's schema. <b>required</b </td></tr>
+<tr><td>schemaName</td><td>Name of the sequences's schema. <b>required</b> </td></tr>
 <tr><td>sequenceName</td><td>Name of the sequence. <b>required</b></td></tr>
 </table>
 

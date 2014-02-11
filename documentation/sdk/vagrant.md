@@ -14,6 +14,8 @@ Within the Liquibase SDK directory structure, vagrant boxes are stored as subdir
 There is a special "LIQUIBASE_HOME/sdk/install-files" directory which is used for storing files that cannot be freely downloaded from the Internet.
 The output from the init command should list anything that needs to be stored in the install-files directory for your configuration.
 
+__Liquibase SDK is available in Liquibase 3.2.0+__
+
 ## Standard Vagrant Box Configuration
 
 * Most Vagrant boxes are created with host-only networking on IP 10.10.100.100.

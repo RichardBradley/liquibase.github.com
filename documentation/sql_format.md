@@ -45,8 +45,8 @@ The following attributes may be provided on each changeset:
 Preconditions can be specified for each changeset. Currently, only the SQL Check precondition is supported.
 
 {% highlight sql %}
---preconditions onFail=HALT onError=HALT
---precondition-sql-check expectedResult=0 SELECT COUNT(*) FROM my_table
+--preconditions onFail:HALT onError:HALT
+--precondition-sql-check expectedResult:0 SELECT COUNT(*) FROM my_table
 {% endhighlight %}
 
 ## Rollback Actions ##

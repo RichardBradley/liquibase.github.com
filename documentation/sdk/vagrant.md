@@ -21,12 +21,12 @@ __Liquibase SDK is available in Liquibase 3.2.0+__
 * Most Vagrant boxes are created with host-only networking on IP 10.10.100.100.
 * Firewalls are disabled to limit unexpected errors and because the network is host-only.
 * A "liquibase" OS user is created with password "liquibase"
-* A "liquibase" database user is created with a password of "liquibase"
-* An alternate "liquibaseb" database user is created with a password of "liquibase"
-* A catalog of "liquibase" is created if the database supports catalogs
-* An alternate catalog of "liquibaseb" is created if the database supports catalogs
-* A schema of "lqschema" is created if the databases supports schemas
-* An alternate schema of "lqschemab" is created if the databases supports schemas
+* A "lbuser" database user is created with a password of "lbuser"
+* An alternate "lbuser2" database user is created with a password of "lbuser2"
+* A catalog of "lbcat" is created if the database supports catalogs
+* An alternate catalog of "lbcat2" is created if the database supports catalogs
+* A schema of "lbschema" is created if the databases supports schemas
+* An alternate schema of "lbschema2" is created if the databases supports schemas
 
 __Each database configuration may vary from these standards. Check the output of `liquibase-sdk vagrant BOX_NAME init` to confirm configuration.
 

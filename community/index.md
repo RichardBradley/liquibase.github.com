@@ -37,7 +37,9 @@ For more information, see the [developer documentation](../development/index.htm
 
 **Need To Go Right To The Top?**
 
-You can always contact Nathan Voxland, Liquibase Benevolent Dictator for Life at <a href="mailto:nathan.voxland@liquibase.org">nathan.voxland@liquibase.org</a> or <a href="https://twitter.com/nvoxland">@nvoxland</a>
+You can always contact Nathan Voxland, Liquibase Benevolent Dictator for Life at <a href="mailto:nathan.voxland@liquibase.org">nathan.voxland@liquibase.org</a>
+or <a href="https://twitter.com/nvoxland" class="twitter-follow-button" data-show-count="false">@nvoxland</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 **Looking To Pay For Support?**
 

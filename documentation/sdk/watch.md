@@ -10,6 +10,12 @@ demos, and simple manual testing. The application runs as a web application runn
 
 __Liquibase SDK is available in Liquibase 3.2.0+__
 
+## Features
+
+* Page auto-reloads on changes to DATABASECHANGELOG table
+* Select an item in the top tabbed section to see more details
+* DatabaseChangeLog records shown in reverse order for less scrolling
+
 ## Available Parameters
 
 * **--url** Database URL to watch [required]

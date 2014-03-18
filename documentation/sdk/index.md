@@ -19,3 +19,4 @@ __Liquibase SDK is available in Liquibase 3.2.0+__
 * [__Javadoc__](/javadoc) The Liquibase core library API documentation is included in the LIQUIBASE_HOME/sdk/javadoc directory for easy offline reference.
 * [__Workspace__](workspace.html) To make testing easier, a pre-configured "workspace" directory is included with sample changelog files.
 * [__Vagrant__](vagrant.html) Vagrant box configurations can be automatically generated for testing purposes.
+* [__Watch__](watch.html) Simple changelog table and database viewer. Useful for demos and manual testing.

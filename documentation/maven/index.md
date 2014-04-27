@@ -52,7 +52,7 @@ Configuration settings for the Maven Liquibase plugin can be specified in standa
 
 For each property defined in the file that matches a property in the goal being invoked that property of the goal will be set. If the property does not match any of the properties for the goal, then a warning will be displayed to the user, but execution will continue.
 
-The reason for only printing a warning is to allow a user to define a single master configuration property file that can be resused for multiple Maven Liquibase goals like [liquibase:update](maven_update.html) and [liquibase:tag](maven_update.html).
+The reason for only printing a warning is to allow a user to define a single master configuration property file that can be resused for multiple Maven Liquibase goals like [liquibase:update](maven_update.html) and [liquibase:tag](maven_tag.html).
 
 
 ##### Using both a Configuration Property File and specifying Configuration Values #####
@@ -142,7 +142,7 @@ All the parameters for executing the Maven Liquibase plugin can also be specifie
         <execution>
           <phase>process-resources</phase>
           <configuration>
-            <changeLogFile>src/main/resources/org/liquiabse/business_table.xml</changeLogFile>
+            <changeLogFile>src/main/resources/org/liquibase/business_table.xml</changeLogFile>
             <driver>oracle.jdbc.driver.OracleDriver</driver>
             <url>jdbc:oracle:thin:@tf-appserv-linux:1521:xe</url>
             <username>liquibaseTest</username>

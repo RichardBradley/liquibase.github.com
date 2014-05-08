@@ -16,7 +16,7 @@ The most common way to organize your changelogs is by major release.  Choose a p
           changelog
             db.changelog-master.xml
             db.changelog-1.0.xml
-            db.changelog*1.1.xml
+            db.changelog-1.1.xml
             db.changelog-2.0.xml
           DatabasePool.java
           AbstractDAO.java
@@ -36,6 +36,25 @@ The master.xml includes the changelog for the releases in the correct order. In 
   <include file="com/example/db/changelog/db.changelog-1.0.xml"/> 
   <include file="com/example/db/changelog/db.changelog-1.1.xml"/> 
   <include file="com/example/db/changelog/db.changelog-2.0.xml"/> 
+</databaseChangeLog> 
+{% endhighlight %}
+
+Each of the included XML files needs to be in the same format as a standard XML database change log, something like this:
+
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
+  <changeSet author="authorName" id="changelog-1.0">
+    <createTable tableName="TablesAndTables">
+      <column name="COLUMN1" type="TEXT">
+        <constraints nullable="true" primaryKey="false" unique="false"/>
+      </column>
+    </createTable>
+  </changeSet>
 </databaseChangeLog> 
 {% endhighlight %}
 

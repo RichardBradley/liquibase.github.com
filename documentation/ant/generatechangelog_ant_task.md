@@ -18,7 +18,7 @@ subnav: subnav_documentation.md
     </tr>
     <tr>
         <td>classpathref</td>
-        <td>A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file.</td>
+        <td>A reference to the classpath used to run the task with.</td>
         <td>No</td>
     </tr>
     <tr>
@@ -112,6 +112,10 @@ This task is capable of generating change log files in multiple formats. At leas
 {% highlight xml %}
 <liquibase:xml ouputfile="/path/to/output/changelog.xml" encoding="UTF-8"/>
 {% endhighlight %}
+
+#### classpath ####
+
+The classpath used to run the task with.
 
 #### Database ####
 

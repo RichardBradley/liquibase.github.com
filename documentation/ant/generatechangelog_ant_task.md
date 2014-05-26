@@ -27,6 +27,12 @@ subnav: subnav_documentation.md
         <td>Yes, unless a nested <code>&lt;database&gt;</code> element is present.</td>
     </tr>
     <tr>
+        <td>promptOnNonLocalDatabase</td>
+        <td>If set to true a dialog box with warn you if you attempt to run the Liquibase against a database that is not on localhost
+        </td>
+        <td>No; default is false.</td>
+    </tr>
+    <tr>
         <td>outputFile</td>
         <td><b>Deprecated:</b> Where to save the generated change log file.</td>
         <td>No</td>

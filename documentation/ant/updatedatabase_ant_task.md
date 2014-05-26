@@ -121,23 +121,23 @@ See [change log parameters](index.html)
 ### Examples ###
 
 {% highlight xml %}
-<updateDatabase changeLogFile="/path/to/changeLog.xml">
-	<database driver="${db.driver}" url="${db.url}" user="${db.user}" password="${db.pasword}"/>
-</updateDatabase>
+<liquibase:updateDatabase changeLogFile="/path/to/changeLog.xml">
+	<liquibase:database driver="${db.driver}" url="${db.url}" user="${db.user}" password="${db.pasword}"/>
+</liquibase:updateDatabase>
 {% endhighlight %}
 
-A basic implementation of the update database task. Applies updates in the changelog file to the database.
+A basic implementation of the update database task. Applies updates in the change log file to the database.
 
 {% highlight xml %}
 <database id="my-database" driver="${driver.classname}" url="${jdbc.url}" user="${username}" password="${password}"/>
-<updateDatabase databaseRef="my-database" changelogFile="/path/to/changeLog.xml"/>
+<liquibase:updateDatabase databaseRef="my-database" changelogFile="/path/to/changeLog.xml"/>
 {% endhighlight %}
 
 Updates the referenced database with the change sets found in the given change log file.
 
 {% highlight xml %}
 <liquibase:updateDatabase changeLogFile="/path/to/changeLog.xml">
-	<database driver="${db.driver}" url="${db.url}" user="${db.user}" password="${db.pasword}"/>
+	<liquibase:database driver="${db.driver}" url="${db.url}" user="${db.user}" password="${db.pasword}"/>
 	<liquibase:changeLogParameters>
 		<liquibase:changeLogParameter name="property1" value="value1"/>
 		<liquibase:changeLogParameter name="property2" value="value2"/>

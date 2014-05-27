@@ -108,15 +108,15 @@ Roll the database forward applying all change sets that have not been run.
 
 #### classpath ####
 
-The classpath used to run the task with. 
+The classpath used to run the task with. Optional. 
 
 #### database ####
 
-See [database data type](index.html).
+Required unless a `databaseref` attribute is given. See [database data type](./index.html).
 
 #### changelogparameters ####
 
-See [change log parameters](index.html)
+Optional. See [change log parameters](./index.html)
 
 ### Examples ###
 

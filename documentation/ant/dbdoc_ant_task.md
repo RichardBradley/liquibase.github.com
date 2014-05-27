@@ -101,11 +101,11 @@ The classpath used to run the task with. Optional.
 
 #### database ####
 
-Required unless a `databaseref` attribute is given. See [database data type](index.html).
+Required unless a `databaseref` attribute is given. See [database data type](./index.html).
 
 #### changelogparameters ####
 
-Optional. See [change log parameters](index.html)
+Optional. See [change log parameters](./index.html)
 
 ### Examples ###
 

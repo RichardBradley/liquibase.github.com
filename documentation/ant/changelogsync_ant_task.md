@@ -103,15 +103,15 @@ Marks all change sets as ran against the database.  Useful when you have manuall
 
 #### classpath ####
 
-The classpath used to run the task with. 
+The classpath used to run the task with. Optional. 
 
 #### database ####
 
-See [database data type](index.html).
+Required unless a `databaseref` attribute is given. See [database data type](./index.html).
 
 #### changelogparameters ####
 
-See [change log parameters](index.html)
+Optional. See [change log parameters](./index.html)
 
 ### Examples ###
 

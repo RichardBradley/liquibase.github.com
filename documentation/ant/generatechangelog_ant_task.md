@@ -115,15 +115,15 @@ This task is capable of generating change log files in multiple formats. At leas
 
 #### classpath ####
 
-The classpath used to run the task with.
+The classpath used to run the task with. Optional.
 
 #### Database ####
 
-See [database data type](index.html).
+Required unless a `databaseref` attribute is given. See [database data type](./index.html).
 
 #### ChangeLogParameters ####
 
-See [change log parameters](index.html)
+Optional. See [change log parameters](./index.html)
 
 ### Examples ###
 

@@ -8,66 +8,141 @@ subnav: subnav_documentation.md
 
 Outputs a [diff](../diff.html) report of the difference between two databases.
 
-### Sample ###
+### Parameters ###
+
+<table>
+    <tr>
+        <th>Attribute</th>
+        <th>Description</th>
+        <th>Required</th>
+    </tr>
+    <tr>
+        <td>outputFile</td>
+        <td>Location of file to save report to.</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>outputEncoding</td>
+        <td>The character encoding to use when writing to output file.</td>
+        <td>No; defaults to system encoding.</td>
+    </tr>
+    <tr>
+        <td>classpathref</td>
+        <td>A reference to the classpath used to run the task with.</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>databaseref</td>
+        <td>A reference to the database that Liquibase will connect to.</td>
+        <td>Yes, unless a nested <code>&lt;database&gt;</code> element is present.</td>
+    </tr>
+    <tr>
+        <td>referencedatabaseref</td>
+        <td>A reference to the reference database that Liquibase will connect to.</td>
+        <td>Yes, unless a nested <code>&lt;referencedatabase&gt;</code> element is present.</td>
+    </tr>
+    <tr>
+        <td>difftypes</td>
+        <td>A comma separated list of diff types to use.</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>promptOnNonLocalDatabase</td>
+        <td>If set to true a dialog box with warn you if you attempt to run the Liquibase against a database that is not on localhost.</td>
+        <td>No; default is false.</td>
+    </tr>
+    <tr>
+        <td>driver</td>
+        <td><b>Deprecated:</b> Name of the database driver to connect with.</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>url</td>
+        <td><b>Deprecated:</b> Use <code>&lt;database&gt;</code>'s url attribute instead. The database URL</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>username</td>
+        <td><b>Deprecated:</b>The database username to connect with</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>password</td>
+        <td><b>Deprecated:</b>The password to use when connecting to the database</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>defaultSchemaName</td>
+        <td><b>Deprecated:</b>Schema to use by default for managed database objects and Liquibase control tables</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>currentDateTimeFunction</td>
+        <td><b>Deprecated:</b> Overrides current date time function used in SQL. Useful for unsupported databases</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>databaseChangeLogTableName</td>
+        <td><b>Deprecated:</b> Overrides the name of the databasechangelog table to use</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>databaseChangeLogLockTableName</td>
+        <td><b>Deprecated:</b> Overrides the name of the databasechangeloglock table to use</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>referenceDriver</td>
+        <td><b>Deprecated:</b> The name of the database driver to connect with.</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>referenceUrl</td>
+        <td><b>Deprecated:</b> The base database URL.</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>referenceUsername</td>
+        <td><b>Deprecated:</b> The base database username to connect with.</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>referencePassword</td>
+        <td><b>Deprecated:</b> The base database password <b>required</b></td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>logLevel</td>
+        <td><b>Deprecated:</b> Specifies one of the following logging levels: debug, info, warning, severe, off. The default level is info.</td>
+        <td>No</td>
+    </tr>
+</table>
+
+### Parameters Specified as Nested Elements ###
+
+#### classpath ####
+
+The classpath used to run the task with. Optional. 
+
+#### database ####
+
+Required unless a `databaseref` attribute is given. See [database data type](./index.html).
+
+#### referencedatabase ####
+
+Required unless a `referencedatabaseref` attribute is given. See [database data type](./index.html).
+
+#### changelogparameters ####
+
+Optional. See [change log parameters](./index.html)
+
+### Examples ###
 
 {% highlight xml %}
-<target name="diff-database" depends="prepare">
-
-    <taskdef resource="liquibasetasks.properties">
-        <classpath refid="classpath"/>
-
-    </taskdef>
-
-    <diffDatabase
-            driver="${database.driver}"
-            url="${database.url}"
-            username="${database.username}"
-            password="${database.password}"
-
-            referenceUrl="${database.url}"
-            referenceUsername="${database.username}"
-            referencePassword="${database.password}"
-
-            outputFile="path/to/outputfile.txt"
-            classpathref="classpath"
-            >
-    </diffDatabase>
-</target>
+<liquibase:diffDatabase outputfile="/path/to/diff.txt">
+    <liquibase:database driver="${db1.driver}" url="${db1.url}" user="${db1.user}" password="${db1.password}"/>
+    <liquibase:referenceDatabase driver="${db2.driver}" url="${db2.jdbc.url}" user="${db2.user}" password="${db2.password}"/>
+</liquibase:diffDatabase>
 {% endhighlight %}
 
-
-
-
-### Available Parameters ###
-
-<table>
-<tr><th>Attribute</th><th>Description</th></tr>
-<tr><td>driver</td><td>The name of the database driver to connect with</td></tr>
-<tr><td>url</td><td>The target database URL <b>required</b>  </td></tr>
-<tr><td>username</td><td>The target database username to connect with <b>required</b>  </td></tr>
-<tr><td>password</td><td>The target database password <b>required</b>  </td></tr>
-<tr><td>defaultSchemaName</td><td>Schema to use by default for managed database objects and Liquibase control tables  </td></tr>
-<tr><td>referenceDriver</td><td>The name of the database driver to connect with</td></tr>
-<tr><td>referenceUrl</td><td>The base database URL <b>required</b>  </td></tr>
-<tr><td>referenceUsername</td><td>The base database username to connect with <b>required</b>  </td></tr>
-<tr><td>referencePassword</td><td>The base database password <b>required</b>  </td></tr>
-<tr><td>baseDefaultSchemaName</td><td>Schema to use by default for managed database objects and Liquibase control tables  </td></tr>
-<tr><td>outputFile</td><td>Location of file to save report to <b>required</b>  </td></tr>
-<tr><td>classpathref</td><td>A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file <b>required</b>  </td></tr>
-<tr><td>databaseChangeLogTableName</td><td>Overrides the name of the databasechangelog table to use <b>Since Liquibase 1.9</b> </td></tr>
-<tr><td>databaseChangeLogLockTableName</td><td>Overrides the name of the databasechangeloglock table to use <b>Since Liquibase 1.9</b> </td></tr>
-<tr><td>logLevel</td><td>Specifies one of the following logging levels: debug, info, warning, severe, off. The default level is info.</td></tr>
-</table>
-
-### Available Sub Tags ###
-<table>
-<tr><th>Tag</th><th>Description</th></tr>
-<tr><td>changeLogProperty</td><td>Sets a [changelog_parameters](../changelog_parameters.html) set <b>Since Liquibase 1.7</b> </td></tr>
-</table>
-
-#### Available &lt;changeLogProperty&gt; Parameters ####
-<table>
-<tr><th>Attribute</th><th>Description</th></tr>
-<tr><td>name</td><td>The name of the property to set</td></tr>
-<tr><td>value</td><td>The value of the property to set</td></tr>
-</table>
+A basic implementation fo the diffDatabase task.

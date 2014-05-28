@@ -121,4 +121,4 @@ A basic example of generating database documentation for a given change log file
 <liquibase:dbDoc databaseref="my-database" changelogfile="/path/to/changelog.xml" outputdirectory="/path/to/output/dir"/>
 {% endhighlight %}
 
-Generates database documetnation for the referenced database.
+Generates database documentation for the referenced database.

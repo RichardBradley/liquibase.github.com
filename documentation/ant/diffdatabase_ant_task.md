@@ -108,7 +108,7 @@ Outputs a [diff](../diff.html) report of the difference between two databases.
     </tr>
     <tr>
         <td>referencePassword</td>
-        <td><b>Deprecated:</b> The base database password <b>required</b></td>
+        <td><b>Deprecated:</b> The base database password.</td>
         <td>No</td>
     </tr>
     <tr>

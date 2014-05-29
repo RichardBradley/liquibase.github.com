@@ -168,12 +168,13 @@ The following tasks are available in Ant:
 * [dbDoc](dbdoc_ant_task.html)
 * [changeLogSync](changelogsync_ant_task.html)
 * [dropAllDatabaseObjects](dropalldatabaseobjects_ant_task.html)
+* [markNextChangeSetRan](marknextchangesetran_ant_task.html)
 
 Additional Liquibase commands are supported by the [command line](../command_line.html) that are not supported by the Ant tasks.
 
 ## Migrating From Legacy Tasks ##
 
-Starting in Liquibase 3.2 the ant tasks were refactored, moving all of the database attributes out of the task and into its own type. The deprecated attributes will now log a warning message instructing callers of the deprecation. While backward compatibility exists, it is advised that users migrate their ant builds to use the new tasks.
+Starting in Liquibase 3.3 the ant tasks were refactored, moving all of the database attributes out of the task and into its own type. The deprecated attributes will now log a warning message instructing callers of the deprecation. While backward compatibility exists, it is advised that users migrate their ant builds to use the new tasks.
 
 In order to use the new Liquibase tasks, the `<taskdef>` needs to be redefined to use the `antlib.xml` file:
 

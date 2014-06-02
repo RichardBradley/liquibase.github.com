@@ -45,6 +45,10 @@ title: Home
 <li><a href="cdi.html">CDI Environment</a></li>
 </ul>
 
+<h2>Developing Extensions</h2>
+<ul>
+<li><a href="sdk/index.html">Liquibase SDK</a></li>
+</ul>
 </div>
 
 <div class="span-13 last">

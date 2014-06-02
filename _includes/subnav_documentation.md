@@ -12,3 +12,4 @@
 <li><a href="{{pageRoot}}/documentation/generating_changelogs.html"><span>Generate Changelog</span></a></li>
 <li><a href="{{pageRoot}}/documentation/dbdoc.html"><span>DBDoc</span></a></li>
 <li><a href="{{pageRoot}}/documentation/sql_output.html"><span>SQL Output</span></a></li>
+<li><a href="{{pageRoot}}/documentation/sdk/index.html"><span>SDK</span></a></li>

@@ -37,6 +37,7 @@ An offline database is "connected" to using a url syntax of `offline:DATABASE_TY
 | **productName** | Specify "product name" seen by the JDBC driver. |
 | **catalog** | Specify the connection catalog |
 | **caseSensitive** | Specify if the database is case sensitive or not |
+| **outputLiquibaseSql** | If set to "true", output from updateSQL will include create/insert statements for the DatabaseChangeLog table. Defaults to "false" |
 
 ### Examples:
 

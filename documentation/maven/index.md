@@ -138,16 +138,16 @@ All the parameters for executing the Maven Liquibase plugin can also be specifie
       <groupId>org.liquibase</groupId>
       <artifactId>liquibase-maven-plugin</artifactId>
       <version>3.0.5</version>
+      <configuration>
+        <changeLogFile>src/main/resources/org/liquibase/business_table.xml</changeLogFile>
+          <driver>oracle.jdbc.driver.OracleDriver</driver>
+          <url>jdbc:oracle:thin:@tf-appserv-linux:1521:xe</url>
+          <username>liquibaseTest</username>
+          <password>pass</password>
+        </configuration>
       <executions>
         <execution>
           <phase>process-resources</phase>
-          <configuration>
-            <changeLogFile>src/main/resources/org/liquibase/business_table.xml</changeLogFile>
-            <driver>oracle.jdbc.driver.OracleDriver</driver>
-            <url>jdbc:oracle:thin:@tf-appserv-linux:1521:xe</url>
-            <username>liquibaseTest</username>
-            <password>pass</password>
-          </configuration>
           <goals>
             <goal>update</goal>
           </goals>

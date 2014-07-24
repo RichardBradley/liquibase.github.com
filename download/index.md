@@ -6,11 +6,11 @@ subnav: subnav_main.md
 
 # Liquibase Downloads #
 
-## Current Liquibase Core Release: 3.2.1 (July 18, 2014) ##
+## Current Liquibase Core Release: 3.2.2 (July 23, 2014) ##
 
 <ul>
-<li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.2.1-bin.zip/download" onclick="trackOutboundLink(this, 'Download 3.2.1', 'sourceforge.net'); return false;">liquibase-3.2.1-bin.zip</a></li>
-<li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.2.1-bin.tar.gz/download" onclick="trackOutboundLink(this, 'Download 3.2.1', 'sourceforge.net'); return false;">liquibase-3.2.1-bin.tar.gz</a></li>
+<li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.2.2-bin.zip/download" onclick="trackOutboundLink(this, 'Download 3.2.2', 'sourceforge.net'); return false;">liquibase-3.2.2-bin.zip</a></li>
+<li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.2.2-bin.tar.gz/download" onclick="trackOutboundLink(this, 'Download 3.2.2', 'sourceforge.net'); return false;">liquibase-3.2.2-bin.tar.gz</a></li>
 </ul>
 
 ## Extensions ##

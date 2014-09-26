@@ -210,6 +210,18 @@ java -jar liquibase.jar \
         listLocks
 {% endhighlight %}
 
+# Unicode #
+### MySQL ###
+Add url parameters useUnicode=true and characterEncoding=UTF-8 to set character encoding to utf8.
+
+_Since v5.1.3 Connector/J now auto-detects servers configured with character_set_server=utf8mb4 or treats the Java encoding utf-8 passed using characterEncoding=... as utf8mb4._
+
+{% highlight bat %}
+--url="jdbc:mysql://localhost/dbname?useUnicode=true&characterEncoding=UTF-8
+{% endhighlight %}
+
+more information about [MySQL Connector J Using Character Sets and Unicode](http://dev.mysql.com/doc/connector-j/en/connector-j-reference-charsets.html)
+
 ### Runs Liquibase using defaults from ./liquibase.properties ###
 
 {% highlight bat %}

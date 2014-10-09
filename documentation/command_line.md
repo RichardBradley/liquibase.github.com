@@ -113,6 +113,7 @@ If you run the command line migrator without any arguments, you will get a help 
 <tr><td>--logLevel=&lt;level&gt;</td><td>Execution log level (debug, info, warning, severe, off).  </td></tr>
 <tr><td>--help</td><td>Output command line parameter help.</td></tr>
 <tr><td>--exportDataDir</td><td>Directory where insert statement csv files will be kept (required by generateChangeLog command).</td></tr>
+<tr><td>--propertyProviderClass=&lt;properties.ClassName&gt;</td><td>custom Properties implementation to use</td></tr>
 </table>
 
 

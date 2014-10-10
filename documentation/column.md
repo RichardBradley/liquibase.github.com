@@ -128,6 +128,14 @@ The "constraints" tag contains information about constraints on the column.
   </thead>
   <tbody>
     <tr>
+      <td>name</td>
+      <td>Name of the column</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td>Column data type</td>
+    </tr>
+    <tr>
       <td>nullable</td>
       <td>Is column nullable?</td>
     </tr>

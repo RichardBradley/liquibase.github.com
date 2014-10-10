@@ -8,64 +8,124 @@ subnav: subnav_documentation.md
 
 Outputs SQL to un-run changes that have not yet been executed.  See [rollback](../rollback.html) for more information.
 
-### Sample ###
+### Parameters ###
+
+<table>
+    <tr>
+        <th>Attribute</th>
+        <th>Description</th>
+        <th>Required</th>
+    </tr>
+    <tr>
+        <td>changeLogFile</td>
+        <td>The change log file to run</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>contexts</td>
+        <td>A comma separated list of <a href="../contexts.html">contexts</a> to execute. If not specified, all contexts are run.</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>outputFile</td>
+        <td>If specified, Liquibase will save the update SQL statements to the specified file rather than executing them in the database.</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>outputEncoding</td>
+        <td>The character encoding to use when writing SQL statements to output file.</td>
+        <td>No; defaults to system encoding.</td>
+    </tr>
+    <tr>
+        <td>promptOnNonLocalDatabase</td>
+        <td>If set to true a dialog box with warn you if you attempt to run the Liquibase against a database that is not on localhost.</td>
+        <td>No; default is false.</td>
+    </tr>
+    <tr>
+        <td>classpathref</td>
+        <td>A reference to the classpath used to run the task with.</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>databaseref</td>
+        <td>A reference to the database that Liquibase will connect to.</td>
+        <td>Yes, unless a nested <code>&lt;database&gt;</code> element is present.</td>
+    </tr>
+    <tr>
+        <td>driver</td>
+        <td><b>Deprecated:</b> Name of the database driver to connect with.</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>url</td>
+        <td><b>Deprecated:</b> Use <code>&lt;database&gt;</code>'s url attribute instead. The database URL</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>username</td>
+        <td><b>Deprecated:</b>The database username to connect with</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>password</td>
+        <td><b>Deprecated:</b>The password to use when connecting to the database</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>defaultSchemaName</td>
+        <td><b>Deprecated:</b>Schema to use by default for managed database objects and Liquibase control tables</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>currentDateTimeFunction</td>
+        <td><b>Deprecated:</b> Overrides current date time function used in SQL. Useful for unsupported databases</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>databaseChangeLogTableName</td>
+        <td><b>Deprecated:</b> Overrides the name of the databasechangelog table to use</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>databaseChangeLogLockTableName</td>
+        <td><b>Deprecated:</b> Overrides the name of the databasechangeloglock table to use</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>logLevel</td>
+        <td><b>Deprecated:</b> Specifies one of the following logging levels: debug, info, warning, severe, off. The default level is info.</td>
+        <td>No</td>
+    </tr>
+</table>
+
+### Parameters Specified as Nested Elements ###
+
+#### classpath ####
+
+The classpath used to run the task with. Optional. 
+
+#### database ####
+
+Required unless a `databaseref` attribute is given. See [database data type](./index.html).
+
+#### changelogparameters ####
+
+Optional. See [change log parameters](./index.html)
+
+### Examples ###
 
 {% highlight xml %}
-<target name="rollbackFuture" depends="prepare">
-    <fail unless="db.changelog.file">db.changelog.file not set</fail>
-    <fail unless="database.url">database.url not set</fail>
-
-    <fail unless="database.username">database.username not set</fail>
-    <fail unless="database.password">database.password not set</fail>
-
-    <taskdef resource="liquibasetasks.properties">
-        <classpath refid="classpath"/>
-
-    </taskdef>
-
-    <rollbackFutureDatabase
-            changeLogFile="${db.changelog.file}"
-            driver="${database.driver}"
-            url="${database.url}"
-            username="${database.username}"
-            password="${database.password}"
-            promptOnNonLocalDatabase="${prompt.user.if.not.local.database}"
-            classpathref="classpath"
-            >
-    </rollbackFutureDatabase>
-</target>
+<liquibase:rollbackFutureDatabase changelogfile="/path/to/changelog.xml">
+    <liquibase:database driver="${db.driver}" url="${db.url}" user="${db.user}" password="${db.password}"/>
+</liquibase:rollbackFutureDatabase>
 {% endhighlight %}
 
+A basic example of rollback future task.
 
+{% highlight xml %}
+<liquibase:rollbackFutureDatabase outputfile="/path/to/rollback-future.sql" changelogfile="/path/to/changelog.xml">
+    <liquibase:database driver="${dv.driver}" url="${db.url}" user="${db.user}" password="${db.password}"/>
+</liquibase:rollbackFutureDatabase>
+{% endhighlight %}
 
-### Available Parameters ###
-
-<table>
-<tr><th>Attribute</th><th>Description</th></tr>
-<tr><td>changeLogFile</td><td>The change log file to run <b>required</b>  </td></tr>
-<tr><td>driver</td><td>The name of the database driver to connect with</td></tr>
-<tr><td>url</td><td>The database URL <b>required</b>  </td></tr>
-<tr><td>username</td><td>The database username to connect with <b>required</b>  </td></tr>
-<tr><td>password</td><td>The password to use when connecting to the database <b>required</b>  </td></tr>
-<tr><td>defaultSchemaName</td><td>Schema to use by default for managed database objects and Liquibase control tables  </td></tr>
-<tr><td>outputFile</td><td>Save SQL to given file rather than executing  <b>required</b>  </td></tr>
-<tr><td>classpathref</td><td>A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file</td></tr>
-<tr><td>contexts</td><td>A comma separated list of [contexts](../contexts.html) to execute. If not specified, all contexts are run.  </td></tr>
-<tr><td>currentDateTimeFunction</td><td>Overrides current date time function used in SQL. Useful for unsupported databases</td></tr>
-<tr><td>databaseChangeLogTableName</td><td>Overrides the name of the databasechangelog table to use <b>Since Liquibase 1.9</b> </td></tr>
-<tr><td>databaseChangeLogLockTableName</td><td>Overrides the name of the databasechangeloglock table to use <b>Since Liquibase 1.9</b> </td></tr>
-<tr><td>logLevel</td><td>Specifies one of the following logging levels: debug, info, warning, severe, off. The default level is info.</td></tr>
-</table>
-
-### Available Sub Tags ###
-<table>
-<tr><th>Tag</th><th>Description</th></tr>
-<tr><td>changeLogProperty</td><td>Sets a [changelog_parameters](../changelog_parameters.html) set <b>Since Liquibase 1.7</b> </td></tr>
-</table>
-
-#### Available &lt;changeLogProperty&gt; Parameters ####
-<table>
-<tr><th>Attribute</th><th>Description</th></tr>
-<tr><td>name</td><td>The name of the property to set</td></tr>
-<tr><td>value</td><td>The value of the property to set</td></tr>
-</table>
+Write the rollback future SQL to the output file.

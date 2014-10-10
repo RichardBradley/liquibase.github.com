@@ -24,7 +24,7 @@ title: Liquibase
     <li>Supports <a href="documentation/contexts.html">context-dependent logic</a></li>
     <li>Cluster-safe database upgrades</li>
     <li>Generate <a href="documentation/dbdoc.html">Database change documentation</a></li>
-    <li>Generate Database "<a href="documentation/diff.html">diff's</a>"</li>
+    <li>Generate Database "<a href="documentation/diff.html">diffs</a>"</li>
     <li><a href="documentation/running.html">Run through your</a> build process, embedded in your application or on demand</li>
     <li>Automatically <a href="documentation/sql_output.html">generate SQL scripts</a> for DBA code review</li>
     <li>Does not require a <a href="documentation/offline.html">live database connection</a></li>

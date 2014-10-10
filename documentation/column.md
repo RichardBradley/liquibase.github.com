@@ -35,7 +35,19 @@ The "column" tag is a tag that is re-used throughout the Liquibase XML when colu
     </tr>
     <tr>
       <td>valueComputed</td>
-      <td>A value that is returned from a function or procedure call.</td>
+      <td>A value that is returned from a function or procedure call. This attribute will contain the function to call.</td>
+    </tr>
+    <tr>
+      <td>valueBlobFile</td>
+      <td>Path to a file, which contents will be written as a BLOB (i.e. chunk of binary data). Must be either absolute or relative to the Change Log file location (absolute paths are, e.g.: <tt>/usr/local/somefile.dat</tt> on Unix or <tt>c:\Directory\somefile.dat</tt> on Windows. Please refer to <a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html">java.io.File javadoc</a> for the details of what to consider relative/absolute path).</td>
+    </tr>
+    <tr>
+      <td>valueClobFile</td>
+      <td>Path to a file, which contents will be written as a CLOB (i.e. chunk of character data). Must be either absolute or relative to the Change Log file location (absolute paths are, e.g.: <tt>/usr/local/somefile.dat</tt> on Unix or <tt>c:\Directory\somefile.dat</tt> on Windows. Please refer to <a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html">java.io.File javadoc</a> for the details of what to consider relative/absolute path).</td>
+    </tr>
+    <tr>
+      <td>encoding</td>
+      <td>Name of the encoding (as specified <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/charset/Charset.html">in java.nio.Charset javadoc</a>, e.g. <tt>"UTF-8"</tt>) of the CLOB file (specified in <tt>valueClobFile</tt>) contents. <p><b>Note:</b> used only when <tt>valueClobFile</tt> attribute is specified, ignored otherwise.</td>
     </tr>
     <tr>
       <td>defaultValue</td>

@@ -6,70 +6,146 @@ subnav: subnav_documentation.md
 
 ## updateDatabase Ant Task ##
 
-Applies un-run changes to the database.  
+Roll the database forward applying all change sets that have not been run.  
 
+### Parameters ###
 
-### Sample ###
+<table>
+    <tr>
+        <th>Attribute</th>
+        <th>Description</th>
+        <th>Required</th>
+    </tr>
+    <tr>
+        <td>changeLogFile</td>
+        <td>The change log file to run</td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>contexts</td>
+        <td>A comma separated list of <a href="../contexts.html">contexts</a> to execute. If not specified, all contexts are run.</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>outputFile</td>
+        <td>If specified, Liquibase will save the update SQL statements to the specified file rather than executing them in the database.</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>outputEncoding</td>
+        <td>The character encoding to use when writing SQL statements to output file.</td>
+        <td>No; defaults to system encoding.</td>
+    </tr>
+    <tr>
+        <td>promptOnNonLocalDatabase</td>
+        <td>If set to true a dialog box with warn you if you attempt to run the Liquibase against a database that is not on localhost
+        </td>
+        <td>No; default is false.</td>
+    </tr>
+    <tr>
+        <td>dropFirst</td>
+        <td>If set to true, Liquibase will first drop all database objects owned by the connected user.</td>
+        <td>No; default is false</td>
+    </tr>
+    <tr>
+        <td>classpathref</td>
+        <td>A reference to the classpath used to run the task with.</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>databaseref</td>
+        <td>A reference to the database that Liquibase will connect to.</td>
+        <td>Yes, unless a nested <code>&lt;database&gt;</code> element is present.</td>
+    </tr>
+    <tr>
+        <td>driver</td>
+        <td><b>Deprecated:</b> Name of the database driver to connect with.</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>url</td>
+        <td><b>Deprecated:</b> Use <code>&lt;database&gt;</code>'s url attribute instead. The database URL</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>username</td>
+        <td><b>Deprecated:</b>The database username to connect with</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>password</td>
+        <td><b>Deprecated:</b>The password to use when connecting to the database</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>defaultSchemaName</td>
+        <td><b>Deprecated:</b>Schema to use by default for managed database objects and Liquibase control tables</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>currentDateTimeFunction</td>
+        <td><b>Deprecated:</b> Overrides current date time function used in SQL. Useful for unsupported databases</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>databaseChangeLogTableName</td>
+        <td><b>Deprecated:</b> Overrides the name of the databasechangelog table to use</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>databaseChangeLogLockTableName</td>
+        <td><b>Deprecated:</b> Overrides the name of the databasechangeloglock table to use</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>logLevel</td>
+        <td><b>Deprecated:</b> Specifies one of the following logging levels: debug, info, warning, severe, off. The default level is info.</td>
+        <td>No</td>
+    </tr>
+</table>
+
+### Parameters Specified as Nested Elements ###
+
+#### classpath ####
+
+The classpath used to run the task with. Optional. 
+
+#### database ####
+
+Required unless a `databaseref` attribute is given. See [database data type](./index.html).
+
+#### changelogparameters ####
+
+Optional. See [change log parameters](./index.html)
+
+### Examples ###
 
 {% highlight xml %}
-<target name="update-database" depends="prepare">
-    <fail unless="db.changelog.file">db.changelog.file not set</fail>
-    <fail unless="database.url">database.url not set</fail>
-
-    <fail unless="database.username">database.username not set</fail>
-    <fail unless="database.password">database.password not set</fail>
-
-    <taskdef resource="liquibasetasks.properties">
-        <classpath refid="classpath"/>
-
-    </taskdef>
-
-    <updateDatabase
-            changeLogFile="${db.changelog.file}"
-            driver="${database.driver}"
-            url="${database.url}"
-            username="${database.username}"
-            password="${database.password}"
-            promptOnNonLocalDatabase="${prompt.user.if.not.local.database}"
-            dropFirst="false"
-            classpathref="classpath"
-    />
-    
-</target>
+<liquibase:updateDatabase changeLogFile="/path/to/changeLog.xml">
+	<liquibase:database driver="${db.driver}" url="${db.url}" user="${db.user}" password="${db.pasword}"/>
+</liquibase:updateDatabase>
 {% endhighlight %}
 
+A basic implementation of the update database task. Applies updates in the change log file to the database.
 
-### Available Parameters ###
-FIXME: Annotate which is required.
+{% highlight xml %}
+<database id="my-database" driver="${driver.classname}" url="${jdbc.url}" user="${username}" password="${password}"/>
+<liquibase:updateDatabase databaseRef="my-database" changelogFile="/path/to/changeLog.xml"/>
+{% endhighlight %}
 
-<table>
-<tr><th>Attribute</th><th>Description</th></tr>
-<tr><td>changeLogFile</td><td>The change log file to run</td></tr>
-<tr><td>driver</td><td>The name of the database driver to connect with</td></tr>
-<tr><td>url</td><td>The database URL</td></tr>
-<tr><td>username</td><td>The database username to connect with</td></tr>
-<tr><td>password</td><td>The password to use when connecting to the database</td></tr>
-<tr><td>defaultSchemaName</td><td>Schema to use by default for managed database objects and Liquibase control tables  </td></tr>
-<tr><td>outputFile</td><td>Save SQL to given file rather than executing  </td></tr>
-<tr><td>promptOnNonLocalDatabase</td><td>If set to true (default is false) a dialog box with warn you if you attempt to run the Liquibase against a database that is not on localhost  </td></tr>
-<tr><td>dropFirst</td><td>If set to true, Liquibase will first drop all database objects owned by the connected user \[defaults to FALSE\]  </td></tr>
-<tr><td>classpathref</td><td>A reference to the classpath that contains the database driver, liquibase.jar, and the changelog.xml file</td></tr>
-<tr><td>contexts</td><td>A comma separated list of [contexts](../contexts.html) to execute. If not specified, all contexts are run.  </td></tr>
-<tr><td>currentDateTimeFunction</td><td>Overrides current date time function used in SQL. Useful for unsupported databases</td></tr>
-<tr><td>databaseChangeLogTableName</td><td>Overrides the name of the databasechangelog table to use  </td></tr>
-<tr><td>databaseChangeLogLockTableName</td><td>Overrides the name of the databasechangeloglock table to use  </td></tr>
-<tr><td>logLevel</td><td>Specifies one of the following logging levels: debug, info, warning, severe, off. The default level is info.</td></tr>
-</table>
+Updates the referenced database with the change sets found in the given change log file.
 
-### Available Sub Tags ###
-<table>
-<tr><th>Tag</th><th>Description</th></tr>
-<tr><td>changeLogProperty</td><td>Sets a [changelog_parameters](../changelog_parameters.html) set <b>Since Liquibase 1.7</b> </td></tr>
-</table>
+{% highlight xml %}
+<liquibase:updateDatabase changeLogFile="/path/to/changeLog.xml">
+	<liquibase:database driver="${db.driver}" url="${db.url}" user="${db.user}" password="${db.pasword}"/>
+	<liquibase:changeLogParameters>
+		<liquibase:changeLogParameter name="property1" value="value1"/>
+		<liquibase:changeLogParameter name="property2" value="value2"/>
+		<propertyset>
+			<propertyref prefix="mydb"/>
+		</propertyset>
+	</liquibase:changeLogParameters>
+</liquibase:updateDatabase>
+{% endhighlight %}
 
-#### Available &lt;changeLogProperty&gt; Parameters ####
-<table>
-<tr><th>Attribute</th><th>Description</th></tr>
-<tr><td>name</td><td>The name of the property to set</td></tr>
-<tr><td>value</td><td>The value of the property to set</td></tr>
-</table>
+Updates the database with the change log file, substituting any change log parameters present with values defined in the nested elements.

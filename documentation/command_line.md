@@ -113,6 +113,7 @@ If you run the command line migrator without any arguments, you will get a help 
 <tr><td>--logLevel=&lt;level&gt;</td><td>Execution log level (debug, info, warning, severe, off).  </td></tr>
 <tr><td>--help</td><td>Output command line parameter help.</td></tr>
 <tr><td>--exportDataDir</td><td>Directory where insert statement csv files will be kept (required by generateChangeLog command).</td></tr>
+<tr><td>--propertyProviderClass=&lt;properties.ClassName&gt;</td><td>custom Properties implementation to use</td></tr>
 </table>
 
 
@@ -209,6 +210,18 @@ java -jar liquibase.jar \
         --password=tiger \
         listLocks
 {% endhighlight %}
+
+# Unicode #
+### MySQL ###
+Add url parameters useUnicode=true and characterEncoding=UTF-8 to set character encoding to utf8.
+
+_Since v5.1.3 Connector/J now auto-detects servers configured with character_set_server=utf8mb4 or treats the Java encoding utf-8 passed using characterEncoding=... as utf8mb4._
+
+{% highlight bat %}
+--url="jdbc:mysql://localhost/dbname?useUnicode=true&characterEncoding=UTF-8
+{% endhighlight %}
+
+more information about [MySQL Connector J Using Character Sets and Unicode](http://dev.mysql.com/doc/connector-j/en/connector-j-reference-charsets.html)
 
 ### Runs Liquibase using defaults from ./liquibase.properties ###
 

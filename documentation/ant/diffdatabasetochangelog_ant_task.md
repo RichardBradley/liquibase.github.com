@@ -160,7 +160,7 @@ Optional. See [change log parameters](./index.html)
     <liquibase:referenceDatabase driver="${db2.driver}" url="${db2.jdbc.url}" user="${db2.user}" password="${db2.password}"/>
     <liquibase:xml outputFile="/path/to/diff-changelog.xml" encoding="UTF-8"/>
 </liquibase:diffDatabaseToChangeLog>
-{% endhightlight %}
+{% endhighlight %}
 
 Generate a change log based on the difference between the two databases. Output the changelog to an XML file.
 
@@ -171,6 +171,6 @@ Generate a change log based on the difference between the two databases. Output 
     <liquibase:xml outputFile="/path/to/diff-changelog.xml" encoding="UTF-8"/>
     <liquibase:yaml outputFile="/path/to/diff-changelog.yaml" encoding="UTF-8"/>
 </liquibase:diffDatabaseToChangeLog>
-{% endhightlight %}
+{% endhighlight %}
 
 Generate change logs in both XML and YAML format.

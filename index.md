@@ -293,6 +293,12 @@ create table person (
 --changeset nvoxland:2
 alter table person add column username varchar(8)
 
+--changeset nvoxland:3
+create table state AS SELECT DISTINCT state AS id FROM person WHERE state IS NOT NULL;
+alter table state modify id char(2) NOT NULL;
+alter table state add primary key(id);
+alter table person add constraint fk_person_state foreign key (state) references state(id);
+
 {% endhighlight %}
 </div>
 </div>

@@ -39,6 +39,25 @@ The master.xml includes the changelog for the releases in the correct order. In 
 </databaseChangeLog> 
 {% endhighlight %}
 
+Each of the included XML files needs to be in the same format as a standard XML database change log, something like this:
+
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
+  <changeSet author="authorName" id="changelog-1.0">
+    <createTable tableName="TablesAndTables">
+      <column name="COLUMN1" type="TEXT">
+        <constraints nullable="true" primaryKey="false" unique="false"/>
+      </column>
+    </createTable>
+  </changeSet>
+</databaseChangeLog> 
+{% endhighlight %}
+
 The db.changelog-master.xml is the changelog you pass to all Liquibase calls.
 
 ### Managing Stored Procedures ###

@@ -18,8 +18,20 @@ The "column" tag is a tag that is re-used throughout the Liquibase XML when colu
   </thead>
   <tbody>
     <tr>
+      <td>name</td>
+      <td>Name of the column</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td>Column data type</td>
+    </tr>
+    <tr>
       <td>value</td>
       <td>Value to set the column to. The value will be surrounded by quote marks and nested quote marks will be escaped.</td>
+    </tr>
+    <tr>
+      <td>computed</td>
+      <td>Used if the value in "name" isn't actually a column name but actually a function. <i>Since 3.3.0</i></td>
     </tr>
     <tr>
       <td>valueNumeric</td>
@@ -47,7 +59,7 @@ The "column" tag is a tag that is re-used throughout the Liquibase XML when colu
     </tr>
     <tr>
       <td>encoding</td>
-      <td>Name of the encoding (as specified <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/charset/Charset.html">in java.nio.Charset javadoc</a>, e.g. <tt>"UTF-8"</tt>) of the CLOB file (specified in <tt>valueClobFile</tt>) contents. <p><b>Note:</b> used only when <tt>valueClobFile</tt> attribute is specified, ignored otherwise.</td>
+      <td>Name of the encoding (as specified <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/charset/Charset.html">in java.nio.Charset javadoc</a>, e.g. <tt>"UTF-8"</tt>) of the CLOB file (specified in <tt>valueClobFile</tt>) contents.<br><br><b>Note:</b> used only when <tt>valueClobFile</tt> attribute is specified, ignored otherwise.</td>
     </tr>
     <tr>
       <td>defaultValue</td>
@@ -93,20 +105,22 @@ The "column" tag is a tag that is re-used throughout the Liquibase XML when colu
   </tbody>
 </table>
 
-To help make scripts database-independent, the following "generic" data types   will be converted to the correct database implementation:
-    * BOOLEAN
-    * CURRENCY
-    * UUID
-    * CLOB
-    * BLOB
-    * DATE
-    * DATETIME
-    * TIME
-    * BIGINT
+To help make scripts database-independent, the following "generic" data types will be converted to the correct database implementation:
+
+* BOOLEAN
+* CURRENCY
+* UUID
+* CLOB
+* BLOB
+* DATE
+* DATETIME
+* TIME
+* BIGINT
 
 Also, specifying a java.sql.Types.* type will be converted to the correct type as well. If needed, precision can be included. Here are some examples:
-    * java.sql.Types.TIMESTAMP
-    * java.sql.Types.VARCHAR(255)
+
+* java.sql.Types.TIMESTAMP
+* java.sql.Types.VARCHAR(255)
 
 ## Available Sub-Tags ##
 
@@ -139,14 +153,6 @@ The "constraints" tag contains information about constraints on the column.
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>name</td>
-      <td>Name of the column</td>
-    </tr>
-    <tr>
-      <td>type</td>
-      <td>Column data type</td>
-    </tr>
     <tr>
       <td>nullable</td>
       <td>Is column nullable?</td>

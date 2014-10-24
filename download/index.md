@@ -31,6 +31,22 @@ Liquibase supports a powerful plugin/extension framework to add new features or 
 <li><a href="https://sourceforge.net/projects/liquibase/files/Liquibase%20Core/">All previous versions</a></li>
 </ul>
 
+## Snapshot Builds ##
+
+Snapshot builds can be downloaded directly from the <a href="https://liquibase.jira.com/builds/browse/CORE-LB" onclick="trackOutboundLink(this, 'Download Snapshot', 'liquibase.jira.com'); return false;">Liquibase build server</a>
+ 
+Snapshot Maven builds are also automatically uploaded to the sonatype repository. You can configure your project to pull from it by adding to your pom.xml:
+  
+{% highlight xml %}
+<repositories>
+    <repository>
+        <id>sonatype-snapshots</id>
+        <name>OSS Sonatype Snapshots</name>
+        <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </repository>
+</repositories>
+{% endhighlight %}
+
 ## Installation ##
 
 ### Command line ###

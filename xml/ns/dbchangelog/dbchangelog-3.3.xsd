@@ -368,7 +368,7 @@
 
     <xsd:attributeGroup name="dropColumnAttributes">
         <xsd:attributeGroup ref="tableNameAttribute" />
-        <xsd:attribute name="columnName" type="xsd:string" use="required" />
+        <xsd:attribute name="columnName" type="xsd:string" />
     </xsd:attributeGroup>
 
     <xsd:attributeGroup name="sequenceAttributes">
@@ -1014,6 +1014,8 @@
         <xsd:complexType mixed="true" />
     </xsd:element>
 
+    <xsd:element name="empty"/>
+
     <xsd:element name="output">
         <xsd:complexType mixed="true" >
             <xsd:attribute name="target" type="xsd:string" />
@@ -1066,6 +1068,9 @@
 
     <xsd:element name="dropColumn">
         <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="column" minOccurs="0" maxOccurs="unbounded" type="columnType" />
+            </xsd:sequence>
             <xsd:attributeGroup ref="dropColumnAttributes" />
         </xsd:complexType>
     </xsd:element>
@@ -1199,6 +1204,7 @@
             <xsd:element ref="executeCommand" maxOccurs="unbounded" />
             <xsd:element ref="stop" maxOccurs="unbounded" />
             <xsd:element ref="output" maxOccurs="unbounded" />
+            <xsd:element ref="empty" maxOccurs="unbounded" />
             <xsd:element ref="rollback" maxOccurs="1" />
             <xsd:any namespace="##other" processContents="lax" minOccurs="0"
                      maxOccurs="unbounded" />

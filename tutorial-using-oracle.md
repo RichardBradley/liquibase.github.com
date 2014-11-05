@@ -1019,7 +1019,7 @@ password: lb_dev</pre>
 <p>
 To verify that the fresh install in lb_test is identical to the incrementally built schema in lb_dev we can use the Liquibase diff command. Enter the following command on the command-line:
 </p>
-<pre >Liquibase diff --baseUrl=jdbc:oracle:thin:@localhost:1521:XE --baseUsername=lb_test --basePassword=lb_test</pre>
+<pre >Liquibase diff --referenceUrl=jdbc:oracle:thin:@localhost:1521:XE --referenceUsername=lb_test --referencePassword=lb_test</pre>
 
 <p>
 This command will give the output in text format and should indicate that there are no differences:

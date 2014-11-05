@@ -11,18 +11,18 @@ This is a Liquibase tutorial that shows you how to manage your database objects 
 The scenario we will be using for the tutorial assumes we are developing an application for two customers named Solo and Duplex. Each customer has their own upgrade timing.
 </p>
 <div ><table >
-	<tr >
-		<th >Time </th><th > Solo          </th><th > Duplex         </th>
-	</tr>
-	<tr >
-		<td >t1 </td><td > install r1.0    </td><td >                </td>
-	</tr>
-	<tr >
-		<td >t2 </td><td > patch to r1.1   </td><td >                </td>
-	</tr>
-	<tr >
-		<td >t3 </td><td > upgrade to r2.0 </td><td > install r2.0   </td>
-	</tr>
+    <tr >
+        <th >Time </th><th > Solo          </th><th > Duplex         </th>
+    </tr>
+    <tr >
+        <td >t1 </td><td > install r1.0    </td><td >                </td>
+    </tr>
+    <tr >
+        <td >t2 </td><td > patch to r1.1   </td><td >                </td>
+    </tr>
+    <tr >
+        <td >t3 </td><td > upgrade to r2.0 </td><td > install r2.0   </td>
+    </tr>
 </table></div>
 
 <p>
@@ -34,18 +34,18 @@ The chosen strategy, is to clean up the changelog for every major release. This 
 A delivery for version X (this includes versions X.y) always consists of 3 parts:
 </p>
 <div ><table >
-	<tr >
-		<th >Script</th><th >Description</th><th >Create objects for version X </th><th > Upgrade from X-1</th><th >Apply latest changes to version X</th>
-	</tr>
-	<tr >
-		<td >lb_install</td><td >Perform fresh install for version X</td><td >  X  </td><td > </td><td >  X  </td>
-	</tr>
-	<tr >
-		<td >lb_upgrade_to_major</td><td >Upgrade from (X-1) to X </td><td > </td><td >  X  </td><td >  X  </td>
-	</tr>
-	<tr >
-		<td >lb_update</td><td >Upgrade within same major version, eg 1.1 to 1.5</td><td >  </td><td > </td><td >  X  </td>
-	</tr>
+    <tr >
+        <th >Script</th><th >Description</th><th >Create objects for version X </th><th > Upgrade from X-1</th><th >Apply latest changes to version X</th>
+    </tr>
+    <tr >
+        <td >lb_install</td><td >Perform fresh install for version X</td><td >  X  </td><td > </td><td >  X  </td>
+    </tr>
+    <tr >
+        <td >lb_upgrade_to_major</td><td >Upgrade from (X-1) to X </td><td > </td><td >  X  </td><td >  X  </td>
+    </tr>
+    <tr >
+        <td >lb_update</td><td >Upgrade within same major version, eg 1.1 to 1.5</td><td >  </td><td > </td><td >  X  </td>
+    </tr>
 </table></div>
 
 <p>
@@ -138,12 +138,12 @@ Next we will add the Liquibase <acronym title="XML (Extensible Markup Language) 
 Choose Tools &gt; Preferences &gt; <acronym title="Extensible Markup Language">XML</acronym> Schemas. Select "add". Enter:
 </p>
 <div ><table >
-	<tr >
-		<th >Schema:</th><td > http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd </td>
-	</tr>
-	<tr >
-		<th >Extension: </th><td >xml</td>
-	</tr>
+    <tr >
+        <th >Schema:</th><td > http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd </td>
+    </tr>
+    <tr >
+        <th >Extension: </th><td >xml</td>
+    </tr>
 </table></div>
 
 <p>
@@ -199,12 +199,12 @@ Close the repository browser.
 Return to Windows Explorer, navigate to directory D:\projects\lbdemo and right-click in the right panel. Choose <strong>SVN Checkout</strong>. In the panel that appears, enter:
 </p>
 <div ><table >
-	<tr >
-		<th ><acronym title="Uniform Resource Locator">URL</acronym> of repository: </th><td ><code>file:///D:/projects/lbdemo/repo/trunk</code></td>
-	</tr>
-	<tr >
-		<th >Checkout directory: </th><td ><code>D:\projects\lbdemo\trunk</code></td>
-	</tr>
+    <tr >
+        <th ><acronym title="Uniform Resource Locator">URL</acronym> of repository: </th><td ><code>file:///D:/projects/lbdemo/repo/trunk</code></td>
+    </tr>
+    <tr >
+        <th >Checkout directory: </th><td ><code>D:\projects\lbdemo\trunk</code></td>
+    </tr>
 </table></div>
 
 <p>
@@ -414,9 +414,9 @@ JDeveloper is a great tool for editing <acronym title="Extensible Markup Languag
 <strong>trunk/update.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;include file=&quot;v000/master.xml&quot; /&gt;
 &lt;/databaseChangeLog&gt;
 </pre>
@@ -429,9 +429,9 @@ Create the file that will later contain the includes of each changeLog in order 
 <strong>trunk/v000/master.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;preConditions&gt;
         &lt;!-- These changes should only be run against a schema with major version 0 --&gt;
         &lt;sqlCheck expectedResult=&quot;0&quot;&gt;
@@ -509,9 +509,9 @@ Create the following files:
 <strong>trunk/v000/2009-10-15-73.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;changeSet author=&quot;jsmith&quot; id=&quot;1&quot;&gt;
         &lt;createTable tableName=&quot;departments&quot;
                      remarks=&quot;The departments of this company. Does not include geographical divisions.&quot;&gt;
@@ -557,9 +557,9 @@ Note that the table and column remarks will be applied as table and column comme
 <strong>trunk/latest/trg/departments_bi.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;changeSet author=&quot;jsmith&quot; id=&quot;1&quot; runOnChange=&quot;true&quot;&gt;
         &lt;createProcedure&gt;
 create trigger departments_bi before insert on departments
@@ -587,9 +587,9 @@ Update the master.xml to include the change:
 <strong>trunk/v000/master.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;preConditions&gt;
         &lt;!-- These changes should only be run against a schema with major version 0 --&gt;
         &lt;sqlCheck expectedResult=&quot;0&quot;&gt;
@@ -651,9 +651,9 @@ Both objects are of the "replaceable" type, i.e. a new version can simply replac
 <strong>trunk/v000/master.xml</strong> (add the new change to the end of the file)
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;preConditions&gt;
         &lt;!-- These changes should only be run against a schema with major version 0 --&gt;
         &lt;sqlCheck expectedResult=&quot;0&quot;&gt;
@@ -670,9 +670,9 @@ Both objects are of the "replaceable" type, i.e. a new version can simply replac
 <strong>trunk/v000/2009-10-15-59.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;include file=&quot;latest/pks/departments_pck.xml&quot;/&gt;
     &lt;include file=&quot;latest/pkb/departments_pck.xml&quot;/&gt;
     &lt;include file=&quot;latest/vw/departments_vw.xml&quot;/&gt;
@@ -682,9 +682,9 @@ Both objects are of the "replaceable" type, i.e. a new version can simply replac
 <strong>trunk/latest/pks/departments_pck.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;changeSet author=&quot;jsmith&quot; id=&quot;1&quot; runOnChange=&quot;true&quot;&gt;
         &lt;createProcedure&gt;
 create or replace package departments_pck as
@@ -701,9 +701,9 @@ end departments_pck;
 <strong>trunk/latest/pkb/departments_pck.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;changeSet author=&quot;jsmith&quot; id=&quot;1&quot; runOnChange=&quot;true&quot;&gt;
         &lt;createProcedure&gt;
 create or replace package body departments_pck as
@@ -723,9 +723,9 @@ end departments_pck;
 <strong>trunk/latest/vw/departments_vw.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;changeSet author=&quot;jsmith&quot; id=&quot;1&quot; runOnChange=&quot;true&quot;&gt;
         &lt;createView viewName=&quot;departments_vw&quot;&gt;
             select id, dname
@@ -778,9 +778,9 @@ The last change to version 0 has been made. After all these changes have been ap
 <strong>trunk/v000/master.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;preConditions&gt;
         &lt;!--These changes should only be run against a schema with major version 0--&gt;
         &lt;sqlCheck expectedResult=&quot;0&quot;&gt;
@@ -839,9 +839,9 @@ Our (manual) utility will create these files:
 <strong>trunk/install/tab/departments.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;changeSet author=&quot;jsmith&quot; id=&quot;1&quot;&gt;
         &lt;createTable tableName=&quot;departments&quot;
                      remarks=&quot;The departments of this company. Does not include geographical divisions.&quot;&gt;
@@ -861,9 +861,9 @@ Our (manual) utility will create these files:
 <strong>trunk/install/tab/employees.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;changeSet author=&quot;jsmith&quot; id=&quot;1&quot;&gt;
         &lt;createTable tableName=&quot;employees&quot;&gt;
             &lt;column name=&quot;id&quot; type=&quot;number(4,0)&quot;&gt;
@@ -883,9 +883,9 @@ Our (manual) utility will create these files:
 <strong>trunk/install/seq/departments_seq.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;changeSet author=&quot;jsmith&quot; id=&quot;1&quot;&gt;
         &lt;createSequence sequenceName=&quot;departments_seq&quot;/&gt;
     &lt;/changeSet&gt;
@@ -895,9 +895,9 @@ Our (manual) utility will create these files:
 <strong>trunk/install/cst/employees.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;changeSet author=&quot;jsmith&quot; id=&quot;1&quot;&gt;
         &lt;addForeignKeyConstraint baseColumnNames=&quot;dpt_id&quot;
                                  baseTableName=&quot;employees&quot;
@@ -925,9 +925,9 @@ Create a new master.xml in this directory:
 <strong>trunk/v001/master.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;preConditions&gt;
         &lt;!-- These changes should only be run against a schema with major version 1 --&gt;
         &lt;sqlCheck expectedResult=&quot;1&quot;&gt;
@@ -946,9 +946,9 @@ Edit the update file:
 <strong>trunk/update.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;include file=&quot;v001/master.xml&quot; /&gt;
 &lt;/databaseChangeLog&gt;</pre>
 
@@ -975,9 +975,9 @@ Create the <code>install.xml</code>. This file does the fresh install of objects
 <strong> trunk/install.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;includeAll path=&quot;install/tab/&quot; /&gt;
     &lt;includeAll path=&quot;install/seq&quot; /&gt;
     &lt;includeAll path=&quot;install/cst&quot; /&gt;
@@ -1019,7 +1019,7 @@ password: lb_dev</pre>
 <p>
 To verify that the fresh install in lb_test is identical to the incrementally built schema in lb_dev we can use the Liquibase diff command. Enter the following command on the command-line:
 </p>
-<pre >Liquibase diff --baseUrl=jdbc:oracle:thin:@localhost:1521:XE --baseUsername=lb_test --basePassword=lb_test</pre>
+<pre >Liquibase diff --referenceUrl=jdbc:oracle:thin:@localhost:1521:XE --referenceUsername=lb_test --referencePassword=lb_test</pre>
 
 <p>
 This command will give the output in text format and should indicate that there are no differences:
@@ -1080,9 +1080,9 @@ Right-click on <code>trunk</code> and choose <code>copy to ..</code>.
 Fill in:
 </p>
 <div ><table >
-	<tr >
-		<th >New Name:</th><td > file:///D:/projects/lbdemo/repo/branches/1.x</td>
-	</tr>
+    <tr >
+        <th >New Name:</th><td > file:///D:/projects/lbdemo/repo/branches/1.x</td>
+    </tr>
 </table></div>
 
 <p>
@@ -1093,12 +1093,12 @@ Enter log message "Branched 1.x" and press OK.
 In the left pane under branches you will now see a folder named 1.x. Right-click on <code>branches/1.x</code> and choose <strong>Checkout</strong>.
 </p>
 <div ><table >
-	<tr >
-		<th ><acronym title="Uniform Resource Locator">URL</acronym> of repository:   </th><td > file:///D:/projects/lbdemo/repo/branches/1.x     </td>
-	</tr>
-	<tr >
-		<th >Checkout directory:  </th><td > D:\projects\lbdemo\branch_1.x  </td>
-	</tr>
+    <tr >
+        <th ><acronym title="Uniform Resource Locator">URL</acronym> of repository:   </th><td > file:///D:/projects/lbdemo/repo/branches/1.x     </td>
+    </tr>
+    <tr >
+        <th >Checkout directory:  </th><td > D:\projects\lbdemo\branch_1.x  </td>
+    </tr>
 </table></div>
 
 <p>
@@ -1175,9 +1175,9 @@ Remember that our changes are now taking us from version 1.x, so the changelogs 
 <strong> trunk/v001/2009-10-16-102.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;changeSet author=&quot;jsmith&quot; id=&quot;1&quot;&gt;
         &lt;addColumn tableName=&quot;employees&quot;&gt;
             &lt;column name=&quot;fixed_salary&quot; type=&quot;number(6,2)&quot;
@@ -1203,9 +1203,9 @@ Update <code>master.xml</code> to include this file:
 <strong>trunk/v001/master.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;preConditions&gt;
         &lt;!-- These changes should only be run against a schema with major version 1 --&gt;
         &lt;sqlCheck expectedResult=&quot;1&quot;&gt;
@@ -1265,21 +1265,21 @@ Commit these changes using TortoiseSVN. Enter log message: "102: Replace salary 
 Right-click on directory <code>branch_1.x</code> and choose <strong>TortoiseSVN &gt; Merge</strong>.
 </p>
 <div ><table >
-	<tr >
-		<th >Merge type: </th><td > Merge a range of revisions </td>
-	</tr>
+    <tr >
+        <th >Merge type: </th><td > Merge a range of revisions </td>
+    </tr>
 </table></div>
 
 <p>
 Press Next
 </p>
 <div ><table >
-	<tr >
-		<th ><acronym title="Uniform Resource Locator">URL</acronym> to merge from: </th><td > file:///D:/projects/lbdemo/repo/trunk </td>
-	</tr>
-	<tr >
-		<th >Revision range to merge: </th><td > Use the [Show log] button to display the list of revisions. Select the change for bug 102. </td>
-	</tr>
+    <tr >
+        <th ><acronym title="Uniform Resource Locator">URL</acronym> to merge from: </th><td > file:///D:/projects/lbdemo/repo/trunk </td>
+    </tr>
+    <tr >
+        <th >Revision range to merge: </th><td > Use the [Show log] button to display the list of revisions. Select the change for bug 102. </td>
+    </tr>
 </table></div>
 
 <p>
@@ -1327,18 +1327,18 @@ The acceptance test has now been completed, so we can label this version as our 
 Right-click on <code>branch_1.x</code> and choose <strong>TortoiseSVN &gt; Branch/Tag</strong>. Fill out the dialogue as shown below:
 </p>
 <div ><table >
-	<tr >
-		<th >From WC at <acronym title="Uniform Resource Locator">URL</acronym>:                     </th><td > file:///D:/projects/lbdemo/repo/branches/1.x     </td>
-	</tr>
-	<tr >
-		<th >To <acronym title="Uniform Resource Locator">URL</acronym>:                             </th><td > file:///D:/projects/lbdemo/repo/tags/1.0  </td>
-	</tr>
-	<tr >
-		<th >Create copy in the repository from: </th><td > (leave as default)        </td>
-	</tr>
-	<tr >
-		<th >Log message:                        </th><td > Tagged as 1.0                           </td>
-	</tr>
+    <tr >
+        <th >From WC at <acronym title="Uniform Resource Locator">URL</acronym>:                     </th><td > file:///D:/projects/lbdemo/repo/branches/1.x     </td>
+    </tr>
+    <tr >
+        <th >To <acronym title="Uniform Resource Locator">URL</acronym>:                             </th><td > file:///D:/projects/lbdemo/repo/tags/1.0  </td>
+    </tr>
+    <tr >
+        <th >Create copy in the repository from: </th><td > (leave as default)        </td>
+    </tr>
+    <tr >
+        <th >Log message:                        </th><td > Tagged as 1.0                           </td>
+    </tr>
 </table></div>
 
 <p>
@@ -1358,12 +1358,12 @@ We can now deliver version 1.0 to the customer.
 We can now deliver version 1.0 to our customer Solo. Create directory <code>D:\projects\lbdemo\solo</code>. Right-click on this directory and choose TortoiseSVN &gt; Export. Fill out the dialogue as shown below:
 </p>
 <div ><table >
-	<tr >
-		<th ><acronym title="Uniform Resource Locator">URL</acronym> of repository:                  </th><td > file:///D:/projects/lbdemo/repo/tags/1.0  </td>
-	</tr>
-	<tr >
-		<th >Export directory:                   </th><td > D:\projects\lbdemo\solo         </td>
-	</tr>
+    <tr >
+        <th ><acronym title="Uniform Resource Locator">URL</acronym> of repository:                  </th><td > file:///D:/projects/lbdemo/repo/tags/1.0  </td>
+    </tr>
+    <tr >
+        <th >Export directory:                   </th><td > D:\projects\lbdemo\solo         </td>
+    </tr>
 </table></div>
 
 <p>
@@ -1407,9 +1407,9 @@ Create the changelog:
 <strong>trunk/v001/2009-10-16-105.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;changeSet author=&quot;jsmith&quot; id=&quot;1&quot;&gt;
         &lt;addColumn tableName=&quot;departments&quot;&gt;
             &lt;column name=&quot;mgr_id&quot; type=&quot;number(4,0)&quot;/&gt;
@@ -1435,9 +1435,9 @@ Update <code>master.xml</code> to include this file:
 <strong>trunk/v001/master.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;preConditions&gt;
         &lt;!-- These changes should only be run against a schema with major version 1 --&gt;
         &lt;sqlCheck expectedResult=&quot;1&quot;&gt;
@@ -1503,9 +1503,9 @@ call Liquibase --changeLogFile=update.xml update</pre>
 <strong>trunk/upgrade_to_major.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;include file=&quot;v001/master.xml&quot; /&gt;
 &lt;/databaseChangeLog&gt;</pre>
 
@@ -1526,9 +1526,9 @@ Create the changelog:
 <strong>trunk/v002/2009-10-18-114.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;changeSet author=&quot;jsmith&quot; id=&quot;1&quot;&gt;
         &lt;renameColumn newColumnName=&quot;full_name&quot; oldColumnName=&quot;ename&quot; tableName=&quot;employees&quot;/&gt;
     &lt;/changeSet&gt;
@@ -1542,9 +1542,9 @@ Update <code>master.xml</code> to include this file:
 <strong>trunk/v002/master.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;preConditions&gt;
         &lt;!-- These changes should only be run against a schema with major version 2 --&gt;
         &lt;sqlCheck expectedResult=&quot;2&quot;&gt;
@@ -1590,9 +1590,9 @@ Change 114 will be referenced in <code>v001/master.xml</code> as follows:
 <strong>branch_1.x/v001/master.xml</strong>
 </p>
 <pre >&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
-&lt;databaseChangeLog xmlns=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9&quot;
+&lt;databaseChangeLog xmlns=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9&quot;
                    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                   xsi:schemaLocation=&quot;http://www.Liquibase.org/xml/ns/dbchangelog/1.9 http://www.Liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
+                   xsi:schemaLocation=&quot;http://www.liquibase.org/xml/ns/dbchangelog/1.9 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd&quot;&gt;
     &lt;preConditions&gt;
         &lt;!-- These changes should only be run against a schema with major version 1 --&gt;
         &lt;sqlCheck expectedResult=&quot;1&quot;&gt;
@@ -1656,24 +1656,24 @@ Customer lb_solo runs the <code>lb_upgrade_to_magor</code> command.
 The default action is to create a change file named &lt;date&gt;-IssueNr&gt;.xml in directory vXXX and specify the change in this file. Example filename: <code>v002/2009-12-25-305.xml</code>
 </p>
 <div ><table >
-	<tr >
-		<th > </th><th >Create</th><th >Modify</th><th >Delete</th>
-	</tr>
-	<tr >
-		<th >Table</th><td >Default</td><td >Default</td><td >Default</td>
-	</tr>
-	<tr >
-		<th >Sequence</th><td >Default </td><td >Default </td><td >Default </td>
-	</tr>
-	<tr >
-		<th >View</th><td >Create new file in directory <code>latest/vw</code>. Include this file in the change file.</td><td >Modify file in directory <code>latest/vw</code>. Include this file in the change file. </td><td >See below  </td>
-	</tr>
-	<tr >
-		<th >Trigger</th><td >Create new file in directory <code>latest/trg</code>. Include this file in the change file. </td><td >Modify file in directory <code>latest/trg</code>. Include this file in the change file. </td><td >See below</td>
-	</tr>
-	<tr >
-		<th >Package</th><td >Create new file in directory <code>latest/pck</code>. Include this file in the change file. </td><td >Modify file in directory <code>latest/pck</code>. Include this file in the change file. </td><td >See below </td>
-	</tr>
+    <tr >
+        <th > </th><th >Create</th><th >Modify</th><th >Delete</th>
+    </tr>
+    <tr >
+        <th >Table</th><td >Default</td><td >Default</td><td >Default</td>
+    </tr>
+    <tr >
+        <th >Sequence</th><td >Default </td><td >Default </td><td >Default </td>
+    </tr>
+    <tr >
+        <th >View</th><td >Create new file in directory <code>latest/vw</code>. Include this file in the change file.</td><td >Modify file in directory <code>latest/vw</code>. Include this file in the change file. </td><td >See below  </td>
+    </tr>
+    <tr >
+        <th >Trigger</th><td >Create new file in directory <code>latest/trg</code>. Include this file in the change file. </td><td >Modify file in directory <code>latest/trg</code>. Include this file in the change file. </td><td >See below</td>
+    </tr>
+    <tr >
+        <th >Package</th><td >Create new file in directory <code>latest/pck</code>. Include this file in the change file. </td><td >Modify file in directory <code>latest/pck</code>. Include this file in the change file. </td><td >See below </td>
+    </tr>
 </table></div>
 
 </div>

@@ -11,7 +11,9 @@ subnav: subnav_main.md
 <ul>
 <li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.3.0-bin.zip/download" onclick="trackOutboundLink(this, 'Download 3.3.0', 'sourceforge.net'); return false;">liquibase-3.3.0-bin.zip</a></li>
 <li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.3.0-bin.tar.gz/download" onclick="trackOutboundLink(this, 'Download 3.3.0', 'sourceforge.net'); return false;">liquibase-3.3.0-bin.tar.gz</a></li>
+<li style="margin-top:20px"><a href="../v3_3_upgrade.html">3.2 to 3.3 upgrade guide</a></li>
 </ul>
+
 
 ## Extensions ##
 

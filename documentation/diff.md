@@ -146,3 +146,19 @@ In change log mode, the an XML change log of what is necessary to upgrade the ba
 </databaseChangeLog>
 {% endhighlight %}
 
+Database objects to include in the changelog can be controlled with the includeObjects or excludeObjects parameters. (since 3.3.2)
+
+The format supported is:
+- An object name (actually a regexp) will match any object whose name matches the regexp.
+- A type:name syntax that matches the regexp name for objects of the given type
+- If you want multiple expressions, comma separate them
+- The type:name logic will be applied to the tables containing columns, indexes, etc.
+
+NOTE: name comparison is case sensitive. If you want insensitive logic, use the `(?i)` regexp flag.
+
+Example Filters:
+- "table_name" will match a table called "table_name" but not "other_table" or "TABLE_NAME"
+- "(i?)table_name" will match a table called "table_name" and "TABLE_NAME"
+- "table_name" will match all columns in the table table_name
+- "table:table_name" will match a table called table_name but not a column named table_name
+- "table:table_name, column:*._lock" will match a table called table_name and all columns that end with "_lock"

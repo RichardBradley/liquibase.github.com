@@ -6,7 +6,7 @@ subnav: subnav_main.md
 
 # Liquibase Downloads #
 
-## Current Liquibase Core Release: 3.3.2 (Jan 8, 2018) ##
+## Current Liquibase Core Release: 3.3.2 (Jan 8, 2015) ##
 
 <ul>
 <li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.3.2-bin.zip/download" onclick="trackOutboundLink(this, 'Download 3.3.2', 'sourceforge.net'); return false;">liquibase-3.3.2-bin.zip</a></li>

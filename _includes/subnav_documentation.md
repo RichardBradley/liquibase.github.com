@@ -13,3 +13,4 @@
 <li><a href="{{pageRoot}}/documentation/dbdoc.html"><span>DBDoc</span></a></li>
 <li><a href="{{pageRoot}}/documentation/sql_output.html"><span>SQL Output</span></a></li>
 <li><a href="{{pageRoot}}/documentation/sdk/index.html"><span>SDK</span></a></li>
+<li><a href="{{pageRoot}}/documentation/offline.html"><span>Offline Database Support</span></a></li>

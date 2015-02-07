@@ -44,6 +44,7 @@ title: Home
 <li><a href="spring.html">Spring</a></li>
 <li><a href="servlet_listener.html">Servlet Listener</a></li>
 <li><a href="cdi.html">CDI Environment</a></li>
+<li><a href="offline.html">Using Offline Database Support</a></li>
 </ul>
 
 <h2>Developing Extensions</h2>

@@ -57,7 +57,7 @@ Liquibase attempts to execute each changeSet in a transaction that is committed 
 <tr><td>comment</td><td>A description of the change set.  XML comments will provide the same benefit, future releases of Liquibase may be able to make use of &lt;comment&gt; tag comments to generate documentation </td></tr>
 <tr><td>preConditions</td><td><a href="preconditions.html">Preconditions</a> that must pass before the change set will be executed.  Useful for doing a data sanity check before doing something unrecoverable such as a dropTable <b>Since 1.7</b> </td></tr>
 <tr><td>&lt;Any Refactoring Tag(s)&gt;</td><td>The database change(s) to run as part of this change set (so called <a href="changes/index.html">refactorings</a>) </td></tr>
-<tr><td>validCheckSum</td><td>When comparing the changeSet stored in the database with the checksum generated from the current changeSet, do not consider the changeSet changed if the given validCheckSum is in the database. Use primarily when you need to change a changeSet and don't want errors thrown on databases on which it has already run (not a recommended procedure).  <b>Since 1.7</b> </td></tr>
+<tr><td>validCheckSum</td><td>List checksums which are considered valid for this changeSet, regardless of what is stored in the database. Used primarily when you need to change a changeSet and don't want errors thrown on databases on which it has already run (not a recommended procedure).  <b>Since 1.7</b> </td></tr>
 <tr><td>rollback</td><td>SQL statements or refactoring tags that describe how to <a href="rollback.html">rollback</a> the change set </td></tr>
 </table>
 

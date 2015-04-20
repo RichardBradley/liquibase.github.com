@@ -43,4 +43,4 @@ or <a href="https://twitter.com/nvoxland" class="twitter-follow-button" data-sho
 
 **Looking To Pay For Support?**
 
-Commercial training and support is available from [datical.com](http://www.datical.com/liquibase/)
+Commercial training and support is available from <a href="http://www.datical.com/liquibase/" target="_blank" onClick="_gaq.push(['_trackEvent', 'Liquibase', 'Click', 'Liquibase RFI']);">datical.com</a>

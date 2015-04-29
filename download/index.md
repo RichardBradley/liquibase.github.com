@@ -6,11 +6,11 @@ subnav: subnav_main.md
 
 # Liquibase Downloads #
 
-## Current Liquibase Core Release: 3.3.2 (Jan 8, 2015) ##
+## Current Liquibase Core Release: 3.3.3 (Apr 29, 2015) ##
 
 <ul>
-<li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.3.2-bin.zip/download" onclick="trackOutboundLink(this, 'Download 3.3.2', 'sourceforge.net'); return false;">liquibase-3.3.2-bin.zip</a></li>
-<li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.3.2-bin.tar.gz/download" onclick="trackOutboundLink(this, 'Download 3.3.2', 'sourceforge.net'); return false;">liquibase-3.3.2-bin.tar.gz</a></li>
+<li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.3.3-bin.zip/download" onclick="trackOutboundLink(this, 'Download 3.3.3', 'sourceforge.net'); return false;">liquibase-3.3.3-bin.zip</a></li>
+<li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.3.3-bin.tar.gz/download" onclick="trackOutboundLink(this, 'Download 3.3.3', 'sourceforge.net'); return false;">liquibase-3.3.3-bin.tar.gz</a></li>
 <li style="margin-top:20px"><a href="../v3_3_upgrade.html">3.2 to 3.3 upgrade guide</a></li>
 </ul>
 
@@ -21,6 +21,14 @@ Liquibase supports a powerful plugin/extension framework to add new features or 
 
 ## Previous Releases ##
 
+<ul>
+    <li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.2.3-bin.zip/download" onclick="trackOutboundLink(this, 'Download 3.2.3', 'sourceforge.net'); return false;">liquibase-3.2.3-bin.zip</a></li>
+    <li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.2.3-bin.tar.gz/download" onclick="trackOutboundLink(this, 'Download 3.2.3', 'sourceforge.net'); return false;">liquibase-3.2.3-bin.tar.gz</a></li>
+</ul>
+<ul>
+    <li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.1.1-bin.zip/download" onclick="trackOutboundLink(this, 'Download 3.1.1', 'sourceforge.net'); return false;">liquibase-3.1.1-bin.zip</a></li>
+    <li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.1.1-bin.tar.gz/download" onclick="trackOutboundLink(this, 'Download 3.1.1', 'sourceforge.net'); return false;">liquibase-3.1.1-bin.tar.gz</a></li>
+</ul>
 <ul>
 <li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.0.8-bin.zip/download" onclick="trackOutboundLink(this, 'Download 3.0.8', 'sourceforge.net'); return false;">liquibase-3.0.8-bin.zip</a></li>
 <li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.0.8-bin.tar.gz/download" onclick="trackOutboundLink(this, 'Download 3.0.8', 'sourceforge.net'); return false;">liquibase-3.0.8-bin.tar.gz</a></li>

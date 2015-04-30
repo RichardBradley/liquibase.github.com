@@ -27,6 +27,7 @@ Liquibase is licensed under the Apache 2.0 License
 
 The following companies have provided software and/or services to help support Liquibase:
 
+- **Datical** (Sponsors Liquibase Development [http://datical.com](http://datical.com))
 - **Atlassian** (Provides [http://liquibase.jira.com](http://liquibase.jira.com))
 - **Zoho** (Provides [http://forum.liquibase.org](http://forum.liquibase.org))
 - **YourKit** (Provides [Java Profiler](http://yourkit.com))

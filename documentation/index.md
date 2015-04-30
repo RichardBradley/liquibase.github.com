@@ -65,7 +65,7 @@ Changelog files can be be arbitrarily nested for better management. <a href="dat
 <p>
 Change Sets are uniquely identified by the "author" and "id" attribute along with with the location of the changelog file and are the units Liquibase tracks execution of.
 When Liquibase runs, it queries the DATABASECHANGELOG table for the changesets that are marked as executed and then executes all changesets in the changelog file that have not yet been executed.
- <a href="databasechangelog.html">[more]</a>
+ <a href="changeset.html">[more]</a>
 </p>
 
 <h3>Changes</h3>

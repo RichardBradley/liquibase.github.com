@@ -105,11 +105,9 @@ Once downloaded, create a new VirtualBox machine to be your vagrant base box. In
 attaching the .vhd you downloaded will attach it as a SATA drive which does not boot. Once it is created, go to the Storage settings and add the downloaded
 .vhd in the IDE controller. The trial server Administrator password is Pass@word1
 
-Once booted, follow the steps in [https://github.com/WinRb/vagrant-windows](https://github.com/WinRb/vagrant-windows).
-
 __Before "vagrant package":__
 
-1. Make sure to set the host name to "vagrant" and create a "vagrant" user as administrator
+1. Make sure to set the host name to "vagrant" and create a "vagrant" user as administrator. You will need to run secpol.msc and change the Password Policy under "Account Policies"
 1. Install VirtualBox guest tools
 1. Disable audio and USB (need to change mouse to ps/2 to disable usb)
 1. Activate Windows

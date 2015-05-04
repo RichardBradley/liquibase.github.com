@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Faq
+includeDaticalBox: true
 ---
 
 # FAQ #

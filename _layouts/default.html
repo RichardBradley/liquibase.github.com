@@ -141,16 +141,18 @@
                         </div>
 
                         <!--End mc_embed_signup-->
-				<div id="Datical widget" style="padding-right: 10px; float: left">
-					<form>
-						<fieldset style="color: #747373;">
-							<legend>Datical DB</legend>
-							<strong>Liquibase for the Enterprise</strong><br/>
-							
-							<a href="http://www.datical.com/liquibase/" target="_blank" onClick="_gaq.push(['_trackEvent', 'Liquibase', 'Click', 'Liquibase RFI']);">Learn more >></a>
-						</fieldset>
-					</form>
+
+                {% if page.includeDaticalBox %}
+				<div id="Datical widget" style="padding-right: 10px; float: left; width: 220px">
+                    <fieldset style="color: #747373;">
+                        <legend>Datical DB</legend>
+                        <strong>Liquibase for the Enterprise</strong><br/>
+
+                        <a href="http://www.datical.com/liquibase/" target="_blank" onClick="_gaq.push(['_trackEvent', 'Liquibase', 'Click', 'Liquibase RFI']);">Learn more >></a>
+                    </fieldset>
 				</div>
+                {% endif %}
+
             </div>
             <div class="span-18 last">
                 <div style="margin-left: 20px; padding-bottom: 100px">
@@ -199,6 +201,19 @@
 
           ga('create', 'UA-1719178-1', 'liquibase.org');
           ga('send', 'pageview');
+        </script>
+
+        <script>
+            function trackOutboundLink(link, category, action) {
+
+                try {
+                   ga('send','event', category , action);
+                } catch(err){}
+
+                setTimeout(function() {
+                    document.location.href = link.href;
+                }, 100);
+            }
         </script>
 
         <!-- HitsLink.com tracking script -->

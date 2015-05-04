@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Bestpractices
+includeDaticalBox: true
 ---
 
 # Liquibase Best Practices #

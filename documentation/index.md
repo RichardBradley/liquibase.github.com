@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+includeDaticalBox: true
 ---
 
 <div class="container">

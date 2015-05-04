@@ -2,17 +2,15 @@
 layout: default
 title: Download Liquibase
 subnav: subnav_main.md
+includeDaticalBox: true
 ---
 
 # Liquibase Downloads #
 
 ## Current Liquibase Core Release: 3.3.3 (Apr 29, 2015) ##
-<ul>
-<li style="margin-top:20px"><a href="../v3_3_upgrade.html">3.2 to 3.3 upgrade guide</a></li>
-</ul>
 
 ## Liquibase Versions ##
-<table style="width:100%">
+<table style="width:100%" class="comparison-table">
 <tr>
 <th style="width:50%"></th>
 <th style="width:25%"><center>Liquibase</center></th>
@@ -20,52 +18,62 @@ subnav: subnav_main.md
 </tr>
 <tr>
 <td style="width:50%">Database Source Control/Versioning</td>
-<td style="width:25%"><center>X</center></td>
-<td style="width:25%"><center>X</center></td>
+<td style="width:25%"><center>✓</center></td>
+<td style="width:25%"><center>✓</center></td>
 </tr>
 <tr>
 <td style="width:50%">Database Schema Management</td>
-<td style="width:25%"><center>X</center></td>
-<td style="width:25%"><center>X</center></td>
+<td style="width:25%"><center>✓</center></td>
+<td style="width:25%"><center>✓</center></td>
 </tr>
 <tr>
 <td style="width:50%">Stored Logic Support</td>
 <td style="width:25%"> </td>
-<td style="width:25%"><center>X</center></td>
+<td style="width:25%"><center>✓</center></td>
 </tr>
 <tr>
 <td style="width:50%">Full ALM Workflow Support</td>
 <td style="width:25%"> </td>
-<td style="width:25%"><center>X</center></td>
+<td style="width:25%"><center>✓</center></td>
 </tr>
 <tr>
 <td style="width:50%">Deployment Simulation and Error Reporting</td>
 <td style="width:25%"> </td>
-<td style="width:25%"><center>X</center></td>
+<td style="width:25%"><center>✓</center></td>
 </tr>
 <tr>
 <td style="width:50%">Standards & Compliance Enforcement</td>
 <td style="width:25%"> </td>
-<td style="width:25%"><center>X</center></td>
+<td style="width:25%"><center>✓</center></td>
 </tr>
 <tr>
 <td style="width:50%">Automated Reporting backed by Complete Audit Database</td>
 <td style="width:25%"> </td>
-<td style="width:25%"><center>X</center></td>
+<td style="width:25%"><center>✓</center></td>
 </tr>
 <tr>
 <td style="width:50%">Full Commercial Support & Training</td>
 <td style="width:25%"> </td>
-<td style="width:25%"><center>X</center></td>
+<td style="width:25%"><center>✓</center></td>
 </tr>
 </table>
 <table>
 <tr>
-<td style="width:50%"></td>
-<td style="width:25%"><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.3.3-bin.zip/download" onclick="trackOutboundLink(this, 'Download 3.3.3', 'sourceforge.net'); return false;">liquibase-3.3.3-bin.zip</a><br/><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.3.3-bin.tar.gz/download" onclick="trackOutboundLink(this, 'Download 3.3.3', 'sourceforge.net'); return false;">liquibase-3.3.3-bin.tar.gz</a></td>
-<td style="width:25%"><center><a href="http://www.datical.com/liquibase" target="_blank" onClick="_gaq.push(['_trackEvent', 'Liquibase', 'Click', 'Liquibase RFI']);">Learn more about<br/>Datical DB >></a></center></td>
+<td style="width:75%; text-align: right; padding-right: 30px" colspan="2">
+    <a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.3.3-bin.zip/download" style="font-weight: bold; font-size: larger" onclick="trackOutboundLink(this, 'Download 3.3.3', 'sourceforge.net'); return false;">Download liquibase-3.3.3-bin.zip</a><br>
+    <a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.3.3-bin.tar.gz/download" style="font-weight: bold; font-size: larger" onclick="trackOutboundLink(this, 'Download 3.3.3', 'sourceforge.net'); return false;">Download liquibase-3.3.3-bin.tar.gz</a></td>
+<td style="width:25%"><center><a href="http://www.datical.com/liquibase" target="_blank" style="font-weight: bold; font-size: larger" onClick="_gaq.push(['_trackEvent', 'Liquibase', 'Click', 'Liquibase RFI']);">Learn more about<br/>Datical DB >></a></center></td>
 </tr>
 </table>
+
+## Upgrade Guides ##
+
+<ul>
+    <li><a href="../v3_3_upgrade.html">3.2 to 3.3 upgrade guide</a></li>
+    <li><a href="../v3_2_upgrade.html">3.1 to 3.2 upgrade guide</a></li>
+    <li><a href="../v3_1_upgrade.html">3.0 to 3.1 upgrade guide</a></li>
+    <li><a href="../v3_upgrade.html">2.x to 3.0 upgrade guide</a></li>
+</ul>
 
 ## Extensions ##
 

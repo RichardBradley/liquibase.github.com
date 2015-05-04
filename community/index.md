@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Community
+includeDaticalBox: true
 ---
 
 # User and Developer Community #

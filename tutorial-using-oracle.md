@@ -1,7 +1,9 @@
 ---
 layout: default
 title: Tutorial Using Liquibase
+includeDaticalBox: true
 ---
+
 <div>
 <p>
 This is a Liquibase tutorial that shows you how to manage your database objects using the Oracle database and some Oracle tools. It also shows how branching and merging is performed using Subversion. The tutorial incorporates several best practices. This makes it realistic for the needs of a software development shop. Of course your needs may be simpler. You may not need branching, you may not ever need to deliver a fresh install. In that case, you can just use the best practices and conventions that apply to your situation.

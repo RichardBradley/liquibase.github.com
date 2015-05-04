@@ -104,6 +104,6 @@ Datical DB is a commercial product which provides the core Liquibase functionali
 * Compare Databases enables you to compare two database schemas to identify change and easily move it to your Change Log.
 * Change Forecasting: Forecast upcoming changes to be executed before they are ran to determine how those changes will impact your data.
 
-For more information on Datical DB, visit <a href="http://www.datical.com/liquibase/" target="_blank" onClick="_gaq.push(['_trackEvent', 'Liquibase', 'Click', 'Liquibase RFI']);">http://www.datical.com/Liquibase</a>
+For more information on Datical DB, visit <a href="http://www.datical.com/liquibase/" target="_blank" onClick="trackOutboundLink(this, 'Datical', 'Liquibase RFI'); return false">http://www.datical.com/Liquibase</a>
 
 

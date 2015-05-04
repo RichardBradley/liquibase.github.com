@@ -14,9 +14,9 @@ subnav: subnav_main.md
 ## Liquibase Versions ##
 <table style="width:100%">
 <tr>
-<th style="width:50%"></th>
-<th style="width:25%"><center>Liquibase</center></th>
-<th style="width:25%"><center>Datical DB</center></th>
+<td style="width:50%"></td>
+<td style="width:25%"><center><font size="5">Liquibase</font></center></td>
+<td style="width:25%"><center><font size="5">Datical DB</font></center></td>
 </tr>
 <tr>
 <td style="width:50%">Database Source Control/Versioning</td>

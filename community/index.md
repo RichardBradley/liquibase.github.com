@@ -25,6 +25,8 @@ Liquibase release announcements as well as general project news and articles are
 
 To subscribe to the mailing list, use the "Announcements" form to your left.
 
+<a href="https://twitter.com/liquibase" class="twitter-follow-button" data-show-count="false">@liquibase</a>
+
 **Looking for the Liquibase Source Code?**
 
 The Liquibase source is hosted at [https://github.com/liquibase/liquibase](https://github.com/liquibase/liquibase). Code submissions should go through the standard GitHub pull request system.
@@ -40,7 +42,6 @@ For more information, see the [developer documentation](../development/index.htm
 
 You can always contact Nathan Voxland, Liquibase Benevolent Dictator for Life at <a href="mailto:nathan.voxland@liquibase.org">nathan.voxland@liquibase.org</a>
 or <a href="https://twitter.com/nvoxland" class="twitter-follow-button" data-show-count="false">@nvoxland</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 **Looking To Pay For Support?**
 

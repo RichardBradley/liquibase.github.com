@@ -7,7 +7,7 @@ includeDaticalBox: true
 
 # Liquibase Downloads #
 
-## Current Liquibase Core Release: 3.3.3 (Apr 29, 2015) ##
+## Current Liquibase Core Release: 3.3.4 (May 27, 2015) ##
 
 <table style="width:100%" class="comparison-table">
 <tr>
@@ -59,8 +59,8 @@ includeDaticalBox: true
 <table>
 <tr>
 <td style="width:75%; text-align: right; padding-right: 30px" colspan="2">
-    <a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.3.3-bin.zip/download" style="font-weight: bold; font-size: larger" onclick="trackOutboundLink(this, 'Download 3.3.3', 'sourceforge.net'); return false;">Download liquibase-3.3.3-bin.zip</a><br>
-    <a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.3.3-bin.tar.gz/download" style="font-weight: bold; font-size: larger" onclick="trackOutboundLink(this, 'Download 3.3.3', 'sourceforge.net'); return false;">Download liquibase-3.3.3-bin.tar.gz</a></td>
+    <a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.3.4-bin.zip/download" style="font-weight: bold; font-size: larger" onclick="trackOutboundLink(this, 'Download 3.3.4', 'sourceforge.net'); return false;">Download liquibase-3.3.4-bin.zip</a><br>
+    <a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.3.4-bin.tar.gz/download" style="font-weight: bold; font-size: larger" onclick="trackOutboundLink(this, 'Download 3.3.4', 'sourceforge.net'); return false;">Download liquibase-3.3.4-bin.tar.gz</a></td>
 <td style="width:25%"><center><a href="http://www.datical.com/liquibase" target="_blank" style="font-weight: bold; font-size: larger" onClick="trackOutboundLink(this, 'Datical', 'Liquibase RFI'); return false;">Learn more about<br/>Datical DB >></a></center></td>
 </tr>
 </table>

@@ -32,3 +32,9 @@ The following companies have provided software and/or services to help support L
 - **Atlassian** (Provides [http://liquibase.jira.com](http://liquibase.jira.com))
 - **Zoho** (Provides [http://forum.liquibase.org](http://forum.liquibase.org))
 - **YourKit** (Provides [Java Profiler](http://yourkit.com))
+
+
+## Open Source Projects Using Liquibase ##
+- [Portofino by ManyDesigns](http://portofino.manydesigns.com)
+- [JHipster](https://jhipster.github.io/)
+- Know one to add? [Let us know](/community)

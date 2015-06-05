@@ -25,6 +25,7 @@ includeDaticalBox: true
 <li><a href="changelog_parameters.html">Changelog Parameters</a></li>
 <li><a href="generating_changelogs.html">Generating Changelogs</a></li>
 <li><a href="existing_project.html">Introducing Liquibase into an existing project</a></li>
+<li><a href="trimming_changelogs.html">Trimming changelog files</a></li>
 </ul>
 
 <h2>Liquibase Commands</h2>

@@ -47,9 +47,10 @@ includeDaticalBox: true
 <li><a href="cdi.html">CDI Environment</a></li>
 </ul>
 
-<h2>Developing Extensions</h2>
+<h2>Internals</h2>
 <ul>
-<li><a href="sdk/index.html">Liquibase SDK</a></li>
+    <li><a href="databasechangelog_table.html">DATABASECHANGELOG table</a></li>
+    <li><a href="databasechangeloglock_table.html">DATABASECHANGELOGLOCK table</a></li>
 </ul>
 </div>
 

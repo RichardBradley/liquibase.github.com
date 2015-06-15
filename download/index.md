@@ -59,8 +59,8 @@ includeDaticalBox: true
 <table>
 <tr>
 <td style="width:75%; text-align: right; padding-right: 30px" colspan="2">
-    <a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.3.5-bin.zip/download" style="font-weight: bold; font-size: larger" onclick="trackOutboundLink(this, 'Download 3.3.5', 'sourceforge.net'); return false;">Download liquibase-3.3.5-bin.zip</a><br>
-    <a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.3.5-bin.tar.gz/download" style="font-weight: bold; font-size: larger" onclick="trackOutboundLink(this, 'Download 3.3.5', 'sourceforge.net'); return false;">Download liquibase-3.3.5-bin.tar.gz</a></td>
+    <a href="https://github.com/liquibase/liquibase/releases/download/liquibase-parent-3.3.5/liquibase-3.3.5-bin.zip" style="font-weight: bold; font-size: larger" onclick="trackOutboundLink(this, 'Download 3.3.5', 'github.com'); return false;">Download liquibase-3.3.5-bin.zip</a><br>
+    <a href="https://github.com/liquibase/liquibase/releases/download/liquibase-parent-3.3.5/liquibase-3.3.5-bin.tar.gz" style="font-weight: bold; font-size: larger" onclick="trackOutboundLink(this, 'Download 3.3.5', 'github.com'); return false;">Download liquibase-3.3.5-bin.tar.gz</a></td>
 <td style="width:25%"><center><a href="http://www.datical.com/liquibase" target="_blank" style="font-weight: bold; font-size: larger" onClick="trackOutboundLink(this, 'Datical', 'Liquibase RFI'); return false;">Learn more about<br/>Datical DB >></a></center></td>
 </tr>
 </table>
@@ -81,23 +81,23 @@ Liquibase supports a powerful plugin/extension framework to add new features or 
 ## Previous Releases ##
 
 <ul>
-    <li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.2.3-bin.zip/download" onclick="trackOutboundLink(this, 'Download 3.2.3', 'sourceforge.net'); return false;">liquibase-3.2.3-bin.zip</a></li>
-    <li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.2.3-bin.tar.gz/download" onclick="trackOutboundLink(this, 'Download 3.2.3', 'sourceforge.net'); return false;">liquibase-3.2.3-bin.tar.gz</a></li>
+    <li><a href="https://github.com/liquibase/liquibase/releases/download/liquibase-parent-3.2.3/liquibase-3.2.3-bin.zip" onclick="trackOutboundLink(this, 'Download 3.2.3', 'github.com'); return false;">liquibase-3.2.3-bin.zip</a></li>
+    <li><a href="https://github.com/liquibase/liquibase/releases/download/liquibase-parent-3.2.3/liquibase-3.2.3-bin.tar.gz" onclick="trackOutboundLink(this, 'Download 3.2.3', 'github.com'); return false;">liquibase-3.2.3-bin.tar.gz</a></li>
 </ul>
 <ul>
-    <li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.1.1-bin.zip/download" onclick="trackOutboundLink(this, 'Download 3.1.1', 'sourceforge.net'); return false;">liquibase-3.1.1-bin.zip</a></li>
-    <li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.1.1-bin.tar.gz/download" onclick="trackOutboundLink(this, 'Download 3.1.1', 'sourceforge.net'); return false;">liquibase-3.1.1-bin.tar.gz</a></li>
+    <li><a href="https://github.com/liquibase/liquibase/releases/download/liquibase-parent-3.1.1/liquibase-3.1.1-bin.zip" onclick="trackOutboundLink(this, 'Download 3.1.1', 'github.com'); return false;">liquibase-3.1.1-bin.zip</a></li>
+    <li><a href="https://github.com/liquibase/liquibase/releases/download/liquibase-parent-3.1.1/liquibase-3.1.1-bin.tar.gz" onclick="trackOutboundLink(this, 'Download 3.1.1', 'github.com'); return false;">liquibase-3.1.1-bin.tar.gz</a></li>
 </ul>
 <ul>
-<li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.0.8-bin.zip/download" onclick="trackOutboundLink(this, 'Download 3.0.8', 'sourceforge.net'); return false;">liquibase-3.0.8-bin.zip</a></li>
-<li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.0.8-bin.tar.gz/download" onclick="trackOutboundLink(this, 'Download 3.0.8', 'sourceforge.net'); return false;">liquibase-3.0.8-bin.tar.gz</a></li>
+<li><a href="https://github.com/liquibase/liquibase/releases/download/liquibase-parent-3.0.8/liquibase-3.0.8-bin.zip" onclick="trackOutboundLink(this, 'Download 3.0.8', 'github.com'); return false;">liquibase-3.0.8-bin.zip</a></li>
+<li><a href="https://github.com/liquibase/liquibase/releases/download/liquibase-parent-3.0.8/liquibase-3.0.8-bin.tar.gz" onclick="trackOutboundLink(this, 'Download 3.0.8', 'github.com'); return false;">liquibase-3.0.8-bin.tar.gz</a></li>
 </ul>
 <ul>
-<li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-2.0.5-bin.zip/download" onclick="trackOutboundLink(this, 'Download 2.0.5', 'sourceforge.net'); return false;">liquibase-2.0.5-bin.zip</a></li>
-<li><a href="http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-2.0.5-bin.tar.gz/download" onclick="trackOutboundLink(this, 'Download 2.0.5', 'sourceforge.net'); return false;">liquibase-2.0.5-bin.tar.gz</a></li>
+<li><a href="https://github.com/liquibase/liquibase/releases/download/liquibase-parent-2.0.5/liquibase-2.0.5-bin.zip" onclick="trackOutboundLink(this, 'Download 2.0.5', 'github.com'); return false;">liquibase-2.0.5-bin.zip</a></li>
+<li><a href="https://github.com/liquibase/liquibase/releases/download/liquibase-parent-2.0.5/liquibase-2.0.5-bin.tar.gz" onclick="trackOutboundLink(this, 'Download 2.0.5', 'github.com'); return false;">liquibase-2.0.5-bin.tar.gz</a></li>
 </ul>
 <ul>
-<li><a href="https://sourceforge.net/projects/liquibase/files/Liquibase%20Core/">All previous versions</a></li>
+<li><a href="https://github.com/liquibase/liquibase/releases">All previous versions</a></li>
 </ul>
 
 ## Snapshot Builds ##

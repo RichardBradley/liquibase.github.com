@@ -97,7 +97,7 @@ Liquibase supports a powerful plugin/extension framework to add new features or 
 <li><a href="https://github.com/liquibase/liquibase/releases/download/liquibase-parent-2.0.5/liquibase-2.0.5-bin.tar.gz" onclick="trackOutboundLink(this, 'Download 2.0.5', 'github.com'); return false;">liquibase-2.0.5-bin.tar.gz</a></li>
 </ul>
 <ul>
-<li><a href="https://github.com/liquibase/liquibase/releases">All previous versions</a></li>
+<li><a href="https://github.com/liquibase/liquibase/releases" onclick="trackOutboundLink(this, 'View All Versions', 'github.com'); return false;">All previous versions</a></li>
 </ul>
 
 ## Snapshot Builds ##

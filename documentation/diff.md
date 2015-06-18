@@ -5,7 +5,7 @@ title: Diff
 
 # Database "Diff" #
 
-While the best way to track database changes is by adding change sets during development (see [the problem with database diffs](http://blog.liquibase.org/2007/06/the-problem-with-database-diffs.html)), there are times when being able to perform database diffs is valuable, particularly near the end of a project as a double-check that all required changes are included in the change log.
+While the best way to track database changes is by adding change sets during development (see [the problem with database diffs](http://www.liquibase.org/2007/06/the-problem-with-database-diffs.html)), there are times when being able to perform database diffs is valuable, particularly near the end of a project as a double-check that all required changes are included in the change log.
 
 ## Running Diff ##
 

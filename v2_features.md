@@ -32,7 +32,7 @@ Nearly every aspect of Liquibase can be modified including
 For more information on extending Liquibase for your own use, or to create a publicly available extension, visit our [extension portal](http://liquibase.org/extensions)
 
 # New Features #
-* [Liquibase formatted SQL changelogs](http://blog.liquibase.org/2010/05/liquibase-formatted-sql.html)
+* [Liquibase formatted SQL changelogs](http://www.liquibase.org/2010/05/liquibase-formatted-sql.html)
 * Informix support
 * Ability to specify databases and contexts in which to specify changelog parameters
 * Ability to specify contexts on modifySql

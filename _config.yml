@@ -1,3 +1,7 @@
 safe: true
 lsi: false
 markdown: kramdown
+permalink: /:year/:month/:title.html
+
+paginate: 10
+paginate_path: "/blog/page_:num/"

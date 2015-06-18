@@ -21,7 +21,7 @@ All Liquibase-managed extensions can be found in the [Liquibase GitHub group](ht
 
 **Looking for Liquibase News?**
 
-Liquibase release announcements as well as general project news and articles are cross posted to the Liquibase blog at [http://blog.liquibase.org](http://blog.liquibase.org) and the mailing list.
+Liquibase release announcements as well as general project news and articles are cross posted to the Liquibase blog at [http://www.liquibase.org/blog](http://www.liquibase.org/blog) and the mailing list.
 
 To subscribe to the mailing list, use the "Announcements" form to your left.
 

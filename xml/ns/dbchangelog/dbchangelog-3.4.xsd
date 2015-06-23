@@ -1175,8 +1175,7 @@
             <xsd:element ref="dropNotNullConstraint" maxOccurs="unbounded"/>
             <xsd:element ref="addForeignKeyConstraint" maxOccurs="unbounded"/>
             <xsd:element ref="dropForeignKeyConstraint" maxOccurs="unbounded"/>
-            <xsd:element ref="dropAllForeignKeyConstraints"
-                         maxOccurs="unbounded"/>
+            <xsd:element ref="dropAllForeignKeyConstraints" maxOccurs="unbounded"/>
             <xsd:element ref="addPrimaryKey" maxOccurs="unbounded"/>
             <xsd:element ref="dropPrimaryKey" maxOccurs="unbounded"/>
             <xsd:element ref="addLookupTable" maxOccurs="unbounded"/>
@@ -1197,8 +1196,7 @@
             <xsd:element ref="output" maxOccurs="unbounded"/>
             <xsd:element ref="empty" maxOccurs="unbounded"/>
             <xsd:element ref="rollback" maxOccurs="1"/>
-            <xsd:any namespace="##other" processContents="lax" minOccurs="0"
-                     maxOccurs="unbounded"/>
+            <xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
         </xsd:choice>
     </xsd:group>
 

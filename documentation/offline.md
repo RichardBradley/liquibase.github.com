@@ -26,7 +26,7 @@ _Since 3.1.0_
 
 If your environment does not lend itself to using updateSql with test and backup databases, you can run Liquibase using an "offline" database.
 
-Running in offline mode only supports "updateSql". It does not support direct update, diff, or preconditions as there is nothing to actually update or state to check.
+Running in offline mode only supports "updateSql", "rollbackSQL", "tag", and "tagExists". It does not support direct update, diff, or preconditions as there is nothing to actually update or state to check.
 
 An offline database is "connected" to using a url syntax of `offline:DATABASE_TYPE?param1=value1&aparam2=value2`.
 
@@ -42,5 +42,5 @@ An offline database is "connected" to using a url syntax of `offline:DATABASE_TY
 ### Examples:
 
 - `offline:oracle`
-- `offine:mssql?changeLogFile=/src/changelog.csv`
+- `offline:mssql?changeLogFile=/src/changelog.csv`
 - `offline:mysql?version=5.4.21&changeLogFile=/src/changelog.csv`

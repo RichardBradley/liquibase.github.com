@@ -4,7 +4,7 @@ subnav: subnav_blog.md
 title: Executing Liquibase - 3 Use Cases
 ---
 
-Once you've created a [database changelog file](/documentation/databasechangelog.html), what is the best way to run it? As always, it depends on what works best for you. There are three main ways to run Liquibase: “automatically on startup”, “manually as needed”, or “Just give me the SQL and I'll do it myself”. All three work with any changelog file, so use the method (or combination of methods) which works best for your project.
+Once you've created a [database changelog file](/documentation/databasechangelog.html), what is the best way to run it? As always, it depends on what works best for you. There are three main ways to run Liquibase: "automatically on startup", "manually as needed", or "Just give me the SQL and I'll do it myself". All three work with any changelog file, so use the method (or combination of methods) which works best for your project.
 
 ### Automatic Deployment
 
@@ -40,7 +40,7 @@ You may also prefer to run Liquibase directly with more complex release processe
 
 ### Executing SQL
 
-Manual updates with Liquibase allow you to control WHEN the database is updated, but WHAT is actually executed is still managed completely by Liquibase. For those who need to know exactly what is being done to their database, Liquibase supports an “updateSQL” mode in the command line, Ant, and Maven interfaces. When running updateSQL, Liquibase will simply output the SQL it would normally have ran. The output includes both the SQL to update your database and also the SQL to keep the DATABASECHANGELOG table up to date. Inspect the output as you need then execute it through whatever database tools you prefer. After running the SQL, your database will be in the correct state, and Liquibase will know what was ran and so future updateSQL calls will include only new changeSets.
+Manual updates with Liquibase allow you to control WHEN the database is updated, but WHAT is actually executed is still managed completely by Liquibase. For those who need to know exactly what is being done to their database, Liquibase supports an "updateSQL" mode in the command line, Ant, and Maven interfaces. When running updateSQL, Liquibase will simply output the SQL it would normally have ran. The output includes both the SQL to update your database and also the SQL to keep the DATABASECHANGELOG table up to date. Inspect the output as you need then execute it through whatever database tools you prefer. After running the SQL, your database will be in the correct state, and Liquibase will know what was ran and so future updateSQL calls will include only new changeSets.
 
 ### Mix and Match
 

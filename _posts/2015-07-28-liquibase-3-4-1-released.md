@@ -6,7 +6,7 @@ title: Liquibase 3.4.1 Released
 
 Bugfix release Liquibase 3.4.1 is now available from [liquibase.org/download](/download) and through the Maven repositories.
 
-Fixes include;
+### Fixes include:
 
 - improvements to includeAll logic
 - better handling of older-version DATABASECHANGELOG table structures with updateSQL and status

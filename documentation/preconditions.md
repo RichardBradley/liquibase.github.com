@@ -53,7 +53,7 @@ Liquibase distinguishes between precondition "failures" (check failed) and "erro
 <tr><th>Attribute</th><th>Description</th></tr>
 <tr><td>onFail</td><td>What to do when preconditions fail (see below).</td></tr>
 <tr><td>onError</td><td>What to do when preconditions error (see below).</td></tr>
-<tr><td>onUpdateSQL</td><td>What to do in updateSQL mode (see below). <b>Since 1.9.5</b> </td></tr>
+<tr><td>onSqlOutput</td><td>What to do in updateSQL mode (see below). <b>Since 1.9.5</b> </td></tr>
 <tr><td>onFailMessage</td><td>Custom message to output when preconditions fail. <b>Since 2.0</b> </td></tr>
 <tr><td>onErrorMessage</td><td>Custom message to output when preconditions fail. <b>Since 2.0</b>  </td></tr>
 </table>
@@ -70,13 +70,13 @@ Liquibase distinguishes between precondition "failures" (check failed) and "erro
 
 Outside a changeset (e.g. at the beginning of the change log), only HALT and WARN are possible values.
 
-#### Possible onUpdateSQL values ####
+#### Possible onSqlOutput values ####
 
 <table>
 <tr><th>Value</th><th>Description</th></tr>
-<tr><td>RUN</td><td>Run the changeSet in updateSQL mode.</td></tr>
+<tr><td>TEST</td><td>Run the changeSet in updateSQL mode.</td></tr>
 <tr><td>FAIL</td><td>Fail the preCondition in updateSQL mode.</td></tr>
-<tr><td>IGNORE</td><td>Ignore the preCondition in updateSQL mode.</td></tr>
+<tr><td>IGNORE</td><td>Ignore the preCondition in updateSQL mode (default).</td></tr>
 </table>
 
 ## AND/OR/NOT Logic ##

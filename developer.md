@@ -53,7 +53,7 @@ Beyond all the standard Liquibase functionality, Datical lets you
 * [Automatically generate SQL scripts] or import your own
 * Automate database change validation
 * [Automate SQL reviews](http://datical.com) against business rules
-* Simululate deployments to [forecast potential errors](http://datical.com)
+* Simulate deployments to [forecast potential errors](http://datical.com)
 
 ---
 

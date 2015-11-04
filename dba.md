@@ -40,7 +40,7 @@ Thanks to Liquibase's [cross-database support](/databases.html, you can even use
 Beyond all the standard Liquibase functionality, Datical lets you
 
 * [Automate SQL reviews](http://datical.com) against business rules
-* Simululate deployments to [forecast potential errors](http://datical.com)
+* Simulate deployments to [forecast potential errors](http://datical.com)
 * [Know the development status](http://datical.com) of every schema in the database
 
 ---

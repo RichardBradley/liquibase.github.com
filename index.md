@@ -33,24 +33,38 @@ includeDaticalBox: true
 
 </div>
 
-<div class="span-8 last">
-<div class='highlight'>
-<h2>Get Started</h2>
-<ol>
-<li><a href="download/index.html">Download Liquibase</a></li>
-<li>Create new changelog file in <a href="documentation/xml_format.html">XML</a>, <a href="documentation/yaml_format.html">YAML</a>, <a href="documentation/json_format.html">JSON</a> or <a href="documentation/sql_format.html">SQL</a>format</li>
-<li>Add <a href="documentation/changeset.html">changeset</a> to <a href="documentation/databasechangelog.html">changelog</a> file</li>
-<li>Run <a href="documentation/command_line.html">liquibase update</a></li>
-<li>Commit changelog file to source control</li>
-<li>GOTO 3</li>
-</ol>
-<a href="quickstart.html">Quick Start Guide</a> | <a href="documentation/index.html">Full Documentation</a>
-</div>
-</div>
+    <div class="span-8 last">
+        <div class='highlight' style="border-bottom: none; margin-bottom: 0; border-bottom-right-radius:0; border-bottom-left-radius:0">
+            <h2>Get Started</h2>
+            <ol>
+                <li><a href="download/index.html">Download Liquibase</a></li>
+                <li>Create new changelog file in <a href="documentation/xml_format.html">XML</a>, <a href="documentation/yaml_format.html">YAML</a>,
+                    <a href="documentation/json_format.html">JSON</a> or <a href="documentation/sql_format.html">SQL</a>format
+                </li>
+                <li>Add <a href="documentation/changeset.html">changeset</a> to <a href="documentation/databasechangelog.html">changelog</a> file</li>
+                <li>Run <a href="documentation/command_line.html">liquibase update</a></li>
+                <li>Commit changelog file to source control</li>
+                <li>GOTO 3</li>
+            </ol>
+            <div style="margin-bottom: 15px">
+                <a href="quickstart.html" style="font-weight: bolder;">Quick Start Guide</a> | <a href="documentation/index.html" style="font-weight: bolder;">Full Documentation</a>
+            </div>
+        </div>
+        <div class="highlight" style="border-top-right-radius:0; border-top-left-radius:0; margin-top: 0; background: #e6e6e6">
+            <h2 style="margin-bottom: 10px">Read More</h2>
+            <div style="margin-bottom:5px">
+            <a href="/dba.html" style="font-weight: bolder;">DBA</a> |
+            <a href="/qa.html" style="font-weight: bolder;">QA</a> |
+            <a href="/developer.html" style="font-weight: bolder;">Developer</a> |
+            <a href="/release_manager.html" style="font-weight: bolder;">Release Manager</a>
+            </div>
+        </div>
+    </div>
 
-<div class="span-17 last">
+    <div class="span-17 last">
 
-<h1>Refactor Your Database</h1>
+
+    <h1>Refactor Your Database</h1>
 <ul>
     <li>Simple commands like <a href="documentation/changes/create_table.html">Create Table</a> and <a href="documentation/changes/drop_column.html">Drop Column</a></li>
     <li>Complex commands like <a href="documentation/changes/add_lookup_table.html">Add Lookup Table</a> and <a href="documentation/changes/merge_columns.html">Merge Columns</a></li>

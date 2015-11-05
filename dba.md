@@ -39,9 +39,11 @@ Thanks to Liquibase's [cross-database support](/databases.html, you can even use
 
 Beyond all the standard Liquibase functionality, Datical lets you
 
-* [Automate SQL reviews](http://datical.com) against business rules
-* Simulate deployments to [forecast potential errors](http://datical.com)
-* [Know the development status](http://datical.com) of every schema in the database
+* [Package database schema changes](http://www.datical.com/product/packaging-intelligence/) alongside application code
+* Simulate deployments to [forecast potential errors](http://www.datical.com/product/validation-intelligence/)
+* [Know the deployment status](http://www.datical.com/product/management-intelligence/) of every schema in the database
+* Integrate with popular [DevOps tools](http://www.datical.com/integrations/)
+
 
 ---
 

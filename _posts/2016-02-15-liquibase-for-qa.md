@@ -1,11 +1,8 @@
 ---
 layout: default
-title: Liquibase for QA
-redirect_from:
-  - /qa
+subnav: subnav_blog.md
+title: Liquibase for QA Test Teams
 ---
-
-# Liquibase for QA #
 
 As a QA team member, you always make sure you are testing the current version of an application. However, it is just as important that the testing schema is correct and that there are no unexpected changes that the developers have applied to their environment that you do not know about.
 
@@ -43,6 +40,4 @@ If your QA team finds their requirements extend beyond all these great capabilit
 
 More information on Datical DB can be [found here](http://www.datical.com/product-information/).
 
----
 
-Liquibase for [DBAs](/dba.html) \| [Developers](/developer.html) \| [Release Managers](/release_manager.html)

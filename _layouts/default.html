@@ -4,20 +4,6 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 
-{% assign dirSize = {{page.url | split:'/' | size}} %}
-{% if dirSize == 2 %}
-    {% assign pageRoot = "." %}
-{% else %}
-    {% assign dirs = {{page.url | split:'/' }} %}
-    {% for dir in dirs offset:2%}
-        {% if forloop.last %}
-            {% capture pageRoot %}{{pageRoot}}..{%endcapture %}
-        {% else %}
-            {% capture pageRoot %}{{pageRoot}}../{%endcapture %}
-        {% endif %}
-    {% endfor %}
-{% endif %}
-
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -27,25 +13,25 @@
 
         <link rel="alternate" type="application/rss+xml" title="Liquibase RSS Feed" href="http://www.liquibase.org/rss.xml" />
 
-        <link rel="stylesheet" href="{{pageRoot}}/css/vendor/jquery-ui/jquery-ui.min.css">
-        <link rel="stylesheet" href="{{pageRoot}}/css/normalize.css">
-        <link rel="stylesheet" href="{{pageRoot}}/css/main.css">
+        <link rel="stylesheet" href="/css/vendor/jquery-ui/jquery-ui.min.css">
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/main.css">
 
-        <link rel="stylesheet" href="{{pageRoot}}/css/blueprint/screen.css" type="text/css" media="screen, projection">
-        <link rel="stylesheet" href="{{pageRoot}}/css/blueprint/print.css" type="text/css" media="print">
+        <link rel="stylesheet" href="/css/blueprint/screen.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="/css/blueprint/print.css" type="text/css" media="print">
         <!--[if lt IE 8]>
-        <link rel="stylesheet" href="{{pageRoot}}/css/blueprint/ie.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="/css/blueprint/ie.css" type="text/css" media="screen, projection">
         <![endif]-->
 
-        <link rel="stylesheet" href="{{pageRoot}}/css/liquibase.css">
-        <link rel="stylesheet" href="{{pageRoot}}/css/syntax.css">
+        <link rel="stylesheet" href="/css/liquibase.css">
+        <link rel="stylesheet" href="/css/syntax.css">
 
-        <!--<script src="{{pageRoot}}/js/vendor/modernizr-2.6.2.min.js"></script>-->
+        <!--<script src="/js/vendor/modernizr-2.6.2.min.js"></script>-->
 
-        <script src="{{pageRoot}}/js/vendor/jquery-1.9.1.min.js"></script>
-        <script src="{{pageRoot}}/js/vendor/jquery-ui.min.js"></script>
-        <script src="{{pageRoot}}/js/plugins.js"></script>
-        <script src="{{pageRoot}}/js/main.js"></script>
+        <script src="/js/vendor/jquery-1.9.1.min.js"></script>
+        <script src="/js/vendor/jquery-ui.min.js"></script>
+        <script src="/js/plugins.js"></script>
+        <script src="/js/main.js"></script>
 
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     </head>
@@ -198,6 +184,11 @@
         <div style="width: 100%; text-align: right; padding-bottom: 20px">
             <hr>
             <span style="margin-right: 20px; font-weight: bold">Missing, incomplete or wrong information? <a href="https://github.com/liquibase/liquibase.github.com">Please send a pull request</a></span>
+
+            Page url: {{page.url}}<br>
+            Dirsize: {{dirSize}}<br>
+            dirs: {{dirs}}<br>
+            pageroot: {{pageRoot}}<br>
         </div>
 
         <script>

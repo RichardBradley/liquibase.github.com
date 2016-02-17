@@ -87,13 +87,15 @@
                     {% if page.subnav %}
                         {% assign navPage = page.subnav %}
                     {% else %}
+                        {% assign dirs = {{page.path  | split:'/' }} %}
                         {% assign navPage = "subnav" %}
-                        {% for dir in dirs offset:1%}
-                            {% if forloop.last %}
+                        {% for dir in dirs%}
+                            {% if dir == "" or forloop.last %}
                             {% else %}
                                 {% capture navPage %}{{navPage}}_{{dir}}{%endcapture %}
                             {% endif %}
                         {% endfor %}
+
                         {% capture navPage %}{{navPage}}.md{%endcapture %}
                         {% if navPage == "subnav.md" %}
                             {% assign navPage = "subnav_main.md" %}

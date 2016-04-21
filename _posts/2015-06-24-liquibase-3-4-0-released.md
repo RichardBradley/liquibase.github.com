@@ -63,13 +63,6 @@ The larger your databases are, the more of an improvement you should see.
 
 Are you wondering if you have already used a given tag? Use `liquibase tagExists tagName` to find out.
 
-### Improved SQL parsing
-
-Parsing SQL with regular expressions is almost as bad of an idea as parsing [HTML with regex](http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454) but it is easier and what we always did.
-It usually worked, but would fall apart with things like semicolons or hyphens in strings and splitStatement and stripComments logic wouldn't work as expected.
-
-We've now switched over to a simple grammer which should make the SQL parsing much more resilient.
-
 ### Full Release Notes
 
 Thanks to everyone who helped with [all these issues](https://liquibase.jira.com/jira/secure/ReleaseNote.jspa?projectId=10020&version=11960)

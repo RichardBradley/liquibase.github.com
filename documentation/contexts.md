@@ -60,3 +60,15 @@ Using contexts to control test data is better than having a separate changeLog t
 ## Using Contexts for Multi-DBMS Change Logs ##
 
 You can use contexts to control which change sets run on which databases, but the better option is to use the built-in "dbms" tag on the changeSet tag.
+
+
+## Default context ##
+
+Beginning with Liquibase 3.5, you can specify a context attribute in the root databaseChangeLog node to assign that context to all changeSets in the changelog by default.
+
+The specified context will be AND'ed with any contexts specified in changeSets within the changelog file.
+
+## Include/IncludeAll context ##
+
+Beginning with Liquibase 3.5, you can specify a context attribute in <include> or <includeAll> tags. If specified, the given context is added to all changeSets in the included file(s).
+

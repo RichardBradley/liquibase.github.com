@@ -14,6 +14,10 @@ We have fixed up various bugs with how Liquibase handles snapshotting and compar
 
 Beyond just bugfixes, you can also now specify mappings between source and target database schemas by using a new --referenceSchemas flag. I'll write more about this feature in a future blog post.
 
+### OSGi support in liquibase-core
+
+You no longer need to use the liquibase-osgi jar when running in an OSGi container. The standard liquibase.jar / liquibase-core module is all you need.
+
 ### New "context" attribute on include and includeAll to control when changelogs are included
 
 If you specify the "context" attribute on include or includeAll, the referenced changelog files will only be executed if you are running under a matching context.

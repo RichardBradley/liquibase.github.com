@@ -7,7 +7,7 @@ includeDaticalBox: true
 
 # Liquibase Downloads #
 
-## Current Liquibase Core Release: 3.5.0 (Apr 21, 2015) ##
+## Current Liquibase Core Release: 3.5.0 (Apr 21, 2016) ##
 
 <table style="width:100%" class="comparison-table">
 <tr>

@@ -7,7 +7,7 @@ includeDaticalBox: true
 
 # Liquibase Downloads #
 
-## Current Liquibase Core Release: 3.5.0 (Apr 21, 2016) ##
+## Current Liquibase Core Release: 3.5.1 (May 11, 2016) ##
 
 <table style="width:100%" class="comparison-table">
 <tr>
@@ -59,8 +59,8 @@ includeDaticalBox: true
 <table>
 <tr>
 <td style="width:75%; text-align: right; padding-right: 30px" colspan="2">
-    <a href="https://github.com/liquibase/liquibase/releases/download/liquibase-parent-3.5.0/liquibase-3.5.0-bin.zip" style="font-weight: bold; font-size: larger" onclick="trackOutboundLink(this, 'Download 3.5.0', 'github.com'); return false;">Download liquibase-3.5.0-bin.zip</a><br>
-    <a href="https://github.com/liquibase/liquibase/releases/download/liquibase-parent-3.5.0/liquibase-3.5.0-bin.tar.gz" style="font-weight: bold; font-size: larger" onclick="trackOutboundLink(this, 'Download 3.5.0', 'github.com'); return false;">Download liquibase-3.5.0-bin.tar.gz</a></td>
+    <a href="https://github.com/liquibase/liquibase/releases/download/liquibase-parent-3.5.1/liquibase-3.5.1-bin.zip" style="font-weight: bold; font-size: larger" onclick="trackOutboundLink(this, 'Download 3.5.1', 'github.com'); return false;">Download liquibase-3.5.1-bin.zip</a><br>
+    <a href="https://github.com/liquibase/liquibase/releases/download/liquibase-parent-3.5.1/liquibase-3.5.1-bin.tar.gz" style="font-weight: bold; font-size: larger" onclick="trackOutboundLink(this, 'Download 3.5.1', 'github.com'); return false;">Download liquibase-3.5.1-bin.tar.gz</a></td>
 <td style="width:25%"><center><a href="http://www.datical.com/liquibase" target="_blank" style="font-weight: bold; font-size: larger" onClick="trackOutboundLink(this, 'Datical', 'Liquibase RFI'); return false;">Learn more about<br/>Datical DB >></a></center></td>
 </tr>
 </table>

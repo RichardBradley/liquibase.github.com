@@ -4,7 +4,7 @@ subnav: subnav_blog.md
 title: Liquibase 2009 Plugin Contest Winners
 ---
 
-<img class="alignright size-full wp-image-161" title="sponsors" src="http://ww.liquibase.org/wp-content/uploads/2009/10/sponsors.png" alt="sponsors" width="360" height="233" />Congratulations to the winners of the <a href="http://liquibase.jira.com/wiki/display/CONTRIB/Liquibase+Extension+Contest+2009">2009 Liquibase Plugin Contest</a>!
+<img class="alignright size-full wp-image-161" title="sponsors" src="http://www.liquibase.org/wp-content/uploads/2009/10/sponsors.png" alt="sponsors" width="360" height="233" />Congratulations to the winners of the <a href="http://liquibase.jira.com/wiki/display/CONTRIB/Liquibase+Extension+Contest+2009">2009 Liquibase Plugin Contest</a>!
 
 
 *Grand Prize (Choice of 5 O'Reilly Books, donated by <a href="http://www.oreilly.com">O'Reilly</a>):*<a href="http://liquibase.jira.com/wiki/display/CONTRIB/Oracle+Extensions"> </a>

@@ -12,7 +12,7 @@ The primary focus of the 2.0 release is extensibility and building community. In
 
 - Major re-architecting of codebase to expose a flexible, extensible, stable API
 - Replacing the old mailing lists with a <a href="http://www.liquibase.org/forum">message system</a>
-- Extension/plug-in portal and <a href="http://ww.liquibase.org/2009/06/liquibase-extension-contest-2009-now-underway.html">Extension Contest</a> (closed for judging)
+- Extension/plug-in portal and <a href="http://www.liquibase.org/2009/06/liquibase-extension-contest-2009-now-underway.html">Extension Contest</a> (closed for judging)
 - <a href="http://liquibase.jira.com/browse/CORE">New Feature/Issue tracker</a>
 - <a href="http://liquibase.jira.com/source/browse/CORE">New source repository and browser</a>
 - <a href="http://www.liquibase.org/ci">Publicly available build server</a>

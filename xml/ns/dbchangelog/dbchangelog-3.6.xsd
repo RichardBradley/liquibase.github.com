@@ -469,6 +469,7 @@
             <xsd:attribute name="forIndexSchemaName" type="xsd:string" />
             <xsd:attribute name="forIndexName" type="xsd:string" />
             <xsd:attribute name="clustered" type="booleanExp" />
+            <xsd:anyAttribute namespace="##other" processContents="lax" />
         </xsd:complexType>
     </xsd:element>
 
@@ -560,6 +561,7 @@
             <xsd:attributeGroup ref="tableNameAttribute" />
             <xsd:attribute name="file" type="xsd:string" />
             <xsd:attribute name="relativeToChangelogFile" type="booleanExp" />
+            <xsd:attribute name="usePreparedStatement" type="booleanExp" />
             <xsd:attribute name="encoding" type="xsd:string" default="UTF-8"/>
             <xsd:attribute name="separator" type="xsd:string" default=","/>
             <xsd:attribute name="quotchar" type="xsd:string" default="&quot;"/>
@@ -922,8 +924,12 @@
                     <xsd:attribute name="catalogName" type="xsd:string" />
                     <xsd:attribute name="schemaName" type="xsd:string" />
                     <xsd:attribute name="viewName" type="xsd:string" use="required" />
+                    <xsd:attribute name="remarks" type="xsd:string" />
                     <xsd:attribute name="replaceIfExists" type="booleanExp" />
                     <xsd:attribute name="fullDefinition" type="booleanExp" />
+                    <xsd:attribute name="path" type="xsd:string" />
+                    <xsd:attribute name="encoding" type="xsd:string" />
+                    <xsd:attribute name="relativeToChangelogFile" type="booleanExp" />
                     <xsd:anyAttribute namespace="##other" processContents="lax" />
                 </xsd:extension>
             </xsd:simpleContent>

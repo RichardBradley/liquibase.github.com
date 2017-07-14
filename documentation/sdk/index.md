@@ -8,7 +8,7 @@ title: SDK
 ### Purpose and Installation
 
 The purpose of the Liquibase SDK is facilitate development and testing of the Liquibase codebase and Liquibase extensions.
-The Liquibase SDK ships with the standard command line Liquibase installation which can be downloaded from [the Liquibase download page](/download).
+The Liquibase SDK ships with the standard command line Liquibase installation which can be downloaded from [the Liquibase download page](http://download.liquibase.org).
 
 After unzipping liquibase-bin.zip or liquibase-bin.tar.gz you will find an "sdk" sub directory which contains everything related to the SDK.
 

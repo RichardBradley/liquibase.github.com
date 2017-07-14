@@ -8,7 +8,7 @@ includeDaticalBox: true
 
 ## Availability ##
 
-Liquibase can be download from [http://liquibase.org/download](http://liquibase.org/download)
+Liquibase can be download from [http://download.liquibase.org](http://liquibase.org/download)
 
 The official Liquibase Maven groups are [org.liquibase](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.liquibase%22) and [org.liquibase.ext](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.liquibase.ext%22)
 

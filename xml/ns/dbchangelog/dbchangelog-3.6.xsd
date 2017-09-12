@@ -264,6 +264,7 @@
         <xsd:attribute name="objectQuotingStrategy" type="objectQuotingStrategy" />
         <xsd:attribute name="created" type="xsd:string"/>
         <xsd:attribute name="runOrder" type="xsd:string"/>
+        <xsd:attribute name="ignore" type="booleanExp" />
     </xsd:attributeGroup>
 
     <!-- Attributes for constraints -->
@@ -1051,6 +1052,7 @@
             </xsd:sequence>
             <xsd:attribute name="executable" type="xsd:string" use="required" />
             <xsd:attribute name="os" type="xsd:string" />
+            <xsd:attribute name="timeout" type="xsd:string" />
         </xsd:complexType>
     </xsd:element>
 
@@ -1063,6 +1065,7 @@
             <xsd:attribute name="endDelimiter" type="xsd:string" />
             <xsd:attribute name="relativeToChangelogFile" type="booleanExp" />
             <xsd:attribute name="dbms" type="xsd:string" />
+            <xsd:anyAttribute namespace="##other" processContents="lax"/>
         </xsd:complexType>
     </xsd:element>
 

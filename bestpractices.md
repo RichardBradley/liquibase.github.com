@@ -96,13 +96,15 @@ Leverage Liquibase to manage your Reference Data. Environment separation (DEV, Q
 
 ## Consider Datical DB ##
 
-Datical DB is a commercial product which provides the core Liquibase functionality plus additional features to remove complexity, simplify deployment and bridge the gap between development and operations.
+Datical is a commercial product with builds on the core Liquibase functionality. Beyond versioning and managing database changes, Datical bridges the gap between development and operations with capabilities that enable a fully unified and automated path for database code. 
 
-* Easy to Use and Flexible. Datical DB provides a simple but powerful Graphical UI and Command Line interface.
-* Change Set Wizard to easily define and capture database changes in a database neutral manner.
-* Deployment Plan Wizard for modeling and managing your logical deployment workflow
-* Compare Databases enables you to compare two database schemas to identify change and easily move it to your Change Log.
-* Change Forecasting: Forecast upcoming changes to be executed before they are ran to determine how those changes will impact your data.
+* Datical has a web interface, command line interface, and REST API. All interfaces are secure and require authentication.
+* Datical automatically verifies database code against organizational standards to eliminate manual review
+* Datical automatically generates changesets from validated DDL code, eliminating manual effort in crafting changesets and manually updating the changelog
+* Datical generates an immutable artifact for database code for consistent, repeatable, and automation-ready downstream deployments
+* Datical forecasts the impact of database changes with an object-based model of the target database to ensure that there are no errors or issues when deploying database changes
+* Datical integrates with ticketing systems such as JIRA to make it easy to trace database changes back to source code and initial requirements. This same capability also makes it easy to hold or accelerate feature sets.
+* Datical can snapshot and compare database schemas to help identify and address drift
 
 For more information on Datical DB, visit <a href="http://www.datical.com/liquibase/" target="_blank" onClick="trackOutboundLink(this, 'Datical', 'Liquibase RFI'); return false">http://www.datical.com/Liquibase</a>
 

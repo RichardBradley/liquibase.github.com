@@ -62,10 +62,10 @@ Liquibase distinguishes between precondition "failures" (check failed) and "erro
 
 <table>
 <tr><th>Value</th><th>Description</th></tr>
-<tr><td>HALT</td><td>Immediately halt execution of entire change log. <b>[DEFAULT]</b>  </td></tr>
-<tr><td>CONTINUE</td><td>Skip over change set.  Execution of change set will be attempted again on the next update.  Continue with change log.</td></tr>
-<tr><td>MARK_RAN</td><td>Skip over change set, but mark it as ran.  Continue with change log.</td></tr>
-<tr><td>WARN</td><td>Output warning and continue executing change set/change log as normal.</td></tr>
+<tr><td>HALT</td><td>Immediately halt the execution of the entire change log. <b>[DEFAULT]</b>  </td></tr>
+<tr><td>CONTINUE</td><td>Skip over the change set.  Execution of the change set will be attempted again on the next update.  Continue with the change log.</td></tr>
+<tr><td>MARK_RAN</td><td>Skip over the change set, but mark it as executed.  Continue with the change log.</td></tr>
+<tr><td>WARN</td><td>Output a warning and continue executing the change set/change log as normal.</td></tr>
 </table>
 
 Outside a changeset (e.g. at the beginning of the change log), only HALT and WARN are possible values.

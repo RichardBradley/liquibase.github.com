@@ -286,7 +286,7 @@ Checks whether given [changelog parameter](http://www.liquibase.org/documentatio
 
 ### &lt;customPrecondition&gt; ###
 
-Custom preconditions can be created by creating a class that implements the [liquibase.precondition.CustomPrecondition](http://www.liquibase.org/documentation/latest/api/liquibase/precondition/CustomPrecondition.html) interface.  Parameters on custom classes are set through reflection based on the &lt;param&gt; sub-tags.  Parameters are passed as strings to the custom precondition.
+Custom preconditions can be created by creating a class that implements the [liquibase.precondition.CustomPrecondition](http://www.liquibase.org/javadoc/liquibase/precondition/CustomPrecondition.html) interface.  Parameters on custom classes are set through reflection based on the &lt;param&gt; sub-tags.  Parameters are passed as strings to the custom precondition.
 
 {% highlight xml %}
 <customPrecondition className="com.example.CustomTableCheck">

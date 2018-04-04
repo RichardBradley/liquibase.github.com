@@ -9,7 +9,7 @@ Liquibase supports [YAML](http://www.yaml.org) as a format for storing your chan
 
 ## Requirements
 
-To use YAML-based changelogs, you must include [snakeyaml-1.12.jar](https://code.google.com/p/snakeyaml/) in your classpath.
+To use YAML-based changelogs, you must include [snakeyaml-1.12.jar](https://bitbucket.org/asomov/snakeyaml/) in your classpath.
 
 ## Limitations
 

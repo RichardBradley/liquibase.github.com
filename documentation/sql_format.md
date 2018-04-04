@@ -36,9 +36,12 @@ The following attributes may be provided on each changeset:
 <tr><td>runAlways</td><td>Executes the change set on every run, even if it has been run before </td></tr>
 <tr><td>runOnChange</td><td>Executes the change the first time it is seen and each time the change set has been changed </td></tr>
 <tr><td>context</td><td>Executes the change if the particular context was passed at runtime. Any string can be used for the context name and they are checked case-insensitively. </td></tr>
+<tr><td>logicalFilePath</td><td>Use to override the file name and path when creating the unique identifier of change sets. Required when moving or renaming change logs. </td></tr>
+<tr><td>labels</td><td>Labels are general purpose way to categorize changeSets like contexts, but working in the opposite way. Instead of defining a set of contexts at runtime and then a match expression in the changeSet, you define a set of labels in the context and a match expression at runtime. </td></tr>
 <tr><td>runInTransaction</td><td>Should the changeSet be ran as a single transaction (if possible)?  Defaults to true.  <b>Warning: be careful with this attribute.  If set to false and an error occurs part way through running a changeSet containing multiple statements, the Liquibase databasechangelog table will be left in an invalid state</b> </td></tr>
 <tr><td>failOnError</td><td>Should the migration fail if an error occurs while executing the changeSet? </td></tr>
 <tr><td>dbms</td><td>The type of a database which that changeSet is to be used for. When the migration step is running, it checks the database type against this attribute. Valid database type names are listed on the [supported databases page](../databases.html) </td></tr>
+<tr><td>logicalFilePath</td><td>Sets a logical file path in databasechangelog table instead of physical file location of sql where the liquibase executed.</td></tr>
 </table>
 
 ## Preconditions ##

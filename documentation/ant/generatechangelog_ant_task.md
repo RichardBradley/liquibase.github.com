@@ -110,7 +110,7 @@ This task is capable of generating change log files in multiple formats. At leas
 </table>
 
 {% highlight xml %}
-<liquibase:xml ouputfile="/path/to/output/changelog.xml" encoding="UTF-8"/>
+<liquibase:xml outputfile="/path/to/output/changelog.xml" encoding="UTF-8"/>
 {% endhighlight %}
 
 #### classpath ####
@@ -130,7 +130,7 @@ Optional. See [change log parameters](./index.html)
 {% highlight xml %}
 <liquibase:generateChangeLog classpathref="classpath">
     <liquibase:database driver="${driver.class}" url="${jdbc.url}" user="${jdbc.user}" password="${jdbc.user}"/>
-    <liquibase:xml ouputfile="/path/to/output/changelog.xml" encoding="UTF-8"/>
+    <liquibase:xml outputfile="/path/to/output/changelog.xml" encoding="UTF-8"/>
 </liquibase:generateChangeLog>
 {% endhighlight %}
 
@@ -139,8 +139,8 @@ Generates a changelog file for the database in XML format.
 {% highlight xml %}
 <liquibase:generateChangeLog classpathref="classpath">
     <liquibase:database driver="${driver.class}" url="${jdbc.url}" user="${jdbc.user}" password="${jdbc.user}"/>
-    <liquibase:xml ouputfile="/path/to/output/changelog.xml" encoding="UTF-8"/>
-    <liquibaes:yaml outputfile="/path/to/output/changelog.yaml" encoding="UTF-8"/>
+    <liquibase:xml outputfile="/path/to/output/changelog.xml" encoding="UTF-8"/>
+    <liquibase:yaml outputfile="/path/to/output/changelog.yaml" encoding="UTF-8"/>
 </liquibase:generateChangeLog>
 {% endhighlight %}
 

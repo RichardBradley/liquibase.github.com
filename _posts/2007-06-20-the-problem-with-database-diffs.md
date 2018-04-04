@@ -19,4 +19,4 @@ The second flaw is that it is impossible to diff the data so you find inserts, u
 
 If you track your data changes along with your structural changes during development, however, you can be certain that they will be applied correctly down the road.
 
-In the end, I feel that the problems associated with a diff tool outweighs the convenience and simplicity they offer.  While they can have great value as a "did all the changes get stored in the change log correctly" safeguard, it should not be relied apon as your primary means of tracking database changes.
+In the end, I feel that the problems associated with a diff tool outweighs the convenience and simplicity they offer.  While they can have great value as a "did all the changes get stored in the change log correctly" safeguard, it should not be relied upon as your primary means of tracking database changes.

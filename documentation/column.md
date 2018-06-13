@@ -103,7 +103,7 @@ The "column" tag is a tag that is re-used throughout the Liquibase XML when colu
     </tr>
     <tr>
       <td>descending</td>
-      <td>If used in a 'createIndex' command, this boolean attribute allows you to stipulate that a column should be used in descending order in the index. Defaults to <code>false</code> (i.e. ascending order) <i>Since 3.4</i></td>
+      <td>If used in a 'createIndex' command, this boolean attribute allows you to specify that a column should be used in descending order in the index. Defaults to <code>false</code> (i.e. ascending order) <i>Since 3.4</i></td>
     </tr>
 
   </tbody>

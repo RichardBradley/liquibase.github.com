@@ -19,7 +19,7 @@ The 'sql' tag allows you to specify whatever sql you want. It is useful for comp
 
 The createProcedure refactoring is the best way to create stored procedures.
 
-The 'sql' tag can also support multiline statements in the same file. Statements can either be split using a ; at the end of the last line of the SQL or a go on its own on the line between the statements can be used.Multiline SQL statements are also supported and only a ; or go statement will finish a statement, a new line is not enough. Files containing a single statement do not need to use a ; or go.
+The 'sql' tag can also support multiline statements in the same file. Statements can either be split using a ; at the end of the last line of the SQL or a go on its own on the line between the statements can be used. Multiline SQL statements are also supported and only a ; or go statement will finish a statement, a new line is not enough. Files containing a single statement do not need to use a ; or go.
 
 The sql change can also contain comments of either of the following formats:
 

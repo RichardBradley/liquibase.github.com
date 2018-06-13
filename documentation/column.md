@@ -101,6 +101,10 @@ The "column" tag is a tag that is re-used throughout the Liquibase XML when colu
       <td>position</td>
       <td>If used in an 'addColumn' command, this attribute allows you to control where in the table column order the new column goes. Only one of beforeColumn, afterColumn or position are allowed. Expects a one based index <i>Since 3.1</i></td>
     </tr>
+    <tr>
+      <td>descending</td>
+      <td>If used in a 'createIndex' command, this boolean attribute allows you to stipulate that a column should be used in descending order in the index. Defaults to <code>false</code> (i.e. ascending order) <i>Since 3.4</i></td>
+    </tr>
 
   </tbody>
 </table>

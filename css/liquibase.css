@@ -4,12 +4,13 @@ body
 }
 
 a.logo {
-    width:225px;
-    height:38px;
+    width: 255px;
+    height: 52px;
     float:left;
-    background:url(../custom_images/liquibase_logo-40.png) no-repeat;
-    margin-top:25px
+    background: url(../custom_images/liquibase_logo-250.png) no-repeat;
+    margin-top: 15px;
 }
+
 
 iframe.maven {
     width: 750px;

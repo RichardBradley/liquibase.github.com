@@ -60,25 +60,25 @@
             </div>
 
             <div id="menu" class="span-24">
-                <div class="span-4">
+                <div class="span-4" style="margin-top: 20px">
                     <li><a href="http://download.liquibase.org"><span>Download</span></a></li>
                 </div>
-                <div class="span-3">
+                <div class="span-3" style="margin-top: 20px">
                     <li><a href="{{ pageRoot }}/quickstart.html"><span>Quick Start</span></a></li>
                 </div>
-                <div class="span-3">
+                <div class="span-3" style="margin-top: 20px">
                     <li><a href="{{ pageRoot }}/documentation/index.html"><span>Documentation</span></a></li>
                 </div>
-                <div class="span-3">
+                <div class="span-3" style="margin-top: 20px">
                     <li><a href="{{ pageRoot }}/community/index.html"><span>Community</span></a></li>
                 </div>
-                <div class="span-3">
+                <div class="span-3" style="margin-top: 20px">
                     <li><a href="{{ pageRoot }}/extensions/index.html"><span>Extensions</span></a></li>
                 </div>
-                <div class="span-3">
+                <div class="span-3" style="margin-top: 20px">
                     <li><a href="{{ pageRoot }}/development/index.html"><span>Dev</span></a></li>
                 </div>
-                <div class="span-3 last">
+                <div class="span-3 last" style="margin-top: 20px">
                     <li><a href="http://www.datical.com/liquibase/" target="_blank" onClick="trackOutboundLink(this, 'Datical', 'Liquibase RFI'); return false"><span><font color="DarkOrange"><strong>Datical</strong></font></span></a></li>
                 </div>
             </div>
@@ -89,7 +89,7 @@
                     {% if page.subnav %}
                         {% assign navPage = page.subnav %}
                     {% else %}
-                        {% assign dirs = {{page.path  | split:'/' }} %}
+                        {% assign dirs = page.path  | split:'/'  %}
                         {% assign navPage = "subnav" %}
                         {% for dir in dirs%}
                             {% if dir == "" or forloop.last %}

@@ -14,7 +14,7 @@ If you go back and modify an old <a href="/documentation/changeset">changeSet</a
 That being said, things never go according to plan, and so Liquibase has several options for dealing with changes to existing changeSets depending on your needs. Generally I see 3 main reasons for a change:
 
 
-##Original Change Set was Wrong or Buggy
+## Original Change Set was Wrong or Buggy
 
 
 There are times when a change that was created wrong, especially if you are using the `<sql>` tag and have a complicated statement. When you catch the problem, you are often not able to recover original data or structures, but want the change to be correct for new databases going forward. In this case, it is best to use add a `<validCheckSum>` tag to the changeSet specifying that the new check sum is correct. To know the check sum to specify, simply make your change and try to update a database. The resulting verification error will include the new check sum.

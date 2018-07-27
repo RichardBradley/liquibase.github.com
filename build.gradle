@@ -1,0 +1,28 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile("org.liquibase:liquibase-core:3.6.2")
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['_doc_generators']
+            exclude 'lib/'
+        }
+        resources {
+            srcDirs = []
+        }
+    }
+}

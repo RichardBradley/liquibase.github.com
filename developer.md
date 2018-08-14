@@ -23,7 +23,7 @@ Liquibase supports changelogs written in XML, YAML, JSON and SQL. Use whatever i
 
 ### Know that your changes will not get forgotten down the line
 
-Liquibase [tracks which changelog statements](documentation/databasechangelog.html) have ran against each database, so once you create a changeSet you can be confident that it will be deployed through QA and production.
+Liquibase [tracks which changelog statements](documentation/databasechangelog.html) have run against each database, so once you create a changeSet you can be confident that it will be deployed through QA and production.
 
 For best results, append a new changeSets as needed then run liquibase update to apply it to your local database. This works better than making changes to your database directly and then re-writing it as a changeSet because you are truly running the same update as everyone else will.
 

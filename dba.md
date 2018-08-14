@@ -9,7 +9,7 @@ redirect_from:
 
 ### No change is forgotten
 
-Liquibase [tracks which changelog statements](documentation/databasechangelog.html) have ran against each database, so you no longer have to manually track what statements have been ran against each database and which have not.
+Liquibase [tracks which changelog statements](documentation/databasechangelog.html) have run against each database, so you no longer have to manually track what statements have been run against each database and which have not.
 
 ### Like SQL? Use SQL
 

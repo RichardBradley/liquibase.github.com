@@ -51,9 +51,11 @@ Note: By default it will attempt to split statements on a ';' or 'go' at the end
     <sql dbms="h2, oracle"
             endDelimiter="\nGO"
             splitStatements="true"
-            stripComments="true">insert into person (name) values ('Bob')
-        <comment>What about Bob?</comment>
+            stripComments="true"
+    >
+        insert into person (name) values ('Bob')
     </sql>
+    <comment>What about Bob?</comment>
 </changeSet>
 {% endhighlight %}
 </div>

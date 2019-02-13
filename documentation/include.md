@@ -33,6 +33,7 @@ The reason to use the `<include>` tag rather than using XML's built-in include f
 <tr><th>Attribute</th><th>Description</th></tr>
 <tr><td>file</td><td>Name of the file to import <b>required</b> </td></tr>
 <tr><td>relativeToChangelogFile</td><td>Is the file path relative to the root changelog file rather than to the classpath.  Defaults to "false" <b>since 1.9</b> </td></tr>
+<tr><td>context</td><td>Append context (using AND) to all contained changeSets <b>since 3.5</b> </td></tr>
 </table>
 
 

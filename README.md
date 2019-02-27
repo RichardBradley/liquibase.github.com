@@ -11,7 +11,7 @@ use of [Liquid template tags](http://jekyllrb.com/docs/templates/).
 To build the site for local testing, install Jekyll and its dependencies, 
 including Ruby, the kramdown gem, Python 2.7, and the Pygments package. If 
 you're developing on Windows, there is a handy [Portable package of Jekyll](
-http://www.madhur.co.in/blog/2013/07/20/buildportablejekyll.html) you can use.
+https://github.com/madhur/PortableJekyll) you can use.
 You may still need to fiddle around a bit to get it working, such as installing
 the kramdown gem ("gem install kramdown") and editing "setpath.cmd".
 

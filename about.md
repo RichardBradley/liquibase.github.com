@@ -24,6 +24,8 @@ The main Liquibase code is at [https://github.com/liquibase/liquibase](https://g
 
 Liquibase is licensed under the Apache 2.0 License
 
+LIQUIBASE is a registered trademark of Datical.
+
 ## Friends of Liquibase ##
 
 The following companies have provided software and/or services to help support Liquibase:
@@ -32,9 +34,3 @@ The following companies have provided software and/or services to help support L
 - **Atlassian** (Provides [http://liquibase.jira.com](http://liquibase.jira.com))
 - **Zoho** (Provides [http://forum.liquibase.org](http://forum.liquibase.org))
 - **YourKit** (Provides [Java Profiler](http://yourkit.com))
-
-
-## Open Source Projects Using Liquibase ##
-- [Portofino by ManyDesigns](http://portofino.manydesigns.com)
-- [JHipster](https://jhipster.github.io/)
-- Know one to add? [Let us know](/community)

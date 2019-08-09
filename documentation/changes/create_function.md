@@ -22,7 +22,6 @@ Creates a stored function
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>comments</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>dbms</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.1</td></tr>
 <tr><td style='vertical-align: top'>encoding</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>functionBody</td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
@@ -46,7 +45,6 @@ Creates a stored function
         id="createFunction-example"
         objectQuotingStrategy="LEGACY">
     <ext:createFunction catalogName="cat"
-            comments="A String"
             dbms="h2, oracle"
             encoding="UTF-8"
             functionName="A String"
@@ -66,7 +64,6 @@ changeSet:
   changes:
   - createFunction:
       catalogName: cat
-      comments: A String
       dbms: h2, oracle
       encoding: UTF-8
       functionBody: A String
@@ -95,7 +92,6 @@ changeSet:
       {
         "createFunction": {
           "catalogName": "cat",
-          "comments": "A String",
           "dbms": "h2, oracle",
           "encoding": "UTF-8",
           "functionBody": "A String",
@@ -124,13 +120,13 @@ changeSet:
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>H2</td><td><b>Supported</b></td><td>Yes</td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>INGRES</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>MariaDB</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>Oracle</td><td><b>Supported</b></td><td>Yes</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>SQL Server</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>SQLite</td><td><b>Supported</b></td><td>No</td></tr>

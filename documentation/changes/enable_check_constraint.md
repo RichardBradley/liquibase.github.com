@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change renameTable
+title: Change enableCheckConstraint
 ---
 
 <!-- ====================================================== -->
@@ -13,18 +13,18 @@ title: Change renameTable
   });
 </script>
 
-# Change: 'renameTable'
+# Change: 'enableCheckConstraint'
 
-Renames an existing table
+Enable Check Constraint
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>newTableName</td><td style='vertical-align: top'>New name for the table</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>oldTableName</td><td style='vertical-align: top'>Name of the table to rename</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -36,27 +36,27 @@ Renames an existing table
 <div id='tab-xml'>
 {% highlight xml %}
 <changeSet author="liquibase-docs"
-        id="renameTable-example"
+        id="enableCheckConstraint-example"
         objectQuotingStrategy="LEGACY">
-    <renameTable catalogName="cat"
-            newTableName="employee"
-            oldTableName="person"
-            schemaName="public"/>
+    <ext:enableCheckConstraint catalogName="cat"
+            constraintName="const_name"
+            schemaName="public"
+            tableName="person"/>
 </changeSet>
 {% endhighlight %}
 </div>
 <div id='tab-yaml'>
 {% highlight yaml %}
 changeSet:
-  id: renameTable-example
+  id: enableCheckConstraint-example
   author: liquibase-docs
   objectQuotingStrategy: LEGACY
   changes:
-  - renameTable:
+  - enableCheckConstraint:
       catalogName: cat
-      newTableName: employee
-      oldTableName: person
+      constraintName: const_name
       schemaName: public
+      tableName: person
 
 {% endhighlight %}
 </div>
@@ -64,16 +64,16 @@ changeSet:
 {% highlight json %}
 {
   "changeSet": {
-    "id": "renameTable-example",
+    "id": "enableCheckConstraint-example",
     "author": "liquibase-docs",
     "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
-        "renameTable": {
+        "enableCheckConstraint": {
           "catalogName": "cat",
-          "newTableName": "employee",
-          "oldTableName": "person",
-          "schemaName": "public"
+          "constraintName": "const_name",
+          "schemaName": "public",
+          "tableName": "person"
         }
       }]
     
@@ -85,10 +85,10 @@ changeSet:
 </div>
 
 
-## SQL Generated From Above Sample (MySQL)
+## SQL Generated From Above Sample (SQL Server)
 
 {% highlight sql %}
-ALTER TABLE cat.person RENAME cat.employee;
+ALTER TABLE cat.[public].person WITH CHECK CHECK CONSTRAINT const_name;
 
 
 {% endhighlight %}
@@ -99,18 +99,18 @@ ALTER TABLE cat.person RENAME cat.employee;
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>Derby</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td>Not Supported</td><td><b>Yes</b></td></tr>
-<tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>HyperSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>INGRES</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>Informix</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>MariaDB</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>MySQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>H2</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>HyperSQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>INGRES</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>Informix</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>MariaDB</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>MySQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>PostgreSQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>SQL Server</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>SQLite</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>Sybase</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>Sybase Anywhere</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>SQLite</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>Sybase</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>Sybase Anywhere</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 </table>

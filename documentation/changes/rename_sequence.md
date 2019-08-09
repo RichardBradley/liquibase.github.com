@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change renameTable
+title: Change renameSequence
 ---
 
 <!-- ====================================================== -->
@@ -13,17 +13,17 @@ title: Change renameTable
   });
 </script>
 
-# Change: 'renameTable'
+# Change: 'renameSequence'
 
-Renames an existing table
+Renames an existing sequence
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>newTableName</td><td style='vertical-align: top'>New name for the table</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>oldTableName</td><td style='vertical-align: top'>Name of the table to rename</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
+<tr><td style='vertical-align: top'>newSequenceName</td><td style='vertical-align: top'>New name for the sequence</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>oldSequenceName</td><td style='vertical-align: top'>Name of the sequence to rename</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
@@ -36,11 +36,11 @@ Renames an existing table
 <div id='tab-xml'>
 {% highlight xml %}
 <changeSet author="liquibase-docs"
-        id="renameTable-example"
+        id="renameSequence-example"
         objectQuotingStrategy="LEGACY">
-    <renameTable catalogName="cat"
-            newTableName="employee"
-            oldTableName="person"
+    <renameSequence catalogName="cat"
+            newSequenceName="seq_id"
+            oldSequenceName="seq_id"
             schemaName="public"/>
 </changeSet>
 {% endhighlight %}
@@ -48,14 +48,14 @@ Renames an existing table
 <div id='tab-yaml'>
 {% highlight yaml %}
 changeSet:
-  id: renameTable-example
+  id: renameSequence-example
   author: liquibase-docs
   objectQuotingStrategy: LEGACY
   changes:
-  - renameTable:
+  - renameSequence:
       catalogName: cat
-      newTableName: employee
-      oldTableName: person
+      newSequenceName: seq_id
+      oldSequenceName: seq_id
       schemaName: public
 
 {% endhighlight %}
@@ -64,15 +64,15 @@ changeSet:
 {% highlight json %}
 {
   "changeSet": {
-    "id": "renameTable-example",
+    "id": "renameSequence-example",
     "author": "liquibase-docs",
     "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
-        "renameTable": {
+        "renameSequence": {
           "catalogName": "cat",
-          "newTableName": "employee",
-          "oldTableName": "person",
+          "newSequenceName": "seq_id",
+          "oldSequenceName": "seq_id",
           "schemaName": "public"
         }
       }]
@@ -85,10 +85,11 @@ changeSet:
 </div>
 
 
-## SQL Generated From Above Sample (MySQL)
+## SQL Generated From Above Sample (SQL Server)
 
 {% highlight sql %}
-ALTER TABLE cat.person RENAME cat.employee;
+SP_RENAME seq_id ,
+seq_id;
 
 
 {% endhighlight %}
@@ -97,20 +98,20 @@ ALTER TABLE cat.person RENAME cat.employee;
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td>Not Supported</td><td><b>Yes</b></td></tr>
-<tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>HyperSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>INGRES</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>Informix</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>MariaDB</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>MySQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>H2</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>HyperSQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>INGRES</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>Informix</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>MariaDB</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>MySQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>SQL Server</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>SQLite</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>Sybase</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>SQLite</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>Sybase</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Sybase Anywhere</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 </table>

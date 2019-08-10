@@ -96,7 +96,6 @@ DROP SYNONYM [A String];
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Firebird</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>H2</td><td>Not Supported</td><td>No</td></tr>
@@ -106,7 +105,7 @@ DROP SYNONYM [A String];
 <tr><td>MariaDB</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>MySQL</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>PostgreSQL</td><td>Not Supported</td><td>No</td></tr>
+<tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>SQL Server</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>SQLite</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Sybase</td><td>Not Supported</td><td>No</td></tr>

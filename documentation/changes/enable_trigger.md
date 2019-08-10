@@ -112,7 +112,7 @@ ENABLE TRIGGER [public].[A String]  ON cat.[public].person;
 <tr><td>MariaDB</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>MySQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>PostgreSQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>SQL Server</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>SQLite</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Sybase</td><td>Not Supported</td><td><b>Yes</b></td></tr>

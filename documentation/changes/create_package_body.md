@@ -119,7 +119,7 @@ changeSet:
 <tr><td>DB2</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Derby</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Firebird</td><td>Not Supported</td><td>No</td></tr>
-<tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>H2</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>HyperSQL</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>INGRES</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Informix</td><td>Not Supported</td><td>No</td></tr>

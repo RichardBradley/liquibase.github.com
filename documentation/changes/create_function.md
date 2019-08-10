@@ -125,9 +125,9 @@ changeSet:
 <tr><td>Informix</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>MariaDB</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>MySQL</td><td>Not Supported</td><td>No</td></tr>
-<tr><td>Oracle</td><td>Not Supported</td><td>Yes</td></tr>
+<tr><td>Oracle</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td>Not Supported</td><td>No</td></tr>
-<tr><td>SQL Server</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>SQL Server</td><td><b>Supported</b></td><td>Yes</td></tr>
 <tr><td>SQLite</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Sybase</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Sybase Anywhere</td><td>Not Supported</td><td>No</td></tr>

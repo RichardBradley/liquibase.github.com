@@ -5,7 +5,28 @@
 {% include subnav_documentation.md %}
 
 <hr>
-<h3 style='color: #747373'>Bundled Changes</h3>
+<h3 style='color: #fd8c00'>Liquibase Pro Changes</h3>
+<li><a href='add_check_constraint.html'><span>add Check Constraint</span></a></li>
+<li><a href='create_function.html'><span>create Function</span></a></li>
+<li><a href='create_package.html'><span>create Package</span></a></li>
+<li><a href='create_package_body.html'><span>create Package Body</span></a></li>
+<li><a href='create_synonym.html'><span>create Synonym</span></a></li>
+<li><a href='create_trigger.html'><span>create Trigger</span></a></li>
+<li><a href='disable_check_constraint.html'><span>disable Check Constraint</span></a></li>
+<li><a href='disable_trigger.html'><span>disable Trigger</span></a></li>
+<li><a href='drop_check_constraint.html'><span>drop Check Constraint</span></a></li>
+<li><a href='drop_function.html'><span>drop Function</span></a></li>
+<li><a href='drop_package.html'><span>drop Package</span></a></li>
+<li><a href='drop_package_body.html'><span>drop Package Body</span></a></li>
+<li><a href='drop_synonym.html'><span>drop Synonym</span></a></li>
+<li><a href='drop_trigger.html'><span>drop Trigger</span></a></li>
+<li><a href='enable_check_constraint.html'><span>enable Check Constraint</span></a></li>
+<li><a href='enable_trigger.html'><span>enable Trigger</span></a></li>
+<li><a href='mark_unused.html'><span>mark Unused</span></a></li>
+<li><a href='rename_sequence.html'><span>rename Sequence</span></a></li>
+
+<hr>
+<h3 style='color: #747373'>Liquibase Changes</h3>
 
 <li><a href='add_auto_increment.html'><span>add Auto Increment</span></a></li>
 <li><a href='add_column.html'><span>add Column</span></a></li>
@@ -50,3 +71,5 @@
 <li><a href='stop.html'><span>stop</span></a></li>
 <li><a href='tag_database.html'><span>tag Database</span></a></li>
 <li><a href='update.html'><span>update</span></a></li>
+
+

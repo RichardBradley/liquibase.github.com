@@ -47,8 +47,9 @@ includeDaticalBox: true
             <li>Note: It is a best practice to ensure that each changeSet is as atomic a change as possible to avoid failed statements from leaving the database in an unknown state; however, it is possible to treat a large SQL script as a single changeSet.</li>
         </ul>
     </li>
-    <li>Liquibase uses a tracking table (specifically called ‘DATABASECHANGELOG’) which resides on each database and which tracks which changeSets in the changeLog have been deployed. Note: if there is no tracking table on a database that Liquibase is acting upon, the Liquibase will create a tracking table.
+    <li>Liquibase uses a tracking table (specifically called ‘DATABASECHANGELOG’) which resides on each database and which tracks which changeSets in the changeLog have been deployed. 
             <ul class="opg" style="list-style-type: circle; padding-bottom: 0; margin-left: 1em;">
+                <li>Note: if there is no tracking table on a database that Liquibase is acting upon, the Liquibase will create a tracking table.</li>
                 <li>Note: To assist with projects where you are not starting with a blank database, Liquibase has a feature to generate a changeLog to represent the current state of the database schema.</li>
             </ul>
         </li>

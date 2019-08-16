@@ -3,6 +3,31 @@ body
     background:url(../images/header-bg-2.png) repeat-x;
 }
 
+a.cta {
+    border-style:solid;
+    border-width:3px;
+    border-radius:7px;
+    background:goldenrod;
+    padding:5px;
+    text-decoration: none;
+    color:black;
+    border-color:#aa7f27 ;
+    width:100%;
+}
+
+h3.homepg {
+    font-size: 2em;
+    line-height: 1;
+    margin-bottom: 0em;
+    padding: 0.5em;
+}
+
+p.homepg {
+    margin: 0em;
+    padding: 1em;
+    font-size: medium;
+}
+
 a.logo {
     width: 255px;
     height: 52px;

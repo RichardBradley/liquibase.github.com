@@ -1,8 +1,6 @@
 ---
 layout: default
 title: Liquibase for Release Managers
-redirect_from:
-  - /release_manager
 ---
 
 # Liquibase for Relase Managers #

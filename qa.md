@@ -1,8 +1,6 @@
 ---
 layout: default
 title: Liquibase for QA
-redirect_from:
-  - /qa
 ---
 
 # Liquibase for QA #

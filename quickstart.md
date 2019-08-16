@@ -96,11 +96,13 @@ includeDaticalBox: true
 <p class="opg">
         Before attempting any of the step-by-step tutorials, please prepare your environment with the setup instructions.
 </p>
+<div style="background-color:whitesmoke">
 <h4 class="homepg" style="font-size:large">Step 1: Download and Extract Liquibase</h4>
 <ol class="opg">
     <li>Download Liquibase. Visit the <a href="https://download.liquibase.org/">download page</a> to get the latest binary.</li>
     <li>After downloading the *.zip or *.tar.gz, extract the contents into a folder.</li>
 </ol>
+<br/>
 <h4 class="homepg" style="font-size: large">Step 2: Install Java</h4>
 <ol class="opg">
     <li>Java is a required dependency. Install Java if it is not already installed.
@@ -115,28 +117,30 @@ includeDaticalBox: true
             </ul>
     </li>
 </ol>
+<br/>
 <h4 class="homepg" style="font-size: large">Step 3: Download the H2 JDBC Driver</h4>
 <ol class="opg">
     <li>The tutorials make use of an H2 database. You will need to download the H2 JDBC driver, which can be found <a href="http://www.h2database.com/html/cheatSheet.html">here</a>.</li>
     <li>Copy the h2*.jar file into the directory that you extracted the Liquibase *.zip or *tar.gz</li>
 </ol>
+<br/>
 <h4 class="homepg" style="font-size: large">Step 4: Setup liquibase.properties</h4>
 <ol class="opg">
     <li>The tutorials use the CLI. While it is possible to pass all required parameters, such as the JDBC driver and database URL, it is much easier to configure a liquibase.properties file to save time and effort.</li>
     <li>Create a liquibase.properties. Add the following content to the file and save it in the directory that you extracted the Liquibase *.zip or *.tar.gz.
-        {% highlight bash %}
-            driver: org.h2.Driver
-            classpath: ./h2-1.4.199.jar
-            url: jdbc:h2:file:./h2tutorial
-            username: admin
-            password: password
-            changeLogFile: myChangeLog.xml
-        {% endhighlight bash %}
+{% highlight bash %}driver: org.h2.Driver
+classpath: ./h2-1.4.199.jar
+url: jdbc:h2:file:./h2tutorial
+username: admin
+password: password
+changeLogFile: myChangeLog.xml{% endhighlight bash %}
         <ul class="opg" style="list-style-type: circle; padding-bottom: 0; margin-left: 1em;">
                 <li><strong>Note: Be sure to use the actual version of the h2*.jar file that you copied into the extracted Liquibase directory!</strong></li>
         </ul>
     </li>
 </ol>
+</div>
+<div>
 <p class="opg">
     That is all! You are now setup to start one of the tutorials!
 </p>
@@ -144,10 +148,10 @@ includeDaticalBox: true
 
 <div style="background-color:lightgray">
 
-<h2 class="homepg" id="simpleSQL">Tutorial: Use SQL Scripts</h2>
+<h2 class="homepg" id="simpleSQL">Tutorial: Get Started with SQL Scripts</h2>
 <p class="opg">Blah  Go to <a href="quickstart/quickstart_sql.html">Link</a></p>
 
-<h2 class="homepg" id="lbmodel">Tutorial: Use SQL Scripts</h2>
+<h2 class="homepg" id="lbmodel">Tutorial: Get Started with the Liquibase Model</h2>
 <p class="opg">Blah. Go to <a href="quickstart/quickstart_lb.html">Link</a></p>
 
 </div>

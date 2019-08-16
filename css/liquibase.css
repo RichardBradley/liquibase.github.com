@@ -15,8 +15,7 @@ a.cta {
     width:100%;
 }
 
-h3.homepg {
-    font-size: 2em;
+h1.homepg, h2.homepg, h3.homepg, h4.homepg {
     line-height: 1;
     margin-bottom: 0em;
     padding: 0.5em;
@@ -27,6 +26,33 @@ p.homepg {
     padding: 1em;
     font-size: medium;
 }
+
+p.opg {
+    margin: 0em;
+    padding: 0.5em;
+    font-size: medium;
+}
+
+ul.opg {
+    margin: 0em;
+    padding: 0em 0em 0em 2.5em;
+    font-size: medium;
+}
+
+ol.opg {
+    margin: 0em;
+    padding: 0em 0em 0em 2.5em;
+    font-size: medium;
+}
+
+p.callout {
+    margin: 0em 0em 0em 0.5em;
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: medium;
+    border-left: 6px solid black;
+    background-color: goldenrod;
+ }
+
 
 a.logo {
     width: 255px;

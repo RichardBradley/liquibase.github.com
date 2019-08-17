@@ -62,6 +62,7 @@ Defines a parameter for the changelog. Given a list of contexts and/or databases
 <tr><td>value</td><td>Name of the column's table <b>required</b>  </td></tr>
 <tr><td>context</td><td>Contexts given as comma separated list.  </td></tr>
 <tr><td>dbms</td><td>Database types given as comma separated list.  </td></tr>
+<tr><td>global</td><td>Defines whether the property is global or limited to a databaseChangeLog. Given as "true" or "false".  </td></tr>
 </table>
 
 Example:
@@ -71,4 +72,5 @@ Example:
     <property name="clob.type" value="clob" dbms="oracle,h2"/>
     <property name="clob.type" value="longtext" dbms="mysql"/>
     <property name="myproperty" value="yes" context="common,test"/>
+    <property name="localproperty" value="foo" global="false"/>
 {% endhighlight %}

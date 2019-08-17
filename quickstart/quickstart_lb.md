@@ -54,21 +54,7 @@ Think of each change set as an atomic change that you want to apply to your data
 
 ## Step 3: Run the ChangeSet ##
 
-There are many ways to execute your change log including via [command line](documentation/command_line.html), [Ant](documentation/ant/index.html), [Maven](documentation/maven/index.html), [Spring](documentation/spring.html), a [servlet listener](documentation/servlet_listener.html), and a [CDI Environment](documentation/cdi.html).
-
-Here is an example for mysql via jdbc:
-
-{% highlight bat %}
-liquibase --driver=com.mysql.jdbc.Driver \
-     --classpath=/path/to/classes \
-     --changeLogFile=com/example/db.changelog.xml \
-     --url="jdbc:mysql://localhost/example" \
-     --username=user \
-     --password=asdf \
-     migrate
-{% endhighlight %}
-
-There are many more databases supported by liquibase. For a list of them and which jdbc driver, url, classpath etc. they need, please visit the [databases](databases.html) section.
+We are now ready to deploy our first script! Open a terminal and run <code class="explicit">./liquibase update</code> if on a UNIX system or <code class="explicit">liquibase.bat update</code> if on Windows.
 
 ## Step 4: Check Your Database ##
 
@@ -78,4 +64,4 @@ You will see that your database now contains a table called "department". To inp
 
 * This quick-start guide is designed to get you started with Liquibase. For a full description of all its capabilities, see the [Liquibase Manual](documentation/index.html), read [the best practices](bestpractices.html) and visit the [forums](community/index.html). 
 * If you have an existing project you are looking to add Liquibase too, visit the [Existing Project](documentation/existing_project.html) page.
-* If you are interested in commercial support, training or consulting visit <a href="http://www.datical.com/liquibase/" target="_blank" onClick="trackOutboundLink(this, 'Datical', 'Liquibase RFI'); return false">datical.com</a>.
+* If you are interested in commercial support, training, or consulting, consider <a href="https://download.liquibase.org" target="_blank" onClick="trackOutboundLink(this, 'Datical', 'Liquibase RFI'); return false">Liquibase Pro</a>.

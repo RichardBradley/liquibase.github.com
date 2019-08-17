@@ -1,8 +1,6 @@
 ---
 layout: default
 title: Liquibase for DBAs
-redirect_from:
-  - /dba
 ---
 
 # Liquibase for DBAs #

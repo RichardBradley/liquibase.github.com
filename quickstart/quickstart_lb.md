@@ -3,10 +3,12 @@ layout: default
 title: Liquibase Quickstart
 includeDaticalBox: true
 ---
+## Overview ##
+This tutorial builds on the setup that is described in the [Quick Start](../quickstart.html).
 
 ## Step 1: Create a Changelog File: ##
 
-The [database changelog file](documentation/databasechangelog.html) is where all database changes are listed. It is XML based, so start with an empty XML file:
+The [database changelog file](documentation/databasechangelog.html) is where all database changes are listed. Create a file called <code class="explicit">myChangeLog.xml</code> that contains the following:
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -70,7 +72,7 @@ There are many more databases supported by liquibase. For a list of them and whi
 
 ## Step 4: Check Your Database ##
 
-You will see that your database now contains a table called "department". Two other tables are created as well: "databasechangelog" and "databasechangeloglock". The databasechangelog table contains a list of all the statements that have been run against the database. The databasechangeloglock table is used to make sure two machines don't attempt to modify the database at the same time.
+You will see that your database now contains a table called "department". To inpsect the H2 database that is a part of the tutorial, open a terminal, navigate to the folder that you extracted the Liquibase <code class="explicit">*.zip</code> or the <code class="explicit">*.tar.gz</code> to and run <code class="explicit">java -jar h2-1.4.199.jar</code>.<strong>Note: enter the specific version of the h2*.jar that you downloaded!</strong> Enter the JDBC URL, User Name, and Password from the <code class="explicit">liquibase.properties</code> file you created per the [tutorial setup](../quickstart.html). You will notice two other tables are created as well: "databasechangelog" and "databasechangeloglock". The databasechangelog table contains a list of all the changes that have been run against the database. The databasechangeloglock table is used to make sure two machines don't attempt to modify the database at the same time.
 
 ## Next Steps ##
 

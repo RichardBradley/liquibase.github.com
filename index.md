@@ -40,6 +40,6 @@ includeDaticalBox: true
 <hr>
 
 <p style="text-align: center; font-size:medium; font-weight: bold">
-    Liquibase is thankful for the support, software, and/or services provided by the whole community including the following organizations. <br/>
+    Liquibase is thankful for the support, software, and/or services provided by the whole community including the following organizations: <br/>
     <a href="http://datical.com/">Datical</a> | <a href="https://atlassian.com/">Atlassian</a> | <a href="https://www.zoho.com/">Zoho</a> | <a href="https://www.yourkit.com/">YourKit</a>
 </p>          

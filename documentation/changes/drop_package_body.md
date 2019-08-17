@@ -93,7 +93,7 @@ DROP PACKAGE BODY cat.`A String`;
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2</td><td>Not Supported</td><td>No</td></tr>
+<tr><td>DB2</td><td>Supported</td><td>No</td></tr>
 <tr><td>Derby</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Firebird</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>H2</td><td>Not Supported</td><td>No</td></tr>

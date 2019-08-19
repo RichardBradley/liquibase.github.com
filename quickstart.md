@@ -4,6 +4,7 @@ title: Liquibase Quickstart
 includeDaticalBox: true
 ---
 <div>
+<h1 class="homepg"> Liquibase Quick Start</h1>    
 <h2 class="homepg"> Overview </h2>
 <p class="opg">
     This Quick Start provides a brief orientation to Liquibase, and addresses three key topics:</p>
@@ -153,10 +154,10 @@ changeLogFile: myChangeLog.xml{% endhighlight bash %}
 <h2 class="homepg" id="simpleSQL">Tutorial: Get Started with SQL Scripts</h2>
 <p class="opg">This tutorial is ideal for those comfortable and familiar with SQL. The tutorial starts with a blank database and guides you through the process of using Liquibase to track, version, and deploy SQL scripts located in a specific folder.</p>
 
-<h3 style="display:flex; justify-content:center; text-align:center"><a class="cta" href="/quickstart/quickstart_sql.html">Start with SQL scripts!</a></h3>
+<h3 style="display:flex; justify-content:center; text-align:center"><a class="cta" href="/quickstart/quickstart_sql.html">Start with SQL scripts</a></h3>
 <hr>
 <h2 class="homepg" id="lbmodel">Tutorial: Get Started with the Liquibase Model</h2>
 <p class="opg">This tutorial uses the Liquibase model. Instead of working with SQL, changes will be defined in XML. Liquibase will generate SQL based on the changeSet(s) defined and will deploy that to target databases. All migrations are tracked and ordered explicitly in the changeLog.</p>
-<h3 style="display:flex; justify-content:center; text-align:center"><a class="cta" href="/quickstart/quickstart_lb.html">Start with the Liquibase model!</a></h3>
+<h3 style="display:flex; justify-content:center; text-align:center"><a class="cta" href="/quickstart/quickstart_lb.html">Start with the Liquibase model</a></h3>
 
 </div>

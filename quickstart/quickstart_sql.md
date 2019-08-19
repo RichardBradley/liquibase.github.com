@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Liquibase Quickstart
+title: Liquibase Quickstart: Tutorial Using SQL Scripts
 includeDaticalBox: true
 ---
+# Liquibase Tutorial Using SQL Scripts #
+
 ## Overview ##
 This tutorial builds on the setup that is described in the [Quick Start](../quickstart.html).
 

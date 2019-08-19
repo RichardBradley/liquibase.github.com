@@ -3,9 +3,11 @@ liquibase.change
 liquibase.change.core
 liquibase.change.custom
 liquibase.changelog
+liquibase.changelog.column
 liquibase.changelog.filter
 liquibase.changelog.visitor
 liquibase.command
+liquibase.command.core
 liquibase.common.datatype
 liquibase.configuration
 liquibase.database
@@ -32,6 +34,8 @@ liquibase.integration.commandline
 liquibase.integration.servlet
 liquibase.integration.spring
 liquibase.io
+liquibase.license
+liquibase.listener
 liquibase.lockservice
 liquibase.logging
 liquibase.logging.core
@@ -78,5 +82,6 @@ liquibase.util.csv.opencsv.bean
 liquibase.util.csv.opencsv.enums
 liquibase.util.csv.opencsv.stream.reader
 liquibase.util.file
+liquibase.util.grammar
 liquibase.util.ui
 liquibase.util.xml

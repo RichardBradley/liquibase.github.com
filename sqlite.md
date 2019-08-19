@@ -8,7 +8,7 @@ title: Sqlite
 SQLite is a single-file database which follows the zero-configuration approach.
 It is furthermore easy to use and is thus perfect for your first experiments with liquibase.
 
-There is a jdbc driver available here: [http://www.zentus.com/sqlitejdbc/](http://www.zentus.com/sqlitejdbc/)
+There is a jdbc driver available here: [https://bitbucket.org/xerial/sqlite-jdbc/downloads/](https://bitbucket.org/xerial/sqlite-jdbc/downloads/)
 
 To use sqlite with liquibase you will need the following information:
 

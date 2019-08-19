@@ -15,10 +15,10 @@ To keep up with your database migration scripts, you need to use the update your
 1. Write Test
 1. Run Test
 1. Code Change
-1. *Append database changes to <a href="http://www.liquibase.org/manual/databasechangelog" target="_blank">change log</a>*
+1. *Append database changes to <a href="https://www.liquibase.org/documentation/databasechangelog.html" target="_blank">change log</a>*
 1. *Run Liquibase to update database*
 1. Run Test, See Green
 
 Making no database changes outside of your change log script and dev cycle will ensure that no changes get forgotten and that there are no differences between what happened on the developer's database and what happens on other developer's and production databases.
 
-To integrate Liquibase into your build process, there are <a href="http://www.liquibase.org/manual/ant" target="_blank">Ant</a>, and <a href="http://www.liquibase.org/manual/maven" target="_blank">Maven</a> front-ends available. This will allow you to migrate your integration tests data sets before executing them and allow you to find errors in your database update logic with each run.<img src="http://feeds.feedburner.com/%7Er/liquibase/%7E4/329863436" alt="" width="1" height="1" />
+To integrate Liquibase into your build process, there are <a href="https://www.liquibase.org/documentation/ant/index.html" target="_blank">Ant</a>, and <a href="https://www.liquibase.org/documentation/maven/index.html" target="_blank">Maven</a> front-ends available. This will allow you to migrate your integration tests data sets before executing them and allow you to find errors in your database update logic with each run.<img src="http://feeds.feedburner.com/%7Er/liquibase/%7E4/329863436" alt="" width="1" height="1" />

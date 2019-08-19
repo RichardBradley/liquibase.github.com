@@ -23,7 +23,6 @@
 <li><a href='enable_check_constraint.html'><span>enable Check Constraint</span></a></li>
 <li><a href='enable_trigger.html'><span>enable Trigger</span></a></li>
 <li><a href='mark_unused.html'><span>mark Unused</span></a></li>
-<li><a href='rename_sequence.html'><span>rename Sequence</span></a></li>
 
 <hr>
 <h3 style='color: #747373'>Liquibase Changes</h3>

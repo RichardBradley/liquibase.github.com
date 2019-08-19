@@ -113,7 +113,7 @@ includeDaticalBox: true
     </li>
     <li>Validate that you have a working java version.
             <ul class="opg" style="list-style-type: circle; padding-bottom: 0; margin-left: 1em;">
-                    <li>On the command line, execute: {% highlight bash %}java --version{% endhighlight %}</li>
+                    <li>On the command line, execute: {% highlight bash %}java -version{% endhighlight %}</li>
                     <li>Ensure that it runs successfully and displays your installed Java version.</li>
             </ul>
     </li>

@@ -14,7 +14,7 @@ includeDaticalBox: true
 
 <div>
 <h2 class="homepg" style="text-align:right">Open and Extensible</h2>
-<p class="homepg">Liquibase is truly open-source and is released under the Apache 2.0 license. While Liquibase already supports a broad range of <a href="databases.html">database platorms</a>, it has a flexible <a href="extensions/index.html">extension framework</a> for easily adding support for new database platforms. Additionally, it is easy to embed and execute Liquibase through its <a href="javadoc/index.html">Java APIs</a>.</p>
+<p class="homepg">Liquibase is truly open-source and is released under the Apache 2.0 license. While Liquibase already supports a broad range of <a href="databases.html">database platforms</a>, it has a flexible <a href="extensions/index.html">extension framework</a> for easily adding support for new database platforms. Additionally, it is easy to embed and execute Liquibase through its <a href="javadoc/index.html">Java APIs</a>.</p>
 </div>
 
 <div style="background-color:lightgray">
@@ -30,7 +30,7 @@ includeDaticalBox: true
 <div style="background-color:lightgray">
         <h2 class="homepg">Fits Your Process</h2>
         <p class="homepg">
-            Liquibase is built to support teams of developers working simultaneously on database changes, and can gracefully handle branching and merging of database migraitons. There are numerous options for fitting Liquibase into a <a href="documentation/running.html">build processes</a>. It is possible to <a href="documentation/sql_output.html">generate SQL scripts</a> for DBA code review and even perform database <a href="documentation/diff.html">diffs</a>. Liquibase does not require a <a href="documentation/offline.html">live database connection</a>, and makes it easy to <a href="documentation/dbdoc.html">document</a> datbase migrations. Whether you are a <a href="/dba.html" style="font-weight: bolder;">DBA</a>, <a href="/qa.html" style="font-weight: bolder;">QA Engineer</a>, <a href="/release_manager.html" style="font-weight: bolder;">Release Manager</a>, or  <a href="/developer.html" style="font-weight: bolder;">Developer</a>, Liquibase can meet your needs.
+            Liquibase is built to support teams of developers working simultaneously on database changes, and can gracefully handle branching and merging of database migrations. There are numerous options for fitting Liquibase into a <a href="documentation/running.html">build processes</a>. It is possible to <a href="documentation/sql_output.html">generate SQL scripts</a> for DBA code review and even perform database <a href="documentation/diff.html">diffs</a>. Liquibase does not require a <a href="documentation/offline.html">live database connection</a>, and makes it easy to <a href="documentation/dbdoc.html">document</a> datbase migrations. Whether you are a <a href="/dba.html" style="font-weight: bolder;">DBA</a>, <a href="/qa.html" style="font-weight: bolder;">QA Engineer</a>, <a href="/release_manager.html" style="font-weight: bolder;">Release Manager</a>, or  <a href="/developer.html" style="font-weight: bolder;">Developer</a>, Liquibase can meet your needs.
         </p>
 </div>
 <br/>

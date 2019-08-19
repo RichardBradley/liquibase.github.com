@@ -15,7 +15,8 @@ Parameter values are looked up in the following order:
 
   - Passed as a parameter to your Liquibase runner (see [Ant](ant/index.html), [command_line](command_line.html), etc. documentation for how to pass them)
   - As a JVM system property
-  - In the parameters block (&lt;property&gt; Tag) of the [DatabaseChangeLog](DatabaseChangeLog.html) file itself.
+  - In the parameters block (&lt;property&gt; Tag) of the [DatabaseChangeLog](DatabaseChangeLog.html) file itself
+  - As an environment variable
 
 #### Examples ####
 
@@ -61,6 +62,7 @@ Defines a parameter for the changelog. Given a list of contexts and/or databases
 <tr><td>value</td><td>Name of the column's table <b>required</b>  </td></tr>
 <tr><td>context</td><td>Contexts given as comma separated list.  </td></tr>
 <tr><td>dbms</td><td>Database types given as comma separated list.  </td></tr>
+<tr><td>global</td><td>Defines whether the property is global or limited to a databaseChangeLog. Given as "true" or "false".  </td></tr>
 </table>
 
 Example:
@@ -70,4 +72,5 @@ Example:
     <property name="clob.type" value="clob" dbms="oracle,h2"/>
     <property name="clob.type" value="longtext" dbms="mysql"/>
     <property name="myproperty" value="yes" context="common,test"/>
+    <property name="localproperty" value="foo" global="false"/>
 {% endhighlight %}

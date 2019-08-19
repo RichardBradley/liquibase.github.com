@@ -96,7 +96,7 @@ Leverage Liquibase to manage your Reference Data. Environment separation (DEV, Q
 
 ## Consider Datical ##
 
-Datical is a commercial product with builds on the core Liquibase functionality. Beyond versioning and managing database changes, Datical bridges the gap between development and operations with capabilities that enable a fully unified and automated path for database code. 
+Datical is a commercial product which builds on the core Liquibase functionality. Beyond versioning and managing database changes, Datical bridges the gap between development and operations with capabilities that enable a fully unified and automated path for database code. 
 
 * Datical has a web interface, command line interface, and REST API. All interfaces are secure and require authentication.
 * Datical automatically verifies database code against organizational standards to eliminate manual review

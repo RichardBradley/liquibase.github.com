@@ -1,8 +1,6 @@
 ---
 layout: default
 title: Liquibase for Developers
-redirect_from:
-  - /developer
 ---
 
 # Liquibase for Developers #

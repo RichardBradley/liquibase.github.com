@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Liquibase Quickstart
+title: Liquibase Quickstart: Tutorial Get Started with Liquibase Model
 includeDaticalBox: true
 ---
+# Liquibase Tutorial: Get Started with the Liquibase Model #
+
 ## Overview ##
 This tutorial builds on the setup that is described in the [Quick Start](../quickstart.html).
 

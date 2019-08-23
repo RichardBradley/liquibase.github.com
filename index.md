@@ -4,12 +4,12 @@ title: Liquibase
 includeDaticalBox: true
 ---
 <h1 style="display:flex; justify-content:center"><img src="images/liquibase_logo.gif" alt="Liquibase"></h1>
-<h2 style="display:flex; justify-content:center; text-align:center">The leading open source database deployment solution, providing a database-independent solution for fast, safe, repeatable database deployments</h2>
+<h2 style="display:flex; justify-content:center; text-align:center">The leading open source database change and deployment solution. Liquibase provides a database-independent way to deliver fast, safe, repeatable database deployments</h2>
 <h3 style="display:flex; justify-content:center; text-align:center"><a class="cta" href="/quickstart.html">Quick Start</a></h3>
 
 <div style="background-color:lightgrey">
 <h2 class="homepg">Flexible Database Change Definition</h2>
-<p class="homepg">Whether it’s simple <a href="documentation/sql_format.html">SQL scripts</a>, <a href="documentation/xml_format.html">XML</a>, <a href="documentation/json_format.html">JSON</a>, or <a href="documentation/yaml_format.html">YAML</a> migrations, Liquibase makes it easy to define database changes in the most appropriate format that’s familiar and comfortable to each user.</p>
+<p class="homepg">Whether it’s simple <a href="documentation/sql_format.html">SQL scripts</a>, <a href="documentation/xml_format.html">XML</a>, <a href="documentation/json_format.html">JSON</a>, or <a href="documentation/yaml_format.html">YAML</a> migrations, Liquibase makes it easy to define database changes in a format that’s familiar and comfortable to each user.</p>
 </div>
 
 <div>
@@ -18,13 +18,13 @@ includeDaticalBox: true
 </div>
 
 <div style="background-color:lightgray">
-<h2 class="homepg">Efficient, Standardized Change Management</h2>
-<p class="homepg">When using the Liquibase model, Liquibase generates database-appropriate SQL. This allows teams to efficiently scale by writing database changes once and deploying to a variety of backends. Even if your team works with a single database platform, this capability standardizes the SQL produced in development making reviews, audits, and troubleshooting easier. Learn more in the <a href="quickstart.html">Quick Start</a>.</p>
+<h2 class="homepg">Efficient, Standardized Database Change Management</h2>
+<p class="homepg">Liquibase functions make it easy to generate database-appropriate SQL. This allows teams to efficiently scale by writing database changes once and deploying to a variety of backends. Even if your team works with a single database platform, this capability standardizes the SQL produced in development making reviews, audits, and troubleshooting easier. Learn more in the <a href="quickstart.html">Quick Start</a>.</p>
 </div>
 
 <div>
 <h2 class="homepg" style="text-align:right">Precise Database Change Control</h2>
-<p class="homepg">Liquibase has a robust set of capabilities to precisely control when, where, and how database changes are deployed. Go beyond filenames and precisely order changes with an explicit <a href="documentation/databasechangelog.html">changeLog file</a>. Fine tune how your changes are deployed to each environment with <a href="documentation/contexts.html">contexts</a> and labels. Use conditional logic to further manage the deployment of changes in each environment with Liquibase <a href="documentation/preconditions.html">preconditions</a>.</p>
+<p class="homepg">Liquibase has a robust set of capabilities to precisely control when, where, and how database changes are deployed. Go beyond filenames and precisely order changes with an explicit <a href="documentation/databasechangelog.html">change log file</a>. Fine tune how your changes are deployed to each environment with <a href="documentation/contexts.html">contexts</a> and labels. Use conditional logic to further manage the deployment of changes in each environment with Liquibase <a href="documentation/preconditions.html">preconditions</a>.</p>
 
 
 <div style="background-color:lightgray">

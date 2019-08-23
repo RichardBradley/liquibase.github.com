@@ -23,7 +23,7 @@ This is a one-time step to configure a changeLog to point to the <code class="ex
   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
-  <includeAll path="./sql"/>
+  <includeAll path="sql"/>
 </databaseChangeLog>
 {% endhighlight %}
 

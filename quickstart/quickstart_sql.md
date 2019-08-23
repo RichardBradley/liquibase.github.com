@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Liquibase Quickstart: Tutorial Using SQL Scripts
+title: Liquibase Tutorial: Get Started Using SQL Scripts
 includeDaticalBox: true
 ---
-# Liquibase Tutorial Using SQL Scripts #
+# Liquibase Tutorial: Getting Started Using SQL Scripts #
 
 ## Overview ##
 This tutorial builds on the setup that is described in the [Quick Start](../quickstart.html).
@@ -12,9 +12,9 @@ This tutorial builds on the setup that is described in the [Quick Start](../quic
 
 In the folder that you extracted the Liquibase <code class="explicit">*.zip</code> or the <code class="explicit">*.tar.gz</code>, create a <code class="explicit">sql</code> folder. This is the folder in which you will place SQL scripts that Liquibase will track, version, and deploy.
 
-## Step 2: Setup the changeLog ##
+## Step 2: Setup the Change Log ##
 
-This is a one-time step to configure a changeLog to point to the <code class="explicit">sql</code> folder that will contain SQL scripts. Create and save a file in the same directory that you extracted the Liquibase <code class="explicit">*.zip</code> or the <code class="explicit">*.tar.gz</code> named <code class="explicit">myChangeLog.xml</code>. The contents of <code class="explicit">myChangeLog.xml</code> should be as follows:
+This is a one-time step to configure a change log to point to the <code class="explicit">sql</code> folder that will contain SQL scripts. Create and save a file in the same directory that you extracted the Liquibase <code class="explicit">*.zip</code> or the <code class="explicit">*.tar.gz</code> named <code class="explicit">myChangeLog.xml</code>. The contents of <code class="explicit">myChangeLog.xml</code> should be as follows:
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <databaseChangeLog
@@ -27,7 +27,7 @@ This is a one-time step to configure a changeLog to point to the <code class="ex
 </databaseChangeLog>
 {% endhighlight %}
 
-## Step 2: Add a SQL script to the sql Folder ##
+## Step 2: Add a SQL Script to the sql Folder ##
 With a <code class="explicit">liquibase.properties</code> file from the [tutorial setup](../quickstart.html) and the newly created <code class="explicit">myChangeLog.xml</code>, we are now ready to start adding SQL scripts to the <code class="explicit">sql</code> folder. Liquibase will order the scripts in the folder alphanumerically. Create a <code class="explicit">001_create_person_table.sql</code> with the following and save it in the <code class="explicit">sql</code> folder:
 {% highlight sql %}
 create table PERSON (
@@ -36,7 +36,7 @@ create table PERSON (
 );
 {% endhighlight %}
 
-## Step 3: Deploy your first change! ##
+## Step 3: Deploy Your First Change! ##
 
 We are now ready to deploy our first script! Open a terminal and run <code class="explicit">./liquibase update</code> if on a UNIX system or <code class="explicit">liquibase.bat update</code> if on Windows.
 
@@ -46,6 +46,6 @@ You will see that your database now contains a table called "PERSON". To inpsect
 
 ## Next Steps ##
 
-* This quick-start guide is designed to get you started with Liquibase. For a full description of all its capabilities, see the [Liquibase Manual](http://www.liquibase.org/documentation/index.html), read [the best practices](https://www.liquibase.org/bestpractices.html) and visit the [forums](http://www.liquibase.org/community/index.html). 
-* If you have an existing project you are looking to add Liquibase too, visit the [Existing Project](https://www.liquibase.org/documentation/existing_project.html) page.
+* This quick-start guide is designed to quickly introduce you to Liquibase. For a full description of all its capabilities, see the [Liquibase Manual](http://www.liquibase.org/documentation/index.html), read [the best practices](https://www.liquibase.org/bestpractices.html) and visit the [forums](http://www.liquibase.org/community/index.html). 
+* If you have an existing project you are looking to add Liquibase to, visit the [Existing Project](https://www.liquibase.org/documentation/existing_project.html) page.
 * If you are interested in commercial support, training, or consulting, consider <a href="https://download.liquibase.org" target="_blank" onClick="trackOutboundLink(this, 'Datical', 'Liquibase RFI'); return false">Liquibase Pro</a>.

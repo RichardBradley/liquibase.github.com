@@ -32,7 +32,7 @@ With a <code class="explicit">liquibase.properties</code> file from the [tutoria
 {% highlight sql %}
 create table PERSON (
     ID int not null,
-    FNAME varchar(100) not null,
+    FNAME varchar(100) not null
 );
 {% endhighlight %}
 

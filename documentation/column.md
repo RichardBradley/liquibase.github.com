@@ -51,11 +51,11 @@ The "column" tag is a tag that is re-used throughout the Liquibase XML when colu
     </tr>
     <tr>
       <td>valueBlobFile</td>
-      <td>Path to a file, which contents will be written as a BLOB (i.e. chunk of binary data). Must be either absolute or relative to the Change Log file location (absolute paths are, e.g.: <tt>/usr/local/somefile.dat</tt> on Unix or <tt>c:\Directory\somefile.dat</tt> on Windows. Please refer to <a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html">java.io.File javadoc</a> for the details of what to consider relative/absolute path).</td>
+      <td>Path to a file, whose contents will be written as a BLOB (i.e. chunk of binary data). Must be either absolute or relative to the Change Log file location (absolute paths are, e.g.: <tt>/usr/local/somefile.dat</tt> on Unix or <tt>c:\Directory\somefile.dat</tt> on Windows. Please refer to <a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html">java.io.File javadoc</a> for the details of what to consider relative/absolute path).</td>
     </tr>
     <tr>
       <td>valueClobFile</td>
-      <td>Path to a file, which contents will be written as a CLOB (i.e. chunk of character data). Must be either absolute or relative to the Change Log file location (absolute paths are, e.g.: <tt>/usr/local/somefile.dat</tt> on Unix or <tt>c:\Directory\somefile.dat</tt> on Windows. Please refer to <a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html">java.io.File javadoc</a> for the details of what to consider relative/absolute path).</td>
+      <td>Path to a file, whose contents will be written as a CLOB (i.e. chunk of character data). Must be either absolute or relative to the Change Log file location (absolute paths are, e.g.: <tt>/usr/local/somefile.dat</tt> on Unix or <tt>c:\Directory\somefile.dat</tt> on Windows. Please refer to <a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html">java.io.File javadoc</a> for the details of what to consider relative/absolute path).</td>
     </tr>
     <tr>
       <td>encoding</td>

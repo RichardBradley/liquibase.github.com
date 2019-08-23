@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Liquibase Quickstart
+title: Liquibase Quick Start
 includeDaticalBox: true
 ---
 <div>
@@ -11,10 +11,10 @@ includeDaticalBox: true
     <ul class="opg">
         <li><a href="#approach">State and Migration approaches</a></li>
         <li><a href="#how">How Liquibase works</a></li>
-        <li><a href="#tutorials">Tutorials for using Liquibase</a>
+        <li><a href="#tutorials">Tutorials for quickly getting started with Liquibase</a>
             <ul class="opg" style="list-style-type: circle; padding-bottom: 0; margin-left: 1em;">
-                    <li><a href="#simpleSQL">Tutorial: Use SQL Scripts</a></li>
-                    <li><a href="#lbmodel">Tutorial: Use the Liquibase Model</a></li>
+                    <li><a href="#simpleSQL">Tutorial: Getting Started Using SQL Scripts</a></li>
+                    <li><a href="#lbmodel">Tutorial: Getting Started Using Liquibase Functions</a></li>
                 </ul></li>
     </ul>
     <p class="opg">
@@ -25,10 +25,10 @@ includeDaticalBox: true
 <div style="background-color:lightgray">
 <h2 class="homepg" id="approach">Database Change Management: State and Migration approaches</h2>
 <p class="opg">
-    There are two approaches for managing database changes. The first approach is declarative (or state-based) – in which the desired state of the database is defined. A tool that can compare (or diff) the target environment against the defined desired state is used to generate migration scripts that allow the target environment to match the declared state. The alternative approach is imperative (or migration-based) – in which the specific migrations for altering the state of a database are described. A tool capable of explicitly tracking and ordering the individual migrations and deploying the migrations that have not yet been deployed to the target environment is used to get the target database properly migrated. 
+    There are two approaches for managing database changes. The first approach is state-based (or declarative) – in which the desired state of the database is defined. A tool that can compare (or diff) the target environment against the defined desired state is used to generate migration scripts that allow the target environment to match the declared state. The alternative approach is migration-based (or imperative) – in which the specific migrations for altering the state of a database are described. A tool capable of explicitly tracking and ordering the individual migrations and deploying the migrations that have not yet been deployed to the target environment is used to get the target database properly migrated. 
 </p>
 <p class="opg">
-    While Liquibase is capable of comparisons (or diffs), it is fundamentally an imperative (or migration-based) solution. The diff capability in Liquibase is only meant to assist with onboarding new projects and with sanity checking that database migrations have been properly applied. As a migration-based solution, Liquibase can easily:</p>
+    While Liquibase is capable of comparisons (or diffs), it is fundamentally a migration-based solution. The diff capability in Liquibase is only meant to assist with onboarding new projects and with sanity checking that database migrations have been properly applied. As a migration-based solution, Liquibase can easily:</p>
     <ul class="opg">
         <li>Track all proposed database changes, including the specific order they need to be deployed in, who proposed/authored the change, and record the purpose of the change (as a comment)</li>
         <li>Clearly answer whether a database change has or has not been deployed to a database. Effectively, Liquibase is able to “version” each database</li>
@@ -42,15 +42,15 @@ includeDaticalBox: true
 <h2 class="homepg" id="how">How Liquibase Works</h2>
 <p class="opg">At its core, Liquibase relies on a simple mechanism to track, version, and deploy changes:</p>
 <ul class="opg">
-    <li>Liquibase uses a changeLog (which is a ledger of changes) to explicitly list database changes in a specific order. Each change in the changeLog is a “changeSet”. ChangeLogs can be arbitrarily nested to aid in organization and management of database migrations.
+    <li>Liquibase uses a change log (which is a ledger of changes) to explicitly list database changes in a specific order. Each change in the change log is a “change set”. Change logs can be arbitrarily nested to aid in organization and management of database migrations.
         <ul class="opg" style="list-style-type: circle; padding-bottom: 0; margin-left: 1em;">
-            <li>Note: It is a best practice to ensure that each changeSet is as atomic a change as possible to avoid failed statements from leaving the database in an unknown state; however, it is possible to treat a large SQL script as a single changeSet.</li>
+            <li>Note: It is a best practice to ensure that each change set is as atomic a change as possible to avoid failed statements from leaving the database in an unknown state; however, it is possible to treat a large SQL script as a single change set.</li>
         </ul>
     </li>
-    <li>Liquibase uses a tracking table (specifically called ‘DATABASECHANGELOG’) which resides on each database and which tracks which changeSets in the changeLog have been deployed. 
+    <li>Liquibase uses a tracking table (specifically called ‘DATABASECHANGELOG’) which resides on each database and which tracks which change sets in the change log have been deployed. 
             <ul class="opg" style="list-style-type: circle; padding-bottom: 0; margin-left: 1em;">
                 <li>Note: if there is no tracking table on a database that Liquibase is acting upon, the Liquibase will create a tracking table.</li>
-                <li>Note: To assist with projects where you are not starting with a blank database, Liquibase has a feature to generate a changeLog to represent the current state of the database schema.</li>
+                <li>Note: To assist with projects where you are not starting with a blank database, Liquibase has a feature to generate a change log to represent the current state of the database schema.</li>
             </ul>
         </li>
 </ul>
@@ -58,7 +58,7 @@ includeDaticalBox: true
         With the ledger and the tracking table, Liquibase is able to:
 </p>
 <ul class="opg">
-    <li>Track and version database changes – so users know exactly what changes have been deployed to the database and what changes have not yet been deployed</li>
+    <li>Track and version database changes – Users know exactly what changes have been deployed to the database and what changes have not yet been deployed.</li>
     <li>Deploy changes – specifically, by comparing what is in the ledger against what is in the tracking table, Liquibase is able to deploy only the changes that have not yet been deployed previously to the database.
             <ul class="opg" style="list-style-type: circle; padding-bottom: 0; margin-left: 1em;">
                     <li>Note: Liquibase has advanced features such as contexts, labels, and preconditions to precisely control when and where changeSets are deployed.</li>
@@ -71,8 +71,8 @@ includeDaticalBox: true
 <div style="background-color:lightgray">
 <h2 class="homepg" id="tutorials">Tutorials: Track, Version, and Deploy Database Changes with Liquibase</h2>
 <p class="opg">
-        When working with Liquibase, changes can either be defined with the <strong><a href="#simpleSQL">Liquibase object model</a></strong> or with <strong><a href="#lbmodel">SQL</a></strong>. Importantly, these modes are not mutually exclusive, and can be used in conjunction, providing considerable flexibility in how database changes are defined and deployed.
-        For changes defined with the Liquibase object model, Liquibase generates SQL appropriate for the target database. This can be helpful when:
+        When working with Liquibase, changes can either be defined with the <strong><a href="#simpleSQL">Liquibase functions</a></strong> or with <strong><a href="#lbmodel">SQL</a></strong>. Importantly, these modes are not mutually exclusive, and can be used in conjunction, providing considerable flexibility in how database changes are defined and deployed.
+        For changes defined with Liquibase functions, Liquibase generates SQL appropriate for the target database. This can be helpful when:
 </p>
 <ul class="opg">
     <li>Supporting multiple different database backends. This is a common use case if you are a software vendor looking to avoid writing the same database migrations simply to support different database platforms.</li>
@@ -83,11 +83,11 @@ includeDaticalBox: true
     Alternatively, Liquibase works directly with user provided database migrations. This can be helpful when:
 </p>
 <ul class="opg">
-    <li>Making changes that are not a part of the Liquibase object model. Changes that are custom or specific to a database – for example, Oracle Nested Tables – are not typically part of the Liquibase object model.</li>
+    <li>Making changes that are not Liquibase functions. Changes that are custom or specific to a database – for example, Oracle Nested Tables – are not typically Liquibase functions.</li>
     <li>Enabling developers highly proficient in SQL who strongly prefer working directly with SQL. It’s a common misconception that Liquibase only supports “XML database migrations”. The reality is that Liquibase can absolutely support plain SQL scripts!</li>
 </ul>
 <p class="callout">
-        Note: <strong>Liquibase Pro</strong> adds change types for defining procedural database code to the Liquibase object model. However, unlike other changes that are a part of the Liquibase object model, these procedural database code changes, such as “CREATE FUNCTION”, require database platform specific SQL (for example, on Oracle, the change would require PL/SQL). These new change types can be helpful in providing better visibility into database-specific changes from directly inspecting the changeLog.
+        Note: <strong>Liquibase Pro</strong> adds change types for defining procedural database code to Liquibase functions. However, unlike other changes that are Liquibase functions, these procedural database code changes, such as “CREATE FUNCTION”, require database platform specific SQL (for example, on Oracle, the change would require PL/SQL). These new change types can be helpful in providing better visibility into database-specific changes from directly inspecting the change log.
 </p>
 <br/>
 </div>
@@ -151,13 +151,13 @@ changeLogFile: myChangeLog.xml{% endhighlight bash %}
 
 <div style="background-color:lightgray">
 
-<h2 class="homepg" id="simpleSQL">Tutorial: Get Started with SQL Scripts</h2>
+<h2 class="homepg" id="simpleSQL">Tutorial: Getting Started Using SQL Scripts</h2>
 <p class="opg">This tutorial is ideal for those comfortable and familiar with SQL. The tutorial starts with a blank database and guides you through the process of using Liquibase to track, version, and deploy SQL scripts located in a specific folder.</p>
 
-<h3 style="display:flex; justify-content:center; text-align:center"><a class="cta" href="/quickstart/quickstart_sql.html">Start with SQL scripts</a></h3>
+<h3 style="display:flex; justify-content:center; text-align:center"><a class="cta" href="/quickstart/quickstart_sql.html">Start with SQL Scripts</a></h3>
 <hr>
-<h2 class="homepg" id="lbmodel">Tutorial: Get Started with the Liquibase Model</h2>
-<p class="opg">This tutorial uses the Liquibase model. Instead of working with SQL, changes will be defined in XML. Liquibase will generate SQL based on the changeSet(s) defined and will deploy that to target databases. All migrations are tracked and ordered explicitly in the changeLog.</p>
-<h3 style="display:flex; justify-content:center; text-align:center"><a class="cta" href="/quickstart/quickstart_lb.html">Start with the Liquibase model</a></h3>
+<h2 class="homepg" id="lbmodel">Tutorial: Getting Started Using Liquibase Functions</h2>
+<p class="opg">This tutorial uses Liquibase functions. Instead of working with SQL, changes will be defined in XML. Liquibase will generate SQL based on the changeSet(s) defined and will deploy that to target databases. All migrations are tracked and ordered explicitly in the changeLog.</p>
+<h3 style="display:flex; justify-content:center; text-align:center"><a class="cta" href="/quickstart/quickstart_lb.html">Start with Liquibase Functions</a></h3>
 
 </div>

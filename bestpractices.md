@@ -94,8 +94,12 @@ Leverage Liquibase to manage your Reference Data. Environment separation (DEV, Q
 * Test the new application code together with the database change;
 * Commit both the changeSet and the application code.
 
-## Consider Datical ##
+## Consider Liquibase Pro or Datical ##
 
+### Liquibase Pro ###
+<a href="https://download.liquibase.org/" target="_blank">Liquibase Pro</a> offers an extra layer of support so you don't have to go it alone. While Liquibase is a great starting point, teams that want best practices on how to make the most of Liquibase may find Liquibase Pro better suited to their needs. Liquibase Pro also adds functions for procedural database code.
+
+### Datical ###
 Datical is a commercial product which builds on the core Liquibase functionality. Beyond versioning and managing database changes, Datical bridges the gap between development and operations with capabilities that enable a fully unified and automated path for database code. 
 
 * Datical has a web interface, command line interface, and REST API. All interfaces are secure and require authentication.
@@ -106,6 +110,6 @@ Datical is a commercial product which builds on the core Liquibase functionality
 * Datical integrates with ticketing systems such as JIRA to make it easy to trace database changes back to source code and initial requirements. This same capability also makes it easy to hold or accelerate feature sets.
 * Datical can snapshot and compare database schemas to help identify and address drift
 
-For more information on Datical, visit <a href="http://www.datical.com/liquibase/" target="_blank" onClick="trackOutboundLink(this, 'Datical', 'Liquibase RFI'); return false">http://www.datical.com/Liquibase</a>
+For more information on Datical, visit <a href="https://www.datical.com/liquibase/" target="_blank" onClick="trackOutboundLink(this, 'Datical', 'Liquibase RFI'); return false">https://www.datical.com/Liquibase</a>
 
 

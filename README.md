@@ -31,3 +31,7 @@ bundle install
 ```bash
 bundle exec jekyll serve 
 ```
+_Or_
+```bash
+bundle exec jekyll serve -l
+```

@@ -2,10 +2,61 @@
 layout: default
 title: Liquibase
 includeDaticalBox: true
+extraStyleSheets:
+  - choose-path
 ---
-<h1 style="display:flex; justify-content:center"><img src="images/liquibase_logo.gif" alt="Liquibase"></h1>
-<h2 style="display:flex; justify-content:center; text-align:center">The leading open source database change and deployment solution. Liquibase provides a database-independent way to deliver fast, safe, repeatable database deployments</h2>
-<h3 style="display:flex; justify-content:center; text-align:center"><a class="cta" href="/quickstart.html">Quick Start</a></h3>
+
+<h1 style="display:flex; justify-content:center; margin-top: 36px;"><img src="images/liquibase_logo.gif" alt="Liquibase"></h1>
+<h3 style="display:flex; justify-content:center; text-align:center">The leading open source database change and deployment solution. Liquibase provides a database-independent way to deliver fast, safe, repeatable database deployments</h3>
+
+<div class="lb-choose-path">
+    <div class="lb-choose-path__heading">
+        <div class="lb-choose-path__heading__title">
+            <h2>
+                Which Option is Right for You?
+            </h2>
+        </div>
+    </div>
+    <div class="lb-choose-path__paths">
+        <div class="lb-choose-path__path lb-choose-path__path--community">
+            <div class="lb-choose-path__path__title">
+                <h2>
+                    Liquibase Community
+                </h2>
+            </div>
+            <div class="lb-choose-path__path__text">
+                <p>
+                    Liquibase provides a great starting point for teams addressing the challenges that come with managing database changes.
+                    <br><br>
+                    It does a lot more than push database scripts, it generates and deploys them as well.
+                </p>
+            </div>
+            <div class="lb-choose-path__path__spacer"></div>
+            <div class="lb-choose-path__path__button">
+                <a href="https://download.liquibase.org/download-community/" class="cta cta--block">COMMUNITY CTA TEXT</a>
+            </div>
+        </div>
+        <div class="lb-choose-path__path lb-choose-path__path--pro">
+            <div class="lb-choose-path__path__title">
+                <h2>
+                    Liquibase Pro
+                </h2>
+            </div>
+            <div class="lb-choose-path__path__text">
+                <p>
+                    Liquibase Pro offers expert help and support from the creators or Liquibase, so you don’t have to go it alone.
+                    <br><br>
+                    Liquibase Pro also adds capabilities that enhance and extend the base open source features, such as adding functions to change sets for updating procedural database code.
+                    <br><br>
+                    <em>Try it free for 14 days.</em>
+                </p>
+            </div>
+            <div class="lb-choose-path__path__button">
+                <a href="https://download.liquibase.org/" class="cta cta--block">PRO CTA TEXT</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div style="background-color:lightgrey">
 <h2 class="homepg">Flexible Database Change Definition</h2>

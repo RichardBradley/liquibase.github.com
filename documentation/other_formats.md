@@ -9,5 +9,5 @@ Beyond the built in [XML](xml_format.html), [YAML](yaml_format.html), [JSON](jso
 the Liquibase extension system allows you to create changelog files in whatever format you like.
 
 Additional community-managed formats include:
-- [Groovy Liquibase](https://github.com/tlberglund/groovy-liquibase)
+- [Groovy Liquibase](https://github.com/liquibase/liquibase-groovy-dsl)
 - [Clojure Liquibase Wrapper](https://github.com/kumarshantanu/clj-liquibase)

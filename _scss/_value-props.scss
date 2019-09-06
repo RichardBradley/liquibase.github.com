@@ -1,0 +1,30 @@
+@import "util/_elevation";
+
+.value-prop {
+  border-radius: 8px;
+  margin-bottom: 24px;
+  padding: 24px 16px;
+  text-align: center;
+  @include dat-elevation(2);
+
+  h2 {
+    margin-bottom: 24px;
+  }
+    
+  p {
+    margin: auto;
+  }
+
+  &:nth-of-type(odd) {
+    background-color: mix(lightgray, #fff, 13%);
+  }
+
+  &:nth-of-type(even) {
+    background-color: lightgray;
+  }
+
+  p {
+    font-size: 14px;
+    max-width: 550px;
+  }
+}

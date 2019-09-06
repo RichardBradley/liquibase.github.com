@@ -23,12 +23,6 @@ a.cta {
     width:100%;
 }
 
-/* a.cta--block {
-    display: block;
-    width: unset;
-    text-align: center;
-} */
-
 h1.homepg, h2.homepg, h3.homepg, h4.homepg {
     line-height: 1;
     margin-bottom: 0em;

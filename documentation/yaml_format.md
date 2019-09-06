@@ -67,7 +67,7 @@ databaseChangeLog:
       changes:
         - addLookupTable:
             existingTableName: person
-            existingColumnName:state
+            existingColumnName: state
             newTableName: state
             newColumnName: id
             newColumnDataType: char(2)

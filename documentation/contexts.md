@@ -70,5 +70,5 @@ The specified context will be AND'ed with any contexts specified in changeSets w
 
 ## Include/IncludeAll context ##
 
-Beginning with Liquibase 3.5, you can specify a context attribute in <include> or <includeAll> tags. If specified, the given context is added to all changeSets in the included file(s).
+Beginning with Liquibase 3.5, you can specify a context attribute in `<include>` or `<includeAll>` tags. If specified, the given context is added to all changeSets in the included file(s).
 

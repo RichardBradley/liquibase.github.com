@@ -22,6 +22,7 @@ The root of all Liquibase changes is the databaseChangeLog file.
 <tr><td>property</td><td>Value to set property to, if not set by another means. <a href="changelog_parameters.html">Read More</a></td></tr>
 <tr><td>changeSet</td><td>The change sets to execute. <a href="changeset.html">Read More</a></td></tr>
 <tr><td>include</td><td>Additional files containing change sets to execute. <a href="include.html">Read More</a></td></tr>
+<tr><td>context</td><td>Context to be appended (using AND) to all changeSets <b>since 3.5</b> </td></tr>
 </table>
 
 When the Liquibase migrator runs, it parses the databaseChangeLog tag. It first checks any preconditions specified. If any of the [preconditions](preconditions.html) fail, the Liquibase will exit with an error message explaining what failed. Preconditions are useful for both documenting and enforcing expectations and assumptions of the changelog writer such as the DBMS to be run against or the user the changes are run as.

@@ -3,8 +3,7 @@
 .lb-choose-path {
   width: 100%;
   text-align: center;
-  margin-top: 48px;
-  margin-bottom: 72px;
+  margin-bottom: 64px;
 
   &__heading {
     margin-bottom: 48px;
@@ -17,7 +16,7 @@
   &__path {
     display: flex;
     flex-direction: column;
-    margin-bottom: 48px;
+    // margin-bottom: 48px;
     flex: 1;
     @include dat-elevation(3);
     border-radius: 8px;
@@ -80,5 +79,9 @@
         }
       }
     }
+  }
+
+  .cta {
+    border: none !important;
   }
 }

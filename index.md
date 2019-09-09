@@ -8,7 +8,7 @@ extraStyleSheets:
 ---
 
 <h1 style="display:flex; justify-content:center; margin-top: 36px;"><img src="images/liquibase_logo.gif" alt="Liquibase"></h1>
-<h3 style="display:flex; justify-content:center; text-align:center">The leading open source database change and deployment solution. Liquibase provides a database-independent way to deliver fast, safe, repeatable database deployments</h3>
+<h3 style="display:flex; justify-content:center; text-align:center; font-size: 20px;">The leading open source database change and deployment solution.</h3>
 
 <div class="lb-choose-path">
     <div class="lb-choose-path__heading">
@@ -34,7 +34,7 @@ extraStyleSheets:
             </div>
             <div class="lb-choose-path__path__spacer"></div>
             <div class="lb-choose-path__path__button">
-                <a href="https://download.liquibase.org/download-community/" class="cta cta--block">COMMUNITY CTA TEXT</a>
+                <a href="https://download.liquibase.org/download" class="cta cta--block">Download Liquibase</a>
             </div>
         </div>
         <div class="lb-choose-path__path lb-choose-path__path--pro">
@@ -53,11 +53,13 @@ extraStyleSheets:
                 </p>
             </div>
             <div class="lb-choose-path__path__button">
-                <a href="https://download.liquibase.org/" class="cta cta--block">PRO CTA TEXT</a>
+                <a href="https://download.liquibase.org/" class="cta cta--block">Learn More</a>
             </div>
         </div>
     </div>
 </div>
+
+<h3 class="value-prop-header">Liquibase provides a database-independent way to deliver fast, safe, repeatable database deployments</h3>
 
 <div class="value-prop">
     <h2>Flexible Database Change Definition</h2>

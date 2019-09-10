@@ -133,6 +133,7 @@ If you run the command line migrator without any arguments, you will get a help 
 <table>
 <tr><th>Option</th><th>Description</th></tr>
 <tr><td>--referenceDriver=&lt;jdbc.driver.ClassName&gt;</td><td>Base Database driver class name.</td></tr>
+<tr><td>--referenceDefaultSchemaName=&lt;schema&gt;</td><td>Base Database default schema name.</td></tr>
 </table>
 
 

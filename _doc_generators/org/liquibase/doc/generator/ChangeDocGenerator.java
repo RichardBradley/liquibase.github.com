@@ -3,8 +3,10 @@ package org.liquibase.doc.generator;
 
 import liquibase.change.*;
 import liquibase.change.core.CreateProcedureChange;
+import liquibase.change.core.CreateViewChange;
 import liquibase.change.core.LoadDataChange;
 import liquibase.change.core.LoadDataColumnConfig;
+import liquibase.change.core.OutputChange;
 import liquibase.change.core.SQLFileChange;
 import liquibase.changelog.ChangeSet;
 import liquibase.database.Database;
@@ -57,7 +59,8 @@ public class ChangeDocGenerator {
         exampleDatabases.add(0, new HsqlDatabase());
         exampleDatabases.add(0, new OracleDatabase());
         exampleDatabases.add(0, new MSSQLDatabase());
-        exampleDatabases.add(0, new MySQLDatabase());
+        MySQLDatabase defaultExampleDatabase = new MySQLDatabase();
+        exampleDatabases.add(0, defaultExampleDatabase);
 
 
         for (String changeName : definedChanges.keySet()) {
@@ -99,7 +102,7 @@ public class ChangeDocGenerator {
                         System.out.println("Unknown data type: " + param.getDataType());
                     }
                 } else {
-                    Object exampleValue = param.getExampleValue(new H2Database());
+                    Object exampleValue = param.getExampleValue(defaultExampleDatabase);
                     if (exampleValue != null && exampleValue.equals("A String")) {
                         if (param.getParameterName().toLowerCase().contains("schema") || param.getParameterName().toLowerCase().contains("catalog")) {
                             exampleValue = null;
@@ -212,14 +215,19 @@ public class ChangeDocGenerator {
             content += "</div>\n\n\n";
 
             exampleChange.setResourceAccessor(new CompositeResourceAccessor(new ClassLoaderResourceAccessor(ChangeDocGenerator.class.getClassLoader()), new FakeDataResourceAccessor()));
+            if (exampleChange instanceof CreateProcedureChange) {
+                ((CreateProcedureChange) exampleChange).setPath(null); // use procedureText.
+            } else if (exampleChange instanceof CreateViewChange) {
+                ((CreateViewChange) exampleChange).setPath(null); // use selectQuery
+                ((CreateViewChange) exampleChange).setFullDefinition(false); // fix to match example selectQuery
+            } else if (exampleChange instanceof LoadDataChange) {
+                ((LoadDataChange) exampleChange).setFile("org/liquibase/doc/generator/example.csv");
+            } else if (exampleChange instanceof SQLFileChange) {
+                ((SQLFileChange) exampleChange).setPath("org/liquibase/doc/generator/sqlfile.sql");
+            }
 
             Database exampleDatabase = null;
             for (Database db : exampleDatabases) {
-                if (exampleChange instanceof CreateProcedureChange) {
-                    exampleDatabase = db;
-                    break;
-                }
-
                 if (exampleChange.supports(db)) {
                     exampleDatabase = db;
                     break;
@@ -262,7 +270,7 @@ public class ChangeDocGenerator {
                 }
 
                 String supported;
-                if (exampleChange instanceof CreateProcedureChange || exampleChange.supports(database)) {
+                if (exampleChange.supports(database)) {
                     supported = "<b>Supported</b>";
                 } else {
                     supported = "Not Supported";
@@ -282,6 +290,11 @@ public class ChangeDocGenerator {
                 content += "<tr><td>" + database.getDatabaseProductName() + "</td><td>" + supported + "</td><td>" + rollback + "</td></tr>\n";
             }
             content += "</table>\n";
+
+            if (exampleChange instanceof CreateProcedureChange) {
+                // Fix deprecated attribute name
+                content = content.replaceAll("procedureBody", "procedureText");
+            }
 
             System.out.println(content);
 

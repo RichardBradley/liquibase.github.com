@@ -9,11 +9,10 @@ import liquibase.change.core.SQLFileChange;
 import liquibase.changelog.ChangeSet;
 import liquibase.database.Database;
 import liquibase.database.DatabaseFactory;
-import liquibase.database.core.HsqlDatabase;
-import liquibase.database.core.MSSQLDatabase;
-import liquibase.database.core.MySQLDatabase;
-import liquibase.database.core.OracleDatabase;
+import liquibase.database.core.*;
+import liquibase.resource.AbstractResourceAccessor;
 import liquibase.resource.ClassLoaderResourceAccessor;
+import liquibase.resource.CompositeResourceAccessor;
 import liquibase.serializer.core.json.JsonChangeLogSerializer;
 import liquibase.serializer.core.xml.XMLChangeLogSerializer;
 import liquibase.serializer.core.yaml.YamlChangeLogSerializer;
@@ -47,7 +46,7 @@ public class ChangeDocGenerator {
         content += "{% include subnav_documentation.md %}\n\n<hr>\n<h3 style='color: #747373'>Bundled Changes</h3>\n\n";
 
         for (String changeName : new TreeSet<String>(definedChanges.keySet())) {
-            content += "<li><a href='"+getChangeDocFileName(changeName)+".html'><span>"+changeName.replaceAll("([A-Z])", " $1") + "</span></a></li>\n";
+            content += "<li><a href='" + getChangeDocFileName(changeName) + ".html'><span>" + changeName.replaceAll("([A-Z])", " $1") + "</span></a></li>\n";
         }
         File file = new File("_includes/subnav_documentation_changes.md");
         new FileOutputStream(file).write(content.getBytes());
@@ -68,7 +67,13 @@ public class ChangeDocGenerator {
             ChangeMetaData changeMetaData = ChangeFactory.getInstance().getChangeMetaData(exampleChange);
 
             for (ChangeParameterMetaData param : changeMetaData.getParameters().values()) {
-                if (param.getDataType().matches(".* of .*")) {
+                if (param.getParameterName().equals("encoding")) {
+                    param.setValue(exampleChange, "UTF-8");
+                } else if (param.getParameterName().equals("replaceIfExists")) {
+                    param.setValue(exampleChange, false);
+                } else if (param.getParameterName().equals("defaultOnNull")) {
+                    param.setValue(exampleChange, false);
+                } else if (param.getDataType().matches(".* of .*")) {
                     if (param.getDataType().endsWith(" of columnConfig")) {
                         ColumnConfig columnConfig = new ColumnConfig();
                         columnConfig.setName("address");
@@ -91,16 +96,20 @@ public class ChangeDocGenerator {
                         cols.add(columnConfig);
                         param.setValue(exampleChange, cols);
                     } else {
-                        System.out.println("Unknown data type: "+param.getDataType());
+                        System.out.println("Unknown data type: " + param.getDataType());
                     }
                 } else {
-                    Object exampleValue = param.getExampleValue();
+                    Object exampleValue = param.getExampleValue(new H2Database());
                     if (exampleValue != null && exampleValue.equals("A String")) {
                         if (param.getParameterName().toLowerCase().contains("schema") || param.getParameterName().toLowerCase().contains("catalog")) {
                             exampleValue = null;
                         }
                     }
-                    param.setValue(exampleChange, exampleValue);
+                    try {
+                        param.setValue(exampleChange, exampleValue);
+                    } catch (Throwable e) {
+                        throw e;
+                    }
                 }
             }
 
@@ -117,7 +126,7 @@ public class ChangeDocGenerator {
                     "  });\n" +
                     "</script>\n\n";
 
-            ChangeSet exampleChangeSet = new ChangeSet(exampleChange.getSerializedObjectName()+"-example", "liquibase-docs", false, false, "changelog.xml", null, null, null);
+            ChangeSet exampleChangeSet = new ChangeSet(exampleChange.getSerializedObjectName() + "-example", "liquibase-docs", false, false, "changelog.xml", null, null, null);
             exampleChangeSet.addChange(exampleChange);
 
             content += "# Change: '" + changeMetaData.getName() + "'\n\n";
@@ -147,7 +156,7 @@ public class ChangeDocGenerator {
                 Set<String> supportsDatabase = param.getSupportedDatabases();
                 String supports = StringUtils.trimToEmpty(StringUtils.join(supportsDatabase, ", "));
 
-                content += "<tr><td style='vertical-align: top'>"+param.getParameterName() + "</td><td style='vertical-align: top'>" + param.getDescription() + "</td><td style='vertical-align: top'>" + required+"</td><td style='vertical-align:top'>"+supports+"</td><td style='vertical-align: top'>"+StringUtils.trimToEmpty(param.getSince())+"</td></tr>\n";
+                content += "<tr><td style='vertical-align: top'>" + param.getParameterName() + "</td><td style='vertical-align: top'>" + param.getDescription() + "</td><td style='vertical-align: top'>" + required + "</td><td style='vertical-align:top'>" + supports + "</td><td style='vertical-align: top'>" + StringUtils.trimToEmpty(param.getSince()) + "</td></tr>\n";
             }
             content += "</table>\n\n";
 
@@ -171,7 +180,7 @@ public class ChangeDocGenerator {
                         description += "<br><br>See the <a href='../column.html'>column tag</a> documentation for more information";
                     }
 
-                    content += "<tr><td style='vertical-align: top'>"+ param.getParameterName() + "</td><td style='vertical-align: top'>" + description + "</td><td style='vertical-align: top'>" + required+"</td><td style='vertical-align: top'>"+supports+"</td><td style='vertical-align: top'>"+(list?"yes":"no")+"</td><td style='vertical-align: top'>"+StringUtils.trimToEmpty(param.getSince())+"</td></tr>\n";
+                    content += "<tr><td style='vertical-align: top'>" + param.getParameterName() + "</td><td style='vertical-align: top'>" + description + "</td><td style='vertical-align: top'>" + required + "</td><td style='vertical-align: top'>" + supports + "</td><td style='vertical-align: top'>" + (list ? "yes" : "no") + "</td><td style='vertical-align: top'>" + StringUtils.trimToEmpty(param.getSince()) + "</td></tr>\n";
                 }
                 content += "</table>\n";
             }
@@ -202,13 +211,13 @@ public class ChangeDocGenerator {
 
             content += "</div>\n\n\n";
 
-            exampleChange.setResourceAccessor(new ClassLoaderResourceAccessor(ChangeDocGenerator.class.getClassLoader()));
+            exampleChange.setResourceAccessor(new CompositeResourceAccessor(new ClassLoaderResourceAccessor(ChangeDocGenerator.class.getClassLoader()), new FakeDataResourceAccessor()));
 
             Database exampleDatabase = null;
             for (Database db : exampleDatabases) {
                 if (exampleChange instanceof CreateProcedureChange) {
-                     exampleDatabase = db;
-                     break;
+                    exampleDatabase = db;
+                    break;
                 }
 
                 if (exampleChange.supports(db)) {
@@ -221,18 +230,25 @@ public class ChangeDocGenerator {
                 ((LoadDataChange) exampleChange).setFile("org/liquibase/doc/generator/example.csv");
             }
 
-            if (!(exampleChange instanceof CreateProcedureChange) && !exampleChange.generateStatementsVolatile(exampleDatabase)) {
+            if (canGeneratePage(exampleChange, exampleDatabase)) {
                 if (exampleDatabase != null) {
                     String sql = "";
-                    for (SqlStatement statement : exampleChange.generateStatements(exampleDatabase)) {
-                        for (Sql out : SqlGeneratorFactory.getInstance().generateSql(statement, exampleDatabase)) {
-                            sql += out.toSql()+out.getEndDelimiter()+"\n\n";
+                    try {
+                        for (SqlStatement statement : exampleChange.generateStatements(exampleDatabase)) {
+                            Sql[] sqls = SqlGeneratorFactory.getInstance().generateSql(statement, exampleDatabase);
+                            if (sqls != null) {
+                                for (Sql out : sqls) {
+                                    sql += out.toSql() + out.getEndDelimiter() + "\n\n";
+                                }
+                            }
                         }
+                    } catch (Throwable e) {
+                        throw e;
                     }
-                    sql = sql.replace(",",",\n");
-                    content += "## SQL Generated From Above Sample ("+exampleDatabase.getDatabaseProductName()+")\n\n";
+                    sql = sql.replace(",", ",\n");
+                    content += "## SQL Generated From Above Sample (" + exampleDatabase.getDatabaseProductName() + ")\n\n";
                     content += "{% highlight sql %}\n";
-                    content +=  sql;
+                    content += sql;
                     content += "\n{% endhighlight %}\n\n";
                 }
             }
@@ -253,7 +269,7 @@ public class ChangeDocGenerator {
                 }
                 String notes = StringUtils.trimToNull(changeMetaData.getNotes(database.getShortName()));
                 if (notes != null) {
-                    supported += ": "+notes;
+                    supported += ": " + notes;
                 }
 
                 String rollback;
@@ -263,19 +279,24 @@ public class ChangeDocGenerator {
                     rollback = "No";
                 }
 
-                content += "<tr><td>"+database.getDatabaseProductName()+"</td><td>"+ supported +"</td><td>"+rollback+"</td></tr>\n";
+                content += "<tr><td>" + database.getDatabaseProductName() + "</td><td>" + supported + "</td><td>" + rollback + "</td></tr>\n";
             }
             content += "</table>\n";
 
             System.out.println(content);
 
             String changename = changeMetaData.getName();
-            File file = new File("documentation/changes/" + getChangeDocFileName(changename)+".md");
+            File file = new File("documentation/changes/" + getChangeDocFileName(changename) + ".md");
             new FileOutputStream(file).write(content.getBytes());
 
 
-
         }
+    }
+
+    private static boolean canGeneratePage(Change exampleChange, Database exampleDatabase) {
+        return !(exampleChange instanceof CreateProcedureChange)
+                && !(exampleChange instanceof SQLFileChange)
+                && !exampleChange.generateStatementsVolatile(exampleDatabase);
     }
 
     private static String addGeneratedHeader(String content) {
@@ -287,5 +308,25 @@ public class ChangeDocGenerator {
 
     private static String getChangeDocFileName(String changename) {
         return changename.replaceAll("([A-Z])", "_$1").toLowerCase();
+    }
+
+    private static class FakeDataResourceAccessor extends AbstractResourceAccessor {
+        @Override
+        public Set<InputStream> getResourcesAsStream(String path) throws IOException {
+//            if (path.endsWith("sql")) {
+            return Collections.singleton(new ByteArrayInputStream("RANDOM SQL HERE".getBytes()));
+//            }
+//            throw new RuntimeException("Unknown path "+path);
+        }
+
+        @Override
+        public Set<String> list(String s, String s1, boolean b, boolean b1, boolean b2) throws IOException {
+            return Collections.emptySet();
+        }
+
+        @Override
+        public ClassLoader toClassLoader() {
+            return null;
+        }
     }
 }

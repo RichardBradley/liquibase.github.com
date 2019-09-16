@@ -50,7 +50,7 @@ Creates an index on an existing column or set of columns.
             tableName="person"
             tablespace="A String"
             unique="true">
-        <column name="address" type="varchar(255)"/>
+        <column name="address" type="varchar(255)" descending="false"/>
     </createIndex>
 </changeSet>
 {% endhighlight %}
@@ -67,6 +67,7 @@ changeSet:
       - column:
           name: address
           type: varchar(255)
+          descending: false
       indexName: idx_address
       schemaName: public
       tableName: person
@@ -89,7 +90,8 @@ changeSet:
             {
               "column": {
                 "name": "address",
-                "type": "varchar(255)"
+                "type": "varchar(255)",
+                "descending": false
               }
             }]
           ,

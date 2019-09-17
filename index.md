@@ -47,13 +47,13 @@ extraStyleSheets:
                 <p>
                     Liquibase Pro offers expert help and support from the creators or Liquibase, so you don’t have to go it alone.
                     <br><br>
-                    Liquibase Pro also adds capabilities that enhance and extend the base open source features, such as adding functions to change sets for updating procedural database code.
+                    Liquibase Pro also adds capabilities that enhance and extend the base open source features, such as adding functions to XML change sets for updating procedural database code.
                     <br><br>
                     <em>Try it free for 14 days.</em>
                 </p>
             </div>
             <div class="lb-choose-path__path__button">
-                <a href="https://download.liquibase.org/" class="cta cta--block">Learn More</a>
+                <a href="https://download.liquibase.org/" class="cta cta--block">Get Liquibase Pro</a>
             </div>
         </div>
     </div>
@@ -89,7 +89,6 @@ extraStyleSheets:
     </p>
 </div>
 
-
 <div class="value-prop">
     <h2>Fits Your Process</h2>
     <p>
@@ -108,4 +107,4 @@ extraStyleSheets:
 <p style="text-align: center; font-size:medium; font-weight: bold">
     Liquibase is thankful for the support, software, and/or services provided by the whole community including the following organizations: <br/>
     <a href="http://datical.com/">Datical</a> | <a href="https://atlassian.com/">Atlassian</a> | <a href="https://www.zoho.com/">Zoho</a> | <a href="https://www.yourkit.com/">YourKit</a>
-</p>          
+</p>

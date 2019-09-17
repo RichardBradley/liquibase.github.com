@@ -48,4 +48,4 @@ You will see that your database now contains a table called "PERSON". To inpsect
 
 * This quick-start guide is designed to quickly introduce you to Liquibase. For a full description of all its capabilities, see the [Liquibase Manual](http://www.liquibase.org/documentation/index.html), read [the best practices](https://www.liquibase.org/bestpractices.html) and visit the [forums](http://www.liquibase.org/community/index.html). 
 * If you have an existing project you are looking to add Liquibase to, visit the [Existing Project](https://www.liquibase.org/documentation/existing_project.html) page.
-* If you are interested in commercial support, training, or consulting, consider <a href="https://download.liquibase.org" target="_blank" onClick="trackOutboundLink(this, 'Datical', 'Liquibase RFI'); return false">Liquibase Pro</a>.
+* If you are interested in commercial support, training, or consulting, consider <a href="https://support.liquibase.org" target="_blank" onClick="trackOutboundLink(this, 'Datical', 'Liquibase RFI'); return false">Liquibase Pro</a>.

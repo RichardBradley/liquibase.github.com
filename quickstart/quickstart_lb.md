@@ -10,7 +10,7 @@ This tutorial builds on the setup that is described in the [Quick Start](../quic
 
 ## Step 1: Create a Changelog File: ##
 
-The [database changelog file](documentation/databasechangelog.html) is where all database changes are listed. Create a file called <code class="explicit">myChangeLog.xml</code> that contains the following:
+The [database changelog file](http://www.liquibase.org/quickstart/documentation/databasechangelog.html) is where all database changes are listed. Create a file called <code class="explicit">myChangeLog.xml</code> that contains the following:
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -26,7 +26,7 @@ The [database changelog file](documentation/databasechangelog.html) is where all
 
 ## Step 2: Add a Change Set ##
 
-Each [change set](documentation/changeset.html) is uniquely identified by an "id" attribute and an "author" attribute. These two tags, along with the name and package of the change log file uniquely identify the change. If only an "id" needed to be specified, it would be too easy to accidentally duplicate them, especially when dealing with multiple developers and code branches. Including an "author" attribute minimizes the chances of duplications.
+Each [change set](http://www.liquibase.org/documentation/index.html) is uniquely identified by an "id" attribute and an "author" attribute. These two tags, along with the name and package of the change log file uniquely identify the change. If only an "id" needed to be specified, it would be too easy to accidentally duplicate them, especially when dealing with multiple developers and code branches. Including an "author" attribute minimizes the chances of duplications.
 
 Think of each change set as an atomic change that you want to apply to your database. It's usually best to include just one change in your change set, but more are allowed and can make sense if you are inserting multiple rows that should be added as a single transaction. Liquibase will attempt to run each change set as a single transaction, but many databases will silently commit and resume transactions for certain commands (create table, drop table, etc.)
 

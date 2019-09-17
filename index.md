@@ -34,7 +34,7 @@ extraStyleSheets:
             </div>
             <div class="lb-choose-path__path__spacer"></div>
             <div class="lb-choose-path__path__button">
-                <a href="https://download.liquibase.org/download" class="cta cta--block">Download Liquibase</a>
+                <a href="https://download.liquibase.org" class="cta cta--block">Download Liquibase</a>
             </div>
         </div>
         <div class="lb-choose-path__path lb-choose-path__path--pro">

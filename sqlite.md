@@ -34,7 +34,3 @@ A run of liquibase with sqlite, having the sqlite.jar and the in the current dir
          migrate
 {% endhighlight %}
 
-Tip: There is an easy to use firefox extension which can be used to display and edit a sqlite database.
-Find it over here: [https://addons.mozilla.org/de/firefox/addon/sqlite-manager/](https://addons.mozilla.org/de/firefox/addon/sqlite-manager/)
-
-Have fun :)

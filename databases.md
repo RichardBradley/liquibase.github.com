@@ -11,10 +11,11 @@ Please find further information about which JDBC driver, URL, classes etc. these
 
 <table>
 <tr><th>Database</th><th>Type Name</th><th>Notes</th></tr>
-<tr><td>MySQL</td><td>mysql</td><td>No Issues</td></tr>
-<tr><td>PostgreSQL</td><td>postgresql</td><td>8.2+ is required to use the "drop all database objects" functionality.</td></tr>
-<tr><td>Oracle</td><td>oracle</td><td>11g driver is required when using the diff tool on databases running with AL32UTF8 or AL16UTF16</td></tr>
-<tr><td>Sql Server</td><td>mssql</td><td>No Issues</td></tr>
+<tr><td><a href="mysql.html">MySQL</a></td><td>mysql</td><td>No Issues</td></tr>
+<tr><td><a href="mariadb.html">MariaDB</a></td><td>mysql</td><td>MariaDB is 100% compatible with MySQL per <a href="https://mariadb.com/kb/en/library/mariadb-vs-mysql-compatibility/">MariaDB developers</a></td></tr>
+<tr><td><a href="postgresql.html">PostgreSQL</a></td><td>postgresql</td><td>8.2+ is required to use the "drop all database objects" functionality.</td></tr>
+<tr><td><a href="oracle.html">Oracle</a></td><td>oracle</td><td>11g driver is required when using the diff tool on databases running with AL32UTF8 or AL16UTF16</td></tr>
+<tr><td><a href="mssql.html">SQL Server</a></td><td>mssql</td><td>No Issues</td></tr>
 <tr><td>Sybase_Enterprise</td><td>sybase</td><td>ASE 12.0+ required. "select into" database option needs to be set. Best driver is JTDS. Sybase does not support transactions for DDL so rollbacks will not work on failures. Foreign keys can not be dropped which can break the rollback or dropAll functionality.</td></tr>
 <tr><td>Sybase_Anywhere</td><td>asany</td><td><b>Since 1.9</b></td></tr>
 <tr><td>DB2</td><td>db2</td><td>No Issues. Will auto-call REORG when necessary.</td></tr>

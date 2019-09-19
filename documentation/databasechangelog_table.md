@@ -22,6 +22,9 @@ The table tracks each changeSet as a row, identified by a combination of the "id
     <tr><td>COMMENTS</td><td>VARCHAR(255)</td><td>Value from the changeSet "comment" attribute</td></tr>
     <tr><td>TAG</td><td>VARCHAR(255)</td><td>Tracks which changeSets correspond to tag operations.</td></tr>
     <tr><td>LIQUIBASE</td><td>VARCHAR(20)</td><td>Version of Liquibase used to execute the changeSet</td></tr>
+    <tr><td>CONTEXTS</td><td>VARCHAR(255)</td><td>Context(s) used to execute the changeSet</td></tr>
+    <tr><td>LABELS</td><td>VARCHAR(255)</td><td>Label(s) used to execute the changeSet</td></tr>
+    <tr><td>DEPLOYMENT_ID</td><td>VARCHAR(10)</td><td>Changesets deployed together will have the same unique identifier</td></tr>
 </table>
 
 ### Notes

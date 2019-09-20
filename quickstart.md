@@ -140,7 +140,7 @@ changeLogFile: myChangeLog.xml{% endhighlight bash %}
                 <li><strong>Note: Be sure to use the actual version of the h2*.jar file that you copied into the extracted LB_HOME/lib directory!</strong></li>
         </ul>
     </li>
-    <li>Ensure that you can execute liquibase. At the command prompt, run one of the following commands, depending on your platform:
+    <li>Ensure that you can execute liquibase. At the command prompt, run one of the following commands, depending on your platform:<br/>
         <b>Linux</b>
 {% highlight bash %}~/my-first-lb-project$ LB_HOME/liquibase --help{% endhighlight bash %}
         <b>Windows</b>

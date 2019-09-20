@@ -27,7 +27,7 @@ The "column" tag is a tag that is re-used throughout the Liquibase XML when colu
     </tr>
     <tr>
       <td>value</td>
-      <td>Value to set the column to. The value will be surrounded by quote marks and nested quote marks will be escaped.</td>
+      <td>Value to set the column to. The value will be surrounded by quote marks and nested quote marks will be escaped. Please note that setting the "value" attribute will set all rows existing to the specified value without modifying the column default. Setting the "defaultValue" attribute will specify a default value for the column.</td>
     </tr>
     <tr>
       <td>computed</td>

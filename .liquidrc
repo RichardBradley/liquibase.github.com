@@ -7,10 +7,10 @@
     }
   ],
   "html": {
-    "correct": true,
+    "correct": false,
     "force_attribute": false,
     "braces": false,
-    "preserve": 4,
+    "preserve": 1,
     "unformatted": false
   },
   "js": {

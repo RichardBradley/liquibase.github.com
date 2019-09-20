@@ -98,23 +98,20 @@
             <div class="span-6 border">
                 <ul id="leftnav">
 
-                    {% if page.subnav %}
-                        {% assign navPage = page.subnav %}
-                    {% else %}
-                        {% assign dirs = page.path  | split:'/'  %}
-                        {% assign navPage = "subnav" %}
-                        {% for dir in dirs%}
-                            {% if dir == "" or forloop.last %}
-                            {% else %}
-                                {% capture navPage %}{{navPage}}_{{dir}}{%endcapture %}
-                            {% endif %}
-                        {% endfor %}
-
-                        {% capture navPage %}{{navPage}}.md{%endcapture %}
-                        {% if navPage == "subnav.md" %}
-                            {% assign navPage = "subnav_main.md" %}
-                        {% endif %}
-                    {% endif %}
+      {% if page.subnav %}
+        {% assign navPage = page.subnav %}
+      {% else %}
+        {% assign dirs = page.path  | split:'/'  %}
+        {% assign navPage = "subnav" %}
+        {% for dir in dirs%}
+          {% if dir == "" or forloop.last %}
+            {% capture navPage %}{{navPage}}_{{'main'}}{% endcapture %}
+          {% else %}
+            {% capture navPage %}{{navPage}}_{{dir}}{% endcapture %}
+          {% endif %}
+        {% endfor %}
+        {% capture navPage %}{{navPage}}.md{% endcapture %}
+      {% endif %}
 
                     {% case navPage %}
                     {% when "subnav_main.md" %}

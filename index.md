@@ -5,6 +5,7 @@ includeDaticalBox: true
 extraStyleSheets:
   - choose-path
   - value-props
+# subnav: test
 ---
 
 <h1 style="display:flex; justify-content:center; margin-top: 36px;"><img src="images/liquibase_logo.gif" alt="Liquibase"></h1>

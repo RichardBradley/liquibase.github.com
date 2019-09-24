@@ -18,28 +18,31 @@ pipeline {
         stage('build') {
             steps {
                 script {
-                    docker.withRegistry('https://docker.artifactory.datical.net', 'docker-auth') {
-                        ruby = docker.image("ruby")
-                        ruby.pull()
-                        ruby.inside {
-                            ruby -v
-                        }
-                    }
-                    archiveArtifacts artifacts: 'datical-dist/target/install4j/*.sh'
+                    sh 'export JEKYLL_VERSION=3.8 \
+                        docker run --rm \
+                        --volume="$PWD:/srv/jekyll" \
+                        -it jekyll/jekyll:$JEKYLL_VERSION \
+                        jekyll build'
+                    // jekyll = docker.image("jekyll/builder")
+                    // jekyll.pull()
+                    // jekyll.inside {
+                    //     sh 'jekyll build'
+                    // }
+                    // archiveArtifacts artifacts: 'datical-dist/target/install4j/*.sh'
                 }
             }
         }
     }
-    post {
-        success {
-            slackSend channel: '#jenkinsbuilds',
-                      color: 'good',
-                      message: "SUCCESSFUL: Job '${JOB_NAME} [${BUILD_NUMBER}]' (${env.BUILD_URL})"
-        }
-        unsuccessful {
-            slackSend channel: '#jenkinsbuilds',
-                      color: 'bad',
-                      message: "FAILED: Job '${JOB_NAME} [${BUILD_NUMBER}]' (${env.BUILD_URL})"
-        }
-    }
+    //  post {
+    //     success {
+    //         slackSend channel: '#jenkinsbuilds',
+    //                   color: 'good',
+    //                   message: "SUCCESSFUL: Job '${JOB_NAME} [${BUILD_NUMBER}]' (${env.BUILD_URL})"
+    //     }
+    //     unsuccessful {
+    //         slackSend channel: '#jenkinsbuilds',
+    //                   color: 'bad',
+    //                   message: "FAILED: Job '${JOB_NAME} [${BUILD_NUMBER}]' (${env.BUILD_URL})"
+    //     }
+    // }
 }

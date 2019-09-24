@@ -2,6 +2,7 @@ pipeline {
     options {
         timestamps()
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '5', artifactDaysToKeepStr: '45'))
+        withAWS(credentials: 'JenkinsUserAtAWS')
     }
 
     agent {
@@ -23,6 +24,7 @@ pipeline {
                         --volume="$PWD:/srv/jekyll" \
                         -it jekyll/jekyll:$JEKYLL_VERSION \
                         jekyll build'
+                    s3Upload(file:'_site', bucket:'liquibase-stage', path:'.')
                     // jekyll = docker.image("jekyll/builder")
                     // jekyll.pull()
                     // jekyll.inside {

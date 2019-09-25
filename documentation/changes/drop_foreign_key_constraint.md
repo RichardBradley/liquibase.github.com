@@ -22,9 +22,9 @@ Drops an existing foreign key
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>baseTableCatalogName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>baseTableName</td><td style='vertical-align: top'>Name of the table containing the column constrained by the foreign key</td><td style='vertical-align: top'>informix, sybase, unsupported, asany, postgresql, firebird, oracle, mssql, hsqldb, db2, mysql, h2, derby</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>baseTableName</td><td style='vertical-align: top'>Name of the table containing the column constrained by the foreign key</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>baseTableSchemaName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of the foreign key constraint to drop</td><td style='vertical-align: top'>informix, sybase, unsupported, asany, postgresql, firebird, oracle, mssql, hsqldb, db2, mysql, h2, derby</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of the foreign key constraint to drop</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -35,8 +35,13 @@ Drops an existing foreign key
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="dropForeignKeyConstraint-example">
-    <dropForeignKeyConstraint baseTableName="person" constraintName="fk_address_person"/>
+<changeSet author="liquibase-docs"
+        id="dropForeignKeyConstraint-example"
+        objectQuotingStrategy="LEGACY">
+    <dropForeignKeyConstraint baseTableCatalogName="cat"
+            baseTableName="person"
+            baseTableSchemaName="public"
+            constraintName="fk_address_person"/>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -45,9 +50,12 @@ Drops an existing foreign key
 changeSet:
   id: dropForeignKeyConstraint-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - dropForeignKeyConstraint:
+      baseTableCatalogName: cat
       baseTableName: person
+      baseTableSchemaName: public
       constraintName: fk_address_person
 
 {% endhighlight %}
@@ -58,10 +66,13 @@ changeSet:
   "changeSet": {
     "id": "dropForeignKeyConstraint-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "dropForeignKeyConstraint": {
+          "baseTableCatalogName": "cat",
           "baseTableName": "person",
+          "baseTableSchemaName": "public",
           "constraintName": "fk_address_person"
         }
       }]
@@ -77,7 +88,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE person DROP FOREIGN KEY fk_address_person;
+ALTER TABLE cat.person DROP FOREIGN KEY fk_address_person;
 
 
 {% endhighlight %}
@@ -87,16 +98,19 @@ ALTER TABLE person DROP FOREIGN KEY fk_address_person;
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>SQL Server</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>SQLite</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>SQLite</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Sybase</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Sybase Anywhere</td><td><b>Supported</b></td><td>No</td></tr>
 </table>

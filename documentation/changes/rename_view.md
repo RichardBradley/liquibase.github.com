@@ -24,7 +24,7 @@ Renames an existing view
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>newViewName</td><td style='vertical-align: top'>Name to rename the view to</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>oldViewName</td><td style='vertical-align: top'>Name of the view to rename</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>sybase, mssql, postgresql, sqlite, mysql</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>mariadb, sybase, sqlite, postgresql, ingres, mysql, mssql</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -35,7 +35,9 @@ Renames an existing view
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="renameView-example">
+<changeSet author="liquibase-docs"
+        id="renameView-example"
+        objectQuotingStrategy="LEGACY">
     <renameView catalogName="cat"
             newViewName="v_person"
             oldViewName="v_person"
@@ -48,6 +50,7 @@ Renames an existing view
 changeSet:
   id: renameView-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - renameView:
       catalogName: cat
@@ -63,6 +66,7 @@ changeSet:
   "changeSet": {
     "id": "renameView-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "renameView": {
@@ -94,11 +98,14 @@ RENAME TABLE cat.v_person TO cat.v_person;
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>HyperSQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Informix</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>

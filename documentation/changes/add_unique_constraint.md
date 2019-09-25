@@ -22,14 +22,19 @@ Adds a unique constrant to an existing column or set of columns.
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
+<tr><td style='vertical-align: top'>clustered</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>mssql</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>columnNames</td><td style='vertical-align: top'>Name of the column(s) to create the unique constraint on. Comma separated if multiple</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of the unique constraint</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>deferrable</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>disabled</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>initiallyDeferred</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>deferrable</td><td style='vertical-align: top'>True if this constraint is deferrable, False otherwise</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>disabled</td><td style='vertical-align: top'>True if this constraint is disabled, False otherwise</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>forIndexCatalogName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>forIndexName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>oracle</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>forIndexSchemaName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>initiallyDeferred</td><td style='vertical-align: top'>True if this constraint is initially deferred, False otherwise</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table to create the unique constraint on</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tablespace</td><td style='vertical-align: top'>'Tablespace' to create the index in. Corresponds to file group in mssql</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>validate</td><td style='vertical-align: top'>This is true if the unique constraint has 'ENABLE VALIDATE' set, or false if the foreign key has 'ENABLE NOVALIDATE' set.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -40,16 +45,21 @@ Adds a unique constrant to an existing column or set of columns.
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="addUniqueConstraint-example">
+<changeSet author="liquibase-docs"
+        id="addUniqueConstraint-example"
+        objectQuotingStrategy="LEGACY">
     <addUniqueConstraint catalogName="cat"
+            clustered="true"
             columnNames="id, name"
             constraintName="const_name"
             deferrable="true"
             disabled="true"
+            forIndexName="A String"
             initiallyDeferred="true"
             schemaName="public"
             tableName="person"
-            tablespace="A String"/>
+            tablespace="A String"
+            validate="true"/>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -58,17 +68,21 @@ Adds a unique constrant to an existing column or set of columns.
 changeSet:
   id: addUniqueConstraint-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - addUniqueConstraint:
       catalogName: cat
+      clustered: true
       columnNames: id, name
       constraintName: const_name
       deferrable: true
       disabled: true
+      forIndexName: A String
       initiallyDeferred: true
       schemaName: public
       tableName: person
       tablespace: A String
+      validate: true
 
 {% endhighlight %}
 </div>
@@ -78,18 +92,22 @@ changeSet:
   "changeSet": {
     "id": "addUniqueConstraint-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "addUniqueConstraint": {
           "catalogName": "cat",
+          "clustered": true,
           "columnNames": "id, name",
           "constraintName": "const_name",
           "deferrable": true,
           "disabled": true,
+          "forIndexName": "A String",
           "initiallyDeferred": true,
           "schemaName": "public",
           "tableName": "person",
-          "tablespace": "A String"
+          "tablespace": "A String",
+          "validate": true
         }
       }]
     
@@ -104,8 +122,8 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE cat.person ADD CONSTRAINT const_name UNIQUE (id,
- name);
+ALTER TABLE cat.person ADD CONSTRAINT const_name UNIQUE CLUSTERED (id,
+ name) USING INDEX `A String`;
 
 
 {% endhighlight %}
@@ -115,11 +133,14 @@ ALTER TABLE cat.person ADD CONSTRAINT const_name UNIQUE (id,
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>

@@ -31,7 +31,9 @@ empty
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="empty-example">
+<changeSet author="liquibase-docs"
+        id="empty-example"
+        objectQuotingStrategy="LEGACY">
     <empty/>
 </changeSet>
 {% endhighlight %}
@@ -41,6 +43,7 @@ empty
 changeSet:
   id: empty-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - empty: {}
 
@@ -52,6 +55,7 @@ changeSet:
   "changeSet": {
     "id": "empty-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "empty": {
@@ -77,11 +81,14 @@ changeSet:
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>

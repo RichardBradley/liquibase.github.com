@@ -15,13 +15,13 @@ title: Change sqlFile
 
 # Change: 'sqlFile'
 
-The 'sqlFile' tag allows you to specify any sql statements and have it stored external in a file. It is useful for complex changes that are not supported through LiquiBase's automated refactoring tags such as stored procedures.
+The 'sqlFile' tag allows you to specify any sql statements and have it stored external in a file. It is useful for complex changes that are not supported through Liquibase's automated refactoring tags such as stored procedures.
 
 The sqlFile refactoring finds the file by searching in the following order:
 
-The file is searched for in the classpath. This can be manually set and by default the liquibase startup script adds the current directory when run.
+The file is searched for in the classpath. This can be manually set and by default the Liquibase startup script adds the current directory when run.
 The file is searched for using the file attribute as a file name. This allows absolute paths to be used or relative paths to the working directory to be used.
-The 'sqlFile' tag can also support multiline statements in the same file. Statements can either be split using a ; at the end of the last line of the SQL or a go on its own on the line between the statements can be used. Multiline SQL statements are also supported and only a ; or go statement will finish a statement, a new line is not enough. Files containing a single statement do not need to use a ; or go.
+The 'sqlFile' tag can also support multiline statements in the same file. Statements can either be split using a ; at the end of the last line of the SQL or a go on its own on the line between the statements can be used.Multiline SQL statements are also supported and only a ; or go statement will finish a statement, a new line is not enough. Files containing a single statement do not need to use a ; or go.
 
 The sql file can also contain comments of either of the following formats:
 
@@ -49,9 +49,11 @@ A single line comment starting with &lt;space&gt;--&lt;space&gt; and finishing a
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="sqlFile-example">
+<changeSet author="liquibase-docs"
+        id="sqlFile-example"
+        objectQuotingStrategy="LEGACY">
     <sqlFile dbms="h2, oracle"
-            encoding="utf8"
+            encoding="UTF-8"
             endDelimiter="\nGO"
             path="my/path/file.sql"
             relativeToChangelogFile="true"
@@ -65,10 +67,11 @@ A single line comment starting with &lt;space&gt;--&lt;space&gt; and finishing a
 changeSet:
   id: sqlFile-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - sqlFile:
       dbms: h2, oracle
-      encoding: utf8
+      encoding: UTF-8
       endDelimiter: \nGO
       path: my/path/file.sql
       relativeToChangelogFile: true
@@ -83,11 +86,12 @@ changeSet:
   "changeSet": {
     "id": "sqlFile-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "sqlFile": {
           "dbms": "h2, oracle",
-          "encoding": "utf8",
+          "encoding": "UTF-8",
           "endDelimiter": "\\nGO",
           "path": "my/path/file.sql",
           "relativeToChangelogFile": true,
@@ -104,22 +108,19 @@ changeSet:
 </div>
 
 
-## SQL Generated From Above Sample (MySQL)
-
-{% highlight sql %}
-
-{% endhighlight %}
-
 ## Database Support
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>

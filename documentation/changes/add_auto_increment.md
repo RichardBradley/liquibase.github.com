@@ -22,8 +22,10 @@ Converts an existing column to be an auto-increment (a.k.a 'identity') column
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>columnDataType</td><td style='vertical-align: top'>Current data type of the column to make auto-increment</td><td style='vertical-align: top'>informix, sybase, unsupported, asany, hsqldb, h2, mysql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>columnDataType</td><td style='vertical-align: top'>Current data type of the column to make auto-increment</td><td style='vertical-align: top'>informix, mariadb, sybase, unsupported, hsqldb, ingres, asany, h2, mysql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>columnName</td><td style='vertical-align: top'>Name of the column</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>defaultOnNull</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.6</td></tr>
+<tr><td style='vertical-align: top'>generationType</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.6</td></tr>
 <tr><td style='vertical-align: top'>incrementBy</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>startWith</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
@@ -38,10 +40,14 @@ Converts an existing column to be an auto-increment (a.k.a 'identity') column
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="addAutoIncrement-example">
+<changeSet author="liquibase-docs"
+        id="addAutoIncrement-example"
+        objectQuotingStrategy="LEGACY">
     <addAutoIncrement catalogName="cat"
             columnDataType="int"
             columnName="id"
+            defaultOnNull="false"
+            generationType="ALWAYS"
             incrementBy="1"
             schemaName="public"
             startWith="100"
@@ -54,11 +60,14 @@ Converts an existing column to be an auto-increment (a.k.a 'identity') column
 changeSet:
   id: addAutoIncrement-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - addAutoIncrement:
       catalogName: cat
       columnDataType: int
       columnName: id
+      defaultOnNull: false
+      generationType: ALWAYS
       incrementBy: 1
       schemaName: public
       startWith: 100
@@ -72,12 +81,15 @@ changeSet:
   "changeSet": {
     "id": "addAutoIncrement-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "addAutoIncrement": {
           "catalogName": "cat",
           "columnDataType": "int",
           "columnName": "id",
+          "defaultOnNull": false,
+          "generationType": "ALWAYS",
           "incrementBy": 1,
           "schemaName": "public",
           "startWith": 100,
@@ -108,11 +120,14 @@ ALTER TABLE cat.person AUTO_INCREMENT=100;
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Firebird</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Oracle</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>

@@ -41,12 +41,14 @@ Updates data in an existing table
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="update-example">
+<changeSet author="liquibase-docs"
+        id="update-example"
+        objectQuotingStrategy="LEGACY">
     <update catalogName="cat"
             schemaName="public"
             tableName="person">
         <column name="address" type="varchar(255)"/>
-        <where>A String</where>
+        <where>name='Bob'</where>
     </update>
 </changeSet>
 {% endhighlight %}
@@ -56,6 +58,7 @@ Updates data in an existing table
 changeSet:
   id: update-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - update:
       catalogName: cat
@@ -65,7 +68,7 @@ changeSet:
           type: varchar(255)
       schemaName: public
       tableName: person
-      where: A String
+      where: name='Bob'
 
 {% endhighlight %}
 </div>
@@ -75,6 +78,7 @@ changeSet:
   "changeSet": {
     "id": "update-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "update": {
@@ -89,7 +93,7 @@ changeSet:
           ,
           "schemaName": "public",
           "tableName": "person",
-          "where": "A String"
+          "where": "name='Bob'"
         }
       }]
     
@@ -104,7 +108,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-UPDATE cat.person SET address = NULL WHERE A String;
+UPDATE cat.person SET address = NULL WHERE name='Bob';
 
 
 {% endhighlight %}
@@ -114,11 +118,14 @@ UPDATE cat.person SET address = NULL WHERE A String;
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>

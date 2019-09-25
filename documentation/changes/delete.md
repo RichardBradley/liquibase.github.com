@@ -35,11 +35,13 @@ Deletes data from an existing table
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="delete-example">
+<changeSet author="liquibase-docs"
+        id="delete-example"
+        objectQuotingStrategy="LEGACY">
     <delete catalogName="cat"
             schemaName="public"
             tableName="person">
-        <where>A String</where>
+        <where>name='Bob'</where>
     </delete>
 </changeSet>
 {% endhighlight %}
@@ -49,12 +51,13 @@ Deletes data from an existing table
 changeSet:
   id: delete-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - delete:
       catalogName: cat
       schemaName: public
       tableName: person
-      where: A String
+      where: name='Bob'
 
 {% endhighlight %}
 </div>
@@ -64,13 +67,14 @@ changeSet:
   "changeSet": {
     "id": "delete-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "delete": {
           "catalogName": "cat",
           "schemaName": "public",
           "tableName": "person",
-          "where": "A String"
+          "where": "name='Bob'"
         }
       }]
     
@@ -85,7 +89,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-DELETE FROM cat.person  WHERE A String;
+DELETE FROM cat.person WHERE name='Bob';
 
 
 {% endhighlight %}
@@ -95,11 +99,14 @@ DELETE FROM cat.person  WHERE A String;
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>

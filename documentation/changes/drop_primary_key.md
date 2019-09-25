@@ -22,7 +22,8 @@ Drops an existing primary key
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of the primary key</td><td style='vertical-align: top'>informix, firebird</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of the primary key</td><td style='vertical-align: top'>informix, firebird, sybase</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>dropIndex</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table to drop the primary key of</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
@@ -35,9 +36,12 @@ Drops an existing primary key
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="dropPrimaryKey-example">
+<changeSet author="liquibase-docs"
+        id="dropPrimaryKey-example"
+        objectQuotingStrategy="LEGACY">
     <dropPrimaryKey catalogName="cat"
             constraintName="const_name"
+            dropIndex="true"
             schemaName="public"
             tableName="person"/>
 </changeSet>
@@ -48,10 +52,12 @@ Drops an existing primary key
 changeSet:
   id: dropPrimaryKey-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - dropPrimaryKey:
       catalogName: cat
       constraintName: const_name
+      dropIndex: true
       schemaName: public
       tableName: person
 
@@ -63,11 +69,13 @@ changeSet:
   "changeSet": {
     "id": "dropPrimaryKey-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "dropPrimaryKey": {
           "catalogName": "cat",
           "constraintName": "const_name",
+          "dropIndex": true,
           "schemaName": "public",
           "tableName": "person"
         }
@@ -94,11 +102,14 @@ ALTER TABLE cat.person DROP PRIMARY KEY;
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>

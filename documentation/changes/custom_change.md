@@ -37,7 +37,9 @@ For a sample custom change class, see liquibase.change.custom.ExampleCustomSqlCh
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="customChange-example">
+<changeSet author="liquibase-docs"
+        id="customChange-example"
+        objectQuotingStrategy="LEGACY">
     <customChange/>
 </changeSet>
 {% endhighlight %}
@@ -47,9 +49,9 @@ For a sample custom change class, see liquibase.change.custom.ExampleCustomSqlCh
 changeSet:
   id: customChange-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
-  - customChange:
-      param: {}
+  - customChange: {}
 
 {% endhighlight %}
 </div>
@@ -59,12 +61,11 @@ changeSet:
   "changeSet": {
     "id": "customChange-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "customChange": {
-          "param": {
-            }
-        }
+          }
       }]
     
   }
@@ -80,11 +81,14 @@ changeSet:
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>

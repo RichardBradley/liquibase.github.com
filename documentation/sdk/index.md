@@ -17,5 +17,4 @@ __Liquibase SDK is available in Liquibase 3.2.0+__
 ### SDK Components
 
 * [__Javadoc__](/javadoc) The Liquibase core library API documentation is included in the LIQUIBASE_HOME/sdk/javadoc directory for easy offline reference.
-* [__Workspace__](workspace.html) To make testing easier, a pre-configured "workspace" directory is included with sample changelog files.
-
+* [__Workspace__](workspace.md) To make testing easier, a pre-configured "workspace" directory is included with sample changelog files.

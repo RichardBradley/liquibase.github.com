@@ -67,6 +67,9 @@
   </head>
 
   <body>
+    {% if jekyll.environment == "development" %}
+      <div>This is a staging build.</div>
+    {% endif %}
     
     {{ content }}
 

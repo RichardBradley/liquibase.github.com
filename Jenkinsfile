@@ -28,7 +28,7 @@ pipeline {
                         --volume="$PWD:/srv/jekyll" \
                         jekyll/jekyll:$JEKYLL_VERSION \
                         jekyll build'
-                    s3Upload(file:'_site', bucket:'liquibase-stage', path:'.')
+                    s3Upload(file:'_site', bucket:'liquibase-stage', path:'')
                 }
             }
         }

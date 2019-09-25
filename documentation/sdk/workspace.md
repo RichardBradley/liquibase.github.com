@@ -5,7 +5,7 @@ title: Workspace
 
 # Liquibase SDK Workspace
 
-The Liquibase SDK ships with a LIQUIBSE_HOME/sdk/workspace directory that is pre-configured as an easy starting point for testing Liquibase and Liquibase extensions.
+The Liquibase SDK ships with a LIQUIBASE_HOME/sdk/workspace directory that is pre-configured as an easy starting point for testing Liquibase and Liquibase extensions.
 
 Normal usage of the workspace directory is to change to the workspace directory, then run `..\..\liquibase ARGS` and `..\liquibase-sdk ARGS` commands.
 

@@ -17,9 +17,9 @@ pipeline {
     }
     stages {
         stage('staging-cd') {
-            // when {
-            //     branch 'master'
-            // }
+            when {
+                branch 'master'
+            }
             steps {
                 echo 'Building and Deploying Jekyll `_site/` to Staging.'
                 script {
@@ -33,16 +33,16 @@ pipeline {
             }
         }
     }
-    //  post {
-    //     success {
-    //         slackSend channel: '#jenkinsbuilds',
-    //                   color: 'good',
-    //                   message: "SUCCESSFUL: Job '${JOB_NAME} [${BUILD_NUMBER}]' (${env.BUILD_URL})"
-    //     }
-    //     unsuccessful {
-    //         slackSend channel: '#jenkinsbuilds',
-    //                   color: 'bad',
-    //                   message: "FAILED: Job '${JOB_NAME} [${BUILD_NUMBER}]' (${env.BUILD_URL})"
-    //     }
-    // }
+     post {
+        success {
+            slackSend channel: '#jenkinsbuilds',
+                      color: 'good',
+                      message: "SUCCESSFUL: Job '${JOB_NAME} [${BUILD_NUMBER}]' (${env.BUILD_URL})"
+        }
+        unsuccessful {
+            slackSend channel: '#jenkinsbuilds',
+                      color: 'bad',
+                      message: "FAILED: Job '${JOB_NAME} [${BUILD_NUMBER}]' (${env.BUILD_URL})"
+        }
+    }
 }

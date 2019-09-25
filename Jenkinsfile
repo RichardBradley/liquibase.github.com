@@ -16,35 +16,33 @@ pipeline {
         ART_AUTH = credentials('artifactory-auth')
     }
     stages {
-        stage('build') {
+        stage('staging-cd') {
+            when {
+                branch 'master'
+            }
             steps {
+                echo 'Building and Deploying Jekyll `_site/` to Staging.'
                 script {
-                    sh 'export JEKYLL_VERSION=3.8 \
-                        docker run --rm \
+                    sh 'export JEKYLL_VERSION=3.8 && \
+                        docker run \
                         --volume="$PWD:/srv/jekyll" \
-                        -it jekyll/jekyll:$JEKYLL_VERSION \
+                        jekyll/jekyll:$JEKYLL_VERSION \
                         jekyll build'
                     s3Upload(file:'_site', bucket:'liquibase-stage', path:'.')
-                    // jekyll = docker.image("jekyll/builder")
-                    // jekyll.pull()
-                    // jekyll.inside {
-                    //     sh 'jekyll build'
-                    // }
-                    // archiveArtifacts artifacts: 'datical-dist/target/install4j/*.sh'
                 }
             }
         }
     }
-    //  post {
-    //     success {
-    //         slackSend channel: '#jenkinsbuilds',
-    //                   color: 'good',
-    //                   message: "SUCCESSFUL: Job '${JOB_NAME} [${BUILD_NUMBER}]' (${env.BUILD_URL})"
-    //     }
-    //     unsuccessful {
-    //         slackSend channel: '#jenkinsbuilds',
-    //                   color: 'bad',
-    //                   message: "FAILED: Job '${JOB_NAME} [${BUILD_NUMBER}]' (${env.BUILD_URL})"
-    //     }
-    // }
+     post {
+        success {
+            slackSend channel: '#jenkinsbuilds',
+                      color: 'good',
+                      message: "SUCCESSFUL: Job '${JOB_NAME} [${BUILD_NUMBER}]' (${env.BUILD_URL})"
+        }
+        unsuccessful {
+            slackSend channel: '#jenkinsbuilds',
+                      color: 'bad',
+                      message: "FAILED: Job '${JOB_NAME} [${BUILD_NUMBER}]' (${env.BUILD_URL})"
+        }
+    }
 }

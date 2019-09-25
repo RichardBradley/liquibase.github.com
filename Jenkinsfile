@@ -30,6 +30,9 @@ pipeline {
                         jekyll build'
                     s3Upload(file:'_site', bucket:'liquibase-stage', path:'')
                 }
+                slackSend channel: '#liquibase_pro_website',
+                      color: 'good',
+                      message: "Liquibase Staging Site Updated: https://staging.liquibase.org"
             }
         }
     }

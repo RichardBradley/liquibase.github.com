@@ -67,6 +67,9 @@
   </head>
 
   <body>
+    {% if jekyll.environment == "development" %}
+      {% include components/staging-ribbon.html %}
+    {% endif %}
     
     {{ content }}
 

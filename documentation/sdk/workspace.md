@@ -18,12 +18,11 @@ __Liquibase SDK is available in Liquibase 3.2.0+__
 The workspace directory ships with liquibase.h2.properties, liquibase.hsql.properties and liquibase.derby.properties files in the workspace directory which can be used for testing
 embedded databases. All three are configured to use database files in LIQUIBASE_HOME/tmp/DB_NAME.
 
-When using [liquibase-sdk vagrant init](vagrant.html) to create a test database server, the init command will create liquibase.properties file(s) in the workspace directory for accessing the new databases.
 
 ### changelog
 
-LIQUIBASE_HOME/sdk/changelog contains a starting `com/example/changelog.xml` file that can be used as a starting point for testing. The generated liquibase.properties file reference this file as the
-the changelog file by default.
+LIQUIBASE_HOME/sdk/changelog contains a starting `com/example/changelog.xml` file that can be used as a starting point for testing. 
+
 
 The com/example/changelog.xml uses a variety of features including:
 

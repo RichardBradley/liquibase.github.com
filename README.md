@@ -15,23 +15,33 @@ Once Jekyll is installed, just navigate to this repo's directory, and run `jekyl
 If you're using a MarkDown editor with a "live preview" feature, be aware that it's unlikely to support Liquid's syntax highlighting tags, such as "{% highlight xml %}".
 
 ## Project Setup
-### Requirements
+### Requirements (Bundler)
 * [Ruby](https://ruby-doc.org/)
   * _OR_ [RVM](https://rvm.io/rvm/install)
 * [Bundler](https://bundler.io/)
 
+### Requirements (Docker)
+Or if you'd prefer to run everything through a docker container:
+* [Docker](https://www.docker.com/)
+
 ### Steps
-#### Install
+#### Bundler
+##### Install
 Once all requirements are met, you can install everything with:
 ```bash
 bundle install
 ```
 
-#### Local Dev Server
+##### Local Dev Server
 ```bash
 bundle exec jekyll serve 
 ```
 _Or_
 ```bash
 bundle exec jekyll serve -l
+```
+
+#### Docker
+```bash
+./scripts/docker-dev.sh
 ```

@@ -53,7 +53,7 @@ extraStyleSheets:
                 </p>
             </div>
             <div class="lb-choose-path__path__button">
-                <a href="https://support.liquibase.org" class="cta cta--block">Get Liquibase Pro</a>
+                <a href="https://support.liquibase.org" class="cta cta--block">Learn More</a>
             </div>
         </div>
     </div>

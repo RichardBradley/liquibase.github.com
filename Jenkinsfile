@@ -18,7 +18,7 @@ pipeline {
     stages {
         stage('staging-cd') {
             when {
-                branch 'master'
+                branch 'staging'
             }
             steps {
                 echo 'Building and Deploying Jekyll `_site/` to Staging.'

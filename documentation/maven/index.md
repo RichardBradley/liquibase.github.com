@@ -109,7 +109,6 @@ The following is a sample configuration for the Liquibase Maven plugin, version 
 		<plugin>
 		   <groupId>org.liquibase</groupId>
 		   <artifactId>liquibase-maven-plugin</artifactId>
-		   <version>3.0.5</version>
 		   <configuration>                  
 			  <propertyFile>src/main/resources/liquibase/liquibase.properties</propertyFile>
 		   </configuration>                

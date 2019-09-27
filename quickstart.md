@@ -169,3 +169,5 @@ changeLogFile: myChangeLog.xml{% endhighlight bash %}
 <h3 style="display:flex; justify-content:center; text-align:center"><a class="cta" href="/quickstart/quickstart_lb.html">Start with Liquibase XML Changelogs</a></h3>
 
 </div>
+
+{% include tracking-codes/hotjar.tracking-code.html %}

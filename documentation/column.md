@@ -84,7 +84,15 @@ The "column" tag is a tag that is re-used throughout the Liquibase XML when colu
     <tr>
       <td>autoIncrement</td>
       <td>Is column an auto-increment column.  Ignored on databases that do not support autoincrement/identity functionality.</td>
+    </tr>    
+    <tr>
+      <td>startWith</td>
+      <td>The value auto-increment start.  Ignored on databases that do not support autoincrement/identity functionality.</td>
     </tr>
+    <tr>
+      <td>incrementBy</td>
+      <td>The value of each step by auto-increment.  Ignored on databases that do not support autoincrement/identity functionality.</td>
+    </tr>    
     <tr>
       <td>remarks</td>
       <td>Short description of the column (column comment)</td>

@@ -8,7 +8,7 @@ extraStyleSheets:
 ---
 
 <h1 style="display:flex; justify-content:center; margin-top: 36px;"><img src="images/liquibase_logo.gif" alt="Liquibase"></h1>
-<h3 style="display:flex; justify-content:center; text-align:center; font-size: 20px;">The leading open source database change and deployment solution.</h3>
+<h3 style="display:flex; justify-content:center; text-align:center; font-size: 20px;">The leading open source tool for database change and deployment management.</h3>
 
 <div class="lb-choose-path">
     <div class="lb-choose-path__heading">
@@ -27,7 +27,7 @@ extraStyleSheets:
             </div>
             <div class="lb-choose-path__path__text">
                 <p>
-                    Liquibase provides a great starting point for teams addressing the challenges that come with managing database changes.
+                    Liquibase provides a great starting point for teams addressing the challenges that come with managing database schema changes.
                     <br><br>
                     It does a lot more than push database scripts, it generates and deploys them as well.
                 </p>
@@ -76,7 +76,7 @@ extraStyleSheets:
 </div>
 
 <div class="value-prop">
-    <h2>Efficient, Standardized Database Change Management</h2>
+    <h2>Efficient, Standardized Database Schema Management</h2>
     <p>
         Liquibase functions make it easy to generate database-appropriate SQL. This allows teams to efficiently scale by writing database changes once and deploying to a variety of backends. Even if your team works with a single database platform, this capability standardizes the SQL produced in development making reviews, audits, and troubleshooting easier. Learn more in the <a href="quickstart.html">Quick Start</a>.
     </p>

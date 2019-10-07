@@ -28,7 +28,7 @@ Verification is an essential aspect of the Liquibase installation process, and t
 
 To verify that you have correctly added the Liquibase folder to your Path System Variables:
 1.	In your Windows Start Menu Search, type “power” and select **Windows PowerShell**.
-2.	In the PowerShell window, type: $env:PATH
+2.	In the PowerShell window, type: `$env:PATH`
 
 You should see the following:
 
@@ -37,14 +37,14 @@ You should see the following:
 
 For Liquibase to run correctly, Java must be installed on your Windows machine. To verify that Java is installed on your computer:
 1.	In your Windows Start Menu Search, Type “cmd” to open the Command Prompt.
-2.	In the Command Prompt window, type: java.exe -version
-If you see the error: ‘java.exe’ is not recognized as an internal or external command, operable program or batch file, navigate to [https://www.java.com/en/download](https://www.java.com/en/download) to install Java.
+2.	In the Command Prompt window, type: `java.exe -version`
+If you see the error: `‘java.exe’ is not recognized as an internal or external command, operable program or batch file`, navigate to [https://www.java.com/en/download](https://www.java.com/en/download) to install Java.
 
 ### Verification #3: Run the Liquibase Help Command ###
 
 Another way to verify that you installed Liquibase correctly on your computer is to run the Liquibase Help Command. To run the command:
 1.	In your Windows Start Menu Search, Type “cmd” to open the Command Prompt.
-2.	In the Command Prompt window, type: liquibase --help
+2.	In the Command Prompt window, type: `liquibase --help`
 
 ## Common Troubleshooting ##
 

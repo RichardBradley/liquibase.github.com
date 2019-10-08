@@ -32,7 +32,7 @@ To verify that you have correctly added the Liquibase folder to your Path System
 
 You should see the following:
 
-![Windows verification image](/images/installation/windows/Windows_Verification_1.png){:style="width: 100%;"}
+![Windows verification image](/images/installation/windows/windows-verification.png){:style="width: 100%;"}
 
 
 ### Verification #2: Check for Java Installation ###

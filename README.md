@@ -45,3 +45,13 @@ bundle exec jekyll serve -l
 ```bash
 ./scripts/docker-dev.sh
 ```
+
+#### Local Server
+To access the local development server navigate to: `0.0.0.0:3000` if using Docker, or `0.0.0.0:4000`, (the default Jekyll port) if using Bundler.
+
+### CI/CD Overview
+#### Staging (staging.liquibase.org)
+To see your codebase changes in a `staging` environment, base your PRs on the `staging` branch. If you'd rather have this named `develop` open an issue.
+
+#### Production (liquibase.org)
+To see your codebase changes in `production` a merge must be made into `master`. GH Pages will handle the deployment.

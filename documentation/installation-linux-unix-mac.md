@@ -6,34 +6,35 @@ title: Installing Liquibase Command Line Tool for Linux/Unix/Mac
 
 # Installing Liquibase Command Line for Linux/Unix/Mac #
 
-Once you have [downloaded the Liquibase-Version#-bin.tar.gz file](https://www.download.liquiase.org/download), create a local directory on your computer (**Example:** `/usr/apps/Liquibase-3.8.0-bin`), then add the directory to your path.
-To add the directory to your path:
-1. Open the Terminal or Linux Command Line
-2. Run the following command: export `PATH=$PATH:/usr/apps/Liquibase-3.8.0-bin`
+Once you have downloaded the [Liquibase-Version#-bin.tar.gz file](https://www.download.liquibase.org/download), create a local directory on your computer (**Example:** `/usr/apps/Liquibase-3.8.0-bin`), then add the directory to your PATH.
+To add the directory to your PATH:
+1. Open the Terminal or Linux Command Line.
+2. Run the following command: `export PATH=$PATH:/usr/apps/Liquibase-3.8.0-bin`
 
-**Note:** This command will not automatically update your PATH for the remainder of the session.
-- To update your path for the remainder of the session run: `source ~/.profile  or source ~/.bashrc`
+**Note:** This command will not permanently update your PATH after the termination of your session. To update your PATH permanently, run the following command: `source ~/.profile  or source ~/.bashrc`
 
 ## Verifying ##
 
 Verification is an essential aspect of the Liquibase installation process, and there are three things you need to check:
-1. The Liquibase folder was correctly added to your PATH
-2. Java is installed on your system
-3. You can run the Liquibase help command
+1. The Liquibase folder was correctly added to your PATH.
+2. Java is installed on your system.
+3. You can run the Liquibase help command.
 
-### Verification #1: Check your Path ###
+### Verification #1: Check your PATH ###
 
-To verify that you have correctly added the Liquibase folder to your PATHs, type env in your Terminal or Linux command to display all your available PATHs.
+To verify that you have correctly added the Liquibase folder to your PATHs, type `env` in your Terminal or Linux command to display all your available PATHs.
 
 ### Verification #2: Check for Java Installation ###
 
 For Liquibase to run correctly, Java must be installed on your Linux/Mac/Unix machine. To verify that Java is installed on your computer:
-1. Open your Terminal or Linux Command.
+1. Open your Terminal or Linux Command Line.
 2. In the Command Prompt window, type: `java -version`
 
-If you see the error: `-bash: java: command not found`, then you need to either:
-- Navigate to [https://www.java.com/en/download/](https://www.java.com/en/download/) to install Java 
-- Add the location of the java.exe to your PATH environment as a variable
+If you see the error: `-bash: java: command not found`, then you need to either install Java, or you need to add the location of the Java to your PATH environment as a variable.
+To install Java on your computer
+1. Navigate to [https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and install the Java JDK.
+2. Add the location of the Java file to your PATH environment as a variable.
+
 
 ### Verification #3: Run the Liquibase Help Command ###
 

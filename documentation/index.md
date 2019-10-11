@@ -10,7 +10,8 @@ includeDaticalBox: true
 <h2>Installing Liquibase</h2>
 <ul>
 <li><a href="installation-windows.html">Windows Installation Instructions</a></li>
-<li><a href="installation-linux-unix-mac.html">Linux/Unix/Mac Installation Instructions</a></li>    
+<li><a href="installation-linux-unix-mac.html">Linux/Unix/Mac Installation Instructions</a></li>
+<li><a href="installation-linux-unix-mac-with-maven.html">Liquibase Installation with Maven on Linux/Unix/Mac</a></li>   
 </ul>
 <h2>Building Changelogs</h2>
 <ul>

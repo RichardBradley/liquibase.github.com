@@ -15,7 +15,7 @@ Branches are an integral part of developing code and your database changes need 
 
 When you do run into merge issues, the simple text formats used for the changelog files can be easily merged with your favorite tools.
 
-### Author changeSets in your favorate markup
+### Author changeSets in your favorite markup
 
 Liquibase supports changelogs written in XML, YAML, JSON and SQL. Use whatever is most readable to you
 

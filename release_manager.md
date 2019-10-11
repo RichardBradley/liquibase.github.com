@@ -3,7 +3,7 @@ layout: default
 title: Liquibase for Release Managers
 ---
 
-# Liquibase for Relase Managers #
+# Liquibase for Release Managers #
 
 ### Prepare for deployment problems
 

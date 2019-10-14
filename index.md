@@ -13,24 +13,30 @@ extraStyleSheets:
 <div class="lb-choose-path">
     <div class="lb-choose-path__heading">
         <div class="lb-choose-path__heading__title">
-            <h2>
-                Which Option is Right for You?
-            </h2>
+            <p>Founded over a decade ago, Liquibase helps teams track, version, and deploy database schema and logic changes. It has been downloaded over 6 million times by teams around the world and is built into solutions such as Spinnaker and Appian. It’s simple enough for beginners and powerful enough to support advanced use cases that involve reworking database changes.</p>
         </div>
     </div>
     <div class="lb-choose-path__paths">
         <div class="lb-choose-path__path lb-choose-path__path--community">
-            <div class="lb-choose-path__path__title">
-                <h2>
-                    Liquibase Community
-                </h2>
-            </div>
-            <div class="lb-choose-path__path__text">
-                <p>
-                    Liquibase provides a great starting point for teams addressing the challenges that come with managing database schema changes.
+            <div class="lb-choose-path__path__heading">
+                <div class="lb-choose-path__path__heading__title">
+                    <h2>
+                        Liquibase Community
+                    </h2>
+                </div>
+                <div class="lb-choose-path__path__heading__sub-title">
+                    <em>Apache 2.0: Now and always</em>
                     <br><br>
-                    It does a lot more than push database scripts, it generates and deploys them as well.
-                </p>
+                    Liquibase provides a database agnostic way to deliver fast, safe, repeatable database deployments.
+                </div>
+            </div>
+            <div class="lb-choose-path__path__spacer"></div>
+            <div class="lb-choose-path__path__text">
+               <ul>
+                <li>Open source</li>
+                <li>Database changes stored in a variety of formats including XML, YAML, JSON, and SQL</li>
+			    <li>Active online community with forum support</li>
+			    </ul>
             </div>
             <div class="lb-choose-path__path__spacer"></div>
             <div class="lb-choose-path__path__button">
@@ -38,10 +44,17 @@ extraStyleSheets:
             </div>
         </div>
         <div class="lb-choose-path__path lb-choose-path__path--pro">
-            <div class="lb-choose-path__path__title">
-                <h2>
-                    Liquibase Pro
-                </h2>
+            <div class="lb-choose-path__path__heading">
+                <div class="lb-choose-path__path__heading__title">
+                    <h2>
+                        Liquibase Pro
+                    </h2>
+                </div>
+                <div class="lb-choose-path__path__heading__sub-title">
+                    <em>Support and extra features</em>
+                    <br><br>
+                    Liquibase Pro adds a layer of support to powerful database change control capabilities, so you don’t have to go it alone.
+                </div>
             </div>
             <div class="lb-choose-path__path__text">
                 <ul>

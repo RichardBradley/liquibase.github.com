@@ -7,7 +7,7 @@ title: Creating Liquibase Project with Maven and PostgreSQL
 The purpose of this document is to guide you through the process of creating a new Maven project with PostgreSQL on a Linux/Unix/Mac machine. In this tutorial, you will generate an example project and follow the instructions to apply and learn concepts associated with creating new Liquibase Projects within Maven.
 
 ## Prerequisites
-•	[Install Liquibase with Maven on Linux/Unix/Mac](installlation-linux-unix-mac-with-maven.html) if you have not done so already.
+•	[Install Liquibase with Maven on Linux/Unix/Mac](installation-linux-unix-mac-with-maven.html) if you have not done so already.
 
 ## Maven – Liquibase Project Tutorial
 To create a Liquibase project within Maven while using PostgreSQL, begin with the following steps:
@@ -43,7 +43,7 @@ In this tutorial, you will manually add a single change. To add this change:
 
 **Note:** If you already have a Liquibase Pro key and want to apply it to your project, add the following property to your liquibase.properties file.
 
-liquibaseProLicenseKey: <paste license key>
+`liquibaseProLicenseKey: <paste license key>`
 
 8.	Add a changeset to the changelog.
 

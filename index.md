@@ -13,22 +13,25 @@ extraStyleSheets:
 <div class="lb-choose-path">
     <div class="lb-choose-path__heading">
         <div class="lb-choose-path__heading__title">
-            <h3>Founded over a decade ago, Liquibase helps teams track, version, and deploy database schema and logic changes. It has been downloaded over 6 million times by teams around the world and is built into solutions such as Spinnaker and Appian. It’s simple enough for beginners and powerful enough to support advanced use cases that involve reworking database changes.</h3>
+            <p>Founded over a decade ago, Liquibase helps teams track, version, and deploy database schema and logic changes. It has been downloaded over 6 million times by teams around the world and is built into solutions such as Spinnaker and Appian. It’s simple enough for beginners and powerful enough to support advanced use cases that involve reworking database changes.</p>
         </div>
     </div>
     <div class="lb-choose-path__paths">
         <div class="lb-choose-path__path lb-choose-path__path--community">
-            <div class="lb-choose-path__path__title">
-                <h2>
-                    Liquibase Community
-                </h2>
-            </div>
-            <div class="lb-choose-path__path__text">
-                <p>
-                    Apache 2.0: Now and always
+            <div class="lb-choose-path__path__heading">
+                <div class="lb-choose-path__path__heading__title">
+                    <h2>
+                        Liquibase Community
+                    </h2>
+                </div>
+                <div class="lb-choose-path__path__heading__sub-title">
+                    <em>Apache 2.0: Now and always</em>
                     <br><br>
                     Liquibase provides a database agnostic way to deliver fast, safe, repeatable database deployments.
-                </p>
+                </div>
+            </div>
+            <div class="lb-choose-path__path__spacer"></div>
+            <div class="lb-choose-path__path__text">
                <ul>
                 <li>Open source</li>
                 <li>Database changes stored in a variety of formats including XML, YAML, JSON, and SQL</li>
@@ -41,23 +44,25 @@ extraStyleSheets:
             </div>
         </div>
         <div class="lb-choose-path__path lb-choose-path__path--pro">
-            <div class="lb-choose-path__path__title">
-                <h2>
-                    Liquibase Pro
-                </h2>
-            </div>
-            <div class="lb-choose-path__path__text">
-                <p>
-                    Support and extra features
+            <div class="lb-choose-path__path__heading">
+                <div class="lb-choose-path__path__heading__title">
+                    <h2>
+                        Liquibase Pro
+                    </h2>
+                </div>
+                <div class="lb-choose-path__path__heading__sub-title">
+                    <em>Support and extra features</em>
                     <br><br>
                     Liquibase Pro adds a layer of support to powerful database change control capabilities, so you don’t have to go it alone.
-                    <ul>
-                <li>Standardized migration templates for procedural database code</li>
-			    <li>Guidance and best practices for your specific use case(s) from a named support engineer</li>
-			    <li>Technical support from Liquibase experts</li>
+                </div>
+            </div>
+            <div class="lb-choose-path__path__text">
+                <ul>
+                    <li>Standardized migration templates for procedural database code</li>
+                    <li>Guidance and best practices for your specific use case(s) from a named support engineer</li>
+                    <li>Technical support from Liquibase experts</li>
 			    </ul>
-                    <em>Try it free for 14 days.</em>
-                </p>
+                <em>Try it free for 14 days.</em>
             </div>
             <div class="lb-choose-path__path__button">
                 <a href="https://support.liquibase.org" class="cta cta--block">Learn More</a>

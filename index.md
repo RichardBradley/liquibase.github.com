@@ -13,7 +13,7 @@ extraStyleSheets:
 <div class="lb-choose-path">
     <div class="lb-choose-path__heading">
         <div class="lb-choose-path__heading__title">
-            <p>Founded over a decade ago, Liquibase helps teams track, version, and deploy database schema and logic changes. It has been downloaded over 6 million times by teams around the world and is built into solutions such as Spinnaker and Appian. It’s simple enough for beginners and powerful enough to support advanced use cases that involve reworking database changes.</p>
+            <p>Liquibase helps teams track, version, and deploy database schema and logic changes.</p>
         </div>
     </div>
     <div class="lb-choose-path__paths">
@@ -70,8 +70,6 @@ extraStyleSheets:
         </div>
     </div>
 </div>
-
-<h3 class="value-prop-header">Liquibase features</h3>
 
 <div class="value-prop">
     <h2>Flexible Database Change Definition</h2>

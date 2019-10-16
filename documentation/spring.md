@@ -8,7 +8,7 @@ title: Using Liquibase with Spring Boot and Maven
 The purpose of this tutorial is to demonstrate using Liquibase for a Java Spring Boot application with Maven.
 
 ## Spring ##
-Liquibase can be run in a [Spring](http://www.springframework.org) environment by declaring a liquibase.spring.SpringLiquibase bean.
+Liquibase can be run in a <a href="https://spring.io/projects/spring-boot" target="_blank">Spring</a> environment by declaring a liquibase.spring.SpringLiquibase bean.
 
 ### Example ###
 
@@ -27,26 +27,25 @@ Liquibase can be run in a [Spring](http://www.springframework.org) environment b
 ## Overview ##
 
 ### What is Liquibase? ###
-[Liquibase](https://www.liquibase.org/) provides a great starting point for teams addressing the challenges that come with managing database schema changes.
+<a href="https://www.liquibase.org/" target="_blank">Liquibase</a> provides a great starting point for teams addressing the challenges that come with managing database schema changes.
 
 It has the ability to manage revisions of your database schema scripts. It works across various types of databases, and supports various file formats for defining the DB structure. The has the ability to roll changes back and forward from a specific point - saving you from the need to know what was the last change/script you ran on a specific DB instance.
 
 ### What is Spring Boot? ###
-[Spring Boot](https://www.tutorialspoint.com/spring_boot/spring_boot_introduction.htm) is an open source Java-based framework used to create a micro Service. It is developed by Pivotal Team and is used to build stand-alone and production-ready Spring applications.
+<a href="https://www.tutorialspoint.com/spring_boot/spring_boot_introduction.htm" target="_blank">Spring Boot</a> is an open source Java-based framework used to create a micro Service. It is developed by Pivotal Team and is used to build stand-alone and production-ready Spring applications.
 
 ### What is Maven? ###
-[Apache Maven](https://maven.apache.org/) is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.
+<a href="https://maven.apache.org/" target="_blank">Apache Maven</a> is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.
 
 ## Prerequisites ##
-* [Install the latest version of Liquibase](https://download.liquibase.org/)  (These instructions include how to install Java.)
-* [Download and install Maven](https://maven.apache.org/install.html).
+* <a href="https://download.liquibase.org/" target="_blank">Install the latest version of Liquibase</a> (These instructions include how to install Java.)
+* <a href="https://maven.apache.org/install.html" target="_blank">Download and install Maven.</a>
 
 
 ## Tutorial
 
 * Create a new project folder and name it **LiquibaseProj**.
-* In your LiquibaseProj folder, Right-click then select New>Text Document to create an empty text file.<br/>
-* Rename the text file to **dbchangelog.xml**.
+* In your LiquibaseProj folder, create a plain text document named **dbchangelog.xml**.<br/>
 Changelog files contain a sequence of changesets, each of which make small changes to the structure of your database. Instead of creating an empty changelog file in step 2, you can also use an existing database to generate a changelog. In this tutorial, you will manually add a single change. To add this change:
 * Open the dbchangelog.xml file and update the changelog file with the following code snippet:
 
@@ -62,8 +61,7 @@ Changelog files contain a sequence of changesets, each of which make small chang
 {% endhighlight %}
 
 
-* In your LiquibaseProj folder Right-click and select New>Text Document to create a new text file.
-* Rename the text file to **liquibase.properties**.
+* In your LiquibaseProj folder create a plain text document named **liquibase.properties**.
 * Edit the liquibase.properties file to add the following properties:
 {% highlight sh %}
 
@@ -72,6 +70,10 @@ Changelog files contain a sequence of changesets, each of which make small chang
 
 {% endhighlight %}
 
+The changeLogFile propertiy will point to the changelog we have created.  Since the changelog is in the home directory, there is no need to specify a path to it.  If the changelog is located somewhere else, then an absolute or relative path should be added.  
+Windows example: changeLogFile: C:\\Users\\myproj\\dbchangelog.xml , Linux example: /Users/myproj/dbchangelog.xml
+The url propery is your Databse url.  In this example we are using an In-Memory h2 Database.
+If there is a user and password associated with the database, then the username and password proties should be added to the properties file as well.
 
 > Note: If you already have a Liquibase Pro key and want to apply it to
 > your project, add the following property to your liquibase.properties
@@ -104,8 +106,9 @@ In the dbchangelog.xml file line 9 to 20 add a new “department” create table
 </databaseChangeLog>
 {% endhighlight %}
 
-> Note: This create table change set is XML format.  The corresponding
-> SQL statement should look like the following:
+> Note: This create table change set is XML format.  When the Liquibase update command is run, the changeset will be used to general SQL 
+> that is specific to the database platform. In this example, we are using an h2 in-memory database just for an example, and the SQL   
+> generated would look like this:
 
 {% highlight sh %}
 CREATE TABLE "department"
@@ -116,8 +119,7 @@ CREATE TABLE "department"
 {% endhighlight %}
 
 
-* In your LiquibaseProj folder Right-click and select New>Text Document to create a new text file.
-* Rename the text file to **pom.xml**.
+* In your LiquibaseProj folder create a plain text document named **pom.xml**.
 * Open the pom.xml file and update it with the following code snippet:
 {% highlight sh %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -190,15 +192,22 @@ CREATE TABLE "department"
 
 
 * Download and unzip the <a href="assets/src.zip" download>src.zip</a> to your LiquibaseProj directory.
+* In the src diretory you will notice the path to your application code: src/main/java/com/application.java and the path to some junit tests: src/test/java/com/applicationTests.java.
+
+* The Spring Boot Maven plugin had many great feature.
+1. It collects all the jar files in the classpath and builds a single "uber-jar".  This makes it more convenient to execute your service.
+2. It searches for the "public static void main()" method to flag as a runnable class.
+
 * Open the command prompt or Bash. Navigate to the LiquibaseProj directory.  
   Run the following command:
-  ### mvn "package"
+  ### mvn package
   This command will compile and test your Spring Boot Application code.
-  ### mvn "liquibase:update"
+  ### mvn liquibase:update
 
 *	 In the console output you should notice the following SQL executions:
-
- A new “**department**” table added to the database.
+For example: 
+CREATE TABLE department (id INT NOT NULL, name VARCHAR(50) NOT NULL, active BOOLEAN DEFAULT TRUE, CONSTRAINT PK_DEPARTMENT PRIMARY KEY (id))
+Table department created.
 
 Also, you should see two more tables updated:
 *	**DATABASECHANGELOG** tracking table – This table keeps a record of all the changesets that were deployed.  This way, next time when you deploy again, the changesets in the changelog will be compared with the DATABASECHANGELOG tracking table and only the new changesets that were not found in the DATABASECHANGELOG will be deployed.  You will notice that a new row was created in that table with the changeset information we have just deployed.
@@ -212,4 +221,4 @@ For this example:
 
 ## Conclusion ##
 Congratulations! You are now able to use Liquibase to manage your database alongside with your Java Spring Boot application with Maven.
-Click here [Maven Liquibase Plugin](https://www.liquibase.org/documentation/maven/index.html) to learn more about the Maven Liquibase Plugin and it's usage.
+Click here <a href="https://www.liquibase.org/documentation/maven/index.html" target="_blank">Maven Liquibase Plugin</a> to learn more about the Maven Liquibase Plugin and it's usage.

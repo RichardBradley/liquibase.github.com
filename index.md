@@ -58,6 +58,9 @@ extraStyleSheets:
                     <li>Guidance and best practices for your specific use case(s) from a named support engineer</li>
                     <li>Technical support from Liquibase experts</li>
 			    </ul>
+<<<<<<< HEAD
+>>>>>>> 76a5d8ec... [LOW-14] - Fix Choose Your Path Cards.
+=======
 >>>>>>> 76a5d8ec... [LOW-14] - Fix Choose Your Path Cards.
             </div>
             <div class="lb-choose-path__path__button">

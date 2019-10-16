@@ -191,7 +191,7 @@ CREATE TABLE "department"
 {% endhighlight %}
 
 
-* Download and unzip the <a href="assets/src.zip" download>src.zip</a> to your LiquibaseProj directory.
+* Download and unzip the <a href="assets/liquibaseSpringBootExample/src.zip" download>src.zip</a> to your LiquibaseProj directory.
 * In the src diretory you will notice the path to your application code: src/main/java/com/application.java and the path to some junit tests: src/test/java/com/applicationTests.java.
 
 * The Spring Boot Maven plugin had many great feature.

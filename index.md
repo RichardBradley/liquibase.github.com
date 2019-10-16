@@ -62,10 +62,9 @@ extraStyleSheets:
                     <li>Guidance and best practices for your specific use case(s) from a named support engineer</li>
                     <li>Technical support from Liquibase experts</li>
 			    </ul>
-                <em>Try it free for 14 days.</em>
             </div>
             <div class="lb-choose-path__path__button">
-                <a href="https://support.liquibase.org" class="cta cta--block">Learn More</a>
+                <a href="https://support.liquibase.org" class="cta cta--block">Try Free for 14 Days</a>
             </div>
         </div>
     </div>

@@ -9,10 +9,6 @@
     margin-bottom: 0;
   }
 
-  ul {
-    list-style-type: none;
-  }
-
   &__heading {
     margin-bottom: 48px;
 
@@ -71,8 +67,7 @@
       }
 
       &__sub-title {
-        font-size: 12px;
-        opacity: 0.86;
+        font-size: 14px;
       }
     }
 
@@ -82,6 +77,10 @@
 
       p {
         margin: 0;
+      }
+
+      ul {
+        text-align: left;
       }
     }
 

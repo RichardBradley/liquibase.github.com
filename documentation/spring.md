@@ -5,7 +5,8 @@ title: Using Liquibase with Spring Boot and Maven
 
 # Using Liquibase with Spring Boot and Maven Tutorial #
 
-The purpose of this tutorial is to demonstrate using Liquibase for a Java Spring Boot application with Maven.
+When developing a software, it is very common to create a database schema during production.  Liquibase is a great migration tool that helps creating the database schema, then can run deployment and some testing to the database to ensure that the changes will work in production. 
+The purpose of this tutorial is to demonstrate using Liquibase migration tool for a Java Spring Boot application with Maven.
 
 ## Spring ##
 Liquibase can be run in a <a href="https://spring.io/projects/spring-boot" target="_blank">Spring</a> environment by declaring a liquibase.spring.SpringLiquibase bean.
@@ -29,7 +30,7 @@ Liquibase can be run in a <a href="https://spring.io/projects/spring-boot" targe
 ### What is Liquibase? ###
 <a href="https://www.liquibase.org/" target="_blank">Liquibase</a> provides a great starting point for teams addressing the challenges that come with managing database schema changes.
 
-It has the ability to manage revisions of your database schema scripts. It works across various types of databases, and supports various file formats for defining the DB structure. The has the ability to roll changes back and forward from a specific point - saving you from the need to know what was the last change/script you ran on a specific DB instance.
+It has the ability to manage revisions of your database schema scripts. It works across various types of databases, and supports various file formats for defining the DB structure. Liquibase has the ability to roll changes back and forward from a specific point - saving you from the need to know what was the last change/script you ran on a specific DB instance.
 
 ### What is Spring Boot? ###
 <a href="https://www.tutorialspoint.com/spring_boot/spring_boot_introduction.htm" target="_blank">Spring Boot</a> is an open source Java-based framework used to create a micro Service. It is developed by Pivotal Team and is used to build stand-alone and production-ready Spring applications.
@@ -70,10 +71,10 @@ Changelog files contain a sequence of changesets, each of which make small chang
 
 {% endhighlight %}
 
-The changeLogFile propertiy will point to the changelog we have created.  Since the changelog is in the home directory, there is no need to specify a path to it.  If the changelog is located somewhere else, then an absolute or relative path should be added.  
-Windows example: changeLogFile: C:\\Users\\myproj\\dbchangelog.xml , Linux example: /Users/myproj/dbchangelog.xml
+The changeLogFile propertiy will point to the changelog we have created.  Since the changelog is in the home directory, there is no need to specify a path to it.  If the changelog is located somewhere else, then a relative path should be added.  
+Windows example: changeLogFile: ..\\<path to changelog>\\changelogs\\dbchangelog.xml , Linux example: ../<path to changelog>/changelogs/dbchangelog.xml
 The url propery is your Databse url.  In this example we are using an In-Memory h2 Database.
-If there is a user and password associated with the database, then the username and password proties should be added to the properties file as well.
+If there is a user and password associated with the database, then the username and password properties should be added to the properties file as well.
 
 > Note: If you already have a Liquibase Pro key and want to apply it to
 > your project, add the following property to your liquibase.properties
@@ -194,7 +195,7 @@ CREATE TABLE "department"
 * Download and unzip the <a href="assets/liquibaseSpringBootExample/src.zip" download>src.zip</a> to your LiquibaseProj directory.
 * In the src diretory you will notice the path to your application code: src/main/java/com/application.java and the path to some junit tests: src/test/java/com/applicationTests.java.
 
-* The Spring Boot Maven plugin had many great feature.
+* The Spring Boot Maven plugin had many great features.
 1. It collects all the jar files in the classpath and builds a single "uber-jar".  This makes it more convenient to execute your service.
 2. It searches for the "public static void main()" method to flag as a runnable class.
 

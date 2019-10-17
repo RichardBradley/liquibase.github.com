@@ -44,24 +44,11 @@ extraStyleSheets:
                 </h2>
             </div>
             <div class="lb-choose-path__path__text">
-<<<<<<< HEAD
-                <p>
-                    Liquibase Pro offers expert help and support from the creators or Liquibase, so you don’t have to go it alone.
-                    <br><br>
-                    Liquibase Pro also adds capabilities that enhance and extend the base open source features, such as adding functions to XML change sets for updating procedural database code.
-                    <br><br>
-                    <em>Try it free for 14 days.</em>
-                </p>
-=======
                 <ul>
                     <li>Standardized migration templates for procedural database code</li>
                     <li>Guidance and best practices for your specific use case(s) from a named support engineer</li>
                     <li>Technical support from Liquibase experts</li>
 			    </ul>
-<<<<<<< HEAD
->>>>>>> 76a5d8ec... [LOW-14] - Fix Choose Your Path Cards.
-=======
->>>>>>> 76a5d8ec... [LOW-14] - Fix Choose Your Path Cards.
             </div>
             <div class="lb-choose-path__path__button">
                 <a href="https://download.liquibase.org/liquibase-pro-invoice-request-form/" class="cta cta--block">Try Free for 14 Days</a>

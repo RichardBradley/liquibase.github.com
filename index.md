@@ -58,9 +58,9 @@ extraStyleSheets:
             </div>
             <div class="lb-choose-path__path__text">
                 <ul>
-                    <li>Standardized migration templates for procedural database code</li>
                     <li>Guidance and best practices for your specific use case(s) from a named support engineer</li>
                     <li>Technical support from Liquibase experts</li>
+		    <li>Coming Soon: Snapshot, diff, changelog generation, and reverse-engineering for procedural code objects.</li>
 			    </ul>
             </div>
             <div class="lb-choose-path__path__button">

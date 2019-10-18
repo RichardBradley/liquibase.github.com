@@ -6,7 +6,7 @@ title: Installing Liquibase Command Line Tool for Linux/Unix/Mac
 
 # Installing Liquibase Command Line for Linux/Unix/Mac #
 
-Once you have downloaded the [Liquibase-Version#-bin.tar.gz file](https://www.download.liquibase.org/download), create a local directory on your computer (**Example:** `/usr/apps/Liquibase-3.8.0-bin`), then add the directory to your PATH.
+Once you have downloaded the [Liquibase-Version#-bin.tar.gz file](https://download.liquibase.org/download), create a local directory on your computer (**Example:** `/usr/apps/Liquibase-3.8.0-bin`), then add the directory to your PATH.
 To add the directory to your PATH:
 1. Open the Terminal or Linux Command Line.
 2. Run the following command: `export PATH=$PATH:/usr/apps/Liquibase-3.8.0-bin`

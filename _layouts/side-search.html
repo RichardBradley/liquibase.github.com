@@ -1,0 +1,187 @@
+---
+layout: base
+title: Liquibase News
+subnav: subnav_blog.md
+---
+
+<div
+  style="width: 100%; line-height: 24px; padding: 10px; vertical-align: top; display: block; background-color: #416692; text-align: center; color: #ffffff; font-size: 16px; font-weight: bold; margin: 0 auto;">
+  <a style="color: #ffffff; text-decoration: none;" href="https://support.liquibase.org">Need Liquibase® support?
+    Liquibase Pro is now available! Try it out free.</a></div>
+
+<div class="container">
+  <div class="span-24">
+    <a href="{{ pageRoot }}/index.html" class="logo"></a>
+
+    
+  </div>
+
+  <div id="menu" class="span-24">
+    <!-- <div class="span-4" style="margin-top: 20px">
+                  <li><a href="https://download.liquibase.org"><span>Download</span></a></li>
+              </div> -->
+    <div class="span-3" style="margin-top: 20px">
+      <li><a href="https://download.liquibase.org"><span>Download</span></a></li>
+    </div>
+    <div class="span-3" style="margin-top: 20px">
+      <li><a href="https://support.liquibase.org"><span>Support</span></a></li>
+    </div>
+    <div class="span-3" style="margin-top: 20px">
+      <li><a href="{{ pageRoot }}/quickstart.html"><span>Quick Start</span></a></li>
+    </div>
+    <div class="span-3" style="margin-top: 20px">
+      <li><a href="{{ pageRoot }}/documentation/index.html"><span>Documentation</span></a></li>
+    </div>
+    <div class="span-3" style="margin-top: 20px">
+      <li><a href="{{ pageRoot }}/community/index.html"><span>Community</span></a></li>
+    </div>
+    <div class="span-3" style="margin-top: 20px">
+      <li><a href="{{ pageRoot }}/extensions/index.html"><span>Extensions</span></a></li>
+    </div>
+    <!-- <div class="span-3" style="margin-top: 20px">
+                  <li><a href="{{ pageRoot }}/development/index.html"><span>Dev</span></a></li>
+              </div> -->
+    <div class="span-3 last" style="margin-top: 20px">
+      <li><a href="https://www.datical.com/liquibase/" target="_blank"
+          onClick="trackOutboundLink(this, 'Datical', 'Liquibase RFI'); return false"><span>
+            <font color="DarkOrange"><strong>Datical</strong></font>
+          </span></a></li>
+    </div>
+  </div>
+
+  <div class="span-6 border">
+    <ul id="leftnav">
+
+      {% assign subnavPrefix = "subnav" %}
+      {% assign returnFileName = subnavPrefix %}
+      {% assign subRoutes = page.path | split:'/' %}
+      <!-- If we're on a nested route, build the subnav filename. -->
+      {% if subRoutes.size > 1 %}
+        {% for route in subRoutes %}
+          {% if forloop.last %}
+            <!-- Do Nothing. -->
+          {% else %}
+            {% capture returnFileName %}{{returnFileName}}_{{route}}{% endcapture %}
+          {% endif %}
+        {% endfor %}
+        {% capture returnFileName %}{{returnFileName}}.md{% endcapture %}
+      {% else %}
+        {% capture returnFileName %}{{returnFileName}}_main.md{% endcapture %}
+      {% endif %}
+
+      {% if page.subnav %}
+        {% assign navPage = page.subnav %}
+      {% else %}
+        {% assign navPage = returnFileName %}
+      {% endif %}
+
+      {% case navPage %}
+        {% when "subnav_main.md" %}
+          {% include subnav_main.md %}
+        {% when "subnav_documentation.md" %}
+          {% include subnav_documentation.md %}
+        {% when "subnav_documentation_changes.md" %}
+          {% include subnav_documentation_changes.md %}
+        {% when "subnav_documentation_sdk.md" %}
+          {% include subnav_documentation_sdk.md %}
+        {% when "subnav_development.md" %}
+          {% include subnav_development.md %}
+        {% when "subnav_community.md" %}
+          {% include subnav_community.md %}
+        {% when "subnav_blog.md" %}
+          {% include subnav_blog.md %}
+        {% when "subnav_quickstart.md" %}
+          {% include subnav_quickstart.md %}
+        {% else %}
+          Unknown Nav {{navPage}}
+      {% endcase %}
+    </ul>
+
+    <div id="search">
+      <div class="gcse-search"></div>
+      <script>
+        (function () {
+          var cx = '003757264142562231070:jzcpdy3d77s';
+          var gcse = document.createElement('script');
+          gcse.type = 'text/javascript';
+          gcse.async = true;
+          gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+            '//www.google.com/cse/cse.js?cx=' + cx;
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(gcse, s);
+        })();
+      </script>
+      <!-- <gcse:searchbox-only></gcse:searchbox-only> -->
+    </div>
+
+    <!-- Begin MailChimp Signup Form -->
+    <!-- Begin MailChimp Signup Form -->
+    <div id="mc_embed_signup" style="padding-right: 10px; float: left">
+      <form
+        action="http://liquibase.us2.list-manage1.com/subscribe/post?u=c24cd4e0098d3017cc468c324&amp;id=3362c9cd2f"
+        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+        target="_blank" novalidate>
+        <fieldset style="color: #747373;">
+          <legend>News</legend>
+
+          <a href="{{site.posts[0].url}}"
+            style="color: #747373; text-transform: uppercase; font-size: 12px; font-family: arial, helvetica, sans-serif; font-weight: bold; text-decoration: none">{{ site.posts[0].title }}</a><br>
+          <a href="{{site.posts[0].url}}"
+            style="font-size: 12px; font-family: arial, helvetica, sans-serif;">{{ site.posts[0].date | date_to_string }}</a>
+
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" title="Email Address"
+            placeholder="Email Address" style="width:100%; margin-top: 30px">
+          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+
+          <h3 style="margin-top: 0; margin-bottom: 10px; color: #747373">- and/or -</h3>
+
+          <div style="margin-bottom: 30px">
+            <a href="https://twitter.com/liquibase" class="twitter-follow-button"
+              data-show-count="false">@liquibase</a>
+          </div>
+
+          <a href="/blog" style="font-size: 14px; font-family: arial, helvetica, sans-serif;">All Previous Posts
+            >></a>
+
+        </fieldset>
+      </form>
+    </div>
+
+    <!--End mc_embed_signup-->
+
+    {% if page.includeDaticalBox %}
+    <!--div id="Datical widget" style="padding-right: 10px; float: left; width: 220px">
+                  <fieldset style="color: #747373;">
+                      <legend>Datical DB</legend>
+                      <strong>Liquibase for the Enterprise</strong><br/>
+
+                      <a href="https://www.datical.com/liquibase/" target="_blank" onClick="trackOutboundLink(this, 'Datical', 'Liquibase RFI'); return false">Learn more >></a>
+                  </fieldset>
+      </div-->
+    <div id="Datical" style="padding-right: 10px; float: left; padding-bottom: 15px">
+      <a href="http://www.datical.com/whitepapers/how-to-get-started-with-database-release-automation-4-steps/?utm_source=liquibase&utm_medium=side-page-ad"
+        target="_blank" onClick="trackOutboundLink(this, 'Datical', '4 Steps Ad'); return false"><img
+          src="/images/ad-easy-steps.png"
+          alt="Achieving Continuous Delivery at Fidelity Investments with IBM UrbanCode and Datical" width="223"
+          height="207"></a>
+    </div>
+
+    {% endif %}
+
+  </div>
+  <div class="span-18 last">
+    <div style="margin-left: 20px; padding-bottom: 100px">
+
+      {% if page.date %}
+      <div style="margin-bottom: 30px">
+        <h2 style="color: #747373; text-decoration: none; text-transform: uppercase; margin-bottom: 0">{{page.title}}
+        </h2>
+        <p style="color: #747373; text-transform: uppercase; font-size: 16px">POSTED {{page.date | date_to_string}} by
+          Nathan Voxland</p>
+      </div>
+      {% endif %}
+
+      {{content}}
+    </div>
+  </div>
+</div>

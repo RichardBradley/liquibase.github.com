@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: side-search
 title: Liquibase Quick Start
 includeDaticalBox: true
 ---

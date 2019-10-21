@@ -10,7 +10,7 @@ Liquibase is built using Maven 3. There is a top-level Maven pom.xml file in the
 
 ## Build Requirements
 
-* Java SE JDK 1.6 or higher installed
+* Java SE JDK 1.8 or higher installed
 * Maven 3.0 or higher
 * No OS requirements
 

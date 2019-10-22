@@ -30,7 +30,7 @@ LIQUIBASE is a registered trademark of Datical.
 
 The following companies have provided software and/or services to help support Liquibase:
 
-- **Datical** (Sponsors Liquibase Development [http://datical.com](https://www.datical.com/))
+- **Datical** (Sponsors Liquibase Development [https://www.datical.com](https://www.datical.com/))
 - **Atlassian** (Provides [http://liquibase.jira.com](http://liquibase.jira.com))
 - **Zoho** (Provides [http://forum.liquibase.org](http://forum.liquibase.org))
 - **YourKit** (Provides [Java Profiler](http://yourkit.com))

@@ -11,13 +11,17 @@ Teams around the world trust Liquibase to easily track and deploy database chang
 
 ## Availability ##
 
-*Download Liquibase* 
+**Download Liquibase** 
+
 [http://download.liquibase.org](http://liquibase.org/download)
 
-*Official Liquibase Maven groups*
-[org.liquibase](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.liquibase%22) and [org.liquibase.ext](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.liquibase.ext%22)
+**Official Liquibase Maven groups**
 
-*Main Liquibase artifact*
+[org.liquibase](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.liquibase%22)
+[org.liquibase.ext](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.liquibase.ext%22)
+
+**Main Liquibase artifact**
+
 [group:org.liquibase, artifact:liquibase-core](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22liquibase-core%22)
 
 ## Source Code ##

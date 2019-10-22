@@ -17,7 +17,7 @@ Teams around the world trust Liquibase to easily track and deploy database chang
 
 **Official Liquibase Maven groups**
 
-[org.liquibase](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.liquibase%22)
+[org.liquibase](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.liquibase%22) and 
 [org.liquibase.ext](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.liquibase.ext%22)
 
 **Main Liquibase artifact**

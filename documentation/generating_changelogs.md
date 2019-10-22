@@ -3,34 +3,57 @@ layout: default
 title: Generating changelogs
 ---
 
-# Generating Change Logs #
+# Liquibase Commands: generateChangeLog
 
-When starting to use Liquibase on an existing database, it is often useful, particularly for testing, to have a way to generate the change log to create the current database schema. Liquibase allows you to do this with the "generateChangeLog" [command_line](command_line.html) command.
+The `generateChangeLog` [command](command_line.html), creates a *changelog* file and creates your objects by capturing the current state of a database.
 
-Note that this command currently has some limitations. It does not export the following types of objects:
+## Uses
+The `generateChangeLog` command is typically used when you want to capture the current state of a database, then apply those changes to any number of databases.
 
-* Stored procedures, functions, packages
-* Triggers
+> **Note:** This command does not create a new database database or schema. You must create them ***before*** applying a *changelog* file to it.
 
-## Example ##
+## Running the generateChangeLog command
+To generate a *changelog*:
+1. Configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for the database you want to capture.
+> **Note:** For informationon how to configure your *liquibase.properties* file, view the [Creating & Configuring your liquibase.properties File](config_properties.html) topic in the knowledge base.
+2. Save your *liquibase.properties* file.
+>**Note:** Instead of using a liquibase.properties file, you can also pass the necessary information in the command prompt or Linux terminal.
+3. Open your command prompt or Linux terminal and run the following command:
 
-{% highlight bat %}
-liquibase --driver=oracle.jdbc.OracleDriver \
-      --classpath=\path\to\classes:jdbcdriver.jar \
-      --changeLogFile=com/example/db.changelog.xml \
-      --url="jdbc:oracle:thin:@localhost:1521:XE" \
-      --username=scott \
-      --password=tiger \
-      generateChangeLog
+{% highlight sh %}
+
+liquibase --changeLogFile=dbchangelog.xml generateChangeLog
+
 {% endhighlight %}
 
+## Output
+
+The `generateChangeLog` command generates a *changelog* that contains all of your objects (represented as changesets) and places the file in the same hierarchy from where the command was ran.
+
+### Liquibase Pro Output
+While Liquibase Community stores all the SQL in a *changelog*, Liquibase Pro creates a directory called *Objects* and places it at the same level as your *changelog*.
+The *Objects* directory contains a subdirectory for each of the following stored logic types:
+
++ <a href="https://docs.oracle.com/database/121/LNPLS/packages.htm" target="_blank">package</a><br />
++ <a href="https://docs.oracle.com/cd/B19306_01/server.102/b14200/statements_6007.htm" target="_blank">packagebody</a><br />
++ <a href="https://docs.oracle.com/cd/B19306_01/server.102/b14200/statements_5009.htm" target="_blank">function</a><br />
++ <a href="https://docs.oracle.com/cd/B28359_01/appdev.111/b28843/tdddg_procedures.htm" target="_blank">storedprocedure</a><br />
++ <a href="https://docs.oracle.com/database/121/TDDDG/tdddg_triggers.htm#TDDDG50000" target="_blank">trigger</a><br />
++ <a href="https://docs.oracle.com/cd/B19306_01/server.102/b14200/statements_8004.htm" target="_blank">view</a>
+
+## Examples
+<details open>
+<summary style="font-size:200%;color:blue;">Liquibase Community changelog</summary>
+<br>
 {% highlight xml %}
+
 <?xml version="1.0" encoding="UTF-8"?>
 <databaseChangeLog
-    xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.1"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.1
-    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.1.xsd">
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
     <changeSet author="diff-generated" id="1185214997195-1">
         <createTable name="BONUS">
             <column name="ENAME" type="VARCHAR2(10,0)"/>
@@ -87,4 +110,60 @@ liquibase --driver=oracle.jdbc.OracleDriver \
         <addPrimaryKey columnNames="EMPNO" tableName="EMP"/>
     </changeSet>
 </databaseChangeLog>
+
 {% endhighlight %}
+</details>
+<details>
+<summary style="font-size:200%;color:blue;">Liquibase Pro changelog</summary>
+<br>
+{% highlight xml %}
+
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet author="Administrator (generated)" id="1571345362466-8">
+           <pro:createTrigger disabled="false" path="objects/trigger/TS_T_EXEMPLAR_SEQEXEMPLAR.sql" relativeToChangelogFile="true" tableName="T_EXEMPLAR" triggerName="TS_T_EXEMPLAR_SEQEXEMPLAR"/>
+       </changeSet>
+       <changeSet author="Administrator (generated)" id="1571345362466-9">
+           <pro:createTrigger disabled="false" path="objects/trigger/ORDERS_BEFORE_INSERT4.sql" relativeToChangelogFile="true" tableName="orders" triggerName="ORDERS_BEFORE_INSERT4"/>
+       </changeSet>
+       <changeSet author="Administrator (generated)" id="1571345362466-10">
+           <pro:createTrigger disabled="false" path="objects/trigger/ORDERS_BEFORE_INSERT2.sql" relativeToChangelogFile="true" tableName="orders" triggerName="ORDERS_BEFORE_INSERT2"/>
+       </changeSet>
+       <changeSet author="Administrator (generated)" id="1571345362466-11">
+           <pro:createTrigger disabled="false" path="objects/trigger/ORDERS_BEFORE_INSERT.sql" relativeToChangelogFile="true" tableName="orders" triggerName="ORDERS_BEFORE_INSERT"/>
+       </changeSet>
+       <changeSet author="Administrator (generated)" id="1571345362466-12">
+           <createView fullDefinition="true" path="objects/view/OREDERS_VIEW.sql" relativeToChangelogFile="true" viewName="OREDERS_VIEW"/>
+       </changeSet>
+       <changeSet author="Administrator (generated)" id="1571345362466-13">
+           <pro:createTrigger disabled="false" path="objects/trigger/ORDERS_BEFORE_INSERT3.sql" relativeToChangelogFile="true" tableName="orders" triggerName="ORDERS_BEFORE_INSERT3"/>
+       </changeSet>
+       <changeSet author="Administrator (generated)" id="1571345362466-14">
+           <createProcedure path="objects/storedprocedure/P_CUSTOMER_HAS_NUM_FILM.sql" procedureName="P_CUSTOMER_HAS_NUM_FILM" relativeToChangelogFile="true"/>
+       </changeSet>
+       <changeSet author="Administrator (generated)" id="1571345362466-15">
+           <createView fullDefinition="true" path="objects/view/V_CUSTOMER_HAS_FILM.sql" relativeToChangelogFile="true" viewName="V_CUSTOMER_HAS_FILM"/>
+       </changeSet>
+       <changeSet author="Administrator (generated)" id="1571345362466-16">
+           <createProcedure path="objects/storedprocedure/SP_CUSTOMER_SOCIAL_ACCTS.sql" procedureName="SP_CUSTOMER_SOCIAL_ACCTS" relativeToChangelogFile="true"/>
+       </changeSet>
+       <changeSet author="Administrator (generated)" id="1571345362466-17">
+           <pro:createTrigger disabled="false" path="objects/trigger/TRI_BORROWING.sql" relativeToChangelogFile="true" tableName="T_BORROWING" triggerName="TRI_BORROWING"/>
+       </changeSet>
+       <changeSet author="Administrator (generated)" id="1571345362466-18">
+           <pro:createTrigger disabled="false" path="objects/trigger/TRU_BORROWING.sql" relativeToChangelogFile="true" tableName="T_BORROWING" triggerName="TRU_BORROWING"/>
+       </changeSet>
+       <changeSet author="Administrator (generated)" id="1571345362466-19">
+           <pro:createTrigger disabled="false" path="objects/trigger/TSU_T_EXEMPLAR_SEQEXEMPLAR.sql" relativeToChangelogFile="true" tableName="T_EXEMPLAR" triggerName="TSU_T_EXEMPLAR_SEQEXEMPLAR"/>
+       </changeSet>
+       <changeSet author="Administrator (generated)" id="1571345362466-20">
+           <pro:createFunction functionName="F_CUSTOMER_HAS_NUM_FILM" path="objects/function/F_CUSTOMER_HAS_NUM_FILM.sql" relativeToChangelogFile="true"/>
+       </changeSet>
+</databaseChangeLog>
+{% endhighlight %}
+</details>

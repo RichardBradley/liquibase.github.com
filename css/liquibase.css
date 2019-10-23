@@ -101,7 +101,9 @@ iframe.maven {
 }
 
 #search {
-  float: left;
+  width:450px;
+  float:right;
+  margin-top:20px
 }
 
 div#menu div {

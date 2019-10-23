@@ -5,25 +5,8 @@ layout: base
   <div class="span-24">
     <a class="logo" href="/index.html"></a>
 
-    <div id="search">
-      <script>
-        (function () {
-          var cx = "012201009095859210829:kjqqjrpwncu";
-          var gcse = document.createElement("script");
-          gcse.type = "text/javascript";
-          gcse.async = true;
-          gcse.src = (
-            document.location.protocol == "https:"
-              ? "https:"
-              : "http:"
-          ) + "//www.google.com/cse/cse.js?cx=" + cx;
-          var s = document.getElementsByTagName("script")[0];
-          s.parentNode.insertBefore(gcse, s);
-        })();
-      </script>
-      <gcse:searchbox-only></gcse:searchbox-only>
-    </div>
-  </div>
+  {% include components/search/gcse-search.html %}
+   
 
   <div class="span-24" id="menu">
     <div class="span-4">

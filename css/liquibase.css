@@ -10,6 +10,27 @@ code.explicit {
   border-radius: 4px;
 }
 
+div.cta {
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 7px;
+  background: goldenrod;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  border-color: #aa7f27;
+  width: 100%;
+  padding: 4px 8px;
+}
+
+div.cta a {
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: black;
+}
+
 a.cta {
   border-style: solid;
   border-width: 3px;

@@ -14,7 +14,7 @@ The `diff` command is typically used at the completion of a project, because it 
 ## Running the `diff` Command
 To compare two databases of the same type:
 Configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for both databases.
->**Note:** For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your *liquibase.properties* File](config_properties.html) topic in the knowledge base.
+>**Note:** For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your *liquibase.properties* File](http://www.liquibase.org/documentation/config_properties.html) topic in the knowledge base.
 
 Run the following command: `liquibase --outputFile=mydiff.txt diff`
 

@@ -13,16 +13,131 @@ The `diff` command is typically used at the completion of a project, because it 
 
 ## Running the `diff` Command
 To compare two databases of the same type:
-1.	Configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for both databases.
+Configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for both databases.
 >**Note:** For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your *liquibase.properties* File](config_properties.html) topic in the knowledge base.
-2.	Save your *liquibase.properties* file.
-Note: Instead of using a *liquibase.properties* file, you can also pass the necessary information in the command prompt or Linux terminal.
-3.	Open your command prompt or Linux terminal and change the directory to the location of your changelog file, then provide the location of your .bat or .sh file.
->**Note:** If executing the command in the same directory as the .bat or .sh, you only Liquibase is specified. However, if your .bat or .sh is in another directory, pass the path to that location in the command line when you call liquibase.
-4.	Run the following command: `liquibase --outputFile=mydiff.txt diff`
+
+Run the following command: `liquibase --outputFile=mydiff.txt diff`
 
 ## Output
-<a href="assets/liquibaseLiquibaseCommandsDiff/liquibase_outputFile_mydiff.txt_diff.png" title="liquibase_outputFile_mydiff.txt_diff.png"><img src="assets/liquibaseLiquibaseCommandsDiff/liquibase_outputFile_mydiff.txt_diff.png"  alt="" width="800" /></a>
+<details>
+<summary style="font-size:200%;color:blue;">mydiff.txt</summary>
+<br>
+{% highlight xml %}
+
+Diff Results:
+Reference Database: MYSCHEMA2 @ jdbc:oracle:thin:@localhost:1521:ORCL (Default Schema: MYSCHEMA2)
+Comparison Database: MYSCHEMA @ jdbc:oracle:thin:@localhost:1521:ORCL (Default Schema: MYSCHEMA)
+Compared Schemas: MYSCHEMA2 -> MYSCHEMA
+Product Name: EQUAL
+Product Version: EQUAL
+Missing Catalog(s): NONE
+Unexpected Catalog(s): NONE
+Changed Catalog(s): NONE
+Missing Check Constraint(s): NONE
+Unexpected Check Constraint(s): NONE
+Changed Check Constraint(s): NONE
+Missing Column(s): NONE
+Unexpected Column(s):
+     MYSCHEMA.DEPARTMENT.ACTIVE
+     MYSCHEMA.SERVICETECH.ACTIVE
+     MYSCHEMA.SERVICETECH2.ACTIVE
+     MYSCHEMA.SERVICETECH3.ACTIVE
+     MYSCHEMA.VIEW1.ACTIVE
+     MYSCHEMA.DATABASECHANGELOG.AUTHOR
+     MYSCHEMA.DATABASECHANGELOG.COMMENTS
+     MYSCHEMA.DATABASECHANGELOG.CONTEXTS
+     MYSCHEMA.DATABASECHANGELOG.DATEEXECUTED
+     MYSCHEMA.DATABASECHANGELOG.DEPLOYMENT_ID
+     MYSCHEMA.DATABASECHANGELOG.DESCRIPTION
+     MYSCHEMA.DATABASECHANGELOG.EXECTYPE
+     MYSCHEMA.DATABASECHANGELOG.FILENAME
+     MYSCHEMA.DATABASECHANGELOG.ID
+     MYSCHEMA.DATABASECHANGELOGLOCK.ID
+     MYSCHEMA.DEPARTMENT.ID
+     MYSCHEMA.SERVICETECH.ID
+     MYSCHEMA.SERVICETECH2.ID
+     MYSCHEMA.SERVICETECH3.ID
+     MYSCHEMA.VIEW1.ID
+     MYSCHEMA.DATABASECHANGELOG.LABELS
+     MYSCHEMA.DATABASECHANGELOG.LIQUIBASE
+     MYSCHEMA.DATABASECHANGELOGLOCK.LOCKED
+     MYSCHEMA.DATABASECHANGELOGLOCK.LOCKEDBY
+     MYSCHEMA.DATABASECHANGELOGLOCK.LOCKGRANTED
+     MYSCHEMA.DATABASECHANGELOG.MD5SUM
+     MYSCHEMA.DEPARTMENT.NAME
+     MYSCHEMA.SERVICETECH.NAME
+     MYSCHEMA.SERVICETECH2.NAME
+     MYSCHEMA.SERVICETECH3.NAME
+     MYSCHEMA.VIEW1.NAME
+     MYSCHEMA.DATABASECHANGELOG.ORDEREXECUTED
+     MYSCHEMA.DATABASECHANGELOG.TAG
+Changed Column(s): NONE
+Missing Database Package(s): NONE
+Unexpected Database Package(s): NONE
+Changed Database Package(s): NONE
+Missing Database Package Body(s): NONE
+Unexpected Database Package Body(s): NONE
+Changed Database Package Body(s): NONE
+Missing Foreign Key(s): NONE
+Unexpected Foreign Key(s): NONE
+Changed Foreign Key(s): NONE
+Missing Function(s): NONE
+Unexpected Function(s): NONE
+Changed Function(s): NONE
+Missing Index(s): NONE
+Unexpected Index(s):
+     PK_DATABASECHANGELOGLOCK UNIQUE  ON MYSCHEMA.DATABASECHANGELOGLOCK(ID)
+     PK_DEPARTMENT UNIQUE  ON MYSCHEMA.DEPARTMENT(ID)
+     PK_SERVICETECH UNIQUE  ON MYSCHEMA.SERVICETECH(ID)
+     PK_SERVICETECH2 UNIQUE  ON MYSCHEMA.SERVICETECH2(ID)
+     PK_SERVICETECH3 UNIQUE  ON MYSCHEMA.SERVICETECH3(ID)
+Changed Index(s): NONE
+Missing Java Class(s): NONE
+Unexpected Java Class(s): NONE
+Changed Java Class(s): NONE
+Missing Java Source(s): NONE
+Unexpected Java Source(s): NONE
+Changed Java Source(s): NONE
+Missing Primary Key(s): NONE
+Unexpected Primary Key(s):
+     PK_DATABASECHANGELOGLOCK on MYSCHEMA.DATABASECHANGELOGLOCK(ID)
+     PK_DEPARTMENT on MYSCHEMA.DEPARTMENT(ID)
+     PK_SERVICETECH on MYSCHEMA.SERVICETECH(ID)
+     PK_SERVICETECH2 on MYSCHEMA.SERVICETECH2(ID)
+     PK_SERVICETECH3 on MYSCHEMA.SERVICETECH3(ID)
+Changed Primary Key(s): NONE
+Missing Sequence(s): NONE
+Unexpected Sequence(s): NONE
+Changed Sequence(s): NONE
+Missing Stored Procedure(s): NONE
+Unexpected Stored Procedure(s): NONE
+Changed Stored Procedure(s): NONE
+Missing Synonym(s): NONE
+Unexpected Synonym(s): NONE
+Changed Synonym(s): NONE
+Missing Table(s): NONE
+Unexpected Table(s):
+     DATABASECHANGELOG
+     DATABASECHANGELOGLOCK
+     DEPARTMENT
+     SERVICETECH
+     SERVICETECH2
+     SERVICETECH3
+Changed Table(s): NONE
+Missing Trigger(s): NONE
+Unexpected Trigger(s): NONE
+Changed Trigger(s): NONE
+Missing Unique Constraint(s): NONE
+Unexpected Unique Constraint(s): NONE
+Changed Unique Constraint(s): NONE
+Missing View(s): NONE
+Unexpected View(s):
+     VIEW1
+Changed View(s): NONE
+Liquibase command 'diff' was executed successfully.
+
+{% endhighlight %}
+</details>
 
 
 The `diff` command produces a list of categories along with one of the following variables:
@@ -68,9 +183,44 @@ For more information on how to create a diff changelog, check out the [Liquibase
 ## Filtering `diff` Types
 Liquibase allows you to use diffType parameters to filter the types of objects you want to compare. Multiple filters can be added to the parameter as a comma separated list.
 
-    Example: `liquibase --diffTypes=tables, indexes, views diff`
+Example: `liquibase --diffTypes=tables,indexes,views diff`
 
-<a href="assets/liquibaseLiquibaseCommandsDiff/liquibase_diffTypes_tables_indexes_views_diff.png" title="liquibase_diffTypes_tables_indexes_views_diff.png"><img src="assets/liquibaseLiquibaseCommandsDiff/liquibase_diffTypes_tables_indexes_views_diff.png"  alt="" width="800" /></a>
+<details>
+<summary style="font-size:200%;color:blue;">diffTypes Output</summary>
+<br>
+{% highlight xml %}
+
+Diff Results:
+Reference Database: MYSCHEMA2 @ jdbc:oracle:thin:@localhost:1521:ORCL (Default Schema: MYSCHEMA2)
+Comparison Database: MYSCHEMA @ jdbc:oracle:thin:@localhost:1521:ORCL (Default Schema: MYSCHEMA)
+Compared Schemas: MYSCHEMA2 -> MYSCHEMA
+Product Name: EQUAL
+Product Version: EQUAL
+Missing Index(s): NONE
+Unexpected Index(s):
+     PK_DATABASECHANGELOGLOCK UNIQUE  ON MYSCHEMA.DATABASECHANGELOGLOCK(ID)
+     PK_DEPARTMENT UNIQUE  ON MYSCHEMA.DEPARTMENT(ID)
+     PK_SERVICETECH UNIQUE  ON MYSCHEMA.SERVICETECH(ID)
+     PK_SERVICETECH2 UNIQUE  ON MYSCHEMA.SERVICETECH2(ID)
+     PK_SERVICETECH3 UNIQUE  ON MYSCHEMA.SERVICETECH3(ID)
+Changed Index(s): NONE
+Missing Table(s): NONE
+Unexpected Table(s):
+     DATABASECHANGELOG
+     DATABASECHANGELOGLOCK
+     DEPARTMENT
+     SERVICETECH
+     SERVICETECH2
+     SERVICETECH3
+Changed Table(s): NONE
+Missing View(s): NONE
+Unexpected View(s):
+     VIEW1
+Changed View(s): NONE
+Liquibase command 'diff' was executed successfully.
+
+{% endhighlight %}
+</details>
 
 Liquibase Community diffType Categories:
 + tables [DEFAULT]

@@ -13,7 +13,9 @@ subnav: subnav_blog.md
   <div class="span-24">
     <a href="{{ pageRoot }}/index.html" class="logo"></a>
 
-    {% include components/search/gcse-search.html %}
+    <div class="cta-container" style="float: right; margin-top: 24px; margin-right: 100px;">
+      {% include components/buttons/cta.html ctaText="Visit the Expert Exchange" ctaHref="https://download.liquibase.org/expert-exchange" %}
+    </div>
   </div>
 
   <div id="menu" class="span-24">
@@ -97,13 +99,8 @@ subnav: subnav_blog.md
       {% endcase %}
     </ul>
 
-    <div id="XML Announcement" style="padding-right: 10px; float: left">
-      <a href="https://www.datical.com/liquibase/" target="_blank"><img
-          src="/images/LB side ad - XML Changeset Announcement.png" alt="2018 XML Announcement" width="223"
-          height="207"></a>
-    </div>
+    {% include components/search/gcse-search.html isSideNav="true" %}
 
-    <!-- Begin MailChimp Signup Form -->
     <!-- Begin MailChimp Signup Form -->
     <div id="mc_embed_signup" style="padding-right: 10px; float: left">
       <form

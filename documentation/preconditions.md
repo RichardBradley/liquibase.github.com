@@ -269,7 +269,7 @@ Executes an SQL string and checks the returned value.  The SQL must return a sin
 
 ### &lt;changeLogPropertyDefined&gt; ###
 
-Checks whether given [changelog parameter](http://www.liquibase.org/documentation/changelog_parameters#property) is present. If a value is also given, it only fails, if the value is not the same as given. **Since 2.0**
+Checks whether given [changelog parameter](changelog_parameters.html#property) is present. If a value is also given, it only fails, if the value is not the same as given. **Since 2.0**
 
 {% highlight xml %}
 <changeLogPropertyDefined property="myproperty"/>
@@ -286,7 +286,7 @@ Checks whether given [changelog parameter](http://www.liquibase.org/documentatio
 
 ### &lt;customPrecondition&gt; ###
 
-Custom preconditions can be created by creating a class that implements the [liquibase.precondition.CustomPrecondition](http://www.liquibase.org/javadoc/liquibase/precondition/CustomPrecondition.html) interface.  Parameters on custom classes are set through reflection based on the &lt;param&gt; sub-tags.  Parameters are passed as strings to the custom precondition.
+Custom preconditions can be created by creating a class that implements the [liquibase.precondition.CustomPrecondition](/javadoc/liquibase/precondition/CustomPrecondition.html) interface.  Parameters on custom classes are set through reflection based on the &lt;param&gt; sub-tags.  Parameters are passed as strings to the custom precondition.
 
 {% highlight xml %}
 <customPrecondition className="com.example.CustomTableCheck">

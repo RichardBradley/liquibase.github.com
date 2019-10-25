@@ -47,7 +47,7 @@ bundle exec jekyll serve -l
 ```
 
 #### Local Server
-To access the local development server navigate to: `0.0.0.0:3000` if using Docker, or `0.0.0.0:4000`, (the default Jekyll port) if using Bundler.
+To access the local development server navigate to: `0.0.0.0:4000` (the default Jekyll port).
 
 ### CI/CD Overview
 #### Staging (staging.liquibase.org)

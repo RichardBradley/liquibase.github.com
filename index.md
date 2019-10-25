@@ -8,7 +8,7 @@ extraStyleSheets:
 ---
 
 <h1 style="display:flex; justify-content:center; margin-top: 36px;"><img src="images/liquibase_logo.gif" alt="Liquibase"></h1>
-<h3 style="display:flex; justify-content:center; text-align:center; font-size: 20px;">The leading open source tool for database change and deployment management.</h3>
+<h2 style="display:flex; justify-content:center; text-align:center; font-size: 20px;">Liquibase is the leading open source tool for database change and deployment management.</h2>
 
 <div class="lb-choose-path">
     <div class="lb-choose-path__heading">
@@ -58,10 +58,11 @@ extraStyleSheets:
             </div>
             <div class="lb-choose-path__path__text">
                 <ul>
+                    <li>Standardized migration templates for procedural database code</li>
                     <li>Guidance and best practices for your specific use case(s) from a named support engineer</li>
                     <li>Technical support from Liquibase experts</li>
-		    <li>Coming Soon: Snapshot, diff, changelog generation, and reverse-engineering for procedural code objects.</li>
-			    </ul>
+		                <li>Coming Soon: Snapshot, diff, changelog generation, and reverse-engineering for procedural code objects.</li>
+			          </ul>
             </div>
             <div class="lb-choose-path__path__button">
                 <a href="https://download.liquibase.org/liquibase-pro-trial-request-form/" class="cta cta--block">Try Free for 14 Days</a>

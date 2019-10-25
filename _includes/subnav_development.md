@@ -4,6 +4,7 @@
 <li><a href="/development/branches.html"><span>Branches</span></a></li>
 <li><a href="/development/code_org.html"><span>Code Org</span></a></li>
 <li><a href="/development/building.html"><span>Building</span></a></li>
+<li><a href="/documentation/sdk/index.html"><span>SDK</span></a></li>
 <li><a href="/javadoc/index.html"><span>Javadoc</span></a></li>
 <li><a href="/development/jira.html"><span>Using Jira</span></a></li>
 <li><a href="/extensions/index.html"><span>Extension Portal</span></a></li>

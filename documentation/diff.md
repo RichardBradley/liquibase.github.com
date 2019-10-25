@@ -2,163 +2,234 @@
 layout: default
 title: Diff
 ---
+# Liquibase Commands: `diff`
+The `diff` command in Liquibase allows you to compare two databases of the same type or different types to one another.
 
-# Database "Diff" #
+## Uses
+The `diff` command is typically used at the completion of a project, because it allows you to verify all expected changes are in the changelog. The `diff` command is also useful for the following tasks:
++ Finding missing objects in your database
++ Seeing that a change was made to your database
++ Finding unexpected items in your database
 
-While the best way to track database changes is by adding change sets during development (see [the problem with database diffs](http://www.liquibase.org/2007/06/the-problem-with-database-diffs.html)), there are times when being able to perform database diffs is valuable, particularly near the end of a project as a double-check that all required changes are included in the change log.
-
-## Running Diff ##
-
-Diff command support is available through the [command_line](command_line.html) and [ant](ant/index.html) tools.  When diff-ing databases, you specify the target database like you normally do in Liquibase (--url, --username, etc. flags) and you specify the base database with additional flags after the command name.
-
-## Example ##
-
-{% highlight sh %}
-liquibase.sh --driver=oracle.jdbc.OracleDriver \
-        --url=jdbc:oracle:thin:@testdb:1521:test \
-        --username=bob \
-        --password=bob \
-    diff \
-        --referenceUrl=jdbc:oracle:thin:@localhost/XE \
-        --referenceUsername=bob \
-        --referencePassword=bob
-{% endhighlight %}
-
-
-## Database Comparisons ##
-
-Currently, Liquibase runs the following comparisons:
-
-* Version Differences
-* Missing/unexpected tables
-* Missing/unexpected views
-* Missing/unexpected columns
-* Missing/unexpected primary keys
-* Missing/unexpected unique constraints
-* Missing/unexpected foreign Keys
-* Missing/unexpected sequences
-* Missing/unexpected indexes
-* Column definition differences (data type, auto-increment, etc.)
-* View definition differences
-* Data differences (limited), not checked by default
-
-It does not (currently) check
-
-* Non-foreign key constraints (check, etc)
-* Stored Procedures
-* Data type length
-
-Liquibase can diff different database types, but the results may be skewed due to differences in case and data types.
-
-
-## Controlling Checks (since 1.8) ##
- What changes are checked for can be controlled with the diffTypes parameter to the diff commands.  The following options are available and can be passed as a comma-separated list:
- 
-* tables **\[DEFAULT\]**
-* columns **\[DEFAULT\]**
-* views **\[DEFAULT\]**
-* primaryKeys **\[DEFAULT\]**
-* indexes **\[DEFAULT\]**
-* foreignKeys **\[DEFAULT\]**
-* sequences **\[DEFAULT\]**
-* data
-
-If no diffTypes are specified, the checks marked DEFAULT will be run.
-
-Note: This only works with the "generateChangeLog" command, not the "diff" or "diffChangeLog" commands.
-
-### Output Modes ###
-
-Liquibase supports two output modes: report mode ("diff") and change log mode ("diffChangeLog"). In both modes, diff progress is reported to standard error during execution.
-
-### Report Mode ###
-
-In report mode, a description of the differences between two databases is reported to standard out.
-
+## Running the `diff` Command
+To compare two databases:
++ The first option is to run the `diff` command and pass the parameters needed for your source database and target database.  For example:
+Run the following:
 {% highlight text %}
-Base Database: BOB jdbc:oracle:thin:@testdb:1521:latest
-Target Database: BOB jdbc:oracle:thin:@localhost/XE
+liquibase
+--outputFile=mydiff.txt
+--driver=oracle.jdbc.OracleDriver
+--classpath=ojdbc14.jar
+--url="jdbc:oracle:thin:@<IP OR HOSTNAME>:<PORT>:<SERVICE NAME OR SID>"
+--username=<USERNAME>
+--password=<PASSWORD>
+diff
+--referenceUrl="jdbc:oracle:thin:@<IP OR HOSTNAME>:<PORT>:<SERVICE NAME OR SID>"
+--referenceUsername=<USERNAME>
+--referencePassword=<PASSWORD>
+{% endhighlight %}
+
++ Alternatively, configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for both databases.
+Run the following command:
+{% highlight text %}
+liquibase --outputFile=mydiff.txt diff
+{% endhighlight %}
+>**Note:** For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your *liquibase.properties* File](config_properties.html) topic in the knowledge base.
+
+<details>
+<summary style="font-size:200%;color:blue;">Example Output</summary>
+<br>
+{% highlight text %}
+
+Diff Results:
+Reference Database: MYSCHEMA2 @ jdbc:oracle:thin:@localhost:1521:ORCL (Default Schema: MYSCHEMA2)
+Comparison Database: MYSCHEMA @ jdbc:oracle:thin:@localhost:1521:ORCL (Default Schema: MYSCHEMA)
+Compared Schemas: MYSCHEMA2 -> MYSCHEMA
 Product Name: EQUAL
-Product Version:
-     Base:   'Oracle Database 10g Enterprise Edition Release 10.2.0.1.0
-With the Partitioning, OLAP and Data Mining options'
-     Target: 'Oracle Database 10g Express Edition Release 10.2.0.1.0'
-Missing Tables: NONE
-Unexpected Tables: NONE
-Missing Views: NONE
-Unexpected Views: NONE
-Missing Columns:
-     CREDIT.MONTH
-     CREDIT.COMPANY
-     CMS_TEMPLATE.CLASSTYPE
-     CONTENTITEM.SORTORDER
-Unexpected Columns:
-     CATEGORY.SORTORDER
-Missing Foreign Keys: NONE
-Unexpected Foreign Keys:
-     FK_NAME (ID_VC -> STATUS_ID_VC)
-Missing Primary Keys: NONE
-Unexpected Primary Keys: NONE
-Missing Indexes: NONE
-Unexpected Indexes: NONE
-Missing Sequences: NONE
-Unexpected Sequences: NONE
+Product Version: EQUAL
+Missing Catalog(s): NONE
+Unexpected Catalog(s): NONE
+Changed Catalog(s): NONE
+Missing Check Constraint(s): NONE
+Unexpected Check Constraint(s): NONE
+Changed Check Constraint(s): NONE
+Missing Column(s): NONE
+Unexpected Column(s):
+     MYSCHEMA.DEPARTMENT.ACTIVE
+     MYSCHEMA.SERVICETECH.ACTIVE
+     MYSCHEMA.SERVICETECH2.ACTIVE
+     MYSCHEMA.SERVICETECH3.ACTIVE
+     MYSCHEMA.VIEW1.ACTIVE
+     MYSCHEMA.DATABASECHANGELOG.AUTHOR
+     MYSCHEMA.DATABASECHANGELOG.COMMENTS
+     MYSCHEMA.DATABASECHANGELOG.CONTEXTS
+     MYSCHEMA.DATABASECHANGELOG.DATEEXECUTED
+     MYSCHEMA.DATABASECHANGELOG.DEPLOYMENT_ID
+     MYSCHEMA.DATABASECHANGELOG.DESCRIPTION
+     MYSCHEMA.DATABASECHANGELOG.EXECTYPE
+     MYSCHEMA.DATABASECHANGELOG.FILENAME
+     MYSCHEMA.DATABASECHANGELOG.ID
+     MYSCHEMA.DATABASECHANGELOGLOCK.ID
+     MYSCHEMA.DEPARTMENT.ID
+     MYSCHEMA.SERVICETECH.ID
+     MYSCHEMA.SERVICETECH2.ID
+     MYSCHEMA.SERVICETECH3.ID
+     MYSCHEMA.VIEW1.ID
+     MYSCHEMA.DATABASECHANGELOG.LABELS
+     MYSCHEMA.DATABASECHANGELOG.LIQUIBASE
+     MYSCHEMA.DATABASECHANGELOGLOCK.LOCKED
+     MYSCHEMA.DATABASECHANGELOGLOCK.LOCKEDBY
+     MYSCHEMA.DATABASECHANGELOGLOCK.LOCKGRANTED
+     MYSCHEMA.DATABASECHANGELOG.MD5SUM
+     MYSCHEMA.DEPARTMENT.NAME
+     MYSCHEMA.SERVICETECH.NAME
+     MYSCHEMA.SERVICETECH2.NAME
+     MYSCHEMA.SERVICETECH3.NAME
+     MYSCHEMA.VIEW1.NAME
+     MYSCHEMA.DATABASECHANGELOG.ORDEREXECUTED
+     MYSCHEMA.DATABASECHANGELOG.TAG
+Changed Column(s): NONE
+Missing Database Package(s): NONE
+Unexpected Database Package(s): NONE
+Changed Database Package(s): NONE
+Missing Database Package Body(s): NONE
+Unexpected Database Package Body(s): NONE
+Changed Database Package Body(s): NONE
+Missing Foreign Key(s): NONE
+Unexpected Foreign Key(s): NONE
+Changed Foreign Key(s): NONE
+Missing Function(s): NONE
+Unexpected Function(s): NONE
+Changed Function(s): NONE
+Missing Index(s): NONE
+Unexpected Index(s):
+     PK_DATABASECHANGELOGLOCK UNIQUE  ON MYSCHEMA.DATABASECHANGELOGLOCK(ID)
+     PK_DEPARTMENT UNIQUE  ON MYSCHEMA.DEPARTMENT(ID)
+     PK_SERVICETECH UNIQUE  ON MYSCHEMA.SERVICETECH(ID)
+     PK_SERVICETECH2 UNIQUE  ON MYSCHEMA.SERVICETECH2(ID)
+     PK_SERVICETECH3 UNIQUE  ON MYSCHEMA.SERVICETECH3(ID)
+Changed Index(s): NONE
+Missing Java Class(s): NONE
+Unexpected Java Class(s): NONE
+Changed Java Class(s): NONE
+Missing Java Source(s): NONE
+Unexpected Java Source(s): NONE
+Changed Java Source(s): NONE
+Missing Primary Key(s): NONE
+Unexpected Primary Key(s):
+     PK_DATABASECHANGELOGLOCK on MYSCHEMA.DATABASECHANGELOGLOCK(ID)
+     PK_DEPARTMENT on MYSCHEMA.DEPARTMENT(ID)
+     PK_SERVICETECH on MYSCHEMA.SERVICETECH(ID)
+     PK_SERVICETECH2 on MYSCHEMA.SERVICETECH2(ID)
+     PK_SERVICETECH3 on MYSCHEMA.SERVICETECH3(ID)
+Changed Primary Key(s): NONE
+Missing Sequence(s): NONE
+Unexpected Sequence(s): NONE
+Changed Sequence(s): NONE
+Missing Stored Procedure(s): NONE
+Unexpected Stored Procedure(s): NONE
+Changed Stored Procedure(s): NONE
+Missing Synonym(s): NONE
+Unexpected Synonym(s): NONE
+Changed Synonym(s): NONE
+Missing Table(s): NONE
+Unexpected Table(s):
+     DATABASECHANGELOG
+     DATABASECHANGELOGLOCK
+     DEPARTMENT
+     SERVICETECH
+     SERVICETECH2
+     SERVICETECH3
+Changed Table(s): NONE
+Missing Trigger(s): NONE
+Unexpected Trigger(s): NONE
+Changed Trigger(s): NONE
+Missing Unique Constraint(s): NONE
+Unexpected Unique Constraint(s): NONE
+Changed Unique Constraint(s): NONE
+Missing View(s): NONE
+Unexpected View(s):
+     VIEW1
+Changed View(s): NONE
+Liquibase command 'diff' was executed successfully.
+
+{% endhighlight %}
+</details>
+
+
+The `diff` command produces a list of categories along with one of the following descriptions:
++ **Missing:** The object is not on your comparison database (source database).
++ **Unexpected:** There are objects on your comparison database (source database) that are not on your reference database (target database).
++ **Changed:** The object as it exists on the source database is different than as it exists in the target database.
+> **Note:** The changed description will not specify the type of change applied to your database. Run the [diffChangeLog](diffChangeLog.html) command 
+to generate a changelog that will apply the changes to the target database.
+
+Liquibase Community `diff` categories:
++ Catalog
++ Column
++ Foreign Key
++ Index
++ Primary Key
++ Schema
++ Sequence
++ Procedure
++ Unique Constraints
++ View
+
+Liquibase Pro `diff` categories:
+> **Note:** coming soon with Liquibase 3.8.1
+
++ Check Constraint
++ Package
++ Package Body
++ Function
++ Trigger
++ Synonyms
+>**Note:** Liquibase does not currently check Datatype length.
+
+## Filtering `diff` Types
+Liquibase allows you to use diffType parameters to filter the types of objects you want to compare. Multiple filters can be added 
+to the parameter as a comma separated list. If no diffTypes are specified, all objects are considered.
+
+
+Example: 
+{% highlight text %}
+liquibase --diffTypes=tables,indexes,views diff
 {% endhighlight %}
 
-### ChangeLog Mode ###
+<details>
+<summary style="font-size:200%;color:blue;">Example filtered output</summary>
+<br>
+{% highlight text %}
 
-In change log mode, the an XML change log of what is necessary to upgrade the base database to the target database is sent to standard out. This change log can be included as is, or copied into an existing change log.  If the diff command is passed an existing change log file, the new change sets will be appended to the end of the file.
+Diff Results:
+Reference Database: MYSCHEMA2 @ jdbc:oracle:thin:@localhost:1521:ORCL (Default Schema: MYSCHEMA2)
+Comparison Database: MYSCHEMA @ jdbc:oracle:thin:@localhost:1521:ORCL (Default Schema: MYSCHEMA)
+Compared Schemas: MYSCHEMA2 -> MYSCHEMA
+Product Name: EQUAL
+Product Version: EQUAL
+Missing Index(s): NONE
+Unexpected Index(s):
+     PK_DATABASECHANGELOGLOCK UNIQUE  ON MYSCHEMA.DATABASECHANGELOGLOCK(ID)
+     PK_DEPARTMENT UNIQUE  ON MYSCHEMA.DEPARTMENT(ID)
+     PK_SERVICETECH UNIQUE  ON MYSCHEMA.SERVICETECH(ID)
+     PK_SERVICETECH2 UNIQUE  ON MYSCHEMA.SERVICETECH2(ID)
+     PK_SERVICETECH3 UNIQUE  ON MYSCHEMA.SERVICETECH3(ID)
+Changed Index(s): NONE
+Missing Table(s): NONE
+Unexpected Table(s):
+     DATABASECHANGELOG
+     DATABASECHANGELOGLOCK
+     DEPARTMENT
+     SERVICETECH
+     SERVICETECH2
+     SERVICETECH3
+Changed Table(s): NONE
+Missing View(s): NONE
+Unexpected View(s):
+     VIEW1
+Changed View(s): NONE
+Liquibase command 'diff' was executed successfully.
 
-{% highlight xml %}
-<?xml version="1.0" encoding="UTF-8"?>
-<databaseChangeLog
-    xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.1"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.1
-        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.1.xsd">
-    <changeSet author="diff-generated" id="1185206820975-1">
-        <addColumn tableName="CREDIT">
-            <column name="MONTH" type="VARCHAR2(10)"/>
-        </addColumn>
-    </changeSet>
-    <changeSet author="diff-generated" id="1185206820975-2">
-        <addColumn tableName="CREDIT">
-            <column name="COMPANY" type="NUMBER(22,0)"/>
-        </addColumn>
-    </changeSet>
-    <changeSet author="diff-generated" id="1185206820975-3">
-        <addColumn tableName="CMS_TEMPLATE">
-            <column name="CLASSTYPE" type="VARCHAR2(255)"/>
-        </addColumn>
-    </changeSet>
-    <changeSet author="diff-generated" id="1185206820975-4">
-        <addColumn tableName="CONTENTITEM">
-            <column name="SORTORDER" type="NUMBER(22)"/>
-        </addColumn>
-    </changeSet>
-    <changeSet author="diff-generated" id="1185206820975-5">
-        <dropColumn columnName="SORTORDER" tableName="CATEGORY"/>
-    </changeSet>
-    <changeSet author="diff-generated" id="1185206820975-6">
-        <dropForeignKeyConstraint baseTableName="CMS_STATUS"
-                     constraintName="FK_NAME"/>
-    </changeSet>
-</databaseChangeLog>
 {% endhighlight %}
-
-Database objects to include in the changelog can be controlled with the includeObjects or excludeObjects parameters. (since 3.3.2)
-
-The format supported is:
-- An object name (actually a regexp) will match any object whose name matches the regexp.
-- A type:name syntax that matches the regexp name for objects of the given type
-- If you want multiple expressions, comma separate them
-- The type:name logic will be applied to the tables containing columns, indexes, etc.
-
-NOTE: name comparison is case sensitive. If you want insensitive logic, use the `(?i)` regexp flag.
-
-Example Filters:
-- "table_name" will match a table called "table_name" but not "other_table" or "TABLE_NAME"
-- "(i?)table_name" will match a table called "table_name" and "TABLE_NAME"
-- "table_name" will match all columns in the table table_name
-- "table:table_name" will match a table called table_name but not a column named table_name
-- "table:table_name, column:*._lock" will match a table called table_name and all columns that end with "_lock"
+</details>

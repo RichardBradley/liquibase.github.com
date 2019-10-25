@@ -12,7 +12,6 @@ code.explicit {
 
 div.cta {
   border-style: solid;
-  border-width: 3px;
   border-radius: 7px;
   background: goldenrod;
   padding: 5px;
@@ -33,7 +32,6 @@ div.cta a {
 
 a.cta {
   border-style: solid;
-  border-width: 3px;
   border-radius: 7px;
   background: goldenrod;
   padding: 5px;

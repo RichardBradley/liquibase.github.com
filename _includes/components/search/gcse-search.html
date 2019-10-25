@@ -1,0 +1,15 @@
+{% if include.isSideNav %}
+<script src="/js/search/2-col-to-2-row.min.js"></script>
+<script>
+  window.__gcse = {
+    initializationCallback: window.__dat.customInitCallback
+  };
+</script>
+<script async src="https://cse.google.com/cse.js?cx=012201009095859210829:kjqqjrpwncu"></script>
+<gcse:searchbox-only></gcse:searchbox-only>
+{% else %}
+<div id="search">
+  <script async src="https://cse.google.com/cse.js?cx=012201009095859210829:kjqqjrpwncu"></script>
+<gcse:searchbox-only></gcse:searchbox-only>
+</div>
+{% endif %}

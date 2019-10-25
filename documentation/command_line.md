@@ -146,7 +146,7 @@ If you run the command line migrator without any arguments, you will get a help 
 
 ## Using a liquibase.properties file ##
 
-If you do not want to always specify options on the command line, you can create a [properties file](liquibase.properties.html) that contains default values. By default, Liquibase will look for a file called "liquibase.properties" in the current working directory, but you can specify an alternate location with the `--defaultsFile` flag. If you have specified an option in a properties file and specify the same option on the command line, the value on the command line will override the properties file value.
+If you do not want to always specify options on the command line, you can create a [properties file](config_properties.html) that contains default values. By default, Liquibase will look for a file called "liquibase.properties" in the current working directory, but you can specify an alternate location with the `--defaultsFile` flag. If you have specified an option in a properties file and specify the same option on the command line, the value on the command line will override the properties file value.
 
 
 ## Examples ##

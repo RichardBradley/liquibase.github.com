@@ -7,11 +7,12 @@ includeDaticalBox: true
 <div class="container">
 <div class="span-10 append-1">
 
-<h2>Installing Liquibase</h2>
+<h2>Get Started</h2>
 <ul>
 <li><a href="installation-windows.html">Windows Installation Instructions</a></li>
 <li><a href="installation-linux-unix-mac.html">Linux/Unix/Mac Installation Instructions</a></li>
-<li><a href="installation-linux-unix-mac-with-maven.html">Liquibase Installation with Maven on Linux/Unix/Mac</a></li>   
+<li><a href="installation-linux-unix-mac-with-maven.html">Liquibase Installation with Maven on Linux/Unix/Mac</a></li>
+<li><a href="version_control_info.html">Version control information</a></li>
 </ul>
 <h2>Building Changelogs</h2>
 <ul>
@@ -41,6 +42,8 @@ includeDaticalBox: true
 <li><a href="diff.html">Diff</a></li>
 <li><a href="sql_output.html">SQL Output</a></li>
 <li><a href="dbdoc.html">DBDoc</a></li>
+<li><a href="snapshot.html">Snapshot</a></li>
+<li><a href="diffChangeLog.html">diffChangeLog</a></li>
 </ul>
 
 <h2>Running Liquibase</h2>

@@ -48,7 +48,7 @@ As of version 1.6.1.0 of the Maven plugin all files are resolved from the maven 
 
 #### Using Configuration Property Files ####
 
-Configuration settings for the Maven Liquibase plugin can be specified in standard Java Property files. If a [configuration property file](../liquibase.properties.html) is specified it will be used to setup the properties for the invocation of the Maven Liquibase plugin.
+Configuration settings for the Maven Liquibase plugin can be specified in standard Java Property files. If a [configuration property file](../config_properties.html) is specified it will be used to setup the properties for the invocation of the Maven Liquibase plugin.
 
 For each property defined in the file that matches a property in the goal being invoked that property of the goal will be set. If the property does not match any of the properties for the goal, then a warning will be displayed to the user, but execution will continue.
 

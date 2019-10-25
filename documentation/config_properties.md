@@ -53,3 +53,8 @@ To configure your *Liquibase.properties* file:
 2.	Enter the parameters required by the Liquibase Command(s) you want to run.
 > **Note:** For information on parameter requirements, search the Liquibase Command topics in the knowledge base.
 3.	Save your *liquibase.properties file.*
+
+
+### See Also ###
+* [Using a liquibase.properties file in the command  line](command_line.html#using_a_liquibase.properties_file)
+* [Using a liquibase.properties file with the maven plugin](maven/index.html#using_configuration_property_files)

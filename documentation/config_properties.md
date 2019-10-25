@@ -2,12 +2,13 @@
 layout: default
 title: Creating & Configuring liquibase.properties file
 ---
-# Creating & Configuring your *liquibase.properties* File
-For Liquibase to run effectively on your system, you must create and configure the *liquibase.properties* file. This file allows you to specify your database connection information with parameters so Liquibase can access your database.
+# Creating & Configuring your liquibase.properties File
+For Liquibase to run effectively on your system, a convenience way is to create and configure the *liquibase.properties* file. This file allows you to specify your database connection information with parameters so Liquibase can access your database.  This option will save you the trouble of passing along command line arguments.
 
-The *liquibase.properties* file should be placed in your unzipped Liquibase directory.
+The *liquibase.properties* file should be placed in your project Liquibase directory.
+> Note: The file can also be named something other than liquibase.properties and/or be in a completely different directory by using the --defaultsFile parameter during runtime.
+To learn more please see [Liquibase Command Line ](https://www.liquibase.org/documentation/command_line.html).
 
-IMAGE HERE
 
 ## Parameters
 The *liquibase.properties* file accepts the parameter types listed below.
@@ -28,7 +29,7 @@ The *liquibase.properties* file accepts the parameter types listed below.
 
 Different commands require different parameter information to work. For more information on parameter requirements, search the Liquibase Command topics in the knowledge base.
 
-## *liquibase.properties* File Example
+## liquibase.properties File Example
 changeLogFile: ../path/to/file/dbchangelog.xml <br/>
 driver: oracle.jdbc.OracleDriver <br/>
 url: jdbc:oracle:thin:@192.168.0.22:1521/orcl <br/>

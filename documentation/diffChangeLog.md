@@ -5,7 +5,7 @@ title: diffChangeLog Command
 
 # Liquibase Commands: `diffChangeLog`
 The `diffChangeLog` command provides you with:
-+ Information regarding differences between two databases.
++ Information containing differences between two databases; specifically, the diffChangeLog  points out the differences in general and generates changes to resolve most of them.
 + A *changelog* file containing deployable change sets.
 
 ## Uses
@@ -16,10 +16,31 @@ The `diffChangeLog` command is typically used when you want to create a deployab
 
 ## Running the `diffChangeLog` Command
 To create a diff *changelog*:
-1.	Configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for both databases.
-> **Note:** For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your *liquibase.properties* File](config_properties.html) topic in the knowledge base.
 
-2.	Run the following command:  `liquibase --changeLogFile=file_name.xml diffChangeLog`
++ The first option is to run the `diffChangeLog` command and pass the parameters needed for your source database and target database.  For example:
+Run the following:
+{% highlight txt %}
+liquibase
+--changeLogFile=dbchangelog.xml
+--outputFile=mydiff.txt
+--driver=oracle.jdbc.OracleDriver
+--classpath=ojdbc14.jar
+--url="jdbc:oracle:thin:@<IP OR HOSTNAME>:<PORT>:<SERVICE NAME OR SID>"
+--username=<USERNAME>
+--password=<PASSWORD>
+diffChangeLog
+--referenceUrl="jdbc:oracle:thin:@<IP OR HOSTNAME>:<PORT>:<SERVICE NAME OR SID>"
+--referenceUsername=<USERNAME>
+--referencePassword=<PASSWORD>
+{% endhighlight %}
+
++ Alternatively, configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for both databases.
+>**Note:** For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your *liquibase.properties* File](http://www.liquibase.org/documentation/config_properties.html) topic in the knowledge base.
+
+Run the following command:
+{% highlight txt %}
+liquibase --changeLogFile=file_name.xml diffChangeLog
+{% endhighlight %} 
 > **Note:** Replace *file_name.xml*, with your filename and extension format. If you specify a file name that already exists, Liquibase will append your changes to the existing file.
 
 <details>
@@ -46,6 +67,8 @@ Liquibase Community `diffChangeLog` categories:
 + View
 
 Additional Liquibase Pro `diffChangeLog` categories:
+> **Note:** coming soon with Liquibase 3.8.1 <br />
+
 + Check Constraint
 + Package
 + Package Body

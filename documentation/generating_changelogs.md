@@ -31,6 +31,8 @@ liquibase --changeLogFile=dbchangelog.xml generateChangeLog
 The `generateChangeLog` command generates a *changelog* that contains all of your objects (represented as changesets) and places the file in the same hierarchy from where the command was ran.
 
 ### Liquibase Pro Output
+> **Note:** coming soon with Liquibase 3.8.1 <br />
+
 While Liquibase Community stores all the SQL in a *changelog*, Liquibase Pro creates a directory called *Objects* and places it at the same level as your *changelog*.
 The *Objects* directory contains a subdirectory for each of the following stored logic types:
 
@@ -115,6 +117,8 @@ The *Objects* directory contains a subdirectory for each of the following stored
 </details>
 <details>
 <summary style="font-size:200%;color:blue;">Liquibase Pro changelog</summary>
+> **Note:** coming soon with Liquibase 3.8.1 <br />
+
 <br>
 {% highlight xml %}
 

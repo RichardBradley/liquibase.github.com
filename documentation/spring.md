@@ -51,7 +51,7 @@ Changelog files contain a sequence of changesets, each of which make small chang
 * Open the dbchangelog.xml file and update the changelog file with the following code snippet:
 
 
-{% highlight sh %}
+{% highlight xml %}
   <?xml version="1.0" encoding="UTF-8"?>
 	<databaseChangeLog
 	  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
@@ -64,7 +64,7 @@ Changelog files contain a sequence of changesets, each of which make small chang
 
 * In your LiquibaseProj folder create a plain text document named **liquibase.properties**.
 * Edit the liquibase.properties file to add the following properties:
-{% highlight sh %}
+{% highlight text %}
 
     changeLogFile: dbchangelog.xml
     url: jdbc:h2:mem:my_db;MODE=Mysql;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;DATABASE_TO_UPPER=false;INIT=CREATE SCHEMA IF NOT EXISTS my_db\\;SET SCHEMA my_db
@@ -83,7 +83,7 @@ liquibaseProLicenseKey: `<paste license key>`
 
 *	Adding a changeset to the changelog – Change Sets are uniquely identified by “author” and ”id” attributes. Liquibase attempts to execute each changeset in a transaction that is committed at the end.
 In the dbchangelog.xml file line 9 to 20 add a new “department” create table change set as follows:
-{% highlight sh %}
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 
 <databaseChangeLog
@@ -111,7 +111,7 @@ In the dbchangelog.xml file line 9 to 20 add a new “department” create table
 > that is specific to the database platform. In this example, we are using an h2 in-memory database just for an example, and the SQL   
 > generated would look like this:
 
-{% highlight sh %}
+{% highlight sql %}
 CREATE TABLE "department"
 (	"id" number(*,0),
 	"name" VARCHAR2(50 BYTE),
@@ -122,7 +122,7 @@ CREATE TABLE "department"
 
 * In your LiquibaseProj folder create a plain text document named **pom.xml**.
 * Open the pom.xml file and update it with the following code snippet:
-{% highlight sh %}
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
     <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -221,5 +221,5 @@ For this example:
 *	**DATABASECHANGELOGLOCK** – This table is used internally by Liquibase to manage access to the changelog table during deployment.
 
 ## Conclusion ##
-Congratulations! You are now able to use Liquibase to manage your database alongside with your Java Spring Boot application with Maven.
-Click here <a href="https://www.liquibase.org/documentation/maven/index.html" target="_blank">Maven Liquibase Plugin</a> to learn more about the Maven Liquibase Plugin and it's usage.
+Congratulations! You are now able to use Liquibase to manage both your Spring Boot application and its database with Maven. 
+There is more information available on the [Liquibase Maven Plugin](maven/index.html) and its usage.

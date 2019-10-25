@@ -20,7 +20,7 @@ To generate a *changelog*:
 >**Note:** Instead of using a liquibase.properties file, you can also pass the necessary information in the command prompt or Linux terminal.
 3. Open your command prompt or Linux terminal and run the following command:
 
-{% highlight sh %}
+{% highlight text %}
 
 liquibase --changeLogFile=dbchangelog.xml generateChangeLog
 

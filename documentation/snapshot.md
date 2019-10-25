@@ -24,7 +24,6 @@ To take a snapshot of your database:
 <summary style="font-size:200%;color:blue;">myschemaSnapshot.json example</summary>
 <br>
 {% highlight json %}
-Liquibase Pro 3.8.1 by Datical licensed to Liquibase Pro Customer
 {
   "snapshot": {
     "created": "2019-10-23T16:10:40.306",
@@ -183,10 +182,9 @@ Liquibase Pro 3.8.1 by Datical licensed to Liquibase Pro Customer
     }
   }
 }
-Liquibase command 'snapshot' was executed successfully.
 {% endhighlight %}
 </details>
-The `snapshot` command produces a JSON file that contains all your objects and places the file in the same hierarchy as your *changelog*.
+The `snapshot` command produces a JSON file that contains all your objects and places the file in the same directory as your *changelog*.
 
 Liquibase Community `snapshot` categories:
 + Catalog

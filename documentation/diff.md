@@ -15,7 +15,7 @@ The `diff` command is typically used at the completion of a project, because it 
 To compare two databases:
 + The first option is to run the `diff` command and pass the parameters needed for your source database and target database.  For example:
 Run the following:
-{% highlight txt %}
+{% highlight text %}
 liquibase
 --outputFile=mydiff.txt
 --driver=oracle.jdbc.OracleDriver
@@ -30,17 +30,16 @@ diff
 {% endhighlight %}
 
 + Alternatively, configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for both databases.
->**Note:** For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your *liquibase.properties* File](http://www.liquibase.org/documentation/config_properties.html) topic in the knowledge base.
-
 Run the following command:
-{% highlight txt %}
+{% highlight text %}
 liquibase --outputFile=mydiff.txt diff
 {% endhighlight %}
-## Output
+>**Note:** For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your *liquibase.properties* File](config_properties.html) topic in the knowledge base.
+
 <details>
-<summary style="font-size:200%;color:blue;">mydiff.txt</summary>
+<summary style="font-size:200%;color:blue;">Example Output</summary>
 <br>
-{% highlight txt %}
+{% highlight text %}
 
 Diff Results:
 Reference Database: MYSCHEMA2 @ jdbc:oracle:thin:@localhost:1521:ORCL (Default Schema: MYSCHEMA2)
@@ -158,11 +157,12 @@ Liquibase command 'diff' was executed successfully.
 </details>
 
 
-The `diff` command produces a list of categories along with one of the following variables:
+The `diff` command produces a list of categories along with one of the following descriptions:
 + **Missing:** The object is not on your comparison database (source database).
 + **Unexpected:** There are objects on your comparison database (source database) that are not on your reference database (target database).
-+ **Changed:** The object was changed in the database.
-> **Note:** The changed variable will not specify the type of change applied to your database. Run the `diffChangeLog` command see specific information about what changes are applied to the database.
++ **Changed:** The object as it exists on the source database is different than as it exists in the target database.
+> **Note:** The changed description will not specify the type of change applied to your database. Run the [diffChangeLog](diffChangeLog.html) command 
+to generate a changelog that will apply the changes to the target database.
 
 Liquibase Community `diff` categories:
 + Catalog
@@ -177,7 +177,7 @@ Liquibase Community `diff` categories:
 + View
 
 Liquibase Pro `diff` categories:
-> **Note:** coming soon with Liquibase 3.8.1 <br />
+> **Note:** coming soon with Liquibase 3.8.1
 
 + Check Constraint
 + Package
@@ -187,18 +187,20 @@ Liquibase Pro `diff` categories:
 + Synonyms
 >**Note:** Liquibase does not currently check Datatype length.
 
-### `diff` Report
-A diff report provides a description of the differences between two databases, then reports this information in your command prompt or Linux terminal.
-
 ## Filtering `diff` Types
-Liquibase allows you to use diffType parameters to filter the types of objects you want to compare. Multiple filters can be added to the parameter as a comma separated list.
+Liquibase allows you to use diffType parameters to filter the types of objects you want to compare. Multiple filters can be added 
+to the parameter as a comma separated list. If no diffTypes are specified, all objects are considered.
 
-Example: `liquibase --diffTypes=tables,indexes,views diff`
+
+Example: 
+{% highlight text %}
+liquibase --diffTypes=tables,indexes,views diff
+{% endhighlight %}
 
 <details>
-<summary style="font-size:200%;color:blue;">diffTypes Output</summary>
+<summary style="font-size:200%;color:blue;">Example filtered output</summary>
 <br>
-{% highlight txt %}
+{% highlight text %}
 
 Diff Results:
 Reference Database: MYSCHEMA2 @ jdbc:oracle:thin:@localhost:1521:ORCL (Default Schema: MYSCHEMA2)
@@ -231,26 +233,3 @@ Liquibase command 'diff' was executed successfully.
 
 {% endhighlight %}
 </details>
-
-Liquibase Community diffType Categories:
-+ tables [DEFAULT]
-+ columns [DEFAULT]
-+ views [DEFAULT]
-+ primaryKeys [DEFAULT]
-+ indexes [DEFAULT]
-+ foreignKeys [DEFAULT]
-+ sequences [DEFAULT]
-+ data 
-
-Liquibase Pro diffType categories:
-> **Note:** coming soon with Liquibase 3.8.1 <br />
-
-+ Procedures
-+ Functions
-+ Triggers
-+ Package
-+ Packagebody
-
-If no diffTypes are specified, the DEFAULT checks are run.
-
->**Note:** This only works with the `generateChangeLog` and `diff` commands. This does not work with the `diffChangeLog` command.

@@ -19,7 +19,7 @@ To create a diff *changelog*:
 
 + The first option is to run the `diffChangeLog` command and pass the parameters needed for your source database and target database.  For example:
 Run the following:
-{% highlight txt %}
+{% highlight text %}
 liquibase
 --changeLogFile=dbchangelog.xml
 --outputFile=mydiff.txt
@@ -35,18 +35,18 @@ diffChangeLog
 {% endhighlight %}
 
 + Alternatively, configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for both databases.
->**Note:** For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your *liquibase.properties* File](http://www.liquibase.org/documentation/config_properties.html) topic in the knowledge base.
-
 Run the following command:
-{% highlight txt %}
+{% highlight text %}
 liquibase --changeLogFile=file_name.xml diffChangeLog
 {% endhighlight %} 
+>**Note:** For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your *liquibase.properties* File](config_properties.html) topic in the knowledge base.
+
 > **Note:** Replace *file_name.xml*, with your filename and extension format. If you specify a file name that already exists, Liquibase will append your changes to the existing file.
 
 <details>
 <summary style="font-size:200%;color:blue;">Console Output Example</summary>
 <br>
-{% highlight xml %}
+{% highlight text %}
 Liquibase Pro 3.8.1 by Datical licensed to Liquibase Pro Customer
 Liquibase command 'diffChangeLog' was executed successfully.
 {% endhighlight %}

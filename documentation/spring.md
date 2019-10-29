@@ -5,7 +5,7 @@ title: Using Liquibase with Spring Boot and Maven
 
 # Using Liquibase with Spring Boot and Maven Tutorial #
 
-When developing a software, it is very common to create a database schema during production.  Liquibase is a great migration tool that helps creating the database schema, then can run deployment and some testing to the database to ensure that the changes will work in production. 
+When developing software, it is very common to create a database schema during production. Liquibase is a great migration tool that helps with creating the database schema, then running deployment and some testing to the database to ensure that the changes will work in production. 
 The purpose of this tutorial is to demonstrate using Liquibase migration tool for a Java Spring Boot application with Maven.
 
 ## Spring ##
@@ -71,9 +71,13 @@ Changelog files contain a sequence of changesets, each of which make small chang
 
 {% endhighlight %}
 
-The changeLogFile propertiy will point to the changelog we have created.  Since the changelog is in the home directory, there is no need to specify a path to it.  If the changelog is located somewhere else, then a relative path should be added.  
-Windows example: changeLogFile: ..\\<path to changelog>\\changelogs\\dbchangelog.xml , Linux example: ../<path to changelog>/changelogs/dbchangelog.xml
-The url propery is your Databse url.  In this example we are using an In-Memory h2 Database.
+The changeLogFile property will point to the changelog we have created. Since the changelog is in the home directory, there is no need to specify a path to it. If the changelog is located somewhere else, then a relative path should be added.  
+
+Windows example: `changeLogFile: ..\\<path to changelog>\\changelogs\\dbchangelog.xml`
+
+Linux example: `../<path to changelog>/changelogs/dbchangelog.xml`
+
+The url property is your Database url. In this example we are using an in-memory h2 database.
 If there is a user and password associated with the database, then the username and password properties should be added to the properties file as well.
 
 > Note: If you already have a Liquibase Pro key and want to apply it to
@@ -82,6 +86,7 @@ If there is a user and password associated with the database, then the username 
 liquibaseProLicenseKey: `<paste license key>`
 
 *	Adding a changeset to the changelog – Change Sets are uniquely identified by “author” and ”id” attributes. Liquibase attempts to execute each changeset in a transaction that is committed at the end.
+
 In the dbchangelog.xml file line 9 to 20 add a new “department” create table change set as follows:
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -107,7 +112,7 @@ In the dbchangelog.xml file line 9 to 20 add a new “department” create table
 </databaseChangeLog>
 {% endhighlight %}
 
-> Note: This create table change set is XML format.  When the Liquibase update command is run, the changeset will be used to general SQL 
+> Note: This create table change set is XML format.  When the Liquibase update command is run, the changeset will be used to generate SQL 
 > that is specific to the database platform. In this example, we are using an h2 in-memory database just for an example, and the SQL   
 > generated would look like this:
 
@@ -193,11 +198,11 @@ CREATE TABLE "department"
 
 
 * Download and unzip the <a href="assets/liquibaseSpringBootExample/src.zip" download>src.zip</a> to your LiquibaseProj directory.
-* In the src diretory you will notice the path to your application code: src/main/java/com/application.java and the path to some junit tests: src/test/java/com/applicationTests.java.
+* In the src directory you will notice the path to your application code: src/main/java/com/application.java and the path to some junit tests: src/test/java/com/applicationTests.java.
 
-* The Spring Boot Maven plugin had many great features.
+* The Spring Boot Maven plugin has many great features.
 1. It collects all the jar files in the classpath and builds a single "uber-jar".  This makes it more convenient to execute your service.
-2. It searches for the "public static void main()" method to flag as a runnable class.
+2. It searches for the "public static void main()" method to flag any classes with that method signature as a runnable class.
 
 * Open the command prompt or Bash. Navigate to the LiquibaseProj directory.  
   Run the following command:

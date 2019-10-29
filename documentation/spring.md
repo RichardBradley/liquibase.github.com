@@ -5,7 +5,7 @@ title: Using Liquibase with Spring Boot and Maven
 
 # Using Liquibase with Spring Boot and Maven Tutorial #
 
-When developing a software, it is very common to create a database schema during production.  Liquibase is a great migration tool that helps creating the database schema, then can run deployment and some testing to the database to ensure that the changes will work in production. 
+When developing software, it is very common to create a database schema during production. Liquibase is a great migration tool that helps with creating the database schema, then running deployment and some testing to the database to ensure that the changes will work in production. 
 The purpose of this tutorial is to demonstrate using Liquibase migration tool for a Java Spring Boot application with Maven.
 
 ## Spring ##
@@ -71,9 +71,9 @@ Changelog files contain a sequence of changesets, each of which make small chang
 
 {% endhighlight %}
 
-The changeLogFile propertiy will point to the changelog we have created.  Since the changelog is in the home directory, there is no need to specify a path to it.  If the changelog is located somewhere else, then a relative path should be added.  
+The changeLogFile propertiy will point to the changelog we have created. Since the changelog is in the home directory, there is no need to specify a path to it. If the changelog is located somewhere else, then a relative path should be added.  
 Windows example: changeLogFile: ..\\<path to changelog>\\changelogs\\dbchangelog.xml , Linux example: ../<path to changelog>/changelogs/dbchangelog.xml
-The url propery is your Databse url.  In this example we are using an In-Memory h2 Database.
+The url propery is your Databse url. In this example we are using an In-Memory h2 Database.
 If there is a user and password associated with the database, then the username and password properties should be added to the properties file as well.
 
 > Note: If you already have a Liquibase Pro key and want to apply it to

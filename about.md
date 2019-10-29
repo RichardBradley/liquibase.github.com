@@ -5,14 +5,24 @@ includeDaticalBox: true
 ---
 
 # About Liquibase #
+Nathan Voxland started the Liquibase project in 2006 to enable easier management of database changes, especially in agile software development environments. It’s open source and licensed under Apache 2.0.
+
+Teams around the world trust Liquibase to easily track and deploy database changes. It’s even been built into solutions such as Spinnaker and Appian. 
 
 ## Availability ##
 
-Download Liquibase here: [http://download.liquibase.org](http://liquibase.org/download)
+**Download Liquibase** 
 
-The official Liquibase Maven groups are [org.liquibase](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.liquibase%22) and [org.liquibase.ext](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.liquibase.ext%22)
+[http://download.liquibase.org](http://liquibase.org/download)
 
-The main Liquibase artifact is [group:org.liquibase, artifact:liquibase-core](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22liquibase-core%22)
+**Official Liquibase Maven groups**
+
+[org.liquibase](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.liquibase%22) and 
+[org.liquibase.ext](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.liquibase.ext%22)
+
+**Main Liquibase artifact**
+
+[group:org.liquibase, artifact:liquibase-core](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22liquibase-core%22)
 
 ## Source Code ##
 
@@ -22,15 +32,17 @@ The main Liquibase code is at [https://github.com/liquibase/liquibase](https://g
 
 ## License ##
 
-Liquibase is licensed under the Apache 2.0 License
+Liquibase is [licensed under the Apache 2.0 License](https://github.com/liquibase/liquibase/blob/master/LICENSE.txt)
 
-LIQUIBASE is a registered trademark of Datical.
+Liquibase Pro, with additional features and support, is [commercially licensed](https://support.liquibase.org/eula/).
+
+LIQUIBASE is a registered trademark of [Datical](https://www.datical.com).
 
 ## Friends of Liquibase ##
 
-The following companies have provided software and/or services to help support Liquibase:
+The following companies provide software and/or services to help support Liquibase:
 
-- **Datical** (Sponsors Liquibase Development [http://datical.com](https://www.datical.com/))
+- **Datical** (Sponsors Liquibase Development [https://www.datical.com](https://www.datical.com/))
 - **Atlassian** (Provides [http://liquibase.jira.com](http://liquibase.jira.com))
 - **Zoho** (Provides [http://forum.liquibase.org](http://forum.liquibase.org))
 - **YourKit** (Provides [Java Profiler](http://yourkit.com))

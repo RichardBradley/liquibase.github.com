@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: side-search
 title: Liquibase
 includeDaticalBox: true
 extraStyleSheets:
@@ -61,10 +61,11 @@ extraStyleSheets:
                     <li>Standardized migration templates for procedural database code</li>
                     <li>Guidance and best practices for your specific use case(s) from a named support engineer</li>
                     <li>Technical support from Liquibase experts</li>
-			    </ul>
+		                <li>Coming Soon: Snapshot, diff, changelog generation, and reverse-engineering for procedural code objects.</li>
+			          </ul>
             </div>
             <div class="lb-choose-path__path__button">
-                <a href="https://download.liquibase.org/liquibase-pro-invoice-request-form/" class="cta cta--block">Try Free for 14 Days</a>
+                <a href="https://download.liquibase.org/liquibase-pro-trial-request-form/" class="cta cta--block">Try Free for 14 Days</a>
             </div>
         </div>
     </div>

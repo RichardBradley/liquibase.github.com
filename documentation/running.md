@@ -25,6 +25,8 @@ Liquibase ships with the following execution methods:
 
 Liquibase can easily be embedded and executed through its Java APIs. For more information, see the <a href="../javadoc/index.html">Javadoc</a>
 
+## Learn More
 
+Read our article on [How to Run Liquibase](https://download.liquibase.org/how-to-run-liquibase/) for more information on each of the methods above, why some users choose one method over another, and how to mix and match methods. 
 
 

@@ -21,11 +21,13 @@ Alter properties of an existing sequence
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
+<tr><td style='vertical-align: top'>cacheSize</td><td style='vertical-align: top'>Change the cache size?</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>incrementBy</td><td style='vertical-align: top'>New amount the sequence should increment by</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, postgresql, db2, oracle, firebird</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>maxValue</td><td style='vertical-align: top'>New maximum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, postgresql, db2, oracle, firebird</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>minValue</td><td style='vertical-align: top'>New minimum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, hsqldb, postgresql, db2, oracle, firebird</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>ordered</td><td style='vertical-align: top'>Does the sequence need to be guaranteed to be genererated inm the order of request?</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, hsqldb, postgresql, oracle, firebird, h2</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>cycle</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>incrementBy</td><td style='vertical-align: top'>New amount the sequence should increment by</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, firebird, oracle, postgresql, db2, asany, db2z, derby, mssql</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>maxValue</td><td style='vertical-align: top'>New maximum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, firebird, oracle, postgresql, db2, asany, db2z, derby, h2, mssql</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>minValue</td><td style='vertical-align: top'>New minimum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>ordered</td><td style='vertical-align: top'>Does the sequence need to be guaranteed to be genererated inm the order of request?</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, firebird, oracle, postgresql, asany, db2z, derby, h2, mssql</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>sequenceName</td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
@@ -38,8 +40,12 @@ Alter properties of an existing sequence
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="alterSequence-example">
-    <alterSequence catalogName="cat"
+<changeSet author="liquibase-docs"
+        id="alterSequence-example"
+        objectQuotingStrategy="LEGACY">
+    <alterSequence cacheSize="371717"
+            catalogName="cat"
+            cycle="true"
             incrementBy="371717"
             maxValue="371717"
             minValue="371717"
@@ -54,9 +60,12 @@ Alter properties of an existing sequence
 changeSet:
   id: alterSequence-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - alterSequence:
+      cacheSize: 371717
       catalogName: cat
+      cycle: true
       incrementBy: 371717
       maxValue: 371717
       minValue: 371717
@@ -72,10 +81,13 @@ changeSet:
   "changeSet": {
     "id": "alterSequence-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "alterSequence": {
+          "cacheSize": 371717,
           "catalogName": "cat",
+          "cycle": true,
           "incrementBy": 371717,
           "maxValue": 371717,
           "minValue": 371717,
@@ -93,10 +105,10 @@ changeSet:
 </div>
 
 
-## SQL Generated From Above Sample (Oracle)
+## SQL Generated From Above Sample (SQL Server)
 
 {% highlight sql %}
-ALTER SEQUENCE cat.seq_id INCREMENT BY 371717 MINVALUE 371717 MAXVALUE 371717 ORDER;
+ALTER SEQUENCE [public].seq_id INCREMENT BY 371717 MINVALUE 371717 MAXVALUE 371717 ORDER;
 
 
 {% endhighlight %}
@@ -106,16 +118,19 @@ ALTER SEQUENCE cat.seq_id INCREMENT BY 371717 MINVALUE 371717 MAXVALUE 371717 OR
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>Derby</td><td>Not Supported</td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>INGRES</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>MariaDB</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>MySQL</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>SQL Server</td><td>Not Supported</td><td>No</td></tr>
+<tr><td>SQL Server</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>SQLite</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Sybase</td><td>Not Supported</td><td>No</td></tr>
-<tr><td>Sybase Anywhere</td><td>Not Supported</td><td>No</td></tr>
+<tr><td>Sybase Anywhere</td><td><b>Supported</b></td><td>No</td></tr>
 </table>

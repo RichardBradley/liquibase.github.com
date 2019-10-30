@@ -39,7 +39,9 @@ Concatenates the values in two columns, joins them by with string, and stores th
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="mergeColumns-example">
+<changeSet author="liquibase-docs"
+        id="mergeColumns-example"
+        objectQuotingStrategy="LEGACY">
     <mergeColumns catalogName="cat"
             column1Name="first_name"
             column2Name="last_name"
@@ -56,6 +58,7 @@ Concatenates the values in two columns, joins them by with string, and stores th
 changeSet:
   id: mergeColumns-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - mergeColumns:
       catalogName: cat
@@ -75,6 +78,7 @@ changeSet:
   "changeSet": {
     "id": "mergeColumns-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "mergeColumns": {
@@ -117,12 +121,15 @@ ALTER TABLE public.person DROP COLUMN last_name;
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
+<tr><td>DB2</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>

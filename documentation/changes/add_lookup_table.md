@@ -26,7 +26,7 @@ Creates a lookup table containing values stored in a column and creates a foreig
 <tr><td style='vertical-align: top'>existingTableCatalogName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>existingTableName</td><td style='vertical-align: top'>Name of the table containing the data to extract</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>existingTableSchemaName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>newColumnDataType</td><td style='vertical-align: top'>Data type of the new table column</td><td style='vertical-align: top'>informix, mssql, h2, mysql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>newColumnDataType</td><td style='vertical-align: top'>Data type of the new table column</td><td style='vertical-align: top'>informix, mariadb, mysql, mssql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>newColumnName</td><td style='vertical-align: top'>Name of the column in the new table to create</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>newTableCatalogName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>newTableName</td><td style='vertical-align: top'>Name of lookup table to create</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
@@ -41,13 +41,17 @@ Creates a lookup table containing values stored in a column and creates a foreig
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="addLookupTable-example">
+<changeSet author="liquibase-docs"
+        id="addLookupTable-example"
+        objectQuotingStrategy="LEGACY">
     <addLookupTable constraintName="fk_address_state"
             existingColumnName="state"
             existingTableName="address"
             newColumnDataType="char(2)"
             newColumnName="abbreviation"
-            newTableName="state"/>
+            newTableCatalogName="cat"
+            newTableName="state"
+            newTableSchemaName="public"/>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -56,6 +60,7 @@ Creates a lookup table containing values stored in a column and creates a foreig
 changeSet:
   id: addLookupTable-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - addLookupTable:
       constraintName: fk_address_state
@@ -63,7 +68,9 @@ changeSet:
       existingTableName: address
       newColumnDataType: char(2)
       newColumnName: abbreviation
+      newTableCatalogName: cat
       newTableName: state
+      newTableSchemaName: public
 
 {% endhighlight %}
 </div>
@@ -73,6 +80,7 @@ changeSet:
   "changeSet": {
     "id": "addLookupTable-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "addLookupTable": {
@@ -81,7 +89,9 @@ changeSet:
           "existingTableName": "address",
           "newColumnDataType": "char(2)",
           "newColumnName": "abbreviation",
-          "newTableName": "state"
+          "newTableCatalogName": "cat",
+          "newTableName": "state",
+          "newTableSchemaName": "public"
         }
       }]
     
@@ -96,13 +106,13 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-CREATE TABLE state AS SELECT DISTINCT state AS abbreviation FROM address WHERE state IS NOT NULL;
+CREATE TABLE cat.state AS SELECT DISTINCT state AS abbreviation FROM address WHERE state IS NOT NULL;
 
-ALTER TABLE state MODIFY abbreviation CHAR(2) NOT NULL;
+ALTER TABLE public.state MODIFY abbreviation CHAR(2) NOT NULL;
 
-ALTER TABLE state ADD PRIMARY KEY (abbreviation);
+ALTER TABLE public.state ADD PRIMARY KEY (abbreviation);
 
-ALTER TABLE address ADD CONSTRAINT fk_address_state FOREIGN KEY (state) REFERENCES state (abbreviation);
+ALTER TABLE address ADD CONSTRAINT fk_address_state FOREIGN KEY (state) REFERENCES public.state (abbreviation);
 
 
 {% endhighlight %}
@@ -112,11 +122,14 @@ ALTER TABLE address ADD CONSTRAINT fk_address_state FOREIGN KEY (state) REFERENC
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>HyperSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>HyperSQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>

@@ -19,7 +19,7 @@ The 'sql' tag allows you to specify whatever sql you want. It is useful for comp
 
 The createProcedure refactoring is the best way to create stored procedures.
 
-The 'sql' tag can also support multiline statements in the same file. Statements can either be split using a ; at the end of the last line of the SQL or a go on its own on the line between the statements can be used. Multiline SQL statements are also supported and only a ; or go statement will finish a statement, a new line is not enough. Files containing a single statement do not need to use a ; or go.
+The 'sql' tag can also support multiline statements in the same file. Statements can either be split using a ; at the end of the last line of the SQL or a go on its own on the line between the statements can be used.Multiline SQL statements are also supported and only a ; or go statement will finish a statement, a new line is not enough. Files containing a single statement do not need to use a ; or go.
 
 The sql change can also contain comments of either of the following formats:
 
@@ -47,15 +47,13 @@ Note: By default it will attempt to split statements on a ';' or 'go' at the end
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="sql-example">
+<changeSet author="liquibase-docs"
+        id="sql-example"
+        objectQuotingStrategy="LEGACY">
     <sql dbms="h2, oracle"
             endDelimiter="\nGO"
             splitStatements="true"
-            stripComments="true"
-    >
-        insert into person (name) values ('Bob')
-    </sql>
-    <comment>What about Bob?</comment>
+            stripComments="true">insert into person (name) values ('Bob')</sql>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -64,6 +62,7 @@ Note: By default it will attempt to split statements on a ';' or 'go' at the end
 changeSet:
   id: sql-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - sql:
       comment: What about Bob?
@@ -81,6 +80,7 @@ changeSet:
   "changeSet": {
     "id": "sql-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "sql": {
@@ -115,11 +115,14 @@ GO
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>

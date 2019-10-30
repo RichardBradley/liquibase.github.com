@@ -22,9 +22,14 @@ Create a new database view
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>replaceIfExists</td><td style='vertical-align: top'>Use 'create or replace' syntax</td><td style='vertical-align: top'></td><td style='vertical-align:top'>sybase, mssql, postgresql, oracle, firebird, sqlite, h2, mysql</td><td style='vertical-align: top'>1.5</td></tr>
+<tr><td style='vertical-align: top'>encoding</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>fullDefinition</td><td style='vertical-align: top'>Set to true if selectQuery is the entire view definition. False if the CREATE VIEW header should be added</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.3</td></tr>
+<tr><td style='vertical-align: top'>path</td><td style='vertical-align: top'>Path to file containing view definition</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.6</td></tr>
+<tr><td style='vertical-align: top'>relativeToChangelogFile</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>remarks</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>replaceIfExists</td><td style='vertical-align: top'>Use 'create or replace' syntax</td><td style='vertical-align: top'></td><td style='vertical-align:top'>mariadb, firebird, sybase, oracle, sqlite, postgresql, hsqldb, ingres, db2, h2, mysql, mssql</td><td style='vertical-align: top'>1.5</td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>selectQuery</td><td style='vertical-align: top'>SQL for generating the view</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>selectQuery</td><td style='vertical-align: top'>SQL for generating the view</td><td style='vertical-align: top'>informix</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>viewName</td><td style='vertical-align: top'>Name of the view to create</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
@@ -36,9 +41,16 @@ Create a new database view
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="createView-example">
+<changeSet author="liquibase-docs"
+        id="createView-example"
+        objectQuotingStrategy="LEGACY">
     <createView catalogName="cat"
-            replaceIfExists="true"
+            encoding="UTF-8"
+            fullDefinition="true"
+            path="A String"
+            relativeToChangelogFile="true"
+            remarks="A String"
+            replaceIfExists="false"
             schemaName="public"
             viewName="v_person">select id, name from person where id > 10</createView>
 </changeSet>
@@ -49,10 +61,16 @@ Create a new database view
 changeSet:
   id: createView-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - createView:
       catalogName: cat
-      replaceIfExists: true
+      encoding: UTF-8
+      fullDefinition: true
+      path: A String
+      relativeToChangelogFile: true
+      remarks: A String
+      replaceIfExists: false
       schemaName: public
       selectQuery: select id, name from person where id > 10
       viewName: v_person
@@ -65,11 +83,17 @@ changeSet:
   "changeSet": {
     "id": "createView-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "createView": {
           "catalogName": "cat",
-          "replaceIfExists": true,
+          "encoding": "UTF-8",
+          "fullDefinition": true,
+          "path": "A String",
+          "relativeToChangelogFile": true,
+          "remarks": "A String",
+          "replaceIfExists": false,
           "schemaName": "public",
           "selectQuery": "select id, name from person where id > 10",
           "viewName": "v_person"
@@ -87,7 +111,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-CREATE OR REPLACE VIEW cat.v_person AS select id,
+CREATE VIEW cat.v_person AS select id,
  name from person where id > 10;
 
 
@@ -98,11 +122,14 @@ CREATE OR REPLACE VIEW cat.v_person AS select id,
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>

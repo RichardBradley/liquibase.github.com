@@ -21,7 +21,7 @@ Applies a tag to the database for future rollback
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>tag</td><td style='vertical-align: top'>Tag to apply</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>tag</td><td style='vertical-align: top'>Tag to apply</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -32,7 +32,9 @@ Applies a tag to the database for future rollback
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="tagDatabase-example">
+<changeSet author="liquibase-docs"
+        id="tagDatabase-example"
+        objectQuotingStrategy="LEGACY">
     <tagDatabase tag="version_1.3"/>
 </changeSet>
 {% endhighlight %}
@@ -42,6 +44,7 @@ Applies a tag to the database for future rollback
 changeSet:
   id: tagDatabase-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - tagDatabase:
       tag: version_1.3
@@ -54,6 +57,7 @@ changeSet:
   "changeSet": {
     "id": "tagDatabase-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "tagDatabase": {
@@ -72,8 +76,6 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-UPDATE DATABASECHANGELOG SET TAG = 'version_1.3' WHERE DATEEXECUTED = (SELECT MAX(DATEEXECUTED) FROM (SELECT DATEEXECUTED FROM DATABASECHANGELOG) AS X);
-
 
 {% endhighlight %}
 
@@ -82,11 +84,14 @@ UPDATE DATABASECHANGELOG SET TAG = 'version_1.3' WHERE DATEEXECUTED = (SELECT MA
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>

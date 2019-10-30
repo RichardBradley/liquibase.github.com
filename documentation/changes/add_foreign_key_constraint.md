@@ -26,15 +26,16 @@ Adds a foreign key constraint to an existing column
 <tr><td style='vertical-align: top'>baseTableName</td><td style='vertical-align: top'>Name of the table containing the column to constrain</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>baseTableSchemaName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of the new foreign key constraint</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>deferrable</td><td style='vertical-align: top'>Is the foreign key deferrable</td><td style='vertical-align: top'></td><td style='vertical-align:top'>postgresql, oracle</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>initiallyDeferred</td><td style='vertical-align: top'>Is the foreign key initially deferred</td><td style='vertical-align: top'></td><td style='vertical-align:top'>postgresql, oracle</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>onDelete</td><td style='vertical-align: top'>ON DELETE functionality. Possible values: 'CASCADE', 'SET NULL', 'SET DEFAULT', 'RESTRICT', 'NO ACTION'</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>deferrable</td><td style='vertical-align: top'>Is the foreign key deferrable</td><td style='vertical-align: top'></td><td style='vertical-align:top'>oracle, sqlite, postgresql</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>initiallyDeferred</td><td style='vertical-align: top'>Is the foreign key initially deferred</td><td style='vertical-align: top'></td><td style='vertical-align:top'>oracle, sqlite, postgresql</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>onDelete</td><td style='vertical-align: top'>ON DELETE functionality. Possible values: 'CASCADE', 'SET NULL', 'SET DEFAULT', 'RESTRICT', 'NO ACTION'</td><td style='vertical-align: top'></td><td style='vertical-align:top'>firebird, oracle, hsqldb, db2z, h2, informix, mariadb, postgresql, ingres, db2, asany, derby, mysql, mssql</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>onUpdate</td><td style='vertical-align: top'>ON UPDATE functionality. Possible values: 'CASCADE', 'SET NULL', 'SET DEFAULT', 'RESTRICT', 'NO ACTION'</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>referencedColumnNames</td><td style='vertical-align: top'>Column(s) the foreign key points to. Comma-separate if multiple</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>referencedTableCatalogName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>referencedTableName</td><td style='vertical-align: top'>Name of the table the foreign key points to</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>referencedTableSchemaName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>referencesUniqueColumn</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>validate</td><td style='vertical-align: top'>This is true if the foreign key has 'ENABLE VALIDATE' set, or false if the foreign key has 'ENABLE NOVALIDATE' set.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -45,16 +46,23 @@ Adds a foreign key constraint to an existing column
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="addForeignKeyConstraint-example">
+<changeSet author="liquibase-docs"
+        id="addForeignKeyConstraint-example"
+        objectQuotingStrategy="LEGACY">
     <addForeignKeyConstraint baseColumnNames="person_id"
+            baseTableCatalogName="cat"
             baseTableName="address"
+            baseTableSchemaName="public"
             constraintName="fk_address_person"
             deferrable="true"
             initiallyDeferred="true"
             onDelete="CASCADE"
             onUpdate="RESTRICT"
             referencedColumnNames="id"
-            referencedTableName="person"/>
+            referencedTableCatalogName="cat"
+            referencedTableName="person"
+            referencedTableSchemaName="public"
+            validate="true"/>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -63,17 +71,23 @@ Adds a foreign key constraint to an existing column
 changeSet:
   id: addForeignKeyConstraint-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - addForeignKeyConstraint:
       baseColumnNames: person_id
+      baseTableCatalogName: cat
       baseTableName: address
+      baseTableSchemaName: public
       constraintName: fk_address_person
       deferrable: true
       initiallyDeferred: true
       onDelete: CASCADE
       onUpdate: RESTRICT
       referencedColumnNames: id
+      referencedTableCatalogName: cat
       referencedTableName: person
+      referencedTableSchemaName: public
+      validate: true
 
 {% endhighlight %}
 </div>
@@ -83,18 +97,24 @@ changeSet:
   "changeSet": {
     "id": "addForeignKeyConstraint-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "addForeignKeyConstraint": {
           "baseColumnNames": "person_id",
+          "baseTableCatalogName": "cat",
           "baseTableName": "address",
+          "baseTableSchemaName": "public",
           "constraintName": "fk_address_person",
           "deferrable": true,
           "initiallyDeferred": true,
           "onDelete": "CASCADE",
           "onUpdate": "RESTRICT",
           "referencedColumnNames": "id",
-          "referencedTableName": "person"
+          "referencedTableCatalogName": "cat",
+          "referencedTableName": "person",
+          "referencedTableSchemaName": "public",
+          "validate": true
         }
       }]
     
@@ -109,7 +129,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE address ADD CONSTRAINT fk_address_person FOREIGN KEY (person_id) REFERENCES person (id) ON UPDATE RESTRICT ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED;
+ALTER TABLE cat.address ADD CONSTRAINT fk_address_person FOREIGN KEY (person_id) REFERENCES cat.person (id) ON UPDATE RESTRICT ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED;
 
 
 {% endhighlight %}
@@ -119,11 +139,14 @@ ALTER TABLE address ADD CONSTRAINT fk_address_person FOREIGN KEY (person_id) REF
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>

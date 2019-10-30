@@ -22,11 +22,13 @@ Adds a not-null constraint to an existing table. If a defaultNullValue attribute
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>columnDataType</td><td style='vertical-align: top'>Current data type of the column</td><td style='vertical-align: top'>informix, mssql, h2, mysql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>columnDataType</td><td style='vertical-align: top'>Current data type of the column</td><td style='vertical-align: top'>informix, mariadb, mysql, mssql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>columnName</td><td style='vertical-align: top'>Name of the column to add the constraint to</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Created constraint name (if database supports names for NOT NULL constraints)</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>defaultNullValue</td><td style='vertical-align: top'>Value to set all currently null values to. If not set, change will fail if null values exist</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Adds a not-null constraint to an existing table. If a defaultNullValue attribute is passed, all null values for the column will be updated to the passed value before the constraint is applied.</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>validate</td><td style='vertical-align: top'>This is true if the not null constraint has 'ENABLE VALIDATE' set, or false if the not null constrain has 'ENABLE NOVALIDATE' set.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -37,13 +39,17 @@ Adds a not-null constraint to an existing table. If a defaultNullValue attribute
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="addNotNullConstraint-example">
+<changeSet author="liquibase-docs"
+        id="addNotNullConstraint-example"
+        objectQuotingStrategy="LEGACY">
     <addNotNullConstraint catalogName="cat"
             columnDataType="int"
             columnName="id"
+            constraintName="const_name"
             defaultNullValue="A String"
             schemaName="public"
-            tableName="person"/>
+            tableName="person"
+            validate="true"/>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -52,14 +58,17 @@ Adds a not-null constraint to an existing table. If a defaultNullValue attribute
 changeSet:
   id: addNotNullConstraint-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - addNotNullConstraint:
       catalogName: cat
       columnDataType: int
       columnName: id
+      constraintName: const_name
       defaultNullValue: A String
       schemaName: public
       tableName: person
+      validate: true
 
 {% endhighlight %}
 </div>
@@ -69,15 +78,18 @@ changeSet:
   "changeSet": {
     "id": "addNotNullConstraint-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "addNotNullConstraint": {
           "catalogName": "cat",
           "columnDataType": "int",
           "columnName": "id",
+          "constraintName": "const_name",
           "defaultNullValue": "A String",
           "schemaName": "public",
-          "tableName": "person"
+          "tableName": "person",
+          "validate": true
         }
       }]
     
@@ -103,12 +115,15 @@ ALTER TABLE cat.person MODIFY id INT NOT NULL;
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
+<tr><td>DB2</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>

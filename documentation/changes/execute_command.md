@@ -15,13 +15,14 @@ title: Change executeCommand
 
 # Change: 'executeCommand'
 
-Executes a system command. Because this refactoring doesn't generate SQL like most, using LiquiBase commands such as migrateSQL may not work as expected. Therefore, if at all possible use refactorings that generate SQL.
+Executes a system command. Because this refactoring doesn't generate SQL like most, using Liquibase commands such as migrateSQL may not work as expected. Therefore, if at all possible use refactorings that generate SQL.
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>executable</td><td style='vertical-align: top'>Name of the executable to run</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>timeout</td><td style='vertical-align: top'>Timeout value for executable to run</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -32,8 +33,10 @@ Executes a system command. Because this refactoring doesn't generate SQL like mo
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="executeCommand-example">
-    <executeCommand executable="mysqldump"/>
+<changeSet author="liquibase-docs"
+        id="executeCommand-example"
+        objectQuotingStrategy="LEGACY">
+    <executeCommand executable="mysqldump" timeout="10s"/>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -42,9 +45,11 @@ Executes a system command. Because this refactoring doesn't generate SQL like mo
 changeSet:
   id: executeCommand-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - executeCommand:
       executable: mysqldump
+      timeout: 10s
 
 {% endhighlight %}
 </div>
@@ -54,10 +59,12 @@ changeSet:
   "changeSet": {
     "id": "executeCommand-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "executeCommand": {
-          "executable": "mysqldump"
+          "executable": "mysqldump",
+          "timeout": "10s"
         }
       }]
     
@@ -74,11 +81,14 @@ changeSet:
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>

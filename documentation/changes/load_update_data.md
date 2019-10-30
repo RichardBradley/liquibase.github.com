@@ -24,13 +24,17 @@ A value of NULL in a cell will be converted to a database NULL rather than the s
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
+<tr><td style='vertical-align: top'>commentLineStartsWith</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>encoding</td><td style='vertical-align: top'>Encoding of the CSV file (defaults to UTF-8)</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>file</td><td style='vertical-align: top'>CSV file to load</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>onlyUpdate</td><td style='vertical-align: top'>If true, records with no matching database record should be ignored</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.3</td></tr>
 <tr><td style='vertical-align: top'>primaryKey</td><td style='vertical-align: top'>Comma delimited list of the columns for the primary key</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>quotchar</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>relativeToChangelogFile</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>separator</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table to insert or update data in</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>usePreparedStatements</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 ## Nested Properties ##
@@ -47,15 +51,21 @@ A value of NULL in a cell will be converted to a database NULL rather than the s
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="loadUpdateData-example">
+<changeSet author="liquibase-docs"
+        id="loadUpdateData-example"
+        objectQuotingStrategy="LEGACY">
     <loadUpdateData catalogName="cat"
+            commentLineStartsWith="A String"
             encoding="UTF-8"
             file="com/example/users.csv"
+            onlyUpdate="true"
             primaryKey="pk_id"
-            quotchar="A String"
+            quotchar="'"
+            relativeToChangelogFile="true"
             schemaName="public"
-            separator="A String"
-            tableName="person">
+            separator=","
+            tableName="person"
+            usePreparedStatements="true">
         <column name="address" type="varchar(255)"/>
     </loadUpdateData>
 </changeSet>
@@ -66,6 +76,7 @@ A value of NULL in a cell will be converted to a database NULL rather than the s
 changeSet:
   id: loadUpdateData-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - loadUpdateData:
       catalogName: cat
@@ -73,13 +84,17 @@ changeSet:
       - column:
           name: address
           type: varchar(255)
+      commentLineStartsWith: A String
       encoding: UTF-8
       file: com/example/users.csv
+      onlyUpdate: true
       primaryKey: pk_id
-      quotchar: A String
+      quotchar: ''''
+      relativeToChangelogFile: true
       schemaName: public
-      separator: A String
+      separator: ','
       tableName: person
+      usePreparedStatements: true
 
 {% endhighlight %}
 </div>
@@ -89,6 +104,7 @@ changeSet:
   "changeSet": {
     "id": "loadUpdateData-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "loadUpdateData": {
@@ -101,13 +117,17 @@ changeSet:
               }
             }]
           ,
+          "commentLineStartsWith": "A String",
           "encoding": "UTF-8",
           "file": "com/example/users.csv",
+          "onlyUpdate": true,
           "primaryKey": "pk_id",
-          "quotchar": "A String",
+          "quotchar": "'",
+          "relativeToChangelogFile": true,
           "schemaName": "public",
-          "separator": "A String",
-          "tableName": "person"
+          "separator": ",",
+          "tableName": "person",
+          "usePreparedStatements": true
         }
       }]
     
@@ -119,55 +139,19 @@ changeSet:
 </div>
 
 
-## SQL Generated From Above Sample (MySQL)
-
-{% highlight sql %}
-INSERT INTO cat.person (`id,
- name,
- age`) VALUES ('1,
- Fred,
- 21')
-ON DUPLICATE KEY UPDATE id,
- name,
- age = '1,
- Fred,
- 21'
-
-INSERT INTO cat.person (`id,
- name,
- age`) VALUES ('2,
- Wilma,
- 22')
-ON DUPLICATE KEY UPDATE id,
- name,
- age = '2,
- Wilma,
- 22'
-
-INSERT INTO cat.person (`id,
- name,
- age`) VALUES ('3,
- Barney,
- 42')
-ON DUPLICATE KEY UPDATE id,
- name,
- age = '3,
- Barney,
- 42'
-
-
-{% endhighlight %}
-
 ## Database Support
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>

@@ -28,6 +28,7 @@ One of defaultValue, defaultValueNumeric, defaultValueBoolean or defaultValueDat
 <tr><td style='vertical-align: top'>defaultValue</td><td style='vertical-align: top'>Default value. Either this property or one of the other defaultValue* properties are required.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>defaultValueBoolean</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>defaultValueComputed</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>defaultValueConstraintName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>defaultValueDate</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>defaultValueNumeric</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>defaultValueSequenceNext</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
@@ -43,15 +44,18 @@ One of defaultValue, defaultValueNumeric, defaultValueBoolean or defaultValueDat
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="addDefaultValue-example">
+<changeSet author="liquibase-docs"
+        id="addDefaultValue-example"
+        objectQuotingStrategy="LEGACY">
     <addDefaultValue catalogName="cat"
-            columnDataType="int"
+            columnDataType="varchar(50)"
             columnName="fileName"
             defaultValue="Something Else"
             defaultValueBoolean="true"
             defaultValueComputed="now"
-            defaultValueDate="A String"
-            defaultValueNumeric="A String"
+            defaultValueConstraintName="A String"
+            defaultValueDate="2008-02-12T12:34:03"
+            defaultValueNumeric="439.2"
             defaultValueSequenceNext="seq_name"
             schemaName="public"
             tableName="file"/>
@@ -63,16 +67,18 @@ One of defaultValue, defaultValueNumeric, defaultValueBoolean or defaultValueDat
 changeSet:
   id: addDefaultValue-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - addDefaultValue:
       catalogName: cat
-      columnDataType: int
+      columnDataType: varchar(50)
       columnName: fileName
       defaultValue: Something Else
       defaultValueBoolean: true
       defaultValueComputed: now
-      defaultValueDate: A String
-      defaultValueNumeric: A String
+      defaultValueConstraintName: A String
+      defaultValueDate: 2008-02-12T12:34:03
+      defaultValueNumeric: '439.2'
       defaultValueSequenceNext: seq_name
       schemaName: public
       tableName: file
@@ -85,17 +91,19 @@ changeSet:
   "changeSet": {
     "id": "addDefaultValue-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "addDefaultValue": {
           "catalogName": "cat",
-          "columnDataType": "int",
+          "columnDataType": "varchar(50)",
           "columnName": "fileName",
           "defaultValue": "Something Else",
           "defaultValueBoolean": true,
           "defaultValueComputed": "now",
-          "defaultValueDate": "A String",
-          "defaultValueNumeric": "A String",
+          "defaultValueConstraintName": "A String",
+          "defaultValueDate": "2008-02-12T12:34:03",
+          "defaultValueNumeric": "439.2",
           "defaultValueSequenceNext": "seq_name",
           "schemaName": "public",
           "tableName": "file"
@@ -123,11 +131,14 @@ ALTER TABLE cat.file ALTER fileName SET DEFAULT 'Something Else';
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>

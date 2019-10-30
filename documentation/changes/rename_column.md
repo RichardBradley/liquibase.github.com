@@ -22,7 +22,7 @@ Renames an existing column
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>columnDataType</td><td style='vertical-align: top'>Data type of the column</td><td style='vertical-align: top'>mysql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>columnDataType</td><td style='vertical-align: top'>Data type of the column</td><td style='vertical-align: top'>mariadb, mysql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>newColumnName</td><td style='vertical-align: top'>Name to rename the column to</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>oldColumnName</td><td style='vertical-align: top'>Name of the existing column to rename</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>remarks</td><td style='vertical-align: top'>Remarks of the column</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
@@ -38,11 +38,13 @@ Renames an existing column
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="renameColumn-example">
+<changeSet author="liquibase-docs"
+        id="renameColumn-example"
+        objectQuotingStrategy="LEGACY">
     <renameColumn catalogName="cat"
             columnDataType="int"
-            newColumnName="id"
-            oldColumnName="id"
+            newColumnName="full_name"
+            oldColumnName="name"
             remarks="A String"
             schemaName="public"
             tableName="person"/>
@@ -54,12 +56,13 @@ Renames an existing column
 changeSet:
   id: renameColumn-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - renameColumn:
       catalogName: cat
       columnDataType: int
-      newColumnName: id
-      oldColumnName: id
+      newColumnName: full_name
+      oldColumnName: name
       remarks: A String
       schemaName: public
       tableName: person
@@ -72,13 +75,14 @@ changeSet:
   "changeSet": {
     "id": "renameColumn-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "renameColumn": {
           "catalogName": "cat",
           "columnDataType": "int",
-          "newColumnName": "id",
-          "oldColumnName": "id",
+          "newColumnName": "full_name",
+          "oldColumnName": "name",
           "remarks": "A String",
           "schemaName": "public",
           "tableName": "person"
@@ -96,7 +100,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE cat.person CHANGE id id INT COMMENT 'A String';
+ALTER TABLE cat.person CHANGE name full_name INT COMMENT 'A String';
 
 
 {% endhighlight %}
@@ -106,11 +110,14 @@ ALTER TABLE cat.person CHANGE id id INT COMMENT 'A String';
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>

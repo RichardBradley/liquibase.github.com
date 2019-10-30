@@ -15,25 +15,31 @@ title: Change loadData
 
 # Change: 'loadData'
 
-Loads data from a CSV file into an existing table. A value of NULL in a cell will be converted to a database NULL rather than the string 'NULL'
+Loads data from a CSV file into an existing table. A value of NULL in a cell will be converted to a database NULL rather than the string 'NULL'.
+Lines starting with # (hash) sign are treated as comments. You can change comment pattern by specifying 'commentLineStartsWith' property in loadData tag.To disable comments set 'commentLineStartsWith' to empty value'
 
-Date/Time values included in the CSV file should be in [ISO format](http://en.wikipedia.org/wiki/ISO_8601) in order to be parsed correctly by Liquibase. Liquibase will initially set the date format to be 'yyyy-MM-dd'T'HH:mm:ss' and then it checks for two special cases which will override the data format string.
+If the data type for a load column is set to NUMERIC, numbers are parsed in US locale (e.g. 123.45).
+Date/Time values included in the CSV file should be in ISO format http://en.wikipedia.org/wiki/ISO_8601 in order to be parsed correctly by Liquibase. Liquibase will initially set the date format to be 'yyyy-MM-dd'T'HH:mm:ss' and then it checks for two special cases which will override the data format string.
 
 If the string representing the date/time includes a '.', then the date format is changed to 'yyyy-MM-dd'T'HH:mm:ss.SSS'
 If the string representing the date/time includes a space, then the date format is changed to 'yyyy-MM-dd HH:mm:ss'
 Once the date format string is set, Liquibase will then call the SimpleDateFormat.parse() method attempting to parse the input string so that it can return a Date/Time. If problems occur, then a ParseException is thrown and the input string is treated as a String for the INSERT command to be generated.
+If UUID type is used UUID value is stored as string and NULL in cell is supported. Column config should be used in xml.
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
+<tr><td style='vertical-align: top'>commentLineStartsWith</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>encoding</td><td style='vertical-align: top'>Encoding of the CSV file (defaults to UTF-8)</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>file</td><td style='vertical-align: top'>CSV file to load</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>quotchar</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>relativeToChangelogFile</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>separator</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table to insert data into</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>usePreparedStatements</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 ## Nested Properties ##
@@ -50,14 +56,19 @@ Once the date format string is set, Liquibase will then call the SimpleDateForma
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="loadData-example">
+<changeSet author="liquibase-docs"
+        id="loadData-example"
+        objectQuotingStrategy="LEGACY">
     <loadData catalogName="cat"
+            commentLineStartsWith="A String"
             encoding="UTF-8"
             file="com/example/users.csv"
-            quotchar="A String"
+            quotchar="'"
+            relativeToChangelogFile="true"
             schemaName="public"
-            separator="A String"
-            tableName="person">
+            separator=","
+            tableName="person"
+            usePreparedStatements="true">
         <column name="address" type="varchar(255)"/>
     </loadData>
 </changeSet>
@@ -68,6 +79,7 @@ Once the date format string is set, Liquibase will then call the SimpleDateForma
 changeSet:
   id: loadData-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - loadData:
       catalogName: cat
@@ -75,12 +87,15 @@ changeSet:
       - column:
           name: address
           type: varchar(255)
+      commentLineStartsWith: A String
       encoding: UTF-8
       file: com/example/users.csv
-      quotchar: A String
+      quotchar: ''''
+      relativeToChangelogFile: true
       schemaName: public
-      separator: A String
+      separator: ','
       tableName: person
+      usePreparedStatements: true
 
 {% endhighlight %}
 </div>
@@ -90,6 +105,7 @@ changeSet:
   "changeSet": {
     "id": "loadData-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "loadData": {
@@ -102,12 +118,15 @@ changeSet:
               }
             }]
           ,
+          "commentLineStartsWith": "A String",
           "encoding": "UTF-8",
           "file": "com/example/users.csv",
-          "quotchar": "A String",
+          "quotchar": "'",
+          "relativeToChangelogFile": true,
           "schemaName": "public",
-          "separator": "A String",
-          "tableName": "person"
+          "separator": ",",
+          "tableName": "person",
+          "usePreparedStatements": true
         }
       }]
     
@@ -119,40 +138,19 @@ changeSet:
 </div>
 
 
-## SQL Generated From Above Sample (MySQL)
-
-{% highlight sql %}
-INSERT INTO cat.person (`id,
- name,
- age`) VALUES ('1,
- Fred,
- 21');
-
-INSERT INTO cat.person (`id,
- name,
- age`) VALUES ('2,
- Wilma,
- 22');
-
-INSERT INTO cat.person (`id,
- name,
- age`) VALUES ('3,
- Barney,
- 42');
-
-
-{% endhighlight %}
-
 ## Database Support
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>

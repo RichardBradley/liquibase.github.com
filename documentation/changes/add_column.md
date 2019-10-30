@@ -40,7 +40,9 @@ Adds a new column to an existing table
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="addColumn-example">
+<changeSet author="liquibase-docs"
+        id="addColumn-example"
+        objectQuotingStrategy="LEGACY">
     <addColumn catalogName="cat"
             schemaName="public"
             tableName="person">
@@ -54,6 +56,7 @@ Adds a new column to an existing table
 changeSet:
   id: addColumn-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - addColumn:
       catalogName: cat
@@ -72,6 +75,7 @@ changeSet:
   "changeSet": {
     "id": "addColumn-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "addColumn": {
@@ -110,11 +114,14 @@ ALTER TABLE cat.person ADD address VARCHAR(255) NULL;
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>

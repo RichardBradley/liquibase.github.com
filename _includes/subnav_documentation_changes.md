@@ -62,9 +62,13 @@
 <li><a href='load_update_data.html'><span>load Update Data</span></a></li>
 <li><a href='merge_columns.html'><span>merge Columns</span></a></li>
 <li><a href='modify_data_type.html'><span>modify Data Type</span></a></li>
+<li><a href='output.html'><span>output</span></a></li>
 <li><a href='rename_column.html'><span>rename Column</span></a></li>
+<li><a href='rename_sequence.html'><span>rename Sequence</span></a></li>
 <li><a href='rename_table.html'><span>rename Table</span></a></li>
 <li><a href='rename_view.html'><span>rename View</span></a></li>
+<li><a href='set_column_remarks.html'><span>set Column Remarks</span></a></li>
+<li><a href='set_table_remarks.html'><span>set Table Remarks</span></a></li>
 <li><a href='sql.html'><span>sql</span></a></li>
 <li><a href='sql_file.html'><span>sql File</span></a></li>
 <li><a href='stop.html'><span>stop</span></a></li>

@@ -32,7 +32,9 @@ Stops Liquibase execution with a message. Mainly useful for debugging and steppi
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="stop-example">
+<changeSet author="liquibase-docs"
+        id="stop-example"
+        objectQuotingStrategy="LEGACY">
     <stop message="What just happened???"/>
 </changeSet>
 {% endhighlight %}
@@ -42,6 +44,7 @@ Stops Liquibase execution with a message. Mainly useful for debugging and steppi
 changeSet:
   id: stop-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - stop:
       message: What just happened???
@@ -54,6 +57,7 @@ changeSet:
   "changeSet": {
     "id": "stop-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "stop": {
@@ -74,11 +78,14 @@ changeSet:
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>MySQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>

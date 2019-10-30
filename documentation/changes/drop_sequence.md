@@ -34,7 +34,9 @@ Drop an existing sequence
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="dropSequence-example">
+<changeSet author="liquibase-docs"
+        id="dropSequence-example"
+        objectQuotingStrategy="LEGACY">
     <dropSequence catalogName="cat"
             schemaName="public"
             sequenceName="seq_id"/>
@@ -46,6 +48,7 @@ Drop an existing sequence
 changeSet:
   id: dropSequence-example
   author: liquibase-docs
+  objectQuotingStrategy: LEGACY
   changes:
   - dropSequence:
       catalogName: cat
@@ -60,6 +63,7 @@ changeSet:
   "changeSet": {
     "id": "dropSequence-example",
     "author": "liquibase-docs",
+    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "dropSequence": {
@@ -77,10 +81,10 @@ changeSet:
 </div>
 
 
-## SQL Generated From Above Sample (Oracle)
+## SQL Generated From Above Sample (SQL Server)
 
 {% highlight sql %}
-DROP SEQUENCE cat.seq_id;
+DROP SEQUENCE [public].seq_id;
 
 
 {% endhighlight %}
@@ -90,16 +94,19 @@ DROP SEQUENCE cat.seq_id;
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>Derby</td><td>Not Supported</td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>HyperSQL</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>INGRES</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Informix</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>MariaDB</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>MySQL</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>SQL Server</td><td>Not Supported</td><td>No</td></tr>
+<tr><td>SQL Server</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>SQLite</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Sybase</td><td>Not Supported</td><td>No</td></tr>
-<tr><td>Sybase Anywhere</td><td>Not Supported</td><td>No</td></tr>
+<tr><td>Sybase Anywhere</td><td><b>Supported</b></td><td>No</td></tr>
 </table>

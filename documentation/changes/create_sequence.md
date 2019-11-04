@@ -137,7 +137,7 @@ CREATE SEQUENCE [public].seq_id START WITH 5 INCREMENT BY 2 MINVALUE 10 MAXVALUE
 <tr><td>MySQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>SQL Server</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>SQL Server</td><td><b>Supported (after 2012)</b></td><td><b>Yes</b></td></tr>
 <tr><td>SQLite</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Sybase</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Sybase Anywhere</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>

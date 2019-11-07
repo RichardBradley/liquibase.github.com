@@ -4,7 +4,9 @@ subnav: subnav_blog.md
 title: Liquibase 3.8.1 Released
 ---
 
-Liquibase 3.8.1 is now available here through [Liquibase.org](https://download.liquibase.org/download-community/) and through the [Maven repositories](https://mvnrepository.com/artifact/org.liquibase/liquibase-maven-plugin). Here’s a closer look at what’s included in the latest release.
+Liquibase 3.8.1 is now available here through [Liquibase.org](https://download.liquibase.org/download-community/) and through the [Maven repositories](https://mvnrepository.com/artifact/org.liquibase/liquibase-maven-plugin). The [3.8.1 release is also available on GitHub](https://github.com/liquibase/liquibase/releases/tag/v3.8.1).
+
+Here’s a closer look at what’s included in the latest release.
 
 ## Liquibase Bug Fixes & Doc Updates
 

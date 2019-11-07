@@ -58,10 +58,10 @@ extraStyleSheets:
             </div>
             <div class="lb-choose-path__path__text">
                 <ul>
-                    <li>Standardized migration templates for procedural database code</li>
+                    <li>Snapshots and reverse engineering for Stored Logic Objects</li>
                     <li>Guidance and best practices for your specific use case(s) from a named support engineer</li>
                     <li>Technical support from Liquibase experts</li>
-		                <li>Coming Soon: Snapshot, diff, changelog generation, and reverse-engineering for procedural code objects.</li>
+		    
 			          </ul>
             </div>
             <div class="lb-choose-path__path__button">
@@ -93,7 +93,7 @@ extraStyleSheets:
 </div>
 
 <div class="value-prop">
-    <h2>Precise Database Change Control</h2>
+    <h2>Precise Database Version Control</h2>
     <p>
         Liquibase has a robust set of capabilities to precisely control when, where, and how database changes are deployed. Go beyond filenames and precisely order changes with an explicit <a href="documentation/databasechangelog.html">change log file</a>. Fine tune how your changes are deployed to each environment with <a href="documentation/contexts.html">contexts</a> and labels. Use conditional logic to further manage the deployment of changes in each environment with Liquibase <a href="documentation/preconditions.html">preconditions</a>.
     </p>

@@ -25,16 +25,25 @@ includeDaticalBox: true
 <div style="background-color:lightgray">
 <h2 class="homepg" id="approach">Database Change Management: State and Migration approaches</h2>
 <p class="opg">
-    There are two approaches for managing database changes. The first approach is state-based (or declarative) – in which the desired state of the database is defined. A tool that can compare (or diff) the target environment against the defined desired state is used to generate migration scripts that allow the target environment to match the declared state. The alternative approach is migration-based (or imperative) – in which the specific migrations for altering the state of a database are described. A tool capable of explicitly tracking and ordering the individual migrations and deploying the migrations that have not yet been deployed to the target environment is used to get the target database properly migrated.
-</p>
-<p class="opg">
-    While Liquibase is capable of comparisons (or diffs), it is fundamentally a migration-based solution. The diff capability in Liquibase is only meant to assist with onboarding new projects and with sanity checking that database migrations have been properly applied. As a migration-based solution, Liquibase can easily:</p>
+    When it comes to managing databases, there are two types of deployment approaches:
     <ul class="opg">
-        <li>Track all proposed database changes, including the specific order they need to be deployed in, who proposed/authored the change, and record the purpose of the change (as a comment)</li>
-        <li>Clearly answer whether a database change has or has not been deployed to a database. Effectively, Liquibase is able to “version” each database</li>
-        <li>Deterministically deploy changes to a database, including promoting a database to a specific “version”</li>
-        <li>Prevent users from modifying changes that have already been deployed to a database and requiring that they either deliberately rework the deployed change or roll-forward</li>
+    <li>State-based (Declarative) deployment</li>
+    <li>Migration-based (Imperative) deployment</li>
     </ul>
+    <h3>State-based Database Deployment</h3>
+    <p>In a state-based database deployment, the ideal state of the database in defined, and a tool is used to compare the ideal state against the current state of the database. Liquibase then analyzes the difference between the two and generates all the migration scripts to change the database.</p>
+    <div align="center">
+      <img src="/images/quickstart/state-based-deploy.jpg" alt="Diagram of state-based deployment">
+    </div>
+    <p>This approach offers you a chance to tightly manage the deployment process and keep an eye on all changes deployed to the databases.</p>
+    <h3>Migration-based Database Deployment</h3>
+    <p>In a migration-based database deployment, specific migrations for altering the state of a database are described by the user.</p>
+    <div align="center">
+      <img src="/images/quickstart/migration-based-deploy.jpg" alt="Diagram of Migration-based deployment">
+    </div>
+    <p>This approach allows you to create database code just like you would create application code.</p>
+    <h3>Can both approaches be used?</h3>
+    <p>While Liquibase does include comparative (diff) capabilities, Liquibase is primarily a migration-based tool. The comparative (diff) capabilities are mostly intended to assist with onboarding new projects or checking that your database migrations were applied correctly.</p>
 <br/>
 </div>
 
@@ -49,7 +58,7 @@ includeDaticalBox: true
     </li>
     <li>Liquibase uses a tracking table (specifically called ‘DATABASECHANGELOG’) which resides on each database and which tracks which change sets in the change log have been deployed.
             <ul class="opg" style="list-style-type: circle; padding-bottom: 0; margin-left: 1em;">
-                <li>Note: if there is no tracking table on a database that Liquibase is acting upon, the Liquibase will create a tracking table.</li>
+                <li>Note: if there is no tracking table on a database that Liquibase is acting upon, Liquibase will create a tracking table.</li>
                 <li>Note: To assist with projects where you are not starting with a blank database, Liquibase has a feature to generate a change log to represent the current state of the database schema.</li>
             </ul>
         </li>
@@ -71,7 +80,7 @@ includeDaticalBox: true
 <div style="background-color:lightgray">
 <h2 class="homepg" id="tutorials">Tutorials: Track, Version, and Deploy Database Changes with Liquibase</h2>
 <p class="opg">
-        When working with Liquibase, changes can either be defined with the <strong><a href="#simpleSQL">Liquibase functions</a></strong> or with <strong><a href="#lbmodel">SQL</a></strong>. Importantly, these modes are not mutually exclusive, and can be used in conjunction, providing considerable flexibility in how database changes are defined and deployed.
+        When working with Liquibase, changes can either be defined with the <strong><a href="#lbmodel">Liquibase functions</a></strong> or with <strong><a href="#simpleSQL">SQL</a></strong>. Importantly, these modes are not mutually exclusive, and can be used in conjunction, providing considerable flexibility in how database changes are defined and deployed.
         For changes defined with Liquibase functions, Liquibase generates SQL appropriate for the target database. This can be helpful when:
 </p>
 <ul class="opg">
@@ -153,7 +162,7 @@ changeLogFile: myChangeLog.xml{% endhighlight bash %}
 
 <div>
 <p class="opg">
-    That is all! You are now setup to start one of the tutorials!
+    That is all! You are now set up to start one of the tutorials!
 </p>
 </div>
 

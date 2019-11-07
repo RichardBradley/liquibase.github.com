@@ -15,10 +15,11 @@ Both Liquibase Community and Liquibase Pro users will enjoy several bug fixes an
 ## New Liquibase Pro Features
 
 ### Snapshots and Reverse Engineering for Stored Logic
-Snapshots allow you to get a static view of your database from a particular moment in time. They’re useful for reporting and safeguarding your data because they allow you to compare databases (perform diffs) to find differences or to revert to a previous state. 
-Liquibase uses an XML snapshot (changelog) via the `update` command and can mirror it to make another database exactly like the source database. 
+In this 3.8.1 release, Liquibase Pro users with workloads on Oracle and SQL Server are able to capture information on their **Stored Logic**.
 
-In this 3.8.1 release, Liquibase Pro users with workloads on Oracle and SQL Server will have their **Stored Logic** in a local directory. Users will be able to apply these logic changes without having to manually migrate code. When using `diffchangelog`, all objects are tracked and timestamped so it's easy to understand any changes made over time. 
+The ability to snapshot Stored Logic allows you to get a static view of your database at a particular point in time and is useful for reporting and safeguarding your data by comparing databases (performing diffs) to find differences. 
+
+Liquibase Pro users will also now include Stored Logic changeSets in changelogs generated through the **diffChangeLog** and **generateChangeLog** command.
 
 **Stored Logic** objects include: 
 

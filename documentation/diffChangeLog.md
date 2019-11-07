@@ -17,8 +17,10 @@ The `diffChangeLog` command is typically used when you want to create a deployab
 ## Running the `diffChangeLog` Command
 To create a diff *changelog*:
 
-+ The first option is to run the `diffChangeLog` command and pass the parameters needed for your source database and target database.  For example:
-Run the following:
++ The first option is to run the `diffChangeLog` command and pass the parameters needed for your source database and target database. 
+
+As an example you can run the following:
+
 {% highlight text %}
 liquibase
 --changeLogFile=dbchangelog.xml
@@ -34,14 +36,17 @@ diffChangeLog
 --referencePassword=<PASSWORD>
 {% endhighlight %}
 
+>**Note:** When running `diffChangeLog` against two different databases, the class path property should reference both .jar files. Example: `classpath: ojdbc7.jar:postgresql-42.2.8.jar`
+
 + Alternatively, configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for both databases.
 Run the following command:
 {% highlight text %}
 liquibase --changeLogFile=file_name.xml diffChangeLog
 {% endhighlight %} 
->**Note:** For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your *liquibase.properties* File](config_properties.html) topic in the knowledge base.
 
 > **Note:** Replace *file_name.xml*, with your filename and extension format. If you specify a file name that already exists, Liquibase will append your changes to the existing file.
+
+For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your *liquibase.properties* File](config_properties.html) topic in the knowledge base.
 
 <details>
 <summary style="font-size:200%;color:blue;">Console Output Example</summary>

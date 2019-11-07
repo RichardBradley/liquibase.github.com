@@ -10,12 +10,12 @@ The `generateChangeLog` [command](command_line.html), creates a *changelog* file
 ## Uses
 The `generateChangeLog` command is typically used when you want to capture the current state of a database, then apply those changes to any number of databases.
 
-> **Note:** This command does not create a new database database or schema. You must create them ***before*** applying a *changelog* file to it.
+> **Note:** This command does not create a new database or schema. You must create them ***before*** applying a *changelog* file to it.
 
 ## Running the generateChangeLog command
 To generate a *changelog*:
 1. Configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for the database you want to capture.
-> **Note:** For informationon how to configure your *liquibase.properties* file, view the [Creating & Configuring your liquibase.properties File](config_properties.html) topic in the knowledge base.
+> **Note:** For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your liquibase.properties File](config_properties.html) topic in the knowledge base.
 2. Save your *liquibase.properties* file.
 >**Note:** Instead of using a liquibase.properties file, you can also pass the necessary information in the command prompt or Linux terminal.
 3. Open your command prompt or Linux terminal and run the following command:

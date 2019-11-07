@@ -32,15 +32,18 @@ includeDaticalBox: true
     </ul>
     <h3>State-based Database Deployment</h3>
     <p>In a state-based database deployment, the ideal state of the database in defined, and a tool is used to compare the ideal state against the current state of the database. Liquibase then analyzes the difference between the two and generates all the migration scripts to change the database.</p>
-    <img src="/images/quickstart/state-based-deploy.jpg" alt="Diagram of state-based deployment">
+    <div align="center">
+      <img src="/images/quickstart/state-based-deploy.jpg" alt="Diagram of state-based deployment">
+    </div>
     <p>This approach offers you a chance to tightly manage the deployment process and keep an eye on all changes deployed to the databases.</p>
     <h3>Migration-based Database Deployment</h3>
     <p>In a migration-based database deployment, specific migrations for altering the state of a database are described by the user.</p>
-    <img src="/images/quickstart/migration-based-deploy.jpg" alt="Diagram of Migration-based deployment">
+    <div align="center">
+      <img src="/images/quickstart/migration-based-deploy.jpg" alt="Diagram of Migration-based deployment">
+    </div>
     <p>This approach allows you to create database code just like you would create application code.</p>
     <h3>Can both approaches be used?</h3>
     <p>While Liquibase does include comparative (diff) capabilities, Liquibase is primarily a migration-based tool. The comparative (diff) capabilities are mostly intended to assist with onboarding new projects or checking that your database migrations were applied correctly.</p>
-
 <br/>
 </div>
 

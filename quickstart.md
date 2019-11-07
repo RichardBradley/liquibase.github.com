@@ -44,6 +44,7 @@ includeDaticalBox: true
     <p>This approach allows you to create database code just like you would create application code.</p>
     <h3>Can both approaches be used?</h3>
     <p>While Liquibase does include comparative (diff) capabilities, Liquibase is primarily a migration-based tool. The comparative (diff) capabilities are mostly intended to assist with onboarding new projects or checking that your database migrations were applied correctly.</p>
+</p>
 <br/>
 </div>
 

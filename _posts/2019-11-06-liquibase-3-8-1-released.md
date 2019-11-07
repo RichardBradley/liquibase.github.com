@@ -8,7 +8,7 @@ Liquibase 3.8.1 is now available here through [Liquibase.org](https://download.l
 
 ## Liquibase Bug Fixes & Doc Updates
 
-Both Liquibase Community and Liquibase Pro users will enjoy several bug fixes and updates to documentation. View 3.8.1 release notes for details on these updates.
+Both Liquibase Community and Liquibase Pro users will enjoy several bug fixes and updates to documentation. [View 3.8.1 release notes](https://download.liquibase.org/release-notes/liquibase-3-8-1/) for details on these updates.
 
 ## New Liquibase Pro Features
 

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Liquibase Tutorial: Get Started Using Liquibase Functions"
+title: Using Liquibase Functions Tutorial
 subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---
-# Liquibase Tutorial: Getting Started Using Liquibase Functions #
+# Using Liquibase Functions Tutorial #
 
 ## Overview ##
 This tutorial builds on the setup that is described in the [Quick Start](../quickstart.html).

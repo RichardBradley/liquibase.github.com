@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Liquibase Tutorial: Get Started Using SQL Scripts"
+title: Using SQL Scripts Tutorial
 subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---
-# Liquibase Tutorial: Getting Started Using SQL Scripts #
+# Using SQL Scripts Tutorial
 
 ## Overview ##
 This tutorial builds on the setup that is described in the [Quick Start](../quickstart.html).

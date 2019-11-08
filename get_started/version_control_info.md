@@ -1,6 +1,8 @@
 ---
-layout: default
+layout: side-search
 title: Using Version Control Systems with Liquibase
+subnav: subnav_quickstart.md
+includeDaticalBox: true
 ---
 
 # Using Version Control Systems with Liquibase
@@ -11,3 +13,6 @@ Liquibase is "version control friendly" because it executes the files you give i
 
 ## What do I need to know about using version control with Liquibase?
 If you keep your changeLog files in a version control system, you can perform your normal check-in, check-out, branching, and merging functions. You can run the changeLog at any point from where it is stored and Liquibase will update the database to the expected state.
+
+<div class="cta-container" style="margin-left: auto; margin-right: auto; width: 300px; height: 50px">
+<div class="cta cta--block"><a href="/get_started/lb-core-usage-concepts.html">Get Started: Liquibase Core Usage Concepts ►</a></div></div>

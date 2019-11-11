@@ -5,12 +5,13 @@
 <li><a href="/documentation/include.html"><span>Include</span></a></li>
 <li><a href="/documentation/preconditions.html"><span>Preconditions</span></a></li>
 <li><a href="/documentation/contexts.html"><span>Contexts</span></a></li>
+<li><a href="/documentation/labels.html"><span>Labels</span></a></li>
 <li><a href="/documentation/changelog_parameters.html"><span>ChangeLog Parameters</span></a></li>
+<li><a href="/documentation/offline.html"><span>Offline Database Support</span></a></li>
+<li><a href="/documentation/sdk/index.html"><span>Extending Liquibase - SDK</span></a></li>
 <li><a href="/documentation/update.html"><span>Update</span></a></li>
 <li><a href="/documentation/rollback.html"><span>Rollback</span></a></li>
 <li><a href="/documentation/diff.html"><span>Diff</span></a></li>
 <li><a href="/documentation/generating_changelogs.html"><span>Generate Changelog</span></a></li>
 <li><a href="/documentation/dbdoc.html"><span>DBDoc</span></a></li>
 <li><a href="/documentation/sql_output.html"><span>SQL Output</span></a></li>
-<li><a href="/documentation/sdk/index.html"><span>SDK</span></a></li>
-<li><a href="/documentation/offline.html"><span>Offline Database Support</span></a></li>

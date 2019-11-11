@@ -29,6 +29,9 @@ diff
 --referencePassword=<PASSWORD>
 {% endhighlight %}
 
+>**Note:** When running `diff` against two different databases, the class path property should reference both .jar files. Use the path separator that is correct
+for your operating system (a semicolon on Windows, a colon on Mac or Linux). Example: `classpath: ojdbc7.jar:postgresql-42.2.8.jar`
+
 + Alternatively, configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for both databases.
 Run the following command:
 {% highlight text %}
@@ -177,7 +180,6 @@ Liquibase Community `diff` categories:
 + View
 
 Liquibase Pro `diff` categories:
-> **Note:** coming soon with Liquibase 3.8.1
 
 + Check Constraint
 + Package

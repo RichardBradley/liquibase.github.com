@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Sql output
+title: SQL Output | Liquibase Docs
 ---
 
 # SQL Output #

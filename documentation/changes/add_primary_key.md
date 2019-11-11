@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change addPrimaryKey
+title: Change addPrimaryKey | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

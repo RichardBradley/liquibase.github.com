@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change dropColumn
+title: Change dropColumn | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

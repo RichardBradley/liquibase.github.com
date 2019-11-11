@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change sql
+title: Change SQL | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

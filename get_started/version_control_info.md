@@ -1,6 +1,6 @@
 ---
 layout: side-search
-title: Using Version Control Systems with Liquibase
+title: Using Version Control Systems | Liquibase Docs
 subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---

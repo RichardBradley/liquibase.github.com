@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change createTrigger
+title: Change createTrigger | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

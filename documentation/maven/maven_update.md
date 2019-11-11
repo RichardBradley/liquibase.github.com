@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Maven update
+title: Maven update | Liquibase Docs
 subnav: subnav_documentation.md
 ---
 

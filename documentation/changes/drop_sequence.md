@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change dropSequence
+title: Change dropSequence | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

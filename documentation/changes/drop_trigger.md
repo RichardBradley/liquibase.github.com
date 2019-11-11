@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change dropTrigger
+title: Change dropTrigger | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Liquibase for DBAs
+title: Liquibase for DBAs | Liquibase Docs
 ---
 
 # Liquibase for DBAs #

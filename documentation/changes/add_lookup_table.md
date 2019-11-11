@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change addLookupTable
+title: Change addLookupTable | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

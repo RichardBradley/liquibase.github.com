@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Other Formats
+title: Other Formats | Liquibase Docs
 ---
 
 # Other Changelog formats

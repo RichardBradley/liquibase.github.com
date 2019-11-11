@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Preconditions
+title: Preconditions | Liquibase Docs
 ---
 
 Preconditions can be attached to [change logs](databasechangelog.html) or [changesets](changeset.html) to control the execution of an update based on the state of the database.

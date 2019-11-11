@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change dropProcedure
+title: Change dropProcedure | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

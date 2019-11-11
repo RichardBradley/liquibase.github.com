@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change dropTable
+title: Change dropTable | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

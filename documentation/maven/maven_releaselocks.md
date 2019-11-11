@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Maven releaselocks
+title: Maven releaselocks | Liquibase Docs
 subnav: subnav_documentation.md
 ---
 

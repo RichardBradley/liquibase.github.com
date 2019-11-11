@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Documentation Home | Liquibase Docs
 subnav: subnav_documentation.md
 includeDaticalBox: true
 ---

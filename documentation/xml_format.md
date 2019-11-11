@@ -1,6 +1,6 @@
 ---
 layout: default
-title: XML Format
+title: XML Format | Liquibase Docs
 ---
 
 # XML Format

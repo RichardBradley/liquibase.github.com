@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Liquibase for Release Managers
+title: Liquibase for Release Managers | Liquibase Docs
 ---
 
 # Liquibase for Release Managers #

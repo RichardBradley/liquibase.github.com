@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change renameTable
+title: Change renameTable | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change stop
+title: Change stop | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

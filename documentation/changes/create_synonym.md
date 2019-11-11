@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change createSynonym
+title: Change createSynonym | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

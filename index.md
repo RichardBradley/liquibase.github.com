@@ -8,7 +8,7 @@ extraStyleSheets:
 ---
 
 <h1 style="display:flex; justify-content:center; margin-top: 36px;"><img src="images/liquibase_logo.gif" alt="Liquibase"></h1>
-<h2 style="display:flex; justify-content:center; text-align:center; font-size: 20px;">Liquibase is the leading open source tool for database change and deployment management.</h2>
+<h2 style="display:flex; justify-content:center; text-align:center; font-size: 20px;">Liquibase is the leading open source tool for database schema change management.</h2>
 
 <div class="lb-choose-path">
     <div class="lb-choose-path__heading">

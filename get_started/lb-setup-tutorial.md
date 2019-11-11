@@ -63,7 +63,7 @@ C:\Users\Me\my-first-lb-project>LB_HOME\liquibase.bat --help
 
 That is the completion of this Setup Tutorial. You should now see some help output, and you are ready to begin one of the two following tutorials.
 
-## Tutorial: Getting Stated with Liquibase Functions
+## Tutorial: Getting Started with Liquibase Functions
 This tutorial uses Liquibase Liquibase Functions (XML formatted changelogs). Instead of working with SQL, changes will be defined in XML. Liquibase will generate SQL based on the changeSet(s) defined and will deploy that to target databases. All migrations are tracked and ordered explicitly in the changeLog.
 
 <div class="cta-container" style="margin-left: auto; margin-right: auto; width: 300px; height: 50px">

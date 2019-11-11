@@ -18,7 +18,7 @@ This getting started guide provides a variety of topics which are intended to or
     - [Using Liquibase Functions Tutorial](/get_started/quickstart_lb.html)
     - [Using SQL Scripts Tutorial](/get_started/quickstart_sql.html)
 
-If you haven't installed Liquibase yet, please visit our [Liquibase Download Page](https://download.liquibase.org/)
+If you haven't installed Liquibase yet, please visit our [Liquibase Download Page](https://download.liquibase.org/).
 
 ## What is Liquibase?
 Liquibase is an open-source database schema change management solution that enables you to manage revisions of your database changes easily. Liquibase makes it easy for anyone involved in the application release process to:

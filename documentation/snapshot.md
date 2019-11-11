@@ -199,7 +199,6 @@ Liquibase Community `snapshot` categories:
 
 
 Liquibase Pro `snapshot` categories:
-> **Note:** coming soon with Liquibase 3.8.1 <br />
 
 + Package
 + Package Body

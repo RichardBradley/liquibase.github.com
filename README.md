@@ -40,6 +40,7 @@ _Or_
 ```bash
 bundle exec jekyll serve -l
 ```
+The -l option specifies "live reload" to automatically refresh your browser when a content change is complete.
 
 #### Docker
 ```bash

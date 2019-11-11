@@ -41,12 +41,12 @@ Adds a check constrant to an existing column or set of columns.
 <changeSet author="liquibase-docs"
         id="addCheckConstraint-example"
         objectQuotingStrategy="LEGACY">
-    <ext:addCheckConstraint catalogName="cat"
+    <pro:addCheckConstraint catalogName="cat"
             constraintName="const_name"
             disabled="true"
             schemaName="public"
             tableName="person"
-            validate="true">A String</ext:addCheckConstraint>
+            validate="true">A String</pro:addCheckConstraint>
 </changeSet>
 {% endhighlight %}
 </div>

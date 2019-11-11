@@ -20,10 +20,6 @@ If you're using a MarkDown editor with a "live preview" feature, be aware that i
   * _OR_ [RVM](https://rvm.io/rvm/install)
 * [Bundler](https://bundler.io/)
 
-### Requirements (Docker)
-Or if you'd prefer to run everything through a docker container:
-* [Docker](https://www.docker.com/)
-
 ### Steps
 #### Bundler
 ##### Install
@@ -42,17 +38,23 @@ bundle exec jekyll serve -l
 ```
 The -l option specifies "live reload" to automatically refresh your browser when a content change is complete.
 
+#### Local Server
+To access the local development server navigate to: `0.0.0.0:4000` (the default Jekyll port).
+
+### Requirements (Docker)
+Or if you'd prefer to run everything through a docker container:
+* [Docker](https://www.docker.com/)
+
 #### Docker
 ```bash
 ./scripts/docker-dev.sh
 ```
 
-#### Local Server
-To access the local development server navigate to: `0.0.0.0:4000` (the default Jekyll port).
-
 ### CI/CD Overview
 #### Staging (staging.liquibase.org)
-To see your codebase changes in a `staging` environment, base your PRs on the `staging` branch. If you'd rather have this named `develop` open an issue.
+To see your changes in a `staging` environment, base your PRs on the `staging` branch. When the PR is merged to staging, a build server will 
+generate the site and publish it to http://staging.liquibase.org/ within about 10 minutes. After review by the team, staging will be merged to master
+typically within 1 business day. 
 
 #### Production (liquibase.org)
-To see your codebase changes in `production` a merge must be made into `master`. GH Pages will handle the deployment.
+To see the changes in `production` a merge must be made into `master`. GH Pages will handle the deployment.

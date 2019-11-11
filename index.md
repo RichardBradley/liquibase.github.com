@@ -88,7 +88,7 @@ extraStyleSheets:
 <div class="value-prop">
     <h2>Efficient, Standardized Database Schema Management</h2>
     <p>
-        Liquibase functions make it easy to generate database-appropriate SQL. This allows teams to efficiently scale by writing database changes once and deploying to a variety of backends. Even if your team works with a single database platform, this capability standardizes the SQL produced in development making reviews, audits, and troubleshooting easier. Learn more in the <a href="quickstart.html">Quick Start</a>.
+        Liquibase functions make it easy to generate database-appropriate SQL. This allows teams to efficiently scale by writing database changes once and deploying to a variety of backends. Even if your team works with a single database platform, this capability standardizes the SQL produced in development making reviews, audits, and troubleshooting easier. Learn more in <a href="quickstart.html">Getting Started</a>.
     </p>
 </div>
 

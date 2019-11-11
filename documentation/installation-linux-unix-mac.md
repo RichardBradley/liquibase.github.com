@@ -14,7 +14,7 @@ To add the directory to your PATH:
 This command will not permanently update your PATH after the termination of your session. To update your PATH permanently, run the following command: `source ~/.profile  or source ~/.bashrc`<br />
 Restart your command line.
 
-**Note for MacOS users only:** There is a more convenient way to set path using Terminal in Default mode.  
+> **Note for MacOS users only:** There is a more convenient way to set path using Terminal in Default mode.  
 To set path you can run: `sudo nano /etc/paths` then append the path `/path/to/Liquibase-<version>-bin` at the end of the file.  Hit `Ctrl+x` and `y` for yes, to save the file.  
 Restart your Terminal.
 
@@ -35,10 +35,11 @@ For Liquibase to run correctly, Java must be installed on your Linux/Mac/Unix ma
 1. Open your Terminal or Linux Command Line.
 2. In the Command Prompt window, type: `java -version`
 
-If you see the error: `-bash: java: command not found`, then you need to either install Java, or you need to add the location of the Java to your PATH environment as a variable.
+If you see the error: `-bash: java: command not found`, then you need to either install Java, or you need to add the location of the Java executable to your PATH.
 To install Java on your computer
-1. Navigate to [https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and install the Java JDK.
-2. Add the location of the Java file to your PATH environment as a variable.
+1. Navigate to [https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
+   and install the Java JDK.
+2. Add the location of the Java executable to your PATH.
 
 
 ### Verification #3: Run the Liquibase Help Command ###

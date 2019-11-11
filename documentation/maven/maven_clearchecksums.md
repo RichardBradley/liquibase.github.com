@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Maven clearchecksums
+title: Maven clearchecksums | Liquibase Docs
 subnav: subnav_documentation.md
 ---
 

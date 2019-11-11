@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change sqlFile
+title: Change SQLFile | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

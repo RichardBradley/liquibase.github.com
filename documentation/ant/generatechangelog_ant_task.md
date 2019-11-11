@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Generatechangelog ant task
+title: Generatechangelog ant task | Liquibase Docs
 subnav: subnav_documentation.md
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change renameSequence
+title: Change renameSequence | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

@@ -1,6 +1,6 @@
 ---
 layout: side-search
-title: How Liquibase Works
+title: How Liquibase Works | Liquibase Docs
 subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---

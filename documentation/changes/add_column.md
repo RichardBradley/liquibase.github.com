@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change addColumn
+title: Change addColumn | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

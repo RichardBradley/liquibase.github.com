@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Installing Liquibase Command Line Tool for Linux/Unix/Mac
+title: Installing Liquibase Command Line Tool for Linux/Unix/Mac | Liquibase Docs
 ---
 
 

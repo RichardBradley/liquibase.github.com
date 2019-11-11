@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Dbdoc
+title: Dbdoc | Liquibase Docs
 ---
 
 # Database Documentation Generator #

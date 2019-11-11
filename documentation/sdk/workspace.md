@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Workspace
+title: Workspace | Liquibase Docs
 ---
 
 # Liquibase SDK Workspace

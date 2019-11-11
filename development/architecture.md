@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Architecture
+title: Architecture | Liquibase Docs
 ---
 
 # Liquibase Architecture #

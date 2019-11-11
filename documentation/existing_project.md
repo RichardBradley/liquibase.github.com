@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Starting Liquibase on an Existing project 
+title: Starting Liquibase on an Existing project | Liquibase Docs
 ---
 
 # Adding Liquibase on an Existing project

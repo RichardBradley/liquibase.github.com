@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change dropView
+title: Change dropView | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

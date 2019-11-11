@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SDK
+title: SDK Home | Liquibase Docs
 ---
 
 # Liquibase SDK

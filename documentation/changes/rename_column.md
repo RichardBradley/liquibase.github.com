@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change renameColumn
+title: Change renameColumn | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

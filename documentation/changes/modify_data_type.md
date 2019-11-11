@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change modifyDataType
+title: Change modifyDataType | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

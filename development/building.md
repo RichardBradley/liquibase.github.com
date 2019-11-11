@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Building Liquibase
+title: Building Liquibase | Liquibase Docs
 ---
 
 # Building Liquibase

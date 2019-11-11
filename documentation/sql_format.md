@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Formatted sql changelogs
+title: Formatted SQL Changelogs | Liquibase Docs
 ---
 
 # Formatted SQL Changelogs #

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: DatabaseChangeLogLock Table
+title: DatabaseChangeLogLock Table | Liquibase Docs
 ---
 
 # DATABASECHANGELOGLOCK table

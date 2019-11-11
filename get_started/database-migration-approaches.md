@@ -1,6 +1,6 @@
 ---
 layout: side-search
-title: Database Migration Approaches
+title: Database Migration Approaches | Liquibase Docs
 subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---

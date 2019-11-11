@@ -1,6 +1,6 @@
 ---
 layout: default
-title: PostgreSQL
+title: PostgreSQL Tutorial | Liquibase Docs
 ---
 
 #### To test your connection, try running liquibase with the JDBC driver located in the same directory as liquibase:

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Generating changelogs
+title: Generating changelogs | Liquibase Docs
 ---
 
 # Liquibase Commands: generateChangeLog

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Liquibase for Developers
+title: Liquibase for Developers | Liquibase Docs
 ---
 
 # Liquibase for Developers #

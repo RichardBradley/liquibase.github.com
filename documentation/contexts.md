@@ -5,7 +5,8 @@ title: Contexts
 
 # Contexts #
 
-"Contexts" in Liquibase are tags you can add to changeSets to control which will be executed in any particular migration run. Any string can be used for the context name and they are checked case-insensitively.
+"Contexts" in Liquibase are expressions you can add to changeSets to control which will be executed in any particular migration run. 
+Any string can be used for the context name and they are checked case-insensitively.
 
 When you run the migrator though any of the available methods, you can pass in a set of contexts to run. Only changeSets marked with the passed contexts will be run.
 
@@ -53,9 +54,15 @@ __Availability:__
 
 ## Using Contexts for Test Data ##
 
-If you are managing your test data with Liquibase, the best way to include it is in-line with all your other changeSets, but marked with a "test" context. That way, when you want your test data inserted you can run the migrator with the "test" context. When it comes time to migrate your production database, don't include the "test" context, and your test data will not be included (bare in mind that if you do not specify any context at all, every changeset will be applied, including those marked with a "test" context). If you have multiple test environments or test data sets, simply tag them with different contexts such as "min-test", "integration-test", etc.
+If you are managing your test data with Liquibase, the best way to include it is in-line with all your other changeSets, but marked with a "test" context. 
+That way, when you want your test data inserted you can run the migrator with the "test" context. When it comes time to migrate your production database, 
+don't include the "test" context, and your test data will not be included (bare in mind that if you do not specify any context at all, every changeset will 
+be applied, including those marked with a "test" context). If you have multiple test environments or test data sets, simply tag them with different contexts 
+such as "min-test", "integration-test", etc.
 
-Using contexts to control test data is better than having a separate changeLog tree because later refactorings and changes will be applied to existing test data the same as they are applied to production data. If you had a set of test data that was created and simply added after the database is set up, you would be constantly manually updating your test data scripts to keep them in line with the current database schema.
+Using contexts to control test data is better than having a separate changeLog tree because later refactorings and changes will be applied to existing test 
+data the same as they are applied to production data. If you had a set of test data that was created and simply added after the database is set up, you 
+would be constantly manually updating your test data scripts to keep them in line with the current database schema.
 
 ## Using Contexts for Multi-DBMS Change Logs ##
 

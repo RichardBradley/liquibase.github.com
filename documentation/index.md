@@ -1,18 +1,18 @@
 ---
 layout: default
 title: Home
+subnav: subnav_documentation.md
 includeDaticalBox: true
 ---
 
 <div class="container">
 <div class="span-10 append-1">
 
-<h2>Get Started</h2>
+<h2>Installation</h2>
 <ul>
 <li><a href="installation-windows.html">Windows Installation Instructions</a></li>
 <li><a href="installation-linux-unix-mac.html">Linux/Unix/Mac Installation Instructions</a></li>
 <li><a href="installation-linux-unix-mac-with-maven.html">Liquibase Installation with Maven on Linux/Unix/Mac</a></li>
-<li><a href="version_control_info.html">Version control information</a></li>
 </ul>
 <h2>Building Changelogs</h2>
 <ul>
@@ -24,7 +24,7 @@ includeDaticalBox: true
     <li><a href="sql_format.html">SQL Format</a></li>
     <li><a href="other_formats.html">Other Formats</a></li>
 </ul></li>
-<li><a href="changeset.html">Changesets</a></li>
+<li><a href="changeset.html">changeSets</a></li>
 <li><a href="changes/index.html">Changes/refactoring commands</a></li>
 <li><a href="include.html">Including/nesting changelogs</a></li>
 <li><a href="preconditions.html">Preconditions</a></li>
@@ -76,30 +76,41 @@ Changelog files can be be arbitrarily nested for better management. <a href="dat
 
 <h3>Change Set</h3>
 <p>
-Change Sets are uniquely identified by the "author" and "id" attribute along with with the location of the changelog file and are the units Liquibase tracks execution of.
-When Liquibase runs, it queries the DATABASECHANGELOG table for the changesets that are marked as executed and then executes all changesets in the changelog file that have not yet been executed.
+Change Sets are the *units of change* that Liquibase tracks execution of. Each changeSet is uniquely identified by the "author", "id", and "filename" attributes.
+When Liquibase runs, it queries the DATABASECHANGELOG table for the changeSets that are marked as executed and then executes all changeSets in the changelog file that have not yet been executed.
  <a href="changeset.html">[more]</a>
 </p>
 
 <h3>Changes</h3>
 <p>
-Each changeset generally contains a change which describes the change/refactoring to apply to the database. Liquibase supports both descriptive changes that generate SQL for supported databases and raw SQL.
-Generally there should be just one change per changeset to avoid failed autocommit statements that can leave the database in an unexpected state.
- <a href="changes/index.html">[more]</a>
+Each changeSet contains one or more changes that describe the change/refactoring to apply to the database. Liquibase supports both descriptive changes 
+that generate SQL for supported databases and raw SQL. Generally there should be just one change per changeSet to avoid failed autocommit statements 
+that can leave the database in an unexpected state. <a href="changes/index.html">[more]</a>
 </p>
 
 <h3>Preconditions</h3>
 <p>
-Preconditions can be applied to either the changelog as a whole or individual change sets. If a precondition fails, Liquibase will stop execution.
+Preconditions can be applied to either the changelog as a whole or individual changeSets. Preconditions control the execution of an update based on the 
+state of the database, and can halt the update, skip a changeset, mark a changeset as run, or show a warning.
  <a href="preconditions.html">[more]</a>
 </p>
 
 <h3>Contexts</h3>
 <p>
-Contexts can be applied to changesets to control which are ran in different environments. For example, some changesets can be tagged as "production" and others as "test".
-If no context is specified, the changeset will run regardless of the execution context
+Contexts can be applied to changeSets to control whether they are run in different environments. For example, some changeSets can be tagged as "production" and others as "test".
+If no context is specified, the changeSet will run regardless of the execution context. Contexts can be specified as logical expressions in the changeSet to
+more precisely control execution. At 
  <a href="contexts.html">[more]</a>
 </p>
+
+<h3>Labels</h3>
+<p>
+Similar to contexts, labels can also be applied to changeSets to control which changesets are executed. In contrast to contexts that can be complex expressions, labels are a simple 
+list on each changeSet. For labels though, complex expressions can be supplied at runtime. The combination of contexts and labels gives fine grained control over which changeSets
+are executed. <a href="labels.html">[more]</a>
+</p>
+
+See <a href="/2014/11/contexts-vs-labels.html">this blog post</a> for more details on the differences, similarities, and use cases for contexts and labels.
 
 </div>
 

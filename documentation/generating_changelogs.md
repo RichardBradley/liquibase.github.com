@@ -5,20 +5,21 @@ title: Generating changelogs
 
 # Liquibase Commands: generateChangeLog
 
-The `generateChangeLog` [command](command_line.html), creates a *changelog* file and creates your objects by capturing the current state of a database.
+The `generateChangeLog` command creates a *changelog* file and that has a sequence of *changeSets* that describe how to re-create the current state of the 
+database.
 
 ## Uses
 The `generateChangeLog` command is typically used when you want to capture the current state of a database, then apply those changes to any number of databases.
 
-> **Note:** This command does not create a new database or schema. You must create them ***before*** applying a *changelog* file to it.
+> **Note:** When using the [update command]() to apply the changes in the changelog, Liquibase will not create a new database or schema. You must create 
+  them ***before*** applying the *changelog* to it.
 
 ## Running the generateChangeLog command
 To generate a *changelog*:
 1. Configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for the database you want to capture.
-> **Note:** For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your liquibase.properties File](config_properties.html) topic in the knowledge base.
-2. Save your *liquibase.properties* file.
->**Note:** Instead of using a liquibase.properties file, you can also pass the necessary information in the command prompt or Linux terminal.
-3. Open your command prompt or Linux terminal and run the following command:
+> **Note:** For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your liquibase.properties File](config_properties.html) 
+  topic in the knowledge base. Instead of using a liquibase.properties file, you can also pass the necessary information on the command line.
+2. Open your command prompt or Linux terminal and run the following command:
 
 {% highlight text %}
 
@@ -28,20 +29,19 @@ liquibase --changeLogFile=dbchangelog.xml generateChangeLog
 
 ## Output
 
-The `generateChangeLog` command generates a *changelog* that contains all of your objects (represented as changesets) and places the file in the same hierarchy from where the command was ran.
+The `generateChangeLog` command generates a *changelog* that contains all of your objects (represented as changesets) and places the file in the same directory where the command was ran.
 
-### Liquibase Pro Output
-> **Note:** coming soon with Liquibase 3.8.1 <br />
+### Liquibase Pro Differences
 
 While Liquibase Community stores all the SQL in a *changelog*, Liquibase Pro creates a directory called *Objects* and places it at the same level as your *changelog*.
-The *Objects* directory contains a subdirectory for each of the following stored logic types:
+The *Objects* directory contains a subdirectory for each of the following stored logic types. Note that not all database platforms support all of these types.
 
-+ <a href="https://docs.oracle.com/database/121/LNPLS/packages.htm" target="_blank">package</a><br />
-+ <a href="https://docs.oracle.com/cd/B19306_01/server.102/b14200/statements_6007.htm" target="_blank">packagebody</a><br />
-+ <a href="https://docs.oracle.com/cd/B19306_01/server.102/b14200/statements_5009.htm" target="_blank">function</a><br />
-+ <a href="https://docs.oracle.com/cd/B28359_01/appdev.111/b28843/tdddg_procedures.htm" target="_blank">storedprocedure</a><br />
-+ <a href="https://docs.oracle.com/database/121/TDDDG/tdddg_triggers.htm#TDDDG50000" target="_blank">trigger</a><br />
-+ <a href="https://docs.oracle.com/cd/B19306_01/server.102/b14200/statements_8004.htm" target="_blank">view</a>
++ package
++ packagebody
++ function
++ storedprocedure
++ trigger
++ view
 
 ## Examples
 <details open>
@@ -117,7 +117,6 @@ The *Objects* directory contains a subdirectory for each of the following stored
 </details>
 <details>
 <summary style="font-size:200%;color:blue;">Liquibase Pro changelog</summary>
-> **Note:** coming soon with Liquibase 3.8.1 <br />
 
 <br>
 {% highlight xml %}
@@ -132,38 +131,11 @@ The *Objects* directory contains a subdirectory for each of the following stored
     <changeSet author="Administrator (generated)" id="1571345362466-8">
            <pro:createTrigger disabled="false" path="objects/trigger/TS_T_EXEMPLAR_SEQEXEMPLAR.sql" relativeToChangelogFile="true" tableName="T_EXEMPLAR" triggerName="TS_T_EXEMPLAR_SEQEXEMPLAR"/>
        </changeSet>
-       <changeSet author="Administrator (generated)" id="1571345362466-9">
-           <pro:createTrigger disabled="false" path="objects/trigger/ORDERS_BEFORE_INSERT4.sql" relativeToChangelogFile="true" tableName="orders" triggerName="ORDERS_BEFORE_INSERT4"/>
-       </changeSet>
-       <changeSet author="Administrator (generated)" id="1571345362466-10">
-           <pro:createTrigger disabled="false" path="objects/trigger/ORDERS_BEFORE_INSERT2.sql" relativeToChangelogFile="true" tableName="orders" triggerName="ORDERS_BEFORE_INSERT2"/>
-       </changeSet>
-       <changeSet author="Administrator (generated)" id="1571345362466-11">
-           <pro:createTrigger disabled="false" path="objects/trigger/ORDERS_BEFORE_INSERT.sql" relativeToChangelogFile="true" tableName="orders" triggerName="ORDERS_BEFORE_INSERT"/>
-       </changeSet>
        <changeSet author="Administrator (generated)" id="1571345362466-12">
            <createView fullDefinition="true" path="objects/view/OREDERS_VIEW.sql" relativeToChangelogFile="true" viewName="OREDERS_VIEW"/>
        </changeSet>
-       <changeSet author="Administrator (generated)" id="1571345362466-13">
-           <pro:createTrigger disabled="false" path="objects/trigger/ORDERS_BEFORE_INSERT3.sql" relativeToChangelogFile="true" tableName="orders" triggerName="ORDERS_BEFORE_INSERT3"/>
-       </changeSet>
        <changeSet author="Administrator (generated)" id="1571345362466-14">
            <createProcedure path="objects/storedprocedure/P_CUSTOMER_HAS_NUM_FILM.sql" procedureName="P_CUSTOMER_HAS_NUM_FILM" relativeToChangelogFile="true"/>
-       </changeSet>
-       <changeSet author="Administrator (generated)" id="1571345362466-15">
-           <createView fullDefinition="true" path="objects/view/V_CUSTOMER_HAS_FILM.sql" relativeToChangelogFile="true" viewName="V_CUSTOMER_HAS_FILM"/>
-       </changeSet>
-       <changeSet author="Administrator (generated)" id="1571345362466-16">
-           <createProcedure path="objects/storedprocedure/SP_CUSTOMER_SOCIAL_ACCTS.sql" procedureName="SP_CUSTOMER_SOCIAL_ACCTS" relativeToChangelogFile="true"/>
-       </changeSet>
-       <changeSet author="Administrator (generated)" id="1571345362466-17">
-           <pro:createTrigger disabled="false" path="objects/trigger/TRI_BORROWING.sql" relativeToChangelogFile="true" tableName="T_BORROWING" triggerName="TRI_BORROWING"/>
-       </changeSet>
-       <changeSet author="Administrator (generated)" id="1571345362466-18">
-           <pro:createTrigger disabled="false" path="objects/trigger/TRU_BORROWING.sql" relativeToChangelogFile="true" tableName="T_BORROWING" triggerName="TRU_BORROWING"/>
-       </changeSet>
-       <changeSet author="Administrator (generated)" id="1571345362466-19">
-           <pro:createTrigger disabled="false" path="objects/trigger/TSU_T_EXEMPLAR_SEQEXEMPLAR.sql" relativeToChangelogFile="true" tableName="T_EXEMPLAR" triggerName="TSU_T_EXEMPLAR_SEQEXEMPLAR"/>
        </changeSet>
        <changeSet author="Administrator (generated)" id="1571345362466-20">
            <pro:createFunction functionName="F_CUSTOMER_HAS_NUM_FILM" path="objects/function/F_CUSTOMER_HAS_NUM_FILM.sql" relativeToChangelogFile="true"/>

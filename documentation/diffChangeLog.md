@@ -73,7 +73,6 @@ Liquibase Community `diffChangeLog` categories:
 + View
 
 Additional Liquibase Pro `diffChangeLog` categories:
-> **Note:** coming soon with Liquibase 3.8.1 <br />
 
 + Check Constraint
 + Package

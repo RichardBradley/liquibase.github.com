@@ -9,25 +9,25 @@ includeDaticalBox: true
 This getting started guide provides a variety of topics which are intended to orient you to Liquibase. The getting started guide does not cover every feature available in Liquibase, and is focused on ensuring that you understand the core concepts and are able to address basic use cases.
 
 ## Database Migration Approaches
-When if comes to managing databases, there are two types of deployment approaches:
+When it comes to managing databases, there are two types of deployment approaches:
 - State-based (Declarative) deployment
 - Migration-based (Imperative) deployment
 
-For more information about Database Migration approaches, [click here](/get_started/database-migration-approaches.html).
+View our [Database Migration Approaches](/get_started/database-migration-approaches.html) topic for more information.
 
 ## How Liquibase Works
-At its core, Liquibase relies on a simple mechanism to track, version, and deploy changes. For more information on how Liquibase works, [click here](/get_started/how-lb-works.html).
+At its core, Liquibase relies on a simple mechanism to track, version, and deploy changes. View our topic on [How Liquibase Works](/get_started/how-lb-works.html) for more information.
 
 ## Using Version Control Systems with Liquibase
-Liquibase utilizes a variety of text-based, human-readable, auto-mergeable formats which allows you to use any version control system of your choice. For more information on using version control systems with Liquibase, [click here](/get_started/version_control_info.html).
+Liquibase utilizes a variety of text-based, human-readable, auto-mergeable formats which allows you to use any version control system of your choice. View our [Using Version Control Systems with Liquibase](/get_started/version_control_info.html) topic for more information.
 
 ## Liquibase Core Usage Concepts 
-There are are several major concepts you need to familiarize yourself with prior to getting started with your set up. For more information about Liquibase core concepts, [click here](/get_started/lb-core-usage-concepts.html).
+There are are several major concepts you need to familiarize yourself with prior to getting started with your set up. View our [Liquibase Core Usage](/get_started/lb-core-usage-concepts.html) topic for more information.
 
 ## Liquibase Setup
 When working with Liquibase, changes can either be defined with Liquibase functions or with SQL. These modes are not mutually exclusive and can be used in conjuction with one another to track, version, and deploy database changes. 
 
-For more information on how to set up Liquibase and learn about tracking, versioning, and deploying database changes, [click here](/get_started/lb-setup.html).
+View our [Liquibase Setup](/get_started/lb-setup.html) topic for more information about setup, tracking, versioning, and deploying database changes.
 
 ## Liquibase Tutorials
 Check out the following Liquibase tutorials and walkthroughs to help you get started!

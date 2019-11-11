@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Liquibase for QA | Liquibase Docs
+title: Liquibase for QA
 ---
 
 # Liquibase for QA #

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Supported Databases | Liquibase Docs
+title: Supported Databases
 ---
 
 # Supported Databases #

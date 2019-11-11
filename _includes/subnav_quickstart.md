@@ -5,5 +5,5 @@
 <li><a href="/get_started/lb-core-usage-concepts.html"><span>Liquibase Core Usage Concepts</span></a></li>
 <li><a href="/get_started/lb-setup.html"><span>Liquibase Setup</span></a></li>
 <li><a href="/get_started/lb-setup-tutorial.html"><span>Tutorial: Setting up LB</span></a>
-<li><a href="/get_started/quickstart_sql.html"><span>Tutorial: SQL Scripts</span></a></li>
 <li><a href="/get_started/quickstart_lb.html"><span>Tutorial: LB Functions</span></a></li>
+<li><a href="/get_started/quickstart_sql.html"><span>Tutorial: SQL Scripts</span></a></li>

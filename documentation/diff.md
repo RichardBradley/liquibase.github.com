@@ -179,7 +179,6 @@ Liquibase Community `diff` categories:
 + View
 
 Liquibase Pro `diff` categories:
-> **Note:** coming soon with Liquibase 3.8.1
 
 + Check Constraint
 + Package

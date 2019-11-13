@@ -29,7 +29,11 @@ liquibase --changeLogFile=dbchangelog.xml generateChangeLog
 
 ## Output
 
-The `generateChangeLog` command generates a *changelog* that contains all of your objects (represented as changesets) and places the file in the same directory where the command was ran.
+The `generateChangeLog` command generates a *changelog* that contains all of your objects (represented as changesets) and places the file in the same directory where 
+the command was ran. The extension provided determines the format of the changelog, so if you specify the filename as `changelog.xml` you will get an XML formatted changelog,
+but if you specify the filename as `changelog.yaml` or `changelog.json` or `changelog.postgresql.sql` you will get changelogs formatted in YAML or JSON or SQL, respectively.
+
+Note that when generating a SQL formatted changelog, you must specify the short name of the targeted database type as part of the filename.
 
 ### Liquibase Pro Differences
 

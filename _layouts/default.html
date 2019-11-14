@@ -69,28 +69,7 @@ subnav: subnav_blog.md
           height="207"></a>
     </div>
 
-    <div id="news" style="padding-right: 10px; float: left">
-      <fieldset style="color: #747373;">
-        <legend>News</legend>
-
-        <a href="{{site.posts[0].url}}"
-          style="color: #747373; text-transform: uppercase; font-size: 12px; font-family: arial, helvetica, sans-serif; font-weight: bold; text-decoration: none">{{ site.posts[0].title }}</a><br>
-        <a href="{{site.posts[0].url}}"
-          style="font-size: 12px; font-family: arial, helvetica, sans-serif;">{{ site.posts[0].date | date_to_string }}</a>
-
-        {% include components/forms/marketo-form.html %}
-
-        <h3 style="margin-top: 0; margin-bottom: 10px; color: #747373">- and/or -</h3>
-
-        <div style="margin-bottom: 30px">
-          <a href="https://twitter.com/liquibase" class="twitter-follow-button"
-            data-show-count="false">@liquibase</a>
-        </div>
-
-        <a href="/blog" style="font-size: 14px; font-family: arial, helvetica, sans-serif;">All Previous Posts >></a>
-
-      </fieldset>
-    </div>
+    {% include components/news-block.html %}
 
     {% if page.includeDaticalBox %}
     <!--div id="Datical widget" style="padding-right: 10px; float: left; width: 220px">

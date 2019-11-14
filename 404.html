@@ -1,64 +1,17 @@
 ---
 layout: base
 ---
+  {% include components/announcement.html %}
+
 <div class="container">
   <div class="span-24">
     <a class="logo" href="/index.html"></a>
 
   {% include components/search/gcse-search.html %}
-   
-
-  <div class="span-24" id="menu">
-    <div class="span-4">
-      <li>
-        <a href="http://download.liquibase.org">
-          <span>Download</span>
-        </a>
-      </li>
-    </div>
-    <div class="span-3">
-      <li>
-        <a href="/quickstart.html">
-          <span>Getting Started</span>
-        </a>
-      </li>
-    </div>
-    <div class="span-3">
-      <li>
-        <a href="/documentation/index.html">
-          <span>Documentation</span>
-        </a>
-      </li>
-    </div>
-    <div class="span-3">
-      <li>
-        <a href="/community/index.html">
-          <span>Community</span>
-        </a>
-      </li>
-    </div>
-    <div class="span-3">
-      <li>
-        <a href="/extensions/index.html">
-          <span>Extensions</span>
-        </a>
-      </li>
-    </div>
-    <div class="span-3">
-      <li>
-        <a href="http:///www.liquibase.org/blog">
-          <span>Blog</span>
-        </a>
-      </li>
-    </div>
-    <div class="span-3 last">
-      <li>
-        <a href="http://www.datical.com/liquibase/" onclick="trackOutboundLink(this, 'Datical', 'Liquibase RFI'); return false" target="_blank">
-          <span>Support&nbsp;and&nbsp;Training</span>
-        </a>
-      </li>
-    </div>
+  
   </div>
+
+  {% include components/top-nav.html %}
 
   <div class="span-24 last">
     <h1>404 Error: Unknown Page</h1>
@@ -74,8 +27,6 @@ layout: base
         <a href="/community/index.html">Links to forums, issue tracker, etc.</a>?</li>
     </ul>
 
-    or would like to just
-    <a href="/index.html">start from the beginning</a>
-    again.
+    or would you like to just <a href="/index.html">start from the beginning</a> again?
   </div>
 </div>

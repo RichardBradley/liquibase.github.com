@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Changelog parameters
+title: Changelog parameters | Liquibase Docs
 ---
 
 # Change Log Parameters #

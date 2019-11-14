@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Contributing to Liquibase
+title: Contributing to Liquibase | Liquibase Docs
 ---
 
 # Contributing to Liquibase #

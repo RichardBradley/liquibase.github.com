@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Modify sql
+title: Modify SQL | Liquibase Docs
 ---
 
 # Modifying Generated SQL #

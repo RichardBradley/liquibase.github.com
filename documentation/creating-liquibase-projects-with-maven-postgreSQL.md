@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Creating Liquibase Project with Maven and PostgreSQL
+title: Creating Liquibase Project with Maven and PostgreSQL | Liquibase Docs
 ---
 
 # Setting up a Liquibase project with Maven and PostgreSQL

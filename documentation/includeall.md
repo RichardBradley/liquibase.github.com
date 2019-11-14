@@ -1,6 +1,6 @@
 ---
 layout: default
-title: includeAll tag
+title: includeAll tag | Liquibase Docs
 ---
 
 The includeAll tag allows you to break up your change-logs into more manageable pieces.  It is similar to the [include](include.html) tag, but instead of passing a particular changelog file to include, you specify a directory and it will include all *.xml files as changelog files, and all *.sql files as individual changes.  All files that are found are run in order according to alphabetical order.

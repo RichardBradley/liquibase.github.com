@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Creating and configuring liquibase.properties file
+title: Creating and configuring liquibase.properties file | Liquibase Docs
 ---
 # Creating and configuring a liquibase.properties file
 When running Liquibase on your system, it is convenient to store properties that don't change often in a *liquibase.properties* file. 

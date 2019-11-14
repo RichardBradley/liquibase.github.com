@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change renameView
+title: Change renameView | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change createIndex
+title: Change createIndex | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

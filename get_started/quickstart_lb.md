@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Using Liquibase Functions Tutorial
+title: Using Liquibase Functions Tutorial | Liquibase Docs
 subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---

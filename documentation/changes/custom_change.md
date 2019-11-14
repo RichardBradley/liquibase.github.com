@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change customChange
+title: Change customChange | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

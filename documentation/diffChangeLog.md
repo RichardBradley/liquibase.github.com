@@ -1,6 +1,6 @@
 ---
 layout: default
-title: diffChangeLog Command
+title: diffChangeLog Command | Liquibase Docs
 ---
 
 # Liquibase Commands: `diffChangeLog`

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Running Liquibase
+title: Running Liquibase | Liquibase Docs
 ---
 
 # Running Liquibase #

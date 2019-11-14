@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change createTable
+title: Change createTable | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

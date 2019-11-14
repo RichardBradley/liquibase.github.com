@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change createFunction
+title: Change createFunction | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

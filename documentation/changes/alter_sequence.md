@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change alterSequence
+title: Change alterSequence | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Databases
+title: Supported Databases
 ---
 
 # Supported Databases #

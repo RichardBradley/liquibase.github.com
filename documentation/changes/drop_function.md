@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change dropFunction
+title: Change dropFunction | Liquibase Docs
 ---
 
 <!-- ====================================================== -->

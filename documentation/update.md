@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Update
+title: Update | Liquibase Docs
 ---
 
 # Updating the Database #

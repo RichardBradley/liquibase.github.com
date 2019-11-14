@@ -1,6 +1,6 @@
 ---
 layout: side-search
-title: Liquibase Setup
+title: Liquibase Setup | Liquibase Docs
 subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---
@@ -13,7 +13,7 @@ Before attempting any of the step-by-step tutorials, please prepare your environ
 
 ## Track, Version, and Deploy Database Changes with Liquibase
 
-When working with Liquibase, changes can either be defined with the [Liquibase functions](/get_started/quickstart_lb.html) or 
+When working with Liquibase, changes can either be defined with [Liquibase functions](/get_started/quickstart_lb.html) or 
 with [SQL](/get_started/quickstart_sql.html). Importantly, these modes are not mutually exclusive, and can be used in conjunction, 
 providing considerable flexibility in how database changes are defined and deployed. For changes defined with Liquibase functions, Liquibase 
 generates SQL appropriate for the target database. This can be helpful when:

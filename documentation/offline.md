@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Offline Database Support
+title: Offline Database Support | Liquibase Docs
 ---
 
 # Offline Database Support #

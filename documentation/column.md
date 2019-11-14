@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Column
+title: Column tag | Liquibase Docs
 ---
 
 # Column tag #

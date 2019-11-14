@@ -1,6 +1,6 @@
 ---
 layout: default
-title: YAML Format
+title: YAML Format | Liquibase Docs
 ---
 
 # YAML Format

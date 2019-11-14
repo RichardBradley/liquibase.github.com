@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Using SQL Scripts Tutorial
+title: Using SQL Scripts Tutorial | Liquibase Docs
 subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---

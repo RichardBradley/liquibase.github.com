@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Installing Liquibase with Maven on Linux/Unix/Mac
+title: Installing Liquibase with Maven on Linux/Unix/Mac | Liquibase Docs
 ---
 
 # Installing Liquibase with Maven on Linux/Unix/Mac

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Databasechangelog
+title: Databasechangelog | Liquibase Docs
 ---
 
 # Database Change Log File

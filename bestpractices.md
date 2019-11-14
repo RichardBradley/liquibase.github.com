@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Bestpractices
+title: Best Practices | Liquibase Docs
 includeDaticalBox: true
 ---
 

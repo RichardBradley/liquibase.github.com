@@ -188,7 +188,7 @@ GO
 <br>
 
 ## `updateSQL` Command with the Labels Parameter
-The `updateSQL` command allows you to also run a `--labels` parameter to determine which changesets in the *changelog* to evaluate based on its label. You can view your labels in your *changelog*
+The `updateSQL` command allows you to add the `--labels` parameter to determine which changesets in the *changelog* to evaluate based on its label. You can view your labels in your *changelog*.
 
 <details>
 <summary style="font-size:125%;color:blue;">Changelog Example</summary>
@@ -378,7 +378,7 @@ UPDATE public.databasechangeloglock SET LOCKED = FALSE, LOCKEDBY = NULL, LOCKGRA
 <br>
 
 ## `futureRollbackSQL` Command
-The `futureRollbackSQL` command generates SQL that reverses changes you applied while using the `updateSQL` command.
+The `futureRollbackSQL` command generates SQL that reverses the changes that would be applied with the `updateSQL` command.
 
 To run the `futureRollbackSQL` command, type the following into your command prompt:
 

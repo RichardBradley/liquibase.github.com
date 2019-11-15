@@ -12,12 +12,12 @@ To add the directory to your PATH:
 1. Open the Terminal or Linux Command Line.
 2. Run the following command: `export PATH=$PATH:/path/to/Liquibase-<version>-bin`
 
-This command will not permanently update your PATH after the termination of your session. To update your PATH permanently, run the following command: `source ~/.profile  or source ~/.bashrc`<br />
-Restart your command line.
+This command will not permanently update your PATH after the termination of your session. To update your PATH permanently, run the following command: `source ~/.profile  or source ~/.bashrc`
+
+Then restart your command line.
 
 > **Note for MacOS users only:** There is a more convenient way to set path using Terminal in Default mode.  
-To set path you can run: `sudo nano /etc/paths` then append the path `/path/to/Liquibase-<version>-bin` at the end of the file.  Hit `Ctrl+x` and `y` for yes, to save the file.  
-Restart your Terminal.
+To set path you can run: `sudo nano /etc/paths` then append the path `/path/to/Liquibase-<version>-bin` at the end of the file.  Hit `Ctrl+x` and `y` for yes, to save the file and restart your Terminal. View the [Downloading & Installing Liquibase on MacOS](https://www.youtube.com/watch?v=w5yiwdQ1U_E) video for more information.
 
 ## Verifying ##
 

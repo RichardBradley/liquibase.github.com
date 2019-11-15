@@ -21,7 +21,7 @@ To take a snapshot of your database:
  
 ## Output
 <details>
-<summary style="font-size:200%;color:blue;">myschemaSnapshot.json example</summary>
+<summary style="font-size:125%;color:blue;">myschemaSnapshot.json example</summary>
 <br>
 {% highlight json %}
 {

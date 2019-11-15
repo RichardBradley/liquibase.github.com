@@ -50,7 +50,7 @@ liquibase --changeLogFile=file_name.xml diffChangeLog
 For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your *liquibase.properties* File](config_properties.html) topic in the knowledge base.
 
 <details>
-<summary style="font-size:200%;color:blue;">Console Output Example</summary>
+<summary style="font-size:125%;color:blue;">Console Output Example</summary>
 <br>
 {% highlight text %}
 Liquibase Pro 3.8.1 by Datical licensed to Liquibase Pro Customer
@@ -81,7 +81,7 @@ Additional Liquibase Pro `diffChangeLog` categories:
 + Trigger
 + Synonyms
 <details>
-<summary style="font-size:200%;color:blue;">Pro diffChangeLog sample file</summary>
+<summary style="font-size:125%;color:blue;">Pro diffChangeLog sample file</summary>
 <br>
 {% highlight xml %}
 

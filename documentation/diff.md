@@ -40,7 +40,7 @@ liquibase --outputFile=mydiff.txt diff
 >**Note:** For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your *liquibase.properties* File](config_properties.html) topic in the knowledge base.
 
 <details>
-<summary style="font-size:200%;color:blue;">Example Output</summary>
+<summary style="font-size:125%;color:blue;">Example Output</summary>
 <br>
 {% highlight text %}
 
@@ -200,7 +200,7 @@ liquibase --diffTypes=tables,indexes,views diff
 {% endhighlight %}
 
 <details>
-<summary style="font-size:200%;color:blue;">Example filtered output</summary>
+<summary style="font-size:125%;color:blue;">Example filtered output</summary>
 <br>
 {% highlight text %}
 

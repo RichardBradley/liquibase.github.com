@@ -49,7 +49,7 @@ The *Objects* directory contains a subdirectory for each of the following stored
 
 ## Examples
 <details open>
-<summary style="font-size:200%;color:blue;">Liquibase Community changelog</summary>
+<summary style="font-size:125%;color:blue;">Liquibase Community changelog</summary>
 <br>
 {% highlight xml %}
 
@@ -120,7 +120,7 @@ The *Objects* directory contains a subdirectory for each of the following stored
 {% endhighlight %}
 </details>
 <details>
-<summary style="font-size:200%;color:blue;">Liquibase Pro changelog</summary>
+<summary style="font-size:125%;color:blue;">Liquibase Pro changelog</summary>
 
 <br>
 {% highlight xml %}

@@ -69,39 +69,7 @@ subnav: subnav_blog.md
 
     {% include components/search/gcse-search.html isSideNav="true" %}
 
-    <!-- Begin MailChimp Signup Form -->
-    <div id="mc_embed_signup" style="padding-right: 10px; float: left">
-      <form
-        action="http://liquibase.us2.list-manage1.com/subscribe/post?u=c24cd4e0098d3017cc468c324&amp;id=3362c9cd2f"
-        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-        target="_blank" novalidate>
-        <fieldset style="color: #747373;">
-          <legend>News</legend>
-
-          <a href="{{site.posts[0].url}}"
-            style="color: #747373; text-transform: uppercase; font-size: 12px; font-family: arial, helvetica, sans-serif; font-weight: bold; text-decoration: none">{{ site.posts[0].title }}</a><br>
-          <a href="{{site.posts[0].url}}"
-            style="font-size: 12px; font-family: arial, helvetica, sans-serif;">{{ site.posts[0].date | date_to_string }}</a>
-
-          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" title="Email Address"
-            placeholder="Email Address" style="width:100%; margin-top: 30px">
-          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-
-          <h3 style="margin-top: 0; margin-bottom: 10px; color: #747373">- and/or -</h3>
-
-          <div style="margin-bottom: 30px">
-            <a href="https://twitter.com/liquibase" class="twitter-follow-button"
-              data-show-count="false">@liquibase</a>
-          </div>
-
-          <a href="/blog" style="font-size: 14px; font-family: arial, helvetica, sans-serif;">All Previous Posts
-            >></a>
-
-        </fieldset>
-      </form>
-    </div>
-
-    <!--End mc_embed_signup-->
+    {% include components/news-block.html %}
 
     {% if page.includeDaticalBox %}
     <!--div id="Datical widget" style="padding-right: 10px; float: left; width: 220px">

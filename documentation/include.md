@@ -10,10 +10,10 @@ The include tag allows you to break up your change-logs into more manageable pie
 <?xml version="1.0" encoding="UTF-8"?>
 
 <databaseChangeLog
-  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
-         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
     <include file="com/example/news/news.changelog.xml"/>
     <include file="com/example/directory/directory.changelog.xml"/>
 </databaseChangeLog>

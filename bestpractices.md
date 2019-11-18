@@ -32,7 +32,7 @@ The master.xml includes the changelog for the releases in the correct order. In 
   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
   <include file="com/example/db/changelog/db.changelog-1.0.xml"/> 
   <include file="com/example/db/changelog/db.changelog-1.1.xml"/> 
@@ -45,10 +45,10 @@ Each of the included XML files needs to be in the same format as a standard XML 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?> 
 <databaseChangeLog 
-  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
-                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd"> 
   <changeSet author="authorName" id="changelog-1.0">
     <createTable tableName="TablesAndTables">
       <column name="COLUMN1" type="TEXT">

@@ -11,10 +11,10 @@ The changeSet tag is what you use to group database changes/<a href="changes/ind
 <?xml version="1.0" encoding="UTF-8"?>
 
 <databaseChangeLog
-  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
-         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
     <changeSet id="1" author="bob">
         <comment>A sample change log</comment>
         <createTable/>
@@ -25,6 +25,10 @@ The changeSet tag is what you use to group database changes/<a href="changes/ind
     <changeSet id="3" author="alice" failOnError="false" dbms="oracle">
         <alterTable/>
     </changeSet>
+    <changeSet id="4" author="alice" failOnError="false" dbms="!oracle">
+        <alterTable/>
+    </changeSet>
+
 </databaseChangeLog>
 {% endhighlight %}
 
@@ -42,7 +46,10 @@ Liquibase attempts to execute each changeSet in a transaction that is committed 
 <table>
 <tr><td>id</td><td>An alpha-numeric identifier <b>required</b> </td></tr>
 <tr><td>author</td><td>The creator of the change set <b>required</b>  </td></tr>
-<tr><td>dbms</td><td>The type of a database which that changeSet is to be used for. When the migration step is running, it checks the database type against this attribute. Valid database type names are listed on the <a href="../databases.html">supported databases page</a> </td></tr>
+<tr><td>dbms</td><td>The type of a database which that changeSet is to be used for. When the migration step is running, it checks the database type against this 
+  attribute. Valid database type names are listed on the <a href="../databases.html">supported databases page</a>. It is possible to list multiple databases separated by commas. 
+  You can also specify that a changeset is <b>NOT</b> applicable to a particular database type by prefixing with <pre>!</pre>. The keywords <pre>all</pre> and <pre>none</pre> are 
+  also available.</td></tr>
 <tr><td>runAlways</td><td>Executes the change set on every run, even if it has been run before </td></tr>
 <tr><td>runOnChange</td><td>Executes the change the first time it is seen and each time the change set has been changed </td></tr>
 <tr><td>context</td><td>Executes the change if the particular context was passed at runtime. Any string can be used for the context name and they are checked case-insensitively. </td></tr>

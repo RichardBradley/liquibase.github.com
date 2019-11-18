@@ -11,6 +11,13 @@ Liquibase supports XML as a format for storing your changelog files.
 
 XSD schema definitions are available for each Liquibase version. Since there are no changelog format changes in patch versions, there are only xsd files that correspond to major.minor versions.
 
+* http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
+* http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.7.xsd
+* http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+* http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+* http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
+* http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd
+* http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.2.xsd
 * http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
 * http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
 * http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
@@ -35,7 +42,7 @@ None
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
-        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <preConditions>

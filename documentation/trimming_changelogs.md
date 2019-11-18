@@ -15,10 +15,10 @@ If it is worth the risk, why is it work the risk? Sometimes the problem is that 
 
 {% highlight xml %}
 <databaseChangeLog
-            xmlns="http://www.liquibase.org/xml/ns/dbchangelog/3.3"
+            xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/3.3
-         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+            xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
     <include file="com/example/news/news.changelog.xml"/>
     <include file="com/example/directory/directory.changelog.xml"/>
 </databaseChangeLog>
@@ -42,7 +42,7 @@ Suppose instead you have a "cart" table that is created in one changeSet, then a
 
 {% highlight xml %}
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                       xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+                       xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
     <changeSet author="nvoxland" id="1">
         <createTable tableName="cart">
             <column name="id" type="int"/>
@@ -68,7 +68,7 @@ One option would be to combine everything into a new changeSet using the existin
 
 {% highlight xml %}
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
     <changeSet author="nvoxland" id="1">
         <validCheckSum>7:f24b25ba0fea451728ffbade634f791d</validCheckSum>
         <createTable tableName="cart">
@@ -86,7 +86,7 @@ If you have some databases where the promo_code and/or abandoned columns have no
 
 {% highlight xml %}
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
     <changeSet author="nvoxland" id="1">
         <validCheckSum>7:f24b25ba0fea451728ffbade634f791d</validCheckSum>
         <createTable tableName="cart">

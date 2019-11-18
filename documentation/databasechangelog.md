@@ -31,7 +31,7 @@ If all preconditions are met, Liquibase will then begin running [changeSet](chan
 
 The XML schema for the databaseChangeLog tag is available at:
 
-* [http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd](http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd) **Since 3.1**
+* [http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd](http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd) **Since 3.1**
 
 Some legacy XSDs are listed on [the XML Format page](xml_format.html).
 
@@ -53,7 +53,7 @@ Each changeSet contains an "id" tag and an "author" tag. These tags, along with 
     xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
-    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 </databaseChangeLog>
 {% endhighlight %}

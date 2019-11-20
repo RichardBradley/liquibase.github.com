@@ -19,7 +19,7 @@ Begin by [downloading the Liquibase CLI tool](https://download.liquibase.org/)
 
 You can use one of the following two installation guides depending on your platform:
 - [Installing Liquibase Command Line for Windows](/documentation/installation-windows.html)
-- [Installing Liquibase Command Line for Linux/Unix/Mac](/documentation/installation-windows.html)
+- [Installing Liquibase Command Line for Linux/Unix/Mac](/documentation/installation-linux-unix-mac.html)
 
 View the [Liquibase Documentation](/documentation/index.html) for more information on other ways you can download and install Liquibase.
 </div>

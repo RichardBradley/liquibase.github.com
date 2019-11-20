@@ -7,7 +7,7 @@ includeDaticalBox: true
 # Using SQL Scripts Tutorial
 
 ## Overview ##
-This tutorial builds on the setup that is described in the [Liquibase Setup Tutorial](/get_started/lb-setup-tutorial.html).
+This tutorial builds on the setup that is described in the [Liquibase Setup Tutorial](/get-started/lb-setup-tutorial.html).
 
 ## Step 1: Create a sql Folder ##
 

@@ -39,4 +39,4 @@ We'll show you how easy it is to get up and running with Liquibase, just click o
     </div>
 </div>
 
-{% include tracking-codes/hotjar.tracking-code.html %}
+

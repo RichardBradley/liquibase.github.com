@@ -268,15 +268,15 @@ ul#leftnav span {
   text-decoration: none;
   color: #fff;
   /*background: url(../images/a_bg.png) repeat-x;*/
-  text-transform: uppercase;
+  text-transform: none;
   clear: both;
   width: 100%;
   height: 20px;
   cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 28px;
-  font-weight: bold;
+  font-weight: none;
   line-height: 16px; /*--Vertical alignment of text--*/
 }
 ul#leftnav a {
@@ -348,4 +348,18 @@ a.pagination-item:hover {
   margin-left: -1px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+}
+
+.tile-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  padding-top: 10px;
+  row-gap: 20px;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.tile-item {
+  align-self: center;
 }

@@ -1,6 +1,6 @@
 ---
 layout: side-search
-title: Liquibase Setup Tutorial | Liquibase Docs
+title: Setting up Liquibase Tutorial | Liquibase Docs
 subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---
@@ -8,11 +8,8 @@ includeDaticalBox: true
 Before attempting any of the step-by-step tutorials, please prepare your environment with the setup instructions.
 
 ## Step 1: Download and Extract Liquibase
-
-1. Download Liquibase. Visit the [download page](https://download.liquibase.org/) to get the latest binary.
-2. After downloading the *.zip or *.tar.gz, extract the contents into a folder. You may want to add this folder to your system PATH 
-  environment so that you can execute liquibase from any directory. For this tutorial, we will refer to that directory as `LB_HOME`, 
-  and when executing the liquibase shell script will use `LB_HOME/liquibase` or `LB_HOME\liquibase.bat` as the example command.
+- Download Liquibase. Visit the [download page](https://download.liquibase.org/) to get the latest binary.
+- After downloading the *.zip or *.tar.gz, extract the contents into a folder. You may want to add this folder to your system PATH environment so that you can execute liquibase from any directory. For this tutorial, we will refer to that directory as LB_HOME, and when executing the liquibase shell script will use LB_HOME/liquibase or LB_HOME\liquibase.bat as the example command.
 
 ## Step 2: Install Java
 1. Java is a required dependency. Install Java if it is not already installed.
@@ -74,4 +71,3 @@ This tutorial is ideal for those comfortable and familiar with SQL. The tutorial
 
 <div class="cta-container" style="margin-left: auto; margin-right: auto; width: 300px; height: 50px">
 <div class="cta cta--block"><a href="/get_started/quickstart_sql.html">Get Started Tutorial: SQL Scripts ►</a></div></div>
-

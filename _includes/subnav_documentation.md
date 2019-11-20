@@ -14,4 +14,4 @@
 <li><a href="/documentation/diff.html"><span>Diff</span></a></li>
 <li><a href="/documentation/generating_changelogs.html"><span>Generate Changelog</span></a></li>
 <li><a href="/documentation/dbdoc.html"><span>DBDoc</span></a></li>
-<li><a href="/documentation/sql_output.html"><span>SQL Output</span></a></li>
+<li><a href="/documentation/generate-sql-update-schemas.html"><span>SQL Output</span></a></li>

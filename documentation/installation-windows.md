@@ -5,6 +5,8 @@ title: Installing Liquibase Command Line Tool for Windows | Liquibase Docs
 
 # Installing Liquibase Command Line for Windows
 
+<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/XYXMi7CIRQ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<br>
 Once you have downloaded the [Liquibase-Version#-bin.zip file](https://download.liquibase.org/download/), right-click the zipped file and select **Extract All**. You can place the extracted folder, anywhere on your local drive. Before you can use Liquibase, you must set a Path System Variable to the folder on your computer.
 
 To set the Path System Variable:

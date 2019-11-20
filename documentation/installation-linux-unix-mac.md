@@ -5,18 +5,19 @@ title: Installing Liquibase Command Line Tool for Linux/Unix/Mac | Liquibase Doc
 
 
 # Installing Liquibase Command Line for Linux/Unix/Mac #
-
+<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/l_npbdZkyTQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<br>
 Once you have downloaded the [Liquibase-Version#-bin.tar.gz file](https://download.liquibase.org/download), create a local directory on your computer (**Example:** `/usr/apps/Liquibase-<version>-bin`), then add the directory to your PATH.
 To add the directory to your PATH:
 1. Open the Terminal or Linux Command Line.
 2. Run the following command: `export PATH=$PATH:/path/to/Liquibase-<version>-bin`
 
-This command will not permanently update your PATH after the termination of your session. To update your PATH permanently, run the following command: `source ~/.profile  or source ~/.bashrc`<br />
-Restart your command line.
+This command will not permanently update your PATH after the termination of your session. To update your PATH permanently, run the following command: `source ~/.profile  or source ~/.bashrc`
+
+Then restart your command line.
 
 > **Note for MacOS users only:** There is a more convenient way to set path using Terminal in Default mode.  
-To set path you can run: `sudo nano /etc/paths` then append the path `/path/to/Liquibase-<version>-bin` at the end of the file.  Hit `Ctrl+x` and `y` for yes, to save the file.  
-Restart your Terminal.
+To set path you can run: `sudo nano /etc/paths` then append the path `/path/to/Liquibase-<version>-bin` at the end of the file.  Hit `Ctrl+x` and `y` for yes, to save the file and restart your Terminal. View the [Downloading & Installing Liquibase on MacOS](https://www.youtube.com/watch?v=w5yiwdQ1U_E) video for more information.
 
 ## Verifying ##
 

@@ -7,7 +7,11 @@ extraStyleSheets:
   - value-props
 ---
 
-<h1 style="display:flex; justify-content:center; margin-top: 36px;"><img src="images/liquibase_logo.gif" alt="Liquibase"></h1>
+<h1 style="display:flex; justify-content:center; margin-top: 36px;">
+    <a href="https://www.surveymonkey.com/r/Liquibase-Survey-B" style="width: 100%; padding: 0 32px;">
+        <img src="images/Liquibase_Community_Survey_2019_Website.png" alt="Banner for Liquibase Community Survey 2019." style="width: 100%;">
+    </a>
+</h1>
 <h2 style="display:flex; justify-content:center; text-align:center; font-size: 20px;">Liquibase is the leading open source tool for database schema change management.</h2>
 
 <div class="lb-choose-path">

@@ -7,7 +7,7 @@ includeDaticalBox: true
 # Using Liquibase Functions Tutorial #
 
 ## Overview ##
-This tutorial builds on the setup that is described in the [Liquibase Setup Tutorial](/get_started/lb-setup-tutorial.html).
+This tutorial builds on the setup that is described in the [Liquibase Setup Tutorial](/get-started/lb-setup-tutorial.html).
 
 ## Step 1: Create a Changelog File: ##
 
@@ -66,7 +66,7 @@ Your database now contains a table called "department". To inspect the H2 databa
 where you extracted the Liquibase archive and then into the lib subdirectory where you placed the h2 driver jar. Run `java -jar h2-1.4.199.jar`. 
 > Note: enter the specific version of the h2*.jar that you downloaded!
 
-Enter the JDBC URL, User Name, and Password from the `liquibase.properties` file you created per the [tutorial setup](/get_started/lb-setup-tutorial.html). Notice 
+Enter the JDBC URL, User Name, and Password from the `liquibase.properties` file you created per the [tutorial setup](/get-started/lb-setup-tutorial.html). Notice 
 that two other tables are created as well: "databasechangelog" and "databasechangeloglock". The databasechangelog table contains a list of all the changes that 
 have been run against the database. The databasechangeloglock table is used to make sure two machines don't attempt to modify the database at the same time.
 

@@ -29,7 +29,7 @@ This is a one-time step to configure a change log to point to the `sql` folder t
 {% endhighlight %}
 
 ## Step 2: Add a SQL Script to the sql Folder ##
-With a `liquibase.properties` file from the [tutorial setup](/get_started/lb-setup-tutorial.html) and the newly created `myChangeLog.xml`, 
+With a `liquibase.properties` file from the [tutorial setup](/get-started/lb-setup-tutorial.html) and the newly created `myChangeLog.xml`, 
 we are now ready to start adding SQL scripts to the `sql` folder. Liquibase will order the scripts in the folder alphanumerically. 
 Create a file named `001_create_person_table.sql` with the following and save it in the `sql` folder:
 {% highlight sql %}
@@ -51,7 +51,7 @@ Run `java -jar h2-1.4.199.jar`.
 
 >Note: enter the specific version of the h2*.jar that you downloaded!
 
-Enter the JDBC URL, User Name, and Password from the `liquibase.properties` file you created per the [tutorial setup](/get_started/lb-setup-tutorial.html). 
+Enter the JDBC URL, User Name, and Password from the `liquibase.properties` file you created per the [tutorial setup](/get-started/lb-setup-tutorial.html). 
 You will notice two other tables are created as well: "databasechangelog" and "databasechangeloglock". The databasechangelog table contains a list of all the 
 changes that have been run against the database. The databasechangeloglock table is used to make sure two machines don't attempt to modify the database at the same time.
 

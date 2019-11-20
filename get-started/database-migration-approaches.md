@@ -32,4 +32,4 @@ This approach allows you to iteratively modify the structure of your database ov
 mostly intended to assist with onboarding new projects or checking that your database migrations were applied correctly.
 
 <div class="cta-container" style="margin-left: auto; margin-right: auto; width: 300px; height: 50px">
-<div class="cta cta--block"><a href="/get_started/how-lb-works.html">Get Started: How Liquibase Works ►</a></div></div>
+<div class="cta cta--block"><a href="/get-started/how-lb-works.html">Get Started: How Liquibase Works ►</a></div></div>

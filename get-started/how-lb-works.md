@@ -27,4 +27,4 @@ With the ledger and the tracking table, Liquibase is able to:
     >**Note:** Liquibase has advanced features such as contexts, labels, and preconditions to precisely control when and where changeSets are deployed.
 
 <div class="cta-container" style="margin-left: auto; margin-right: auto; width: 300px; height: 50px">
-<div class="cta cta--block"><a href="/get_started/version_control_info.html">Get Started: Using Source Control ►</a></div></div>
+<div class="cta cta--block"><a href="/get-started/version_control_info.html">Get Started: Using Source Control ►</a></div></div>

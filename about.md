@@ -34,7 +34,7 @@ The main Liquibase code is at [https://github.com/liquibase/liquibase](https://g
 
 Liquibase is [licensed under the Apache 2.0 License](https://github.com/liquibase/liquibase/blob/master/LICENSE.txt)
 
-Liquibase Pro, with additional features and support, is [commercially licensed](https://support.liquibase.org/eula/).
+Liquibase Pro, with additional features and support, is [commercially licensed](https://download.liquibase.org/eula/).
 
 LIQUIBASE is a registered trademark of [Datical](https://www.datical.com).
 

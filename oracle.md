@@ -24,7 +24,7 @@ The purpose of this document is to guide you through the process of creating a n
 ### Prerequisites
 * If you have not installed the latest version of Liquibase, navigate to [https://download.liquibase.org/download](https://download.liquibase.org/download) to install the software application.
 * Ensure the liquibase.bat file’s path is set to a location in the PATH System variable.
-* Navigate to [https://www.oracle.com/database/technologies/jdbc-drivers-12c-downloads.html](www.oracle.com/database/technologies/jdbc-drivers-12c-downloads.html) and download the ojdbc jar driver file.<br />
+* Navigate to [https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) and download the ojdbc jar driver file.<br />
 
 > **Note:** Place the ojdbc jar driver file in a known directory so you can locate it easily.
 

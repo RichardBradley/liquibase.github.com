@@ -31,7 +31,7 @@ You can find the all the versions of the Liquibase-core and Maven plugins in the
 * [liquibase:updateTestingRollback](maven_updatetestingrollback.html)
 * [liquibase:futureRollbackSQL](maven_futurerollbacksql.html)
 * [liquibase:migrate](maven_migrate.html) **DEPRECATED** use update instead
-* [liquibase:migrateSQL](maven_migrateSQL.html) **DEPRECATED** use updateSQL instead
+* [liquibase:migrateSQL](maven_migrate.html) **DEPRECATED** use updateSQL instead
 
 
 ## Configuration and Usage ##

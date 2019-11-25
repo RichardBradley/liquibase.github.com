@@ -39,4 +39,4 @@ This approach allows you to iteratively modify the structure of your database ov
 **Yes!** While Liquibase does include comparative [(diff) capabilities](/documentation/diff.html), Liquibase is primarily a migration-based tool. The diff capabilities are mostly intended to assist with onboarding new projects or ensuring that your database migrations are applied correctly.
 
 <div class="cta-container" style="margin-left: auto; margin-right: auto; width: 300px; height: 50px">
-<div class="cta cta--block"><a href="/get-started/how-lb-works.html">Get Started: How Liquibase Works ►</a></div></div>
+<div class="cta cta--block"><a href="/get_started/how-lb-works.html">Get Started: How Liquibase Works ►</a></div></div>

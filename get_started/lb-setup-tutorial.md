@@ -64,7 +64,7 @@ That is the completion of this Setup Tutorial. You should now see some help outp
 This tutorial uses Liquibase Liquibase Functions (XML formatted changelogs). Instead of working with SQL, changes will be defined in XML. Liquibase will generate SQL based on the changeSet(s) defined and will deploy that to target databases. All migrations are tracked and ordered explicitly in the changeLog.
 
 <div class="cta-container" style="margin-left: auto; margin-right: auto; width: 300px; height: 50px">
-<div class="cta cta--block"><a href="/get_started/quickstart_lb.html">Get Started Tutorial: Using Liquibase Functions ►</a></div></div>
+<div class="cta cta--block"><a href="/get-started/quickstart_lb.html">Get Started Tutorial: Using Liquibase Functions ►</a></div></div>
 
 ## Tutorial: Getting Started Using SQL Scripts
 This tutorial is ideal for those comfortable and familiar with SQL. The tutorial starts with a blank database and guides you through the process of using Liquibase to track, version, and deploy SQL scripts located in a specific folder.

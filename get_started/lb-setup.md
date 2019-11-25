@@ -13,8 +13,8 @@ Before attempting any of the step-by-step tutorials, please prepare your environ
 
 ## Track, Version, and Deploy Database Changes with Liquibase
 
-When working with Liquibase, changes can either be defined with [Liquibase functions](/get_started/quickstart_lb.html) or 
-with [SQL](/get_started/quickstart_sql.html). Importantly, these modes are not mutually exclusive, and can be used in conjunction, 
+When working with Liquibase, changes can either be defined with [Liquibase functions](/get-started/quickstart_lb.html) or 
+with [SQL](/get-started/quickstart_sql.html). Importantly, these modes are not mutually exclusive, and can be used in conjunction, 
 providing considerable flexibility in how database changes are defined and deployed. For changes defined with Liquibase functions, Liquibase 
 generates SQL appropriate for the target database. This can be helpful when:
 - Supporting multiple different database backends. This is a common use case if you are a software vendor looking to avoid writing the same database migrations simply to support different database platforms.
@@ -31,4 +31,4 @@ these procedural database code changes, such as `CREATE FUNCTION`, require datab
 These new change types can be helpful in providing better visibility into database-specific changes from directly inspecting the change log.
 
 <div class="cta-container" style="margin-left: auto; margin-right: auto; width: 300px; height: 50px">
-<div class="cta cta--block"><a href="/get_started/lb-setup-tutorial.html">Get Started Tutorial: Setting up Liquibase ►</a></div></div>
+<div class="cta cta--block"><a href="/get-started/lb-setup-tutorial.html">Get Started Tutorial: Setting up Liquibase ►</a></div></div>

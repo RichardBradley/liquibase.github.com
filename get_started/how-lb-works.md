@@ -34,7 +34,7 @@ Liquibase also prevents conflicts from different callers updates on a secondary 
 View our [DATABASECHANGELOG Table](/documentation/databasechangelog_table.html) and [DATABASECHANGELOCK Table](/documentation/databasechangeloglock_table.html) topics for more information.
 </div>
 <div class="tile-item">
-    <img src="/images/quickstart/table-icon.png" width="125px" align="center" alt="Changelog Icon">
+    <img src="/images/quickstart/tables-icon.png" width="125px" align="center" alt="Changelog Icon">
 </div>
 </div>
 

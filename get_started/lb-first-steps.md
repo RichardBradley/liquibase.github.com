@@ -10,7 +10,7 @@ In this tutorial, you will learn how to get up and running with Liquibase.
 ### Download and Extract Liquibase
 <div class="tile-container">
   <div class="tile-item" align="center">
-    <img src="/images/quickstart/download-icon.png" width="100px" alt="Download Icon">
+    <img src="/images/quickstart/download_icon.png" width="90px" alt="Download Icon">
   </div>
 
 <div class="tile-item" markdown="1">

@@ -1,7 +1,7 @@
 ---
 layout: side-search
 title: Getting Started with Liquibase | Liquibase Docs
-subnav: subnav_main.md
+subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---
 
@@ -12,29 +12,29 @@ It's easy to get up and running with Liquibase. Select a topic below to get star
 
 <div class="tile-container">
     <div class="tile-item" align="center">
-        <a href="/get_started/how-lb-works.html"><img src="/images/quickstart/liquibase-101.png" width="250px" alt="Learn how Liquibase works"></a>
+        <a href="/get_started/how-lb-works.html"><img src="/images/quickstart/liquibase-101.png" width="150px" alt="Learn how Liquibase works"></a>
         <h3>Liquibase 101</h3>
         <br>
     </div>
     <div class="tile-item" align="center">
-        <a href="/get_started/lb-first-steps.html"><img src="/images/quickstart/first-steps-liquibase.png" width="250px" alt="Liquibase First Steps"></a>
+        <a href="/get_started/lb-first-steps.html"><img src="/images/quickstart/first-steps-liquibase.png" width="150px" alt="Liquibase First Steps"></a>
         <h3>First Steps</h3>
         <br>
     </div>
     <div class="tile-item" align="center">
-        <a href="/get_started/quickstart_lb.html"><img src="/images/quickstart/liquibase-functions.png" width="250px" alt="Liquibase Functions"></a>
+        <a href="/get_started/quickstart_lb.html"><img src="/images/quickstart/liquibase-functions.png" width="150px" alt="Liquibase Functions"></a>
         <h3>Migrations with <br> Liquibase Functions</h3>
     </div>
     <div class="tile-item" align="center">
-        <a href="/get_started/quickstart_sql.html"><img src="/images/quickstart/migrations-with-sql.png" width="250px" alt="SQL Migrations"></a>
+        <a href="/get_started/quickstart_sql.html"><img src="/images/quickstart/migrations-with-sql.png" width="150px" alt="SQL Migrations"></a>
         <h3>Migrations with SQL</h3>
     </div>
     <div class="tile-item" align="center">
-        <a href="/databases.html"><img src="/images/quickstart/databases-supported-liquibase.png" width="250px" alt="Databases"></a>
+        <a href="/databases.html"><img src="/images/quickstart/databases-supported-liquibase.png" width="150px" alt="Databases"></a>
         <h3>Supported Databases</h3>
     </div>
     <div class="tile-item" align="center">
-        <a href="/bestpractices.html"><img src="/images/quickstart/liquibase-best-practices.png" width="250px" alt="Liquibase Best Practices"></a>
+        <a href="/bestpractices.html"><img src="/images/quickstart/liquibase-best-practices.png" width="150px" alt="Liquibase Best Practices"></a>
         <h3>Best Practices</h3>
     </div>
 </div>

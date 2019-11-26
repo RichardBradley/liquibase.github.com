@@ -12,7 +12,7 @@ Please find further information about which JDBC driver, URL, classes etc. these
 <table>
 <tr><th>Database</th><th>Type Name</th><th>Notes</th></tr>
 <tr><td><a href="mysql.html">MySQL</a></td><td>mysql</td><td>No Issues</td></tr>
-<tr><td><a href="mariadb.html">MariaDB</a></td><td>mysql</td><td>MariaDB is 100% compatible with MySQL per <a href="https://mariadb.com/kb/en/library/mariadb-vs-mysql-compatibility/">MariaDB developers</a></td></tr>
+<tr><td><a href="mariadb.html">MariaDB</a></td><td>mariadb</td><td>MariaDB is 100% compatible with MySQL per <a href="https://mariadb.com/kb/en/library/mariadb-vs-mysql-compatibility/">MariaDB developers</a></td></tr>
 <tr><td><a href="postgresql.html">PostgreSQL</a></td><td>postgresql</td><td>8.2+ is required to use the "drop all database objects" functionality.</td></tr>
 <tr><td><a href="oracle.html">Oracle</a></td><td>oracle</td><td>11g driver is required when using the diff tool on databases running with AL32UTF8 or AL16UTF16</td></tr>
 <tr><td><a href="mssql.html">SQL Server</a></td><td>mssql</td><td>No Issues</td></tr>

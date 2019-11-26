@@ -112,6 +112,8 @@ If you run the command line migrator without any arguments, you will get a help 
 <tr><td>--promptForNonLocalDatabase=&lt;true or false&gt;</td><td>Prompt if non-localhost databases. (default: false)  </td></tr>
 <tr><td>--currentDateTimeFunction=&lt;value&gt;</td><td>Overrides current date time function used in SQL. Useful for unsupported databases.  </td></tr>
 <tr><td>--logLevel=&lt;level&gt;</td><td>Execution log level (debug, info, warning, severe, off).  </td></tr>
+<tr><td>--logFile=&lt;filename&gt;</td><td>Rather than logging to console, send logging messages to a file.</td></tr>
+<tr><td>--liquibaseProLicenseKey=&lt;licenKey&gt;</td><td>A Liquibase Pro license key (base64 encoded string) unlocks additional features.</td></tr>
 <tr><td>--help</td><td>Output command line parameter help.</td></tr>
 <tr><td>--exportDataDir</td><td>Directory where insert statement csv files will be kept (required by generateChangeLog command).</td></tr>
 <tr><td>--propertyProviderClass=&lt;properties.ClassName&gt;</td><td>custom Properties implementation to use</td></tr>

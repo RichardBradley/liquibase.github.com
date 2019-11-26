@@ -14,8 +14,8 @@ TL;DR: With the release of Liquibase 3.8.2, Liquibase Pro users with workloads o
 This release also includes several bug fixes for Liquibase Community and Pro.
 
 ## What's New in Version 3.8.2
-### Snapshots and Reverse Engineering for Postgres and DB2
-The ability to snapshot Stored Logic for PostgreSQL and DB2 allows users to get a static view of the database at a particular point in time and is useful for reporting and safeguarding data by comparing databases (performing diffs) to find differences.
+### Snapshots and Reverse Engineering for PostgreSQL and DB2
+The ability to snapshot Stored Logic for Postgres and DB2 allows users to get a static view of the database at a particular point in time and is useful for reporting and safeguarding data by comparing databases (performing diffs) to find differences.
 Liquibase Pro users will also now be able to include Stored Logic changeSets in changelogs generated through the **diffChangeLog** and **generateChangeLog** command. Users can reverse engineer Stored Logic changes using generateChangeLog, snapshot, diff, and diffChangeLog commands.
 
 **Stored Logic** objects include: 

@@ -36,7 +36,7 @@ Ensure that it runs successfully and displays your installed Java version.
 2. Create a new directory for your first liquibase project, and change into that directory. For this example, we named the directory `my-first-lb-project`
 3. Create a plain text file named `liquibase.properties` in the project directory you just created and add the following content to the file.
 
-{% highlight bash %}
+{% highlight text %}
 
 driver: org.h2.Driver
 classpath: ./h2-1.4.199.jar
@@ -48,6 +48,16 @@ changeLogFile: myChangeLog.xml
 {% endhighlight %}
 
 >**Note:** Be sure to use the actual version of the h2*.jar file that you copied into the extracted LB_HOME/lib directory!
+
+> **Note:** If you already have a Liquibase Pro key and want to apply it to
+> your project, add the following property to your liquibase.properties
+> file.
+
+{% highlight text %}
+liquibaseProLicenseKey: paste license key
+{% endhighlight %}
+
+
 
 Ensure that you can execute liquibase. At the command prompt, run one of the following commands, depending on your platform:
 

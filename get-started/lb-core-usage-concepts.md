@@ -36,7 +36,7 @@ more precisely control execution. Refer to [the contexts page](/documentation/co
 ### Labels
 Similar to contexts, labels can also be applied to changeSets to control which changesets are executed. In contrast to contexts that can be complex expressions, labels are a simple 
 list on each changeSet. For labels though, complex expressions can be supplied at runtime. The combination of contexts and labels gives fine grained control over which changeSets
-are executed. <Refer to [the labels page](/documentation/labels.html) for more details.
+are executed. Refer to [the labels page](/documentation/labels.html) for more details.
 
 See [this blog post](/2014/11/contexts-vs-labels.html) for more details on the differences, similarities, and use cases for contexts and labels.
 

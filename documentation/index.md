@@ -10,9 +10,9 @@ includeDaticalBox: true
 
 <h2>Installation</h2>
 <ul>
-<li><a href="installation-windows.html">Windows Installation Instructions</a></li>
-<li><a href="installation-linux-unix-mac.html">Linux/Unix/Mac Installation Instructions</a></li>
-<li><a href="installation-linux-unix-mac-with-maven.html">Liquibase Installation with Maven on Linux/Unix/Mac</a></li>
+<li><a href="installation-windows.html">Installing Liquibase Command Line for Windows</a></li>
+<li><a href="installation-linux-unix-mac.html">Installing Liquibase Command Line for Linux/Unix/Mac</a></li>
+<li><a href="installation-linux-unix-mac-with-maven.html">Installing Liquibase with Maven on Linux/Unix/Mac</a></li>
 </ul>
 <h2>Building Changelogs</h2>
 <ul>
@@ -31,7 +31,6 @@ includeDaticalBox: true
 <li><a href="contexts.html">Contexts</a></li>
 <li><a href="changelog_parameters.html">Changelog Parameters</a></li>
 <li><a href="generating_changelogs.html">Generating Changelogs</a></li>
-<li><a href="existing_project.html">Introducing Liquibase into an existing project</a></li>
 <li><a href="trimming_changelogs.html">Trimming changelog files</a></li>
 </ul>
 
@@ -56,6 +55,8 @@ includeDaticalBox: true
 <li><a href="servlet_listener.html">Servlet Listener</a></li>
 <li><a href="cdi.html">CDI Environment</a></li>
 <li><a href="offline.html">Using Offline Database Support</a></li>
+<li><a href="existing_project.html">Introducing Liquibase into an existing project</a></li>
+<li><a href="generate-sql-update-schemas.html">Generating SQL to Update Database Schemas</a></li>
 </ul>
 
 <h2>Internals</h2>

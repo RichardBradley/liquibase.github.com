@@ -1,9 +1,7 @@
-<li><a href="/quickstart.html"><span>Getting Started Home</span></a></li>
-<li><a href="/get-started/database-migration-approaches.html"><span>Database Migration Approaches</span></a></li>
-<li><a href="/get-started/how-lb-works.html"><span>How Liquibase Works</span></a></li>
-<li><a href="/get-started/version_control_info.html"><span>Using Version Control Systems with Liquibase</span></a></li>
-<li><a href="/get-started/lb-core-usage-concepts.html"><span>Liquibase Core Usage Concepts</span></a></li>
-<li><a href="/get-started/lb-setup.html"><span>Liquibase Setup</span></a></li>
-<li><a href="/get-started/lb-setup-tutorial.html"><span>Tutorial: Setting up LB</span></a>
-<li><a href="/get-started/quickstart_lb.html"><span>Tutorial: LB Functions</span></a></li>
-<li><a href="/get-started/quickstart_sql.html"><span>Tutorial: SQL Scripts</span></a></li>
+<li><a href="/get_started/index.html"><span>Getting Started Home</span></a></li>
+<li><a href="/get_started/database-migration-approaches.html"><span>Approaches to Change</span></a></li>
+<li><a href="/get_started/how-lb-works.html"><span>How Liquibase Works</span></a></li>
+<li><a href="/get_started/version_control_info.html"><span>Using Version Control</span></a></li>
+<li><a href="/get_started/lb-core-usage-concepts.html"><span>Core Usage Concepts</span></a></li>
+<li><a href="/get_started/quickstart_lb.html"><span>Migrations: LB Functions</span></a></li>
+<li><a href="/get_started/quickstart_sql.html"><span>Migrations: SQL Scripts</span></a></li>

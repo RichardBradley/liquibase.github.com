@@ -1,6 +1,6 @@
 ---
 layout: side-search
-title: Generate SQL to Update Databases | Liquibase Docs
+title: Generating SQL | Liquibase Docs
 subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---
@@ -188,7 +188,7 @@ GO
 <br>
 
 ## `updateSQL` Command with the Labels Parameter
-The `updateSQL` command allows you to add the `--labels` parameter to determine which changesets in the *changelog* to evaluate based on its label. You can view your labels in your *changelog*.
+The `updateSQL` command allows you to also run a `--labels` parameter to determine which changesets in the *changelog* to evaluate based on its label. You can view your labels in your *changelog*
 
 <details>
 <summary style="font-size:125%;color:blue;">Changelog Example</summary>
@@ -201,7 +201,7 @@ The `updateSQL` command allows you to add the `--labels` parameter to determine 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xmlns:pro="http://www.liquibase.org/xml/ns/pro"
   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd 
-  http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
+  http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
   http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd">
 
 <!-- SETUP: Create tables and function for other objects to use. -->
@@ -378,7 +378,7 @@ UPDATE public.databasechangeloglock SET LOCKED = FALSE, LOCKEDBY = NULL, LOCKGRA
 <br>
 
 ## `futureRollbackSQL` Command
-The `futureRollbackSQL` command generates SQL that reverses the changes that would be applied with the `updateSQL` command.
+The `futureRollbackSQL` command generates SQL that reverses changes you applied while using the `updateSQL` command.
 
 To run the `futureRollbackSQL` command, type the following into your command prompt:
 

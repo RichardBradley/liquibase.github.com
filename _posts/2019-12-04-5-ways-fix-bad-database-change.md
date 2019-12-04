@@ -37,7 +37,7 @@ You start doing your testing and you realize that ten characters is definitely n
 And off you go on your merry way!
 
 ## Include a rollback script with every changeset
-This option requires a lot of discipline as it involves creating a valid rollback for every. single. change. [Documentation on Liquibase rollbacks](http://www.liquibase.org/documentation/rollback.html).
+This option requires a lot of discipline as it involves creating a valid rollback for every. single. change. [Documentation on Liquibase rollbacks](/documentation/rollback.html).
 
 By choosing the rollback script option, you will need to manually validate that the rollback for each changeset properly rolls back the change made by the changeset. Liquibase can/will auto-generate rollbacks for purely additive changes. For example, if you use the ‘create table’ command, Liquibase can generate a ‘drop table’ – but this is ONLY if you are using a Liquibase function and will not work if you’re pointing to a SQL file, using the SQL tag, or using a formatted SQL changelog. The best practice is to author rollbacks for every change (which you can do in any/all changelog formats) if you foresee the need to roll back.
 

@@ -17,22 +17,22 @@ This is the beauty of database migrations and making small changes incrementally
 
 For example, let's say that you just added a new column to a database. Your changeset looks like this:
 
-```
+{% highlight xml %}
 <changeSet author="BobTheDBA" id="add-country-to-address">
 <addColumn tableName="address">
 <column name="country" type="VARCHAR2(10 CHAR)">
 </column>
 </addColumn>
 </changeSet>
-```
+{% endhighlight %}
 
 You start doing your testing and you realize that ten characters is definitely not wide enough. To fix forward, add another changeSet that widens that column to the desired size:
 
-```
+{% highlight xml %}
 <changeSet author="BobTheDBA" id="widen-country-column">
 <modifyDataType columnName="country" newDataType="VARCHAR2(1000 CHAR)" tableName="address"/>
 </changeSet>
-```
+{% endhighlight %}
 
 And off you go on your merry way!
 

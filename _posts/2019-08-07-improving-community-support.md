@@ -15,6 +15,8 @@ This position will be vital to the community, helping to manage and improve the 
 They’ll also be responsible for responding to questions and comments as well as connecting with users to help improve everyone’s experience with Liquibase. 
 If you’re passionate about building open source communities, [I encourage you to apply!](https://www.datical.com/company/careers/?gh_jid=1803669)
 
+> *NOTE* As of December 2019, this position has been filled. <a href="mailto:answers@liquibase.org">Contact the community manager</a> with your questions and suggestions!
+
 ### Strategic Partnerships
 
 In addition to dedicating developers to the project, the Datical team has been investing in strategic partnerships with Cassandra, CockroachDB, Couchbase, and SAP HANA, among others, to increase community contribution. 

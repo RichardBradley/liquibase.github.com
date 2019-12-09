@@ -50,6 +50,11 @@ public class ChangeDocGenerator {
         for (String changeName : new TreeSet<String>(definedChanges.keySet())) {
             content += "<li><a href='" + getChangeDocFileName(changeName) + ".html'><span>" + changeName.replaceAll("([A-Z])", " $1") + "</span></a></li>\n";
         }
+        File includesDir = new File("_includes");
+        if (! includesDir.exists() || ! includesDir.isDirectory()) {
+            System.out.println("The directory '" + includesDir.getAbsolutePath() + "' was not found. Copy the jar file to the root directory of the project and re-run.");
+            System.exit(1);
+        }
         File file = new File("_includes/subnav_documentation_changes.md");
         new FileOutputStream(file).write(content.getBytes());
     }
@@ -129,7 +134,8 @@ public class ChangeDocGenerator {
                     "  });\n" +
                     "</script>\n\n";
 
-            ChangeSet exampleChangeSet = new ChangeSet(exampleChange.getSerializedObjectName() + "-example", "liquibase-docs", false, false, "changelog.xml", null, null, null);
+            ChangeSet exampleChangeSet = new ChangeSet(exampleChange.getSerializedObjectName() + "-example", "liquibase-docs", false, false,
+                    "changelog.xml", null, null, null, null);
             exampleChangeSet.addChange(exampleChange);
 
             content += "# Change: '" + changeMetaData.getName() + "'\n\n";
@@ -296,13 +302,18 @@ public class ChangeDocGenerator {
                 content = content.replaceAll("procedureBody", "procedureText");
             }
 
-            System.out.println(content);
-
             String changename = changeMetaData.getName();
-            File file = new File("documentation/changes/" + getChangeDocFileName(changename) + ".md");
+
+            File documentationDir = new File("documentation");
+            if (! documentationDir.exists() || ! documentationDir.isDirectory()) {
+                System.out.println("The directory '" + documentationDir.getAbsolutePath() + "' was not found. Copy the jar file to the root directory of the project and re-run.");
+                System.exit(1);
+            }
+
+            String pathname = "documentation/changes/" + getChangeDocFileName(changename) + ".md";
+            File file = new File(pathname);
+            System.out.println("Writing content to '" + pathname + "'");
             new FileOutputStream(file).write(content.getBytes());
-
-
         }
     }
 

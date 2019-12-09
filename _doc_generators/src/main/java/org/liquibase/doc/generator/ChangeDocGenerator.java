@@ -204,10 +204,10 @@ public class ChangeDocGenerator {
                     continue;
                 }
 
-                Set<String> requiredForDatabase = param.getRequiredForDatabase();
+                TreeSet<String> requiredForDatabase = new TreeSet<>(param.getRequiredForDatabase());
                 String required = StringUtils.trimToEmpty(StringUtils.join(requiredForDatabase, ", "));
 
-                Set<String> supportsDatabase = param.getSupportedDatabases();
+                TreeSet<String> supportsDatabase = new TreeSet<>(param.getSupportedDatabases());
                 String supports = StringUtils.trimToEmpty(StringUtils.join(supportsDatabase, ", "));
 
                 content += "<tr><td style='vertical-align: top'>" + param.getParameterName() + "</td><td style='vertical-align: top'>" + param.getDescription() + "</td><td style='vertical-align: top'>" + required + "</td><td style='vertical-align:top'>" + supports + "</td><td style='vertical-align: top'>" + StringUtils.trimToEmpty(param.getSince()) + "</td></tr>\n";

@@ -8,7 +8,7 @@ java -jar liquibase-docgenerator-1.0.0.local-SNAPSHOT.jar
 
 # show some info useful to the user
 echo ""
-echo "------- created liquibase docgenerator using the following liquibase version -------"
+echo "------- created docgenerator and docs using the following liquibase version -------"
 grep \<liquibase.version\> _doc_generators/pom.xml
 echo ""
 

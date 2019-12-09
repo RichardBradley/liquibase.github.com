@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change disableCheckConstraint | Liquibase Docs
+title: Change renameTrigger | Liquibase Docs
 ---
 
 <!-- ====================================================== -->
@@ -13,18 +13,19 @@ title: Change disableCheckConstraint | Liquibase Docs
   });
 </script>
 
-# Change: 'disableCheckConstraint'
+# Change: 'renameTrigger'
 
-Disable Check Constraint
+Rename Trigger
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>oracle, postgresql</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>newTriggerName</td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>oldTriggerName</td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table</td><td style='vertical-align: top'>postgresql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -35,9 +36,10 @@ Disable Check Constraint
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs" id="disableCheckConstraint-example">
-    <pro:disableCheckConstraint catalogName="cat"
-            constraintName="const_name"
+<changeSet author="liquibase-docs" id="renameTrigger-example">
+    <pro:renameTrigger catalogName="cat"
+            newTriggerName="A String"
+            oldTriggerName="A String"
             schemaName="public"
             tableName="person"/>
 </changeSet>
@@ -46,12 +48,13 @@ Disable Check Constraint
 <div id='tab-yaml'>
 {% highlight yaml %}
 changeSet:
-  id: disableCheckConstraint-example
+  id: renameTrigger-example
   author: liquibase-docs
   changes:
-  - disableCheckConstraint:
+  - renameTrigger:
       catalogName: cat
-      constraintName: const_name
+      newTriggerName: A String
+      oldTriggerName: A String
       schemaName: public
       tableName: person
 
@@ -61,13 +64,14 @@ changeSet:
 {% highlight json %}
 {
   "changeSet": {
-    "id": "disableCheckConstraint-example",
+    "id": "renameTrigger-example",
     "author": "liquibase-docs",
     "changes": [
       {
-        "disableCheckConstraint": {
+        "renameTrigger": {
           "catalogName": "cat",
-          "constraintName": "const_name",
+          "newTriggerName": "A String",
+          "oldTriggerName": "A String",
           "schemaName": "public",
           "tableName": "person"
         }
@@ -84,7 +88,8 @@ changeSet:
 ## SQL Generated From Above Sample (SQL Server)
 
 {% highlight sql %}
-ALTER TABLE cat.[public].person NOCHECK CONSTRAINT const_name;
+sp_rename '[public].A String',
+ 'A String';
 
 
 {% endhighlight %}
@@ -93,8 +98,8 @@ ALTER TABLE cat.[public].person NOCHECK CONSTRAINT const_name;
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td>Not Supported</td><td><b>Yes</b></td></tr>
@@ -104,7 +109,7 @@ ALTER TABLE cat.[public].person NOCHECK CONSTRAINT const_name;
 <tr><td>MariaDB</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>MySQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>PostgreSQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>SQL Server</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>SQLite</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Sybase</td><td>Not Supported</td><td><b>Yes</b></td></tr>

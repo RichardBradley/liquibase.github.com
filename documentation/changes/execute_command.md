@@ -33,9 +33,7 @@ Executes a system command. Because this refactoring doesn't generate SQL like mo
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="executeCommand-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="executeCommand-example">
     <executeCommand executable="mysqldump" timeout="10s"/>
 </changeSet>
 {% endhighlight %}
@@ -45,7 +43,6 @@ Executes a system command. Because this refactoring doesn't generate SQL like mo
 changeSet:
   id: executeCommand-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - executeCommand:
       executable: mysqldump
@@ -59,7 +56,6 @@ changeSet:
   "changeSet": {
     "id": "executeCommand-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "executeCommand": {

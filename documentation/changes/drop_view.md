@@ -34,9 +34,7 @@ Drops an existing view
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="dropView-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="dropView-example">
     <dropView catalogName="cat"
             schemaName="public"
             viewName="v_person"/>
@@ -48,7 +46,6 @@ Drops an existing view
 changeSet:
   id: dropView-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - dropView:
       catalogName: cat
@@ -63,7 +60,6 @@ changeSet:
   "changeSet": {
     "id": "dropView-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "dropView": {

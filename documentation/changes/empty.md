@@ -31,9 +31,7 @@ empty
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="empty-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="empty-example">
     <empty/>
 </changeSet>
 {% endhighlight %}
@@ -43,7 +41,6 @@ empty
 changeSet:
   id: empty-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - empty: {}
 
@@ -55,7 +52,6 @@ changeSet:
   "changeSet": {
     "id": "empty-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "empty": {

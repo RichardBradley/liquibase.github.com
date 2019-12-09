@@ -36,9 +36,7 @@ Modify data type
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="modifyDataType-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="modifyDataType-example">
     <modifyDataType catalogName="cat"
             columnName="id"
             newDataType="int"
@@ -52,7 +50,6 @@ Modify data type
 changeSet:
   id: modifyDataType-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - modifyDataType:
       catalogName: cat
@@ -69,7 +66,6 @@ changeSet:
   "changeSet": {
     "id": "modifyDataType-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "modifyDataType": {

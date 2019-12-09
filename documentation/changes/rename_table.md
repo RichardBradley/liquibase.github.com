@@ -35,9 +35,7 @@ Renames an existing table
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="renameTable-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="renameTable-example">
     <renameTable catalogName="cat"
             newTableName="employee"
             oldTableName="person"
@@ -50,7 +48,6 @@ Renames an existing table
 changeSet:
   id: renameTable-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - renameTable:
       catalogName: cat
@@ -66,7 +63,6 @@ changeSet:
   "changeSet": {
     "id": "renameTable-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "renameTable": {

@@ -35,10 +35,8 @@ Enable Check Constraint
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="enableCheckConstraint-example"
-        objectQuotingStrategy="LEGACY">
-    <ext:enableCheckConstraint catalogName="cat"
+<changeSet author="liquibase-docs" id="enableCheckConstraint-example">
+    <pro:enableCheckConstraint catalogName="cat"
             constraintName="const_name"
             schemaName="public"
             tableName="person"/>
@@ -50,7 +48,6 @@ Enable Check Constraint
 changeSet:
   id: enableCheckConstraint-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - enableCheckConstraint:
       catalogName: cat
@@ -66,7 +63,6 @@ changeSet:
   "changeSet": {
     "id": "enableCheckConstraint-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "enableCheckConstraint": {
@@ -97,19 +93,20 @@ ALTER TABLE cat.[public].person WITH CHECK CHECK CONSTRAINT const_name;
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td><b>No</b></td></tr>
-<tr><td>Derby</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>Firebird</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>H2</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>HyperSQL</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>INGRES</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>Informix</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>MariaDB</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>MySQL</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>Oracle</td><td><b>Supported</b></td><td><b>No</b></td></tr>
-<tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>No</b></td></tr>
-<tr><td>SQL Server</td><td><b>Supported</b></td><td><b>No</b></td></tr>
-<tr><td>SQLite</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>Sybase</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>Sybase Anywhere</td><td>Not Supported</td><td><b>No</b></td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>Derby</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>Firebird</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>H2</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>HyperSQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>INGRES</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>Informix</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>MariaDB</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>MySQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>PostgreSQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>SQL Server</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>SQLite</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>Sybase</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>Sybase Anywhere</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 </table>

@@ -32,9 +32,7 @@ Applies a tag to the database for future rollback
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="tagDatabase-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="tagDatabase-example">
     <tagDatabase tag="version_1.3"/>
 </changeSet>
 {% endhighlight %}
@@ -44,7 +42,6 @@ Applies a tag to the database for future rollback
 changeSet:
   id: tagDatabase-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - tagDatabase:
       tag: version_1.3
@@ -57,7 +54,6 @@ changeSet:
   "changeSet": {
     "id": "tagDatabase-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "tagDatabase": {

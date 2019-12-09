@@ -44,9 +44,7 @@ Creates an index on an existing column or set of columns.
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="createIndex-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="createIndex-example">
     <createIndex catalogName="cat"
             clustered="true"
             indexName="idx_address"
@@ -64,7 +62,6 @@ Creates an index on an existing column or set of columns.
 changeSet:
   id: createIndex-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - createIndex:
       catalogName: cat
@@ -86,7 +83,6 @@ changeSet:
   "changeSet": {
     "id": "createIndex-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "createIndex": {

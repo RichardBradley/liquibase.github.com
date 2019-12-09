@@ -34,9 +34,7 @@ Drops all foreign key constraints for a table
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="dropAllForeignKeyConstraints-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="dropAllForeignKeyConstraints-example">
     <dropAllForeignKeyConstraints baseTableCatalogName="cat"
             baseTableName="person"
             baseTableSchemaName="public"/>
@@ -48,7 +46,6 @@ Drops all foreign key constraints for a table
 changeSet:
   id: dropAllForeignKeyConstraints-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - dropAllForeignKeyConstraints:
       baseTableCatalogName: cat
@@ -63,7 +60,6 @@ changeSet:
   "changeSet": {
     "id": "dropAllForeignKeyConstraints-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "dropAllForeignKeyConstraints": {

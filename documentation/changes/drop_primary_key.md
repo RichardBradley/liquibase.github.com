@@ -22,7 +22,7 @@ Drops an existing primary key
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of the primary key</td><td style='vertical-align: top'>informix, firebird, sybase</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of the primary key</td><td style='vertical-align: top'>firebird, informix, sybase</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>dropIndex</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table to drop the primary key of</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
@@ -36,9 +36,7 @@ Drops an existing primary key
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="dropPrimaryKey-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="dropPrimaryKey-example">
     <dropPrimaryKey catalogName="cat"
             constraintName="const_name"
             dropIndex="true"
@@ -52,7 +50,6 @@ Drops an existing primary key
 changeSet:
   id: dropPrimaryKey-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - dropPrimaryKey:
       catalogName: cat
@@ -69,7 +66,6 @@ changeSet:
   "changeSet": {
     "id": "dropPrimaryKey-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "dropPrimaryKey": {

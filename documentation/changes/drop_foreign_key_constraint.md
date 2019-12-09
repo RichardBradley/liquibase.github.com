@@ -35,9 +35,7 @@ Drops an existing foreign key
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="dropForeignKeyConstraint-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="dropForeignKeyConstraint-example">
     <dropForeignKeyConstraint baseTableCatalogName="cat"
             baseTableName="person"
             baseTableSchemaName="public"
@@ -50,7 +48,6 @@ Drops an existing foreign key
 changeSet:
   id: dropForeignKeyConstraint-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - dropForeignKeyConstraint:
       baseTableCatalogName: cat
@@ -66,7 +63,6 @@ changeSet:
   "changeSet": {
     "id": "dropForeignKeyConstraint-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "dropForeignKeyConstraint": {

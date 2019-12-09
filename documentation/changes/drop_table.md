@@ -35,9 +35,7 @@ Drops an existing table
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="dropTable-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="dropTable-example">
     <dropTable cascadeConstraints="true"
             catalogName="cat"
             schemaName="public"
@@ -50,7 +48,6 @@ Drops an existing table
 changeSet:
   id: dropTable-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - dropTable:
       cascadeConstraints: true
@@ -66,7 +63,6 @@ changeSet:
   "changeSet": {
     "id": "dropTable-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "dropTable": {

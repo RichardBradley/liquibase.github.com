@@ -35,10 +35,8 @@ Marks Column Unused
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="markUnused-example"
-        objectQuotingStrategy="LEGACY">
-    <appdba:markUnused catalogName="cat"
+<changeSet author="liquibase-docs" id="markUnused-example">
+    <pro:markUnused catalogName="cat"
             columnName="id"
             schemaName="public"
             tableName="person"/>
@@ -50,7 +48,6 @@ Marks Column Unused
 changeSet:
   id: markUnused-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - markUnused:
       catalogName: cat
@@ -66,7 +63,6 @@ changeSet:
   "changeSet": {
     "id": "markUnused-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "markUnused": {
@@ -97,6 +93,7 @@ ALTER TABLE cat.person SET UNUSED COLUMN id;
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
+<tr><td>DB2</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>DB2</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Derby</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Firebird</td><td>Not Supported</td><td>No</td></tr>

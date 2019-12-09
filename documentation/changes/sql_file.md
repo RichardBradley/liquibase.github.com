@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change SQLFile | Liquibase Docs
+title: Change sqlFile | Liquibase Docs
 ---
 
 <!-- ====================================================== -->
@@ -49,9 +49,7 @@ A single line comment starting with &lt;space&gt;--&lt;space&gt; and finishing a
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="sqlFile-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="sqlFile-example">
     <sqlFile dbms="h2, oracle"
             encoding="UTF-8"
             endDelimiter="\nGO"
@@ -67,7 +65,6 @@ A single line comment starting with &lt;space&gt;--&lt;space&gt; and finishing a
 changeSet:
   id: sqlFile-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - sqlFile:
       dbms: h2, oracle
@@ -86,7 +83,6 @@ changeSet:
   "changeSet": {
     "id": "sqlFile-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "sqlFile": {

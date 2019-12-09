@@ -51,9 +51,7 @@ A value of NULL in a cell will be converted to a database NULL rather than the s
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="loadUpdateData-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="loadUpdateData-example">
     <loadUpdateData catalogName="cat"
             commentLineStartsWith="A String"
             encoding="UTF-8"
@@ -76,7 +74,6 @@ A value of NULL in a cell will be converted to a database NULL rather than the s
 changeSet:
   id: loadUpdateData-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - loadUpdateData:
       catalogName: cat
@@ -104,7 +101,6 @@ changeSet:
   "changeSet": {
     "id": "loadUpdateData-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "loadUpdateData": {

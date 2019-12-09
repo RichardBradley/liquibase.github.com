@@ -21,7 +21,7 @@ Drops an existing procedure
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>asany, db2, db2z, derby, firebird, h2, hsqldb, informix, ingres, mariadb, mysql, oracle, postgresql, sqlite, sybase</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>procedureName</td><td style='vertical-align: top'>Name of the stored procedure to drop</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
@@ -34,9 +34,7 @@ Drops an existing procedure
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="dropProcedure-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="dropProcedure-example">
     <dropProcedure catalogName="cat"
             procedureName="new_customer"
             schemaName="public"/>
@@ -48,7 +46,6 @@ Drops an existing procedure
 changeSet:
   id: dropProcedure-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - dropProcedure:
       catalogName: cat
@@ -63,7 +60,6 @@ changeSet:
   "changeSet": {
     "id": "dropProcedure-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "dropProcedure": {

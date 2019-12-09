@@ -33,9 +33,7 @@ Logs a message and continues execution.
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="output-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="output-example">
     <output target="STDERR">Make sure you feed the cat</output>
 </changeSet>
 {% endhighlight %}
@@ -45,7 +43,6 @@ Logs a message and continues execution.
 changeSet:
   id: output-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - output:
       message: Make sure you feed the cat
@@ -59,7 +56,6 @@ changeSet:
   "changeSet": {
     "id": "output-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "output": {

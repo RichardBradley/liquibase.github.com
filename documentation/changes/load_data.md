@@ -56,9 +56,7 @@ If UUID type is used UUID value is stored as string and NULL in cell is supporte
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="loadData-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="loadData-example">
     <loadData catalogName="cat"
             commentLineStartsWith="A String"
             encoding="UTF-8"
@@ -79,7 +77,6 @@ If UUID type is used UUID value is stored as string and NULL in cell is supporte
 changeSet:
   id: loadData-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - loadData:
       catalogName: cat
@@ -105,7 +102,6 @@ changeSet:
   "changeSet": {
     "id": "loadData-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "loadData": {

@@ -40,9 +40,7 @@ Adds a new column to an existing table
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="addColumn-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="addColumn-example">
     <addColumn catalogName="cat"
             schemaName="public"
             tableName="person">
@@ -56,7 +54,6 @@ Adds a new column to an existing table
 changeSet:
   id: addColumn-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - addColumn:
       catalogName: cat
@@ -75,7 +72,6 @@ changeSet:
   "changeSet": {
     "id": "addColumn-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "addColumn": {

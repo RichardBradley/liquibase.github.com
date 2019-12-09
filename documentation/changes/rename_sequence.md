@@ -35,9 +35,7 @@ Renames an existing sequence
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="renameSequence-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="renameSequence-example">
     <renameSequence catalogName="cat"
             newSequenceName="seq_id"
             oldSequenceName="seq_id"
@@ -50,7 +48,6 @@ Renames an existing sequence
 changeSet:
   id: renameSequence-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - renameSequence:
       catalogName: cat
@@ -66,7 +63,6 @@ changeSet:
   "changeSet": {
     "id": "renameSequence-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "renameSequence": {

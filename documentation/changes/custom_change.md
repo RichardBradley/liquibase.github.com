@@ -37,9 +37,7 @@ For a sample custom change class, see liquibase.change.custom.ExampleCustomSqlCh
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="customChange-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="customChange-example">
     <customChange/>
 </changeSet>
 {% endhighlight %}
@@ -49,7 +47,6 @@ For a sample custom change class, see liquibase.change.custom.ExampleCustomSqlCh
 changeSet:
   id: customChange-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - customChange: {}
 
@@ -61,7 +58,6 @@ changeSet:
   "changeSet": {
     "id": "customChange-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "customChange": {

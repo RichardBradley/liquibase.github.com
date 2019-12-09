@@ -34,9 +34,7 @@ Drop an existing sequence
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="dropSequence-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="dropSequence-example">
     <dropSequence catalogName="cat"
             schemaName="public"
             sequenceName="seq_id"/>
@@ -48,7 +46,6 @@ Drop an existing sequence
 changeSet:
   id: dropSequence-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - dropSequence:
       catalogName: cat
@@ -63,7 +60,6 @@ changeSet:
   "changeSet": {
     "id": "dropSequence-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "dropSequence": {

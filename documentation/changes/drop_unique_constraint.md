@@ -36,9 +36,7 @@ Drops an existing unique constraint
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="dropUniqueConstraint-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="dropUniqueConstraint-example">
     <dropUniqueConstraint catalogName="cat"
             constraintName="const_name"
             schemaName="public"
@@ -52,7 +50,6 @@ Drops an existing unique constraint
 changeSet:
   id: dropUniqueConstraint-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - dropUniqueConstraint:
       catalogName: cat
@@ -69,7 +66,6 @@ changeSet:
   "changeSet": {
     "id": "dropUniqueConstraint-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "dropUniqueConstraint": {

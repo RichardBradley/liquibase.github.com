@@ -27,7 +27,7 @@ Create a new database view
 <tr><td style='vertical-align: top'>path</td><td style='vertical-align: top'>Path to file containing view definition</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.6</td></tr>
 <tr><td style='vertical-align: top'>relativeToChangelogFile</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>remarks</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>replaceIfExists</td><td style='vertical-align: top'>Use 'create or replace' syntax</td><td style='vertical-align: top'></td><td style='vertical-align:top'>mariadb, firebird, sybase, oracle, sqlite, postgresql, hsqldb, ingres, db2, h2, mysql, mssql</td><td style='vertical-align: top'>1.5</td></tr>
+<tr><td style='vertical-align: top'>replaceIfExists</td><td style='vertical-align: top'>Use 'create or replace' syntax</td><td style='vertical-align: top'></td><td style='vertical-align:top'>db2, firebird, h2, hsqldb, ingres, mariadb, mssql, mysql, oracle, postgresql, sqlite, sybase</td><td style='vertical-align: top'>1.5</td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>selectQuery</td><td style='vertical-align: top'>SQL for generating the view</td><td style='vertical-align: top'>informix</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>viewName</td><td style='vertical-align: top'>Name of the view to create</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
@@ -41,9 +41,7 @@ Create a new database view
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="createView-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="createView-example">
     <createView catalogName="cat"
             encoding="UTF-8"
             fullDefinition="true"
@@ -61,7 +59,6 @@ Create a new database view
 changeSet:
   id: createView-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - createView:
       catalogName: cat
@@ -83,7 +80,6 @@ changeSet:
   "changeSet": {
     "id": "createView-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "createView": {

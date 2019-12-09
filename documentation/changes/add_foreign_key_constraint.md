@@ -26,9 +26,9 @@ Adds a foreign key constraint to an existing column
 <tr><td style='vertical-align: top'>baseTableName</td><td style='vertical-align: top'>Name of the table containing the column to constrain</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>baseTableSchemaName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of the new foreign key constraint</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>deferrable</td><td style='vertical-align: top'>Is the foreign key deferrable</td><td style='vertical-align: top'></td><td style='vertical-align:top'>oracle, sqlite, postgresql</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>initiallyDeferred</td><td style='vertical-align: top'>Is the foreign key initially deferred</td><td style='vertical-align: top'></td><td style='vertical-align:top'>oracle, sqlite, postgresql</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>onDelete</td><td style='vertical-align: top'>ON DELETE functionality. Possible values: 'CASCADE', 'SET NULL', 'SET DEFAULT', 'RESTRICT', 'NO ACTION'</td><td style='vertical-align: top'></td><td style='vertical-align:top'>firebird, oracle, hsqldb, db2z, h2, informix, mariadb, postgresql, ingres, db2, asany, derby, mysql, mssql</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>deferrable</td><td style='vertical-align: top'>Is the foreign key deferrable</td><td style='vertical-align: top'></td><td style='vertical-align:top'>oracle, postgresql, sqlite</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>initiallyDeferred</td><td style='vertical-align: top'>Is the foreign key initially deferred</td><td style='vertical-align: top'></td><td style='vertical-align:top'>oracle, postgresql, sqlite</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>onDelete</td><td style='vertical-align: top'>ON DELETE functionality. Possible values: 'CASCADE', 'SET NULL', 'SET DEFAULT', 'RESTRICT', 'NO ACTION'</td><td style='vertical-align: top'></td><td style='vertical-align:top'>asany, db2, db2z, derby, firebird, h2, hsqldb, informix, ingres, mariadb, mssql, mysql, oracle, postgresql</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>onUpdate</td><td style='vertical-align: top'>ON UPDATE functionality. Possible values: 'CASCADE', 'SET NULL', 'SET DEFAULT', 'RESTRICT', 'NO ACTION'</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>referencedColumnNames</td><td style='vertical-align: top'>Column(s) the foreign key points to. Comma-separate if multiple</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>referencedTableCatalogName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
@@ -46,9 +46,7 @@ Adds a foreign key constraint to an existing column
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="addForeignKeyConstraint-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="addForeignKeyConstraint-example">
     <addForeignKeyConstraint baseColumnNames="person_id"
             baseTableCatalogName="cat"
             baseTableName="address"
@@ -71,7 +69,6 @@ Adds a foreign key constraint to an existing column
 changeSet:
   id: addForeignKeyConstraint-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - addForeignKeyConstraint:
       baseColumnNames: person_id
@@ -97,7 +94,6 @@ changeSet:
   "changeSet": {
     "id": "addForeignKeyConstraint-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "addForeignKeyConstraint": {

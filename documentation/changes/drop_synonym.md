@@ -23,7 +23,7 @@ Drops a synonym
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>objectType</td><td style='vertical-align: top'></td><td style='vertical-align: top'>db2</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>private</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>synonymCatalogName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>synonymCatalogName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>db2, db2z, oracle</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>synonymName</td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>synonymSchemaName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
@@ -36,10 +36,8 @@ Drops a synonym
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="dropSynonym-example"
-        objectQuotingStrategy="LEGACY">
-    <appdba:dropSynonym objectType="A String"
+<changeSet author="liquibase-docs" id="dropSynonym-example">
+    <pro:dropSynonym objectType="A String"
             private="true"
             synonymName="A String"/>
 </changeSet>
@@ -50,7 +48,6 @@ Drops a synonym
 changeSet:
   id: dropSynonym-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - dropSynonym:
       objectType: A String
@@ -65,7 +62,6 @@ changeSet:
   "changeSet": {
     "id": "dropSynonym-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "dropSynonym": {
@@ -96,6 +92,7 @@ DROP SYNONYM [A String];
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Firebird</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>H2</td><td>Not Supported</td><td>No</td></tr>
@@ -105,7 +102,7 @@ DROP SYNONYM [A String];
 <tr><td>MariaDB</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>MySQL</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>PostgreSQL</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>SQL Server</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>SQLite</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Sybase</td><td>Not Supported</td><td>No</td></tr>

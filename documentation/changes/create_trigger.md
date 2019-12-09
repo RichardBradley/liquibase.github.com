@@ -21,12 +21,13 @@ Creates a stored trigger
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>asany, db2, db2z, derby, firebird, h2, hsqldb, informix, ingres, mariadb, mysql, oracle, postgresql, sqlite, sybase</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>comments</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>dbms</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.1</td></tr>
 <tr><td style='vertical-align: top'>disabled</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>encoding</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>path</td><td style='vertical-align: top'>File containing the procedure text. Either this attribute or a nested procedure text is required.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>procedureBody</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>procedureText</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>relativeToChangelogFile</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>replaceIfExists</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
@@ -44,10 +45,9 @@ Creates a stored trigger
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="createTrigger-example"
-        objectQuotingStrategy="LEGACY">
-    <ext:createTrigger catalogName="cat"
+<changeSet author="liquibase-docs" id="createTrigger-example">
+    <pro:createTrigger catalogName="cat"
+            comments="A String"
             dbms="h2, oracle"
             disabled="true"
             encoding="UTF-8"
@@ -57,7 +57,7 @@ Creates a stored trigger
             schemaName="public"
             scope="A String"
             tableName="person"
-            triggerName="A String">A String</ext:createTrigger>
+            triggerName="A String">A String</pro:createTrigger>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -66,15 +66,15 @@ Creates a stored trigger
 changeSet:
   id: createTrigger-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - createTrigger:
       catalogName: cat
+      comments: A String
       dbms: h2, oracle
       disabled: true
       encoding: UTF-8
       path: com/example/my-logic.sql
-      procedureBody: |-
+      procedureText: |-
         CREATE OR REPLACE PROCEDURE testHello
             IS
             BEGIN
@@ -96,16 +96,16 @@ changeSet:
   "changeSet": {
     "id": "createTrigger-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "createTrigger": {
           "catalogName": "cat",
+          "comments": "A String",
           "dbms": "h2, oracle",
           "disabled": true,
           "encoding": "UTF-8",
           "path": "com/example/my-logic.sql",
-          "procedureBody": "CREATE OR REPLACE PROCEDURE testHello\n    IS\n    BEGIN\n      DBMS_OUTPUT.PUT_LINE('Hello From The Database!');\n    END;",
+          "procedureText": "CREATE OR REPLACE PROCEDURE testHello\n    IS\n    BEGIN\n      DBMS_OUTPUT.PUT_LINE('Hello From The Database!');\n    END;",
           "relativeToChangelogFile": true,
           "replaceIfExists": false,
           "schemaName": "public",
@@ -129,18 +129,19 @@ changeSet:
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>Derby</td><td>Not Supported</td><td>No</td></tr>
-<tr><td>Firebird</td><td>Not Supported</td><td>No</td></tr>
-<tr><td>H2</td><td>Not Supported</td><td>No</td></tr>
-<tr><td>HyperSQL</td><td>Not Supported</td><td>No</td></tr>
-<tr><td>INGRES</td><td>Not Supported</td><td>No</td></tr>
-<tr><td>Informix</td><td>Not Supported</td><td>No</td></tr>
-<tr><td>MariaDB</td><td>Not Supported</td><td>No</td></tr>
-<tr><td>MySQL</td><td>Not Supported</td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>HyperSQL</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>INGRES</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>Informix</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>MariaDB</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>MySQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Oracle</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>PostgreSQL</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>SQL Server</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>SQLite</td><td>Not Supported</td><td>No</td></tr>
-<tr><td>Sybase</td><td>Not Supported</td><td>No</td></tr>
-<tr><td>Sybase Anywhere</td><td>Not Supported</td><td>No</td></tr>
+<tr><td>SQLite</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>Sybase</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>Sybase Anywhere</td><td><b>Supported</b></td><td>No</td></tr>
 </table>

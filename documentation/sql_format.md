@@ -44,7 +44,7 @@ The following attributes may be provided on each changeset:
 <tr><td>failOnError</td><td>Should the migration fail if an error occurs while executing the changeSet? </td></tr>
 <tr><td>dbms</td><td>The type of a database which that changeSet is to be used for. When the migration step is running, it checks the database type against this 
   attribute. Valid database type names are listed on the <a href="../databases.html">supported databases page</a>. It is possible to list multiple databases separated by commas. 
-  You can also specify that a changeset is <b>NOT</b> applicable to a particular database type by prefixing with <pre>!</pre>. The keywords <pre>all</pre> and <pre>none</pre> are 
+  You can also specify that a changeset is <b>NOT</b> applicable to a particular database type by prefixing with <code>!</code>. The keywords <code>all</code> and <code>none</code> are 
   also available.</td></tr>
 <tr><td>logicalFilePath</td><td>Sets a logical file path in databasechangelog table instead of physical file location of sql where the liquibase executed.</td></tr>
 </table>

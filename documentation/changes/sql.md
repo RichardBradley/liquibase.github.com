@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change SQL | Liquibase Docs
+title: Change sql | Liquibase Docs
 ---
 
 <!-- ====================================================== -->
@@ -47,9 +47,7 @@ Note: By default it will attempt to split statements on a ';' or 'go' at the end
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="sql-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="sql-example">
     <sql dbms="h2, oracle"
             endDelimiter="\nGO"
             splitStatements="true"
@@ -62,7 +60,6 @@ Note: By default it will attempt to split statements on a ';' or 'go' at the end
 changeSet:
   id: sql-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - sql:
       comment: What about Bob?
@@ -80,7 +77,6 @@ changeSet:
   "changeSet": {
     "id": "sql-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "sql": {

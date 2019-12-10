@@ -26,7 +26,7 @@ Creates a lookup table containing values stored in a column and creates a foreig
 <tr><td style='vertical-align: top'>existingTableCatalogName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>existingTableName</td><td style='vertical-align: top'>Name of the table containing the data to extract</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>existingTableSchemaName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>newColumnDataType</td><td style='vertical-align: top'>Data type of the new table column</td><td style='vertical-align: top'>informix, mariadb, mysql, mssql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>newColumnDataType</td><td style='vertical-align: top'>Data type of the new table column</td><td style='vertical-align: top'>informix, mariadb, mssql, mysql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>newColumnName</td><td style='vertical-align: top'>Name of the column in the new table to create</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>newTableCatalogName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>newTableName</td><td style='vertical-align: top'>Name of lookup table to create</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
@@ -41,9 +41,7 @@ Creates a lookup table containing values stored in a column and creates a foreig
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="addLookupTable-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="addLookupTable-example">
     <addLookupTable constraintName="fk_address_state"
             existingColumnName="state"
             existingTableName="address"
@@ -60,7 +58,6 @@ Creates a lookup table containing values stored in a column and creates a foreig
 changeSet:
   id: addLookupTable-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - addLookupTable:
       constraintName: fk_address_state
@@ -80,7 +77,6 @@ changeSet:
   "changeSet": {
     "id": "addLookupTable-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "addLookupTable": {

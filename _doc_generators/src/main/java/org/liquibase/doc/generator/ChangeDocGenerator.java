@@ -6,7 +6,6 @@ import liquibase.change.core.CreateProcedureChange;
 import liquibase.change.core.CreateViewChange;
 import liquibase.change.core.LoadDataChange;
 import liquibase.change.core.LoadDataColumnConfig;
-import liquibase.change.core.OutputChange;
 import liquibase.change.core.SQLFileChange;
 import liquibase.changelog.ChangeSet;
 import liquibase.database.Database;
@@ -22,15 +21,25 @@ import liquibase.sql.Sql;
 import liquibase.sqlgenerator.SqlGeneratorFactory;
 import liquibase.statement.SqlStatement;
 import liquibase.util.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.util.*;
 
+import static java.util.Map.Entry.comparingByKey;
+import static java.util.stream.Collectors.toMap;
+
 public class ChangeDocGenerator {
 
+    private static final Logger logger = LoggerFactory.getLogger(ChangeDocGenerator.class);
+
     public static void main(String[] args) throws IOException {
+        logger.info("Generating documentation for all changes in included jar");
         Map<String, SortedSet<Class<? extends Change>>> definedChanges = ChangeFactory.getInstance().getRegistry();
-        List<Database> databases = DatabaseFactory.getInstance().getImplementedDatabases();
+        TreeMap<String, SortedSet<Class<? extends Change>>> sortedChanges = new TreeMap<>(definedChanges);
+
+        List <Database> databases = DatabaseFactory.getInstance().getImplementedDatabases();
         Collections.sort(databases, new Comparator<Database>() {
             @Override
             public int compare(Database o1, Database o2) {
@@ -38,20 +47,63 @@ public class ChangeDocGenerator {
             }
         });
 
-        writeChangeNav(definedChanges);
-        writeChangePages(definedChanges, databases);
+        writeChangeNav(sortedChanges);
+        writeChangePages(sortedChanges, databases);
     }
 
     private static void writeChangeNav(Map<String, SortedSet<Class<? extends Change>>> definedChanges) throws IOException {
+        // Ensure the directory exists so we know we are running in the right place.
+        File includesDir = new File("_includes");
+        if (! includesDir.exists() || ! includesDir.isDirectory()) {
+            logger.error("The directory '" + includesDir.getAbsolutePath() + "' was not found. Copy the jar file to the root directory of the project and re-run.");
+            System.exit(1);
+        }
+
         String content = "";
         content = addGeneratedHeader(content);
-        content += "{% include subnav_documentation.md %}\n\n<hr>\n<h3 style='color: #747373'>Bundled Changes</h3>\n\n";
+        content += "<li><a href=\"/documentation/index.html\"><span>Documentation Home</span></a></li>\n\n<hr>\n";
 
-        for (String changeName : new TreeSet<String>(definedChanges.keySet())) {
-            content += "<li><a href='" + getChangeDocFileName(changeName) + ".html'><span>" + changeName.replaceAll("([A-Z])", " $1") + "</span></a></li>\n";
-        }
+        // Write out the Pro changes
+        content += "<h3 style='color: #fd8c00'>Liquibase Pro Changes</h3>\n";
+        content += addChangesToContent(definedChanges, true);
+
+        // Write out the Core changes
+        content += "\n<hr>\n";
+        content += "<h3 style='color: #747373'>Liquibase Changes</h3>\n\n";
+        content += addChangesToContent(definedChanges, false);
+
+        // Write out the file
         File file = new File("_includes/subnav_documentation_changes.md");
         new FileOutputStream(file).write(content.getBytes());
+    }
+
+    private static String addChangesToContent(Map<String, SortedSet<Class<? extends Change>>> definedChanges, boolean onlyProClasses) {
+        StringBuilder content = new StringBuilder();
+        for (Map.Entry mapEntry : definedChanges.entrySet()) {
+            String changeName = (String)mapEntry.getKey();
+            SortedSet<Class<? extends Change>> changeClasses = (SortedSet<Class<? extends Change>>) mapEntry.getValue();
+            for (Class change:changeClasses) {
+                String packageName = change.getName();
+                String navEntry = "<li><a href='" + getChangeDocFileName(changeName) + ".html'><span>" + changeName.replaceAll("([A-Z])", " $1") + "</span></a></li>\n";
+                if (onlyProClasses) {
+                    if (isProClass(packageName)) {
+                        logger.info ("adding Pro subnav entry for {}",change.getSimpleName());
+                        content.append (navEntry);
+                    }
+                } else {
+                    if (! isProClass(packageName)) {
+                        logger.info ("adding Core subnav entry for {}",change.getSimpleName());
+                        content.append(navEntry);
+                    }
+                }
+            }
+        }
+        return content.toString();
+    }
+
+    // return true if the change is in one of the "pro" packages, false if part of core.
+    private static boolean isProClass(String packageName) {
+        return packageName.startsWith("com.datical");
     }
 
     private static void writeChangePages(Map<String, SortedSet<Class<? extends Change>>> definedChanges, List<Database> databases) throws IOException {
@@ -64,8 +116,6 @@ public class ChangeDocGenerator {
 
 
         for (String changeName : definedChanges.keySet()) {
-            System.out.println("--------------------");
-
             Change exampleChange = ChangeFactory.getInstance().create(changeName);
             ChangeMetaData changeMetaData = ChangeFactory.getInstance().getChangeMetaData(exampleChange);
 
@@ -99,7 +149,7 @@ public class ChangeDocGenerator {
                         cols.add(columnConfig);
                         param.setValue(exampleChange, cols);
                     } else {
-                        System.out.println("Unknown data type: " + param.getDataType());
+                        logger.warn("Unknown data type: " + param.getDataType());
                     }
                 } else {
                     Object exampleValue = param.getExampleValue(defaultExampleDatabase);
@@ -118,7 +168,7 @@ public class ChangeDocGenerator {
 
             String content = "---\n" +
                     "layout: default\n" +
-                    "title: Change " + changeMetaData.getName() + "\n" +
+                    "title: Change " + changeMetaData.getName() + " | Liquibase Docs\n" +
                     "---\n\n";
 
             content = addGeneratedHeader(content);
@@ -129,7 +179,8 @@ public class ChangeDocGenerator {
                     "  });\n" +
                     "</script>\n\n";
 
-            ChangeSet exampleChangeSet = new ChangeSet(exampleChange.getSerializedObjectName() + "-example", "liquibase-docs", false, false, "changelog.xml", null, null, null);
+            ChangeSet exampleChangeSet = new ChangeSet(exampleChange.getSerializedObjectName() + "-example", "liquibase-docs", false, false,
+                    "changelog.xml", null, null, null, null);
             exampleChangeSet.addChange(exampleChange);
 
             content += "# Change: '" + changeMetaData.getName() + "'\n\n";
@@ -153,10 +204,10 @@ public class ChangeDocGenerator {
                     continue;
                 }
 
-                Set<String> requiredForDatabase = param.getRequiredForDatabase();
+                TreeSet<String> requiredForDatabase = new TreeSet<>(param.getRequiredForDatabase());
                 String required = StringUtils.trimToEmpty(StringUtils.join(requiredForDatabase, ", "));
 
-                Set<String> supportsDatabase = param.getSupportedDatabases();
+                TreeSet<String> supportsDatabase = new TreeSet<>(param.getSupportedDatabases());
                 String supports = StringUtils.trimToEmpty(StringUtils.join(supportsDatabase, ", "));
 
                 content += "<tr><td style='vertical-align: top'>" + param.getParameterName() + "</td><td style='vertical-align: top'>" + param.getDescription() + "</td><td style='vertical-align: top'>" + required + "</td><td style='vertical-align:top'>" + supports + "</td><td style='vertical-align: top'>" + StringUtils.trimToEmpty(param.getSince()) + "</td></tr>\n";
@@ -296,13 +347,18 @@ public class ChangeDocGenerator {
                 content = content.replaceAll("procedureBody", "procedureText");
             }
 
-            System.out.println(content);
-
             String changename = changeMetaData.getName();
-            File file = new File("documentation/changes/" + getChangeDocFileName(changename) + ".md");
+
+            File documentationDir = new File("documentation");
+            if (! documentationDir.exists() || ! documentationDir.isDirectory()) {
+                logger.error("The directory '" + documentationDir.getAbsolutePath() + "' was not found. Copy the jar file to the root directory of the project and re-run.");
+                System.exit(1);
+            }
+
+            String pathname = "documentation/changes/" + getChangeDocFileName(changename) + ".md";
+            File file = new File(pathname);
+            logger.info("Writing content to '" + pathname + "'");
             new FileOutputStream(file).write(content.getBytes());
-
-
         }
     }
 

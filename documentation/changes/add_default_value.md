@@ -44,9 +44,7 @@ One of defaultValue, defaultValueNumeric, defaultValueBoolean or defaultValueDat
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="addDefaultValue-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="addDefaultValue-example">
     <addDefaultValue catalogName="cat"
             columnDataType="varchar(50)"
             columnName="fileName"
@@ -67,7 +65,6 @@ One of defaultValue, defaultValueNumeric, defaultValueBoolean or defaultValueDat
 changeSet:
   id: addDefaultValue-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - addDefaultValue:
       catalogName: cat
@@ -91,7 +88,6 @@ changeSet:
   "changeSet": {
     "id": "addDefaultValue-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "addDefaultValue": {

@@ -45,9 +45,7 @@ Adds a unique constrant to an existing column or set of columns.
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="addUniqueConstraint-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="addUniqueConstraint-example">
     <addUniqueConstraint catalogName="cat"
             clustered="true"
             columnNames="id, name"
@@ -68,7 +66,6 @@ Adds a unique constrant to an existing column or set of columns.
 changeSet:
   id: addUniqueConstraint-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - addUniqueConstraint:
       catalogName: cat
@@ -92,7 +89,6 @@ changeSet:
   "changeSet": {
     "id": "addUniqueConstraint-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "addUniqueConstraint": {

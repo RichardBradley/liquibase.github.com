@@ -36,9 +36,7 @@ Removes the database default value for a column
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="dropDefaultValue-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="dropDefaultValue-example">
     <dropDefaultValue catalogName="cat"
             columnDataType="int"
             columnName="id"
@@ -52,7 +50,6 @@ Removes the database default value for a column
 changeSet:
   id: dropDefaultValue-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - dropDefaultValue:
       catalogName: cat
@@ -69,7 +66,6 @@ changeSet:
   "changeSet": {
     "id": "dropDefaultValue-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "dropDefaultValue": {

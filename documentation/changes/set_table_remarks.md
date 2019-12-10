@@ -35,9 +35,7 @@ Set remarks on a table
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="setTableRemarks-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="setTableRemarks-example">
     <setTableRemarks catalogName="cat"
             remarks="A String"
             schemaName="public"
@@ -50,7 +48,6 @@ Set remarks on a table
 changeSet:
   id: setTableRemarks-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - setTableRemarks:
       catalogName: cat
@@ -66,7 +63,6 @@ changeSet:
   "changeSet": {
     "id": "setTableRemarks-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "setTableRemarks": {

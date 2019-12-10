@@ -38,9 +38,7 @@ Renames an existing column
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="renameColumn-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="renameColumn-example">
     <renameColumn catalogName="cat"
             columnDataType="int"
             newColumnName="full_name"
@@ -56,7 +54,6 @@ Renames an existing column
 changeSet:
   id: renameColumn-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - renameColumn:
       catalogName: cat
@@ -75,7 +72,6 @@ changeSet:
   "changeSet": {
     "id": "renameColumn-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "renameColumn": {

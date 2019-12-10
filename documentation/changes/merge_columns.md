@@ -39,9 +39,7 @@ Concatenates the values in two columns, joins them by with string, and stores th
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="mergeColumns-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="mergeColumns-example">
     <mergeColumns catalogName="cat"
             column1Name="first_name"
             column2Name="last_name"
@@ -58,7 +56,6 @@ Concatenates the values in two columns, joins them by with string, and stores th
 changeSet:
   id: mergeColumns-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - mergeColumns:
       catalogName: cat
@@ -78,7 +75,6 @@ changeSet:
   "changeSet": {
     "id": "mergeColumns-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "mergeColumns": {

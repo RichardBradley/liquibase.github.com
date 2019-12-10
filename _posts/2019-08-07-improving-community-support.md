@@ -6,7 +6,7 @@ title: Improving Community Support
 
 It’s an exciting time for the Liquibase community. The latest release, 3.7, has over 350 commits from the community and from Datical. 
 Datical has dedicated several engineers to the Liquibase open source project. 
-Most recently, these efforts helped push the [Liquibase 3.7 release](https://www.liquibase.org/2019/07/liquibase-3-7-0-released.html) with several important new features including improved support for PostgreSQL, DB2, MariaDB, MS SqlServer, Ingres, and Firebase, and much more. 
+Most recently, these efforts helped push the [Liquibase 3.7 release](/2019/07/liquibase-3-7-0-released.html) with several important new features including improved support for PostgreSQL, DB2, MariaDB, MS SqlServer, Ingres, and Firebase, and much more. 
 
 ### Liquibase Community Manager
 

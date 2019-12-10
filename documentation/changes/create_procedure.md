@@ -43,9 +43,7 @@ Often times it is best to use the CREATE OR REPLACE syntax along with setting ru
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="createProcedure-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="createProcedure-example">
     <createProcedure catalogName="cat"
             comments="A String"
             dbms="h2, oracle"
@@ -67,7 +65,6 @@ Often times it is best to use the CREATE OR REPLACE syntax along with setting ru
 changeSet:
   id: createProcedure-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - createProcedure:
       catalogName: cat
@@ -94,7 +91,6 @@ changeSet:
   "changeSet": {
     "id": "createProcedure-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "createProcedure": {

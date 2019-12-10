@@ -32,9 +32,7 @@ Stops Liquibase execution with a message. Mainly useful for debugging and steppi
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="stop-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="stop-example">
     <stop message="What just happened???"/>
 </changeSet>
 {% endhighlight %}
@@ -44,7 +42,6 @@ Stops Liquibase execution with a message. Mainly useful for debugging and steppi
 changeSet:
   id: stop-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - stop:
       message: What just happened???
@@ -57,7 +54,6 @@ changeSet:
   "changeSet": {
     "id": "stop-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "stop": {

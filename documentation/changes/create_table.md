@@ -42,9 +42,7 @@ Create Table
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="createTable-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="createTable-example">
     <createTable catalogName="cat"
             remarks="A String"
             schemaName="public"
@@ -60,7 +58,6 @@ Create Table
 changeSet:
   id: createTable-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - createTable:
       catalogName: cat
@@ -81,7 +78,6 @@ changeSet:
   "changeSet": {
     "id": "createTable-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "createTable": {

@@ -41,9 +41,7 @@ Updates data in an existing table
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="update-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="update-example">
     <update catalogName="cat"
             schemaName="public"
             tableName="person">
@@ -58,7 +56,6 @@ Updates data in an existing table
 changeSet:
   id: update-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - update:
       catalogName: cat
@@ -78,7 +75,6 @@ changeSet:
   "changeSet": {
     "id": "update-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "update": {

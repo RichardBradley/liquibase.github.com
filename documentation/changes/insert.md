@@ -41,9 +41,7 @@ Inserts data into an existing table
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="insert-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="insert-example">
     <insert catalogName="cat"
             dbms="h2, oracle"
             schemaName="public"
@@ -58,7 +56,6 @@ Inserts data into an existing table
 changeSet:
   id: insert-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - insert:
       catalogName: cat
@@ -78,7 +75,6 @@ changeSet:
   "changeSet": {
     "id": "insert-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "insert": {

@@ -22,7 +22,7 @@ Makes a column nullable
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>columnDataType</td><td style='vertical-align: top'>Current data type of the column</td><td style='vertical-align: top'>informix, mariadb, mysql, mssql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>columnDataType</td><td style='vertical-align: top'>Current data type of the column</td><td style='vertical-align: top'>informix, mariadb, mssql, mysql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>columnName</td><td style='vertical-align: top'>Name of the column to drop the constraint from</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table containing that the column to drop the constraint from</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
@@ -36,9 +36,7 @@ Makes a column nullable
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="dropNotNullConstraint-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="dropNotNullConstraint-example">
     <dropNotNullConstraint catalogName="cat"
             columnDataType="int"
             columnName="id"
@@ -52,7 +50,6 @@ Makes a column nullable
 changeSet:
   id: dropNotNullConstraint-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - dropNotNullConstraint:
       catalogName: cat
@@ -69,7 +66,6 @@ changeSet:
   "changeSet": {
     "id": "dropNotNullConstraint-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "dropNotNullConstraint": {

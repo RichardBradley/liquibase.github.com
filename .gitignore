@@ -24,3 +24,7 @@ webserver.bat
 .project
 bin
 build
+
+# doc generator binary and log
+liquibase-docgenerator-*.jar
+liquibase-docgenerator.log

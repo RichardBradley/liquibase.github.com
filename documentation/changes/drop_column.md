@@ -41,9 +41,7 @@ Drop existing column(s)
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="dropColumn-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="dropColumn-example">
     <dropColumn catalogName="cat"
             columnName="id"
             schemaName="public"
@@ -58,7 +56,6 @@ Drop existing column(s)
 changeSet:
   id: dropColumn-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - dropColumn:
       catalogName: cat
@@ -78,7 +75,6 @@ changeSet:
   "changeSet": {
     "id": "dropColumn-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "dropColumn": {

@@ -21,7 +21,7 @@ Enable Trigger
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>oracle, postgresql</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>scope</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
@@ -36,10 +36,8 @@ Enable Trigger
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="enableTrigger-example"
-        objectQuotingStrategy="LEGACY">
-    <ext:enableTrigger catalogName="cat"
+<changeSet author="liquibase-docs" id="enableTrigger-example">
+    <pro:enableTrigger catalogName="cat"
             schemaName="public"
             scope="A String"
             tableName="person"
@@ -52,7 +50,6 @@ Enable Trigger
 changeSet:
   id: enableTrigger-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - enableTrigger:
       catalogName: cat
@@ -69,7 +66,6 @@ changeSet:
   "changeSet": {
     "id": "enableTrigger-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "enableTrigger": {
@@ -101,20 +97,20 @@ ENABLE TRIGGER [public].[A String]  ON cat.[public].person;
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>DB2</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>Derby</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>Firebird</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>H2</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>HyperSQL</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>INGRES</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>Informix</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>MariaDB</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>MySQL</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>Oracle</td><td><b>Supported</b></td><td><b>No</b></td></tr>
-<tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>No</b></td></tr>
-<tr><td>SQL Server</td><td><b>Supported</b></td><td><b>No</b></td></tr>
-<tr><td>SQLite</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>Sybase</td><td>Not Supported</td><td><b>No</b></td></tr>
-<tr><td>Sybase Anywhere</td><td>Not Supported</td><td><b>No</b></td></tr>
+<tr><td>DB2</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>Derby</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>Firebird</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>H2</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>HyperSQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>INGRES</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>Informix</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>MariaDB</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>MySQL</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>Oracle</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>PostgreSQL</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>SQL Server</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>SQLite</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>Sybase</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>Sybase Anywhere</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 </table>

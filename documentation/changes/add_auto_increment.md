@@ -22,7 +22,7 @@ Converts an existing column to be an auto-increment (a.k.a 'identity') column
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>columnDataType</td><td style='vertical-align: top'>Current data type of the column to make auto-increment</td><td style='vertical-align: top'>informix, mariadb, sybase, unsupported, hsqldb, ingres, asany, h2, mysql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>columnDataType</td><td style='vertical-align: top'>Current data type of the column to make auto-increment</td><td style='vertical-align: top'>asany, h2, hsqldb, informix, ingres, mariadb, mysql, sybase, unsupported</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>columnName</td><td style='vertical-align: top'>Name of the column</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>defaultOnNull</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.6</td></tr>
 <tr><td style='vertical-align: top'>generationType</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.6</td></tr>
@@ -40,9 +40,7 @@ Converts an existing column to be an auto-increment (a.k.a 'identity') column
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="addAutoIncrement-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="addAutoIncrement-example">
     <addAutoIncrement catalogName="cat"
             columnDataType="int"
             columnName="id"
@@ -60,7 +58,6 @@ Converts an existing column to be an auto-increment (a.k.a 'identity') column
 changeSet:
   id: addAutoIncrement-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - addAutoIncrement:
       catalogName: cat
@@ -81,7 +78,6 @@ changeSet:
   "changeSet": {
     "id": "addAutoIncrement-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "addAutoIncrement": {

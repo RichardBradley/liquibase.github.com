@@ -21,7 +21,7 @@ Drop trigger
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>db2, db2z, oracle, postgresql</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>scope</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
@@ -36,10 +36,8 @@ Drop trigger
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="dropTrigger-example"
-        objectQuotingStrategy="LEGACY">
-    <ext:dropTrigger catalogName="cat"
+<changeSet author="liquibase-docs" id="dropTrigger-example">
+    <pro:dropTrigger catalogName="cat"
             schemaName="public"
             scope="A String"
             tableName="person"
@@ -52,7 +50,6 @@ Drop trigger
 changeSet:
   id: dropTrigger-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - dropTrigger:
       catalogName: cat
@@ -69,7 +66,6 @@ changeSet:
   "changeSet": {
     "id": "dropTrigger-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "dropTrigger": {
@@ -101,6 +97,7 @@ DROP TRIGGER [public].[A String];
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Firebird</td><td>Not Supported</td><td>No</td></tr>

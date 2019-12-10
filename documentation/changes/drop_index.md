@@ -24,7 +24,7 @@ Drops an existing index
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>indexName</td><td style='vertical-align: top'>Name of the index to drop</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name fo the indexed table.</td><td style='vertical-align: top'>mariadb, sybase, asany, mysql, mssql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name fo the indexed table.</td><td style='vertical-align: top'>asany, mariadb, mssql, mysql, sybase</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -35,9 +35,7 @@ Drops an existing index
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="dropIndex-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="dropIndex-example">
     <dropIndex catalogName="cat"
             indexName="idx_address"
             schemaName="public"
@@ -50,7 +48,6 @@ Drops an existing index
 changeSet:
   id: dropIndex-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - dropIndex:
       catalogName: cat
@@ -66,7 +63,6 @@ changeSet:
   "changeSet": {
     "id": "dropIndex-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "dropIndex": {

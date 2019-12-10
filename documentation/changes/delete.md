@@ -35,9 +35,7 @@ Deletes data from an existing table
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="delete-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="delete-example">
     <delete catalogName="cat"
             schemaName="public"
             tableName="person">
@@ -51,7 +49,6 @@ Deletes data from an existing table
 changeSet:
   id: delete-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - delete:
       catalogName: cat
@@ -67,7 +64,6 @@ changeSet:
   "changeSet": {
     "id": "delete-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "delete": {

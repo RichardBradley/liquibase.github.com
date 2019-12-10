@@ -26,7 +26,7 @@ Adds creates a primary key out of an existing column or set of columns.
 <tr><td style='vertical-align: top'>columnNames</td><td style='vertical-align: top'>Name of the column(s) to create the primary key on. Comma separated if multiple</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of primary key constraint</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>forIndexCatalogName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>forIndexName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>oracle, db2, db2z</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>forIndexName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>db2, db2z, oracle</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>forIndexSchemaName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table to create the primary key on</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
@@ -42,9 +42,7 @@ Adds creates a primary key out of an existing column or set of columns.
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="addPrimaryKey-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="addPrimaryKey-example">
     <addPrimaryKey catalogName="cat"
             clustered="true"
             columnNames="id, name"
@@ -62,7 +60,6 @@ Adds creates a primary key out of an existing column or set of columns.
 changeSet:
   id: addPrimaryKey-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - addPrimaryKey:
       catalogName: cat
@@ -83,7 +80,6 @@ changeSet:
   "changeSet": {
     "id": "addPrimaryKey-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "addPrimaryKey": {

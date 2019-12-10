@@ -24,10 +24,11 @@ Alter properties of an existing sequence
 <tr><td style='vertical-align: top'>cacheSize</td><td style='vertical-align: top'>Change the cache size?</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>cycle</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>incrementBy</td><td style='vertical-align: top'>New amount the sequence should increment by</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, firebird, oracle, postgresql, db2, asany, db2z, derby, mssql</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>maxValue</td><td style='vertical-align: top'>New maximum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, firebird, oracle, postgresql, db2, asany, db2z, derby, h2, mssql</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>dataType</td><td style='vertical-align: top'>Data type of the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>asany, db2z, derby, firebird, h2, informix, postgresql</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>incrementBy</td><td style='vertical-align: top'>New amount the sequence should increment by</td><td style='vertical-align: top'></td><td style='vertical-align:top'>asany, db2, db2z, derby, firebird, informix, mssql, oracle, postgresql</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>maxValue</td><td style='vertical-align: top'>New maximum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>asany, db2, db2z, derby, firebird, h2, informix, mssql, oracle, postgresql</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>minValue</td><td style='vertical-align: top'>New minimum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>ordered</td><td style='vertical-align: top'>Does the sequence need to be guaranteed to be genererated inm the order of request?</td><td style='vertical-align: top'></td><td style='vertical-align:top'>informix, firebird, oracle, postgresql, asany, db2z, derby, h2, mssql</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>ordered</td><td style='vertical-align: top'>Does the sequence need to be guaranteed to be genererated inm the order of request?</td><td style='vertical-align: top'></td><td style='vertical-align:top'>asany, db2z, derby, firebird, h2, informix, mssql, oracle, postgresql</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>sequenceName</td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
@@ -40,12 +41,11 @@ Alter properties of an existing sequence
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="alterSequence-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="alterSequence-example">
     <alterSequence cacheSize="371717"
             catalogName="cat"
             cycle="true"
+            dataType="int"
             incrementBy="371717"
             maxValue="371717"
             minValue="371717"
@@ -60,12 +60,12 @@ Alter properties of an existing sequence
 changeSet:
   id: alterSequence-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - alterSequence:
       cacheSize: 371717
       catalogName: cat
       cycle: true
+      dataType: int
       incrementBy: 371717
       maxValue: 371717
       minValue: 371717
@@ -81,13 +81,13 @@ changeSet:
   "changeSet": {
     "id": "alterSequence-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "alterSequence": {
           "cacheSize": 371717,
           "catalogName": "cat",
           "cycle": true,
+          "dataType": "int",
           "incrementBy": 371717,
           "maxValue": 371717,
           "minValue": 371717,
@@ -108,7 +108,7 @@ changeSet:
 ## SQL Generated From Above Sample (SQL Server)
 
 {% highlight sql %}
-ALTER SEQUENCE [public].seq_id INCREMENT BY 371717 MINVALUE 371717 MAXVALUE 371717 ORDER;
+ALTER SEQUENCE [public].seq_id AS int INCREMENT BY 371717 MINVALUE 371717 MAXVALUE 371717 ORDER;
 
 
 {% endhighlight %}

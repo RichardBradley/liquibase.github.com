@@ -24,7 +24,7 @@ Renames an existing view
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>newViewName</td><td style='vertical-align: top'>Name to rename the view to</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>oldViewName</td><td style='vertical-align: top'>Name of the view to rename</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>mariadb, sybase, sqlite, postgresql, ingres, mysql, mssql</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>ingres, mariadb, mssql, mysql, postgresql, sqlite, sybase</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -35,9 +35,7 @@ Renames an existing view
   </ul>
 <div id='tab-xml'>
 {% highlight xml %}
-<changeSet author="liquibase-docs"
-        id="renameView-example"
-        objectQuotingStrategy="LEGACY">
+<changeSet author="liquibase-docs" id="renameView-example">
     <renameView catalogName="cat"
             newViewName="v_person"
             oldViewName="v_person"
@@ -50,7 +48,6 @@ Renames an existing view
 changeSet:
   id: renameView-example
   author: liquibase-docs
-  objectQuotingStrategy: LEGACY
   changes:
   - renameView:
       catalogName: cat
@@ -66,7 +63,6 @@ changeSet:
   "changeSet": {
     "id": "renameView-example",
     "author": "liquibase-docs",
-    "objectQuotingStrategy": "LEGACY",
     "changes": [
       {
         "renameView": {

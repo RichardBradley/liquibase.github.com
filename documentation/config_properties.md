@@ -1,20 +1,19 @@
 ---
 layout: default
-title: Creating and configuring liquibase.properties file | Liquibase Docs
+title: Creating and Configuring liquibase.properties File | Liquibase Docs
 ---
-# Creating and configuring a liquibase.properties file
-When running Liquibase on your system, it is convenient to store properties that don't change often in a *liquibase.properties* file. 
-This file allows you to specify your database connection information with parameters so Liquibase can access your database.  
-This option will save you the trouble of passing along command line arguments.
+# Creating and Configuring a liquibase.properties File
+Creating a *liquibase.properties* file allows you to store properties that don't change often in a *liquibase.properties* file. You can also use parameters to specify your database connection information so Liquibase can access your database and save you the trouble of passing along command line arguments.
 
-The *liquibase.properties* file should be placed in your project Liquibase directory.
+#### Creating the File
+To create a *liquibase.properties* file, generate a new text file in your project Liquibase directory and name it *liquibase.properties*.
+
 > Note: The file can also be named something other than liquibase.properties and/or be in a completely different directory by using the --defaultsFile parameter during runtime.
 To learn more please see [Liquibase Command Line](command_line.html).
 
-
 ## Parameters
-The most common properties that you might set in the *liquibase.properties* are listed below. Any paramater that could be specified on
-the command line can also be specified in the properties file. If a paramater is specified in both the properties file and the command line,
+The most common properties that you might set in the *liquibase.properties* are listed below. Any parameter that could be specified on
+the command line can also be specified in the properties file. If a parameter is specified in both the properties file and the command line,
 the command line value will override the value in the file.
 
 | Parameter | Definition |

@@ -30,7 +30,9 @@ To complete your first migration, you must have a [database changelog file](/doc
 
 **<u>Generating Changelog Files</u>**
 
-If you have an existing database, you can generate a changelog file that reflects the current state of your database. For more information on how to generate a changelog, visit the [Liquibase Commands: generateChangelog](/documentation/generating_changelogs.html) topic.
+If you have an existing database, you can generate a changelog file that reflects the current state of your database. For more information on how to 
+generate a changelog, visit the [Liquibase Commands: generateChangelog](/documentation/generating_changelogs.html) topic, and read the article on
+[adding Liquibase on an existing project.](/documentation/existing_project.html)
 
 ## Step 2: Add a Change Set
 ChangeSets are (units of change) that Liquibase can execute on a database. When adding a changeSet, your change must be defined by both an "id" attribute and an "author" attribute. Using only an "id" attribute can cause accidental duplications when dealing with multiple developers and code branches. It is best practice to only include one change in each changeset.

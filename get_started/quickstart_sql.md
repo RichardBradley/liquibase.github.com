@@ -35,7 +35,9 @@ When you have completed your work, save your file.
 
 **<u>Generating Changelog Files</u>**
 
-If you have an existing database, you can generate a changelog file that reflects the current state of your database. For more information on how to generate a changelog, visit the [Liquibase Commands: generateChangelog](/documentation/generating_changelogs.html) topic.
+If you have an existing database, you can generate a changelog file that reflects the current state of your database. For more information on how to 
+generate a changelog, visit the [Liquibase Commands: generateChangelog](/documentation/generating_changelogs.html) topic, and read the article on
+[adding Liquibase on an existing project.](/documentation/existing_project.html)
 
 ## Step 3: Configure your Changelog
 

@@ -10,7 +10,7 @@ includeDaticalBox: true
 
 To complete your first migration, you must have a [database changelog file](/documentation/databasechangelog.html). The Changelog file is where all your database changes are defined. Using Liquibase Functions allows you to define these changes with XML, JSON, or YAML. For this walkthrough, we will use XML examples.
 
-**<u>For New Databases</u>**
+**<u>Creating Changelog Files Manually</u>**
 
 1. Create a file in your liquibase project directory called `myChangeLog.xml` 
 2. For this example, enter the following information into the `myChangeLog.xml` file, then save your file: 
@@ -27,7 +27,8 @@ To complete your first migration, you must have a [database changelog file](/doc
 </databaseChangeLog>
 {% endhighlight %}
 <br>
-**<u>For Existing Databases</u>**
+
+**<u>Generating Changelog Files</u>**
 
 If you have an existing database, you can generate a changelog file that reflects the current state of your database. For more information on how to generate a changelog, visit the [Liquibase Commands: generateChangelog](/documentation/generating_changelogs.html) topic.
 

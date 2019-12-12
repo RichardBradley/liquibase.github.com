@@ -84,7 +84,7 @@ Your database now contains a table called **PERSON**.
 ## Step 6: Check Your Database
 To check your database:
 1. Open your terminal.
-2. Navigate to the folder where placed your driver jar.
+2. Navigate to the folder where you placed your driver jar.
 3. Run: `java -jar (driver-version.jar)
 
 > **Note:** Where (driver-version.jar) is listed, enter your driver name and version number. Example: <br> `java -jar h2-1.4.199.jar`.

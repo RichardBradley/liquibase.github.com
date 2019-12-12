@@ -10,7 +10,7 @@ The `generateChangeLog` command creates a *changelog* file that has a sequence o
 ## Uses
 The `generateChangeLog` command is typically used when you want to capture the current state of a database, then apply those changes to any number of databases.
 
-> **Note:** When using the [update command]() to apply the changes in the changelog, Liquibase will not create a new database or schema. You must create them ***before*** applying the *changelog* to it.
+> **Note:** When using the [update command](update.html) to apply the changes in the changelog, Liquibase will not create a new database or schema. You must create them ***before*** applying the *changelog* to it.
 
 ## Running the generateChangeLog command
 To generate a *changelog*:

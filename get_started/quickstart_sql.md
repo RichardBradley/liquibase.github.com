@@ -19,16 +19,17 @@ To complete your first migration, you must create a formatted `SQL` changelog in
 {% endhighlight %}
 
 ## Step 2: Add a Change Set
-Change sets are units of change that Liquibase can execute on a database. When adding a changeSet, your change must be defined by both and "id" attribute and an "author" attibute. Using only and "id" attribute can cause accidental duplications when dealing with multiple developers and code branches. It is best practice to only include on change in each changeset.
+Change sets are units of change that Liquibase can execute on a database. When adding a changeSet, your change must be defined by both an "id" attribute and an "author" attibute. It is best practice to only include one change in each changeset.
 
 **<u>To Create your Changelog</u>**
 1. Locate and open the `changelog.sql` file.
-2. For this example, enter the following information into the `changelog.sql` file, then save it.
+2. For this example, enter the following information into the `changelog.sql` file, then save it. 
+See the documentation for [more details on the syntax of formatted SQL changelogs.](/documentation/sql_format.html)
 
 {% highlight sql %}
 --liquibase formatted sql
 
---changeset userbob:1
+--changeset bob:1
 create table test1 (
 id int primary key,
 name varchar(255)
@@ -36,20 +37,21 @@ name varchar(255)
 
 {% endhighlight %}
 
-## Step 3: Run the Change Set
+## Step 3: Run the update command to deploy the Change Set
 
-When you add a change set, Liquibase reads your list of change sets in order, then checks the DATABASECHANGELOG table for anything that was previously run.
+When you run the `update` command, Liquibase reads your list of change sets in order, then checks the DATABASECHANGELOG table for anything that was previously run. Any changsets that
+have *not* already been applied to the database will get applied, and Liquibase will track that information.
 
-**<u>To Run the Change Set</u>**
+**<u>To Apply the Change Set</u>**
 1. Open your command prompt or terminal.
 2. Run the following command: `liquibase --changeLog=changelog.sql update`
 
-Your database now contains a table called **Test1**.
+Your database now contains a table called **test1**.
 
 ## Step 4: Check Your Database
 To check your database, open your database IDE to find the change that you made.
 
-Notice that two tables were created along with Test1: 
+Notice that two tables were created along with test1: 
 - DATABASECHANGELOG
 - DATABASECHANGELOGLOCK
 
@@ -60,7 +62,7 @@ View [DATABASECHANGELOG Table](/documentation/databasechangelog_table.html) and 
 
 ### Summary
 In this tutorial we covered:
-- Creating/Generating Changelogs
+- Creating Formatted SQL Changelogs
 - Adding Changesets to your Changelog
 - Running your Changelog
 - Checking your Database

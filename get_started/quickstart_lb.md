@@ -10,7 +10,7 @@ includeDaticalBox: true
 
 To complete your first migration, you must have a [database changelog file](/documentation/databasechangelog.html). The Changelog file is where all your database changes are defined. Using Liquibase Functions allows you to define these changes with XML, JSON, or YAML. For this walkthrough, we will use XML examples.
 
-**<u>For New Databases</u>**
+**<u>Creating Changelog Files Manually</u>**
 
 1. Create a file in your liquibase project directory called `myChangeLog.xml` 
 2. For this example, enter the following information into the `myChangeLog.xml` file, then save your file: 
@@ -27,9 +27,12 @@ To complete your first migration, you must have a [database changelog file](/doc
 </databaseChangeLog>
 {% endhighlight %}
 <br>
-**<u>For Existing Databases</u>**
 
-If you have an existing database, you can generate a changelog file that reflects the current state of your database. For more information on how to generate a changelog, visit the [Liquibase Commands: generateChangelog](/documentation/generating_changelogs.html) topic.
+**<u>Generating Changelog Files</u>**
+
+If you have an existing database, you can generate a changelog file that reflects the current state of your database. For more information on how to 
+generate a changelog, visit the [Liquibase Commands: generateChangelog](/documentation/generating_changelogs.html) topic, and read the article on
+[adding Liquibase on an existing project.](/documentation/existing_project.html)
 
 ## Step 2: Add a Change Set
 ChangeSets are (units of change) that Liquibase can execute on a database. When adding a changeSet, your change must be defined by both an "id" attribute and an "author" attribute. Using only an "id" attribute can cause accidental duplications when dealing with multiple developers and code branches. It is best practice to only include one change in each changeset.
@@ -81,7 +84,7 @@ Your database now contains a table called **department**.
 
 To check your database:
 1. Open your terminal.
-2. Navigate to the folder where placed your driver jar.
+2. Navigate to the folder where you placed your driver jar.
 3. Run: `java -jar (driver-version.jar)
 
 > **Note:** Where (driver-version.jar) is listed, enter your driver name and version number. Example: <br> `java -jar h2-1.4.199.jar`.

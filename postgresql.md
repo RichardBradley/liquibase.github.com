@@ -41,21 +41,21 @@ Changelog files contain a sequence of changesets, each of which make small chang
 * Open the dbchangelog.xml file and update the changelog file with the following code snippet:
 
 
-{% highlight sh %}
+{% highlight xml %}
   <?xml version="1.0" encoding="UTF-8"?>
-	<databaseChangeLog
-	  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-	  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-	  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
-	</databaseChangeLog>
+  <databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+  </databaseChangeLog>
 {% endhighlight %}
 
 
 * In your LiquibasePostgreSQL folder Right-click and select New>Text Document to create a new text file.
 * Rename the text file to **liquibase.properties**.
 * Edit the liquibase.properties file to add the following properties:
-{% highlight sh %}
+{% highlight properties %}
 
     changeLogFile: C:\\Users\\Administrator\\LiquibasePostgreSQL\\dbchangelog.xml
     url: jdbc:postgresql://localhost:5432/MYDATABASE
@@ -74,7 +74,7 @@ liquibaseProLicenseKey: `<paste license key>`
 
 *	Adding a changeset to the changelog – Change Sets are uniquely identified by “author” and ”id” attributes. Liquibase attempts to execute each changeset in a transaction that is committed at the end.
 In the dbchangelog.xml file line 9 to 20 add a new “department” create table change set as follows:
-{% highlight sh %}
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 
 <databaseChangeLog
@@ -91,8 +91,8 @@ In the dbchangelog.xml file line 9 to 20 add a new “department” create table
             <column name="name" type="varchar(50)">
                 <constraints nullable="false"/>
             </column>
-		<column name="active" type="boolean"                     
-			defaultValueBoolean="true"/>
+            <column name="active" type="boolean"                     
+              defaultValueBoolean="true"/>
         </createTable>
    </changeSet>
 </databaseChangeLog>
@@ -101,22 +101,24 @@ In the dbchangelog.xml file line 9 to 20 add a new “department” create table
 > Note: This create table change set is XML format.  The corresponding
 > SQL statement should look like the following:
 
-{% highlight sh %}
+{% highlight sql %}
 CREATE TABLE "department"
-(	"id" number(*,0),
-	"name" VARCHAR2(50 BYTE),
-	"active" NUMBER(1,0) DEFAULT 1
-);
+  ("id" number(*,0),
+   "name" VARCHAR2(50 BYTE),
+   "active" NUMBER(1,0) DEFAULT 1
+  );
 {% endhighlight %}
 
-* Open the command prompt.  Navigate to the LiquibaseMySQL directory.  
+* Open the command prompt.  Navigate to the LiquibasePostgreSQL directory.  
   Run the following command:
 
   ### "liquibase update"
 *	 From a database UI Tool, for example: “pgAdmin” check your database changes under “**MYDATABASE**”.
 You should see a new “**department**” table added to the database.  For example:
 
-    SELECT * FROM public.department;
+{% highlight sql %}
+SELECT * FROM public.department;
+{% endhighlight %}
 
 
 |ID  |NAME  |ACTIVE |

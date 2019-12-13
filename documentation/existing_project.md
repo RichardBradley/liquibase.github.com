@@ -63,3 +63,5 @@ in ways that works best for your group.
 
 If you know that introducing Liquibase is going to be complex, either from a technical or processes standpoint, it is usually best to introduce it slowly.
 Start with it on a new project as a trial run and once you have a good grasp of how it works and available options, apply it to other existing projects. 
+
+If you want help getting a project set up, check out [Liquibase Pro](https://support.liquibase.org/), which includes support. 

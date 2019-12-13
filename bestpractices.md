@@ -11,6 +11,8 @@ This page describes a number of best practices that you can apply on your projec
 The most common way to organize your changelogs is by major release.  Choose a package in your classpath to store the changelogs, preferably near your database access classes.  In this example, we will use com/example/db/changelog
 
 ### Directory Structure ###
+
+{% highlight text %}
     com
       example
         db
@@ -21,6 +23,8 @@ The most common way to organize your changelogs is by major release.  Choose a p
             db.changelog-2.0.xml
           DatabasePool.java
           AbstractDAO.java
+{% endhighlight %}
+        
 
 ### db.changelog-master.xml ###
 

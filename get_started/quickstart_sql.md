@@ -12,9 +12,9 @@ To complete your first migration, you must create an `SQL` folder in your Liquib
 
 ## Step 2: Create or Generate a Changelog
 
-You must also have a [database changelog file](/documentation/databasechangelog.html). The Changelog file is where all your database changes are defined. Using Liquibase Functions allows you to define these changes with XML, JSON, or YAML. For this walkthrough, we will use XML examples.
+To use SQL scripts, you must also have a [database changelog file](/documentation/databasechangelog.html). While the SQL script defines all your database changes, Liquibase still requires the use of a changelog to tell it where your scripts are located. While you can use XML, JSON, YAML or formatted SQL in your changelog, for this example we will use XML.
 
-**<u>For New Databases</u>**
+**<u>Creating Changelog Files Manually</u>**
 
 1. Create a file in your liquibase project directory called `myChangeLog.xml` 
 2. For this example, enter the following information into the `myChangeLog.xml` file: 
@@ -29,16 +29,18 @@ You must also have a [database changelog file](/documentation/databasechangelog.
 
 </databaseChangeLog>
 {% endhighlight %}
+
 When you have completed your work, save your file.
 
-<br>
-**<u>For Existing Databases</u>**
+**<u>Generating Changelog Files</u>**
 
-If you have an existing database, you can generate a changelog file that reflects the current state of your database. For more information on how to generate a changelog, visit the [Liquibase Commands: generateChangelog](/documentation/generating_changelogs.html) topic.
+If you have an existing database, you can generate a changelog file that reflects the current state of your database. For more information on how to 
+generate a changelog, visit the [Liquibase Commands: generateChangelog](/documentation/generating_changelogs.html) topic, and read the article on
+[adding Liquibase on an existing project.](/documentation/existing_project.html)
 
 ## Step 3: Configure your Changelog
 
-To run SQL scripts, you must tell Liquibase where your SQL files are located. To configure your changelog, use the `includeAll` tag to point Liquibase to the correct folder.
+To run SQL scripts, you must tell Liquibase where your SQL scripts are located. To configure your changelog, use the `includeAll` tag to point Liquibase to the correct folder.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -83,8 +85,8 @@ Your database now contains a table called **PERSON**.
 ## Step 6: Check Your Database
 To check your database:
 1. Open your terminal.
-2. Navigate to the folder where placed your driver jar.
-3. Run: `java -jar (driver-version.jar)
+2. Navigate to the folder where you placed your driver jar.
+3. Run: `java -jar (driver-version.jar)`
 
 > **Note:** Where (driver-version.jar) is listed, enter your driver name and version number. Example: <br> `java -jar h2-1.4.199.jar`.
 

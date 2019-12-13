@@ -41,40 +41,42 @@ Changelog files contain a sequence of changesets, each of which make small chang
 * Open the dbchangelog.xml file and update the changelog file with the following code snippet:
 
 
-{% highlight sh %}
+{% highlight xml %}
   <?xml version="1.0" encoding="UTF-8"?>
-	<databaseChangeLog
-	  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-	  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-	  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
-	</databaseChangeLog>
+  <databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+  </databaseChangeLog>
 {% endhighlight %}
 
 
 * In your LiquibaseMSSQL folder Right-click and select New>Text Document to create a new text file.
 * Rename the text file to **liquibase.properties**.
 * Edit the liquibase.properties file to add the following properties:
-{% highlight sh %}
+{% highlight properties %}
 
-    changeLogFile: C:\\Users\\Administrator\\LiquibaseMSSQL\\dbchangelog.xml
-    url: jdbc:sqlserver://localhost:1433;database=MYDATABASE;
-    username: system
-    password: password
-    driver: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    classpath: ../../Liquibase_Drivers/mssql-jdbc-7.4.1.jar
+  changeLogFile: C:\\Users\\Administrator\\LiquibaseMSSQL\\dbchangelog.xml
+  url: jdbc:sqlserver://localhost:1433;database=MYDATABASE;
+  username: system
+  password: password
+  driver: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  classpath: ../../Liquibase_Drivers/mssql-jdbc-7.4.1.jar
 
 {% endhighlight %}
 Because you are creating this project on Windows OS, you must specify the path with double slashes in the changeLogFile property. You must also use a relative path from your project directory to the driver jdbc jar file location in the classpath property.
 
 > Note: If you already have a Liquibase Pro key and want to apply it to
 > your project, add the following property to your liquibase.properties
-> file. 	 
+> file. 
+{% highlight properties %}
 liquibaseProLicenseKey: `<paste license key>`
+{% endhighlight %}
 
 *	Adding a changeset to the changelog – Change Sets are uniquely identified by “author” and ”id” attributes. Liquibase attempts to execute each changeset in a transaction that is committed at the end.
 In the dbchangelog.xml file line 9 to 20 add a new “department” create table change set as follows:
-{% highlight sh %}
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 
 <databaseChangeLog
@@ -91,8 +93,8 @@ In the dbchangelog.xml file line 9 to 20 add a new “department” create table
             <column name="name" type="varchar(50)">
                 <constraints nullable="false"/>
             </column>
-		<column name="active" type="boolean"                     
-			defaultValueBoolean="true"/>
+            <column name="active" type="boolean"                     
+              defaultValueBoolean="true"/>
         </createTable>
    </changeSet>
 </databaseChangeLog>
@@ -101,22 +103,27 @@ In the dbchangelog.xml file line 9 to 20 add a new “department” create table
 > Note: This create table change set is XML format.  The corresponding
 > SQL statement should look like the following:
 
-{% highlight sh %}
+{% highlight sql %}
 CREATE TABLE "department"
-(	"id" number(*,0),
-	"name" VARCHAR2(50 BYTE),
-	"active" NUMBER(1,0) DEFAULT 1
+("id" number(*,0),
+ "name" VARCHAR2(50 BYTE),
+ "active" NUMBER(1,0) DEFAULT 1
 );
 {% endhighlight %}
 
 * Open the command prompt.  Navigate to the LiquibaseMSSQL directory.  
   Run the following command:
 
-  ### "liquibase update"
+{% highlight sh %}
+  liquibase update
+{% endhighlight %}
+
 *	 From a database UI Tool, for example: “MySQL Workbench” check your database changes under “**MYDATABASE**”.
 You should see a new “**department**” table added to the database.  For example:
 
+{% highlight sql %}
     SELECT * FROM my_schema.department;
+{% endhighlight %}
 
 
 |ID  |NAME  |ACTIVE |
@@ -125,7 +132,9 @@ You should see a new “**department**” table added to the database.  For exam
 
 
 Also, you should see two more tables:
-*	**DATABASECHANGELOG** tracking table – This table keeps a record of all the changesets that were deployed.  This way, next time when you deploy again, the changesets in the changelog will be compared with the DATABASECHANGELOG tracking table and only the new changesets that were not found in the DATABASECHANGELOG will be deployed.  You will notice that a new row was created in that table with the changeset information we have just deployed.
+*	**DATABASECHANGELOG** tracking table – This table keeps a record of all the changesets that were deployed.  This way, next time when you deploy again, 
+the changesets in the changelog will be compared with the DATABASECHANGELOG tracking table and only the new changesets that were not found in the 
+DATABASECHANGELOG will be deployed.  You will notice that a new row was created in that table with the changeset information we have just deployed.
 For this example:
 
 |ID|AUTHOR |FILENAME       |DATEEXECUTED|ORDEREXECUTED|EXECTYPE|MDSUM|...|

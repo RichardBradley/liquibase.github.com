@@ -1,5 +1,6 @@
 #! /bin/bash
 unset BUNDLE_GEMFILE
 rm Gemfile.lock
-bundle exec jekyll serve -l
+title Jekyll Server
+bundle exec jekyll serve -l --incremental
 git checkout -- Gemfile.lock

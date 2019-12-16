@@ -19,7 +19,7 @@ To complete your first migration, you must create a formatted `SQL` changelog in
 {% endhighlight %}
 
 ## Step 2: Add a Change Set
-Change sets are units of change that Liquibase can execute on a database. When adding a changeSet, your change must be defined by both an "id" attribute and an "author" attibute. It is best practice to only include one change in each changeset.
+Change sets are units of change that Liquibase can execute on a database. When adding a change set, your change must be defined by both an "id" attribute and an "author" attibute. It is best practice to only include one change in each changeset.
 
 **<u>To Create your Changelog</u>**
 1. Locate and open the `changelog.sql` file.
@@ -37,10 +37,9 @@ name varchar(255)
 
 {% endhighlight %}
 
-## Step 3: Run the update command to deploy the Change Set
+## Step 3: Deploy your Changelog
 
-When you run the `update` command, Liquibase reads your list of change sets in order, then checks the DATABASECHANGELOG table for anything that was previously run. Any changsets that
-have *not* already been applied to the database will get applied, and Liquibase will track that information.
+When deploying your changeset, you must run the run the `update` command. Running this command ensures that Liquibase reads your list of change sets in order, and checks the DATABASECHANGELOG table for anything that was previously run. Any changsets that have *not* already been applied to the database will get applied, and Liquibase will track that information.
 
 **<u>To Apply the Change Set</u>**
 1. Open your command prompt or terminal.

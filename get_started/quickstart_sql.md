@@ -39,7 +39,7 @@ name varchar(255)
 
 ## Step 3: Deploy your Changelog
 
-When deploying your changeset, you must run the run the `update` command. Running this command ensures that Liquibase reads your list of change sets in order, and checks the DATABASECHANGELOG table for anything that was previously run. Any changsets that have *not* already been applied to the database will get applied, and Liquibase will track that information.
+To deploy the changelog and your new changeset, you run the `update` command. When running this command, Liquibase reads your list of change sets in order and checks the DATABASECHANGELOG table for anything that was previously run. Any changsets that have *not* already been applied to the database will get applied, and Liquibase will track that information.
 
 **<u>To Apply the Change Set</u>**
 1. Open your command prompt or terminal.

@@ -8,15 +8,15 @@ subnav: subnav_maven.md
 Liquibase and Maven require the use of drivers to read your database. This topic walks you through the process of getting Oracle drivers while using Maven.
 
 ## Step 1: Add a Dependency
-Add a dependency to the Maven `pom.xml` in your Maven project directory as follows:
+Add a dependency to the `<dependencies>` section of the Maven `pom.xml`, in your Maven project directory as follows:
 
 {% highlight xml %}
-<!-- https://mvnrepository.com/artifact/com.oracle.jdbc/ojdbc6 -->
+      <!-- https://mvnrepository.com/artifact/com.oracle.jdbc/ojdbc6 -->
       <dependency>
            <groupId>com.oracle.jdbc</groupId>
            <artifactId>ojdbc8</artifactId>
            <version>19.3.0.0</version>
-        </dependency>
+      </dependency>
 
 {% endhighlight %}
 <br>
@@ -42,7 +42,7 @@ Update the `settings.xml` file located in your Maven project directory to includ
 <br>
 
 ## Step 4: Include the Plugin
-Update your settings.xml file located in your Maven project directory to include the [maven.oracle.com](https://www.oracle.com/webfolder/application/maven/index.html) pluginRepository.
+Update your `settings.xml` file located in your Maven project directory to include the [maven.oracle.com](https://www.oracle.com/webfolder/application/maven/index.html) pluginRepository.
 
 {% highlight xml %}
 <pluginRepository>
@@ -99,12 +99,8 @@ Create a `settings-security.xml` file in your .m2 directory with your Oracle pas
 ## Step 7: Configure Maven
 Configure Maven with an HTTP Wagon compatible with [maven.oracle.com](https://www.oracle.com/webfolder/application/maven/index.html).
 
-- Download the HTTP Wagon jar from [central.maven.com](http://central.maven.com/). 
-
-{% highlight html %}
-http://central.maven.org/maven2/org/apache/maven/wagon/wagon-http/2.8/wagon-http-2.8-shaded.jar
-{% endhighlight %}
-
+- Download the HTTP Wagon jar from [Maven Central](http://central.maven.org/maven2/org/apache/maven/wagon/wagon-http/2.8/wagon-http-2.8-shaded.jar). 
 - Copy the wagon-http jar into: `MAVEN_HOME/lib/ext/`
 
-To verify the configuration is correct, run mvn compile. If there are no errors stating that artifact com.oracle.jdbc cannot be found in [repo.maven.apache.org](http://repo.maven.apache.org/), then everything is configured correctly. If you are getting this error, make sure you have not omitted a step in these instructions.
+To verify the configuration is correct, run `mvn compile`. If there are no errors stating that artifact com.oracle.jdbc cannot be 
+found in [repo.maven.apache.org](http://repo.maven.apache.org/), then everything is configured correctly. If you are getting this error, make sure you have not omitted a step in these instructions.

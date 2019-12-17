@@ -361,3 +361,7 @@ a.pagination-item:hover {
 .tile-item {
   align-self: center;
 }
+
+.code-highlight {
+  color: #E29D42;
+}

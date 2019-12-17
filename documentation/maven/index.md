@@ -8,7 +8,7 @@ subnav: subnav_maven.md
 
 Liquibase can be controlled via a Maven plug-in which can be obtained from the central Maven repository.
 
-You can find the all the versions of the Liquibase-core and Maven plugins in the central repository by going [here](http://mvnrepository.com/artifact/org.liquibase/liquibase-core).
+You can find the all the versions of the Liquibase-core and Maven plugins in the central repository by going [here](http://mvnrepository.com/artifact/org.liquibase/liquibase-core). We recommend using Apache Maven 3.1.x or newer to make it easier to configure the log-level of Liquibase Maven Plugin with MAVEN_OPTs or by passing -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG on the command line.
 
 ## Goals Available ##
 

@@ -182,7 +182,7 @@ Use the following maven command to get hints about all available configuration p
 
 </div>
 
-### Using a global configuration for multiple projects ###
+### Using a global configuration for multiple projects
 
 Through the usage of a parent-pom (some call it company super-pom) it is possible to have a centralized Liquibase plugin configuration that applies to all your Maven child projects. For a detailed explanation of the super-pom concept, see [Maven manual Pom section](http://maven.apache.org/guides/introduction/introduction-to-the-pom.html).
 

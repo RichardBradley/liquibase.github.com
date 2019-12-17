@@ -39,7 +39,7 @@ bundle exec jekyll serve -l
 The -l option specifies "live reload" to automatically refresh your browser when a content change is complete.
 
 #### Local Server
-To access the local development server navigate to: `0.0.0.0:4000` (the default Jekyll port).
+To access the local development server navigate to: `127.0.0.1:4000` (the default Jekyll port).
 
 ### Requirements (Docker)
 Or if you'd prefer to run everything through a docker container:
@@ -58,3 +58,16 @@ typically within 1 business day.
 
 #### Production (liquibase.org)
 To see the changes in `production` a merge must be made into `master`. GH Pages will handle the deployment.
+
+
+## Sub-sections that are generated
+There are two sub-sections of the site that are generated. 
+
+### Changes docs
+The first generated section is all the documentation for the built-in Liquibase
+change types (both Core and Pro). The process for generating these is not currently automated by CI/CD, and is documented
+in the [README.md file in the _doc_generators directory](_doc_generators/README.md)
+
+### Maven Plugin Docs
+The second generated section is the documentation for the Liquibase Maven Plugin. The process for generating these docs
+and incorporating them into this site has not been documented (yet).

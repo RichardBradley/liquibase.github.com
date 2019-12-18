@@ -14,9 +14,6 @@ When you try to make a lot of improvements really fast, sometimes things can bre
 ### Bug Fixes
 The following bugs were fixed in version 3.8.3:
 - Liquibase-Maven plugin now works with Java 9+.
-- Improvements using formatted SQL file with `generateChangeLog` for users with Stored Logic objects.
-- Rollback by tag now works without getting hung up on your labels.
-- Licenses are now properly included (making attorneys happy) and should prevent some issues for a small set of users that needed extra clarity.
 - Expired license messages are now less annoying. (We made them less verbose and less excitable.)
 
 ### Documentation
@@ -29,5 +26,5 @@ Full Liquibase documentation is available at [https://www.liquibase.org/document
 ### Get Involved
 You can help make the Liquibase community better by contributing in the following ways:
 - Contribute code - [https://www.liquibase.org/development/contribute.html](https://www.liquibase.org/development/contribute.html)
-- Make documentation updates -[https://github.com/liquibase/liquibase.github.com/tree/master/documentation](https://github.com/liquibase/liquibase.github.com/tree/master/documentation)
-- Participate in our community survey and earn $10 for 10 minutes of your time -[https://www.surveymonkey.com/r/Liquibase-Survey-B](https://www.surveymonkey.com/r/Liquibase-Survey-B)
+- Make documentation updates - [https://github.com/liquibase/liquibase.github.com/tree/master/documentation](https://github.com/liquibase/liquibase.github.com/tree/master/documentation)
+- Participate in our community survey and earn $10 for 10 minutes of your time - [https://www.surveymonkey.com/r/Liquibase-Survey-B](https://www.surveymonkey.com/r/Liquibase-Survey-B)

@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Migrations with Multiple SQL Scripts | Liquibase Docs
+title: Migrations with Multiple SQL Files | Liquibase Docs
 ---
-# Database Migrations with Multiple SQL Scripts
+# Database Migrations with Multiple SQL Files
 
 ## Step 1: Create an SQL Folder
 To complete a migration, you must create an SQL folder in your Liquibase project folder. The SQL folder is where you will place all your your SQL scripts that Liquibase uses to track, version, and deploy changes to your database.
 
 ## Step 2: Create or Generate a Changelog
-To use SQL scripts, you must also have a [database changelog](/documentation/databasechangelog.html) file. While the SQL scripts define all of your database changes, Liquibase still requires the use of a changelog to tell it where your scripts are located. While you can use XML, JSON, YAML, or formatted SQL when creating a changelog, you must create an XML changelog to use multiple SQL Scripts.
+To use SQL script files, you must also have a [database changelog](/documentation/databasechangelog.html) file. While the SQL scripts define all of your database changes, Liquibase still requires the use of a changelog to tell it where your scripts are located. While you can use XML, JSON, YAML, or formatted SQL when creating a changelog, you must create an XML changelog to use multiple SQL Scripts.
 
 **<u>Creating Changelog Files Manually</u>**
 1. Create a file in your Liquibase project directory called `myChangeLog.xml`.

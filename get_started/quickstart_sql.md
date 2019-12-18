@@ -15,16 +15,19 @@ To complete your first migration, you must create a formatted `SQL` changelog in
 2. For this example, enter the following information into the `changelog.sql` file.
 
 {% highlight sql %}
+
 --liquibase formatted sql
+
 {% endhighlight %}
 
 ## Step 2: Add a Change Set
 Change sets are units of change that Liquibase can execute on a database. When adding a change set, your change must be defined by both an "id" attribute and an "author" attibute. It is best practice to only include one change in each changeset.
 
-**<u>To Create your Changelog</u>**
+**<u>To Add your Changeset</u>**
 1. Locate and open the `changelog.sql` file.
 2. For this example, enter the following information into the `changelog.sql` file, then save it. 
-See the documentation for [more details on the syntax of formatted SQL changelogs.](/documentation/sql_format.html)
+
+See the [Formatted SQL Changelogs](/documentation/sql_format.html) topic for more information about SQL Syntax.
 
 {% highlight sql %}
 --liquibase formatted sql
@@ -60,7 +63,9 @@ have been run against the database. The DATABASECHANGELOGLOCK table is used to m
 View [DATABASECHANGELOG Table](/documentation/databasechangelog_table.html) and [DATABASECHANGELOGLOCK Table](/documentation/databasechangeloglock_table.html) topics for more information.
 
 ### Additional Information
-This topic is great when you only have a handful of SQL scripts. However, if your list of scripts becomes too large to maintain in a formatted SQL changelog, you may want to break up your scripts into smaller more manageable chunks. Check out our [Database Migrations with Multiple SQL Scripts](/documentation/multiple-sql-migration.html) topic for more information on how to do this.
+This topic is great when you only have a handful of SQL scripts. However, if your list of scripts becomes too large to maintain in a formatted SQL changelog, you may want to break up your scripts into smaller more manageable chunks. 
+
+See the [Database Migrations with Multiple SQL Files](/documentation/multiple-sql-migration.html) topic for more information on how to Migrate with Multiple SQL files.
 
 ### Summary
 In this tutorial we covered:

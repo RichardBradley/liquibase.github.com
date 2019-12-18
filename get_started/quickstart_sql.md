@@ -4,93 +4,56 @@ title: Using SQL Scripts Tutorial | Liquibase Docs
 subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---
-# Your First Migration with SQL Scripts
+# Your First Migration with SQL
 
-## Step 1: Create an SQL Folder
+## Step 1: Create a Formatted SQL Changelog
 
-To complete your first migration, you must create an `SQL` folder in your Liquibase project folder.  The `SQL` folder is where you will place all your SQL scripts that Liquibase will use to track, version, and deploy changes to your database.
+To complete your first migration, you must create a formatted `SQL` changelog in your Liquibase project directory so Liquibase can track, version, and deploy changes to your database.
 
-## Step 2: Create or Generate a Changelog
+**<u>To Create your Changelog</u>**
+1. Create a file in your Liquibase project directory called `changelog.sql`.
+2. For this example, enter the following information into the `changelog.sql` file.
 
-To use SQL scripts, you must also have a [database changelog file](/documentation/databasechangelog.html). While the SQL script defines all your database changes, Liquibase still requires the use of a changelog to tell it where your scripts are located. While you can use XML, JSON, YAML or formatted SQL in your changelog, for this example we will use XML.
-
-**<u>Creating Changelog Files Manually</u>**
-
-1. Create a file in your liquibase project directory called `myChangeLog.xml` 
-2. For this example, enter the following information into the `myChangeLog.xml` file: 
-
-{% highlight xml %}
-<?xml version="1.0" encoding="UTF-8"?>
-<databaseChangeLog
-  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
-
-</databaseChangeLog>
-{% endhighlight %}
-
-When you have completed your work, save your file.
-
-**<u>Generating Changelog Files</u>**
-
-If you have an existing database, you can generate a changelog file that reflects the current state of your database. For more information on how to 
-generate a changelog, visit the [Liquibase Commands: generateChangelog](/documentation/generating_changelogs.html) topic, and read the article on
-[adding Liquibase on an existing project.](/documentation/existing_project.html)
-
-## Step 3: Configure your Changelog
-
-To run SQL scripts, you must tell Liquibase where your SQL scripts are located. To configure your changelog, use the `includeAll` tag to point Liquibase to the correct folder.
-
-{% highlight xml %}
-<?xml version="1.0" encoding="UTF-8"?>
-<databaseChangeLog
-  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
-
-  <includeAll path="sql"/>
-</databaseChangeLog>
-{% endhighlight %}
-
-## Step 4: Add an SQL Script to the SQL Folder
-To add SQL scripts to your SQL folder:
-
-1. In your SQL folder, create a `.sql` file
-2. For this example, enter the following information:
 {% highlight sql %}
-create table PERSON (
-    ID int not null,
-    FNAME varchar(100) not null
-);
+
+--liquibase formatted sql
+
 {% endhighlight %}
 
-When you have completed your work, save your file.
+## Step 2: Add a Change Set
+Change sets are units of change that Liquibase can execute on a database. When adding a change set, your change must be defined by both an "id" attribute and an "author" attibute. It is best practice to only include one change in each changeset.
 
-## Step 5: Deploy Your Script
+**<u>To Add your Changeset</u>**
+1. Locate and open the `changelog.sql` file.
+2. For this example, enter the following information into the `changelog.sql` file, then save it. 
 
-Once your changelog is created and configured, and your SQL scripts are added, you are ready to deploy your script.
+See the [Formatted SQL Changelogs](/documentation/sql_format.html) topic for more information about SQL Syntax.
 
-**<u>To Deploy your Script:</u>**
-1. Open your terminal.
-2. Run one of the following commands:
-- **Linux/Unix/Mac:** `LB_HOME/liquibase update`
-- **Windows:** `LB_HOME\liquibase.bat update`
+{% highlight sql %}
+--liquibase formatted sql
 
-> **Note:** In place of *LB_HOME* use the folder name where you extracted liquibase.
+--changeset bob:1
+create table test1 (
+id int primary key,
+name varchar(255)
+);
 
-Your database now contains a table called **PERSON**.
+{% endhighlight %}
 
-## Step 6: Check Your Database
-To check your database:
-1. Open your terminal.
-2. Navigate to the folder where you placed your driver jar.
-3. Run: `java -jar (driver-version.jar)`
+## Step 3: Deploy your Changelog
 
-> **Note:** Where (driver-version.jar) is listed, enter your driver name and version number. Example: <br> `java -jar h2-1.4.199.jar`.
+To deploy the changelog and your new changeset, you run the `update` command. When running this command, Liquibase reads your list of change sets in order and checks the DATABASECHANGELOG table for anything that was previously run. Any changsets that have *not* already been applied to the database will get applied, and Liquibase will track that information.
 
-If you used a `liquibase.properties` file, enter the JDBC URL, User Name, and Password. Notice that two tables were created: 
+**<u>To Apply the Change Set</u>**
+1. Open your command prompt or terminal.
+2. Run the following command: `liquibase --changeLogFile=changelog.sql update`
+
+Your database now contains a table called **test1**.
+
+## Step 4: Check Your Database
+To check your database, open your database IDE to find the change that you made.
+
+Notice that two tables were created along with test1: 
 - DATABASECHANGELOG
 - DATABASECHANGELOGLOCK
 
@@ -99,9 +62,14 @@ have been run against the database. The DATABASECHANGELOGLOCK table is used to m
 
 View [DATABASECHANGELOG Table](/documentation/databasechangelog_table.html) and [DATABASECHANGELOGLOCK Table](/documentation/databasechangeloglock_table.html) topics for more information.
 
+### Additional Information
+This topic is great when you only have a handful of SQL scripts. However, if your list of scripts becomes too large to maintain in a formatted SQL changelog, you may want to break up your scripts into smaller more manageable chunks. 
+
+See the [Database Migrations with Multiple SQL Files](/documentation/multiple-sql-migration.html) topic for more information on how to Migrate with Multiple SQL files.
+
 ### Summary
 In this tutorial we covered:
-- Creating/Generating Changelogs
+- Creating Formatted SQL Changelogs
 - Adding Changesets to your Changelog
 - Running your Changelog
 - Checking your Database

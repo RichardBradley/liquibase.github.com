@@ -26,5 +26,5 @@ Full Liquibase documentation is available at [https://www.liquibase.org/document
 ### Get Involved
 You can help make the Liquibase community better by contributing in the following ways:
 - Contribute code - [https://www.liquibase.org/development/contribute.html](https://www.liquibase.org/development/contribute.html)
-- Make documentation updates -[https://github.com/liquibase/liquibase.github.com/tree/master/documentation](https://github.com/liquibase/liquibase.github.com/tree/master/documentation)
-- Participate in our community survey and earn $10 for 10 minutes of your time -[https://www.surveymonkey.com/r/Liquibase-Survey-B](https://www.surveymonkey.com/r/Liquibase-Survey-B)
+- Make documentation updates - [https://github.com/liquibase/liquibase.github.com/tree/master/documentation](https://github.com/liquibase/liquibase.github.com/tree/master/documentation)
+- Participate in our community survey and earn $10 for 10 minutes of your time - [https://www.surveymonkey.com/r/Liquibase-Survey-B](https://www.surveymonkey.com/r/Liquibase-Survey-B)

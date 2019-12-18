@@ -14,9 +14,6 @@ When you try to make a lot of improvements really fast, sometimes things can bre
 ### Bug Fixes
 The following bugs were fixed in version 3.8.3:
 - Liquibase-Maven plugin now works with Java 9+.
-- Improvements using formatted SQL file with `generateChangeLog` for users with Stored Logic objects.
-- Rollback by tag now works without getting hung up on your labels.
-- Licenses are now properly included (making attorneys happy) and should prevent some issues for a small set of users that needed extra clarity.
 - Expired license messages are now less annoying. (We made them less verbose and less excitable.)
 
 ### Documentation

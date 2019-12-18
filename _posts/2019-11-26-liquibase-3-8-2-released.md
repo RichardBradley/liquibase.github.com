@@ -5,7 +5,7 @@ title: Liquibase 3.8.2 Released
 ---
 
 Liquibase 3.8.2 is now available here through [Liquibase.org](https://download.liquibase.org/download-community/). 
-The [3.8.2 release is also available on GitHub](https://github.com/liquibase/liquibase/releases/). Here’s a closer look at what’s included in the latest release.
+The [3.8.2 release is also available on GitHub](https://github.com/liquibase/liquibase/releases/). Here’s a closer look at what's included in the latest release.
 
 ## Liquibase 3.8.2 Overview
 

@@ -9,7 +9,7 @@ subnav: subnav_blog.md
 <div>
     {% for post in paginator.posts %}
         <div style="margin-bottom: 10px">
-            <a style="text-decoration: none" href="{{post.url}}"><h2 style="color: #747373; text-decoration: none; text-transform: uppercase; margin-bottom: 0">{{post.title}}</h2></a>
+            <a style="text-decoration: none" href="{{post.url}}"><h2 style="color: #747373; text-decoration: none; margin-bottom: 0">{{post.title}}</h2></a>
             {{post.date | date_to_string}}
         </div>
 

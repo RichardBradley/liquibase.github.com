@@ -7,6 +7,11 @@ author: Steve Donie
 
 Here are some recent mentions of Liquibase on other sites. 
 
+* [Fear database changes? Get them under control with CI/CD](https://dev.to/heroku/fear-database-changes-get-them-under-control-with-ci-cd-44n1)
+  17 December 2019
+  
+  Why you should be including database concerns in your CI/CD process.
+
 * [Evolving Database using Spring Boot and Liquibase](https://www.roytuts.com/evolving-database-using-spring-boot-liquibase/) 
   16 Dec 2019
   

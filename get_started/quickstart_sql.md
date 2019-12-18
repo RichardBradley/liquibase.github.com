@@ -46,7 +46,7 @@ To deploy the changelog and your new changeset, you run the `update` command. Wh
 
 **<u>To Apply the Change Set</u>**
 1. Open your command prompt or terminal.
-2. Run the following command: `liquibase --changeLog=changelog.sql update`
+2. Run the following command: `liquibase --changeLogFile=changelog.sql update`
 
 Your database now contains a table called **test1**.
 

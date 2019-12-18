@@ -59,6 +59,9 @@ have been run against the database. The DATABASECHANGELOGLOCK table is used to m
 
 View [DATABASECHANGELOG Table](/documentation/databasechangelog_table.html) and [DATABASECHANGELOGLOCK Table](/documentation/databasechangeloglock_table.html) topics for more information.
 
+### Additional Information
+This topic is great when you only have a handful of SQL scripts. However, if your list of scripts becomes too large to maintain in a formatted SQL changelog, you may want to break up your scripts into smaller more manageable chunks. Check out our [Database Migrations with Multiple SQL Scripts](/documentation/multiple-sql-migration.html) topic for more information on how to do this.
+
 ### Summary
 In this tutorial we covered:
 - Creating Formatted SQL Changelogs

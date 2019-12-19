@@ -14,7 +14,7 @@ Most questions on general Liquibase usage are best handled on Stack Overflow usi
 
 If it is a bug in the main Liquibase library, log it in [Liquibase Jira](http://liquibase.jira.com/browse/CORE).
 
-If it is a bug with an extension, log it issues section of the extension's github page.
+If it is a bug with an extension, log it in the issues section of the extension's github page.
 For example [https://github.com/liquibase/liquibase-hibernate/issues](https://github.com/liquibase/liquibase-hibernate/issues) or [https://github.com/liquibase/liquibase-oracle/issues](https://github.com/liquibase/liquibase-oracle/issues).
 
 All Liquibase-managed extensions can be found in the [Liquibase GitHub group](https://github.com/liquibase)
@@ -23,9 +23,9 @@ All Liquibase-managed extensions can be found in the [Liquibase GitHub group](ht
 
 Liquibase release announcements as well as general project news and articles are cross posted to the Liquibase blog at [http://www.liquibase.org/blog](http://www.liquibase.org/blog) and the mailing list.
 
-To subscribe to the mailing list, use the "Announcements" form to your left.
+To subscribe to the mailing list, use the "Subscribe for email updates" form to your left.
 
-<a href="https://twitter.com/liquibase" class="twitter-follow-button" data-show-count="false">@liquibase</a>
+We also announce things on twitter, so you can <a href="https://twitter.com/liquibase" class="twitter-follow-button" data-show-count="false">@liquibase</a>
 
 **Looking for the Liquibase Source Code?**
 
@@ -33,7 +33,7 @@ The Liquibase source is hosted at [https://github.com/liquibase/liquibase](https
 
 For more information, see the [developer documentation](../development/index.html)
 
-**Looking To Discussions Beyond The Scope Of Stack Overflow?**
+**Looking to have discussions beyond the scope of Stack Overflow?**
 
 * [Liquibase Users](http://forum.liquibase.org/#Forum/liquibase-users) - for topics related to using Liquibase and writing extensions.
 * [Liquibase Developers](http://forum.liquibase.org/#Forum/liquibase-development) - for topics related to working on the Liquibase codebase.
@@ -43,6 +43,6 @@ For more information, see the [developer documentation](../development/index.htm
 You can always contact Nathan Voxland, Liquibase Benevolent Dictator for Life at <a href="mailto:nathan.voxland@liquibase.org">nathan.voxland@liquibase.org</a>
 or <a href="https://twitter.com/nvoxland" class="twitter-follow-button" data-show-count="false">@nvoxland</a>
 
-**Looking To Pay For Support?**
+**Looking to get more personalized support?**
 
-Commercial training and support is available from <a href="http://www.datical.com/liquibase/" target="_blank" onClick="trackOutboundLink(this, 'Datical', 'Liquibase RFI'); return false;">datical.com</a>
+Commercial training and support is available for [Liquibase Pro users - sign up for a free trial!](https://download.liquibase.org/liquibase-pro-trial-request-form/)

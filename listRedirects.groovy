@@ -83,12 +83,12 @@ currentDir.eachFileRecurse { thisFile ->
     return true
   }
   
-  // we are only interested in files.
+  // We are only interested in files. Don't check this script.
   if (thisFile.isFile() && (! thisFile.name.startsWith('listRedirects'))) {
     contents = thisFile.text
     fileName = thisFile.path.padRight(40)
     // check for type 1 redirect
-    def type1Match = contents =~ /(?m)redirect_to:\s*-\s*(.*)/
+    def type1Match = contents =~ /(?m)redirect_to:\s*-*\s*(.*)/
     if (type1Match) {
       target = type1Match[0][1]
       println "type 1 redirect: ${fileName} redirects to ${target}"
@@ -102,11 +102,13 @@ currentDir.eachFileRecurse { thisFile ->
       println "type 2 redirect: ${fileName} redirects to ${target}"
     }
 
-    // check for type 2 redirect
+    // check for type 3 redirect, and whether it is 'canonicalized'
     def type3Match = contents =~ /(?m)<meta http-equiv="refresh"\s*content="\d+;url=(.*)">/
     if (type3Match) {
       target = type3Match[0][1]
-      println "type 3 redirect: ${fileName} redirects to ${target}"
+      def isCanonical = contents =~/(?m)<link rel="canonical" href="/
+      def canonicalString = isCanonical ? "(has canonical reference)" : "(DOES NOT HAVE CANONICAL REFERENCE)"
+      println "type 3 redirect: ${fileName} redirects to ${target} ${canonicalString}"
     }
     
   } 

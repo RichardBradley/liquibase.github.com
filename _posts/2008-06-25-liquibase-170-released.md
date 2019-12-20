@@ -9,22 +9,22 @@ Major changes include:
 
 
 
-- Added <a href="http://www.liquibase.org/manual/load_data">loadData change</a> which allows importing of data from CSV files
+- Added [loadData change](/documentation/changes/load_data.html) which allows importing of data from CSV files
 
-- Added support for <a href="http://www.liquibase.org/manual/changelog_parameters">changelog parameters</a> for more dynamic and flexible change logs
-- Allow <a href="http://www.liquibase.org/manual/preconditions">preconditions</a> in changeSet tags to act as sanity checks during a database update
+- Added support for [changelog parameters](/documentation/changelog_parameters.html) for more dynamic and flexible change logs
+- Allow [preconditions](/documentation/preconditions.html) in changeSet tags to act as sanity checks during a database update
 
-- Can export data with <a href="http://www.liquibase.org/manual/generating_changelogs">generateChangeLog</a>
+- Can export data with [generateChangeLog](/documentation/generating_changelogs.html)
 - Added markNextChangeSetRan command
 
-- Added validCheckSum tag to <a href="http://www.liquibase.org/manual/changeset">changeSet</a>
+- Added validCheckSum tag to [changeSet](/documentation/changeset.html)
 
-- Can use any refactoring tags or reference previous changeSets inside a <a href="http://www.liquibase.org/manual/changeset#rollback_tag">rollback tag</a>
+- Can use any refactoring tags or reference previous changeSets inside a [rollback tag](/documentation/changeset.html#rollback_tag)
 
-- Allow <a href="http://www.liquibase.org/manual/preconditions">custom preconditions</a>
+- Allow [custom preconditions](/documentation/preconditions.html)
 - RowMapper interface is now public
 - Misc bug fixes
 
-The core library can be downloaded from <a href="http://www.liquibase.org/download">http://www.liquibase.org/download</a> while the Maven, Grails, and IntelliJ plug-ins can be installed from their respective plug-in managers.
+The core library can be downloaded from [http://download.liquibase.org](http://download.liquibase.org) while the Maven, Grails, and IntelliJ plug-ins can be installed from their respective plug-in managers.
 
 

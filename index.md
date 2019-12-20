@@ -7,7 +7,7 @@ extraStyleSheets:
   - value-props
 ---
 
-
+<p></p>
 <h1 style="display:flex; justify-content:center; text-align:center; font-size: 20px;">Liquibase is the leading open source tool for database schema change management.</h1>
 
 <div class="lb-choose-path">

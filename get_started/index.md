@@ -30,7 +30,7 @@ It's easy to get up and running with Liquibase. Select a topic below to get star
         <h3>Migrations with SQL</h3>
     </div>
     <div class="tile-item" align="center">
-        <a href="/get_started/lb-core-usage-concepts.html"><img src="/images/quickstart/liquibase-best-practices.png" width="150px" alt="Core Concepts"></a>
+        <a href="/get_started/lb-core-usage-concepts.html"><img src="/images/quickstart/core-usage.png" width="150px" alt="Core Concepts"></a>
         <h3>Core Concepts</h3>
     </div>
     <div class="tile-item" align="center">
@@ -38,12 +38,12 @@ It's easy to get up and running with Liquibase. Select a topic below to get star
         <h3>Supported Databases</h3>
     </div>
     <div class="tile-item" align="center">
-        <a href="/get_started/version_control_info.html"><img src="/images/quickstart/liquibase-best-practices.png" width="150px" alt="Using Version Control"></a>
+        <a href="/get_started/version_control_info.html"><img src="/images/quickstart/using-source-control.png" width="150px" alt="Using Version Control"></a>
         <h3>Using Version Control</h3>
     </div>
     <div class="tile-item" align="center">
-        <a href="/get_started/database-migration-approaches.html"><img src="/images/quickstart/liquibase-best-practices.png" width="150px" alt="Migration Approaches"></a>
-        <h3>Migration Approaches</h3>
+        <a href="/get_started/database-migration-approaches.html"><img src="/images/quickstart/database-approaches.png" width="150px" alt="Database Approaches"></a>
+        <h3>Database Approaches</h3>
     </div>
     <div class="tile-item" align="center">
         <a href="/bestpractices.html"><img src="/images/quickstart/liquibase-best-practices.png" width="150px" alt="Liquibase Best Practices"></a>

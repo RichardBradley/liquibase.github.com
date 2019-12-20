@@ -41,8 +41,10 @@ if [ $TARGETEXISTS -eq 1 ]; then
   # if path has directory separators, make sure that the directory exists.
   if [[ $FILENAME == *"/"* ]]; then
     DIRNAME=$(dirname "${FILENAME}")
-    echo "Creating directory '$DIRNAME'"
-    mkdir -p $DIRNAME
+    if [ ! -e $DIRNAME ]; then 
+      echo "Creating directory '$DIRNAME'"
+      mkdir -p $DIRNAME
+    fi
   fi
 
   echo "<html>" > $FILENAME

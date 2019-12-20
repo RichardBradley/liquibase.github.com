@@ -3,6 +3,9 @@ layout: default
 title: Creating and Configuring liquibase.properties File | Liquibase Docs
 ---
 # Creating and Configuring a liquibase.properties File
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VokEe4hTFUI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
 Creating a *liquibase.properties* file allows you to store properties that don't change often in a *liquibase.properties* file. You can also use parameters to specify your database connection information so Liquibase can access your database and save you the trouble of passing along command line arguments.
 
 #### Creating the File

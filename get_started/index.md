@@ -30,8 +30,20 @@ It's easy to get up and running with Liquibase. Select a topic below to get star
         <h3>Migrations with SQL</h3>
     </div>
     <div class="tile-item" align="center">
+        <a href="/get_started/lb-core-usage-concepts.html"><img src="/images/quickstart/core-usage.png" width="150px" alt="Core Concepts"></a>
+        <h3>Core Concepts</h3>
+    </div>
+    <div class="tile-item" align="center">
         <a href="/databases.html"><img src="/images/quickstart/databases-supported-liquibase.png" width="150px" alt="Databases"></a>
         <h3>Supported Databases</h3>
+    </div>
+    <div class="tile-item" align="center">
+        <a href="/get_started/version_control_info.html"><img src="/images/quickstart/using-source-control.png" width="150px" alt="Using Version Control"></a>
+        <h3>Using Version Control</h3>
+    </div>
+    <div class="tile-item" align="center">
+        <a href="/get_started/database-migration-approaches.html"><img src="/images/quickstart/database-approaches.png" width="150px" alt="Database Approaches"></a>
+        <h3>Database Approaches</h3>
     </div>
     <div class="tile-item" align="center">
         <a href="/bestpractices.html"><img src="/images/quickstart/liquibase-best-practices.png" width="150px" alt="Liquibase Best Practices"></a>

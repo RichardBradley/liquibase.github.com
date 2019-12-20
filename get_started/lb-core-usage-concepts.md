@@ -40,6 +40,5 @@ are executed. Refer to [the labels page](/documentation/labels.html) for more de
 
 See [this blog post](/2014/11/contexts-vs-labels.html) for more details on the differences, similarities, and use cases for contexts and labels.
 
-
-<div class="cta-container" style="margin-left: auto; margin-right: auto; width: 350px; height: 50px">
-<div class="cta cta--block"><a href="/get_started/lb-setup.html">Get Started: Setting Up Liquibase Tutorial ►</a></div></div>
+<div class="cta-container" style="margin-left: auto; margin-right: auto; width: 300px; height: 50px">
+<div class="cta cta--block"><a href="/get_started/index.html">Return to Get Started Home ►</a></div></div>

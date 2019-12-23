@@ -27,6 +27,7 @@ fi
 wget -q --spider $TARGETURL
 if [ $? -ne 0 ]; then
   echo "  Target URL $TARGETURL not found, not creating a redirect file."
+  exit 1
 else
   echo "  Target '$TARGETURL' exists."
   echo ""

@@ -142,6 +142,13 @@
     </script>
 
 
+    {% if page.extraJavascriptFiles %}
+      {% for javascriptFile in page.extraJavascriptFiles %}
+        <!-- {{ javascriptFile }} Start -->
+        <script src="/js/{{ javascriptFile }}"></script>
+        <!-- {{ javascriptFile }} End -->
+      {% endfor %}
+    {% endif %}
 
   {% include components/footer.html %}
   </body>

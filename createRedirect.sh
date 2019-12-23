@@ -14,33 +14,28 @@ if [ "$#" -lt 2 ]; then
   exit 1
 fi
 
-FILENAME=$1
+FILENAME=.$1
 TARGETURL=$2
-TARGETEXISTS=1
 
 # See if the target exists! the wget option --spider means to only check, do not
 # download. The -q means quiet. 
 echo "Checking to see if '$TARGETURL' already exists"
-if [[ $TARGETURL == "http:"* ]]; then
-  wget --spider $TARGETURL
-  if [ $? -ne 0 ]; then
-    echo "Target URL $TARGETURL not found"
-    TARGETEXISTS=0
-  fi
-else
-  wget --spider http://liquibase.org$TARGETURL
-  if [ $? -ne 0 ]; then
-    echo "Target URL http://liquibase.org$TARGETURL not found"
-    TARGETEXISTS=0
-  fi
+if [[ $TARGETURL != "http:"* ]]; then
+  TARGETURL=http://www.liquibase.org$TARGETURL
 fi
 
-if [ $TARGETEXISTS -eq 1 ]; then
+wget -q --spider $TARGETURL
+if [ $? -ne 0 ]; then
+  echo "  Target URL $TARGETURL not found, not creating a redirect file."
+else
+  echo "  Target '$TARGETURL' exists."
+  echo ""
   echo "Creating redirect file '$FILENAME' that redirects to '$TARGETURL'"
 
   # if path has directory separators, make sure that the directory exists.
   if [[ $FILENAME == *"/"* ]]; then
     DIRNAME=$(dirname "${FILENAME}")
+    DIRNAME=./$DIRNAME/
     if [ ! -e $DIRNAME ]; then 
       echo "Creating directory '$DIRNAME'"
       mkdir -p $DIRNAME
@@ -58,7 +53,5 @@ if [ $TARGETEXISTS -eq 1 ]; then
   echo "Contents of $FILENAME"
   echo ""
   cat $FILENAME
-else
-  echo "TargetURL '$TARGETURL' does not exist, not creating a redirect file."
 fi
 

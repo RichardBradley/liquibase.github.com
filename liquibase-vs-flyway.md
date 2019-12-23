@@ -4,6 +4,8 @@ title: Liquibase vs. Flyway
 includeDaticalBox: true
 extraStyleSheets:
   - 2-col-landing-page
+extraJavascriptFiles:
+  - tracking-codes/hotjar.js
 ---
 
 <div class="landing-page">

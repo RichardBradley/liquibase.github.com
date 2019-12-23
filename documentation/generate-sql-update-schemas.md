@@ -6,6 +6,9 @@ includeDaticalBox: true
 ---
 
 # Generating SQL to Update Database Schemas
+
+<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/3rUUZunCcBA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<br>
 There are two reasons you would want to generate SQL in Liquibase.
 1. You need to know exactly what is being done to your database.
 2. Your company policies prevent you from using Liquibase in certain environments.

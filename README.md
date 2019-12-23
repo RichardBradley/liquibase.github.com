@@ -53,15 +53,15 @@ Or if you'd prefer to run everything through a docker container:
 ### CI/CD Overview
 #### Staging (staging.liquibase.org)
 To see your changes in a `staging` environment, base your PRs on the `staging` branch. When the PR is merged to staging, a build server will 
-generate the site and publish it to http://staging.liquibase.org/ within about 10 minutes. After review by the team, staging will be merged to master
-typically within 1 business day. 
+generate the site and publish it to [http://staging.liquibase.org/](http://staging.liquibase.org/) within about 10 minutes. After review by the team, 
+staging will be merged to master (typically within 1 business day). 
 
 #### Production (liquibase.org)
-To see the changes in `production` a merge must be made into `master`. GH Pages will handle the deployment.
+To see the changes in `production` a merge must be made into `master`. GitHub Pages will handle the deployment.
 
 
 ## Sub-sections that are generated
-There are two sub-sections of the site that are generated. 
+There are several sub-sections of the site that are generated. Two are listed below. 
 
 ### Changes docs
 The first generated section is all the documentation for the built-in Liquibase
@@ -70,4 +70,11 @@ in the [README.md file in the _doc_generators directory](_doc_generators/README.
 
 ### Maven Plugin Docs
 The second generated section is the documentation for the Liquibase Maven Plugin. The process for generating these docs
-and incorporating them into this site has not been documented (yet).
+and incorporating them into this site:
+* clone the [liquibase core source code](https://github.com/liquibase/liquibase)
+* run `mvn package site` to compile and package the code, and then generate maven-style site documentation. Most of that documentation will not get used.
+* copy files from `liquibase/liquibase-maven-plugin/target/site` to `liquibase.github.com/documentation/maven/generated`
+  * There is a shell script in the root of this project `copyMavenDocs.sh` that will copy the correct files for you.
+* double check the diffs and then commit the changes. 
+
+

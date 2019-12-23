@@ -170,24 +170,48 @@ The "constraints" tag contains information about constraints on the column.
       <td>Is column nullable?</td>
     </tr>
     <tr>
+      <td>notNullConstraintName</td>
+      <td>The not null constraint name</td>
+    </tr>
+    <tr>
       <td>primaryKey</td>
       <td>Is column a primary key?</td>
     </tr>
     <tr>
       <td>primaryKeyName</td>
-      <td>Primary key name <b>Since 1.6</b>  </td>
+      <td>Primary key name <b>Since 1.6</b></td>
+    </tr>
+    <tr>
+      <td>primaryKeyTablespace</td>
+      <td>The tablespace to use for the defined primary key</td>
     </tr>
     <tr>
       <td>unique</td>
-      <td>Should a unique clause be applied  </td>
+      <td>Should a unique clause be applied?</td>
     </tr>
     <tr>
       <td>uniqueConstraintName</td>
-      <td>Unique constraint name</td>
+      <td>The unique constraint name</td>
     </tr>
     <tr>
       <td>references</td>
       <td>Foreign key definition</td>
+    </tr>
+    <tr>
+      <td>referencedTableCatalogName</td>
+      <td>Name of the catalog</td>
+    </tr>
+    <tr>
+      <td>referencedTableSchemaName</td>
+      <td>Name of the schema</td>
+    </tr>
+    <tr>
+      <td>referencedTableName</td>
+      <td>Name of the table</td>
+    </tr>
+    <tr>
+      <td>referencedColumnNames</td>
+      <td>Name of the column</td>
     </tr>
     <tr>
       <td>foreignKeyName</td>
@@ -199,11 +223,31 @@ The "constraints" tag contains information about constraints on the column.
     </tr>
     <tr>
       <td>deferrable</td>
-      <td>Are constraints deferrable</td>
+      <td>Are constraints deferrable?</td>
     </tr>
     <tr>
       <td>initiallyDeferred</td>
-      <td>Are constraints initially deferred</td>
+      <td>Are constraints initially deferred?</td>
+    </tr>
+    <tr>
+      <td>validateNullable</td>
+      <td>Should validate the defined not null constraint?</td>
+    </tr>
+    <tr>
+      <td>validateUnique</td>
+      <td>Should validate the defined unique constraint?</td>
+    </tr>
+    <tr>
+      <td>validatePrimaryKey</td>
+      <td>Should validate the defined primary key constraint?</td>
+    </tr>
+    <tr>
+      <td>validateForeignKey</td>
+      <td>Should validate the defined foreign key constraint?</td>
+    </tr>
+    <tr>
+      <td>checkConstraint</td>
+      <td>Should validate the defined check constraint?</td>
     </tr>
   </tbody>
 </table>

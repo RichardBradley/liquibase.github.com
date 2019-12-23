@@ -61,7 +61,7 @@ To see the changes in `production` a merge must be made into `master`. GitHub Pa
 
 
 ## Sub-sections that are generated
-There are two sub-sections of the site that are generated. 
+There are several sub-sections of the site that are generated. Two are listed below. 
 
 ### Changes docs
 The first generated section is all the documentation for the built-in Liquibase

@@ -6,6 +6,8 @@ includeDaticalBox: true
 ---
 # Your First Migration with SQL
 
+<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/HdXcf9E8ZVI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
 ## Step 1: Create a Formatted SQL Changelog
 
 To complete your first migration, you must create a formatted `SQL` changelog in your Liquibase project directory so Liquibase can track, version, and deploy changes to your database.

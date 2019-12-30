@@ -1,17 +1,7 @@
 <li><a href="/documentation/index.html"><span>Documentation Home</span></a></li>
-<li><a href="/documentation/changes/index.html"><span>Changes / Refactorings</span></a></li>
-<li><a href="/documentation/databasechangelog.html"><span>DatabaseChangeLog</span></a></li>
-<li><a href="/documentation/changeset.html"><span>ChangeSet</span></a></li>
-<li><a href="/documentation/include.html"><span>Include</span></a></li>
-<li><a href="/documentation/preconditions.html"><span>Preconditions</span></a></li>
-<li><a href="/documentation/contexts.html"><span>Contexts</span></a></li>
-<li><a href="/documentation/labels.html"><span>Labels</span></a></li>
-<li><a href="/documentation/changelog_parameters.html"><span>ChangeLog Parameters</span></a></li>
-<li><a href="/documentation/offline.html"><span>Offline Database Support</span></a></li>
-<li><a href="/documentation/sdk/index.html"><span>Extending Liquibase - SDK</span></a></li>
-<li><a href="/documentation/update.html"><span>Update</span></a></li>
-<li><a href="/documentation/rollback.html"><span>Rollback</span></a></li>
-<li><a href="/documentation/diff.html"><span>Diff</span></a></li>
-<li><a href="/documentation/generating_changelogs.html"><span>Generate Changelog</span></a></li>
-<li><a href="/documentation/dbdoc.html"><span>DBDoc</span></a></li>
-<li><a href="/documentation/generate-sql-update-schemas.html"><span>SQL Output</span></a></li>
+<li><a href="\documentation\installation\index.html"><span>Installation</span></a></li>
+<li><a href="\get_started\index.html"><span>Get Started</span></a></li>
+<li><a href="\documentation\core-concepts\index.html"><span>Core Concepts</span></a></li>
+<li><a href="\documentation\tutorials\index.html"><span>Tutorials</span></a></li>
+<li><a href="/documentation/sdk/index.html"><span>Liquibase SDK</span></a></li>
+

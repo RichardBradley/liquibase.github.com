@@ -6,6 +6,9 @@ includeDaticalBox: true
 ---
 
 # How Liquibase Works {#HowlbWorks}
+<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/5AnCHzVa_7o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<br>
+
 In this tutorial, we will cover a few simple mechanisms Liquibase uses to track, version, and deploy changes to get an understanding of how Liquibase works.
 
 <div class="tile-container">

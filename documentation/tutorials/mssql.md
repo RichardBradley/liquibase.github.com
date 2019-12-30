@@ -1,6 +1,7 @@
 ---
 layout: default
-title: MariaDB Tutorial | Liquibase Docs
+title: MSSQL Tutorial | Liquibase Docs
+subnav: subnav_tutorials.md
 ---
 
 #### To test your connection, try running liquibase with the JDBC driver located in the same directory as liquibase:
@@ -8,34 +9,34 @@ title: MariaDB Tutorial | Liquibase Docs
 {% highlight sh %}
 
 liquibase
-  --driver=org.mariadb.jdbc.Driver
-  --classpath=./mariadb-java-client-1.4.6.jar
-  --url="jdbc:mariadb://<IP OR HOSTNAME>:<PORT>/<SCHEMA NAME>"
-  --changeLogFile=db.changelog-1.0.xml
-  --username=<MARIADB USERNAME>
-  --password=<MARIADB PASSWORD>
+--driver=com.microsoft.sqlserver.jdbc.SQLServerDriver
+--classpath=mssql-jdbc-7.4.1.jar
+--url="jdbc:sqlserver://<IP OR HOSTNAME>:1433;database=<database name>;
+--changeLogFile=db.changelog-1.0.xml
+--username=<MYSQL USERNAME>
+--password=<MYSQL PASSWORD>
 generateChangeLog
 
 {% endhighlight %}
 
 
-## **Creating New Liquibase Projects with MariaDB AWS RDS – Windows**
-The purpose of this document is to guide you through the process of creating a new Liquibase project with **MariaDB AWS RDS** on a **Windows** machine. In this tutorial, you will generate an example project and follow the instructions to apply and learn concepts associated with creating new Liquibase Projects with MariaDB AWS RDS.
+## **Creating New Liquibase Projects with MSSQL – Windows**
+The purpose of this document is to guide you through the process of creating a new Liquibase project with **MSSQL** on a **Windows** machine. In this tutorial, you will generate an example project and follow the instructions to apply and learn concepts associated with creating new Liquibase Projects with MSSQL.
 ### Prerequisites
 * If you have not installed the latest version of Liquibase, navigate to [https://download.liquibase.org/download](https://download.liquibase.org/download) to install the software application.
 * Ensure the liquibase.bat file’s path is set to a location in the PATH System variable.
-* Navigate to [https://mariadb.com/kb/en/library/about-mariadb-connector-j/ ](https://mariadb.com/kb/en/library/about-mariadb-connector-j/) and download the jdbc driver file for MariaDB.<br />
+* Navigate to [https://docs.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server](https://docs.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server) and download the jdbc driver file for SQL Server.<br />
 
 > **Note:** Place the jdbc jar driver file in a known directory so you can locate it easily.
 
->**Example:** C:\Users\Liquibase_Drivers\mariadb-java-client-2.4.4.jar
+>**Example:** C:\Users\Liquibase_Drivers\mssql-jdbc-7.4.1.jar
 
 ## Tutorial
 
-#### To create a Liquibase project with MariaDB AWS RDS on your Windows machine, begin with the following steps:
+#### To create a Liquibase project with MSSQL on your Windows machine, begin with the following steps:
 
-* Create a new project folder and name it **LiquibaseMariaDB_RDS**.
-* In your LiquibaseMariaDB_RDS folder, Right-click then select New>Text Document to create an empty text file.<br/>
+* Create a new project folder and name it **LiquibaseMSSQL**.
+* In your LiquibaseMSSQL folder, Right-click then select New>Text Document to create an empty text file.<br/>
 * Rename the text file to **dbchangelog.xml**.
 Changelog files contain a sequence of changesets, each of which make small changes to the structure of your database. Instead of creating an empty changelog file in step 2, you can also use an existing database to generate a changelog. In this tutorial, you will manually add a single change. To add this change:
 * Open the dbchangelog.xml file and update the changelog file with the following code snippet:
@@ -52,27 +53,24 @@ Changelog files contain a sequence of changesets, each of which make small chang
 {% endhighlight %}
 
 
-* In your LiquibaseMariaDB_RDS folder Right-click and select New>Text Document to create a new text file.
+* In your LiquibaseMSSQL folder Right-click and select New>Text Document to create a new text file.
 * Rename the text file to **liquibase.properties**.
 * Edit the liquibase.properties file to add the following properties:
 {% highlight properties %}
 
-    changeLogFile: C:\\Users\\Administrator\\LiquibaseMariaDB_RDS\\dbchangelog.xml
-    url: jdbc:mariadb:// myrds.cz1j1vh9uvuo.us-east-1.rds.amazonaws.com:3306/mydatabase
-    username: myrds
-    password: password
-    driver: org.mariadb.jdbc.Driver
-    classpath: ../../Liquibase_Drivers/ mariadb-java-client-2.4.4.jar
+  changeLogFile: C:\\Users\\Administrator\\LiquibaseMSSQL\\dbchangelog.xml
+  url: jdbc:sqlserver://localhost:1433;database=MYDATABASE;
+  username: system
+  password: password
+  driver: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  classpath: ../../Liquibase_Drivers/mssql-jdbc-7.4.1.jar
 
 {% endhighlight %}
-Because you are creating this project on Windows OS, you must specify the path with double slashes in the changeLogFile property. You must also use a relative path from your project directory to the driver jdbc jar file location in the classpath property.  Also, the url property should follow this template:
-##### url: jdbc:mariadb://{host}[:{port}]/[{databasename}]
-In our case, since we are using AWS RDS database instance, the host name should be copied from AWS website under your RDS --> Databases --> `<database name>` --> Connectivity & security --> Endpoint `<copy the endpoint value>`.  This value should look similar to the value mentioned in the liquibase.properties example above.
-
+Because you are creating this project on Windows OS, you must specify the path with double slashes in the changeLogFile property. You must also use a relative path from your project directory to the driver jdbc jar file location in the classpath property.
 
 > Note: If you already have a Liquibase Pro key and want to apply it to
 > your project, add the following property to your liquibase.properties
-> file. 	 
+> file. 
 {% highlight properties %}
 liquibaseProLicenseKey: `<paste license key>`
 {% endhighlight %}
@@ -114,14 +112,14 @@ CREATE TABLE "department"
 );
 {% endhighlight %}
 
-* Open the command prompt.  Navigate to the LiquibaseMariaDB_RDS directory.  
+* Open the command prompt.  Navigate to the LiquibaseMSSQL directory.  
   Run the following command:
 
 {% highlight sh %}
   liquibase update
 {% endhighlight %}
-  
-*	 From a database UI Tool, check your database changes under “**mydatabase**”.
+
+*	 From a database UI Tool, for example: “MySQL Workbench” check your database changes under “**MYDATABASE**”.
 You should see a new “**department**” table added to the database.  For example:
 
 {% highlight sql %}
@@ -135,7 +133,9 @@ You should see a new “**department**” table added to the database.  For exam
 
 
 Also, you should see two more tables:
-*	**DATABASECHANGELOG** tracking table – This table keeps a record of all the changesets that were deployed.  This way, next time when you deploy again, the changesets in the changelog will be compared with the DATABASECHANGELOG tracking table and only the new changesets that were not found in the DATABASECHANGELOG will be deployed.  You will notice that a new row was created in that table with the changeset information we have just deployed.
+*	**DATABASECHANGELOG** tracking table – This table keeps a record of all the changesets that were deployed.  This way, next time when you deploy again, 
+the changesets in the changelog will be compared with the DATABASECHANGELOG tracking table and only the new changesets that were not found in the 
+DATABASECHANGELOG will be deployed.  You will notice that a new row was created in that table with the changeset information we have just deployed.
 For this example:
 
 |ID|AUTHOR |FILENAME       |DATEEXECUTED|ORDEREXECUTED|EXECTYPE|MDSUM|...|

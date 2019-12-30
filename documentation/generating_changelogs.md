@@ -5,6 +5,9 @@ title: Generating changelogs | Liquibase Docs
 
 # Liquibase Commands: generateChangeLog
 
+<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/8AdiGIb2SY4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<br>
 The `generateChangeLog` command creates a *changelog* file that has a sequence of *changeSets* which describes how to re-create the current state of the database.
 
 ## Uses

@@ -9,27 +9,27 @@ Welcome to the Liquibase Database Tutorials page! Here, you can be introduced to
 
 <div class="tile-container">
     <div class="tile-item" align="center">
-        <a href="/mysql.html"><img src="\images\documentation\Tutorials\mysql.png" width="150px" alt="MySQL Tutorial"></a>
+        <a href="\documentation\tutorials\mysql.html"><img src="\images\documentation\Tutorials\mysql.png" width="150px" alt="MySQL Tutorial"></a>
         <h3>MySQL Tutorial</h3>
         <br>
     </div>
     <div class="tile-item" align="center">
-        <a href="/mariadb.html"><img src="\images\documentation\Tutorials\mariadb.png" width="150px" alt="MariaDB Tutorial"></a>
+        <a href="\documentation\tutorials\mariadb.html"><img src="\images\documentation\Tutorials\mariadb.png" width="150px" alt="MariaDB Tutorial"></a>
         <h3>MariaDB Tutorial</h3>
         <br>
     </div>
     <div class="tile-item" align="center">
-        <a href="/postgresql.html"><img src="\images\documentation\Tutorials\postgresql.png" width="150px" alt="PostgreSQL Tutorial"></a>
+        <a href="\documentation\tutorials\postgresql.html"><img src="\images\documentation\Tutorials\postgresql.png" width="150px" alt="PostgreSQL Tutorial"></a>
         <h3>PostgreSQL Tutorial</h3>
         <br>
     </div>
     <div class="tile-item" align="center">
-        <a href="/oracle.html"><img src="\images\documentation\Tutorials\oracle.png" width="150px" alt="Oracle Tutorial"></a>
+        <a href="\documentation\tutorials\oracle.html"><img src="\images\documentation\Tutorials\oracle.png" width="150px" alt="Oracle Tutorial"></a>
         <h3>Oracle Tutorial</h3>
         <br>
     </div>
     <div class="tile-item" align="center">
-        <a href="/mssql.html"><img src="\images\documentation\Tutorials\mssql.png" width="150px" alt="MSSQL Tutorial"></a>
+        <a href="\documentation\tutorials\mssql.html"><img src="\images\documentation\Tutorials\mssql.png" width="150px" alt="MSSQL Tutorial"></a>
         <h3>MSSQL Tutorial</h3>
         <br>
     </div>
@@ -39,17 +39,17 @@ Welcome to the Liquibase Database Tutorials page! Here, you can be introduced to
         <br>
     </div>
     <div class="tile-item" align="center">
-        <a href="/apache_derby.html"><img src="\images\documentation\Tutorials\derbylogo.png" width="150px" alt="Apache Derby Tutorial"></a>
+        <a href="\documentation\tutorials\apache-derby.html"><img src="\images\documentation\Tutorials\derbylogo.png" width="150px" alt="Apache Derby Tutorial"></a>
         <h3>Apache Derby Tutorial</h3>
         <br>
     </div>
     <div class="tile-item" align="center">
-        <a href="/informix.html"><img src="\images\documentation\Tutorials\informix.png" width="150px" height="150px" alt="Informix Tutorial"></a>
+        <a href="\documentation\tutorials\informix.html"><img src="\images\documentation\Tutorials\informix.png" width="150px" height="150px" alt="Informix Tutorial"></a>
         <h3>Informix Tutorial</h3>
         <br>
     </div>
     <div class="tile-item" align="center">
-        <a href="/sqlite.html"><img src="\images\documentation\Tutorials\sqlite.png" width="150px" alt="SQLite Tutorial"></a>
+        <a href="\documentation\tutorials\sqlite.html"><img src="\images\documentation\Tutorials\sqlite.png" width="150px" alt="SQLite Tutorial"></a>
         <h3>SQLite Tutorial</h3>
         <br>
     </div>

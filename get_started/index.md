@@ -31,7 +31,7 @@ It's easy to get up and running with Liquibase. Select a topic below to get star
     </div>
     <div class="tile-item" align="center">
         <a href="/get_started/lb-core-usage-concepts.html"><img src="/images/quickstart/core-usage.png" width="150px" alt="Core Concepts"></a>
-        <h3>Core Concepts</h3>
+        <h3>Core Usage</h3>
     </div>
     <div class="tile-item" align="center">
         <a href="/databases.html"><img src="/images/quickstart/databases-supported-liquibase.png" width="150px" alt="Databases"></a>

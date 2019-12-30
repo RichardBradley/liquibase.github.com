@@ -1,7 +1,9 @@
 ---
 layout: default
-title: Informix
+title: Informix | Liquibase Docs
+subnav: subnav_tutorials.md
 ---
+# Informix 
 
 Running liquibase with the the JDBC driver located in the same directory as liquibase:
 

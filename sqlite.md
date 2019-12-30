@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Sqlite
+title: Sqlite | Liquibase Docs
+subnav: subnav_tutorials.md
 ---
 
 # SQLite #

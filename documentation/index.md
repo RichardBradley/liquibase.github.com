@@ -34,10 +34,14 @@ includeDaticalBox: true
 </div>
 <hr>
 <br>
-<div align="center"><h3>Haven't used Liquibase yet?</h3></div>
+<div align="center">
+<h3>Haven't used Liquibase yet?</h3>
+<h4>Learn more about our Liquibase plans & download today!</h4>
+<br>
+</div>
 
 <div class="cta-container" style="margin-left: auto; margin-right: auto; width: 100px; height: 50px">
-<div class="cta cta--block"><a href="https://download.liquibase.org/">Sign Up ►</a></div></div>
+<div class="cta cta--block"><a href="https://download.liquibase.org/">Learn More ►</a></div></div>
 
 <br>
 <hr>

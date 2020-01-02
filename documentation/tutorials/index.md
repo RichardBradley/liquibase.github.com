@@ -3,9 +3,9 @@ layout: default
 title: Database Tutorials | Liquibase Docs
 subnav: subnav_tutorials.md
 ---
-# Database Tutorials
+# Liquibase Database Tutorials
 
-Welcome to the Liquibase Database Tutorials page! Here, you can be introduced to specifics about Liquibase use with your favorite databases.
+Welcome to the Liquibase Database Tutorials page! Learn more about using Liquibase with your favorite databases with our in-depth tutorials. You can also view our [Supported Databases](/databases.html) topic for more information.
 
 <div class="tile-container">
     <div class="tile-item" align="center">

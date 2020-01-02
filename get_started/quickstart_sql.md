@@ -8,6 +8,11 @@ includeDaticalBox: true
 
 <div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/HdXcf9E8ZVI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
+## Prerequisites
+Before performing any of these steps, you must be able to connect to a local or remote database, accessible via command line or IDE/GUI. View the [Supported Databases](/databases.html) topic for more information on which databases we support. 
+
+You can also view the [Database Tutorials](/documentation/tutorials/index.html) topic for more information on running each database with Liquibase.
+
 ## Step 1: Create a Formatted SQL Changelog
 
 To complete your first migration, you must create a formatted `SQL` changelog in your Liquibase project directory so Liquibase can track, version, and deploy changes to your database.

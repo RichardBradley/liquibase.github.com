@@ -5,6 +5,7 @@ subnav: subnav_documentation.md
 includeDaticalBox: true
 ---
 # Liquibase Core Concepts
+Performing database schema migrations is an essential task for nearly every software project. Learn some basic concepts of Liquibase, like changesets, how to use different formats for your changelog, and how different tables work. You can also learn more about intermediate-level concepts like parameters and how to use preconditions.
 
 ## Liquibase Basics
 - <a href="\documentation\running.html">Overview</a>

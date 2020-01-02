@@ -5,29 +5,18 @@ title: XML Format | Liquibase Docs
 
 # XML Format
 
-Liquibase supports XML as a format for storing your changelog files.
+Liquibase supports XML as a format for storing your changelog files. There is more information about the XML format [in the FAQ.](/faq.html#what-is-all-that-stuff-at-the-beginning-of-my-xml-changelog)
 
 ## XSD Support
 
 XSD schema definitions are available for each Liquibase version. Since there are no changelog format changes in patch versions, there are only xsd files that correspond to major.minor versions.
 
-* http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
-* http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.7.xsd
-* http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
-* http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
-* http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
-* http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd
-* http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.2.xsd
-* http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
-* http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
-* http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
-* http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd
-* http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.8.xsd
+See [the XML Schema Definitions](/xml/ns/dbchangelog/) for more information.
 
 ## Liquibase Extension XSDs
 
 If you use a [Liquibase extension](../extensions/index.html) that includes additional change tags, check the extension documentation to find out if they provide a XSD.
-If they do not, you can use the xsd at http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd which allows any nested tag and attribute.
+If they do not, you can use the xsd at [dbchangelog-ext.xsd](dbchangelog-ext.xsd) which allows any nested tag and attribute.
 
 ## Limitations
 

@@ -4,7 +4,8 @@ title: JEE CDI Integration | Liquibase Docs
 ---
 # JEE CDI Integration #
 
-Liquibase can be run in a [JEE CDI](http://seamframework.org/Weld) environment by implementing a number of CDI Procducers methods. The CDI Liquibase integration is a simple CDI extension that performs a Liquibase update when the CDI container boots
+Liquibase can be run in a [JEE CDI](http://seamframework.org/Weld) environment by implementing a number of CDI Procducers methods. 
+The CDI Liquibase integration is a simple CDI extension that performs a Liquibase update when the CDI container boots.
 
 
 
@@ -49,4 +50,4 @@ public class LiquibaseProducer {
 * defaultSchema
 * dropFirst **since 2.0.2**
 
-If you don't want Liquibase to run you can configure the follow system property liquibase.should.run=false
+If you don't want Liquibase to run you can configure the following system property: `liquibase.should.run=false`

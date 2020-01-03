@@ -8,6 +8,11 @@ includeDaticalBox: true
 
 <div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/lbZxAvftCX0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
+## Prerequisites
+Before performing any of these steps, you must be able to connect to a local or remote database, accessible via command line or IDE/GUI. View the [Supported Databases](/databases.html) topic for more information on which databases we support. 
+
+You can also view the [Database Tutorials](/documentation/tutorials/index.html) topic for more information on running each database with Liquibase.
+
 ## Step 1: Create or Generate a Changelog File
 
 To complete your first migration, you must have a [database changelog file](/documentation/databasechangelog.html). The Changelog file is where all your database changes are defined. Using Liquibase Functions allows you to define these changes with XML, JSON, or YAML. For this walkthrough, we will use XML examples.
@@ -100,6 +105,8 @@ The DATABASECHANGELOG table contains a list of all the changes that
 have been run against the database. The DATABASECHANGELOGLOCK table is used to make sure two machines don't attempt to modify the database at the same time.
 
 View [DATABASECHANGELOG Table](/documentation/databasechangelog_table.html) and [DATABASECHANGELOGLOCK Table](/documentation/databasechangeloglock_table.html) topics for more information.
+
+You can also learn how to create your [First Migrations with SQL](/get_started/quickstart_sql.html).
 
 ### Summary
 In this tutorial we covered:

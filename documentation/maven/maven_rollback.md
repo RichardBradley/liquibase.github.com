@@ -3,9 +3,10 @@ layout: default
 title: Maven rollback | Liquibase Docs
 subnav: subnav_maven.md
 ---
-<div markdown="1">
-<iframe class="maven" src="generated/rollback-mojo.html"></iframe>
-</div>
+
+> *Note* that there are [differences in how rollback works with Maven vs. how it works from the CLI](/documentation/maven/maven_rollback.html#differences-in-controlling-rollback-behavior)
+
+{% include_relative generated/rollback-mojo.html %}
 <br>
 
 ## Differences in Controlling Rollback Behavior

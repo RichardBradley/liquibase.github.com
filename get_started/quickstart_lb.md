@@ -106,6 +106,8 @@ have been run against the database. The DATABASECHANGELOGLOCK table is used to m
 
 View [DATABASECHANGELOG Table](/documentation/databasechangelog_table.html) and [DATABASECHANGELOGLOCK Table](/documentation/databasechangeloglock_table.html) topics for more information.
 
+You can also learn how to create your [First Migrations with SQL](/get_started/quickstart_sql.html).
+
 ### Summary
 In this tutorial we covered:
 - Creating/Generating Changelogs

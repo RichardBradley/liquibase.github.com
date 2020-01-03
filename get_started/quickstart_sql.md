@@ -74,6 +74,8 @@ This topic is great when you only have a handful of SQL scripts. However, if you
 
 See the [Database Migrations with Multiple SQL Files](/documentation/multiple-sql-migration.html) topic for more information on how to Migrate with Multiple SQL files.
 
+You can also learn how to create your [First Migrations with Liquibase Functions](/get_started/quickstart_lb.html).
+
 ### Summary
 In this tutorial we covered:
 - Creating Formatted SQL Changelogs

@@ -8,15 +8,11 @@ subnav: subnav_maven.md
 
 Liquibase can be controlled via a Maven plug-in which can be obtained from the central Maven repository.
 
-You can find the all the versions of the Liquibase-core and Maven plugins in the central repository by going [here](http://mvnrepository.com/artifact/org.liquibase/liquibase-core). 
+You can find all the versions of the Liquibase-core and Maven plugins in the central repository by going [here](http://mvnrepository.com/artifact/org.liquibase/liquibase-core). 
 
 We recommend using Apache Maven 3.1.x or newer to make it easier to configure the log-level of Liquibase Maven Plugin with MAVEN_OPTs or by passing the following command:
 
-<div class="code-highlight" markdown="1">
-
 `-Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG`
-
-</div>
 
 ## Goals Available
 
@@ -114,21 +110,21 @@ The following is a sample configuration for the Liquibase Maven plugin, version 
   <project>
     <build>
       <plugins>
-		<plugin>
-		   <groupId>org.liquibase</groupId>
-		   <artifactId>liquibase-maven-plugin</artifactId>
-		   <configuration>                  
-			  <propertyFile>src/main/resources/liquibase/liquibase.properties</propertyFile>
-		   </configuration>                
-		   <executions>
-			 <execution>
-			   <phase>process-resources</phase>                                                                  
-			   <goals>
-				 <goal>update</goal>
-			   </goals>
-			 </execution>
-		   </executions>
-		</plugin> 	
+        <plugin>
+           <groupId>org.liquibase</groupId>
+           <artifactId>liquibase-maven-plugin</artifactId>
+           <configuration>                  
+             <propertyFile>src/main/resources/liquibase/liquibase.properties</propertyFile>
+           </configuration>                
+           <executions>
+             <execution>
+               <phase>process-resources</phase>                                                                  
+               <goals>
+               <goal>update</goal>
+               </goals>
+             </execution>
+           </executions>
+        </plugin>   
       </plugins>
     </build>
   </project>
@@ -168,19 +164,11 @@ All the parameters for executing the Maven Liquibase plugin can also be specifie
 
 To disable the popup dialog that confirms migrations on non-local databases, add the following code snippet:
 
-<div class="code-highlight" markdown="1">
-
 `<promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>`
-
-</div>
 
 Use the following maven command to get hints about all available configuration parameters within the Liquibase maven plugin:
 
-<div class="code-highlight" markdown="1">
-
 `mvn help:describe -DgroupId=org.liquibase -DartifactId=liquibase-maven-plugin -Dversion=2.0.1 -Dfull=true` 
-
-</div>
 
 ### Using a global configuration for multiple projects
 
@@ -248,20 +236,13 @@ You can have as many property file filters as you need. To specify the filter to
 
 A typical invocation would look like this:
 
-<div class="code-highlight" markdown="1">
-
 `mvn resources:resources liquibase:update -P<profile_name>`
-
-</div>
 
 Invoking the `resources` is necessary in order to have the `liquibase.properties` placeholders filtered. The `-P` option tells Maven the profile to use and thus the set of values (from the filter properties file) to use for filtering.
 
 If you don't need the filtering capabilities, you can replace in the super-pom plugin configuration with the following:
 
-<div class="code-highlight" markdown="1"> 
-
 `<propertyFile>target/classes/liquibase.properties</propertyFile> by <propertyFile>src/main/resources/liquibase.properties</propertyFile>` 
-</div>
 
 Invocation is then simplified to a mere: `mvn liquibase:update`.
 

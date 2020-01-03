@@ -72,7 +72,7 @@ in the [README.md file in the _doc_generators directory](_doc_generators/README.
 The second generated section is the documentation for the Liquibase Maven Plugin. The process for generating these docs
 and incorporating them into this site:
 * clone the [liquibase core source code](https://github.com/liquibase/liquibase)
-* run `mvn package site` to compile and package the code, and then generate maven-style site documentation. Most of that documentation will not get used.
+* run `mvn -DskipTests package site` to compile and package the code, and then generate maven-style site documentation. Most of that documentation will not get used.
 * copy files from `liquibase/liquibase-maven-plugin/target/site` to `liquibase.github.com/documentation/maven/generated`
   * There is a shell script in the root of this project `copyMavenDocs.sh` that will copy the correct files for you.
 * double check the diffs and then commit the changes. 

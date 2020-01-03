@@ -19,9 +19,9 @@ In this tutorial, we will cover a few simple mechanisms Liquibase uses to track,
 <div class="tile-item" markdown="1">
 
 ### Changelogs
-Liquibase uses a *changelog* to explicitly list database changes in order. The *changelog* acts as a ledger of changes and contains changesets (units of change) that Liquibase can execute on a database.
+Liquibase uses a *changelog* to explicitly list database changes in order. The *changelog* acts as a ledger of changes and contains a *changeSet* (units of change) that Liquibase can execute on a database.
 
-View our [Database Changelog File](/documentation/databasechangelog.html) and [Changeset Tag](/documentation/changeset.html) topics for more information.
+View our [Database changelog File](/documentation/databasechangelog.html) and [changeSet Tag](/documentation/changeset.html) topics for more information.
 </div>
 </div>
 <!-- >**Note:** It is a best practice to ensure that each changeSet is as atomic a change as possible to avoid failed statements from leaving the database in an unknown state; however, it is possible to treat a large SQL script as a single changeSet. -->
@@ -30,9 +30,9 @@ View our [Database Changelog File](/documentation/databasechangelog.html) and [C
     <div class="tile-item" markdown="1">
 
 ### Tracking Tables
-Liquibase tracks which changeSets have or have not been deployed in a tracking table called a `DATABASECHANGELOG`. If your database does not already contain a tracking table, Liquibase will create it for you. 
+Liquibase tracks which *changeSets* have or have not been deployed in a tracking table called a `DATABASECHANGELOG`. If your database does not already contain a tracking table, Liquibase will create it for you. 
 
-Liquibase also prevents conflicts from different callers updates on a secondary table called `DATABASECHANGELOGLOCK`.
+Liquibase also prevents conflicts from different callers' updates on a secondary table called `DATABASECHANGELOGLOCK`.
 
 View our [DATABASECHANGELOG Table](/documentation/databasechangelog_table.html) and [DATABASECHANGELOCK Table](/documentation/databasechangeloglock_table.html) topics for more information.
 </div>
@@ -44,17 +44,17 @@ View our [DATABASECHANGELOG Table](/documentation/databasechangelog_table.html) 
 <!--
 >**Note:** It is possible to specify where (which catalog/schema) the tables should be created. -->
     
-Changelogs and tracking tables allow liquibase to:
+*changelog* and tracking tables allow Liquibase to:
 - **Track and version database changes** – Users know what changes have been deployed to the database and what changes have not yet been deployed.
 - **Deploy changes** – Liquibase compares the *changelog* against the tracking table, and only deploys changes that have not been deployed to the database. 
 
-Liquibase also has advanced features such as contexts, labels, and preconditions to precisely control when and where changeSets are deployed.
+Liquibase also has advanced features such as contexts, labels, and preconditions to precisely control when and where a *changeSet* is deployed.
 
 >**Note:** To assist with projects where you are not starting with a blank database, Liquibase has a feature to [generate a changelog](/documentation/generating_changelogs.html) to represent the current state of the database schema.
 
 ### Summary
 In this tutorial we covered:
--   Basic Liquibase mechanisms: changelogs & tracking tables.
+-   Basic Liquibase mechanisms: *changelog* & tracking tables.
 -   How these mechanisms work to track, version, and deploy changes.
 
 ## **Next Up:** 

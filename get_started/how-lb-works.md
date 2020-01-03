@@ -44,7 +44,7 @@ View our [DATABASECHANGELOG Table](/documentation/databasechangelog_table.html) 
 <!--
 >**Note:** It is possible to specify where (which catalog/schema) the tables should be created. -->
     
-*changelog* and tracking tables allow Liquibase to:
+*changelogs* and tracking tables allow Liquibase to:
 - **Track and version database changes** – Users know what changes have been deployed to the database and what changes have not yet been deployed.
 - **Deploy changes** – Liquibase compares the *changelog* against the tracking table, and only deploys changes that have not been deployed to the database. 
 

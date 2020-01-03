@@ -19,7 +19,7 @@ In this tutorial, we will cover a few simple mechanisms Liquibase uses to track,
 <div class="tile-item" markdown="1">
 
 ### Changelogs
-Liquibase uses a *changelog* to explicitly list database changes in order. The *changelog* acts as a ledger of changes and contains a *changeSet* (units of change) that Liquibase can execute on a database.
+Liquibase uses a *changelog* to explicitly list database changes in order. The *changelog* acts as a ledger of changes and contains a list of *changeSets* (units of change) that Liquibase can execute on a database.
 
 View our [Database changelog File](/documentation/databasechangelog.html) and [changeSet Tag](/documentation/changeset.html) topics for more information.
 </div>

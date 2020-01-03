@@ -65,6 +65,7 @@ includeDaticalBox: true
         <li><a href="generate-sql-update-schemas.html">Generating SQL to Update Database Schemas</a></li>
         <li><a href="offline.html">Using Offline Database Support</a></li>
         <li><a href="trimming_changelogs.html">Trimming changelog files</a></li>
+        <li><a href="\documentation\changes/index.html">Making Changes & Refactoring Commands</a></li>
     </ul>
   </div>
   <div class="docs-column">

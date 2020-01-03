@@ -54,7 +54,7 @@ Liquibase also has advanced features such as contexts, labels, and preconditions
 
 ### Summary
 In this tutorial we covered:
--   Basic Liquibase mechanisms: *changelog* & tracking tables.
+-   Basic Liquibase mechanisms: *changelogs* & tracking tables.
 -   How these mechanisms work to track, version, and deploy changes.
 
 ## **Next Up:** 

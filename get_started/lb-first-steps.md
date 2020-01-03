@@ -58,7 +58,7 @@ Choosing this path means that your changes are defined in XML, JSON or YAML form
 <div class="tile-item" markdown="1">
 
 #### **SQL Format**
-Choosing this path means that you can define your own changes in SQL format, then deploy those changes to your database automatically. Liquibase supports plain SQL scripts designed to be custom or specific to your database. 
+Choosing this path means that you can define your own changes in SQL format. Liquibase will create SQL formatted changelogs that define your *changeSets*, then generate and deploy those changes to your database automatically. Liquibase supports plain SQL scripts designed to be custom or specific to your database and can even reference multiple script files in your *changelogs*.  
 </div>
 
 <div class="tile-item" align="center">

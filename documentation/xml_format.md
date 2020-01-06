@@ -16,7 +16,7 @@ See [the XML Schema Definitions](/xml/ns/dbchangelog/) for more information.
 ## Liquibase Extension XSDs
 
 If you use a [Liquibase extension](../extensions/index.html) that includes additional change tags, check the extension documentation to find out if they provide a XSD.
-If they do not, you can use the xsd at [dbchangelog-ext.xsd](dbchangelog-ext.xsd) which allows any nested tag and attribute.
+If they do not, you can use the xsd at [dbchangelog-ext.xsd](/xml/ns/dbchangelog/dbchangelog-ext.xsd) which allows any nested tag and attribute.
 
 ## Limitations
 

@@ -5,8 +5,8 @@ title: diffChangeLog Command | Liquibase Docs
 
 # Liquibase Commands: `diffChangeLog`
 The `diffChangeLog` command provides you with:
-+ Information containing differences between two databases; specifically, the diffChangeLog  points out the differences in general and generates changes to resolve most of them.
-+ A *changelog* file containing deployable change sets.
++ Information containing differences between two databases; specifically, the `diffChangeLog` command points out the differences in general and generates changes to resolve most of them.
++ A *changelog* file containing deployable *changeSets*.
 
 ## Uses
 The `diffChangeLog` command is typically used when you want to create a deployable *changelog* to synchronize multiple databases. The `diffChangeLog` command also provides more information about:
@@ -36,53 +36,66 @@ diffChangeLog
 --referencePassword=<PASSWORD>
 {% endhighlight %}
 
->**Note:** When running `diffChangeLog` against two different databases, the class path property should reference both .jar files. Use the path separator that is correct
-for your operating system (a semicolon on Windows, a colon on Mac or Linux). Example: `classpath: ojdbc7.jar:postgresql-42.2.8.jar`
+>**Note:** When running `diffChangeLog` against two different databases, the class path property should reference both .jar files. Use the path separator that is correct for your operating system (a semicolon on Windows, a colon on Mac or Linux). Example: `classpath: ojdbc7.jar:postgresql-42.2.8.jar`
 
-+ Alternatively, configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for both databases.
-Run the following command:
++ Alternatively, configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for both databases. Run the following command:
+
 {% highlight text %}
+
 liquibase --changeLogFile=file_name.xml diffChangeLog
+
 {% endhighlight %} 
 
 > **Note:** Replace *file_name.xml*, with your filename and extension format. If you specify a file name that already exists, Liquibase will append your changes to the existing file.
 
 For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your *liquibase.properties* File](config_properties.html) topic in the knowledge base.
 
+## Output
+The `diffChangeLog` command produces a list of all *Objects* and creates a *changelog* with a list of *changeSets*.
+
+Liquibase Community `diffChangeLog` categories:
+- Catalog
+- Column
+- Foreign Key
+- Index
+- Primary Key
+- Schema
+- Sequence
+- Procedure
+- Unique Constraints
+- View
+
+### Example
+
 <details>
 <summary style="font-size:125%;color:blue;">Console Output Example</summary>
 <br>
 {% highlight text %}
+
 Liquibase Pro 3.8.1 by Datical licensed to Liquibase Pro Customer
 Liquibase command 'diffChangeLog' was executed successfully.
+
 {% endhighlight %}
 </details>
+<br>
 
-The `diffChangeLog` command produces a list of all objects and creates a changelog with a list of changesets.
+## Additional Functionality with Liquibase Pro
+While Liquibase Community stores all *changeSets* in a *changelog*, Liquibase Pro creates a directory called *Objects* and places the directory at the same level as your *changelog*. The *Objects* directory contains a subdirectory for each of the following stored logic types: 
+- checkconstraint
+- package
+- packagebody
+- function
+- trigger
+- synonyms
 
-Liquibase Community `diffChangeLog` categories:
-+ Catalog
-+ Column
-+ Foreign Key
-+ Index
-+ Primary Key
-+ Schema
-+ Sequence
-+ Procedure
-+ Unique Constraints
-+ View
+>**Note:** that not all database platforms support all of these types.
 
-Additional Liquibase Pro `diffChangeLog` categories:
+### Example
 
-+ Check Constraint
-+ Package
-+ Package Body
-+ Function
-+ Trigger
-+ Synonyms
 <details>
 <summary style="font-size:125%;color:blue;">Pro diffChangeLog sample file</summary>
 <br>
+
 {% highlight xml %}
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -134,4 +147,5 @@ Additional Liquibase Pro `diffChangeLog` categories:
 </databaseChangeLog>
 {% endhighlight %}
 </details>
+
 > **Note:** Liquibase does not currently check datatype length.

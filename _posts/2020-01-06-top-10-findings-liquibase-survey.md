@@ -62,7 +62,7 @@ Some positive pieces of feedback we wanted to share:
 -- Anonymous
 
 “Liquibase is a great tool that changed the way I managed database changes.”
--- Anonymous 
+-- A.F., Development Manager 
 
 “Fantastic tool.”
 -- Anonymous

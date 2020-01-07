@@ -23,14 +23,12 @@ Understanding how the community executes Liquibase helps us understand where to 
 <img src="/blog/images/execute-liquibase.png">
 
 ## 4 — The most popular databases to use with Liquibase surprised us.
-There were some not officially supported databases that showed up high on our list and some supported ones that not many people use. It’s definitely time to make sure we’re officially supporting the databases the community works with most. We’d like to learn more from you about how you’re using Liquibase with databases like MySQL and MariaDB. 
+There were some not officially supported databases that showed up high on our list and some supported ones that not many people use. It’s definitely time to make sure we’re officially supporting the databases the community works with most. We’d like to learn more from you about how you’re using Liquibase with databases like MySQL and MariaDB. Look for a conversation on this topic soon [on our subreddit](https://www.reddit.com/r/liquibase/). 
 
 <img src="/blog/images/popular-databases-liquibase.png">
 
 ## 5 — Understanding your preference for writing change scripts. 
-We asked the community for their preference for writing change scripts (1 being most preferred and 5 being least preferred). We hear you. Yes, many people like using XML, but many Liquibase users prefer SQL. 
-
-We’ll be focusing on documenting the use of plain old SQL better and also improving the overall experience for those that use SQL for change scripts. 
+We asked the community for their preference for writing change scripts (1 being most preferred and 5 being least preferred). We hear you. Yes, many people like using XML, but many Liquibase users prefer SQL. What many people don't know is that you CAN use plain old SQL with Liquibase. We’ll be focusing on documenting the use of plain SQL better and also improving the overall experience for those that use SQL for change scripts. 
 
 <img src="/blog/images/authoring-database-change-scripts.png">
 
@@ -45,7 +43,9 @@ There are a LOT of CI tools out there, but our survey shows most Liquibase users
 <img src="/blog/images/Jenkins-preference-Liquibase.png">
 
 ## 8 — We need to continue making our documentation better. 
-We’ve made a ton of improvements recently and plan on making many more to our docs, add video tutorials, and make our getting started information more useful. Most of the other input we received was about adding or improving integrations and various features.
+We’ve made a ton of improvements recently and plan on making many more to our docs, add video tutorials, and make our getting started information more useful. If you haven't seen it lately, [check out the Documentation section](http://www.liquibase.org/documentation/index.html). 
+
+Most of the other input we received was about adding or improving integrations and various features. More on that soon.
 
 ## 9 — Features that you’d most like to see.
 Features that are highest in demand are around rolling back a specific change and an easier way to run platform-specific SQL. We’ve added these items to our road map and you’ll be seeing these become reality very soon!
@@ -67,4 +67,4 @@ Some positive pieces of feedback we wanted to share:
 “Fantastic tool.”
 -- Anonymous
 
-Please send feedback about things you wish were better, or submit a documentation pull request. There's a link at the bottom of every page of the site.
+Please keep sending feedback about things you wish were better, or submit a documentation pull request. There's a link at the bottom of every page of the site.

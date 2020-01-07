@@ -66,3 +66,5 @@ Some positive pieces of feedback we wanted to share:
 
 “Fantastic tool.”
 -- Anonymous
+
+Please send feedback about things you wish were better, or submit a documentation pull request. There's a link at the bottom of every page of the site.

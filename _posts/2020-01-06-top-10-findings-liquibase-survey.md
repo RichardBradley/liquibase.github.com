@@ -23,7 +23,7 @@ Understanding how the community executes Liquibase helps us understand where to 
 <img src="/blog/images/execute-liquibase.png">
 
 ## 4 — The most popular databases to use with Liquibase surprised us.
-There were some not officially supported databases that showed up high on our list and some supported ones that not many people use. It’s definitely time to make sure we’re officially supporting the databases the community works with most. We’d like to learn more from you about how you’re using Liquibase with databases like MySQL and MariaDB. Look for a conversation on this topic soon [on our subreddit](https://www.reddit.com/r/liquibase/). 
+There were some not officially supported (i.e., fully tested and vetted) databases that showed up high on our list and some supported ones that not many people use. It’s definitely time to make sure we’re officially supporting and thoroughly testing the databases the community works with most. We’d like to learn more from you about how you’re using Liquibase with databases like MySQL and MariaDB. Look for a conversation on this topic soon [on our subreddit](https://www.reddit.com/r/liquibase/). 
 
 <img src="/blog/images/popular-databases-liquibase.png">
 

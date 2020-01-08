@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change update | Liquibase Docs
+title: Docs | Change update 
 ---
 
 <!-- ====================================================== -->

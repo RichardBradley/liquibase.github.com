@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change renameTrigger | Liquibase Docs
+title: Docs | Change renameTrigger 
 ---
 
 <!-- ====================================================== -->

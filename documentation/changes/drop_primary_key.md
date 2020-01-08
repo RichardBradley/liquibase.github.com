@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change dropPrimaryKey | Liquibase Docs
+title: Docs | Change dropPrimaryKey 
 ---
 
 <!-- ====================================================== -->

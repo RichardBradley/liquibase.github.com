@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Changeset tag | Liquibase Docs
+title: Docs | Changeset tag 
 ---
 
 # &lt;changeSet&gt; tag #

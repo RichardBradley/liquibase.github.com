@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Rollbackdatabase ant task | Liquibase Docs
+title: Docs | Rollbackdatabase ant task 
 subnav: subnav_documentation.md
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Labels | Liquibase Docs
+title: Docs | Labels 
 ---
 
 # Labels #

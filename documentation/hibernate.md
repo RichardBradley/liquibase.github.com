@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Hibernate | Liquibase Docs
+title: Docs | Hibernate 
 ---
 
 # Using Liquibase with Hibernate

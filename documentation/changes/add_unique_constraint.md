@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change addUniqueConstraint | Liquibase Docs
+title: Docs | Change addUniqueConstraint 
 ---
 
 <!-- ====================================================== -->

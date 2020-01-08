@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change anonymous | Liquibase Docs
+title: Docs | Change anonymous 
 ---
 
 <!-- ====================================================== -->

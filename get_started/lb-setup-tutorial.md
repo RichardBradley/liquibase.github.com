@@ -1,6 +1,6 @@
 ---
 layout: side-search
-title: Setting up Liquibase Tutorial | Liquibase Docs
+title: Docs | Setting up Liquibase Tutorial 
 subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---

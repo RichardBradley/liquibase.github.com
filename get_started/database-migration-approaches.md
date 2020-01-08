@@ -1,6 +1,6 @@
 ---
 layout: side-search
-title: Database Change Management Approaches | Liquibase Docs
+title: Docs | Database Change Management Approaches 
 subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---

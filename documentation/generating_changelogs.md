@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Generating changelogs | Liquibase Docs
+title: Docs | Generating changelogs 
 ---
 
 # Liquibase Commands: generateChangeLog

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Changelogsync ant task | Liquibase Docs
+title: Docs | Changelogsync ant task 
 subnav: subnav_documentation.md
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change dropDefaultValue | Liquibase Docs
+title: Docs | Change dropDefaultValue 
 ---
 
 <!-- ====================================================== -->

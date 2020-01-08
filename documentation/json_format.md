@@ -1,6 +1,6 @@
 ---
 layout: default
-title: JSON Format | Liquibase Docs
+title: Docs | JSON Format 
 ---
 
 # JSON Format

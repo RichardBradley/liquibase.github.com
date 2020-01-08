@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Modify SQL | Liquibase Docs
+title: Docs | Modify SQL 
 ---
 
 # Modifying Generated SQL #

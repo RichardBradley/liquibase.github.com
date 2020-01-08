@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Maven tag | Liquibase Docs
+title: Docs | Maven tag 
 subnav: subnav_maven.md
 ---
 

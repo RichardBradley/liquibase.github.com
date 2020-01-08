@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MySQL Tutorial | Liquibase Docs
+title: Docs | MySQL Tutorial 
 subnav: subnav_tutorials.md
 ---
 

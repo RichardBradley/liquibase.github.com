@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Installing Liquibase Command Line Tool for Windows | Liquibase Docs
+title: Docs | Installing Liquibase Command Line Tool for Windows 
 ---
 
 # Installing Liquibase Command Line for Windows

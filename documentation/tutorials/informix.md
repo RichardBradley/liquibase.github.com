@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Informix | Liquibase Docs
+title: Docs | Informix 
 subnav: subnav_tutorials.md
 ---
 # Informix 

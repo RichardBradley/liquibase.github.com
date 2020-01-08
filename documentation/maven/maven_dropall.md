@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Maven dropall | Liquibase Docs
+title: Docs | Maven dropall 
 subnav: subnav_maven.md
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change output | Liquibase Docs
+title: Docs | Change output 
 ---
 
 <!-- ====================================================== -->

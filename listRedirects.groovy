@@ -110,6 +110,13 @@ currentDir.eachFileRecurse { thisFile ->
       def canonicalString = isCanonical ? "(has canonical reference)" : "(DOES NOT HAVE CANONICAL REFERENCE)"
       println "type 3 redirect: ${fileName} redirects to ${target} ${canonicalString}"
     }
+
+    // check for type 4 redirect
+    def type4Match = contents =~ /(?m)redirectUrl: (.*)/
+    if (type4Match) {
+      target = type4Match[0][1]
+      println "type 4 redirect: ${fileName} redirects to ${target}"
+    }
     
   } 
 }

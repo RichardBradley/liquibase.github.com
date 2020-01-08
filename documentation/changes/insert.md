@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change insert | Liquibase Docs
+title: Docs | Change insert 
 ---
 
 <!-- ====================================================== -->

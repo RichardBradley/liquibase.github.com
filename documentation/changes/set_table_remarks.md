@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change setTableRemarks | Liquibase Docs
+title: Docs | Change setTableRemarks 
 ---
 
 <!-- ====================================================== -->

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Maven diff | Liquibase Docs
+title: Docs | Maven diff 
 subnav: subnav_maven.md
 ---
 

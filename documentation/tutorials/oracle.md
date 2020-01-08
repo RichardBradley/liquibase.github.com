@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Oracle Tutorial | Liquibase Docs
+title: Docs | Oracle Tutorial 
 subnav: subnav_tutorials.md
 ---
 

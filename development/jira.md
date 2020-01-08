@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Using Jira | Liquibase Docs
+title: Docs | Using Jira 
 ---
 
 # Using Jira

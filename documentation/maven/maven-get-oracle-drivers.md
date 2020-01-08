@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Maven Get Oracle Drivers | Liquibase Docs
+title: Docs | Maven Get Oracle Drivers 
 subnav: subnav_maven.md
 ---
 

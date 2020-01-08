@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change addDefaultValue | Liquibase Docs
+title: Docs | Change addDefaultValue 
 ---
 
 <!-- ====================================================== -->

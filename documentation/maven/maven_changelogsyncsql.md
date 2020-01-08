@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Maven changelogsyncsql | Liquibase Docs
+title: Docs | Maven changelogsyncsql 
 subnav: subnav_maven.md
 ---
 

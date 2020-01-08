@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Using Liquibase with Spring Boot and Maven | Liquibase Docs
+title: Docs | Using Liquibase with Spring Boot and Maven 
 ---
 
 # Using Liquibase with Spring Boot and Maven Tutorial #

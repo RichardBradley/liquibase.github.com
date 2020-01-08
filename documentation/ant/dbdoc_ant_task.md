@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Dbdoc ant task | Liquibase Docs
+title: Docs | Dbdoc ant task 
 subnav: subnav_documentation.md
 ---
 

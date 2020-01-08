@@ -1,6 +1,6 @@
 ---
 layout: side-search
-title: Liquibase First Steps | Liquibase Docs
+title: Docs | Liquibase First Steps 
 subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Migrations with Liquibase Functions| Liquibase Docs
+title: Docs | Migrations with Liquibase Functions
 subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---

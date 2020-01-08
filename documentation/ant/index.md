@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Ant | Liquibase Docs
+title: Docs | Ant 
 subnav: subnav_documentation.md
 ---
 

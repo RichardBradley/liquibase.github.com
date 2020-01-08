@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change createSequence | Liquibase Docs
+title: Docs | Change createSequence 
 ---
 
 <!-- ====================================================== -->

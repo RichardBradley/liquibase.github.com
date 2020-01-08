@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Architecture | Liquibase Docs
+title: Docs | Architecture 
 ---
 
 # Liquibase Code Organization

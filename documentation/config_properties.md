@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Creating and Configuring liquibase.properties File | Liquibase Docs
+title: Docs | Creating and Configuring liquibase.properties File 
 ---
 # Creating and Configuring a liquibase.properties File
 <div align="center">

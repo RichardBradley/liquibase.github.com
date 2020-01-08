@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Maven generateChangeLog | Liquibase Docs
+title: Docs | Maven generateChangeLog 
 subnav: subnav_maven.md
 ---
 

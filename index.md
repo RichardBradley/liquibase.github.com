@@ -1,6 +1,6 @@
 ---
 layout: side-search
-title: Liquibase
+title: Database Version Control
 includeDaticalBox: true
 extraStyleSheets:
   - choose-path

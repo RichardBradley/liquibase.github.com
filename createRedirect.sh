@@ -47,6 +47,7 @@ else
   echo "<head>" >> $FILENAME
   echo "    <meta http-equiv=\"refresh\" content=\"0;url=$TARGETURL\">" >> $FILENAME
   echo "    <link rel=\"canonical\" href=\"$TARGETURL\">" >> $FILENAME
+  echo "    <title>Redirecting to $TARGETURL...</title>" >> $FILENAME
   echo "</head>" >> $FILENAME
   echo "</html>" >> $FILENAME
 

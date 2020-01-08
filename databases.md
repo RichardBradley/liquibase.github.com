@@ -21,7 +21,7 @@ Please find further information about which JDBC driver, URL, classes etc. these
 <tr><td>DB2</td><td>db2</td><td>No Issues. Will auto-call REORG when necessary.</td></tr>
 <tr><td><a href="\documentation\tutorials\apache-derby.html">Apache_Derby</a></td><td>derby</td><td>No Issues</td></tr>
 <tr><td>HSQL</td><td>hsqldb</td><td>No Issues</td></tr>
-<tr><td>H2</td><td>h2</td><td>No Issues</td></tr>
+<tr><td><a href="\documentation\tutorials\h2.html">H2</a></td><td>h2</td><td>No Issues</td></tr>
 <tr><td><a href="\documentation\tutorials\informix.html">Informix</a></td><td>informix</td><td>No Issues</td></tr>
 <tr><td>Firebird</td><td>firebird</td><td>No Issues</td></tr>
 <tr><td><a href="\documentation\tutorials\sqlite.html">SQLite</a></td><td>sqlite</td><td>No Issues</td></tr>

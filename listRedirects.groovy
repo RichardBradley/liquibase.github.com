@@ -108,7 +108,9 @@ currentDir.eachFileRecurse { thisFile ->
       target = type3Match[0][1]
       def isCanonical = contents =~/(?m)<link rel="canonical" href="/
       def canonicalString = isCanonical ? "(has canonical reference)" : "(DOES NOT HAVE CANONICAL REFERENCE)"
-      println "type 3 redirect: ${fileName} redirects to ${target} ${canonicalString}"
+      def hasTitle = contents =~/(?m)<title>.*<\/title>/
+      def titleStatus = hasTitle ? "(has title)" : "(DOES NOT HAVE TITLE)"
+      println "type 3 redirect: ${fileName} redirects to ${target} ${canonicalString} ${titleStatus}"
     }
     
   } 

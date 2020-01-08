@@ -7,6 +7,11 @@ extraStyleSheets:
   - value-props
 ---
 
+<div style="padding-top: 24px;">
+    <a href="https://register.gotowebinar.com/register/70786962673831938" target="_blank">
+        <img src="/images/Liquibase-Community-Meetup-Banner.jpg" alt="Liquibase Community Meetup Banner" style="width: 100%;">
+    </a>
+</div>
 <p></p>
 <h1 style="display:flex; justify-content:center; text-align:center; font-size: 20px;">Liquibase is the leading open source tool for database schema change management.</h1>
 

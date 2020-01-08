@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change tagDatabase | Liquibase Docs
+title: Docs | Change tagDatabase 
 ---
 
 <!-- ====================================================== -->

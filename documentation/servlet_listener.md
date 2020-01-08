@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Servlet listener | Liquibase Docs
+title: Docs | Servlet listener 
 ---
 
 # Servlet Listener #

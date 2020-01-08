@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change dropIndex | Liquibase Docs
+title: Docs | Change dropIndex 
 ---
 
 <!-- ====================================================== -->

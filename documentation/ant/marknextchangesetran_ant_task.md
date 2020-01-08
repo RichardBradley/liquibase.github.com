@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Marknextchangesetran ant task | Liquibase Docs
+title: Docs | Marknextchangesetran ant task 
 subnav: subnav_documentation.md
 ---
 

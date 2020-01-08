@@ -1,6 +1,6 @@
 ---
 layout: default
-title: snapshot Command | Liquibase Docs
+title: Docs | snapshot Command 
 ---
 
 # Liquibase Commands: `snapshot`

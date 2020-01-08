@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Maven migrate | Liquibase Docs
+title: Docs | Maven migrate 
 subnav: subnav_maven.md
 ---
 

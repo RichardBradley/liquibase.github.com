@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Core Concepts Home | Liquibase Docs
+title: Docs | Core Concepts Home 
 subnav: subnav_documentation.md
 includeDaticalBox: true
 ---

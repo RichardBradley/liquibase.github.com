@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change addNotNullConstraint | Liquibase Docs
+title: Docs | Change addNotNullConstraint 
 ---
 
 <!-- ====================================================== -->

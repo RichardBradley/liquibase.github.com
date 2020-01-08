@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MariaDB Tutorial | Liquibase Docs
+title: Docs | MariaDB Tutorial 
 subnav: subnav_tutorials.md
 ---
 

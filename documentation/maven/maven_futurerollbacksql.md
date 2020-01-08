@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Maven futureRollbackSQL | Liquibase Docs
+title: Docs | Maven futureRollbackSQL 
 subnav: subnav_maven.md
 ---
 

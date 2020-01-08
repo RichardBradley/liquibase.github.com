@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change executeCommand | Liquibase Docs
+title: Docs | Change executeCommand 
 ---
 
 <!-- ====================================================== -->

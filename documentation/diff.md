@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Diff Command | Liquibase Docs
+title: Docs | Diff Command 
 ---
 # Liquibase Commands: `diff`
 The `diff` command in Liquibase allows you to compare two databases of the same type or different types to one another.

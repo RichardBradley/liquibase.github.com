@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Migrations with Multiple SQL Files | Liquibase Docs
+title: Docs | Migrations with Multiple SQL Files 
 ---
 # Database Migrations with Multiple SQL Files
 

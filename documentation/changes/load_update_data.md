@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change loadUpdateData | Liquibase Docs
+title: Docs | Change loadUpdateData 
 ---
 
 <!-- ====================================================== -->

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Diffdatabasetochangelog ant task | Liquibase Docs
+title: Docs | Diffdatabasetochangelog ant task 
 subnav: subnav_documentation.md
 ---
 

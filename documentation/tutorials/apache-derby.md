@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Apache derby | Liquibase Docs
+title: Docs | Apache derby 
 subnav: subnav_tutorials.md
 ---
 

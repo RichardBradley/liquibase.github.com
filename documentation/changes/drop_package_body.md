@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change dropPackageBody | Liquibase Docs
+title: Docs | Change dropPackageBody 
 ---
 
 <!-- ====================================================== -->

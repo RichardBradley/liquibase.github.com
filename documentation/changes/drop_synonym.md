@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change dropSynonym | Liquibase Docs
+title: Docs | Change dropSynonym 
 ---
 
 <!-- ====================================================== -->

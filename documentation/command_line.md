@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Command line | Liquibase Docs
+title: Docs | Command line 
 ---
 
 # Liquibase Command Line #

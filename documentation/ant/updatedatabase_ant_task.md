@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Updatedatabase ant task | Liquibase Docs
+title: Docs | Updatedatabase ant task 
 subnav: subnav_documentation.md
 ---
 

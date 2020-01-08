@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Grails | Liquibase Docs
+title: Docs | Grails 
 ---
 
 # Using Liquibase with Grails

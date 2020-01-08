@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change createView | Liquibase Docs
+title: Docs | Change createView 
 ---
 
 <!-- ====================================================== -->

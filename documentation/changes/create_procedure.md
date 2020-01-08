@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change createProcedure | Liquibase Docs
+title: Docs | Change createProcedure 
 ---
 
 <!-- ====================================================== -->

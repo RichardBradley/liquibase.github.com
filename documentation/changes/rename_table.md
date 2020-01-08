@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change renameTable 
+title: Docs | Change 'renameTable'
 ---
 
 <!-- ====================================================== -->

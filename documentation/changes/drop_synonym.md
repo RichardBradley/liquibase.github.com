@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change dropSynonym 
+title: Docs | Change 'dropSynonym'
 ---
 
 <!-- ====================================================== -->

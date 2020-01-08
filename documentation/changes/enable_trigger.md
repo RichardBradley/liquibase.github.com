@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change enableTrigger 
+title: Docs | Change 'enableTrigger'
 ---
 
 <!-- ====================================================== -->

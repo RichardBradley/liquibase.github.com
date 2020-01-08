@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change modifyDataType 
+title: Docs | Change 'modifyDataType'
 ---
 
 <!-- ====================================================== -->

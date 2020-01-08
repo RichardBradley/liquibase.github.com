@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change addDefaultValue 
+title: Docs | Change 'addDefaultValue'
 ---
 
 <!-- ====================================================== -->

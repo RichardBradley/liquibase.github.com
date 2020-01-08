@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change dropSequence 
+title: Docs | Change 'dropSequence'
 ---
 
 <!-- ====================================================== -->

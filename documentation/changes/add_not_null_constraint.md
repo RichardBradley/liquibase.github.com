@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change addNotNullConstraint 
+title: Docs | Change 'addNotNullConstraint'
 ---
 
 <!-- ====================================================== -->

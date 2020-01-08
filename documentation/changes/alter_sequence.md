@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change alterSequence 
+title: Docs | Change 'alterSequence'
 ---
 
 <!-- ====================================================== -->

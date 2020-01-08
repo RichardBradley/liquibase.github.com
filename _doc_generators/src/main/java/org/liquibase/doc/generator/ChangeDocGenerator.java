@@ -168,7 +168,7 @@ public class ChangeDocGenerator {
 
             String content = "---\n" +
                     "layout: default\n" +
-                    "title: Change " + changeMetaData.getName() + " | Liquibase Docs\n" +
+                    "title: Docs | Change '" + changeMetaData.getName() + "'\n" +
                     "---\n\n";
 
             content = addGeneratedHeader(content);

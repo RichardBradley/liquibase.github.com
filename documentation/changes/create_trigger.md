@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change createTrigger 
+title: Docs | Change 'createTrigger'
 ---
 
 <!-- ====================================================== -->

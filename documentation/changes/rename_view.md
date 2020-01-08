@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change renameView 
+title: Docs | Change 'renameView'
 ---
 
 <!-- ====================================================== -->

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change createSynonym 
+title: Docs | Change 'createSynonym'
 ---
 
 <!-- ====================================================== -->

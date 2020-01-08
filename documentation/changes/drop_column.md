@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change dropColumn 
+title: Docs | Change 'dropColumn'
 ---
 
 <!-- ====================================================== -->

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change dropTable 
+title: Docs | Change 'dropTable'
 ---
 
 <!-- ====================================================== -->

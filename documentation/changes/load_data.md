@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change loadData 
+title: Docs | Change 'loadData'
 ---
 
 <!-- ====================================================== -->

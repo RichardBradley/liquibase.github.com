@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change dropFunction 
+title: Docs | Change 'dropFunction'
 ---
 
 <!-- ====================================================== -->

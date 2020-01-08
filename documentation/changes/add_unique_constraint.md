@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change addUniqueConstraint 
+title: Docs | Change 'addUniqueConstraint'
 ---
 
 <!-- ====================================================== -->

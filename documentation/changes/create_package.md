@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change createPackage 
+title: Docs | Change 'createPackage'
 ---
 
 <!-- ====================================================== -->

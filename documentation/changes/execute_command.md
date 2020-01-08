@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change executeCommand 
+title: Docs | Change 'executeCommand'
 ---
 
 <!-- ====================================================== -->

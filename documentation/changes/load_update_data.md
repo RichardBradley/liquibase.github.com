@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change loadUpdateData 
+title: Docs | Change 'loadUpdateData'
 ---
 
 <!-- ====================================================== -->

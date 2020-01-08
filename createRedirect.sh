@@ -20,11 +20,11 @@ TARGETURL=$2
 # See if the target exists! the wget option --spider means to only check, do not
 # download. The -q means quiet. 
 echo "Checking to see if '$TARGETURL' already exists"
-if [[ $TARGETURL != "http:"* ]]; then
-  TARGETURL=http://www.liquibase.org$TARGETURL
+if [[ $TARGETURL != "http"* ]]; then
+  TESTURL=https://www.liquibase.org$TARGETURL
 fi
 
-wget -q --spider $TARGETURL
+wget -q --spider $TESTURL
 if [ $? -ne 0 ]; then
   echo "  Target URL $TARGETURL not found, not creating a redirect file."
   exit 1
@@ -47,6 +47,7 @@ else
   echo "<head>" >> $FILENAME
   echo "    <meta http-equiv=\"refresh\" content=\"0;url=$TARGETURL\">" >> $FILENAME
   echo "    <link rel=\"canonical\" href=\"$TARGETURL\">" >> $FILENAME
+  echo "    <title>Redirecting to $TARGETURL...</title>" >> $FILENAME
   echo "</head>" >> $FILENAME
   echo "</html>" >> $FILENAME
 

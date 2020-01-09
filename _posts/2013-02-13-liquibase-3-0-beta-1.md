@@ -4,6 +4,7 @@ subnav: subnav_blog.md
 title: Liquibase 3.0 Beta 1
 ---
 
+# Liquibase 3.0 Beta 1
 
 Although it has been far too long since the last liquibase release, that is not from a lack of work. I've been hard at work at a major update that has been stuck in the "I think I'll have it wrapped up next month" phase for over a year at this point. That is a topic for a future blog post, though&hellip;
 
@@ -53,4 +54,4 @@ My hope is that 3.0.0 beta represents a feature complete 3.0 version, but the fi
 
 ### Download
 
-As always, you can download the release from <a href="http://web.archive.org/web/20130316021822/http://liquibase.org/download">http://liquibase.org/download</a> and direct any comments or questions for <a href="http://web.archive.org/web/20130316021822/http://forum.liquibase.org/">http://forum.liquibase.org</a>
+As always, you can download the release from <a href="http://web.archive.org/web/20130316021822/http://liquibase.org/download">http://liquibase.org/download</a> and direct any comments or questions for <a href="http://web.archive.org/web/20130316021822/http://forum.liquibase.org/">https://forum.liquibase.org</a>

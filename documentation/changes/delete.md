@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change delete | Liquibase Docs
+title: Docs | Change 'delete'
 ---
 
 <!-- ====================================================== -->

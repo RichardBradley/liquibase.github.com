@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tutorials | Liquibase Docs
+title: Docs | Tutorials 
 subnav: subnav_tutorials.md
 ---
 # DB2 on z/OS Tutorial

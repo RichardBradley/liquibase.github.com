@@ -3,6 +3,10 @@ layout: default
 subnav: subnav_blog.md
 title: SOX Compliance and Database Refactoring
 ---
+<link href="https://www.liquibase.org/2007/07/sox-compliance-and-database-refactoring.html" rel="canonical">
+
+# SOX compliance and Database Refactoring
+
 Managing, tracking, and applying database changes is difficult, especially in an agile database environment where there are many changes made throughout a project's life cycle.   Even with a tool like Liquibase, It takes a lot of discipline to apply your database changes in a consistent and traceable manner.
 
 For projects that need to deal with SOX-compliant releases the process is even more difficult because your release documentation needs to include not only how to update your database, but also how to roll back in case of a problem with the release.

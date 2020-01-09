@@ -4,6 +4,8 @@ subnav: subnav_blog.md
 title: Welcome to the Liquibase Blog
 ---
 
+# Welcome to the Liquibase Blog
+
 We are starting the Liquibase blog for several reasons:
 
 Partly, it will be a place to announce new features and releases of Liquibase.

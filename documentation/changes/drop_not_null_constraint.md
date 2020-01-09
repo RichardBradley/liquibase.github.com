@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change dropNotNullConstraint | Liquibase Docs
+title: Docs | Change 'dropNotNullConstraint'
 ---
 
 <!-- ====================================================== -->

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change stop | Liquibase Docs
+title: Docs | Change 'stop'
 ---
 
 <!-- ====================================================== -->

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Generating changelogs | Liquibase Docs
+title: Docs | Generating changelogs 
 ---
 
 # Liquibase Commands: generateChangeLog
@@ -13,13 +13,14 @@ The `generateChangeLog` command creates a *changelog* file that has a sequence o
 ## Uses
 The `generateChangeLog` command is typically used when you want to capture the current state of a database, then apply those changes to any number of databases.
 
-> **Note:** When using the [update command](update.html) to apply the changes in the changelog, Liquibase will not create a new database or schema. You must create them ***before*** applying the *changelog* to it.
+> **Note:** When using the [update command](update.html) to apply the changes in the *changelog*, Liquibase will not create a new database or schema. You must create them ***before*** applying the *changelog* to it.
 
 ## Running the generateChangeLog command
 To generate a *changelog*:
 1. Configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for the database you want to capture.
-> **Note:** For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your liquibase.properties File](config_properties.html) 
-  topic in the knowledge base. Instead of using a liquibase.properties file, you can also pass the necessary information on the command line.
+
+> **Note:** For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your liquibase.properties File](config_properties.html) topic in the knowledge base. Instead of using a liquibase.properties file, you can also pass the necessary information on the command line.
+
 2. Open your command prompt or Linux terminal and run the following command:
 
 {% highlight text %}
@@ -30,26 +31,14 @@ liquibase --changeLogFile=dbchangelog.xml generateChangeLog
 
 ## Output
 
-The `generateChangeLog` command generates a *changelog* that contains all of your objects (represented as changesets) and places the file in the same directory where 
-the command was ran. The extension provided determines the format of the changelog, so if you specify the filename as `changelog.xml` you will get an XML formatted changelog,
-but if you specify the filename as `changelog.yaml` or `changelog.json` or `changelog.postgresql.sql` you will get changelogs formatted in YAML or JSON or SQL, respectively.
+The `generateChangeLog` command generates a *changelog* that contains all of your *Objects* (represented as *changeSets*) and places the file in the same directory where the command was ran. 
 
-Note that when generating a SQL formatted changelog, you must specify the short name of the targeted database type as part of the filename.
+The extension provided determines the format of the *changelog*, so if you specify the filename as `changelog.xml` you will get an XML formatted *changelog*. However, if you specify the filename as `changelog.yaml` or `changelog.json` or `changelog.postgresql.sql` you will get *changelogs* formatted in YAML or JSON or SQL, respectively.
 
-### Liquibase Pro Differences
+>**Note:** When generating an SQL formatted changelog, you must specify the short name of the targeted database type as part of the filename (as shown above).
 
-While Liquibase Community stores all the SQL in a *changelog*, Liquibase Pro creates a directory called *Objects* and places it at the same level as your *changelog*.
-The *Objects* directory contains a subdirectory for each of the following stored logic types. Note that not all database platforms support all of these types.
-
-+ package
-+ packagebody
-+ function
-+ storedprocedure
-+ trigger
-+ view
-
-## Examples
-<details open>
+### Example
+<details>
 <summary style="font-size:125%;color:blue;">Liquibase Community changelog</summary>
 <br>
 {% highlight xml %}
@@ -120,6 +109,21 @@ The *Objects* directory contains a subdirectory for each of the following stored
 
 {% endhighlight %}
 </details>
+<br>
+
+## Additional Functionality with Liquibase Pro
+While Liquibase Community stores all *changeSets* in a *changelog*, Liquibase Pro creates a directory called *Objects* and places the directory at the same level as your *changelog*. The *Objects* directory contains a subdirectory for each of the following stored logic types. 
+- package
+- packagebody
+- function
+- storedprocedure
+- trigger
+- view
+
+>**Note:** Not all database platforms support all of these types.
+
+### Example 
+
 <details>
 <summary style="font-size:125%;color:blue;">Liquibase Pro changelog</summary>
 

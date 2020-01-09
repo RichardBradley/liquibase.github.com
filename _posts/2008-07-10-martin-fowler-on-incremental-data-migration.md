@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Martin Fowler on Incremental Data Migration
 ---
+# Martin Fowler on Incremental Data Migration
 
 Martin Fowler makes good points in his <a href="http://martinfowler.com/bliki/IncrementalMigration.html" target="_blank">Incremental Migration</a> Bliki post. Data migration is easy to push off or forget, and can often kill an otherwise great release--especially when valuable historical data gets lost due to a bad script.
 

@@ -3,6 +3,8 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 1.6.0 Released with Hibernate Support
 ---
+# Liquibase 1.6.0 Released with Hibernate Support
+
 The Liquibase team is proud to announce the 1.6.0 Liquibase Core release.
 
 This release focuses primarily on Hibernate integration which allows you to use the
@@ -30,5 +32,5 @@ of newer change log features, change your XSD declaration to:
         schemalocation="http://www.liquibase.org/xml/ns/dbchangelog/1.6
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.6.xsd">
 
-Liquibase 1.6 can be downloaded from <a href="http://download.liquibase.org/">http://download.liquibase.org/</a> and, as always, let us know if you have any questions or issues.
+Liquibase 1.6 can be downloaded from <a href="https://download.liquibase.org/download-community/">https://download.liquibase.org/download-community//</a> and, as always, let us know if you have any questions or issues.
 

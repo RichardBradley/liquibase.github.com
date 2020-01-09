@@ -3,9 +3,9 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.0.3 Released
 ---
+# Liquibase 3.0.3 Released
 
-
-Liquibase 3.0.3 has been officially released. As always, you can download from <a href="http://liquibase.org/download">http://liquibase.org/download</a> and the new version should be working its way through the maven repository system. If you have questions or comments you can visit the forums at <a href="http://forum.liquibase.org/">http://forum.liquibase.org</a>.
+Liquibase 3.0.3 has been officially released. As always, you can download from the <a href="https://download.liquibase.org/download-community/">Liquibase download page</a> and the new version should be working its way through the maven repository system. If you have questions or comments you can visit the forums at <a href="https://forum.liquibase.org/">http://forum.liquibase.org</a>.
 
 
 The 3.0.3 release is primarily a bug fix release, major categories of bugs fixed include:

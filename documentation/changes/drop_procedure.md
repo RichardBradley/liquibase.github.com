@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change dropProcedure | Liquibase Docs
+title: Docs | Change 'dropProcedure'
 ---
 
 <!-- ====================================================== -->

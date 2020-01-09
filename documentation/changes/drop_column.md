@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change dropColumn | Liquibase Docs
+title: Docs | Change 'dropColumn'
 ---
 
 <!-- ====================================================== -->

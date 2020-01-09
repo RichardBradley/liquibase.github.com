@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change setColumnRemarks | Liquibase Docs
+title: Docs | Change 'setColumnRemarks'
 ---
 
 <!-- ====================================================== -->

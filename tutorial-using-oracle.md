@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tutorial Using Liquibase | Liquibase Docs
+title: Docs | Tutorial Using Liquibase 
 subnav: subnav_tutorials.md
 includeDaticalBox: true
 ---

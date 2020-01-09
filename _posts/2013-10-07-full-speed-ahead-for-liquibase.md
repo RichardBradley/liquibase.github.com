@@ -1,11 +1,11 @@
 ---
 layout: default
 subnav: subnav_blog.md
-title: Full Speed Ahead For Liquibase
+title: Full Speed Ahead for Liquibase
 ---
+# Full Speed Ahead for Liquibase
 
-
-For the last two months I have been working full time as an employee with <a href="http://datical.com">Datical</a>, a startup that is building an enterprise-ready database change management solution on top Liquibase.
+For the last two months I have been working full time as an employee with <a href="https://www.datical.com">Datical</a>, a startup that is building an enterprise-ready database change management solution on top Liquibase.
 
 
 For me, it has been great because I am now able to devote considerably more time to Liquibase than I ever have before. Since starting Liquibase 7 years ago, I've ran it as a side hobby--spending a few night and weekend hours doing what  I can to progress the project. However, as the community and user base has grown it had become difficult to keep pace. You may have noticed that during the 3.0 development timeline, I tended to oscillate between spending all my time writing code without answering any user questions and answering questions without writing code simply because I just didn't have enough time to do everything I needed to.
@@ -34,4 +34,4 @@ In the coming months, look for more great changes to Liquibase including:
 
 
 
-If you would like more information on Datical and DaticalDB you can read their official <a href="http://www.datical.com/news/datical-emerges-stealth-mode-unveils-database-change-management-solution-delivers-50-percent-increase-application-release-throughput/">launch announcement</a>. Or, as always, ask questions in the blog comments, in the<a href="http://liquibase.org/forum"> Liquibase forum</a>, or contact me directly at nathan.voxland@liquibase.org.
+If you would like more information on Datical and DaticalDB you can read their official <a href="https://www.datical.com/news/datical-emerges-stealth-mode-unveils-database-change-management-solution-delivers-50-percent-increase-application-release-throughput/">launch announcement</a>. Or, as always, ask questions in the blog comments, in the<a href="https://liquibase.org/forum"> Liquibase forum</a>, or contact me directly at nathan.voxland@liquibase.org.

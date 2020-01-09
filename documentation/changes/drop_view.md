@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change dropView | Liquibase Docs
+title: Docs | Change 'dropView'
 ---
 
 <!-- ====================================================== -->

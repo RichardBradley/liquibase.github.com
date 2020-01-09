@@ -1,6 +1,6 @@
 ---
 layout: default
-title: PostgreSQL Tutorial | Liquibase Docs
+title: Docs | PostgreSQL Tutorial 
 subnav: subnav_tutorials.md
 ---
 

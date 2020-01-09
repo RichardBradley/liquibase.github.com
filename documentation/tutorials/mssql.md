@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MSSQL Tutorial | Liquibase Docs
+title: Docs | MSSQL Tutorial 
 subnav: subnav_tutorials.md
 ---
 

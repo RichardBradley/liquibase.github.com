@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Changelog parameters | Liquibase Docs
+title: Docs | Changelog parameters 
 ---
 
 # Change Log Parameters #

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change sql | Liquibase Docs
+title: Docs | Change 'sql'
 ---
 
 <!-- ====================================================== -->

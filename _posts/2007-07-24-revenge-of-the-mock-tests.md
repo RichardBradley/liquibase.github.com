@@ -3,6 +3,8 @@ layout: default
 subnav: subnav_blog.md
 title: Revenge of the Mock Tests
 ---
+# Revenge of the Mock Tests
+
 If you didn't see, version 1.1.1 of Liquibase was released the day after 1.1 because of problems reported by users with the new diff tool.
 
 Now, we could simply say "it's a new feature, you should expect bugs", but they were pretty obvious ones that should have been caught by simply executing the diff tool against all our supported databases. A simple unit test or two that actually ran the diff tool exposed the bugs and they were easy to catch.

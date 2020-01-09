@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change enableTrigger | Liquibase Docs
+title: Docs | Change 'enableTrigger'
 ---
 
 <!-- ====================================================== -->

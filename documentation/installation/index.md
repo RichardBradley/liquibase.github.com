@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Installation Home | Liquibase Docs
+title: Docs | Installation Home 
 subnav: subnav_documentation.md
 includeDaticalBox: true
 ---

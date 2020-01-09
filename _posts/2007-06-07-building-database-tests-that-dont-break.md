@@ -3,6 +3,8 @@ layout: default
 subnav: subnav_blog.md
 title: Building Database Tests that Don't Break
 ---
+# Building Database Tests that Don't Break
+
 As I discussed in <a href="http://www.liquibase.org/2007/06/unit-testing-database-access-layer.html">Unit Testing the Database</a>, a difficulty you run into when using a shared dataset for unit tests is making sure you write your test in such a way that changes to the dataset will not break older tests.
 
 Note: depending on the database access framework you use, you will actually access the database through a Connection, EntityManager, Session, PersistenceManager etc.  I'll use the term "Connection" generically for any of these access types because the same pattern applies to them all.

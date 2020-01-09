@@ -4,6 +4,8 @@ subnav: subnav_blog.md
 title: Managing Change Logs
 ---
 
+# Managing Change Logs
+
 While you can include all your change sets in one giant change log, there are many good reasons to split them up. While there are many ways to divide your change logs, the best strategy I have found is to create a change log per major java package that contains data access code. This approach has several advantages:
 
 #### Easy to Know Where to Add (and Look For) Database Changes</b>

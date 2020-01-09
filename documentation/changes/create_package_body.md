@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change createPackageBody | Liquibase Docs
+title: Docs | Change 'createPackageBody'
 ---
 
 <!-- ====================================================== -->

@@ -1,8 +1,10 @@
 ---
 layout: default
 subnav: subnav_blog.md
-title: The Problem With Rails Active Migrations
+title: The Problem with Rails Active Migrations
 ---
+# The Problem with Rails Active Migrations
+
 Rails Active Migration is nice for its simplicity, but in non-trivial projects, it quickly falls apart due to limitations it has regarding multiple developers and/or branches.  It's a <a href="http://www.google.com/search?q=rails+migration+branches">well known problem</a>
 
 The fundamental problem is that Rails tracks the "database version" as a single incrementing integer.  That works fine when only one developer is adding migrations and when there is only one branch.  When you add developers and branches, however, you quickly run into problems with duplicated version numbers, and missed migrations because the production "database version" is higher than a newly merged in migration.

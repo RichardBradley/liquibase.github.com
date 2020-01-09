@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change dropSequence | Liquibase Docs
+title: Docs | Change 'dropSequence'
 ---
 
 <!-- ====================================================== -->

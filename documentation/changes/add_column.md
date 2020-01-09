@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change addColumn | Liquibase Docs
+title: Docs | Change 'addColumn'
 ---
 
 <!-- ====================================================== -->

@@ -3,7 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: NetBeans Liquibase Plugin Available
 ---
-
+# NetBeans Liquibase Plugin Available
 
 For NetBeans users, there is a Liquibase plugin now available.
 
@@ -20,8 +20,3 @@ Features:
 - Custom icon for the Liquibase changeset files, so they can better distinguished from the ordinary files.
 
 
-
-
-
-
-More information: <a href="http://plugins.netbeans.org/plugin/38564/liquorice-core">http://plugins.netbeans.org/plugin/38564/liquorice-core</a>

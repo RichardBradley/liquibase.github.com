@@ -3,7 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: A Note on Version Numbering
 ---
-
+# Note on Version Numbering
 
 There are times when I have seen projects with a version 1.9 that means "the last 1.x release before 2.0". In our case, "1.9" simply means "the release after 1.8"
 

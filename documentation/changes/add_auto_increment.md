@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change addAutoIncrement | Liquibase Docs
+title: Docs | Change 'addAutoIncrement'
 ---
 
 <!-- ====================================================== -->

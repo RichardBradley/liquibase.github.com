@@ -1,6 +1,6 @@
 ---
 layout: side-search
-title: Generating SQL | Liquibase Docs
+title: Docs | Generating SQL 
 subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---

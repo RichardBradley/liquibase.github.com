@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Dropalldatabaseobjects ant task | Liquibase Docs
+title: Docs | Dropalldatabaseobjects ant task 
 subnav: subnav_documentation.md
 ---
 

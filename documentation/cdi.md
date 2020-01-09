@@ -1,6 +1,6 @@
 ---
 layout: default
-title: JEE CDI Integration | Liquibase Docs
+title: Docs | JEE CDI Integration 
 ---
 # JEE CDI Integration #
 

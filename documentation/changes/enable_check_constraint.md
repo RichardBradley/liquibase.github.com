@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change enableCheckConstraint | Liquibase Docs
+title: Docs | Change 'enableCheckConstraint'
 ---
 
 <!-- ====================================================== -->

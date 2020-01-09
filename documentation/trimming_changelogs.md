@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Trimming ChangeLog | Liquibase Docs
+title: Docs | Trimming ChangeLog 
 ---
 
 # Trimming ChangeLog Files

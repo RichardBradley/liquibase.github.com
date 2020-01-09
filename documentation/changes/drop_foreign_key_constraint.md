@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change dropForeignKeyConstraint | Liquibase Docs
+title: Docs | Change 'dropForeignKeyConstraint'
 ---
 
 <!-- ====================================================== -->

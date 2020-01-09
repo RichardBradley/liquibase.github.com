@@ -3,7 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.0.2 Released
 ---
-
+# Liquibase 3.0.2 Released
 
 Liquibase 3.0.2 has been officially released. It is a purely bugfix release. The major issues fixed are:
 
@@ -14,8 +14,6 @@ Liquibase 3.0.2 has been officially released. It is a purely bugfix release. The
 
 
 The full list of resolved issues:
-
-
 
 - <a href="https://liquibase.jira.com/browse/CORE-1301">CORE-1301</a> - Oracle TIMESTAMPS not exported correctly
 - <a href="https://liquibase.jira.com/browse/CORE-1301">CORE-1301</a> - defaultschemaName not used
@@ -49,7 +47,7 @@ If you were watching closely, you will notice that I forgot to announce 3.0.1 de
 
 
 
-As always, you can download from <a href="http://liquibase.org/download">http://liquibase.org/download</a> and the new version should be working its way through the maven repository system. If you have questions or comments you can visit the forums at <a href="http://forum.liquibase.org/">http://forum.liquibase.org</a>.
+As always, you can download from the <a href="https://download.liquibase.org/download-community/">Liquibase download page</a> and the new version should be working its way through the maven repository system. If you have questions or comments you can visit the forums at <a href="http://forum.liquibase.org/">http://forum.liquibase.org</a>.
 
 
 

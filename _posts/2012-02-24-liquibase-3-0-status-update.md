@@ -3,7 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.0 Status Update
 ---
-
+# Liquibase 3.0 Status Update
 
 It has been a while since the last Liquibase release, and I wanted to give a quick status update.
 

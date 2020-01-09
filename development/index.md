@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Liquibase Development | Liquibase Docs
+title: Docs | Liquibase Development 
 ---
 
 # Liquibase Development

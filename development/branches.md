@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Liquibase Code Branches | Liquibase Docs
+title: Docs | Liquibase Code Branches 
 ---
 
 # Liquibase Code Branch Strategy #

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change modifyDataType | Liquibase Docs
+title: Docs | Change 'modifyDataType'
 ---
 
 <!-- ====================================================== -->

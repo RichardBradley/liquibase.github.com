@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change empty | Liquibase Docs
+title: Docs | Change 'empty'
 ---
 
 <!-- ====================================================== -->

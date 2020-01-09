@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change dropUniqueConstraint | Liquibase Docs
+title: Docs | Change 'dropUniqueConstraint'
 ---
 
 <!-- ====================================================== -->

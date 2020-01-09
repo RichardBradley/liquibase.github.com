@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change mergeColumns | Liquibase Docs
+title: Docs | Change 'mergeColumns'
 ---
 
 <!-- ====================================================== -->

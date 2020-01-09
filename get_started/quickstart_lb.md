@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Migrations with Liquibase Functions| Liquibase Docs
+title: Docs | Migrations with Liquibase Functions
 subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---
@@ -9,8 +9,11 @@ includeDaticalBox: true
 <div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/lbZxAvftCX0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 ## Prerequisites
-Before performing any of these steps, you must be able to connect to a local or remote database, accessible via command line or IDE/GUI. View the [Supported Databases](/databases.html) topic for more information on which databases we support. 
+Before performing any of these steps, you must be able to connect to a local or remote database, accessible via command line or IDE/GUI.
 
+**For this example, we are going to use an H2 database.  Please review this [H2 Tutorial](/documentation/tutorials/h2.html) to get started.**
+
+View the [Supported Databases](/databases.html) topic for more information on which databases we support.
 You can also view the [Database Tutorials](/documentation/tutorials/index.html) topic for more information on running each database with Liquibase.
 
 ## Step 1: Create or Generate a Changelog File
@@ -19,8 +22,8 @@ To complete your first migration, you must have a [database changelog file](/doc
 
 **<u>Creating Changelog Files Manually</u>**
 
-1. Create a file in your liquibase project directory called `myChangeLog.xml` 
-2. For this example, enter the following information into the `myChangeLog.xml` file, then save your file: 
+1. Create a file in your liquibase project directory called `myChangeLog.xml`
+2. For this example, enter the following information into the `myChangeLog.xml` file, then save your file:
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -38,7 +41,7 @@ To complete your first migration, you must have a [database changelog file](/doc
 
 **<u>Generating Changelog Files</u>**
 
-If you have an existing database, you can generate a changelog file that reflects the current state of your database. For more information on how to 
+If you have an existing database, you can generate a changelog file that reflects the current state of your database. For more information on how to
 generate a changelog, visit the [Liquibase Commands: generateChangelog](/documentation/generating_changelogs.html) topic, and read the article on
 [adding Liquibase on an existing project.](/documentation/existing_project.html)
 
@@ -49,7 +52,7 @@ View the [changeSet tag](/documentation/changeset.html) topic for more informati
 
 **<u>To add a changeSet:</u>**
 1. Locate and open the `myChangeLog.xml` file.
-2. For this example, enter the following information into the `myChangeLog.xml` file, then save your file: 
+2. For this example, enter the following information into the `myChangeLog.xml` file, then save your file:
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -86,7 +89,7 @@ When you add a changeSet, Liquibase reads your list of changeSets in order, then
 
 > **Note:** In place of *LB_HOME* use the folder name where you extracted liquibase.
 
-Your database now contains a table called **department**. 
+Your database now contains a table called **department**.
 
 ## Step 4: Check Your Database
 
@@ -97,11 +100,11 @@ To check your database:
 
 > **Note:** Where (driver-version.jar) is listed, enter your driver name and version number. Example: <br> `java -jar h2-1.4.199.jar`.
 
-If you used a `liquibase.properties` file, enter the JDBC URL, User Name, and Password. Notice that two tables were created: 
+If you used a `liquibase.properties` file, enter the JDBC URL, User Name, and Password. Notice that two tables were created:
 - DATABASECHANGELOG
 - DATABASECHANGELOGLOCK
 
-The DATABASECHANGELOG table contains a list of all the changes that 
+The DATABASECHANGELOG table contains a list of all the changes that
 have been run against the database. The DATABASECHANGELOGLOCK table is used to make sure two machines don't attempt to modify the database at the same time.
 
 View [DATABASECHANGELOG Table](/documentation/databasechangelog_table.html) and [DATABASECHANGELOGLOCK Table](/documentation/databasechangeloglock_table.html) topics for more information.
@@ -115,7 +118,7 @@ In this tutorial we covered:
 - Running your Changelog
 - Checking your Database
 
-## **Next Up:** 
+## **Next Up:**
 
 <div class="cta-container" style="margin-left: auto; margin-right: auto; width: 300px; height: 50px">
 <div class="cta cta--block"><a href="/documentation/index.html">Liquibase Documentation ►</a></div>

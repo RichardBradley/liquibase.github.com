@@ -3,6 +3,8 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 1.0 Released
 ---
+# Liquibase 1.0 Released
+
 The Liquibase team is proud to announce version 1.0.  <a href="http://www.liquibase.org/">Liquibase</a> is an open source (LGPL) java-based tool for managing database changes and refactorings. It has been under active development for over a year and supports many features including:
 
 

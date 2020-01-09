@@ -1,6 +1,6 @@
 ---
 layout: side-search
-title: Liquibase Core Usage | Liquibase Docs
+title: Docs | Liquibase Core Usage 
 subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---

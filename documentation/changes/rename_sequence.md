@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change renameSequence | Liquibase Docs
+title: Docs | Change 'renameSequence'
 ---
 
 <!-- ====================================================== -->

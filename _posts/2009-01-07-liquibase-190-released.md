@@ -3,13 +3,11 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 1.9.0 Released
 ---
-
+# Liquibase 1.9.0 Released
 
 Liquibase 1.9.0 has been released!
 
-
 Major features include:
-
 
 - <a href="http://www.liquibase.org/manual/modify_sql">`modifySql` support</a>
 - <a href="http://www.liquibase.org/manual/includeall">`includeAll` support</a>
@@ -22,9 +20,7 @@ Major features include:
 - Bug fixes
 
 
-
 If you are using the standard Liquibase library, upgrading is simply a matter of replacing the liquibase.jar file.  If you are using Grails, Maven, or the IntelliJ plugin, an updated version should be available via standard plugin repository within in the next day.
-
 
 
 *NOTE: DUE TO A BUG IN THE "ADD NOT NULL CONSTRAINT" AND "DROP NOT NULL CONSTRAINT" CODE, YOU WILL GET CHECKSUM VALIDATION ERRORS FOR EXISTING CHANGESETS THAT USE THOSE TAGS. *
@@ -42,7 +38,7 @@ To take advantage of newer change log features, change your XSD declaration to:
         schemalocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
 
-Download Liquibase 1.9 from: <a href="http://www.liquibase.org/download">http://www.liquibase.org/download</a>
+Download Liquibase 1.9 from: <a href="https://download.liquibase.org/download-community/">https://download.liquibase.org/download-community/</a>
 
 
 As usual, make sure you let us know if you have any questions, problems, or ideas. Also, thank you to everyone who submitted bug reports and patches over the last couple months.

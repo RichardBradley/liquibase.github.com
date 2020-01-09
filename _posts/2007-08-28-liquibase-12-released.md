@@ -3,9 +3,9 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 1.2 Released
 ---
+# Liquibase 1.2 Released
+
 Liquibase 1.2 has been released.  Major features include:
-
-
 
 - Support for H2 database
 - Support for InterSystems Cache database
@@ -20,13 +20,10 @@ Liquibase 1.2 has been released.  Major features include:
 
 Many bugs have been fixed as well, including:
 
-
-
 - Sybase support fixes
 - Handle --defaultsFile correctly
 - Handle command line parameters correctly on Windows systems
 - Other bug fixes
-
 
 Upgrading is simply a matter of replacing the liquibase.jar file. To take advantage of newer change log features, change your XSD declaration to:
 
@@ -35,5 +32,5 @@ Upgrading is simply a matter of replacing the liquibase.jar file. To take advant
          schemalocation="http://www.liquibase.org/xml/ns/dbchangelog/1.2
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.2.xsd">
 
-<a href="http://www.liquibase.org/download.html">Download Liquibase 1.2</a>
+<a href="https://download.liquibase.org/download-community/">Download Liquibase 1.2</a>
 

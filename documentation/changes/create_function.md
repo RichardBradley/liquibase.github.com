@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Change createFunction | Liquibase Docs
+title: Docs | Change 'createFunction'
 ---
 
 <!-- ====================================================== -->

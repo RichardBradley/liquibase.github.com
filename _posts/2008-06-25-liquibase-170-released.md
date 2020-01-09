@@ -3,11 +3,11 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 1.7.0 Released
 ---
+# Liquibase 1.7.0 Released
+
 It is Liquibase 1.0's first birthday, but you get the gift: Liquibase 1.7.0 is now available.
 
 Major changes include:
-
-
 
 - Added [loadData change](/documentation/changes/load_data.html) which allows importing of data from CSV files
 
@@ -25,6 +25,6 @@ Major changes include:
 - RowMapper interface is now public
 - Misc bug fixes
 
-The core library can be downloaded from [http://download.liquibase.org](http://download.liquibase.org) while the Maven, Grails, and IntelliJ plug-ins can be installed from their respective plug-in managers.
+The core library can be downloaded from <a href="https://download.liquibase.org/download-community/">https://download.liquibase.org/download-community//</a> while the Maven, Grails, and IntelliJ plug-ins can be installed from their respective plug-in managers.
 
 

@@ -4,6 +4,7 @@ subnav: subnav_blog.md
 title: Liquibase Formatted SQL
 ---
 
+# Liquibase Formatted SQL
 
 Part of the changes made in the upcoming 2.0 release is supporting the ability to specify changelog files in formats other than XML.
 
@@ -45,4 +46,4 @@ After the AUTHOR:ID, you can specify any attribute normally available on the  or
 
 Since the formatted SQL builds the same internal changelog structure as the XML changelogs do, all the normal liquibase functionality (rollback, tag, dbdoc, updateCount, updateSQL, changelog parameters, etc.) are still available.
 
-You can try out this new feature from the current 2.0 snapshot (<a href="http://liquibase.org/ci/latest">http://liquibase.org/ci/latest</a>). Let me know if you have any suggestions or problems.  I am considering it an early access feature until 2.0 final is released, and there may be changes in the format of this file based on user feedback.
+You can try out this new feature from the current 2.0 snapshot. Let me know if you have any suggestions or problems. I am considering it an early access feature until 2.0 final is released, and there may be changes in the format of this file based on user feedback.

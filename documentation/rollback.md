@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Rollback | Liquibase Docs
+title: Docs | Rollback 
 ---
 
 # Rolling Back ChangeSets #

@@ -3,7 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 1.9.4 Released
 ---
-
+# Liquibase 1.9.4 Released
 
 Liquibase 1.9.4 has been released. The 1.9.x branch continue to be maintained, even as work continues on Liquibase 2.0.
 
@@ -17,7 +17,7 @@ Liquibase 1.9.4 has been released. The 1.9.x branch continue to be maintained, e
 
 
 
-As usual, you can download the newest version from <a href="http://www.liquibase.org/download">http://www.liquibase.org/download</a> and post any questions or issues to <a href="http://www.liquibase.org/forum">http://www.liquibase.org/forum</a>
+As usual, you can download the newest version from <a href="https://download.liquibase.org/download-community/">https://download.liquibase.org/download-community/</a> and post any questions or issues to <a href="https://forum.liquibase.org/">https://forum.liquibase.org/</a>
 
 
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Database Tutorials | Liquibase Docs
+title: Docs | Database Tutorials 
 subnav: subnav_tutorials.md
 ---
 # Liquibase Database Tutorials

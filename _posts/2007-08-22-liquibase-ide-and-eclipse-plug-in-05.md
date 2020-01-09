@@ -1,15 +1,15 @@
 ---
 layout: default
 subnav: subnav_blog.md
-title: Liquibase IDE and Eclipse Plug-in 0.5
+title: Liquibase IDE and Eclipse Plugin
 ---
+# Liquibase IDE and Eclipse Plugin 0.5
+
 I have released the initial version of a Liquibase IDE.  The idea behind it is to do for database refactoring what refactoring tools like IntelliJ and Eclipse have done for code refactoring.
 
 The initial release is intended primarily to look for feedback from users and from people with experience writing Eclipse plug-ins and RCP applications.
 
 Current functionality includes:
-
-
 
 - Applying refactorings to a database and having them stored in a change log file
 - Executing a change log file against a database

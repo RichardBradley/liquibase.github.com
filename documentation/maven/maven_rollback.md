@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Maven rollback | Liquibase Docs
+title: Docs | Maven rollback 
 subnav: subnav_maven.md
 ---
 

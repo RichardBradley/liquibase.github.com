@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change update 
+title: Docs | Change 'update'
 ---
 
 <!-- ====================================================== -->

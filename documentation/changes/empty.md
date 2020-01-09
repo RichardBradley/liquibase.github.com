@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change empty 
+title: Docs | Change 'empty'
 ---
 
 <!-- ====================================================== -->

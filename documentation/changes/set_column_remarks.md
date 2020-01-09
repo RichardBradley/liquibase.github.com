@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change setColumnRemarks 
+title: Docs | Change 'setColumnRemarks'
 ---
 
 <!-- ====================================================== -->

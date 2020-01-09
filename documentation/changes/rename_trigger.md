@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change renameTrigger 
+title: Docs | Change 'renameTrigger'
 ---
 
 <!-- ====================================================== -->

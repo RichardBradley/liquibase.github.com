@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change createFunction 
+title: Docs | Change 'createFunction'
 ---
 
 <!-- ====================================================== -->

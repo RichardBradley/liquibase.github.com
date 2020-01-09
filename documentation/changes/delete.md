@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change delete 
+title: Docs | Change 'delete'
 ---
 
 <!-- ====================================================== -->

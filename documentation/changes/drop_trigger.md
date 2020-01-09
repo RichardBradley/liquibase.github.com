@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change dropTrigger 
+title: Docs | Change 'dropTrigger'
 ---
 
 <!-- ====================================================== -->

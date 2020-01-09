@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change customChange 
+title: Docs | Change 'customChange'
 ---
 
 <!-- ====================================================== -->

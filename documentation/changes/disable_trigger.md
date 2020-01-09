@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change disableTrigger 
+title: Docs | Change 'disableTrigger'
 ---
 
 <!-- ====================================================== -->

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change addColumn 
+title: Docs | Change 'addColumn'
 ---
 
 <!-- ====================================================== -->

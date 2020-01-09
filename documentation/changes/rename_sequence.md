@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change renameSequence 
+title: Docs | Change 'renameSequence'
 ---
 
 <!-- ====================================================== -->

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change mergeColumns 
+title: Docs | Change 'mergeColumns'
 ---
 
 <!-- ====================================================== -->

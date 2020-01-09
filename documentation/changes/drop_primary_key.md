@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change dropPrimaryKey 
+title: Docs | Change 'dropPrimaryKey'
 ---
 
 <!-- ====================================================== -->

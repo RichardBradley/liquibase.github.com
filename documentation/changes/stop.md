@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change stop 
+title: Docs | Change 'stop'
 ---
 
 <!-- ====================================================== -->

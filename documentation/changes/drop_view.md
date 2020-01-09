@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change dropView 
+title: Docs | Change 'dropView'
 ---
 
 <!-- ====================================================== -->

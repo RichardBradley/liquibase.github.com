@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change createIndex 
+title: Docs | Change 'createIndex'
 ---
 
 <!-- ====================================================== -->

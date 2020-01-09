@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change insert 
+title: Docs | Change 'insert'
 ---
 
 <!-- ====================================================== -->

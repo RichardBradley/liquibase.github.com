@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change createSequence 
+title: Docs | Change 'createSequence'
 ---
 
 <!-- ====================================================== -->

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change output 
+title: Docs | Change 'output'
 ---
 
 <!-- ====================================================== -->

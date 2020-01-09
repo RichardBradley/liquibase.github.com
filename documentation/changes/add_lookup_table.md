@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change addLookupTable 
+title: Docs | Change 'addLookupTable'
 ---
 
 <!-- ====================================================== -->

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change tagDatabase 
+title: Docs | Change 'tagDatabase'
 ---
 
 <!-- ====================================================== -->

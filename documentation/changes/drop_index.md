@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change dropIndex 
+title: Docs | Change 'dropIndex'
 ---
 
 <!-- ====================================================== -->

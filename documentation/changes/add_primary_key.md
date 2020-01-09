@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change addPrimaryKey 
+title: Docs | Change 'addPrimaryKey'
 ---
 
 <!-- ====================================================== -->

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change sql 
+title: Docs | Change 'sql'
 ---
 
 <!-- ====================================================== -->

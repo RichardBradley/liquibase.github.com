@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change dropPackageBody 
+title: Docs | Change 'dropPackageBody'
 ---
 
 <!-- ====================================================== -->

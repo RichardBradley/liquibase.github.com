@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change enableCheckConstraint 
+title: Docs | Change 'enableCheckConstraint'
 ---
 
 <!-- ====================================================== -->

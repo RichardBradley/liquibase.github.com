@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change createTable 
+title: Docs | Change 'createTable'
 ---
 
 <!-- ====================================================== -->

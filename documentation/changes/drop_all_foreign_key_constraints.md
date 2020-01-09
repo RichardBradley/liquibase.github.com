@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change dropAllForeignKeyConstraints 
+title: Docs | Change 'dropAllForeignKeyConstraints'
 ---
 
 <!-- ====================================================== -->

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Change setTableRemarks 
+title: Docs | Change 'setTableRemarks'
 ---
 
 <!-- ====================================================== -->

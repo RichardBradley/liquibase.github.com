@@ -1,9 +1,9 @@
 ---
 layout: default
 subnav: subnav_blog.md
-title: Looking for feedback on Statement refactoring
+title: Feedback on Statement Refactoring
 ---
-
+# Looking for Feedback on Statement Refactoring
 
 I am starting the extensibility refactoring at the \*Statement class level and moving up from there. I committed an initial version of what I am thinking to trunk, and am looking for feedback (either in comments, or directly to me at nathan@voxland.net).
 

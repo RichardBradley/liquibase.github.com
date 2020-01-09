@@ -3,7 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.0.5 Released
 ---
-
+# Liquibase 3.0.5 Released
 
 ### Performance
 

@@ -3,9 +3,9 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 1.1 Released
 ---
+# Liquibase 1.1 Released
+
 Liquibase 1.1 has been released.  Major new features include:
-
-
 
 - Support for additional databases: DB2, Derby, Sybase (not fully tested), and HSQL
 
@@ -33,5 +33,5 @@ Upgrading is simply a matter of replacing the liquibase.jar file.  To take advan
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.1
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.1.xsd">
 
-<a href="http://www.liquibase.org/download.html">Download Liquibase 1.1</a>
+<a href="https://download.liquibase.org/download-community/">Download Liquibase 1.1</a>
 

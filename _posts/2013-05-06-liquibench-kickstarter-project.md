@@ -3,7 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibench Kickstarter Project
 ---
-
+# Liquibench Kickstarter Project
 
 Looking for an easier way to use Liquibase?
 

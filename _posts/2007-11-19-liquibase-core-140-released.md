@@ -3,6 +3,8 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase Core 1.4.0 Released
 ---
+# Liquibase Core 1.4.0 Released
+
 Liquibase 1.4.0 has been released. Major features include:
 
 - IntelliJ Plug-in Support
@@ -21,5 +23,5 @@ Upgrading is simply a matter of replacing the liquibase.jar file. To take advant
         schemalocation="http://www.liquibase.org/xml/ns/dbchangelog/1.4
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.4.xsd">
 
-Download Liquibase 1.4 from: <a href="http://www.liquibase.org/download.html">http://www.liquibase.org/download.html</a>
+Download Liquibase 1.4 from: <a href="https://download.liquibase.org/download-community/">https://download.liquibase.org/download-community/</a>
 

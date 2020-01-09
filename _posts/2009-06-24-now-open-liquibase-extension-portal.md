@@ -1,11 +1,11 @@
 ---
 layout: default
 subnav: subnav_blog.md
-title: 'Now Open: Liquibase Extension Portal'
+title: Now Open Liquibase Extension Portal
 ---
+# Now Open: Liquibase Extension Portal
 
-
-Although it is currently just a skeleton of what it will be, the Liquibase Extension Portal is now open at <a href="http://www.liquibase.org/extensions">http://www.liquibase.org/extensions</a>.
+Although it is currently just a skeleton of what it will be, the Liquibase Extension Portal is now open at <a href="https://www.liquibase.org/extensions">https://www.liquibase.org/extensions</a>.
 
 
 The goal of the extension portal is to provide:
@@ -18,8 +18,8 @@ The goal of the extension portal is to provide:
 
 
 
-I was hoping to improve the sample extension pages (set-identity-insert and vacuum) to provide a better template, but I wanted to get something out before the <a href="http://www.liquibase.org/2009/06/liquibase-online-meetup-thurs-june-25-2009-1200-pm-us-central-time.html">online meetup tomorrow</a>. We will improve the content on the portal over the next week once real work settles down.
+I was hoping to improve the sample extension pages (set-identity-insert and vacuum) to provide a better template, but I wanted to get something out before the <a href="https://www.liquibase.org/2009/06/liquibase-online-meetup-thurs-june-25-2009-1200-pm-us-central-time.html">online meetup tomorrow</a>. We will improve the content on the portal over the next week once real work settles down.
 
 
 
-As always, <a href="http://www.liquibase.org/community">let us know</a> if you have any questions or comments on the portal.
+As always, <a href="https://www.liquibase.org/community/index.html">let us know</a> if you have any questions or comments on the portal.

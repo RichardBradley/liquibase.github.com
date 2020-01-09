@@ -4,6 +4,7 @@ subnav: subnav_blog.md
 title: Liquibase as a Job Requirement
 ---
 
+# Liquibase as a Job Requirement
 
 Saw Liquibase as a requirement on dice.com today.
 

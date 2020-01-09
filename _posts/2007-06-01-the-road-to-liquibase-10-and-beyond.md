@@ -3,6 +3,9 @@ layout: default
 subnav: subnav_blog.md
 title: The Road to Liquibase 1.0 and Beyond
 ---
+
+# The Road to Liquibase 1.0 and Beyond
+
 There is a lot going on in Liquibase-land right now.
 
 We are finishing up code and documentation clean-up of the Liquibase migrator and hope to have an initial release candidate available by the middle of June.

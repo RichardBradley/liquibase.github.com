@@ -3,6 +3,9 @@ layout: default
 subnav: subnav_blog.md
 title: Unit Testing the Database Access Layer
 ---
+
+# Unit Testing the Database Access Layer
+
 ### The Problem
 
 Writing unit tests for code that accesses a database is a difficult problem, and it's one I've struggled with for several years.  The problems come down to a balancing act between several (often competing) requirements:

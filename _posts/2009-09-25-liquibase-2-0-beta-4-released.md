@@ -3,9 +3,9 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 2.0 Beta 4 Released
 ---
+# Liquibase 2.0 Beta 4 Released
 
-
-Beta 4 of Liquibase 2.0 is now available from <a href="http://www.liquibase.org/download">http://www.liquibase.org/download</a>
+Beta 4 of Liquibase 2.0 is now available from <a href="https://download.liquibase.org/download-community/">Liquibase download page</a>
 
 
 The major improvement over beta 3 is the fact that it will actually run...
@@ -24,5 +24,5 @@ Other improvements include:
 
 
 
-If you have any issues or questions, please <a href="http://www.liquibase.org/forum">let us know</a>
+If you have any issues or questions, please <a href="https://www.liquibase.org/forum">let us know</a>
 

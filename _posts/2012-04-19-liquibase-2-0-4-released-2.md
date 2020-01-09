@@ -3,12 +3,12 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 2.0.4 Released
 ---
-
+# Liquibase 2.0.4 Released
 
 2.0.4 has been released. This is primarily a bug fix release during the main development on 3.0, but does include a few  enhancements as well.
 
 
-Download from <a href="http://liquibase.org/download">http://liquibase.org/download</a>
+Download from the <a href="https://download.liquibase.org/download-community/">Liquibase download page</a>.
 
 
 ### New features:

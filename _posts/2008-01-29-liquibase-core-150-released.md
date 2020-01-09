@@ -1,17 +1,17 @@
 ---
 layout: default
 subnav: subnav_blog.md
-title: Liquibase Core 1.5.0 Released
+title: Liquibase 1.5.0 Released
 ---
-Liquibase Core 1.5.0 is now available for download from <a href="http://www.liquibase.org/download">http://www.liquibase.org/download</a>
+# Liquibase Core 1.5.0 Released
+
+Liquibase Core 1.5.0 is now available for download from <a href="https://download.liquibase.org/download-community/">https://download.liquibase.org/download-community/</a>
 
 1.5.0 includes a major refactoring which should not affect most users except for the following items:
 
 #### BREAKING CHANGES
 
-
-
-- *Servlet Migrator:* The web.xml parameter names have changed.  See <a href="http://www.liquibase.org/manual/servlet_listener">http://www.liquibase.org/manual/servlet_listener</a> for more information.
+- *Servlet Migrator:* The web.xml parameter names have changed.  See <a href="https://www.liquibase.org/documentation/servlet_listener.html">https://www.liquibase.org/documentation/servlet_listener.html</a> for more information.
 
 - If you used the "database.migrator.should.run", it is must now be changed to "liquibase.should.run"
 
@@ -38,11 +38,9 @@ Liquibase Core 1.5.0 is now available for download from <a href="http://www.liqu
 There is now a "defaultSchemaName" parameter available for setting default schema.  This schema will be used for all ambiguous database objects as well as for storing the databasechangelog and databasechangeloglock tables.
 
 #### NEW COMMANDS
-Ant support has been greatly expanded and now covers most of the functionality available in the command line application.  See <a href="http://www.liquibase.org/manual/ant">http://www.liquibase.org/manual/ant</a> for more information.
+Ant support has been greatly expanded and now covers most of the functionality available in the command line application.  See <a href="https://www.liquibase.org/documentation/ant/index.html">https://www.liquibase.org/documentation/ant/index.html</a> for more information.
 
 #### NEW COMMANDS
-
-
 
 - changeLogSync
 - updateCount
@@ -50,18 +48,12 @@ Ant support has been greatly expanded and now covers most of the functionality a
 
 #### NEW REFACTORINGS
 
+- <a href="https://www.liquibase.org/documentation/changes/update.html">update change</a>
 
-
-- <a href="http://www.liquibase.org/manual/update_data">update change</a>
-
-- <a href="http://www.liquibase.org/manual/delete_data">delete change</a>
-
+- <a href="https://www.liquibase.org/documentation/changes/delete.html">delete change</a>
 
 
 #### OTHER CHANGES
-
-
-
 
 
 - Custom Database implementations can be specified with the databaseClassName parameter
@@ -90,5 +82,5 @@ Upgrading is simply a matter of replacing the liquibase.jar file. To take advant
 
 Depending on feedback received from this release, the 1.5.0.0 releases of the various plug-ins (Maven, Grails, IntelliJ, Eclipse) should be released over the next few days.
 
-As usual, be sure to <a href="http://www.liquibase.org/community">let us know</a> if you have any questions or issues.
+As usual, be sure to <a href="https://www.liquibase.org/community/index.html">let us know</a> if you have any questions or issues.
 

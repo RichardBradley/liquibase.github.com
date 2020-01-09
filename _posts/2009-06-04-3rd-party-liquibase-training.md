@@ -3,7 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: 3rd Party Liquibase Training
 ---
-
+# 3rd Party Liquibase Training
 
 On the <a href="http://tech.groups.yahoo.com/group/agileDatabases/">Agile Database group</a> the other day, there was a message that mentioned that their company provided <a href="http://www.valtech.us/us/index/hot/agile_training/agile_database_design.html">a training course that included Liquibase</a>.
 

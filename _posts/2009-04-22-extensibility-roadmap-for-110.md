@@ -3,7 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Extensibility Roadmap for 1.10
 ---
-
+# Extensibility Roadmp for 1.10
 
 My plan for 1.10 is to focus on extensibility. I wanted to make sure I have good goals for that in mind, and that what we are planning to do will match up with those goals.
 *2.   Create 3rd party community.*

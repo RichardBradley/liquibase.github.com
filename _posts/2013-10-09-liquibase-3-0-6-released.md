@@ -3,7 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.0.6 Released
 ---
-
+# Liquibase 3.0.6 Released
 
 I'm happy to announce Liquibase 3.0.6 has been released. While the previous release focused on performance, this release was focused on catching up with pull requests and resolving some of the higher value bugs.
 
@@ -24,7 +24,7 @@ Some highlights and important notes:
 
 
 
-Download Liquibase from <a href="http://liquibase.org/download">http://liquibase.org/download</a> or from the Maven repository as it winds its way through the mirror process. Visit the <a href="http://liquibase.org/community">user forums</a> if you have any questions.
+Download Liquibase from the <a href="https://download.liquibase.org/download-community/">Liquibase download page</a>or from the Maven repository as it winds its way through the mirror process. Visit the <a href="https://www.liquibase.org/community/index.html">user forums</a> if you have any questions.
 
 
 

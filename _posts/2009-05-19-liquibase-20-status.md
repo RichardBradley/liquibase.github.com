@@ -3,7 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 2.0 Status
 ---
-
+# Liquibase 2.0 Status
 
 I have been working hard on Liquibase 2.0 lately, and it feels very, very good to be updating and cleaning up the codebase.  I am putting the SOLID principals to work, increasing test coverage, and building in integration hooks.
 

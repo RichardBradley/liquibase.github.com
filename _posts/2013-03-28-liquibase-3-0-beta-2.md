@@ -3,7 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.0 Beta 2
 ---
-
+# Liquibase 3.0 Beta 2
 
 Liquibase 3.0 beta 2 is now available.
 
@@ -44,4 +44,5 @@ I'm continuing to work on shifting the documentation to github from the current 
 ### Download
 
 
-As always, you can download the release from <a href="http://liquibase.org/download">http://liquibase.org/download</a> and direct any comments or questions for <a href="http://forum.liquibase.org/">http://forum.liquibase.org</a>
+As always, you can download the release from the 
+<a href="https://download.liquibase.org/download-community/">Liquibase download page</a> and direct any comments or questions for <a href="https://forum.liquibase.org/">https://forum.liquibase.org</a>

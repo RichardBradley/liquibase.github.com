@@ -3,13 +3,11 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 1.9.1 Released
 ---
-
+# Liquibase 1.9.1 Released
 
 Liquibase 1.9.1 has been released which addresses several bugs. Most bugs were relatively minor, but it is recommended you upgrade.
 
-
 Some of the bugs fixed include:
-
 
 - H2 schema capitalization issues
 - Improved "local database" detection
@@ -21,6 +19,5 @@ Some of the bugs fixed include:
 - Escape hsql tables/columns that are keywords
 
 
-
-As usual, visit <a href="http://www.liquibase.org/download">http://www.liquibase.org/download</a> to download the update.
+As usual, visit <a href="https://download.liquibase.org/download-community/">https://download.liquibase.org/download-community/</a> to download the update.
 

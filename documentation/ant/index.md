@@ -8,7 +8,7 @@ subnav: subnav_documentation.md
 
 Liquibase has a set of Ant tasks that provides 
 
-## Installation ##
+## Installation
 
 The Ant tasks require Ant 1.7.1 or higher. To include the tasks in your build, make sure Liquibase is on your Ant classpath and load it via the `<taskdef>` task:
 
@@ -22,9 +22,9 @@ The Ant tasks require Ant 1.7.1 or higher. To include the tasks in your build, m
 
 You can also place the Liquibase jar in your `ANT_HOME/lib` folder.
 
-## Concepts and Types ##
+## Concepts and Types
 
-### Database ###
+### Database
 
 All of the Liquibase Ant tasks are designed around the `<database>` type. This element configures the database connection and corresponding settings that Liquibase will use when accessing and updating the database. It is a required in all Liquibase Ant tasks.
 
@@ -138,7 +138,7 @@ The `<database>` type also supports a nested element `<connectionProperties>` wh
 </liquibase:database>
 {% endhighlight %}
 
-### Change Log Parameters ###
+### Change Log Parameters
 
 Liquibase change log files can have parameters that are dynamically substituted at runtime. All Liquibase Ant tasks support these parameters by way of the `<changeLogParameters>` element.
 
@@ -154,7 +154,7 @@ Liquibase change log files can have parameters that are dynamically substituted 
 </liquibase:updateDatabase>
 {% endhighlight %}
 
-## Tasks ##
+## Tasks
 
 The following tasks are available in Ant:
 
@@ -172,7 +172,7 @@ The following tasks are available in Ant:
 
 Additional Liquibase commands are supported by the [command line](../command_line.html) that are not supported by the Ant tasks.
 
-## Migrating From Legacy Tasks ##
+## Migrating From Legacy Tasks
 
 Starting in Liquibase 3.3 the ant tasks were refactored, moving all of the database attributes out of the task and into its own type. The deprecated attributes will now log a warning message instructing callers of the deprecation. While backward compatibility exists, it is advised that users migrate their ant builds to use the new tasks.
 

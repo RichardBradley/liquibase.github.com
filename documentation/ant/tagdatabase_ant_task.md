@@ -4,11 +4,11 @@ title: Docs | Tagdatabase ant task
 subnav: subnav_documentation.md
 ---
 
-## tagDatabase Ant Task ##
+# tagDatabase Ant Task
 
 "Tags" the database for possible future rollback.  See [rollback](../rollback.html) for more information.
 
-### Available Parameters ###
+## Available Parameters
 
 <table>
     <tr>
@@ -84,19 +84,19 @@ subnav: subnav_documentation.md
     </tr>
 </table>
 
-#### classpath ####
+### classpath
 
 The classpath used to run the task with. Optional.
 
-#### Database ####
+### Database
 
 Required unless a `databaseref` attribute is given. See [database data type](./index.html).
 
-#### ChangeLogParameters ####
+### ChangeLogParameters
 
 Optional. See [change log parameters](./index.html)
 
-### Examples ###
+## Examples
 
 {% highlight xml %}
 <liquibase:tagDatabase tag="my-tag">

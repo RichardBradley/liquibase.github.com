@@ -4,11 +4,11 @@ title: Docs | Dropalldatabaseobjects ant task
 subnav: subnav_documentation.md
 ---
 
-## dropAllDatabaseObjects Ant Task ##
+# dropAllDatabaseObjects Ant Task
 
 Drops all database objects owned by the user. Note that functions, procedures and packages are not dropped (limitation in 1.8.1). 
 
-### Parameters ###
+## Parameters
 
 <table>
     <tr>
@@ -79,19 +79,19 @@ Drops all database objects owned by the user. Note that functions, procedures an
     </tr>
 </table>
 
-#### classpath ####
+### classpath
 
 The classpath used to run the task with. Optional.
 
-#### Database ####
+### Database
 
 Required unless a `databaseref` attribute is given. See [database data type](./index.html).
 
-#### ChangeLogParameters ####
+### ChangeLogParameters
 
 Optional. See [change log parameters](./index.html)
 
-### Examples ###
+## Examples
 
 {% highlight xml %}
 <liquibase:dropAllDatabaseObjects>

@@ -2,21 +2,22 @@
 layout: default
 title: Docs | Preconditions 
 ---
+# Preconditions
 
 Preconditions can be attached to [change logs](databasechangelog.html) or [changesets](changeset.html) to control the execution of an update based on the state of the database.
 
 There are several reasons to use preconditions, including:
 
-* Document what assumptions the writers of the changelog had when creating it.
-* Enforce that those assumptions are not violated by users running the changelog
+* Document what assumptions the writers of the *changelog* had when creating it.
+* Enforce that those assumptions are not violated by users running the *changelog*.
 * Perform data checks before performing an unrecoverable change such as [drop_Table](changes/drop_table.html)
-* Control what changesets are run and not run based on the state of the database
+* Control what *changeSets* are run and not run based on the state of the database.
 
 If desired, a precondition can be the only tag in a `<changeSet>`.
 
-Preconditions at the changelog level apply to **all** changesets, not just those listed in the current changelog or its child changelogs.
+Preconditions at the *changelog* level apply to **all** *changeSets*, not just those listed in the current *changelog* or its child *changelogs*.
 
-## Sample With Preconditions ##
+## Sample With Preconditions
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -41,13 +42,13 @@ Preconditions at the changelog level apply to **all** changesets, not just those
 </databaseChangeLog>
 {% endhighlight %}
 
-The above changelog will only run if the database executed against is Oracle and the database user executing the script is "SYSTEM".  It will also only run the [drop_Table](changes/drop_table.html) command if there are no values in the "oldtable".
+The above *changelog* will only run if the database executed against is Oracle and the database user executing the script is "SYSTEM".  It will also only run the [drop_Table](changes/drop_table.html) command if there are no values in the "oldtable".
 
-## Handling Failures and Errors ##
+## Handling Failures and Errors
 
 Liquibase distinguishes between precondition "failures" (check failed) and "errors" (exception thrown in execution of check) and the reaction to both can be controlled via the "onFail" and "onError" attributes on the `<preConditions>` tag.  **Since 1.8**
 
-#### Available attributes ####
+### Available attributes
 
 <table>
 <tr><th>Attribute</th><th>Description</th></tr>
@@ -58,19 +59,19 @@ Liquibase distinguishes between precondition "failures" (check failed) and "erro
 <tr><td>onErrorMessage</td><td>Custom message to output when preconditions fail. <b>Since 2.0</b>  </td></tr>
 </table>
 
-#### Possible onFail/onError values ####
+### Possible onFail/onError values
 
 <table>
 <tr><th>Value</th><th>Description</th></tr>
 <tr><td>HALT</td><td>Immediately halt the execution of the entire change log. <b>[DEFAULT]</b>  </td></tr>
-<tr><td>CONTINUE</td><td>Skip over the change set.  Execution of the change set will be attempted again on the next update.  Continue with the change log.</td></tr>
+<tr><td>CONTINUE</td><td>Skip over the *changeSet*.  Execution of the change set will be attempted again on the next update.  Continue with the *changelog*.</td></tr>
 <tr><td>MARK_RAN</td><td>Skip over the change set, but mark it as executed.  Continue with the change log.</td></tr>
-<tr><td>WARN</td><td>Output a warning and continue executing the change set/change log as normal.</td></tr>
+<tr><td>WARN</td><td>Output a warning and continue executing the *changeSet*/*changelog* as normal.</td></tr>
 </table>
 
-Outside a changeset (e.g. at the beginning of the change log), only HALT and WARN are possible values.
+Outside a *changeSet* (e.g. at the beginning of the change log), only HALT and WARN are possible values.
 
-#### Possible onSqlOutput values ####
+### Possible onSqlOutput values
 
 <table>
 <tr><th>Value</th><th>Description</th></tr>
@@ -79,7 +80,7 @@ Outside a changeset (e.g. at the beginning of the change log), only HALT and WAR
 <tr><td>IGNORE</td><td>Ignore the preCondition in updateSQL mode (default).</td></tr>
 </table>
 
-## AND/OR/NOT Logic ##
+## AND/OR/NOT Logic
 
 Conditional logic can be applied to preconditions using nestable `<and>`, `<or>` and `<not>` tags. **If no conditional tags are specified, it defaults to AND**.
 
@@ -132,34 +133,34 @@ Will require running on Oracle OR MySQL which makes more sense than the above ex
 Will require running as SYSTEM if executing against an Oracle database or running as SA if running against a MS-SQL database.
 
 
-## Available Preconditions ##
+## Available Preconditions
 
 
-### &lt;dbms&gt; ###
+### &lt;dbms&gt;
 
 Passes if the database executed against matches the type specified.
 
-#### Available Attributes ####
+#### Available Attributes
 <table>
 <tr><th>Attribute</th><th>Description</th></tr>
 <tr><td>type</td><td>Type of <a href="../databases.html">database</a> expected. Multiple dbms values can be specified using comma separated values. <b>required</b>  </td></tr>
 </table>
 
-### &lt;runningAs&gt; ###
+### &lt;runningAs&gt;
 
 Passes if the database user executed under matches the username specified.
 
-#### Available Attributes ####
+#### Available Attributes
 <table>
 <tr><th>Attribute</th><th>Description</th></tr>
 <tr><td>username</td><td>Database user script is expected to run as. <b>required</b></td></tr>
 </table>
 
-### &lt;changeSetExecuted&gt; ###
+### &lt;changeSetExecuted&gt;
 
 Passes if the specified change set has already been executed. **Since 1.8**
 
-#### Available Attributes ####
+#### Available Attributes
 <table>
 <tr><th>Attribute</th><th>Description</th></tr>
 <tr><td>id</td><td>Change set "id". <b>required</b>  </td></tr>
@@ -167,11 +168,11 @@ Passes if the specified change set has already been executed. **Since 1.8**
 <tr><td>changeLogFile</td><td>File name (including classpath relative path) of change set. <b>required</b></td></tr>
 </table>
 
-### &lt;columnExists&gt; ###
+### &lt;columnExists&gt;
 
 Passes if the specified column exists in the database. **Since 1.8**
 
-#### Available Attributes ####
+#### Available Attributes
 <table>
 <tr><th>Attribute</th><th>Description</th></tr>
 <tr><td>schemaName</td><td>Name of the table's schema. <b>required</b></td></tr>
@@ -179,11 +180,11 @@ Passes if the specified column exists in the database. **Since 1.8**
 <tr><td>columnName</td><td>Name of column. <b>required</b></td></tr>
 </table>
 
-### &lt;tableExists&gt; ###
+### &lt;tableExists&gt;
 
 Passes if the specified table exists in the database. **Since 1.8**
 
-#### Available Attributes ####
+#### Available Attributes
 
 <table>
 <tr><th>Attribute</th><th>Description</th></tr>
@@ -191,11 +192,11 @@ Passes if the specified table exists in the database. **Since 1.8**
 <tr><td>tableName</td><td>Name of the table. <b>required</b></td></tr>
 </table>
 
-### &lt;viewExists&gt; ###
+### &lt;viewExists&gt;
 
 Passes if the specified view exists in the database. **Since 1.8**
 
-#### Available Attributes ####
+#### Available Attributes
 
 <table>
 <tr><th>Attribute</th><th>Description</th></tr>
@@ -203,11 +204,11 @@ Passes if the specified view exists in the database. **Since 1.8**
 <tr><td>viewName</td><td>Name of the view. <b>required</b></td></tr>
 </table>
 
-### &lt;foreignKeyConstraintExists&gt; ###
+### &lt;foreignKeyConstraintExists&gt;
 
 Passes if the specified foreign key exists in the database. **Since 1.8**
 
-#### Available Attributes ####
+#### Available Attributes
 
 <table>
 <tr><th>Attribute</th><th>Description</th></tr>
@@ -215,11 +216,11 @@ Passes if the specified foreign key exists in the database. **Since 1.8**
 <tr><td>foreignKeyName</td><td>Name of the foreign key. <b>required</b></td></tr>
 </table>
 
-### &lt;indexExists&gt; ###
+### &lt;indexExists&gt;
 
 Passes if the specified index exists in the database. **Since 1.8**
 
-#### Available Attributes ####
+#### Available Attributes
 
 <table>
 <tr><th>Attribute</th><th>Description</th></tr>
@@ -227,11 +228,11 @@ Passes if the specified index exists in the database. **Since 1.8**
 <tr><td>indexName</td><td>Name of the index. <b>required</b></td></tr>
 </table>
 
-### &lt;sequenceExists&gt; ###
+### &lt;sequenceExists&gt;
 
 Passes if the specified sequence exists in the database. **Since 1.8**
 
-#### Available Attributes ####
+#### Available Attributes
 
 <table>
 <tr><th>Attribute</th><th>Description</th></tr>
@@ -239,11 +240,11 @@ Passes if the specified sequence exists in the database. **Since 1.8**
 <tr><td>sequenceName</td><td>Name of the sequence. <b>required</b></td></tr>
 </table>
 
-### &lt;primaryKeyExists&gt; ###
+### &lt;primaryKeyExists&gt;
 
 Passes if the specified primary key exists in the database. **Since 1.8**
 
-#### Available Attributes ####
+#### Available Attributes
 
 <table>
 <tr><th>Attribute</th><th>Description</th></tr>
@@ -252,7 +253,7 @@ Passes if the specified primary key exists in the database. **Since 1.8**
 <tr><td>tableName</td><td>Name of the table containing primary key. <b>tableName OR primaryKeyName required</b> <b>Since 1.9</b></td></tr>
 </table>
 
-### &lt;sqlCheck&gt; ###
+### &lt;sqlCheck&gt;
 
 Executes an SQL string and checks the returned value.  The SQL must return a single row with a single value.  To check numbers of rows, use the "count" SQL function.  To check for ranges of values, perform the check in the SQL and return a value that can be easily compared against.
 
@@ -260,14 +261,14 @@ Executes an SQL string and checks the returned value.  The SQL must return a sin
 <sqlCheck expectedResult="1">SELECT COUNT(1) FROM pg_tables WHERE TABLENAME = 'myRequiredTable'</sqlCheck>
 {% endhighlight %}
 
-#### Available Attributes ####
+#### Available Attributes
 
 <table>
 <tr><th>Attribute</th><th>Description</th></tr>
 <tr><td>expectedResult</td><td>Value to compare the SQL result to. <b>required</b></td></tr>
 </table>
 
-### &lt;changeLogPropertyDefined&gt; ###
+### &lt;changeLogPropertyDefined&gt;
 
 Checks whether given [changelog parameter](changelog_parameters.html#property) is present. If a value is also given, it only fails, if the value is not the same as given. **Since 2.0**
 
@@ -276,7 +277,7 @@ Checks whether given [changelog parameter](changelog_parameters.html#property) i
 <changeLogPropertyDefined property="myproperty" value="requiredvalue"/>
 {% endhighlight %}
 
-#### Available Attributes ####
+#### Available Attributes
 
 <table>
 <tr><th>Attribute</th><th>Description</th></tr>
@@ -284,7 +285,7 @@ Checks whether given [changelog parameter](changelog_parameters.html#property) i
 <tr><td>value</td><td>Required value for given property.</td></tr>
 </table>
 
-### &lt;customPrecondition&gt; ###
+### &lt;customPrecondition&gt;
 
 Custom preconditions can be created by creating a class that implements the [liquibase.precondition.CustomPrecondition](/javadoc/liquibase/precondition/CustomPrecondition.html) interface.  Parameters on custom classes are set through reflection based on the &lt;param&gt; sub-tags.  Parameters are passed as strings to the custom precondition.
 
@@ -295,21 +296,21 @@ Custom preconditions can be created by creating a class that implements the [liq
 </customPrecondition>
 {% endhighlight %}
 
-#### Available Attributes ####
+#### Available Attributes
 
 <table>
 <tr><th>Attribute</th><th>Description</th></tr>
 <tr><td>className</td><td>Name of custom precondition class. <b>required</b></td></tr>
 </table>
 
-#### Available Sub-Tags ####
+#### Available Sub-Tags
 
 <table>
 <tr><th>Attribute</th><th>Description</th></tr>
 <tr><td>param</td><td>Parameter to pass to the custom precondition.</td></tr>
 </table>
 
-##### Available "param" sub-tag Attributes #####
+##### Available "param" sub-tag Attributes
 
 <table>
 <tr><th>Attribute</th><th>Description</th></tr>
@@ -317,6 +318,6 @@ Custom preconditions can be created by creating a class that implements the [liq
 <tr><td>value</td><td>String value to set parameter to. <b>required</b></td></tr>
 </table>
 
-## Implementation Notes ##
+## Implementation Notes
 
-Preconditions are checked at the beginning of the execution of a particular changelog. If you use the "include" tag and only have preconditions on the child changelog, those preconditions will not be checked until the migrator reaches that file. This behavior may change in future releases, so don't rely on this behavior.
+Preconditions are checked at the beginning of the execution of a particular *changelog*. If you use the "include" tag and only have preconditions on the child *changelog*, those preconditions will not be checked until the migrator reaches that file. This behavior may change in future releases, so don't rely on this behavior.

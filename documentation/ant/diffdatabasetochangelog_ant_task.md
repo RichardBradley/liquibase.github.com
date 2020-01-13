@@ -4,11 +4,11 @@ title: Docs | Diffdatabasetochangelog ant task
 subnav: subnav_documentation.md
 ---
 
-## diffDatabase Ant Task ##
+# diffDatabase Ant Task
 
 Outputs a [diff](../diff.html) of the difference between two databases as a change log to bring them into sync.
 
-### Parameters ###
+## Parameters
 
 <table>
     <tr>
@@ -108,9 +108,9 @@ Outputs a [diff](../diff.html) of the difference between two databases as a chan
     </tr>
 </table>
 
-### Parameters Specified as Nested Elements ###
+## Parameters Specified as Nested Elements
 
-#### xml, yaml, json, or txt ####
+### xml, yaml, json, or txt 
  
 This task is capable of generating change log files in multiple formats. At least one of these elements is required.
 
@@ -136,23 +136,23 @@ This task is capable of generating change log files in multiple formats. At leas
 <liquibase:xml ouputfile="/path/to/output/changelog.xml" encoding="UTF-8"/>
 {% endhighlight %}
 
-#### classpath ####
+### classpath 
 
 The classpath used to run the task with. Optional. 
 
-#### database ####
+### database
 
 Required unless a `databaseref` attribute is given. See [database data type](./index.html).
 
-#### referencedatabase ####
+### referencedatabase
 
 Required unless a `referencedatabaseref` attribute is given. See [database data type](./index.html).
 
-#### changelogparameters ####
+### changelogparameters
 
 Optional. See [change log parameters](./index.html)
 
-### Examples ###
+## Examples
 
 {% highlight xml %}
 <liquibase:diffDatabaseToChangeLog>

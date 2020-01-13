@@ -4,11 +4,11 @@ title: Docs | Changelogsync ant task
 subnav: subnav_documentation.md
 ---
 
-## changeLogSync Ant Task ##
+# changeLogSync Ant Task 
 
 Marks all change sets as ran against the database.  Useful when you have manually updated your database.  
 
-### Parameters ###
+## Parameters
 
 <table>
     <tr>
@@ -99,21 +99,21 @@ Marks all change sets as ran against the database.  Useful when you have manuall
     </tr>
 </table>
 
-### Parameters Specified as Nested Elements ###
+## Parameters Specified as Nested Elements
 
-#### classpath ####
+### classpath
 
 The classpath used to run the task with. Optional. 
 
-#### database ####
+### database
 
 Required unless a `databaseref` attribute is given. See [database data type](./index.html).
 
-#### changelogparameters ####
+### changelogparameters
 
 Optional. See [change log parameters](./index.html)
 
-### Examples ###
+## Examples
 
 {% highlight xml %}
 <liquibase:changeLogSync changeLogFile="/path/to/changeLog.xml">

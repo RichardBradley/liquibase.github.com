@@ -4,11 +4,11 @@ title: Docs | Diffdatabase ant task
 subnav: subnav_documentation.md
 ---
 
-## diffDatabase Ant Task ##
+# diffDatabase Ant Task
 
 Outputs a [diff](../diff.html) report of the difference between two databases.
 
-### Parameters ###
+## Parameters
 
 <table>
     <tr>
@@ -118,25 +118,25 @@ Outputs a [diff](../diff.html) report of the difference between two databases.
     </tr>
 </table>
 
-### Parameters Specified as Nested Elements ###
+## Parameters Specified as Nested Elements
 
-#### classpath ####
+### classpath
 
 The classpath used to run the task with. Optional. 
 
-#### database ####
+### database
 
 Required unless a `databaseref` attribute is given. See [database data type](./index.html).
 
-#### referencedatabase ####
+### referencedatabase
 
 Required unless a `referencedatabaseref` attribute is given. See [database data type](./index.html).
 
-#### changelogparameters ####
+### changelogparameters
 
 Optional. See [change log parameters](./index.html)
 
-### Examples ###
+## Examples
 
 {% highlight xml %}
 <liquibase:diffDatabase outputfile="/path/to/diff.txt">

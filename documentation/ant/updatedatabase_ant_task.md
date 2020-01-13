@@ -4,11 +4,11 @@ title: Docs | Updatedatabase ant task
 subnav: subnav_documentation.md
 ---
 
-## updateDatabase Ant Task ##
+# updateDatabase Ant Task 
 
 Roll the database forward applying all change sets that have not been run.  
 
-### Parameters ###
+# Parameters
 
 <table>
     <tr>
@@ -104,21 +104,21 @@ Roll the database forward applying all change sets that have not been run.
     </tr>
 </table>
 
-### Parameters Specified as Nested Elements ###
+## Parameters Specified as Nested Elements
 
-#### classpath ####
+### classpath
 
 The classpath used to run the task with. Optional. 
 
-#### database ####
+### database
 
 Required unless a `databaseref` attribute is given. See [database data type](./index.html).
 
-#### changelogparameters ####
+### changelogparameters
 
 Optional. See [change log parameters](./index.html)
 
-### Examples ###
+## Examples
 
 {% highlight xml %}
 <liquibase:updateDatabase changeLogFile="/path/to/changeLog.xml">

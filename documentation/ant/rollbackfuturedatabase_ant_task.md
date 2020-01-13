@@ -4,11 +4,11 @@ title: Docs | Rollbackfuturedatabase ant task
 subnav: subnav_documentation.md
 ---
 
-## rollbackFutureDatabase Ant Task ##
+# rollbackFutureDatabase Ant Task
 
 Outputs SQL to un-run changes that have not yet been executed.  See [rollback](../rollback.html) for more information.
 
-### Parameters ###
+## Parameters
 
 <table>
     <tr>
@@ -98,21 +98,21 @@ Outputs SQL to un-run changes that have not yet been executed.  See [rollback](.
     </tr>
 </table>
 
-### Parameters Specified as Nested Elements ###
+## Parameters Specified as Nested Elements
 
-#### classpath ####
+### classpath
 
 The classpath used to run the task with. Optional. 
 
-#### database ####
+### database
 
 Required unless a `databaseref` attribute is given. See [database data type](./index.html).
 
-#### changelogparameters ####
+### changelogparameters
 
 Optional. See [change log parameters](./index.html)
 
-### Examples ###
+## Examples
 
 {% highlight xml %}
 <liquibase:rollbackFutureDatabase changelogfile="/path/to/changelog.xml">

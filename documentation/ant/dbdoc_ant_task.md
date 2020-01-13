@@ -4,11 +4,11 @@ title: Docs | Dbdoc ant task
 subnav: subnav_documentation.md
 ---
 
-## dbDoc Ant Task ##
+# dbDoc Ant Task 
 
 Generates [dbdoc](../dbdoc.html) database documentation for a given database.
 
-### Parameters ###
+## Parameters
 
 <table>
     <tr>
@@ -93,21 +93,21 @@ Generates [dbdoc](../dbdoc.html) database documentation for a given database.
     </tr>
 </table>
 
-### Parameters Specified as Nested Elements ###
+## Parameters Specified as Nested Elements
 
-#### classpath ####
+### classpath
 
 The classpath used to run the task with. Optional. 
 
-#### database ####
+### database
 
 Required unless a `databaseref` attribute is given. See [database data type](./index.html).
 
-#### changelogparameters ####
+### changelogparameters
 
 Optional. See [change log parameters](./index.html)
 
-### Examples ###
+## Examples
 
 {% highlight xml %}
 <liquibase:dbDoc changelogfile="/path/to/changeLog.xml" outputdirectory="/path/to/output/dir">

@@ -2,7 +2,7 @@
 layout: default
 title: Docs | Include tag 
 ---
-
+# Include Tag
 
 The include tag allows you to break up your change-logs into more manageable pieces. To easily include multiple files, use the [includeAll](includeall.html) tag.
 
@@ -27,7 +27,7 @@ Any [preconditions](preconditions.html) defined at the changelog level in sub ch
 
 The reason to use the `<include>` tag rather than using XML's built-in include functionality is that with the built-in functionality the parser sees just one big XML document. We uniquely identify each change with the id, the author, and the file name so you only have to ensure that the id/author combinations are unique within each file, not across all change logs.
 
-## Available Attributes ##
+## Available Attributes
 
 <table>
 <tr><th>Attribute</th><th>Description</th></tr>
@@ -37,7 +37,7 @@ The reason to use the `<include>` tag rather than using XML's built-in include f
 </table>
 
 
-## Implementation Notes ##
+## Implementation Notes
 
 Currently there is no checking for looping changelogs or double inclusion of changelogs.
 

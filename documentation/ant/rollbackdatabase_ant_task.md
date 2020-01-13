@@ -4,11 +4,11 @@ title: Docs | Rollbackdatabase ant task
 subnav: subnav_documentation.md
 ---
 
-## rollbackDatabase Ant Task ##
+# rollbackDatabase Ant Task
 
 Rolls back database changes.  See [rollback](../rollback.html) page for more information.
 
-### Parameters ###
+## Parameters
 
 <table>
     <tr>
@@ -111,21 +111,21 @@ Rolls back database changes.  See [rollback](../rollback.html) page for more inf
     </tr>
 </table>
 
-### Parameters Specified as Nested Elements ###
+## Parameters Specified as Nested Elements
 
-#### classpath ####
+### classpath
 
 The classpath used to run the task with. Optional. 
 
-#### database ####
+### database
 
 Required unless a `databaseref` attribute is given. See [database data type](./index.html).
 
-#### changelogparameters ####
+### changelogparameters
 
 Optional. See [change log parameters](./index.html)
 
-### Examples ###
+## Examples ##
 
 {% highlight xml %}
 <liquibase:rollbackDatabase rollbackCount="2" changelogfile="/path/to/changelog.xml">

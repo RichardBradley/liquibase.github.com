@@ -4,11 +4,11 @@ title: Docs | Generatechangelog ant task
 subnav: subnav_documentation.md
 ---
 
-## generateChangeLog Ant Task ##
+# generateChangeLog Ant Task
 
 [Generates changelog](../generating_changelogs.html) to re-create an existing database.
 
-### Parameters ###
+## Parameters
 
 <table>
     <tr>
@@ -85,9 +85,9 @@ subnav: subnav_documentation.md
     </tr>
 </table>
 
-### Parameters Specified as Nested Elements ###
+## Parameters Specified as Nested Elements
 
-#### xml, yaml, json, or txt ####
+### xml, yaml, json, or txt
  
 This task is capable of generating change log files in multiple formats. At least one of these elements is required.
 
@@ -113,19 +113,19 @@ This task is capable of generating change log files in multiple formats. At leas
 <liquibase:xml outputfile="/path/to/output/changelog.xml" encoding="UTF-8"/>
 {% endhighlight %}
 
-#### classpath ####
+### classpath
 
 The classpath used to run the task with. Optional.
 
-#### Database ####
+### Database
 
 Required unless a `databaseref` attribute is given. See [database data type](./index.html).
 
-#### ChangeLogParameters ####
+### ChangeLogParameters
 
 Optional. See [change log parameters](./index.html)
 
-### Examples ###
+## Examples
 
 {% highlight xml %}
 <liquibase:generateChangeLog classpathref="classpath">

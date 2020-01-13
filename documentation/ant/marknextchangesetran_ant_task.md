@@ -4,11 +4,11 @@ title: Docs | Marknextchangesetran ant task
 subnav: subnav_documentation.md
 ---
 
-## markNextChangeSetRan Ant Task ##
+# markNextChangeSetRan Ant Task
 
 Marks the next change as already ran. Useful for when a change was made manually and so an update is failing.
 
-### Parameters ###
+## Parameters
 
 <table>
     <tr>
@@ -99,21 +99,21 @@ Marks the next change as already ran. Useful for when a change was made manually
     </tr>
 </table>
 
-### Parameters Specified as Nested Elements ###
+## Parameters Specified as Nested Elements
 
-#### classpath ####
+### classpath
 
 The classpath used to run the task with. Optional. 
 
-#### database ####
+### database
 
 Required unless a `databaseref` attribute is given. See [database data type](./index.html).
 
-#### changelogparameters ####
+### changelogparameters
 
 Optional. See [change log parameters](./index.html)
 
-### Examples ###
+## Examples
 
 {% highlight xml %}
 <liquibase:markNextChangeSetRan changelogfile="/path/to/changelog.xml">

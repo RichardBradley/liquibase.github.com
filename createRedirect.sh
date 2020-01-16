@@ -20,6 +20,7 @@ TARGETURL=$2
 # See if the target exists! the wget option --spider means to only check, do not
 # download. The -q means quiet. 
 echo "Checking to see if '$TARGETURL' already exists"
+TESTURL=$TARGETURL
 if [[ $TARGETURL != "http"* ]]; then
   TESTURL=https://www.liquibase.org$TARGETURL
 fi

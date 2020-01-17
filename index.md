@@ -70,7 +70,7 @@ extraStyleSheets:
 			          </ul>
             </div>
             <div class="lb-choose-path__path__button">
-                <a href="https://download.liquibase.org/liquibase-pro-trial-request-form/" class="cta cta--block">Try Free for 14 Days</a>
+                <a href="https://download.liquibase.org/liquibase-pro-trial-request-form/" class="cta cta--block">Try Free for 30 Days</a>
             </div>
         </div>
     </div>

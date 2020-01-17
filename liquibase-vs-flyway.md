@@ -88,7 +88,7 @@ extraJavascriptFiles:
     </div>
     <div class="landing-page__cta-block__text">
       <p>
-        Get a free 14-day trial of Liquibase Pro. If you decide you don't want the Pro features, simply keep using the open source version.
+        Get a free 30-day trial of Liquibase Pro. If you decide you don't want the Pro features, simply keep using the open source version.
       </p>
     </div>
     <div class="landing-page__cta-block__cta">

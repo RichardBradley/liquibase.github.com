@@ -13,9 +13,14 @@ Liquibase can be run from the command line by running:
     
 (Optionally, replace the liquibase command with `java -jar <path-to-liquibase-jar>`)
 
-The command line migrator works well when you want to do migrations on demand, but don't have Ant or Maven available such as on servers. The command line migrator also gives you more control over the process than the [servlet listener](servlet_listener.html), [Ant](ant/index.html), or [Maven](maven/index.html) do, allowing you to run maintenance commands like outputting SQL and listing/releasing database changelog locks.
+The command line migrator works well when you want to do migrations on demand, but don't have Ant or Maven available such as on servers. 
+The command line migrator also gives you more control over the process than the [servlet listener](servlet_listener.html), [Ant](ant/index.html), 
+or [Maven](maven/index.html) do, allowing you to run maintenance commands like outputting SQL and listing/releasing database changelog locks.
 
-Any values found after the command on the command line invocation will be considered a command parameter. The command line processor will validate whether the command line parameters are allowed for the current command. If the current command does not allow command line parameters or the parameter appears to be an incorrect format, then an error message of 'unexpected command parmeter' will be logged and the execution will terminate.
+Any values found after the command on the command line invocation will be considered a command parameter. The command line processor will 
+validate whether the command line parameters are allowed for the current command. If the current command does not allow command line 
+parameters or the parameter appears to be an incorrect format, then an error message of 'unexpected command parameter' will be logged 
+and the execution will terminate.
 
 The command line migrator also allows you to
 
@@ -24,7 +29,7 @@ The command line migrator also allows you to
 * [generate creation scripts from existing databases](generating_changelogs.html)
 * [generate database change documentation](dbdoc.html)
 
-If you run the command line migrator without any arguments, you will get a help message listing these available parameters:
+If you run the command line migrator without any arguments, you will get a help message listing these available commands:
 
 ## Database Update Commands ##
 
@@ -34,6 +39,7 @@ If you run the command line migrator without any arguments, you will get a help 
 <tr><td>updateCount &lt;value&gt;</td><td>Applies the next &lt;value&gt; change sets.</td></tr>
 <tr><td>updateSQL</td><td>Writes SQL to update database to current version to STDOUT.</td></tr>
 <tr><td>updateCountSQL &lt;value&gt;</td><td>Writes SQL to apply the next &lt;value&gt; change sets to STDOUT.</td></tr>
+<tr><td>updateTestingRollback</td><td>Updates the database, then rolls back changes before updating again.</td></tr>
 </table>
 
 
@@ -48,8 +54,6 @@ If you run the command line migrator without any arguments, you will get a help 
 <tr><td>rollbackToDateSQL &lt;date/time&gt;</td><td>Writes SQL to roll back the database to the state it was in at the given date/time version to STDOUT.</td></tr>
 <tr><td>rollbackCountSQL &lt;value&gt;</td><td>Writes SQL to roll back the last &lt;value&gt; change sets to STDOUT.</td></tr>
 <tr><td>futureRollbackSQL</td><td>Writes SQL to roll back the database to the current state after the changes in the changeslog have been applied.</td></tr>
-<tr><td>updateTestingRollback</td><td>Updates the database, then rolls back changes before updating again.</td></tr>
-<tr><td>generateChangeLog</td><td>generateChangeLog of the database to standard out. v1.8 requires the dataDir parameter currently.</td></tr>
 </table>
 
 
@@ -57,8 +61,11 @@ If you run the command line migrator without any arguments, you will get a help 
 
 <table>
 <tr><th>Command</th><th>Description</th></tr>
+<tr><td>generateChangeLog</td><td>Conceptually, does a diff of the current database to an empty database, creating a changelog that has all the changes
+needed to update an empty database.</td></tr>
 <tr><td>diff [diff parameters]</td><td>Writes description of differences to standard out.</td></tr>
-<tr><td>diffChangeLog [diff parameters]</td><td>Writes Change Log XML to update the base database to the target database to standard out.</td></tr>
+<tr><td>diffChangeLog [diff parameters]</td><td>Adds any differences between the databases specified to a changelog. Can append in any of the supported 
+changelog formats.</td></tr>
 </table>
 
 
@@ -82,7 +89,7 @@ If you run the command line migrator without any arguments, you will get a help 
 <tr><td>markNextChangeSetRan</td><td>Mark the next change set as executed in the database.</td></tr>
 <tr><td>listLocks</td><td>Lists who currently has locks on the database changelog.</td></tr>
 <tr><td>releaseLocks</td><td>Releases all locks on the database changelog.</td></tr>
-<tr><td>dropAll</td><td>Drops all database objects owned by the user. Note that functions, procedures and packages are not dropped (limitation in 1.8.1).</td></tr>
+<tr><td>dropAll</td><td>Drops all database objects owned by the user. DANGEROUS!</td></tr>
 <tr><td>clearCheckSums</td><td>Removes current checksums from database.  On next run checksums will be recomputed.</td></tr>
 </table>
 

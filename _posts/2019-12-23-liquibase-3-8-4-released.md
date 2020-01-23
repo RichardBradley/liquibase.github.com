@@ -3,6 +3,8 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.8.4 Released, Corrects Spring Boot Error in Pro
 ---
+# Liquibase 3.8.4 Released, Corrects Spring Boot Error in Pro
+
 Liquibase 3.8.4 is now available here through [Liquibase.org](https://download.liquibase.org/download-community/).
 The [3.8.4 release is also available on GitHub](https://github.com/liquibase/liquibase/releases/). Here’s a closer look at what's included in the latest release.
 

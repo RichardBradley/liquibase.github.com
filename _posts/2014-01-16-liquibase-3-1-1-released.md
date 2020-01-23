@@ -3,11 +3,10 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.1.1 Released
 ---
-
+# Liquibase 3.1.1 Released
 
 Liquibase 3.1.1 has been released with a few bug fixes.
 The most important fixes reverts how `<createProcedure>` checksums are computed so they are compatible with 3.0 and fix the new `<rowCount>` and `<tableIsEmpty>` preconditions.
-
 
 The newest version can be download from <a href="http://liquibase.org/download">liquibase.org/download</a>
 

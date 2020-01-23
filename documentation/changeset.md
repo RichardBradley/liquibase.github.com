@@ -3,7 +3,7 @@ layout: default
 title: Docs | Changeset tag 
 ---
 
-# &lt;changeSet&gt; tag #
+# changeSet tag 
 
 The changeSet tag is what you use to group database changes/<a href="changes/index.html">refactorings</a> together.
 

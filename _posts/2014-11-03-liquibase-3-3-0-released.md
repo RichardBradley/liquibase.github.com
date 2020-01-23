@@ -3,28 +3,21 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.3.0 and 3.2.3 Released
 ---
-
+# Liquibase 3.3.0 and 3.2.3 Released
 
 Liquibase 3.2.3 and 3.3.0 have been released. As usual, they can be downloaded from the <a href="http://liquibase.org/download">Liquibase download page</a> and are available in the Maven repository as org.liquibase/liquibase-core.
 
-
 Both 3.2.3 and 3.3.0 should be drop-in replacements for 3.2.2. A new batch of Liquibase extensions will be released over the next few days.
-
 
 ### New "label" attribute on changeSet
 
-
 Labels are general purpose way to categorize changeSets like contexts, but working in the opposite way. Instead of defining a set of contexts at runtime and then a match expression in the changeSet, you define a set of labels in the context and a match expression at runtime.
-
 
 The most common time you would use labels instead of contexts is when the person doing the liquibase update has the knowledge of the types of changeSets to run, not the person writing the changeSet.
 
-
 Labels can also be applied to modifySql
 
-
 ### New change log commands and attributes
-
 
 - New "empty" tag for explicitly marking a changeSet as unused
 - New "output" tag for outputting a message during Liquibase update.
@@ -47,7 +40,6 @@ A new "clustered='true\|false'" attribute is now avaiable on createIndex and cre
 ### 3.2.3 Change Log
 
 3.2.3 is a patch release with smaller bug fixes. Even if not explicitly listed in the changelogs below, anything in 3.2.3 will be in 3.3.0.
-
 
 - <a href="https://liquibase.jira.com/browse/CORE-1919">CORE-1919</a> - SpringLiquibase fails when dropFirst is true
 - <a href="https://liquibase.jira.com/browse/CORE-1987">CORE-1987</a> - "mvn liquibase:diff" does not find any differences between databases

@@ -3,7 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase Downloads Moved Off SourceForge
 ---
-
+# Liquibase Downloads Moved Off SourceForge
 
 When I first released Liquibase as open source in 2006, Sourceforge was the obvious place to host the project. Over the years, however, I've been slowing shifting functionality off sourceforge to <a href="https://liquibase.jira.com" title="liquibase.jira.com">liquibase.jira.com</a>, <a href="https://github.com/liquibase" title="github.com/liquibase">github.com/liquibase</a> and this blog.
 

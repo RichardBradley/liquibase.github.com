@@ -3,16 +3,14 @@ layout: default
 subnav: subnav_blog.md
 title: Trimming Liquibase ChangeLogs
 ---
-
+# Trimming Liquibase ChangeLogs
 
 For people who have used Liquibase for a long time, a common question they have is how to clear out a changelog file that has gotten unwieldy.
 
 
 The standard process for using Liquibase is to append individual change sets to your changelog file for each database change you need to make. Over time those changes can build up to thousands of entries, many of which are now redundant (create a table and later drop it) or inefficient (create a table, then add columns individually vs. just creating the table with all the columns). What is the best way to simplify all that cruft that has built up?
 
-
 My first response is always "Do you really need to simplify it?" You built up that changelog over a long period of time and you have ran it and tested it countless times. Once you start messing with the changelog file you are introducing risk which has a cost of its own. Does whatever performance or file size concerns you have really outweigh the risk of messing with a script that you know works?
-
 
 If it is worth the risk, why is it work the risk? Sometimes the problem is that your changelog file has just gotten so large that your editor chokes on it, or you get too many merge conflicts. The best way to handle this is to simply break up your changelog file into multiple files. Instead of having a single changelog.xml file with everything in it, create a master.changelog.xml file which uses the `<include>` tag to reference other changelog files.
 

@@ -1,9 +1,9 @@
 ---
 layout: default
 subnav: subnav_blog.md
-title: Adding Liquibase on an Existing project
+title: Adding Liquibase to an Existing project
 ---
-
+# Adding Liquibase to an Existing Project
 
 The <a href="http://www.liquibase.org/quickstart.html">Quick Start Guide</a> works well for starting Liquibase on a new project because your empty changelog file matches your empty database. However, when you have an existing project with an existing database things are more complicated.
 
@@ -25,8 +25,6 @@ Creating the changelog to match your database can be done automatically using th
 
 Once you have your changeLog, you need a way to ensure that the pre-Liquibase changeSets are only ran on new, empty databases. The easiest way to do this is generally to use the `changeLogSync` or `changeLogSyncSQL` command to execute (or generate) the SQL that marks the starting changeSets as already ran without actually executing them.
 
-
-
 As an alternative to the changeLogSync command, you can add <a href="http://www.liquibase.org/documentation/contexts.html">contexts</a> on the pre-Liquibase changeSets such as `<changeSet ... context="legacy">` and when you run Liquibase on a new database you run with `liquibase --contexts=legacy update` and on an existing database you run with <code>liquibase --contexts=non-legacy</code>.
 Finally, you can add `<precondition onFail="MARK_RAN">` tags to the generated changeSets. For example, if you have a `<createTable tableName="person">` changeSet, you would add
 
@@ -42,15 +40,11 @@ tag. Adding preconditions requires more changes to the changeLog file and introd
 
 Often times a part of the reason to move to Liquibase is because your schemas have diverged over time, so an important question to answer is "If I'm making the changelog file match the current state, what *is* the current state?" Usually the best answer to that question is "the production database" but it can vary.
 
-
-
 How divergent your schemas are will also affect which of the above techniques you use to populate the DatabaseChangeLog table, and it will often times make sense to use multiple approaches. For example, you may want to generate your base changeLogs from the production database and use changeLogSyncSQL to be able to mark them ran on everything from production down. Then you can add your non-released changeSets to the changeLog file with a precondition checking if it has already ran. That will allow Liquibase to automatically figure out the correct state for all your databases from development through production.
 
 ### We are going to use Liquibase starting&hellip;..NOW!
 
 Instead of building up a changeLog to match your existing database, you can instead just declare "from now on we are using Liquibase". The advantage to this is that it much easier to set up because it is just a mandate. Usually this works best going from one version to the next because your databases are all in a reasonably consistent state and you simply start tracking database changes in your next version using Liquibase. Because Liquibase only looks at the DatabaseChangeLog table to determine what needs to run, it doesn't care what else might be in your database and so it will leave all your existing tables alone and just run the new changeSets.
-
-
 
 The biggest disadvantage to this approach is that you cannot bootstrap an empty database with Liquibase alone. A work-around is to take a pre-Liquibase snapshot using your database backup tool and use that as your database seed. Any time you need to create a new database, you first load in the seed and then run Liquibase update.
 
@@ -60,8 +54,6 @@ Depending on how much variation you have between your schemas, even with this ap
 ### People and Processes
 
 Finally, remember that starting to use Liquibase&ndash;especially on an existing project&ndash;isn't just about how you bootstrap your changeLog file. It is also a question of how you introduce Liquibase into your existing processes and culture.
-
-
 
 For many companies and projects, everyone realizes the problems that need fixing and are on board with the advantages of change. For others, however, there can be entrenched interests and strong resistance similar to any other process change. Liquibase provides many tools and approaches that can be used to ease it into an existing process such as <a href="http://www.liquibase.org/documentation/sql_output.html">SQL output</a>, <a href="http://www.liquibase.org/documentation/sql_format.html">SQL formatted changelogs</a>, <a href="http://www.liquibase.org/documentation/diff.html">diffChangeLog</a> and more that can be combined in ways that works best for your group.
 

@@ -4,6 +4,7 @@ subnav: subnav_blog.md
 title: 5 Ways to Fix a Bad Database Change in Liquibase
 author: Steve Donie
 ---
+# 5 Ways to Fix a Bad Database Change in Liquibase
 
 You’ve just run a `liquibase update`. Moments later, your stomach churns as you realize that there were some big mistakes in the changes you just deployed and your database is definitely not in the state you intended. What do you do now?
 **Don’t panic. You’ve got options.**

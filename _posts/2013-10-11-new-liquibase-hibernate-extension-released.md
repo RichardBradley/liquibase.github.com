@@ -3,7 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: New Liquibase Hibernate Extension Released
 ---
-
+# New Liquibase Hibernate Extension Released
 
 After far too long, a new version of the Liquibase-Hibernate extension has been released!
 

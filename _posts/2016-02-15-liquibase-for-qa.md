@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase for QA Test Teams
 ---
+# Liquibase for QA Test Teams
 
 As a QA team member, you always make sure you are testing the current version of an application. However, it is just as important that the testing schema is correct and that there are no unexpected changes that the developers have applied to their environment that you do not know about.
 

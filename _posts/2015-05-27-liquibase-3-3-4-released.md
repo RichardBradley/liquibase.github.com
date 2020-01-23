@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.3.4 Released
 ---
+# Liquibase 3.3.4 Released
 
 Bugfix release Liquibase 3.3.4 is now available from <a title="liquibase.org/download" href="http://liquibase.org/download">liquibase.org/download</a> and through the Maven repositories.
 

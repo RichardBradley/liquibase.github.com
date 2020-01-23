@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase for DBAs
 ---
+# Liquibase for DBAs
 
 The role of the Database Administrator is evolving and has never been more complex. DBA's are constantly juggling schema management, performance tuning, change control, plus database administration all within ever-shortening application development cycles. On top of all that, there are more database environments to manage than ever before, more distributed sources of database changes, and more stringent compliance requirements.
 

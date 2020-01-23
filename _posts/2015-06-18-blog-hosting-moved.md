@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase Blog Hosting Moved
 ---
+# Liquibase Blog Hosting Has Moved
 
 I've moved the blog hosting off a wordpress server and am now hosting it on GitHub along with the rest of www.liquibase.org.
 

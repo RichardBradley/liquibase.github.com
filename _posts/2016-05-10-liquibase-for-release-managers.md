@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase for Application Release Managers
 ---
+# Liquibase for Application Reelase Managers
 
 In the modern agile development environment there is a lot that happens in a very short period of time. This means application release managers need to be efficient with their time while ensuring nothing falls through the cracks. The database updates that go along with each application release are just as important as the application code, both for deployment and for planning rollbacks.
 
@@ -32,5 +33,5 @@ If your application release teams determine their needs extend beyond all the gr
 
 Know the development status of every schema in the database
 
-More information on Datical DB can be found [here](http://www.datical.com/product-information/).
+More information on Datical can be found [here](https://www.datical.com/).
 

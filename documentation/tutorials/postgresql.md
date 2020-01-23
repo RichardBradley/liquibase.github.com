@@ -3,6 +3,7 @@ layout: default
 title: Docs | PostgreSQL Tutorial 
 subnav: subnav_tutorials.md
 ---
+# PostgreSQL Tutorial
 
 #### To test your connection, try running liquibase with the JDBC driver located in the same directory as liquibase:
 

@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.6.2 Released
 ---
+# Liquibase 3.6.2 Released
 
 Liquibase 3.6.2 is now available from [liquibase.org/download](http://liquibase.org/download) and through the Maven repositories. Question or comments can be directed [to liquibase.org/community](http://liquibase.org/community)
 

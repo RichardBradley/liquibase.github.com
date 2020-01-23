@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.3.3 Released
 ---
+# Liquibase 3.3.3 Released
 
 Liquibase 3.3.3 is primarily a bugfix release
 

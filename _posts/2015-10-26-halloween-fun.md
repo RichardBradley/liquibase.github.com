@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Halloween Fun
 ---
+# Halloween Fun
 
 Halloween--the spookiest night of the year. Spookiest night for those who don't do production deployments anyway...
 

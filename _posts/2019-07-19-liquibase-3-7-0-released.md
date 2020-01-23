@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.7.0 Released
 ---
+# Liquibase 3.7.0 Released
 
 Liquibase 3.7.0 is now available from [liquibase.org/download](http://liquibase.org/download) and through the Maven repositories. Questions or comments should be directed [to liquibase.org/community](http://liquibase.org/community).
 

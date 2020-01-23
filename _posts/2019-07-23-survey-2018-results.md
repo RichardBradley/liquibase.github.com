@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: What We Learned from the 2018 Liquibase Community Survey
 ---
+# What We Learned from the 2018 Liquibase Community Survey
 
 Last year, we invited the Liquibase community to take a survey to help us understand how Liquibase is used and how we can improve. 
 A small sample size from our community (a little over 200 people out of 4M+ downloads in the past 12 months) participated via the Liquibase.org website. Here’s what we learned.

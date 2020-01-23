@@ -4,7 +4,7 @@ title: Docs | Sqlite
 subnav: subnav_tutorials.md
 ---
 
-# SQLite #
+# SQLite Tutorial
 
 SQLite is a single-file database which follows the zero-configuration approach.
 It is furthermore easy to use and is thus perfect for your first experiments with liquibase.

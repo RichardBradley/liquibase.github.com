@@ -3,18 +3,15 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.2.0 Released
 ---
-
+# Liquibase 3.2.0 Released
 
 Liquibase 3.2.0 has been released. As usual, it can be downloaded from the <a href="http://liquibase.org/download">Liquibase download page</a> and is available in the Maven repository as org.liquibase/liquibase-core.
-
 
 For most users, upgrading will be seamless but if you have written Liquibase extensions there have been some API changes. See <a href="http://www.liquibase.org/v3_2_upgrade.html">http://www.liquibase.org/v3_2_upgrade.html</a> for details.
 
 ## Updated Extensions
 
 The following extensions have been updated to work with 3.2.0 and/or include bugfixes:
-
-
 
 - <a href="https://github.com/liquibase/liquibase-hibernate">liquibase-hibernate</a>
 - <a href="https://github.com/liquibase/liquibase-oracle">liquibase-oracle</a>

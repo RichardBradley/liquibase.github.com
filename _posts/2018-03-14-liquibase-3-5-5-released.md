@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.5.5 Released
 ---
+# Liquibase 3.5.5 Released
 
 For those of you not watching the download page every day, Liquibase 3.5.5 was released on Feb 15th. 
 

@@ -3,16 +3,13 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.2.1 Released
 ---
-
+# Liquibase 3.2.1 Released
 
 Liquibase 3.2.1 has been released. As usual, it can be downloaded from the <a href="http://liquibase.org/download">Liquibase download page</a> and is available in the Maven repository as org.liquibase/liquibase-core.
 
-
 3.2.1 is purely a bugfix release. The only potential update issue could be a fix for incorrect checksums introduced in 3.2.0. If you used defaultValueNumeric, defaultValue or used createProcedure or sql tags you may have seen unexpectedly changed checksums with 3.2.0. With 3.2.1, those have been reverted back to the correct 3.1.x version. If you are updating from 3.1.x it will be a smoother update from 3.2.0. If you already updated to 3.2.1 and manually fixed your checksums in the databasechangelog table, they will need to be updated again.
 
-
 ### Full change log:
-
 
 - <a href="https://liquibase.jira.com/browse/CORE-1844">CORE-1844</a> - bulkFetch of foreign keys on Oracle is very slow
 - <a href="https://liquibase.jira.com/browse/CORE-1918">CORE-1918</a> - Multiple comment blocks in changesets no longer works

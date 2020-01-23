@@ -3,16 +3,13 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.0.8 Released
 ---
-
+# Liquibase 3.0.8 Released
 
 Liquibase 3.0.8 is officially released. It is purely a bugfix release that covers improvements to data type handing, performance improvements, and much more.
 
-
 ### Download
 
-
 Download Liquibase from <a href="http://liquibase.org/download">http://liquibase.org/download</a> or from the Maven repository as it winds its way through the mirror process. Visit the <a href="http://liquibase.org/community">user forums</a> if you have any questions.
-
 
 ### All Closed Issues
 

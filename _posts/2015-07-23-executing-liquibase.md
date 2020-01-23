@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Executing Liquibase - 3 Use Cases
 ---
+# Executing Liquibase: 3 Use Cases
 
 Once you've created a [database changelog file](/documentation/databasechangelog.html), what is the best way to run it? As always, it depends on what works best for you. There are three main ways to run Liquibase: "automatically on startup", "manually as needed", or "Just give me the SQL and I'll do it myself". All three work with any changelog file, so use the method (or combination of methods) which works best for your project.
 

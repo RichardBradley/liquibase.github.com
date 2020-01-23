@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Happy Birthday! 10 Years of Liquibase
 ---
+# Happy birthday to Liquibase
 
 10 years ago today was the [initial public announcement of Liquibase, originally called the "Sundog Database Refactoring Tool"](http://www.theserverside.com/news/thread.tss?thread_id=40959).
 

@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Updates to Liquibase Hibernate and HANA extensions
 ---
+# Updates to Liquibase Hibernate and HANA Extensions
 
 We have reviewed and accepted pull requests for extensions that add and enhance support for Hibernate and HANA. Hibernate is one of the most popular Java ORMs and SAP HANA powers critical ERP, CRM, and SRM systems. 
 

@@ -3,11 +3,11 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.3.2 Released
 ---
+# Liquibase 3.3.2 Released
 
 Liquibase 3.3.2 is officially released. It is primarily a bugfix release, but has one major new feature: object diffChangeLog/generateChangeLog object filtering.
 
 ### includeObjects/excludeObjects logic
-
 
 You can now set an includeObjects or excludeObjects paramter on the command line or Ant. For maven, the parameteres are diffExcludeObjects  and diffIncludeObjects. The format for these parameters are:
 

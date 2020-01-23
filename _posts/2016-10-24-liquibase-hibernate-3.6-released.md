@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase-Hibernate Plugin 3.6 Released
 ---
+# Liquibase Hibernate Plugin 3.6 Released
 
 After far too long, the Liquibase-Hibernate plugin has been updated to **support Hibernate 5.x!!**
 

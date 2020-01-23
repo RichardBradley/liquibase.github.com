@@ -3,6 +3,7 @@ layout: default
 title: Docs | MySQL Tutorial 
 subnav: subnav_tutorials.md
 ---
+# MySQL Tutorial
 
 #### To test your connection, try running liquibase with the JDBC driver located in the same directory as liquibase:
 

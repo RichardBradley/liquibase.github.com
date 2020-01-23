@@ -3,8 +3,10 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase for Application Developers
 ---
+# Liquibase for Application Developers
 
 Agile development practices and modern source control systems such as Git have transformed how application software is developed and managed.
+
 But for many application developers the way the database is changed is the same as it was in 1995.
 Well, maybe not exactly the same—now SQL files for each release are stored in a shared Windows drive instead of a shared Novell server – but you catch my drift.
 
@@ -50,12 +52,12 @@ Liquibase ships with several tools application development teams can use to: che
 
 ### Enterprise features with Datical
 
-If your application development team determines their needs extend beyond all the great capabilities Liquibase offers check out Datical.  Datical builds upon Liquibase and lets DBAs:
+If your application development team determines their needs extend beyond all the great capabilities Liquibase offers check out Datical. Datical builds upon Liquibase and lets DBAs:
 
-- [Package database schema changes](http://www.datical.com/product/packaging-intelligence/) alongside application code
-- Simulate or rehearse database deployments to [forecast potential errors](http://www.datical.com/product/validation-intelligence/)
-- [Know the deployment status](http://www.datical.com/product/management-intelligence/) of every schema in the database
-- Integrate with popular [DevOps tools](http://www.datical.com/integrations/)
+- [Package database schema changes](https://www.datical.com/solution/database-code-packager/) alongside application code
+- Simulate or rehearse database deployments to [forecast potential errors](https://www.datical.com/solution/change-management-simulator/)
+- [Know the deployment status](https://www.datical.com/solution/deployment-monitoring-console/) of every schema in the database
+- Integrate with popular [DevOps tools](https://www.datical.com/integrations/)
 
-More information on Datical DB can be [found here](http://www.datical.com/product-information/).
+More information on Datical DB can be [found here](https://www.datical.com/).
 

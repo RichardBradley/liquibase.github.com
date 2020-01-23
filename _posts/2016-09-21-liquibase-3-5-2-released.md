@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.5.2 Released
 ---
+# Liquibase 3.5.2 Released
 
 Bugfix release Liquibase 3.5.2 is now available from [liquibase.org/download](/download) and through the Maven repositories.
 

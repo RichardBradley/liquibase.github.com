@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase Without a Database Connection
 ---
+# Liquibase Without a Database Connection
 
 There are many, many different processes and requirements companies have for managing their database schemas. Some allow the application to directly manage them on startup, some require SQL scripts be executed by hand. Some have schemas that can differ across customers, some have only one database to deal with.
 

@@ -3,17 +3,17 @@ layout: default
 subnav: subnav_blog.md
 title: Contexts vs. Labels
 ---
+# Understanding Contexts vs. Labels
 
 A new feature with Liquibase 3.3 is "labels". Labels are similar to contexts in that both allow you to chose a subset of changeSets to execute at runtime. Labels are also similar to contexts in that both are purposely vague terms because they are fairly generic features can enable many different use cases. Where they differ is in who has the power to specify complex logic: the changeSet author or the deployment manager.
 
 ### Contexts
 
-Contexts in Liquiase have been available for quite a while, and they started out primarily as a way of "tagging" changeSets so they can be chosen at runtime. One common use is to mark changeSets that insert test data as context="test" so that in your development and QA environments you you can run liquibase with --contexts=test to get the test data and in production you run with --contexts=prod to not have test data. Contexts are also helpful for marking changeSets based on feature sets to include (context="shoppingCart") or bundle (context="pro") or even customer (context="acme_inc"). For complex cases, multiple contexts can be applied to a changeSet such as context="acme_inc, pro" and multiple contexs can be chosen at runtime such as --contexts=free,qa.
+Liquibase contexts have been available for quite a while, and they started out primarily as a way of "tagging" changeSets so they can be chosen at runtime. One common use is to mark changeSets that insert test data as context="test" so that in your development and QA environments you you can run liquibase with --contexts=test to get the test data and in production you run with --contexts=prod to not have test data. Contexts are also helpful for marking changeSets based on feature sets to include (context="shoppingCart") or bundle (context="pro") or even customer (context="acme_inc"). For complex cases, multiple contexts can be applied to a changeSet such as context="acme_inc, pro" and multiple contexs can be chosen at runtime such as --contexts=free,qa.
 
 With Liquibase 3.2, support was added to for context expressions in changeSets. Now, when you are defining your changeSet you can specify complex logic such as context="!test" or context="qa or (acme_inc and dev)". The context logic can only be specified in your changeSet definition, however. When running Liquibase, you can still specify multiple contexts, but you are just listing out all the contexts that apply to the current Liquibase run.
 
 ### Labels
-
 
 Labels were added in Liquibase 3.3 to work like contexts, but "backwards" in who can specify logical expressions. In your changeSet you can only specify a simple list of "labels" that apply to the changeSet but at runtime you can write a complex expression to chose the labels you want to execute. This allows you to specify a changeSet with labels="qa, acme_inc" and then at runtime use expressions such as --labels="!acme_inc" or --labels="pro or (free and beta)".
 

@@ -3,8 +3,10 @@ layout: default
 subnav: subnav_blog.md
 title: Expanding Database Support
 ---
+# Expanding Database Support
 
 Liquibase has always focused mainly on "standard" SQL databases, but we are looking to improving support for NoSQL databases like Cassandra, MongoDB, Hadoop and others.
+
 We'd also like to make sure our support for databases like DB2 on iSeries and System z as well as Redshift, Azure SQL Server, Vertica, Greenplumb etc.
 
 Unfortunately, I don't have a lot of experience with what is really needed to manage data and schemas on any of these databases and/or the particular pain points that need to be solved for each.

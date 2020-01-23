@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.4.0 Released
 ---
+# Liquibase 3.4.0 Released
 
 Liquibase 3.4.0 has been released and is working it's way through the Maven mirrors.
 

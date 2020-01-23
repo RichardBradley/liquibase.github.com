@@ -3,6 +3,7 @@ layout: default
 title: Docs | Maven rollback 
 subnav: subnav_maven.md
 ---
+# Maven Rollback
 
 > *Note* that there are [differences in how rollback works with Maven vs. how it works from the CLI](/documentation/maven/maven_rollback.html#differences-in-controlling-rollback-behavior)
 

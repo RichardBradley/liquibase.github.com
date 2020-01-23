@@ -3,7 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Group of Liquibase Extensions Updated
 ---
-
+# Group of Liquibase Extensions Updated
 
 There has been a lot of activity the last couple weeks on the Liquibase extensions I manage and/or have source access to. There were a few running up against the Oct 15th jira-svn-shutdown deadline and also several that had not been updated to support Liquibase 3.0 yet.
 
@@ -12,9 +12,6 @@ For all of the extensions, I have moved their source repository out of the share
 
 
 I also released the new builds into Maven under the <a title="org.liquibase.ext" href="http://mvnrepository.com/artifact/org.liquibase.ext">org.liquibase.ext</a> group (some may still be propagating through the mirrors).
-
-
-
 
 
 ### The recently updated extensions are

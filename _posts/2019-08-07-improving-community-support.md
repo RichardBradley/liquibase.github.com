@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Improving Community Support
 ---
+# Improving Community Support
 
 It’s an exciting time for the Liquibase community. The latest release, 3.7, has over 350 commits from the community and from Datical. 
 Datical has dedicated several engineers to the Liquibase open source project. 

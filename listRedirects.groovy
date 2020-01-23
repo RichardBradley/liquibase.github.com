@@ -113,11 +113,11 @@ currentDir.eachFileRecurse { thisFile ->
       println "type 3 redirect: ${fileName} redirects to ${target} ${canonicalString} ${titleStatus}"
     }
 
-    // check for type 4 redirect
+    // check for type 4 redirect - this is a thing where we created a layout that did a redirect. Should not be used. 
     def type4Match = contents =~ /(?m)redirectUrl: (.*)/
     if (type4Match) {
       target = type4Match[0][1]
-      println "type 4 redirect: ${fileName} redirects to ${target}"
+      println "type 4 redirect: ${fileName} redirects to ${target} - DO NOT USE THIS REDIRECT TYPE! CHANGE TO TYPE 3 using ./createRedirect.sh"
     }
     
   } 

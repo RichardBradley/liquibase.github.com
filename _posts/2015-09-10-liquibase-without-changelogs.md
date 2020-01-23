@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase Without Changelogs
 ---
+# Liquibase Without Changelogs
 
 Early on, Liquibase only supported XML changelogs with each changeSet listed in it. There are many advantages to using that setup, but there are now many different ways to store your database changes.
 

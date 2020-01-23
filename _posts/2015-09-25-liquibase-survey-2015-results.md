@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: 2015 Survey Results
 ---
+# 2015 Survey Results 
 
 There were 136 responses to the 2015 Liquibase Survey. Since I'm relying on self-selection for people answering the survey, the first question is how representative is the data.
 The only two "demographic" survey questions I have alternate data points for are version used and country.

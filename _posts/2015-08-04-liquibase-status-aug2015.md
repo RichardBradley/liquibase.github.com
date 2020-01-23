@@ -3,6 +3,7 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase Status - Aug 2015
 ---
+# Liquibase Status - August 2015
 
 This is the first in a planned monthly post designed to give a better window into Liquibase development and the Liquibase community. I'd appreciate any feedback you have on how helpful (or not) it is and/or any suggestions you have.
 

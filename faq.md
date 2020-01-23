@@ -34,7 +34,7 @@ default storage engine with default-storage-engine=INNODB.
 Since 1.9, the [modifySql](documentation/modify_sql.html) tag can be used to modify the generated SQL.
 
 ### What is all that stuff at the beginning of my XML changelog? ###
-If you are using an XML format changelog, you may be wondering what all that stuff at the beginning is. Here's and example, followed by 
+If you are using an XML format changelog, you may be wondering what all that stuff at the beginning is. Here's an example, followed by 
 an explanation of each of the parts. 
 
 {% highlight xml %}

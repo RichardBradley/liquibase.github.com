@@ -3,16 +3,14 @@ layout: default
 subnav: subnav_blog.md
 title: Liquibase 3.0.7 Release
 ---
-
+# Liquibase 3.0.7 Improves Memory Usage
 
 Lots of good bugfixes in 3.0.7, but major improvements are:
-
 
 - Significantly decreased memory usage, especially with large sql files
 - Improved checksum performance
 - Fixed SQLite support
 - Improvements to data type handling, especially in MS SqlServer
-
 
 
 ### Discovered Checksum Issue:
@@ -21,8 +19,7 @@ It was recently discovered that a change in the 3.0.5 release caused changeSets 
 
 ### Download
 
-
-Download Liquibase from <a href="http://liquibase.org/download">http://liquibase.org/download</a> or from the Maven repository as it winds its way through the mirror process. Visit the <a href="http://liquibase.org/community">user forums</a> if you have any questions.
+Download Liquibase from <a href="https://liquibase.org/download">http://liquibase.org/download</a> or from the Maven repository as it winds its way through the mirror process. Visit the <a href="https://liquibase.org/community">user forums</a> if you have any questions.
 
 
 ### All Closed Issues

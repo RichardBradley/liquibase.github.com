@@ -4,6 +4,7 @@ subnav: subnav_blog.md
 title: Recent Liquibase Articles, December 2019
 author: Steve Donie
 ---
+# Recent Liquibase Articles, December 2019
 
 Here are some recent mentions of Liquibase on other sites. 
 

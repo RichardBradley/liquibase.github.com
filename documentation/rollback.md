@@ -20,7 +20,8 @@ Other refactorings such as "drop table" and "insert data" have no corresponding 
 <table>
 <tr><th>Attribute</th><th>Description</th></tr>
 <tr><td>nested tags</td><td>Standard Liquibase change tags to generate rollback statements  </td></tr>
-<tr><td>tag text</td><td>SQL to run to rollback this change  </td></tr>
+<tr><td>tag text</td><td>SQL to run to rollback this change. The text in the element is treated as a `<sql>` change with `stripComments` set to `true`, 
+`splitStatements` set to `true` and `endDelimiter` set to `;`.</td></tr>
 <tr><td>changeSetId</td><td>Id of changeset to rerun in order to rollback this change.  Example: for rolling back a dropTable change, reference the changeSet that created the table.  </td></tr>
 <tr><td>changeSetAuthor</td><td>Author of changeset to rerun in order to rollback this change  </td></tr>
 </table>
@@ -92,7 +93,7 @@ You can specify what changes to rollback in three ways:
 
 ### Tag ###
 
-Specifying a tag to rollback to will roll back all change-sets that were executed against the target database after the given tag was applied. See the ["command line"](command_line.html) documentation for how to tag your database.
+Specifying a tag to rollback to will roll back all change-sets that were executed against the target database after the given tag was applied. See the [command line](command_line.html) documentation for how to tag your database.
 
 ### Number of Change Sets ###
 

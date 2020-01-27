@@ -128,7 +128,7 @@ will be deployed.</td></tr>
 <tr><td>--logFile=&lt;filename&gt;</td><td>Rather than logging to console, send logging messages to a file.</td></tr>
 <tr><td>--liquibaseProLicenseKey=&lt;licenKey&gt;</td><td>A Liquibase Pro license key (base64 encoded string) unlocks additional features.</td></tr>
 <tr><td>--help</td><td>Output command line parameter help.</td></tr>
-<tr><td>--exportDataDir</td><td>Directory where insert statement csv files will be kept (required by generateChangeLog command).</td></tr>
+<tr><td>--dataOutputDirectory</td><td>Directory where insert statement csv files will be kept (required by generateChangeLog command).</td></tr>
 <tr><td>--propertyProviderClass=&lt;properties.ClassName&gt;</td><td>custom Properties implementation to use</td></tr>
 </table>
 

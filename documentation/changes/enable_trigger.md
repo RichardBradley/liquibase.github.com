@@ -97,8 +97,8 @@ ENABLE TRIGGER [public].[A String]  ON cat.[public].person;
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2</td><td>Not Supported</td><td><b>Yes</b></td></tr>
-<tr><td>DB2</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>DB2/LUW</td><td>Not Supported</td><td><b>Yes</b></td></tr>
+<tr><td>DB2/z</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td>Not Supported</td><td><b>Yes</b></td></tr>

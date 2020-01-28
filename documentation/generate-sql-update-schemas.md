@@ -15,12 +15,12 @@ There are two reasons you would want to generate SQL in Liquibase.
 
 Generating SQL can be helpful when you want to update your database schemas, but want to view those database changes before applying them. There are several commands that generate deployable SQL, these are:
 
-## `updateSQL` Command
+## updateSQL Command
 Running the `updateSQL` command tells Liquibase to evaluate all the changesets in your *changelog*, then generates the corresponding SQL for what will be deployed to the database so you can preview the changes.
 
 To use the `updateSQL` command, type the following into your command prompt:
 
-{% highlight text %}
+{% highlight bash %}
 
 liquibase --changeLogFile=mssql_lbpro_master_changelog.xml updateSQL
 
@@ -190,7 +190,7 @@ GO
 </details>
 <br>
 
-## `updateSQL` Command with the Labels Parameter
+## updateSQL Command with the Labels Parameter
 The `updateSQL` command allows you to also run a `--labels` parameter to determine which changesets in the *changelog* to evaluate based on its label. You can view your labels in your *changelog*
 
 <details>
@@ -306,7 +306,7 @@ The `updateSQL` command allows you to also run a `--labels` parameter to determi
 </details>
 <br>
 To use the `updateSQL` command with the labels parameter, type the following into your command prompt:
-{% highlight text %}
+{% highlight bash %}
 
 liquibase --changeLogFile=changelog.xml --outputFile=updateSql.txt --labels=setup updateSQL
 
@@ -380,12 +380,12 @@ UPDATE public.databasechangeloglock SET LOCKED = FALSE, LOCKEDBY = NULL, LOCKGRA
 </details>
 <br>
 
-## `futureRollbackSQL` Command
+## futureRollbackSQL Command
 The `futureRollbackSQL` command generates SQL that reverses changes you applied while using the `updateSQL` command.
 
 To run the `futureRollbackSQL` command, type the following into your command prompt:
 
-{% highlight text %}
+{% highlight bash %}
 
 liquibase --changeLogFile=mssql_lbpro_master_changelog_no_catalog.xml futureRollbackSQL
 

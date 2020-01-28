@@ -23,7 +23,7 @@ To generate a *changelog*:
 
 2. Open your command prompt or Linux terminal and run the following command:
 
-{% highlight text %}
+{% highlight bash %}
 
 liquibase --changeLogFile=dbchangelog.xml generateChangeLog
 

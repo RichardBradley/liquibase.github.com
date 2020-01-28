@@ -1,26 +1,26 @@
 ---
 layout: default
-title: ATP Tutorial | Liquibase Docs
+title: Oracle ATP Tutorial | Liquibase Docs
 subnav: subnav_tutorials.md
 ---
 
 # **Creating New Liquibase Projects Oracle Autonomous Transaction Processing Database (ATP)**
-The purpose of this document is to guide you through the process of creating a new Liquibase project with **ATP**. In this tutorial, you will generate an example project and follow the instructions to apply and learn concepts associated with creating new Liquibase Projects with ATP.
-### Prerequisites
+The purpose of this document is to guide you through the process of creating a new Liquibase project with Oracle **ATP**. In this tutorial, you will generate an example project and follow the instructions to apply and learn concepts associated with creating new Liquibase Projects with Oracle ATP.
+## Prerequisites
 * If you have not installed the latest version of Liquibase, navigate to [https://download.liquibase.org/download](https://download.liquibase.org/download) to install the software application.
-* Ensure the liquibase.bat file’s path is set to a location in the PATH System variable.
+* Ensure the `liquibase.bat` file’s path is set to a location in the `PATH` System variable.
 * This example assumes that you have created an Oracle Free tier ATP Database via the Oracle Cloud web console and that you have created an Access Control List during provision with your IP address.
 For more information about Provision Oracle Autonomous Database Processing via the Oracle Cloud web console, please see Oracle ATP related links at the bottom of this page.
-* Navigate to [https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) and download the ojdbc driver jar file for Oracle database.
-* Download Wallet
-  1. Login to your Oracle Cloud account -> Select Autonomous Transaction Processing -> click on your autonomous database link -> Select DB Connection and select “Download Wallet”.
-  2. Enter a password for the Wallet and download the .zip file.
-  3. Record the Wallet password somewhere safe.  For this example let’s call this password “my_wallet_password”.
+* Navigate to [https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) and download the `ojdbc` driver jar file for Oracle database.
+* Download Wallet.
+  1. Login to your Oracle Cloud account > Select **Autonomous Transaction Processing** > click on **autonomous database link** > **DB Connection** > **Download Wallet**.
+  2. Enter a password for the Wallet and download the `.zip` file.
+  3. Record the Wallet password somewhere safe.  For this example let’s call this password `my_wallet_password`.
   4. Unzip the Wallet and have it somewhere safe in your file system.
-  5. Navigate to the wallet folder and edit the ojdbc.properties file with the following:
-    * Comment out the **oracle.net.wallet_location** line
-    * Set **javax.net.ssl.trustStorePassword** to the wallet password in step 3
-    * Set **javax.net.ssl.keyStorePassword** to the wallet password in step 3
+  5. Navigate to the wallet folder and edit the `ojdbc.properties` file with the following:
+    * Comment out the **oracle.net.wallet_location** line.
+    * Set **javax.net.ssl.trustStorePassword** to the wallet password in step 3.
+    * Set **javax.net.ssl.keyStorePassword** to the wallet password in step 3.
 
       For example:
       {% highlight text %}
@@ -31,20 +31,22 @@ For more information about Provision Oracle Autonomous Database Processing via t
       javax.net.ssl.keyStorePassword=my_wallet_password
       {% endhighlight %}
 
-* In the wallet folder open the sqlnet.ora and make sure that **SSL_SERVER_DN_MATCH=yes**
+* In the wallet folder open the `sqlnet.ora` and make sure that **SSL_SERVER_DN_MATCH=yes**
 
 <br />
 
 ## Tutorial
 
-#### To create a Liquibase project with ATP database, begin with the following steps:
+### To create a Liquibase project with ATP database, begin with the following steps:
 
-* Create a new project folder and name it **LiquibaseATP**.
-* Place the ojdbc jar driver file in the **LiquibaseATP** project directory.
+* Create a new project folder and name it `LiquibaseATP`.
+* Place the `ojdbc` jar driver file in the `LiquibaseATP` project directory.
 * In your LiquibaseATP folder, create an empty text file.<br/>
-* Rename the text file to **myChangeLog.xml**.
-Changelog files contain a sequence of changesets, each of which make small changes to the structure of your database. Instead of creating an empty changelog file in step 3, you can also use an existing database to generate a changelog. In this tutorial, you will manually add a single change. To add this change:
-* Open the myChangeLog.xml file and update the changelog file with the following code snippet:
+* Rename the text file to `myChangeLog.xml`.
+`changelog` files contain a sequence of `changeSets`, each of which make small changes to the structure of your database. Instead of creating an empty `changelog` file in step 3, you can also use an existing database to generate a `changelog`. In this tutorial, you will manually add a single change. 
+
+To add this change:
+* Open the `myChangeLog.xml` file and update the `changelog` file with the following code snippet:
 
 
 {% highlight xml %}
@@ -59,8 +61,8 @@ Changelog files contain a sequence of changesets, each of which make small chang
 
 
 * In your LiquibaseATP folder create a new text file.
-* Rename the text file to **liquibase.properties**.
-* Edit the liquibase.properties file to add the following properties:
+* Rename the text file to `liquibase.properties`.
+* Edit the `liquibase.properties` file to add the following properties:
 {% highlight properties %}
 
     changeLogFile: myChangeLog.xml
@@ -72,11 +74,12 @@ Changelog files contain a sequence of changesets, each of which make small chang
 {% endhighlight %}
 
 
-> Note: In this properties file example, the driver jar file is "ojdbc8.jar" under the classpath: property.  Please rename it to match the one that you have previously downloaded accordingly.
-Also, if you are on a Windows machine, please make the TNS_ADMIN path to your wallet folder with double dashes in the url property. for example: url: jdbc:oracle:thin:@databaseName_high?TNS_ADMIN=path//to//Wallet_databaseName
+> **Note:** In this properties file example, the driver jar file is `ojdbc8.jar` under the classpath: property.  Please rename it to match the one that you have previously downloaded accordingly.
+Also, if you are on a Windows machine, please make the `TNS_ADMIN` path to your wallet folder with double dashes in the url property. for example: `url: jdbc:oracle:thin:@databaseName_high?TNS_ADMIN=path//to//Wallet_databaseName`
 
-*	Adding a changeset to the changelog – Change Sets are uniquely identified by “author” and ”id” attributes. Liquibase attempts to execute each changeset in a transaction that is committed at the end.
-In the myChangeLog.xml file line 9 to 20 add a new “department” create table change set as follows:
+###	Adding a `changeSet` to the `changelog` 
+`changeSets` are uniquely identified by `author` and `id` attributes. Liquibase attempts to execute each `changeSet` in a transaction that is committed at the end.
+In the `myChangeLog.xml` file line 9 to 20 add a new **department** by creating a table `changeSet` as follows:
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 
@@ -101,7 +104,7 @@ In the myChangeLog.xml file line 9 to 20 add a new “department” create table
 </databaseChangeLog>
 {% endhighlight %}
 
-> Note: This create table change set is XML format.  The corresponding
+> **Note:** This create table `changeSet` is XML format.  The corresponding
 > SQL statement should look like the following:
 
 {% highlight sql %}
@@ -115,9 +118,11 @@ CREATE TABLE "department"
 * Open the command prompt.  Navigate to the LiquibaseATP directory.  
   Run the following command:
 
-  ### "liquibase update"
-*	 Sign in to your Oracle Cloud account -> go to your Autonomous Database -> click on the "tools tab" -> click on "Open SQL Developer Web" button -> enter your Database user and password.
-You should see a new “**department**” table added to the database.  For example:
+  ### **liquibase update**
+* Sign in to your Oracle Cloud account and navigate to Autonomous Database
+* Click on **tools tab** > **Open SQL Developer Web** and enter your Database username and password.
+
+You should see a new **department** table added to the database.  Here is an example:
 
 {% highlight sql %}
 SELECT * FROM public.department;
@@ -130,14 +135,15 @@ SELECT * FROM public.department;
 
 
 Also, you should see two more tables:
-*	**DATABASECHANGELOG** tracking table – This table keeps a record of all the changesets that were deployed.  This way, next time when you deploy again, the changesets in the changelog will be compared with the DATABASECHANGELOG tracking table and only the new changesets that were not found in the DATABASECHANGELOG will be deployed.  You will notice that a new row was created in that table with the changeset information we have just deployed.
+*	**DATABASECHANGELOG** tracking table – This table keeps a record of all the changesets that were deployed.  This way, the next time  you deploy your `changelog`, your `changeSets` are compared to the DATABASECHANGELOG tracking table and only new `changeSets` not found in the DATABASECHANGELOG will be deployed.  A new row will also be created in your DATABASECHANGELOG tracking table with the `changeSet` information you just deployed.
+
 For this example:
 
 |ID|AUTHOR |FILENAME       |DATEEXECUTED|ORDEREXECUTED|EXECTYPE|MDSUM|...|
 |--|--|--|--|--|--|--|--|
 |1  |bob   |dbchangelog.xml|`date&time`|1|EXECUTED|`checksumvalue`|...|
 
-*	**DATABASECHANGELOGLOCK** – This table is used internally by Liquibase to manage access to the changelog table during deployment.
+*	**DATABASECHANGELOGLOCK** – This table is used internally by Liquibase to manage access to the `changelog` table during deployment.
 
 
 <br/>
@@ -146,6 +152,6 @@ For this example:
 
 [Oracle Database JDBC drivers](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html)
 
-[Oracle Cloud : Autonomous Transaction Processing (ATP) - Create Service](https://oracle-base.com/articles/vm/oracle-cloud-autonomous-transaction-processing-atp-create-service#create-atp-service)
+[Oracle Cloud: Autonomous Transaction Processing (ATP) - Create Service](https://oracle-base.com/articles/vm/oracle-cloud-autonomous-transaction-processing-atp-create-service#create-atp-service)
 
 [Using Oracle Autonomous Transaction Processing on Shared Exadata Infrastructure](https://docs.oracle.com/en/cloud/paas/atp-cloud/atpug/manage-users-admin.html#GUID-B227C664-EBA0-4B5E-B11C-A56B16567C1B)

@@ -35,7 +35,7 @@ If you run the command line migrator without any arguments, you will get a help 
 <tr><th>Command</th><th>Description</th></tr>
 <tr><td><a href="/documentation/update.html">update</a></td><td>Updates database to current version.</td></tr>
 <tr><td>updateCount &lt;value&gt;</td><td>Applies the next &lt;value&gt; change sets.</td></tr>
-<tr><td>updateSQL</td><td>Writes SQL to update database to current version to STDOUT.</td></tr>
+<tr><td><a href="/documentation/generate-sql-update-schemas.html">updateSQL</a></td><td>Writes SQL to update database to current version to STDOUT.</td></tr>
 <tr><td>updateCountSQL &lt;value&gt;</td><td>Writes SQL to apply the next &lt;value&gt; change sets to STDOUT.</td></tr>
 <tr><td>updateTestingRollback</td><td>Updates the database, then rolls back changes before updating again.</td></tr>
 </table>
@@ -83,19 +83,21 @@ Can append in any of the supported changelog formats.</td></tr>
 
 <table>
 <tr><th>Command</th><th>Description</th></tr>
-<tr><td>tag &lt;tag&gt;</td><td>"Tags" the current database state for future rollback.</td></tr>
-<tr><td>tagExists &lt;tag&gt;</td><td>Checks whether the given tag already exists.</td></tr>
-<tr><td>status</td><td>Outputs count (list if --verbose) of unrun change sets.</td></tr>
-<tr><td>validate</td><td>Checks the changelog for errors.</td></tr>
 <tr><td>changelogSync</td><td>Mark all changes as executed in the database.</td></tr>
 <tr><td>changelogSyncSQL</td><td>Writes SQL to mark all changes as executed in the database to STDOUT.</td></tr>
-<tr><td>markNextChangeSetRan</td><td>Mark the next change set as executed in the database.</td></tr>
-<tr><td>listLocks</td><td>Lists who currently has locks on the database changelog.</td></tr>
-<tr><td>releaseLocks</td><td>Releases all locks on the database changelog.</td></tr>
-<tr><td>dropAll</td><td>Drops all database objects owned by the user. DANGEROUS!</td></tr>
 <tr><td>clearCheckSums</td><td>Removes current checksums from database.  On next update changesets that
-have already been deployed will have their checksums recomputed, and changesets that have not been deployed
-will be deployed.</td></tr>
+  have already been deployed will have their checksums recomputed, and changesets that have not been deployed
+  will be deployed.</td></tr>
+<tr><td>dropAll</td><td>Drops all database objects owned by the user. DANGEROUS!</td></tr>
+<tr><td>listLocks</td><td>Lists who currently has locks on the database changelog.</td></tr>
+<tr><td>markNextChangeSetRan</td><td>Mark the next change set as executed in the database.</td></tr>
+<tr><td>releaseLocks</td><td>Releases all locks on the database changelog.</td></tr>
+<tr><td>status</td><td>Outputs count (list if --verbose) of unrun change sets.</td></tr>
+<tr><td><a href="/documentation/snapshot.html">snapshot</a></td><td>Gathers the current database schema and displays that information to STDOUT. With options, can save
+the schema in JSON format, and that JSON snapshot can serve as a comparison database.</td></tr>
+<tr><td>tag &lt;tag&gt;</td><td>"Tags" the current database state for future rollback.</td></tr>
+<tr><td>tagExists &lt;tag&gt;</td><td>Checks whether the given tag already exists.</td></tr>
+<tr><td>validate</td><td>Checks the changelog for errors.</td></tr>
 </table>
 
 

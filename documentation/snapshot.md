@@ -3,7 +3,7 @@ layout: default
 title: Docs | snapshot Command 
 ---
 
-# Liquibase Commands: `snapshot`
+# Liquibase Commands: snapshot
 The `snapshot` command creates a non-deployable JSON file that represents the current state of your database. A snapshot is like a photograph of your database.
 
 ## Uses

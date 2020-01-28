@@ -21,7 +21,7 @@ To create a diff *changelog*:
 
 As an example you can run the following:
 
-{% highlight text %}
+{% highlight bash %}
 liquibase
 --changeLogFile=dbchangelog.xml
 --outputFile=mydiff.txt

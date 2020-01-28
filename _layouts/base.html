@@ -37,7 +37,9 @@
         <![endif]-->
 
     <link href="/css/liquibase.css" rel="stylesheet">
-    <link href="/css/syntax.css" rel="stylesheet">
+    <!-- <link href="/css/syntax.css" rel="stylesheet"> -->
+    <link href="/css/prism.coy.css" rel="stylesheet">
+    <!-- <link href="/css/prism.vsc-dark+.css" rel="stylesheet"> -->
 
     {% if page.extraStyleSheets %}
       {% for styleSheet in page.extraStyleSheets %}
@@ -45,10 +47,13 @@
       {% endfor %}
     {% endif %}
 
-    <!--<script src="/js/vendor/modernizr-2.6.2.min.js"></script>-->
+    <!--<script src="/js/vendors/modernizr-2.6.2.min.js"></script>-->
 
-    <script src="/js/vendor/jquery-1.9.1.min.js"></script>
-    <script src="/js/vendor/jquery-ui.min.js"></script>
+    <script src="/js/vendors/jquery-1.9.1.min.js"></script>
+    <script src="/js/vendors/jquery-ui.min.js"></script>
+    <script src="/js/vendors/prism.min.js"></script>
+    <script src="/js/vendors/prism-liquibase.min.js"></script>
+    <script src="/js/prism.startup.js"></script>
     <script src="/js/plugins.js"></script>
     <script src="/js/main.js"></script>
 

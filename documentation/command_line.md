@@ -8,7 +8,7 @@ title: Docs | Command line
 Liquibase can be run from the command line by running:
 
 {% highlight bat %}
-    liquibase [global options] [command] [command parameters]
+liquibase [global options] [command] [command parameters]
 {% endhighlight %}
 
 The command line migrator works well when you want to do migrations on demand, but don't have Ant or Maven available such as on servers. 

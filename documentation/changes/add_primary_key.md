@@ -15,7 +15,7 @@ title: Docs | Change 'addPrimaryKey'
 
 # Change: 'addPrimaryKey'
 
-Adds creates a primary key out of an existing column or set of columns.
+Adds a primary key out of an existing column or set of columns.
 
 ## Available Attributes ##
 
@@ -116,8 +116,8 @@ ALTER TABLE cat.person ADD PRIMARY KEY (id,
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2/LUW</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2/z</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>

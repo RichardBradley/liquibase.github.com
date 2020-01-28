@@ -15,14 +15,16 @@ title: Docs | Change 'dropColumn'
 
 # Change: 'dropColumn'
 
-Drop existing column(s)
+Drop existing column(s).
+
+To drop a single column, use the simple form of this element where the tableName and columnName are specified as attributes. To drop several columns, specify the tableName as an attribute, and then specify a set of nested &lt;column&gt; tags. If nested &lt;column&gt; tags are present, the columnName attribute will be ignored.
 
 ## Available Attributes ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>columnName</td><td style='vertical-align: top'>Name of the column to drop</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>columnName</td><td style='vertical-align: top'>Name of the column to drop, if dropping a single column</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table containing the column to drop</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
@@ -31,7 +33,7 @@ Drop existing column(s)
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>columns</td><td style='vertical-align: top'>Columns to be dropped.<br><br>See the <a href='../column.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>columns</td><td style='vertical-align: top'>Columns to be dropped if dropping multiple columns. If this is populated, the columnName attribute is ignored.<br><br>See the <a href='../column.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td><td style='vertical-align: top'></td></tr>
 </table>
 <div id='changelog-tabs'>
 <ul>
@@ -113,8 +115,8 @@ ALTER TABLE cat.person DROP COLUMN address;
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2</td><td>Not Supported</td><td>No</td></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/LUW</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/z</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>

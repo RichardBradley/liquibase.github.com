@@ -33,18 +33,6 @@ includeDaticalBox: true
     </div>
 </div>
 <hr>
-<br>
-<div align="center">
-<h3>Haven't used Liquibase yet?</h3>
-<h4>Learn more about our Liquibase plans & download today!</h4>
-<br>
-</div>
-
-<div class="cta-container" style="margin-left: auto; margin-right: auto; width: 100px; height: 50px">
-<div class="cta cta--block"><a href="https://download.liquibase.org/">Learn More ►</a></div></div>
-
-<br>
-<hr>
 <div class="docs-row">
   <div class="docs-column">
     <div align="center"><h4><u><b>Liquibase Commands</b></u></h4></div>
@@ -71,6 +59,7 @@ includeDaticalBox: true
   <div class="docs-column">
     <div align="center"><h4><u><b>Liquibase Integrations</b></u></h4></div>
     <ul>
+        <li><a href="command_line.html">Command Line</a></li>
         <li><a href="ant/index.html">Ant</a></li>
         <li><a href="maven/index.html">Maven</a></li>
         <li><a href="spring.html">Spring</a></li>
@@ -79,3 +68,15 @@ includeDaticalBox: true
     </ul>
   </div>
 </div>
+<br>
+<hr>
+<div align="center">
+<h3>Haven't used Liquibase yet?</h3>
+<h4>Learn more about our Liquibase plans & download today!</h4>
+<br>
+</div>
+
+<div class="cta-container" style="margin-left: auto; margin-right: auto; width: 100px; height: 50px">
+<div class="cta cta--block"><a href="https://download.liquibase.org/">Learn More ►</a></div></div>
+
+<br>

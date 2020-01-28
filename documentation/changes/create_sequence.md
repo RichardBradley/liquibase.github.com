@@ -121,8 +121,8 @@ CREATE SEQUENCE [public].seq_id AS int START WITH 5 INCREMENT BY 2 MINVALUE 10 M
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2/LUW</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2/z</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>

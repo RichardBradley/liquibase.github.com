@@ -97,8 +97,8 @@ ALTER TABLE cat.person DROP PRIMARY KEY;
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/LUW</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/z</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>

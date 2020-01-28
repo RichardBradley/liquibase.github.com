@@ -17,7 +17,9 @@
         <revision>0.local-SNAPSHOT</revision>
         <java.version>1.8</java.version>
         
-        <liquibase.version>3.8.2</liquibase.version>
+        <!-- UPDATE THIS BEFORE RE-GENERATING -->
+        <liquibase.version>3.8.6-local-SNAPSHOT</liquibase.version>
+        
         <commons.lang3.version>3.3.2</commons.lang3.version>
         <commons.io.version>2.4</commons.io.version>
         <snakeyaml.version>1.23</snakeyaml.version>

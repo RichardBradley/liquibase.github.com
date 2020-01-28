@@ -19,12 +19,12 @@ The 'sql' tag allows you to specify whatever sql you want. It is useful for comp
 
 The createProcedure refactoring is the best way to create stored procedures.
 
-The 'sql' tag can also support multiline statements in the same file. Statements can either be split using a ; at the end of the last line of the SQL or a go on its own on the line between the statements can be used.Multiline SQL statements are also supported and only a ; or go statement will finish a statement, a new line is not enough. Files containing a single statement do not need to use a ; or go.
+The 'sql' tag can also support multiline statements in the same file. Statements can either be split using a ; at the end of the last line of the SQL or a 'GO' on its own on the line between the statements can be used. Multiline SQL statements are also supported and only a ; or GO statement will finish a statement, a new line is not enough. Files containing a single statement do not need to use a ; or GO.
 
 The sql change can also contain comments of either of the following formats:
 
 A multiline comment that starts with /\* and ends with \*/.
-A single line comment starting with &lt;space&gt;--&lt;space&gt; and finishing at the end of the line
+A single line comment starting with &lt;space&gt;--&lt;space&gt; and finishing at the end of the line.
 Note: By default it will attempt to split statements on a ';' or 'go' at the end of lines. Because of this, if you have a comment or some other non-statement ending ';' or 'go', don't have it at the end of a line or you will get invalid SQL.
 
 ## Available Attributes ##
@@ -110,8 +110,8 @@ GO
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/LUW</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/z</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>

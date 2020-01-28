@@ -4,13 +4,16 @@ title: Docs | snapshot Command
 ---
 
 # Liquibase Commands: snapshot
-The `snapshot` command creates a non-deployable JSON file that represents the current state of your database. A snapshot is like a photograph of your database.
+The `snapshot` command has two modes. When run without options, it will gather the current state of the database and show a text-based version of the schema to STDOUT. When
+run with the `--snapshotFormat=JSON` option, creates a JSON file that represents the current state of your database. A snapshot is like a photograph of your database that
+can be used in the [diff]() or [diffChangeLog]() commands.
 
 ## Uses
 The `snapshot` command is typically used when you want to quickly compare changes in your database or keep a record of your current database state. Snapshots can also be used to compare:
 + A previous database state to an online database
 + A previous database state to another snapshot.
-> **Note:** Running a `diff` command using at least one *snapshot.json* file is faster than using a `diff` command with two online databases. However, keep in mind that snapshots can become stale over time.
+> **Note:** Running a `diff` command using at least one *snapshot.json* file is faster than using a `diff` command with two online databases. However, keep in mind that a snapshot will no
+longer reflect the current state of the database if the database is changed with the `update` command or if it is changed manually.
 
 ## Running the snapshot Command
 To take a snapshot of your database:

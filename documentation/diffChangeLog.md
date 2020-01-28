@@ -3,7 +3,7 @@ layout: default
 title: Docs | diffChangeLog Command 
 ---
 
-# Liquibase Commands: `diffChangeLog`
+# Liquibase Commands: diffChangeLog
 The `diffChangeLog` command provides you with:
 + Information containing differences between two databases; specifically, the `diffChangeLog` command points out the differences in general and generates changes to resolve most of them.
 + A *changelog* file containing deployable *changeSets*.
@@ -14,14 +14,14 @@ The `diffChangeLog` command is typically used when you want to create a deployab
 + Changes made to your database
 + Unexpected items in your database
 
-## Running the `diffChangeLog` Command
+## Running the diffChangeLog Command
 To create a diff *changelog*:
 
 + The first option is to run the `diffChangeLog` command and pass the parameters needed for your source database and target database. 
 
 As an example you can run the following:
 
-{% highlight text %}
+{% highlight bash %}
 liquibase
 --changeLogFile=dbchangelog.xml
 --outputFile=mydiff.txt
@@ -40,7 +40,7 @@ diffChangeLog
 
 + Alternatively, configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for both databases. Run the following command:
 
-{% highlight text %}
+{% highlight bash %}
 
 liquibase --changeLogFile=file_name.xml diffChangeLog
 

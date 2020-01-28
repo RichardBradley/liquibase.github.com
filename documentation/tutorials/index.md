@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Database Tutorials 
+title: Docs | Database Tutorials
 subnav: subnav_tutorials.md
 ---
 # Liquibase Database Tutorials
@@ -51,6 +51,11 @@ Welcome to the Liquibase Database Tutorials page! Learn more about using Liquiba
     <div class="tile-item" align="center">
         <a href="/documentation/tutorials/sqlite.html"><img src="/images/documentation/Tutorials/sqlite.png" width="150px" alt="SQLite Tutorial"></a>
         <h3>SQLite Tutorial</h3>
+        <br>
+    </div>
+    <div class="tile-item" align="center">
+        <a href="/documentation/tutorials/oracle_autonomous_transaction_processing_database.html"><img src="/images/documentation/Tutorials/oracle_atp.png" width="150px" alt="Oracle Autonomous Transaction Processing Database Tutorial"></a>
+        <h3>Oracle Autonomous Transaction Processing Database Tutorial</h3>
         <br>
     </div>
 </div>

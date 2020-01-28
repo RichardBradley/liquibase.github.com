@@ -54,7 +54,7 @@ Liquibase attempts to execute each changeSet in a transaction that is committed 
 <tr><td>runAlways</td><td>Executes the change set on every run, even if it has been run before </td></tr>
 <tr><td>runOnChange</td><td>Executes the change the first time it is seen and each time the change set has been changed </td></tr>
 <tr><td><a href="/documentation/contexts.html">context</a></td><td>Controls whether a changeset is executed, depending on runtime settings. Any string can be used for the context name and they are checked case-insensitively. </td></tr>
-<tr><td><a href="/documentation/labels.html">labels</td><td>Controls whether a changeset is executed, depending on runtime settings. Any string can be used for the label name and they are checked case-insensitively.</td></tr>
+<tr><td><a href="/documentation/labels.html">labels</a></td><td>Controls whether a changeset is executed, depending on runtime settings. Any string can be used for the label name and they are checked case-insensitively.</td></tr>
 <tr><td>runInTransaction</td><td>Should the changeSet be ran as a single transaction (if possible)?  Defaults to true.  <b>Warning: be careful with this attribute.  If set to false and an error occurs part way through running a changeSet containing multiple statements, the Liquibase databasechangelog table will be left in an invalid state.  </b><b>Since 1.9</b> </td></tr>
 <tr><td>failOnError</td><td>Should the migration fail if an error occurs while executing the changeSet? </td></tr>
 <tr><td>objectQuotingStrategy</td><td>This controls how object names are quoted in the SQL generated or used in calls to the database. Different databases do different things to
@@ -116,7 +116,20 @@ This example shows how a `<rollback>` element can refer to another changeset. Th
 
 ## ChangeSet Check Sums ##
 
-When Liquibase reaches a changeSet, it computes a check sum and stores it in the "databasechangelog". The value of storing the check sum is so that Liquibase can know if someone changed the changes in the changeSet since it was run. If the changeSet was changed since it was run, Liquibase will exit the migration with an error because it cannot know what was changed and the database may be in a state different than what the changeLog is expecting. If there was a valid reason for the changeSet to have been changed and you want to ignore this error, update the databasechangelog table so that the row with the corresponding id/author/filepath has a null value for the check sum. The next time Liquibase runs, it will update the check sum value to the new correct value.
+When Liquibase reaches a changeSet, it computes a check sum and stores it in the "databasechangelog". The value of storing the check sum is so that Liquibase can know if 
+someone changed the changes in the changeSet since it was run. If the changeSet was changed since it was run, Liquibase will exit the migration with an error message like
+`Validation failed: change set check sums <changeset identifer> was: <old checksum> but is now: <newchecksum>`. This is because Liquibase cannot know what was changed and the 
+database may be in a state different than what the changeLog is expecting. If there was a valid reason for the changeSet to have 
+been changed and you want to ignore this error, you have two options. 
+
+The first option is to manually update the databasechangelog table so that the row with the corresponding id/author/filepath has a null value for the check sum. You would 
+need to do this for all environments where the changeset has been deployed. The next time you run the Liquibase update command, it will update the check sum value to the new correct value. 
+
+The second option is to add a `<validCheckSum>` element to the changeset. The text contents of the element should be the "old" checksum from the error message.
 
 
-Check sums are also used in conjunction with the "runOnChange" changeSet attribute. There are times you may not want to add a new changeSet because you only need to know about the current version, but you want this change applied whenever it is updated. A good example of when you would want this is stored procedures. If you copy the entire text of the stored procedure to a new changeSet each time you make a change you will not only end up with a very long changeLog, but you will lose the merging and diff-ing power of your source control. Instead, put the text of the stored procedure in a changeSet with a runOnChange="true" attribute. The stored procedure will only be re-created when and only when there is a change to the text of it.
+Check sums are also used in conjunction with the "runOnChange" changeSet attribute. There are times you may not want to add a new changeSet because you only need to know 
+about the current version, but you want this change applied whenever it is updated. A good example of when you would want this is stored procedures. If you copy the entire 
+text of the stored procedure to a new changeSet each time you make a change you will not only end up with a very long changeLog, but you will lose the merging and diff-ing 
+power of your source control. Instead, put the text of the stored procedure in a changeSet with a runOnChange="true" attribute. The stored procedure will be re-created 
+when and only when there is a change to the text of it.

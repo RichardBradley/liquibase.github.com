@@ -217,7 +217,7 @@ java -jar liquibase.jar \
         updateSQL > /tmp/script.sql
 {% endhighlight %}
 
-### List locks on the database change log lock table###
+### List locks on the database change log lock table ###
 
 {% highlight bat %}
 java -jar liquibase.jar \

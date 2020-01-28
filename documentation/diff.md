@@ -2,7 +2,7 @@
 layout: default
 title: Docs | Diff Command 
 ---
-# Liquibase Commands: `diff`
+# Liquibase Commands: diff
 The `diff` command in Liquibase allows you to compare two databases of the same type or different types to one another.
 
 ## Uses
@@ -11,11 +11,11 @@ The `diff` command is typically used at the completion of a project, because it 
 + Seeing that a change was made to your database
 + Finding unexpected items in your database
 
-## Running the `diff` Command
+## Running the diff Command
 To compare two databases:
 + The first option is to run the `diff` command and pass the parameters needed for your source database and target database.  For example:
 Run the following:
-{% highlight text %}
+{% highlight bash %}
 liquibase
 --outputFile=mydiff.txt
 --driver=oracle.jdbc.OracleDriver
@@ -34,7 +34,7 @@ for your operating system (a semicolon on Windows, a colon on Mac or Linux). Exa
 
 + Alternatively, configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for both databases.
 Run the following command:
-{% highlight text %}
+{% highlight bash %}
 liquibase --outputFile=mydiff.txt diff
 {% endhighlight %}
 >**Note:** For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your *liquibase.properties* File](config_properties.html) topic in the knowledge base.
@@ -189,13 +189,13 @@ Liquibase Pro `diff` categories:
 + Synonyms
 >**Note:** Liquibase does not currently check Datatype length.
 
-## Filtering `diff` Types
+## Filtering diff Types
 Liquibase allows you to use diffType parameters to filter the types of objects you want to compare. Multiple filters can be added 
 to the parameter as a comma separated list. If no diffTypes are specified, all objects are considered.
 
 
 Example: 
-{% highlight text %}
+{% highlight bash %}
 liquibase --diffTypes=tables,indexes,views diff
 {% endhighlight %}
 

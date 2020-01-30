@@ -7,7 +7,9 @@ includeDaticalBox: true
 # Liquibase Core Usage
 ## Major Concepts
 ### Changelog File
-Developers store database changes in text-based files on their local development machines and apply them to their local databases. 
+Developers store database changes in text-based files on their local development machines and apply them to their local databases. These
+changelog files are stored in source control to enable collaboration. The changelog can be used to update all the different database
+environments that a team uses - from local development databases, to test, staging, and production. 
 Changelog files can be arbitrarily nested for better management. The [changeLog page](/documentation/databasechangelog.html) has more details.
 
 ### Change Set

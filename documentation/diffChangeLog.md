@@ -36,6 +36,8 @@ diffChangeLog
 --referencePassword=<PASSWORD>
 {% endhighlight %}
 
+See the [snapshot command documentation](/documentation/snapshot.html) for an example of using a snapshot file as one of the databases being used in the command.
+
 >**Note:** When running `diffChangeLog` against two different databases, the class path property should reference both .jar files. Use the path separator that is correct for your operating system (a semicolon on Windows, a colon on Mac or Linux). Example: `classpath: ojdbc7.jar:postgresql-42.2.8.jar`
 
 + Alternatively, configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for both databases. Run the following command:

@@ -23,14 +23,14 @@ Alter properties of an existing sequence
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>cacheSize</td><td style='vertical-align: top'>Change the cache size?</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>cycle</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>cycle</td><td style='vertical-align: top'>Can the sequence cycle when it hits the max value?</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>dataType</td><td style='vertical-align: top'>Data type of the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>asany, db2z, derby, firebird, h2, informix, postgresql</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>incrementBy</td><td style='vertical-align: top'>New amount the sequence should increment by</td><td style='vertical-align: top'></td><td style='vertical-align:top'>asany, db2, db2z, derby, firebird, informix, mssql, oracle, postgresql</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>maxValue</td><td style='vertical-align: top'>New maximum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>asany, db2, db2z, derby, firebird, h2, informix, mssql, oracle, postgresql</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>minValue</td><td style='vertical-align: top'>New minimum value for the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>ordered</td><td style='vertical-align: top'>Does the sequence need to be guaranteed to be genererated inm the order of request?</td><td style='vertical-align: top'></td><td style='vertical-align:top'>asany, db2z, derby, firebird, h2, informix, mssql, oracle, postgresql</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>sequenceName</td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>sequenceName</td><td style='vertical-align: top'>Name of the sequence to alter</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>

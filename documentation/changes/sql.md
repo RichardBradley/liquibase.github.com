@@ -37,7 +37,7 @@ Or You can also specify that a change is <b>NOT</b> applicable to a particular d
 <tr><td style='vertical-align: top'>endDelimiter</td><td style='vertical-align: top'>Delimiter to apply to the end of the statement. Defaults to ';', may be set to ''.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>splitStatements</td><td style='vertical-align: top'>Set to false to not have liquibase split statements on ;'s and GO's. Defaults to true if not set</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>sql</td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>stripComments</td><td style='vertical-align: top'>Set to true to remove any comments in the SQL before executing, otherwise false. Defaults to false if not set</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>stripComments</td><td style='vertical-align: top'>Set to true to remove any comments in the SQL before executing, otherwise false.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 ## Nested Properties ##
@@ -55,10 +55,12 @@ Or You can also specify that a change is <b>NOT</b> applicable to a particular d
 <div id='tab-xml'>
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="sql-example">
-    <sql dbms="h2, oracle"
+    <sql dbms="!h2, oracle, mysql"
             endDelimiter="\nGO"
             splitStatements="true"
-            stripComments="true">insert into person (name) values ('Bob')</sql>
+            stripComments="true">insert into person (name) values ('Bob')
+        <comment>What about Bob?</comment>
+    </sql>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -70,7 +72,7 @@ changeSet:
   changes:
   - sql:
       comment: What about Bob?
-      dbms: h2, oracle
+      dbms: '!h2, oracle, mysql'
       endDelimiter: \nGO
       splitStatements: true
       sql: insert into person (name) values ('Bob')
@@ -88,7 +90,7 @@ changeSet:
       {
         "sql": {
           "comment": "What about Bob?",
-          "dbms": "h2, oracle",
+          "dbms": "!h2, oracle, mysql",
           "endDelimiter": "\\nGO",
           "splitStatements": true,
           "sql": "insert into person (name) values ('Bob')",
@@ -117,8 +119,8 @@ GO
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/LUW</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/z</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>

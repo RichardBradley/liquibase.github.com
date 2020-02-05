@@ -48,7 +48,7 @@ Or You can also specify that a change is <b>NOT</b> applicable to a particular d
 <changeSet author="liquibase-docs" id="createProcedure-example">
     <createProcedure catalogName="cat"
             comments="A String"
-            dbms="h2, oracle"
+            dbms="h2, !oracle, mysql"
             encoding="UTF-8"
             path="com/example/my-logic.sql"
             procedureName="new_customer"
@@ -71,7 +71,7 @@ changeSet:
   - createProcedure:
       catalogName: cat
       comments: A String
-      dbms: h2, oracle
+      dbms: h2, !oracle, mysql
       encoding: UTF-8
       path: com/example/my-logic.sql
       procedureText: |-
@@ -98,7 +98,7 @@ changeSet:
         "createProcedure": {
           "catalogName": "cat",
           "comments": "A String",
-          "dbms": "h2, oracle",
+          "dbms": "h2, !oracle, mysql",
           "encoding": "UTF-8",
           "path": "com/example/my-logic.sql",
           "procedureText": "CREATE OR REPLACE PROCEDURE testHello\n    IS\n    BEGIN\n      DBMS_OUTPUT.PUT_LINE('Hello From The Database!');\n    END;",
@@ -121,8 +121,8 @@ changeSet:
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/LUW</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/z</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>

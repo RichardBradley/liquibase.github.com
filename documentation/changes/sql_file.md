@@ -40,7 +40,7 @@ Or You can also specify that a change is <b>NOT</b> applicable to a particular d
 <tr><td style='vertical-align: top'>path</td><td style='vertical-align: top'>The file path of the SQL file to load</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>relativeToChangelogFile</td><td style='vertical-align: top'>Whether the file path relative to the root changelog file rather than to the classpath.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>splitStatements</td><td style='vertical-align: top'>Set to false to not have liquibase split statements on ;'s and GO's. Defaults to true if not set</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>stripComments</td><td style='vertical-align: top'>Set to true to remove any comments in the SQL before executing, otherwise false. Defaults to false if not set</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>stripComments</td><td style='vertical-align: top'>Set to true to remove any comments in the SQL before executing, otherwise false.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -52,7 +52,7 @@ Or You can also specify that a change is <b>NOT</b> applicable to a particular d
 <div id='tab-xml'>
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="sqlFile-example">
-    <sqlFile dbms="h2, oracle"
+    <sqlFile dbms="!h2, oracle, mysql"
             encoding="UTF-8"
             endDelimiter="\nGO"
             path="my/path/file.sql"
@@ -69,7 +69,7 @@ changeSet:
   author: liquibase-docs
   changes:
   - sqlFile:
-      dbms: h2, oracle
+      dbms: '!h2, oracle, mysql'
       encoding: UTF-8
       endDelimiter: \nGO
       path: my/path/file.sql
@@ -88,7 +88,7 @@ changeSet:
     "changes": [
       {
         "sqlFile": {
-          "dbms": "h2, oracle",
+          "dbms": "!h2, oracle, mysql",
           "encoding": "UTF-8",
           "endDelimiter": "\\nGO",
           "path": "my/path/file.sql",
@@ -110,8 +110,8 @@ changeSet:
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/LUW</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/z</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>

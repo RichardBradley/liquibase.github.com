@@ -17,11 +17,11 @@ title: Docs | Change 'customChange'
 
 Although Liquibase tries to provide a wide range of database refactorings, there are times you may want to create your own custom refactoring class.
 
-To create your own custom refactoring, simply create a class that implements the liquibase.change.custom.CustomSqlChange or liquibase.change.custom.CustomTaskChange interface and use the &lt;custom&gt; tag in your change set.
+To create your own custom refactoring, simply create a class that implements the [liquibase.change.custom.CustomSqlChange](/javadoc/liquibase/change/custom/CustomSqlChange.html) or [liquibase.change.custom.CustomTaskChange](/javadoc/liquibase/change/custom/CustomTaskChange.html) interface &lt;customChange&gt; tag in your change set.
 
 If your change can be rolled back, implement the liquibase.change.custom.CustomSqlRollback interface as well.
 
-For a sample custom change class, see liquibase.change.custom.ExampleCustomSqlChange
+For a sample custom change class, see liquibase.change.custom.ExampleCustomSqlChange in the test folder
 
 ## Available Attributes ##
 

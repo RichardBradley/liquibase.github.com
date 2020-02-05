@@ -24,24 +24,27 @@ A value of NULL in a cell will be converted to a database NULL rather than the s
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>commentLineStartsWith</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>commentLineStartsWith</td><td style='vertical-align: top'>Lines starting with this are treated as comment and ignored.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>encoding</td><td style='vertical-align: top'>Encoding of the CSV file (defaults to UTF-8)</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>file</td><td style='vertical-align: top'>CSV file to load</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>onlyUpdate</td><td style='vertical-align: top'>If true, records with no matching database record should be ignored</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.3</td></tr>
 <tr><td style='vertical-align: top'>primaryKey</td><td style='vertical-align: top'>Comma delimited list of the columns for the primary key</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>quotchar</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>quotchar</td><td style='vertical-align: top'>The quote character for string fields containing the separator character.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>relativeToChangelogFile</td><td style='vertical-align: top'>Whether the file path relative to the root changelog file rather than to the classpath.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>separator</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>separator</td><td style='vertical-align: top'>Character separating the fields.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table to insert or update data in</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>usePreparedStatements</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>usePreparedStatements</td><td style='vertical-align: top'>Use prepared statements instead of insert statement strings if the DB supports it</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 ## Nested Properties ##
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th></tr>
-<tr><td style='vertical-align: top'>columns? / column</td><td style='vertical-align: top'>Defines how the data should be loaded.<h4> Attributes</h4><table>{%include LoadDataColumnConfig.md%}</table></td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td></tr>
+<tr><td style='vertical-align: top'>columns? / column</td><td style='vertical-align: top'>Column mapping and defaults can be defined.
+
+The 'header' or 'index' attributes needs to be defined if the header name in the CSV is different than the column name needs to be inserted
+If no `column` defined at all, the type it is taken from the DB. Otherwise for non-string columns the type definition might be required<h4> Attributes</h4><table>{%include LoadDataColumnConfig.md%}</table></td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td></tr>
 </table>
 <div id='changelog-tabs'>
 <ul>
@@ -64,7 +67,12 @@ A value of NULL in a cell will be converted to a database NULL rather than the s
             separator=","
             tableName="person"
             usePreparedStatements="true">
-        <column name="id" type="int"/>
+        <column header="header1"
+                name="id"
+                type="NUMERIC"/>
+        <column index="3"
+                name="name"
+                type="BOOLEAN"/>
     </loadUpdateData>
 </changeSet>
 {% endhighlight %}
@@ -79,8 +87,13 @@ changeSet:
       catalogName: cat
       columns:
       - column:
+          header: header1
           name: id
-          type: int
+          type: NUMERIC
+      - column:
+          index: 3
+          name: name
+          type: BOOLEAN
       commentLineStartsWith: A String
       encoding: UTF-8
       file: com/example/users.csv
@@ -108,8 +121,16 @@ changeSet:
           "columns": [
             {
               "column": {
+                "header": "header1",
                 "name": "id",
-                "type": "int"
+                "type": "NUMERIC"
+              }
+            },
+            {
+              "column": {
+                "index": 3,
+                "name": "name",
+                "type": "BOOLEAN"
               }
             }]
           ,
@@ -139,8 +160,8 @@ changeSet:
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/LUW</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/z</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>

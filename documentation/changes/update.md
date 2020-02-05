@@ -21,7 +21,7 @@ Updates data in an existing table
 
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
@@ -31,7 +31,10 @@ Updates data in an existing table
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th></tr>
 <tr><td style='vertical-align: top'>columns</td><td style='vertical-align: top'>Data to update<br><br>See the <a href='../column.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td></tr>
-<tr><td style='vertical-align: top'>where</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>no</td></tr>
+<tr><td style='vertical-align: top'>where</td><td style='vertical-align: top'>Allows to define the 'where' condition(s) string</td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>no</td></tr>
+<tr><td style='vertical-align: top'>whereParams</td><td style='vertical-align: top'>Parameters for the 'where' condition.
+
+The 'param'(s) are inserted in the order they are defined in place of the ':name' and ':value' placeholders.<p></p><h3>Nested element(s): param</h3><h4> Attributes</h4><table>{%include Param.md%}</table></td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>no</td></tr>
 </table>
 <div id='changelog-tabs'>
 <ul>
@@ -46,7 +49,11 @@ Updates data in an existing table
             schemaName="public"
             tableName="person">
         <column name="address" value="address value"/>
-        <where>name='Bob'</where>
+        <where>name='Bob' and :name=:value or id=:value</where>
+        <whereParams>
+            <param name="id" value="str"/>
+            <param valueNumeric="123"/>
+        </whereParams>
     </update>
 </changeSet>
 {% endhighlight %}
@@ -65,7 +72,13 @@ changeSet:
           value: address value
       schemaName: public
       tableName: person
-      where: name='Bob'
+      where: name='Bob' and :name=:value or id=:value
+      whereParams:
+      - param:
+          name: id
+          value: str
+      - param:
+          valueNumeric: !!float '123'
 
 {% endhighlight %}
 </div>
@@ -89,7 +102,20 @@ changeSet:
           ,
           "schemaName": "public",
           "tableName": "person",
-          "where": "name='Bob'"
+          "where": "name='Bob' and :name=:value or id=:value",
+          "whereParams": [
+            {
+              "param": {
+                "name": "id",
+                "value": "str"
+              }
+            },
+            {
+              "param": {
+                "valueNumeric": 123
+              }
+            }]
+          
         }
       }]
     
@@ -104,7 +130,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-UPDATE cat.person SET address = 'address value' WHERE name='Bob';
+UPDATE cat.person SET address = 'address value' WHERE name='Bob' and id='str' or id='123';
 
 
 {% endhighlight %}
@@ -113,8 +139,8 @@ UPDATE cat.person SET address = 'address value' WHERE name='Bob';
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/LUW</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/z</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>

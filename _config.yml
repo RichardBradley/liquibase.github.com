@@ -1,4 +1,4 @@
-safe: false
+safe: true
 lsi: false
 # # Welcome to Jekyll!
 # #
@@ -66,8 +66,12 @@ exclude:
   - '*.log'
   - Jenkinsfile
   - .idea
+# For own gh-pages
+  - javadoc/
+  - docs/
+  - blog/
 
-# Set root 
-#baseurl: /liquibase-doc
+# For gh-pages
+baseurl: /liquibase-doc
 # for jekyll 4 replace {{site.baseurl}}{% link to {% link
 

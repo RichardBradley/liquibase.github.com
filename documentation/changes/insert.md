@@ -45,7 +45,7 @@ Or You can also specify that a change is <b>NOT</b> applicable to a particular d
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="insert-example">
     <insert catalogName="cat"
-            dbms="h2, oracle"
+            dbms="!h2, mysql"
             schemaName="public"
             tableName="person">
         <column name="address" value="address value"/>
@@ -65,7 +65,7 @@ changeSet:
       - column:
           name: address
           value: address value
-      dbms: h2, oracle
+      dbms: '!h2, mysql'
       schemaName: public
       tableName: person
 
@@ -89,7 +89,7 @@ changeSet:
               }
             }]
           ,
-          "dbms": "h2, oracle",
+          "dbms": "!h2, mysql",
           "schemaName": "public",
           "tableName": "person"
         }
@@ -115,8 +115,8 @@ INSERT INTO cat.person (address) VALUES ('address value');
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/LUW</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/z</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>

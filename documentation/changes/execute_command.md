@@ -22,9 +22,16 @@ Executes a system command. Because this refactoring doesn't generate SQL like mo
 <table>
 <tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
 <tr><td style='vertical-align: top'>executable</td><td style='vertical-align: top'>Name of the executable to run</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>os</td><td style='vertical-align: top'>List of operating systems on which to execute the command (taken from the os.name Java system property)</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>timeout</td><td style='vertical-align: top'>Timeout value for executable to run</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
+## Nested Properties ##
+
+<table>
+<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th></tr>
+<tr><td style='vertical-align: top'>args? / arg</td><td style='vertical-align: top'>Arguments for the executable<h4> Attributes</h4><table>{%include Arg.md%}</table></td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td></tr>
+</table>
 <div id='changelog-tabs'>
 <ul>
     <li><a href="#tab-xml">XML Sample</a></li>
@@ -34,7 +41,12 @@ Executes a system command. Because this refactoring doesn't generate SQL like mo
 <div id='tab-xml'>
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="executeCommand-example">
-    <executeCommand executable="mysqldump" timeout="10s"/>
+    <executeCommand executable="mysqldump"
+            os="Windows 7"
+            timeout="10s">
+        <arg value="-out"/>
+        <arg value="-param2"/>
+    </executeCommand>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -45,7 +57,13 @@ changeSet:
   author: liquibase-docs
   changes:
   - executeCommand:
+      args:
+      - arg:
+          value: -out
+      - arg:
+          value: -param2
       executable: mysqldump
+      os: Windows 7
       timeout: 10s
 
 {% endhighlight %}
@@ -59,7 +77,20 @@ changeSet:
     "changes": [
       {
         "executeCommand": {
+          "args": [
+            {
+              "arg": {
+                "value": "-out"
+              }
+            },
+            {
+              "arg": {
+                "value": "-param2"
+              }
+            }]
+          ,
           "executable": "mysqldump",
+          "os": "Windows 7",
           "timeout": "10s"
         }
       }]

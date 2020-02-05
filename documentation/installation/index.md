@@ -9,9 +9,9 @@ Learn how to install Liquibase to help with database schema tracking, changes, a
 
 <h2>Installation</h2>
 <ul>
-<li><a href="/documentation/installation-windows.html">Installing Liquibase Command Line for Windows</a></li>
-<li><a href="/documentation/installation-linux-unix-mac.html">Installing Liquibase Command Line for Linux/Unix/Mac</a></li>
-<li><a href="/documentation/installation-linux-unix-mac-with-maven.html">Installing Liquibase with Maven on Linux/Unix/Mac</a></li>
+<li><a href="{{site.baseurl}}{% link documentation/installation-windows.md %}">Installing Liquibase Command Line for Windows</a></li>
+<li><a href="{{site.baseurl}}{% link documentation/installation-linux-unix-mac.md %}">Installing Liquibase Command Line for Linux/Unix/Mac</a></li>
+<li><a href="{{site.baseurl}}{% link documentation/installation-linux-unix-mac-with-maven.md %}">Installing Liquibase with Maven on Linux/Unix/Mac</a></li>
 </ul>
 
 <h2>Extensions</h2>

@@ -11,14 +11,14 @@ includeDaticalBox: true
 ## Prerequisites
 Before performing any of these steps, you must be able to connect to a local or remote database, accessible via command line or IDE/GUI.
 
-**For this example, we are going to use an H2 database.  Please review this [H2 Tutorial](/documentation/tutorials/h2.html) to get started.**
+**For this example, we are going to use an H2 database.  Please review this [H2 Tutorial]({{site.baseurl}}{% link documentation/tutorials/h2.md %}) to get started.**
 
-View the [Supported Databases](/databases.html) topic for more information on which databases we support.
-You can also view the [Database Tutorials](/documentation/tutorials/index.html) topic for more information on running each database with Liquibase.
+View the [Supported Databases]({{site.baseurl}}{% link databases.md %}) topic for more information on which databases we support.
+You can also view the [Database Tutorials]({{site.baseurl}}{% link documentation/tutorials/index.md %}) topic for more information on running each database with Liquibase.
 
 ## Step 1: Create or Generate a Changelog File
 
-To complete your first migration, you must have a [database changelog file](/documentation/databasechangelog.html). The Changelog file is where all your database changes are defined. Using Liquibase Functions allows you to define these changes with XML, JSON, or YAML. For this walkthrough, we will use XML examples.
+To complete your first migration, you must have a [database changelog file]({{site.baseurl}}{% link documentation/databasechangelog.md %}). The Changelog file is where all your database changes are defined. Using Liquibase Functions allows you to define these changes with XML, JSON, or YAML. For this walkthrough, we will use XML examples.
 
 **<u>Creating Changelog Files Manually</u>**
 
@@ -42,13 +42,13 @@ To complete your first migration, you must have a [database changelog file](/doc
 **<u>Generating Changelog Files</u>**
 
 If you have an existing database, you can generate a changelog file that reflects the current state of your database. For more information on how to
-generate a changelog, visit the [Liquibase Commands: generateChangelog](/documentation/generating_changelogs.html) topic, and read the article on
-[adding Liquibase on an existing project.](/documentation/existing_project.html)
+generate a changelog, visit the [Liquibase Commands: generateChangelog]({{site.baseurl}}{% link documentation/generating_changelogs.md %}) topic, and read the article on
+[adding Liquibase on an existing project.]({{site.baseurl}}{% link documentation/existing_project.md %})
 
 ## Step 2: Add a Change Set
 ChangeSets are (units of change) that Liquibase can execute on a database. When adding a changeSet, your change must be defined by both an "id" attribute and an "author" attribute. Using only an "id" attribute can cause accidental duplications when dealing with multiple developers and code branches. It is best practice to only include one change in each changeset.
 
-View the [changeSet tag](/documentation/changeset.html) topic for more information.
+View the [changeSet tag]({{site.baseurl}}{% link documentation/changeset.md %}) topic for more information.
 
 **<u>To add a changeSet:</u>**
 1. Locate and open the `myChangeLog.xml` file.
@@ -107,9 +107,9 @@ If you used a `liquibase.properties` file, enter the JDBC URL, User Name, and Pa
 The DATABASECHANGELOG table contains a list of all the changes that
 have been run against the database. The DATABASECHANGELOGLOCK table is used to make sure two machines don't attempt to modify the database at the same time.
 
-View [DATABASECHANGELOG Table](/documentation/databasechangelog_table.html) and [DATABASECHANGELOGLOCK Table](/documentation/databasechangeloglock_table.html) topics for more information.
+View [DATABASECHANGELOG Table]({{site.baseurl}}{% link documentation/databasechangelog_table.md %}) and [DATABASECHANGELOGLOCK Table]({{site.baseurl}}{% link documentation/databasechangeloglock_table.md %}) topics for more information.
 
-You can also learn how to create your [First Migrations with SQL](/get_started/quickstart_sql.html).
+You can also learn how to create your [First Migrations with SQL]({{site.baseurl}}{% link get_started/quickstart_sql.md %}).
 
 ### Summary
 In this tutorial we covered:
@@ -121,7 +121,7 @@ In this tutorial we covered:
 ## **Next Up:**
 
 <div class="cta-container" style="margin-left: auto; margin-right: auto; width: 300px; height: 50px">
-<div class="cta cta--block"><a href="/documentation/index.html">Liquibase Documentation ►</a></div>
+<div class="cta cta--block"><a href="{{site.baseurl}}{% link documentation/index.md %}">Liquibase Documentation ►</a></div>
 <br>
-<div class="cta cta--block"><a href="/quickstart.html">Return to Getting Started ►</a></div>
+<div class="cta cta--block"><a href="{{site.baseurl}}{% link quickstart.html %}">Return to Getting Started ►</a></div>
 </div>

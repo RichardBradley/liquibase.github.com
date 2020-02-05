@@ -12,22 +12,22 @@ includeDaticalBox: true
 
 <div class="doc-tile-container">
     <div class="tile-item" align="center">
-        <a href="/documentation/installation/index.html"><img src="/images/documentation/installation.png" width="100px" alt="Installation Link"></a>
+        <a href="{{site.baseurl}}{% link documentation/installation/index.md %}"><img src="{{site.baseurl}}{% link images/documentation/installation.png %}" width="100px" alt="Installation Link"></a>
         <h4>Installation</h4>
         <br>
     </div>
     <div class="tile-item" align="center">
-        <a href="/get_started/index.html"><img src="/images/documentation/get-started.png" width="100px" alt="Getting Started Link"></a>
+        <a href="{{site.baseurl}}{% link get_started/index.md %}"><img src="{{site.baseurl}}{% link images/documentation/get-started.png %}" width="100px" alt="Getting Started Link"></a>
         <h4>Get Started</h4>
         <br>
     </div>
     <div class="tile-item" align="center">
-        <a href="/documentation/core-concepts/index.html"><img src="/images/documentation/core-concepts.png" width="100px" alt="Core Concepts Link"></a>
+        <a href="core-concepts/index.html"><img src="{{site.baseurl}}{% link images/documentation/core-concepts.png %}" width="100px" alt="Core Concepts Link"></a>
         <h4>Core Concepts</h4>
         <br>
     </div>
     <div class="tile-item" align="center">
-        <a href="/documentation/tutorials/index.html"><img src="/images/documentation/tutorial.png" width="100px" alt="Tutorials Link"></a>
+        <a href="{{site.baseurl}}{% link documentation/tutorials/index.md %}"><img src="{{site.baseurl}}{% link images/documentation/tutorial.png %}" width="100px" alt="Tutorials Link"></a>
         <h4>Tutorials</h4>
         <br>
     </div>
@@ -53,7 +53,7 @@ includeDaticalBox: true
         <li><a href="generate-sql-update-schemas.html">Generating SQL to Update Database Schemas</a></li>
         <li><a href="offline.html">Using Offline Database Support</a></li>
         <li><a href="trimming_changelogs.html">Trimming changelog files</a></li>
-        <li><a href="/documentation/changes/index.html">Refactoring Commands</a></li>
+        <li><a href="changes/index.html">Refactoring Commands</a></li>
     </ul>
   </div>
   <div class="docs-column">

@@ -1,5 +1,5 @@
-<li><a href="/faq.html"><span>FAQ</span></a></li>
-<li><a href="/databases.html"><span>Supported Databases</span></a></li>
-<li><a href="/bestpractices.html"><span>Best Practices</span></a></li>
-<li><a href="/about.html"><span>About</span></a></li>
-<li><a href="/development/index.html"><span>Development</span></a></li>
+<li><a href="{{site.baseurl}}{% link faq.md %}"><span>FAQ</span></a></li>
+<li><a href="{{site.baseurl}}{% link databases.md %}"><span>Supported Databases</span></a></li>
+<li><a href="{{site.baseurl}}{% link bestpractices.md %}"><span>Best Practices</span></a></li>
+<li><a href="{{site.baseurl}}{% link about.md %}"><span>About</span></a></li>
+<li><a href="{{site.baseurl}}{% link development/index.md %}"><span>Development</span></a></li>

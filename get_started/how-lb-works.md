@@ -13,7 +13,7 @@ In this tutorial, we will cover a few simple mechanisms Liquibase uses to track,
 
 <div class="tile-container">
     <div class="tile-item">
-        <img src="/images/quickstart/changelog-icon.png" width="125px" align="center" alt="Changelog Icon">
+        <img src="{{site.baseurl}}{% link images/quickstart/changelog-icon.png %}" width="125px" align="center" alt="Changelog Icon">
     </div>
 
 <div class="tile-item" markdown="1">
@@ -21,7 +21,7 @@ In this tutorial, we will cover a few simple mechanisms Liquibase uses to track,
 ### Changelogs
 Liquibase uses a *changelog* to explicitly list database changes in order. The *changelog* acts as a ledger of changes and contains a list of *changeSets* (units of change) that Liquibase can execute on a database.
 
-View our [Database changelog File](/documentation/databasechangelog.html) and [changeSet Tag](/documentation/changeset.html) topics for more information.
+View our [Database changelog File]({{site.baseurl}}{% link documentation/databasechangelog.md %}) and [changeSet Tag]({{site.baseurl}}{% link documentation/changeset.md %}) topics for more information.
 </div>
 </div>
 <!-- >**Note:** It is a best practice to ensure that each changeSet is as atomic a change as possible to avoid failed statements from leaving the database in an unknown state; however, it is possible to treat a large SQL script as a single changeSet. -->
@@ -34,10 +34,10 @@ Liquibase tracks which *changeSets* have or have not been deployed in a tracking
 
 Liquibase also prevents conflicts from different callers' updates on a secondary table called `DATABASECHANGELOGLOCK`.
 
-View our [DATABASECHANGELOG Table](/documentation/databasechangelog_table.html) and [DATABASECHANGELOCK Table](/documentation/databasechangeloglock_table.html) topics for more information.
+View our [DATABASECHANGELOG Table]({{site.baseurl}}{% link documentation/databasechangelog_table.md %}) and [DATABASECHANGELOCK Table]({{site.baseurl}}{% link documentation/databasechangeloglock_table.md %}) topics for more information.
 </div>
 <div class="tile-item">
-    <img src="/images/quickstart/tables-icon.png" width="125px" align="center" alt="Changelog Icon">
+    <img src="{{site.baseurl}}{% link images/quickstart/tables-icon.png %}" width="125px" align="center" alt="Changelog Icon">
 </div>
 </div>
 
@@ -50,7 +50,7 @@ View our [DATABASECHANGELOG Table](/documentation/databasechangelog_table.html) 
 
 Liquibase also has advanced features such as contexts, labels, and preconditions to precisely control when and where a *changeSet* is deployed.
 
->**Note:** To assist with projects where you are not starting with a blank database, Liquibase has a feature to [generate a changelog](/documentation/generating_changelogs.html) to represent the current state of the database schema.
+>**Note:** To assist with projects where you are not starting with a blank database, Liquibase has a feature to [generate a changelog]({{site.baseurl}}{% link documentation/generating_changelogs.md %}) to represent the current state of the database schema.
 
 ### Summary
 In this tutorial we covered:
@@ -59,4 +59,4 @@ In this tutorial we covered:
 
 ## **Next Up:** 
 <div class="cta-container" style="margin-left: auto; margin-right: auto; width: 300px; height: 50px">
-<div class="cta cta--block"><a href="/get_started/lb-first-steps.html">Liquibase First Steps ►</a></div></div>
+<div class="cta cta--block"><a href="{{site.baseurl}}{% link get_started/lb-first-steps.md %}">Liquibase First Steps ►</a></div></div>

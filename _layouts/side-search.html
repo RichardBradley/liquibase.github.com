@@ -8,7 +8,7 @@ subnav: subnav_blog.md
 
 <div class="container">
   <div class="span-24">
-    <a href="{{ pageRoot }}/index.html" class="logo"></a>
+    <a href="{{site.baseurl}}{% link index.md%}" class="logo"></a>
 
     <div class="cta-container" style="float: right; margin-top: 24px; margin-right: 100px;">
       {% include components/buttons/cta.html ctaText="Visit the Expert Exchange" ctaHref="https://download.liquibase.org/expert-exchange" %}
@@ -85,7 +85,7 @@ subnav: subnav_blog.md
     <div id="Datical" style="padding-right: 10px; float: left; padding-bottom: 15px">
       <a href="http://www.datical.com/whitepapers/how-to-get-started-with-database-release-automation-4-steps/?utm_source=liquibase&utm_medium=side-page-ad"
         target="_blank" onClick="trackOutboundLink(this, 'Datical', '4 Steps Ad'); return false"><img
-          src="/images/ad-easy-steps.png"
+          src="{{site.baseurl}}{% link images/ad-easy-steps.png %}"
           alt="Achieving Continuous Delivery at Fidelity Investments with IBM UrbanCode and Datical" width="223"
           height="207"></a>
     </div>

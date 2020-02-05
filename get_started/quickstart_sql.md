@@ -9,9 +9,9 @@ includeDaticalBox: true
 <div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/HdXcf9E8ZVI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 ## Prerequisites
-Before performing any of these steps, you must be able to connect to a local or remote database, accessible via command line or IDE/GUI. View the [Supported Databases](/databases.html) topic for more information on which databases we support. 
+Before performing any of these steps, you must be able to connect to a local or remote database, accessible via command line or IDE/GUI. View the [Supported Databases]({{site.baseurl}}{% link databases.md %}) topic for more information on which databases we support. 
 
-You can also view the [Database Tutorials](/documentation/tutorials/index.html) topic for more information on running each database with Liquibase.
+You can also view the [Database Tutorials]({{site.baseurl}}{% link documentation/tutorials/index.md %}) topic for more information on running each database with Liquibase.
 
 ## Step 1: Create a Formatted SQL Changelog
 
@@ -34,7 +34,7 @@ Change sets are units of change that Liquibase can execute on a database. When a
 1. Locate and open the `changelog.sql` file.
 2. For this example, enter the following information into the `changelog.sql` file, then save it. 
 
-See the [Formatted SQL Changelogs](/documentation/sql_format.html) topic for more information about SQL Syntax.
+See the [Formatted SQL Changelogs]({{site.baseurl}}{% link documentation/sql_format.md %}) topic for more information about SQL Syntax.
 
 {% highlight sql %}
 --liquibase formatted sql
@@ -67,14 +67,14 @@ Notice that two tables were created along with test1:
 The DATABASECHANGELOG table contains a list of all the changes that 
 have been run against the database. The DATABASECHANGELOGLOCK table is used to make sure two machines don't attempt to modify the database at the same time.
 
-View [DATABASECHANGELOG Table](/documentation/databasechangelog_table.html) and [DATABASECHANGELOGLOCK Table](/documentation/databasechangeloglock_table.html) topics for more information.
+View [DATABASECHANGELOG Table]({{site.baseurl}}{% link documentation/databasechangelog_table.md %}) and [DATABASECHANGELOGLOCK Table]({{site.baseurl}}{% link documentation/databasechangeloglock_table.md %}) topics for more information.
 
 ### Additional Information
 This topic is great when you only have a handful of SQL scripts. However, if your list of scripts becomes too large to maintain in a formatted SQL changelog, you may want to break up your scripts into smaller more manageable chunks. 
 
-See the [Database Migrations with Multiple SQL Files](/documentation/multiple-sql-migration.html) topic for more information on how to Migrate with Multiple SQL files.
+See the [Database Migrations with Multiple SQL Files]({{site.baseurl}}{% link documentation/multiple-sql-migration.md %}) topic for more information on how to Migrate with Multiple SQL files.
 
-You can also learn how to create your [First Migrations with Liquibase Functions](/get_started/quickstart_lb.html).
+You can also learn how to create your [First Migrations with Liquibase Functions]({{site.baseurl}}{% link get_started/quickstart_lb.md %}).
 
 ### Summary
 In this tutorial we covered:
@@ -86,7 +86,7 @@ In this tutorial we covered:
 ## **Next Up:** 
 
 <div class="cta-container" style="margin-left: auto; margin-right: auto; width: 300px; height: 50px">
-<div class="cta cta--block"><a href="/documentation/index.html">Liquibase Documentation ►</a></div>
+<div class="cta cta--block"><a href="{{site.baseurl}}{% link documentation/index.md %}">Liquibase Documentation ►</a></div>
 <br>
-<div class="cta cta--block"><a href="/quickstart.html">Return to Getting Started ►</a></div>
+<div class="cta cta--block"><a href="{{site.baseurl}}{% link quickstart.html %}">Return to Getting Started ►</a></div>
 </div>

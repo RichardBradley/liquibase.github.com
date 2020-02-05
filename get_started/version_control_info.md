@@ -16,4 +16,4 @@ You can manually create them in your machine directory, check them out of a vers
 If you keep your *changeLog* files in a version control system, you can perform your normal check-in, check-out, branching, and merging functions. You can run the *changeLog* at any point from where it is stored and Liquibase will update the database to the expected state.
 
 <div class="cta-container" style="margin-left: auto; margin-right: auto; width: 300px; height: 50px">
-<div class="cta cta--block"><a href="/get_started/index.html">Return to Get Started Home ►</a></div></div>
+<div class="cta cta--block"><a href="{{site.baseurl}}{% link get_started/index.md %}">Return to Get Started Home ►</a></div></div>

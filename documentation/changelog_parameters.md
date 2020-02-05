@@ -58,8 +58,10 @@ Defines a parameter for the changelog. Given a list of contexts and/or databases
 
 <table>
 <tr><th>Attribute</th><th>Description</th></tr>
-<tr><td>name</td><td>Name of the table's schema <b>required</b>  </td></tr>
-<tr><td>value</td><td>Name of the column's table <b>required</b>  </td></tr>
+<tr><td>name</td><td>Name of the table's schema <b>required if <i>file</i> is not set</b>  </td></tr>
+<tr><td>value</td><td>Name of the column's table <b>required if <i>file</i> is not set</b>  </td></tr>
+<tr><td>file</td><td>Name of the file the properties shall be loaded from. It will create a property for all properties in the file. 
+The content of the file has to follow the java properties file format</td></tr>
 <tr><td>context</td><td>Contexts given as comma separated list.  </td></tr>
 <tr><td>dbms</td><td>The type of a database which that changeSet is to be used for. When the migration step is running, it checks the database type against this 
   attribute. Valid database type names are listed on the <a href="../databases.html">supported databases page</a>. It is possible to list multiple databases separated by commas. 

@@ -2,18 +2,19 @@ package org.liquibase.doc.generator;
 
 
 import liquibase.change.*;
-import liquibase.change.core.CreateProcedureChange;
-import liquibase.change.core.CreateViewChange;
-import liquibase.change.core.LoadDataChange;
-import liquibase.change.core.LoadDataColumnConfig;
-import liquibase.change.core.SQLFileChange;
+import liquibase.change.core.*;
 import liquibase.changelog.ChangeSet;
 import liquibase.database.Database;
 import liquibase.database.DatabaseFactory;
-import liquibase.database.core.*;
+import liquibase.database.core.HsqlDatabase;
+import liquibase.database.core.MSSQLDatabase;
+import liquibase.database.core.MySQLDatabase;
+import liquibase.database.core.OracleDatabase;
 import liquibase.resource.AbstractResourceAccessor;
 import liquibase.resource.ClassLoaderResourceAccessor;
 import liquibase.resource.CompositeResourceAccessor;
+import liquibase.serializer.LiquibaseSerializable;
+import liquibase.serializer.LiquibaseSerializable.SerializationType;
 import liquibase.serializer.core.json.JsonChangeLogSerializer;
 import liquibase.serializer.core.xml.XMLChangeLogSerializer;
 import liquibase.serializer.core.yaml.YamlChangeLogSerializer;
@@ -26,20 +27,18 @@ import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.util.*;
-
-import static java.util.Map.Entry.comparingByKey;
-import static java.util.stream.Collectors.toMap;
+import java.util.stream.Stream;
 
 public class ChangeDocGenerator {
 
     private static final Logger logger = LoggerFactory.getLogger(ChangeDocGenerator.class);
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         logger.info("Generating documentation for all changes in included jar");
         Map<String, SortedSet<Class<? extends Change>>> definedChanges = ChangeFactory.getInstance().getRegistry();
         TreeMap<String, SortedSet<Class<? extends Change>>> sortedChanges = new TreeMap<>(definedChanges);
 
-        List <Database> databases = DatabaseFactory.getInstance().getImplementedDatabases();
+        List<Database> databases = DatabaseFactory.getInstance().getImplementedDatabases();
         Collections.sort(databases, new Comparator<Database>() {
             @Override
             public int compare(Database o1, Database o2) {
@@ -51,10 +50,10 @@ public class ChangeDocGenerator {
         writeChangePages(sortedChanges, databases);
     }
 
-    private static void writeChangeNav(Map<String, SortedSet<Class<? extends Change>>> definedChanges) throws IOException {
+    private static void writeChangeNav(Map<String, SortedSet<Class<? extends Change>>> definedChanges) throws Exception {
         // Ensure the directory exists so we know we are running in the right place.
         File includesDir = new File("_includes");
-        if (! includesDir.exists() || ! includesDir.isDirectory()) {
+        if (!includesDir.exists() || !includesDir.isDirectory()) {
             logger.error("The directory '" + includesDir.getAbsolutePath() + "' was not found. Copy the jar file to the root directory of the project and re-run.");
             System.exit(1);
         }
@@ -80,19 +79,19 @@ public class ChangeDocGenerator {
     private static String addChangesToContent(Map<String, SortedSet<Class<? extends Change>>> definedChanges, boolean onlyProClasses) {
         StringBuilder content = new StringBuilder();
         for (Map.Entry mapEntry : definedChanges.entrySet()) {
-            String changeName = (String)mapEntry.getKey();
+            String changeName = (String) mapEntry.getKey();
             SortedSet<Class<? extends Change>> changeClasses = (SortedSet<Class<? extends Change>>) mapEntry.getValue();
-            for (Class change:changeClasses) {
+            for (Class change : changeClasses) {
                 String packageName = change.getName();
                 String navEntry = "<li><a href='" + getChangeDocFileName(changeName) + ".html'><span>" + changeName.replaceAll("([A-Z])", " $1") + "</span></a></li>\n";
                 if (onlyProClasses) {
                     if (isProClass(packageName)) {
-                        logger.info ("adding Pro subnav entry for {}",change.getSimpleName());
-                        content.append (navEntry);
+                        logger.info("adding Pro subnav entry for {}", change.getSimpleName());
+                        content.append(navEntry);
                     }
                 } else {
-                    if (! isProClass(packageName)) {
-                        logger.info ("adding Core subnav entry for {}",change.getSimpleName());
+                    if (!isProClass(packageName)) {
+                        logger.info("adding Core subnav entry for {}", change.getSimpleName());
                         content.append(navEntry);
                     }
                 }
@@ -106,7 +105,7 @@ public class ChangeDocGenerator {
         return packageName.startsWith("com.datical");
     }
 
-    private static void writeChangePages(Map<String, SortedSet<Class<? extends Change>>> definedChanges, List<Database> databases) throws IOException {
+    private static void writeChangePages(Map<String, SortedSet<Class<? extends Change>>> definedChanges, List<Database> databases) throws Exception {
         List<Database> exampleDatabases = new ArrayList<Database>(databases);
         exampleDatabases.add(0, new HsqlDatabase());
         exampleDatabases.add(0, new OracleDatabase());
@@ -114,11 +113,9 @@ public class ChangeDocGenerator {
         MySQLDatabase defaultExampleDatabase = new MySQLDatabase();
         exampleDatabases.add(0, defaultExampleDatabase);
 
-
         for (String changeName : definedChanges.keySet()) {
             Change exampleChange = ChangeFactory.getInstance().create(changeName);
             ChangeMetaData changeMetaData = ChangeFactory.getInstance().getChangeMetaData(exampleChange);
-
             for (ChangeParameterMetaData param : changeMetaData.getParameters().values()) {
                 if (param.getParameterName().equals("encoding")) {
                     param.setValue(exampleChange, "UTF-8");
@@ -126,30 +123,37 @@ public class ChangeDocGenerator {
                     param.setValue(exampleChange, false);
                 } else if (param.getParameterName().equals("defaultOnNull")) {
                     param.setValue(exampleChange, false);
-                } else if (param.getDataType().matches(".* of .*")) {
+                } else if (Collection.class.isAssignableFrom(param.getDataTypeClass())) {
+                    Collection exampleValue = (Collection)param.getExampleValue(defaultExampleDatabase);
                     if (param.getDataType().endsWith(" of columnConfig")) {
-                        ColumnConfig columnConfig = new ColumnConfig();
-                        columnConfig.setName("address");
-                        columnConfig.setType("varchar(255)");
-                        List cols = new ArrayList();
-                        cols.add(columnConfig);
-                        param.setValue(exampleChange, cols);
+                        ColumnConfig columnConfig = new ColumnConfig().setName("address");
+                        if( exampleChange instanceof InsertDataChange ||
+                            exampleChange instanceof UpdateDataChange ) {
+                            columnConfig.setValue("address value");
+                        }
+                        exampleValue = Arrays.asList(columnConfig);
                     } else if (param.getDataType().endsWith(" of addColumnConfig")) {
                         AddColumnConfig columnConfig = new AddColumnConfig();
                         columnConfig.setName("address");
-                        columnConfig.setType("varchar(255)");
-                        List cols = new ArrayList();
-                        cols.add(columnConfig);
-                        param.setValue(exampleChange, cols);
-                    } else if (param.getDataType().endsWith(" of loadDataColumnConfig")) {
-                        LoadDataColumnConfig columnConfig = new LoadDataColumnConfig();
-                        columnConfig.setName("address");
-                        columnConfig.setType("varchar(255)");
-                        List cols = new ArrayList();
-                        cols.add(columnConfig);
-                        param.setValue(exampleChange, cols);
+                        if(exampleChange instanceof CreateIndexChange) {
+                            columnConfig.setDescending(true);
+                            exampleValue = Arrays.asList(columnConfig);
+                        }else {
+                            columnConfig.setType("varchar(255)");
+                            columnConfig.setPosition(2);
+                            AddColumnConfig cfg2 = new AddColumnConfig();
+                            cfg2.setName("name");
+                            cfg2.setType("varchar(50)");
+                            cfg2.setAfterColumn("id");
+                            ConstraintsConfig constraint = new ConstraintsConfig().setNullable(false);
+                            exampleValue = Arrays.asList(columnConfig, cfg2.setConstraints(constraint));
+                        }
+                    }
+
+                    if (null == exampleValue) {
+                        logger.warn("No example values for: " + param.getParameterName() + ": " + param.getDataType());
                     } else {
-                        logger.warn("Unknown data type: " + param.getDataType());
+                        ((Collection)param.getCurrentValue(exampleChange)).addAll(exampleValue);
                     }
                 } else {
                     Object exampleValue = param.getExampleValue(defaultExampleDatabase);
@@ -158,11 +162,7 @@ public class ChangeDocGenerator {
                             exampleValue = null;
                         }
                     }
-                    try {
-                        param.setValue(exampleChange, exampleValue);
-                    } catch (Throwable e) {
-                        throw e;
-                    }
+                    param.setValue(exampleChange, exampleValue);
                 }
             }
 
@@ -189,7 +189,7 @@ public class ChangeDocGenerator {
             content += "## Available Attributes ##\n\n";
             content += "<table>\n";
             content += "<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>\n";
-            List<ChangeParameterMetaData> params = new ArrayList<ChangeParameterMetaData>(changeMetaData.getParameters().values());
+            List<ChangeParameterMetaData> params = new ArrayList<>(changeMetaData.getParameters().values());
             Collections.sort(params, new Comparator<ChangeParameterMetaData>() {
                 @Override
                 public int compare(ChangeParameterMetaData o1, ChangeParameterMetaData o2) {
@@ -197,9 +197,10 @@ public class ChangeDocGenerator {
                 }
             });
 
-            List<ChangeParameterMetaData> nestedParams = new ArrayList<ChangeParameterMetaData>();
+            List<ChangeParameterMetaData> nestedParams = new ArrayList<>();
             for (ChangeParameterMetaData param : params) {
-                if (param.getDataType().matches(".* of .*")) {
+                if (param.getDataType().matches(".* of .*")
+                   || param.getSerializationType() == SerializationType.NESTED_OBJECT) {
                     nestedParams.add(param);
                     continue;
                 }
@@ -211,21 +212,22 @@ public class ChangeDocGenerator {
                 String supports = StringUtils.trimToEmpty(StringUtils.join(supportsDatabase, ", "));
 
                 content += "<tr><td style='vertical-align: top'>" + param.getParameterName() +
-                            "</td><td style='vertical-align: top'>" + param.getDescription() +
+                            "</td><td style='vertical-align: top'>" + getParamDescription(changeMetaData, param) +
                             "</td><td style='vertical-align: top'>" + required +
                             "</td><td style='vertical-align:top'>" + supports +
-                            "</td><td style='vertical-align: top'>" + StringUtils.trimToEmpty(param.getSince()) + "</td></tr>\n";
+                            "</td><td style='vertical-align: top'>" + StringUtils.trimToEmpty(param.getSince())
+                        + "</td></tr>\n";
             }
             content += "</table>\n\n";
-
 
             if (nestedParams.size() > 0) {
                 content += "## Nested Properties ##\n\n";
                 content += "<table>\n";
-                content += "<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>\n";
+                content += "<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th></tr>\n";
 
                 for (ChangeParameterMetaData param : nestedParams) {
-                    boolean list = param.getDataType().startsWith("list of");
+                    boolean list = param.getDataType().startsWith("list of")
+                            && param.getSerializationType() != SerializationType.NESTED_OBJECT;
 
                     Set<String> requiredForDatabase = param.getRequiredForDatabase();
                     String required = StringUtils.trimToEmpty(StringUtils.join(requiredForDatabase, ", "));
@@ -233,12 +235,31 @@ public class ChangeDocGenerator {
                     Set<String> supportsDatabase = param.getSupportedDatabases();
                     String supports = StringUtils.trimToEmpty(StringUtils.join(supportsDatabase, ", "));
 
-                    String description = param.getDescription();
-                    if (param.getDataType().endsWith("olumnConfig")) {
-                        description += "<br><br>See the <a href='../column.html'>column tag</a> documentation for more information";
+                    String description = getParamDescription(changeMetaData, param);
+                    String createIndex = "createIndex";
+                    String name = param.getParameterName() ;
+                    if(param.getDataType().matches(".* of .*")) {
+                        Class collectionType = (Class)param.getDataTypeClassParameters()[0];
+                        if (collectionType.getSimpleName().equals("ColumnConfig") ||
+                                (collectionType.getSimpleName().equals("AddColumnConfig") && !changeName.equals(createIndex))
+                        ) {
+                            description += "<br><br>See the <a href='../column.html'>column tag</a> documentation for more information";
+                        }else if (LiquibaseSerializable.class.isAssignableFrom(collectionType)) {
+                            LiquibaseSerializable child = (LiquibaseSerializable) collectionType.getConstructor().newInstance();
+                            String childName = child.getSerializedObjectName();
+                            // Not nested element -> inner children are described only
+                            if (param.getSerializationType() != SerializationType.NESTED_OBJECT) {
+                                name += "? / " + childName;
+                            } else {
+                                description += "<p></p><h3>Nested element(s): " + childName + "</h3>";
+                            }
+                            description += "<h4> Attributes</h4>" +
+                                    "<table>{%include " + (changeName.equals(createIndex) ? "IndexColumnConfig":
+                                    collectionType.getSimpleName()) + ".md%}</table>";
+                        }
                     }
 
-                    content += "<tr><td style='vertical-align: top'>" + param.getParameterName() + "</td><td style='vertical-align: top'>" + description + "</td><td style='vertical-align: top'>" + required + "</td><td style='vertical-align: top'>" + supports + "</td><td style='vertical-align: top'>" + (list ? "yes" : "no") + "</td><td style='vertical-align: top'>" + StringUtils.trimToEmpty(param.getSince()) + "</td></tr>\n";
+                    content += "<tr><td style='vertical-align: top'>" + name + "</td><td style='vertical-align: top'>" + description + "</td><td style='vertical-align: top'>" + required + "</td><td style='vertical-align: top'>" + supports + "</td><td style='vertical-align: top'>" + (list ? "yes" : "no") + "</td></tr>\n";
                 }
                 content += "</table>\n";
             }
@@ -364,6 +385,36 @@ public class ChangeDocGenerator {
             logger.info("Writing content to '" + pathname + "'");
             new FileOutputStream(file).write(content.getBytes());
         }
+    }
+
+	 /** Get param description. Return generic if not set */
+    private static String getParamDescription(ChangeMetaData changeMetaData, ChangeParameterMetaData param) {
+        String description = param.getDescription();
+        if (StringUtils.isEmpty(description)) {
+            Optional<String> fileOrPath = Stream.of("file", "path")
+                    .filter((String p) -> changeMetaData.getParameters().get(p) != null).findFirst();
+            switch (param.getParameterName()) {
+                case "encoding":
+                    if (fileOrPath.isPresent()) {
+                        description = "Encoding used in the file defined in the `" + fileOrPath.get() + "` attribute";
+                    }
+                    break;
+                case "relativeToChangelogFile":
+                    description = "Whether the file path relative to the root changelog file rather than to the " +
+                            "classpath.";
+                    break;
+                case "dbms":
+                    description = "Logical expression of database type(s) on which the change must be applied. " +
+                            "Valid database type names are listed on the <a href='../../databases.html'>supported " +
+                            "databases page</a>\n" +
+                            "It can be a comma separated list of multiple databases.\n" +
+                            "Or You can also specify that a change is <b>NOT</b> applicable to a " +
+                            "particular database type by prefixing with <code>!</code>. " +
+                            "The keywords <code>all</code> and <code>none</code> are also available.";
+                    break;
+            }
+        }
+        return description;
     }
 
     private static boolean canGeneratePage(Change exampleChange, Database exampleDatabase) {

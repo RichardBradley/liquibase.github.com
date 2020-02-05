@@ -31,8 +31,8 @@ Create Table
 ## Nested Properties ##
 
 <table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>columns</td><td style='vertical-align: top'><br><br>See the <a href='../column.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td><td style='vertical-align: top'></td></tr>
+<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th></tr>
+<tr><td style='vertical-align: top'>columns</td><td style='vertical-align: top'><br><br>See the <a href='../column.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td></tr>
 </table>
 <div id='changelog-tabs'>
 <ul>
@@ -48,7 +48,7 @@ Create Table
             schemaName="public"
             tableName="person"
             tablespace="A String">
-        <column name="address" type="varchar(255)"/>
+        <column name="address"/>
     </createTable>
 </changeSet>
 {% endhighlight %}
@@ -64,7 +64,6 @@ changeSet:
       columns:
       - column:
           name: address
-          type: varchar(255)
       remarks: A String
       schemaName: public
       tableName: person
@@ -85,8 +84,7 @@ changeSet:
           "columns": [
             {
               "column": {
-                "name": "address",
-                "type": "varchar(255)"
+                "name": "address"
               }
             }]
           ,
@@ -108,7 +106,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-CREATE TABLE cat.person (address VARCHAR(255) NULL) COMMENT='A String';
+CREATE TABLE cat.person (address NULL NULL) COMMENT='A String';
 
 ALTER TABLE cat.person COMMENT = 'A String';
 
@@ -119,8 +117,8 @@ ALTER TABLE cat.person COMMENT = 'A String';
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2/LUW</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>DB2/z</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>

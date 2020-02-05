@@ -35,7 +35,7 @@ If UUID type is used UUID value is stored as string and NULL in cell is supporte
 <tr><td style='vertical-align: top'>encoding</td><td style='vertical-align: top'>Encoding of the CSV file (defaults to UTF-8)</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>file</td><td style='vertical-align: top'>CSV file to load</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>quotchar</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>relativeToChangelogFile</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<tr><td style='vertical-align: top'>relativeToChangelogFile</td><td style='vertical-align: top'>Whether the file path relative to the root changelog file rather than to the classpath.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>separator</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table to insert data into</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
@@ -45,8 +45,8 @@ If UUID type is used UUID value is stored as string and NULL in cell is supporte
 ## Nested Properties ##
 
 <table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>columns</td><td style='vertical-align: top'>Defines how the data should be loaded.<br><br>See the <a href='../column.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td><td style='vertical-align: top'></td></tr>
+<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th></tr>
+<tr><td style='vertical-align: top'>columns? / column</td><td style='vertical-align: top'>Defines how the data should be loaded.<h4> Attributes</h4><table>{%include LoadDataColumnConfig.md%}</table></td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td></tr>
 </table>
 <div id='changelog-tabs'>
 <ul>
@@ -67,7 +67,7 @@ If UUID type is used UUID value is stored as string and NULL in cell is supporte
             separator=","
             tableName="person"
             usePreparedStatements="true">
-        <column name="address" type="varchar(255)"/>
+        <column name="id" type="int"/>
     </loadData>
 </changeSet>
 {% endhighlight %}
@@ -82,8 +82,8 @@ changeSet:
       catalogName: cat
       columns:
       - column:
-          name: address
-          type: varchar(255)
+          name: id
+          type: int
       commentLineStartsWith: A String
       encoding: UTF-8
       file: com/example/users.csv
@@ -109,8 +109,8 @@ changeSet:
           "columns": [
             {
               "column": {
-                "name": "address",
-                "type": "varchar(255)"
+                "name": "id",
+                "type": "int"
               }
             }]
           ,
@@ -138,8 +138,8 @@ changeSet:
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2/LUW</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>DB2/z</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>

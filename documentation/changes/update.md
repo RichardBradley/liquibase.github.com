@@ -24,14 +24,14 @@ Updates data in an existing table
 <tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 <tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>where</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
 </table>
 
 ## Nested Properties ##
 
 <table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>columns</td><td style='vertical-align: top'>Data to update<br><br>See the <a href='../column.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td><td style='vertical-align: top'></td></tr>
+<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th></tr>
+<tr><td style='vertical-align: top'>columns</td><td style='vertical-align: top'>Data to update<br><br>See the <a href='../column.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td></tr>
+<tr><td style='vertical-align: top'>where</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>no</td></tr>
 </table>
 <div id='changelog-tabs'>
 <ul>
@@ -45,7 +45,7 @@ Updates data in an existing table
     <update catalogName="cat"
             schemaName="public"
             tableName="person">
-        <column name="address" type="varchar(255)"/>
+        <column name="address" value="address value"/>
         <where>name='Bob'</where>
     </update>
 </changeSet>
@@ -62,7 +62,7 @@ changeSet:
       columns:
       - column:
           name: address
-          type: varchar(255)
+          value: address value
       schemaName: public
       tableName: person
       where: name='Bob'
@@ -83,7 +83,7 @@ changeSet:
             {
               "column": {
                 "name": "address",
-                "type": "varchar(255)"
+                "value": "address value"
               }
             }]
           ,
@@ -104,7 +104,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-UPDATE cat.person SET address = NULL WHERE name='Bob';
+UPDATE cat.person SET address = 'address value' WHERE name='Bob';
 
 
 {% endhighlight %}
@@ -113,8 +113,8 @@ UPDATE cat.person SET address = NULL WHERE name='Bob';
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2/LUW</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>DB2/z</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>

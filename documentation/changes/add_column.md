@@ -29,8 +29,8 @@ Adds a new column to an existing table
 ## Nested Properties ##
 
 <table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>columns</td><td style='vertical-align: top'>Column constraint and foreign key information. Setting the "defaultValue" attribute will specify a default value for the column. Setting the "value" attribute will set all rows existing to the specified value without modifying the column default.<br><br>See the <a href='../column.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td><td style='vertical-align: top'></td></tr>
+<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th></tr>
+<tr><td style='vertical-align: top'>columns</td><td style='vertical-align: top'>Column constraint and foreign key information. Setting the "defaultValue" attribute will specify a default value for the column. Setting the "value" attribute will set all rows existing to the specified value without modifying the column default.<br><br>See the <a href='../column.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td></tr>
 </table>
 <div id='changelog-tabs'>
 <ul>
@@ -44,7 +44,14 @@ Adds a new column to an existing table
     <addColumn catalogName="cat"
             schemaName="public"
             tableName="person">
-        <column name="address" type="varchar(255)"/>
+        <column name="address"
+                position="2"
+                type="varchar(255)"/>
+        <column afterColumn="id"
+                name="name"
+                type="varchar(50)">
+            <constraints nullable="false"/>
+        </column>
     </addColumn>
 </changeSet>
 {% endhighlight %}
@@ -60,7 +67,14 @@ changeSet:
       columns:
       - column:
           name: address
+          position: 2
           type: varchar(255)
+      - column:
+          afterColumn: id
+          constraints:
+            nullable: false
+          name: name
+          type: varchar(50)
       schemaName: public
       tableName: person
 
@@ -80,7 +94,18 @@ changeSet:
             {
               "column": {
                 "name": "address",
+                "position": 2,
                 "type": "varchar(255)"
+              }
+            },
+            {
+              "column": {
+                "afterColumn": "id",
+                "constraints": {
+                  "nullable": false
+                },
+                "name": "name",
+                "type": "varchar(50)"
               }
             }]
           ,
@@ -100,7 +125,8 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-ALTER TABLE cat.person ADD address VARCHAR(255) NULL;
+ALTER TABLE cat.person ADD address VARCHAR(255) NULL,
+ ADD name VARCHAR(50) NOT NULL AFTER `id`;
 
 
 {% endhighlight %}
@@ -109,8 +135,8 @@ ALTER TABLE cat.person ADD address VARCHAR(255) NULL;
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2/LUW</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>DB2/z</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>

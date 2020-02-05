@@ -56,12 +56,15 @@ Liquibase attempts to execute each changeSet in a transaction that is committed 
 <tr><td><a href="/documentation/contexts.html">context</a></td><td>Controls whether a changeset is executed, depending on runtime settings. Any string can be used for the context name and they are checked case-insensitively. </td></tr>
 <tr><td><a href="/documentation/labels.html">labels</a></td><td>Controls whether a changeset is executed, depending on runtime settings. Any string can be used for the label name and they are checked case-insensitively.</td></tr>
 <tr><td>runInTransaction</td><td>Should the changeSet be ran as a single transaction (if possible)?  Defaults to true.  <b>Warning: be careful with this attribute.  If set to false and an error occurs part way through running a changeSet containing multiple statements, the Liquibase databasechangelog table will be left in an invalid state.  </b><b>Since 1.9</b> </td></tr>
-<tr><td>failOnError</td><td>Should the migration fail if an error occurs while executing the changeSet? </td></tr>
+<tr><td>failOnError</td><td>Should the migration fail if an error occurs while executing the changeSet? <i>Default=true</i></td></tr>
 <tr><td>objectQuotingStrategy</td><td>This controls how object names are quoted in the SQL generated or used in calls to the database. Different databases do different things to
 the names of objects, for example Oracle converts everything to uppercase (unless quoted). There are three possible values. The default value is <code>LEGACY</code>.<br/>
 <code>LEGACY</code> - Same behavior as in Liquibase 2.0<br/>
 <code>QUOTE_ALL_OBJECTS</code> - Every object gets quoted. e.g. person becomes "person".<br/>
 <code>QUOTE_ONLY_RESERVED_WORDS</code> - Quote reserved keywords and invalid column names.</td></tr>
+<tr><td>runOrder</td><td><b>Since 3.5</b></td></tr>
+<tr><td>created</td><td><b>Since 3.5</b></td></tr>
+<tr><td>ignore</td><td><b>Since 3.6</b></td></tr>
 </table>
 
 

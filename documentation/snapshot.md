@@ -6,7 +6,7 @@ title: Docs | snapshot Command
 # Liquibase Commands: snapshot
 The `snapshot` command has two modes. When run without options, it will gather the current state of the database and show a text-based version of the schema to STDOUT. When
 run with the `--snapshotFormat=JSON` option, creates a JSON file that represents the current state of your database. A snapshot is like a photograph of your database that
-can be used in the [diff]() or [diffChangeLog]() commands.
+can be used in the [diff](/documentation/diff.html) or [diffChangeLog](/documentation/diffChangeLog.html) commands.
 
 ## Uses
 The `snapshot` command is typically used when you want to quickly compare changes in your database or keep a record of your current database state. Snapshots can also be used to compare:
@@ -19,9 +19,30 @@ longer reflect the current state of the database if the database is changed with
 To take a snapshot of your database:
 1.	Configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for your database.
 > **Note:** For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your *liquibase.properties* File](config_properties.html) topic in the knowledge base.
-2.	Run the following command: `liquibase --outputFile=myschemaSnapshot.json snapshot --snapshotFormat=snapshot.json`
+2.	Run the following command: `liquibase --outputFile=myschemaSnapshot.json snapshot --snapshotFormat=json`
 
- 
+## Using the snapshot in the diff and diffChangeLog commands
+
+You can use the JSON format snapshot file in the diff and diffChangeLog commands. One typical workflow is:
+
+  1. Make sure your local environment is up-to-date by getting the latest changelog from source control.
+  2. Configure your liquibase.properties to point to a local development database and run `liquibase update` to ensure it has the latest schema.
+  3. Take a snapshot of the local development database with `liquibase --outputFile=before.json snapshot --snapshotFormat=json`
+  4. Make manual changes to the local development database as needed.
+  5. Add the manual changes to the changelog with `liquibase --referenceUrl=offline:mysql?snapshot=before.json diffChangeLog`
+  6. Review the changelog to ensure that it matches your expectations of the manual changes made.
+  7. Mark the manual changes as deployed in the local development database by running `liquibase changeLogSync`
+  8. Commit the changes to source control.
+
+The format for the database URL when using a snapshot is:
+
+{% highlight bash %}
+offline:<dbtype>?snapshot=<path/to/snapshot.json>
+{% endhighlight %}
+
+The `<dbtype>` in that URL should be the Type Name from [the list of supported databases](/databases.html), and the `<path/to/snapshot.json>` is a path relative to where the command is running. 
+
+
 ## Output
 <details>
 <summary style="font-size:125%;color:blue;">myschemaSnapshot.json example</summary>

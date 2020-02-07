@@ -19,12 +19,12 @@ Marks Column Unused
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>columnName</td><td style='vertical-align: top'>Name of the column</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>columnName</td><td class="desc">Name of the column<span class="right"><span class="sample">E.g. <span class="val">&#x27;id&#x27;</span></span></span></td></tr>
+<tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>tableName</td><td class="desc">Name of the table<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -93,8 +93,8 @@ ALTER TABLE cat.person SET UNUSED COLUMN id;
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2/LUW</td><td>Not Supported</td><td>No</td></tr>
-<tr><td>DB2/z</td><td>Not Supported</td><td>No</td></tr>
+<tr><td>DB2</td><td>Not Supported</td><td>No</td></tr>
+<tr><td>DB2</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Derby</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Firebird</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>H2</td><td>Not Supported</td><td>No</td></tr>

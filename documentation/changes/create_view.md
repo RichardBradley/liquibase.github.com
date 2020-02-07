@@ -19,18 +19,18 @@ Create a new database view
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>encoding</td><td style='vertical-align: top'>Encoding used in the file defined in the `path` attribute</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>fullDefinition</td><td style='vertical-align: top'>Set to true if selectQuery is the entire view definition. False if the CREATE VIEW header should be added</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.3</td></tr>
-<tr><td style='vertical-align: top'>path</td><td style='vertical-align: top'>Path to file containing view definition</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.6</td></tr>
-<tr><td style='vertical-align: top'>relativeToChangelogFile</td><td style='vertical-align: top'>Whether the file path relative to the root changelog file rather than to the classpath.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>remarks</td><td style='vertical-align: top'>Comments stored for the view</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>replaceIfExists</td><td style='vertical-align: top'>Use 'create or replace' syntax</td><td style='vertical-align: top'></td><td style='vertical-align:top'>db2, firebird, h2, hsqldb, ingres, mariadb, mssql, mysql, oracle, postgresql, sqlite, sybase</td><td style='vertical-align: top'>1.5</td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>selectQuery</td><td style='vertical-align: top'>SQL for generating the view</td><td style='vertical-align: top'>informix</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>viewName</td><td style='vertical-align: top'>Name of the view to create</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name">encoding</td><td class="desc">Name of the encoding (as specified in <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/charset/Charset.html">java.nio.Charset javadoc</a>) used in the file defined in the `path` attribute<span class="right"><span class="default">Default: <span class="val">&#x27;utf-8&#x27;</span></span></span></td></tr>
+<tr><td class="name">fullDefinition</td><td class="desc">Set to true if selectQuery is the entire view definition. False if the CREATE VIEW header should be added<span class="right"><span class="since">@ v3.3</span></span></td></tr>
+<tr><td class="name">path</td><td class="desc">Path to file containing view definition<span class="right"><span class="since">@ v3.6</span><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
+<tr><td class="name">relativeToChangelogFile</td><td class="desc">Whether the file path is relative to the root changelog file rather than to the classpath.<span class="right"></span></td></tr>
+<tr><td class="name">remarks</td><td class="desc">Comments stored for the view<span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
+<tr><td class="name">replaceIfExists</td><td class="desc">Use 'create or replace' syntax<span class="support"><b>Supported by: </b>db2, firebird, h2, hsqldb, ingres, mariadb, mssql, mysql, oracle, postgresql, sqlite, sybase</span><span class="right"><span class="since">@ v1.5</span></span></td></tr>
+<tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
+<tr><td class="name">selectQuery</td><td class="desc">SQL for generating the view<span class="right"><span class="sample">E.g. <span class="val">&#x27;select id, name from person where id &gt; 10&#x27;</span></span></span><span class="right"><b>Required for: </b>informix</span></td></tr>
+<tr><td class="name" required>viewName</td><td class="desc">Name of the view to create<span class="right"><span class="sample">E.g. <span class="val">&#x27;v_person&#x27;</span></span></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -43,7 +43,7 @@ Create a new database view
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="createView-example">
     <createView catalogName="cat"
-            encoding="UTF-8"
+            encoding="A String"
             fullDefinition="true"
             path="A String"
             relativeToChangelogFile="true"
@@ -62,7 +62,7 @@ changeSet:
   changes:
   - createView:
       catalogName: cat
-      encoding: UTF-8
+      encoding: A String
       fullDefinition: true
       path: A String
       relativeToChangelogFile: true
@@ -84,7 +84,7 @@ changeSet:
       {
         "createView": {
           "catalogName": "cat",
-          "encoding": "UTF-8",
+          "encoding": "A String",
           "fullDefinition": true,
           "path": "A String",
           "relativeToChangelogFile": true,

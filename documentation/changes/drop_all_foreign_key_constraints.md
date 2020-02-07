@@ -19,11 +19,11 @@ Drops all foreign key constraints for a table
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>baseTableCatalogName</td><td style='vertical-align: top'>Catalog name of the table containing columns constrained by foreign keys</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>baseTableName</td><td style='vertical-align: top'>Name of the table containing columns constrained by foreign keys</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>baseTableSchemaName</td><td style='vertical-align: top'>Schema name of the table containing columns constrained by foreign keys</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">baseTableCatalogName</td><td class="desc">Catalog name of the table containing columns constrained by foreign keys<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>baseTableName</td><td class="desc">Name of the table containing columns constrained by foreign keys<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span></td></tr>
+<tr><td class="name">baseTableSchemaName</td><td class="desc">Schema name of the table containing columns constrained by foreign keys<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>

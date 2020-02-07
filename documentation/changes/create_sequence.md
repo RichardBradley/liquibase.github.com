@@ -19,19 +19,19 @@ Creates a new database sequence
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>cacheSize</td><td style='vertical-align: top'>Number of values to fetch per query</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>cycle</td><td style='vertical-align: top'>Can the sequence cycle when it hits the max value?</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>dataType</td><td style='vertical-align: top'>Data type of the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>asany, db2z, derby, firebird, h2, informix, postgresql</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>incrementBy</td><td style='vertical-align: top'>Interval between sequence numbers</td><td style='vertical-align: top'></td><td style='vertical-align:top'>asany, db2, db2z, derby, h2, hsqldb, informix, mssql, oracle, postgresql</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>maxValue</td><td style='vertical-align: top'>The maximum value of the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>asany, db2, db2z, derby, h2, informix, mssql, oracle, postgresql</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>minValue</td><td style='vertical-align: top'>The minimum value of the sequence</td><td style='vertical-align: top'></td><td style='vertical-align:top'>asany, db2, db2z, derby, h2, informix, mssql, oracle, postgresql</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>ordered</td><td style='vertical-align: top'>Does the sequence need to be guaranteed to be generated in the order of request?</td><td style='vertical-align: top'></td><td style='vertical-align:top'>asany, db2, db2z, derby, firebird, h2, informix, mssql, oracle</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>sequenceName</td><td style='vertical-align: top'>Name of the sequence to create</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>startValue</td><td style='vertical-align: top'>The first sequence number to be generated.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>asany, db2, db2z, derby, h2, hsqldb, informix, mssql, oracle, postgresql</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">cacheSize</td><td class="desc"><span class="type">integer</span>Number of values to fetch per query<span class="right"><span class="sample">E.g. <span class="val">&#x27;371717&#x27;</span></span></span></td></tr>
+<tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name">cycle</td><td class="desc">Can the sequence cycle when it hits the max value?<span class="right"></span></td></tr>
+<tr><td class="name">dataType</td><td class="desc">Data type of the sequence<span class="support"><b>Supported by: </b>asany, db2z, derby, firebird, h2, informix, postgresql</span><span class="right"><span class="sample">E.g. <span class="val">&#x27;int&#x27;</span></span></span></td></tr>
+<tr><td class="name">incrementBy</td><td class="desc"><span class="type">integer</span>Interval between sequence numbers<span class="support"><b>Supported by: </b>asany, db2, db2z, derby, h2, hsqldb, informix, mssql, oracle, postgresql</span><span class="right"><span class="sample">E.g. <span class="val">&#x27;2&#x27;</span></span></span></td></tr>
+<tr><td class="name">maxValue</td><td class="desc"><span class="type">integer</span>The maximum value of the sequence<span class="support"><b>Supported by: </b>asany, db2, db2z, derby, h2, informix, mssql, oracle, postgresql</span><span class="right"><span class="sample">E.g. <span class="val">&#x27;1000&#x27;</span></span></span></td></tr>
+<tr><td class="name">minValue</td><td class="desc"><span class="type">integer</span>The minimum value of the sequence<span class="support"><b>Supported by: </b>asany, db2, db2z, derby, h2, informix, mssql, oracle, postgresql</span><span class="right"><span class="sample">E.g. <span class="val">&#x27;10&#x27;</span></span></span></td></tr>
+<tr><td class="name">ordered</td><td class="desc">Does the sequence need to be guaranteed to be generated in the order of request?<span class="support"><b>Supported by: </b>asany, db2, db2z, derby, firebird, h2, informix, mssql, oracle</span><span class="right"></span></td></tr>
+<tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>sequenceName</td><td class="desc">Name of the sequence to create<span class="right"><span class="sample">E.g. <span class="val">&#x27;seq_id&#x27;</span></span></span></td></tr>
+<tr><td class="name">startValue</td><td class="desc"><span class="type">integer</span>The first sequence number to be generated.<span class="support"><b>Supported by: </b>asany, db2, db2z, derby, h2, hsqldb, informix, mssql, oracle, postgresql</span><span class="right"><span class="sample">E.g. <span class="val">&#x27;5&#x27;</span></span></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>

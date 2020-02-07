@@ -19,15 +19,15 @@ Renames an existing column
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>columnDataType</td><td style='vertical-align: top'>Data type of the column</td><td style='vertical-align: top'>mariadb, mysql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>newColumnName</td><td style='vertical-align: top'>Name to rename the column to</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>oldColumnName</td><td style='vertical-align: top'>Name of the existing column to rename</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>remarks</td><td style='vertical-align: top'>Remarks of the column</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table containing that the column to rename</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name">columnDataType</td><td class="desc">Data type of the column<span class="right"><span class="sample">E.g. <span class="val">&#x27;int&#x27;</span></span></span><span class="right"><b>Required for: </b>mariadb, mysql</span></td></tr>
+<tr><td class="name" required>newColumnName</td><td class="desc">Name to rename the column to<span class="right"><span class="sample">E.g. <span class="val">&#x27;full_name&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>oldColumnName</td><td class="desc">Name of the existing column to rename<span class="right"><span class="sample">E.g. <span class="val">&#x27;name&#x27;</span></span></span></td></tr>
+<tr><td class="name">remarks</td><td class="desc">Remarks of the column<span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
+<tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>tableName</td><td class="desc">Name of the table containing that the column to rename<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>

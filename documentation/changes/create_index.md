@@ -19,24 +19,22 @@ Creates an index on an existing column or set of columns.
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>clustered</td><td style='vertical-align: top'>Create clustered index.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>indexName</td><td style='vertical-align: top'>Name of the index to create</td><td style='vertical-align: top'>firebird, hsqldb</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table to add the index to</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tablespace</td><td style='vertical-align: top'>Tablespace to create the index in.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>unique</td><td style='vertical-align: top'>Unique values index</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>1.8</td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name">clustered</td><td class="desc">Create clustered index.<span class="right"></span></td></tr>
+<tr><td class="name">indexName</td><td class="desc">Name of the index to create<span class="right"><span class="sample">E.g. <span class="val">&#x27;idx_address&#x27;</span></span></span><span class="right"><b>Required for: </b>firebird, hsqldb</span></td></tr>
+<tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>tableName</td><td class="desc">Name of the table to add the index to<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span></td></tr>
+<tr><td class="name">tablespace</td><td class="desc">Tablespace to create the index in.<span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
+<tr><td class="name">unique</td><td class="desc">Unique values index<span class="right"><span class="since">@ v1.8</span></span></td></tr>
 </table>
 
 ## Nested Properties ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th></tr>
-<tr><td style='vertical-align: top'>columns? / column</td><td style='vertical-align: top'>Column(s) to add to the index<h4> Attributes</h4><table>{%include IndexColumnConfig.md%}</table></td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td></tr>
-</table>
-<div id='changelog-tabs'>
+<table id="nestedProps" class="attribs">
+<tr><th>Name</th><th>Description</th></tr><tr><td class="name">columns&nbsp;/ <span class="right" required>column&nbsp;<sup>[1..N]</sup></span></td><td class="desc">Column(s) to add to the index<span class="right"><b>Note: </b> columns tag not required in XML</span><div class="header">Attributes</div><table id="nestedAttrs">{%include IndexColumnConfig.md%}</table></td></tr>
+</table><div id='changelog-tabs'>
 <ul>
     <li><a href="#tab-xml">XML Sample</a></li>
     <li><a href="#tab-yaml">YAML Sample</a></li>

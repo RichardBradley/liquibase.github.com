@@ -19,22 +19,20 @@ Create Table
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>remarks</td><td style='vertical-align: top'>Comments stored for the table</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tablespace</td><td style='vertical-align: top'>Name of the tablespace, the table created in</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name">remarks</td><td class="desc">Comments stored for the table<span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
+<tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>tableName</td><td class="desc">Name of the table<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span></td></tr>
+<tr><td class="name">tablespace</td><td class="desc">Name of the tablespace, the table created in<span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
 </table>
 
 ## Nested Properties ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th></tr>
-<tr><td style='vertical-align: top'>columns</td><td style='vertical-align: top'><br><br>See the <a href='../column.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td></tr>
-</table>
-<div id='changelog-tabs'>
+<table id="nestedProps" class="attribs">
+<tr><th>Name</th><th>Description</th></tr><tr><td class="name">columns&nbsp;/ <span class="right" required>column&nbsp;<sup>[1..N]</sup></span></td><td class="desc"><span class="right"><b>Note: </b> columns tag not required in XML</span><br><br>See the <a href="../column.html">column tag</a> documentation for more information</td></tr>
+</table><div id='changelog-tabs'>
 <ul>
     <li><a href="#tab-xml">XML Sample</a></li>
     <li><a href="#tab-yaml">YAML Sample</a></li>

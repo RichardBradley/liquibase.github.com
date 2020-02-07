@@ -19,12 +19,12 @@ Drops an existing foreign key
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>baseTableCatalogName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>baseTableName</td><td style='vertical-align: top'>Name of the table containing the column constrained by the foreign key</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>baseTableSchemaName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of the foreign key constraint to drop</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">baseTableCatalogName</td><td class="desc"><span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>baseTableName</td><td class="desc">Name of the table containing the column constrained by the foreign key<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span></td></tr>
+<tr><td class="name">baseTableSchemaName</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>constraintName</td><td class="desc">Name of the foreign key constraint to drop<span class="right"><span class="sample">E.g. <span class="val">&#x27;fk_address_person&#x27;</span></span></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>

@@ -19,12 +19,12 @@ Drops an existing index
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>indexName</td><td style='vertical-align: top'>Name of the index to drop</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the indexed table.</td><td style='vertical-align: top'>asany, mariadb, mssql, mysql, sybase</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>indexName</td><td class="desc">Name of the index to drop<span class="right"><span class="sample">E.g. <span class="val">&#x27;idx_address&#x27;</span></span></span></td></tr>
+<tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
+<tr><td class="name">tableName</td><td class="desc">Name of the indexed table.<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span><span class="right"><b>Required for: </b>asany, mariadb, mssql, mysql, sybase</span></td></tr>
 </table>
 
 <div id='changelog-tabs'>

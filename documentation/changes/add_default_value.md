@@ -20,20 +20,20 @@ One of defaultValue, defaultValueNumeric, defaultValueBoolean or defaultValueDat
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>columnDataType</td><td style='vertical-align: top'>Current data type of the column to add default value to</td><td style='vertical-align: top'>informix</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>columnName</td><td style='vertical-align: top'>Name of the column to add a default value to</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>defaultValue</td><td style='vertical-align: top'>Default value. Either this property or one of the other defaultValue* properties are required.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>defaultValueBoolean</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>defaultValueComputed</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>defaultValueConstraintName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>defaultValueDate</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>defaultValueNumeric</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>defaultValueSequenceNext</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table to containing the column</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name">columnDataType</td><td class="desc">Current data type of the column to add default value to<span class="right"><span class="sample">E.g. <span class="val">&#x27;varchar(50)&#x27;</span></span></span><span class="right"><b>Required for: </b>informix</span></td></tr>
+<tr><td class="name" required>columnName</td><td class="desc">Name of the column to add a default value to<span class="right"><span class="sample">E.g. <span class="val">&#x27;fileName&#x27;</span></span></span></td></tr>
+<tr><td class="name">defaultValue</td><td class="desc">Default value. Either this property or one of the other defaultValue* properties are required.<span class="right"><span class="sample">E.g. <span class="val">&#x27;Something Else&#x27;</span></span></span></td></tr>
+<tr><td class="name">defaultValueBoolean</td><td class="desc"><span class="right"></span></td></tr>
+<tr><td class="name">defaultValueComputed</td><td class="desc"><span class="right"></span></td></tr>
+<tr><td class="name">defaultValueConstraintName</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
+<tr><td class="name">defaultValueDate</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;2008-02-12T12:34:03&#x27;</span></span></span></td></tr>
+<tr><td class="name">defaultValueNumeric</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;439.2&#x27;</span></span></span></td></tr>
+<tr><td class="name">defaultValueSequenceNext</td><td class="desc"><span class="right"></span></td></tr>
+<tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>tableName</td><td class="desc">Name of the table to containing the column<span class="right"><span class="sample">E.g. <span class="val">&#x27;file&#x27;</span></span></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>

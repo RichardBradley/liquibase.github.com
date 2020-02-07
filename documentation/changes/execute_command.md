@@ -19,20 +19,18 @@ Executes a system command. Because this refactoring doesn't generate SQL like mo
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>executable</td><td style='vertical-align: top'>Name of the executable to run</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>os</td><td style='vertical-align: top'>List of operating systems on which to execute the command (taken from the os.name Java system property)</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>timeout</td><td style='vertical-align: top'>Timeout value for executable to run</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name" required>executable</td><td class="desc">Name of the executable to run<span class="right"><span class="sample">E.g. <span class="val">&#x27;mysqldump&#x27;</span></span></span></td></tr>
+<tr><td class="name">os</td><td class="desc">List of operating systems on which to execute the command (taken from the os.name Java system property)<span class="right"><span class="sample">E.g. <span class="val">&#x27;Windows 7&#x27;</span></span></span></td></tr>
+<tr><td class="name">timeout</td><td class="desc">Timeout value for executable to run<span class="right"><span class="sample">E.g. <span class="val">&#x27;10s&#x27;</span></span></span></td></tr>
 </table>
 
 ## Nested Properties ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th></tr>
-<tr><td style='vertical-align: top'>args? / arg</td><td style='vertical-align: top'>Arguments for the executable<h4> Attributes</h4><table>{%include Arg.md%}</table></td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td></tr>
-</table>
-<div id='changelog-tabs'>
+<table id="nestedProps" class="attribs">
+<tr><th>Name</th><th>Description</th></tr><tr><td class="name">args&nbsp;/ <span class="right">arg&nbsp;<sup>[0..N]</sup></span></td><td class="desc">Arguments for the executable<span class="right"><b>Note: </b> args tag not required in XML</span><div class="header">Attributes</div><table id="nestedAttrs">{%include Arg.md%}</table></td></tr>
+</table><div id='changelog-tabs'>
 <ul>
     <li><a href="#tab-xml">XML Sample</a></li>
     <li><a href="#tab-yaml">YAML Sample</a></li>

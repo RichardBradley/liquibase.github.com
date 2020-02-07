@@ -19,15 +19,15 @@ Adds a check constrant to an existing column or set of columns.
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>constraintBody</td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of the check constraint</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>disabled</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table to create the check constraint on</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>validate</td><td style='vertical-align: top'>This is true if the check constraint has 'ENABLE VALIDATE' set, or false if the check constraint has 'ENABLE NOVALIDATE' set.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>constraintBody</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>constraintName</td><td class="desc">Name of the check constraint<span class="right"><span class="sample">E.g. <span class="val">&#x27;const_name&#x27;</span></span></span></td></tr>
+<tr><td class="name">disabled</td><td class="desc"><span class="right"></span></td></tr>
+<tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>tableName</td><td class="desc">Name of the table to create the check constraint on<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span></td></tr>
+<tr><td class="name">validate</td><td class="desc">This is true if the check constraint has 'ENABLE VALIDATE' set, or false if the check constraint has 'ENABLE NOVALIDATE' set.<span class="right"></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -106,8 +106,8 @@ ALTER TABLE cat.[public].person NOCHECK CONSTRAINT const_name;
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2/LUW</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>DB2/z</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td>Not Supported</td><td><b>Yes</b></td></tr>

@@ -19,23 +19,21 @@ Inserts data into an existing table
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>dbms</td><td style='vertical-align: top'>Logical expression of database type(s) on which the change must be applied. Valid database type names are listed on the <a href='../../databases.html'>supported databases page</a>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name">dbms</td><td class="desc">Logical expression of database type(s) on which the change must be applied. Valid database type names are listed on the <a href='../../databases.html'>supported databases page</a>
 It can be a comma separated list of multiple databases.
-Or You can also specify that a change is <b>NOT</b> applicable to a particular database type by prefixing with <code>!</code>. The keywords <code>all</code> and <code>none</code> are also available.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table to insert data into</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+Or You can also specify that a change is <b>NOT</b> applicable to a particular database type by prefixing with <code>!</code>. The keywords <code>all</code> and <code>none</code> are also available.<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;!h2, mysql&#x27;</span></span></span></td></tr>
+<tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>tableName</td><td class="desc">Name of the table to insert data into<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span></td></tr>
 </table>
 
 ## Nested Properties ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th></tr>
-<tr><td style='vertical-align: top'>columns</td><td style='vertical-align: top'>Data to insert into columns<br><br>See the <a href='../column.html'>column tag</a> documentation for more information</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td></tr>
-</table>
-<div id='changelog-tabs'>
+<table id="nestedProps" class="attribs">
+<tr><th>Name</th><th>Description</th></tr><tr><td class="name">columns&nbsp;/ <span class="right" required>column&nbsp;<sup>[1..N]</sup></span></td><td class="desc">Data to insert into columns<span class="right"><b>Note: </b> columns tag not required in XML</span><div class="header">Attributes</div><table id="nestedAttrs">{%include insertUpdateColumnConfig.md%}</table></td></tr>
+</table><div id='changelog-tabs'>
 <ul>
     <li><a href="#tab-xml">XML Sample</a></li>
     <li><a href="#tab-yaml">YAML Sample</a></li>

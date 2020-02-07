@@ -19,11 +19,11 @@ Drops an existing function
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>asany, db2, db2z, derby, firebird, h2, hsqldb, informix, ingres, mariadb, mysql, oracle, postgresql, sqlite, sybase</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>functionName</td><td style='vertical-align: top'>Name of the function to drop</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="support"><b>Supported by: </b>asany, db2, db2z, derby, firebird, h2, hsqldb, informix, ingres, mariadb, mysql, oracle, postgresql, sqlite, sybase</span><span class="right"><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>functionName</td><td class="desc">Name of the function to drop<span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
+<tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -89,8 +89,8 @@ DROP FUNCTION cat.`A String`;
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2/LUW</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>DB2/z</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>

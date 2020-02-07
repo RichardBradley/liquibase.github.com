@@ -28,30 +28,28 @@ If UUID type is used UUID value is stored as string and NULL in cell is supporte
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>commentLineStartsWith</td><td style='vertical-align: top'>Lines starting with this are treated as comment and ignored.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>encoding</td><td style='vertical-align: top'>Encoding of the CSV file (defaults to UTF-8)</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>file</td><td style='vertical-align: top'>CSV file to load</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>quotchar</td><td style='vertical-align: top'>The quote character for string fields containing the separator character.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>relativeToChangelogFile</td><td style='vertical-align: top'>Whether the file path relative to the root changelog file rather than to the classpath.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>separator</td><td style='vertical-align: top'>Character separating the fields.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table to insert data into</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>usePreparedStatements</td><td style='vertical-align: top'>Use prepared statements instead of insert statement strings if the DB supports it</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name">commentLineStartsWith</td><td class="desc">Lines starting with this are treated as comment and ignored.<span class="right"><span class="default">Default: <span class="val">&#x27;#&#x27;</span></span></span></td></tr>
+<tr><td class="name">encoding</td><td class="desc">Encoding of the CSV file (defaults to UTF-8)<span class="right"><span class="default">Default: <span class="val">&#x27;utf-8&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>file</td><td class="desc">CSV file to load<span class="right"><span class="sample">E.g. <span class="val">&#x27;example/users.csv&#x27;</span></span></span></td></tr>
+<tr><td class="name">quotchar</td><td class="desc">The quote character for string fields containing the separator character.<span class="right"><span class="default">Default: <span class="val">&#x27;&quot;&#x27;</span></span></span></td></tr>
+<tr><td class="name">relativeToChangelogFile</td><td class="desc">Whether the file path is relative to the root changelog file rather than to the classpath.<span class="right"></span></td></tr>
+<tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
+<tr><td class="name">separator</td><td class="desc">Character separating the fields.<span class="right"><span class="default">Default: <span class="val">&#x27;,&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>tableName</td><td class="desc">Name of the table to insert data into<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span></td></tr>
+<tr><td class="name">usePreparedStatements</td><td class="desc">Use prepared statements instead of insert statement strings if the DB supports it<span class="right"></span></td></tr>
 </table>
 
 ## Nested Properties ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th></tr>
-<tr><td style='vertical-align: top'>columns? / column</td><td style='vertical-align: top'>Column mapping and defaults can be defined.
+<table id="nestedProps" class="attribs">
+<tr><th>Name</th><th>Description</th></tr><tr><td class="name">columns&nbsp;/ <span class="right">column&nbsp;<sup>[0..N]</sup></span></td><td class="desc">Column mapping and defaults can be defined.
 
 The 'header' or 'index' attributes needs to be defined if the header name in the CSV is different than the column name needs to be inserted
-If no `column` defined at all, the type it is taken from the DB. Otherwise for non-string columns the type definition might be required<h4> Attributes</h4><table>{%include LoadDataColumnConfig.md%}</table></td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>yes</td></tr>
-</table>
-<div id='changelog-tabs'>
+If no `column` defined at all, the type it is taken from the DB. Otherwise for non-string columns the type definition might be required<span class="right"><b>Note: </b> columns tag not required in XML</span><div class="header">Attributes</div><table id="nestedAttrs">{%include LoadDataColumnConfig.md%}</table></td></tr>
+</table><div id='changelog-tabs'>
 <ul>
     <li><a href="#tab-xml">XML Sample</a></li>
     <li><a href="#tab-yaml">YAML Sample</a></li>
@@ -61,13 +59,13 @@ If no `column` defined at all, the type it is taken from the DB. Otherwise for n
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="loadData-example">
     <loadData catalogName="cat"
-            commentLineStartsWith="A String"
+            commentLineStartsWith="//"
             encoding="UTF-8"
-            file="com/example/users.csv"
+            file="example/users.csv"
             quotchar="'"
             relativeToChangelogFile="true"
             schemaName="public"
-            separator=","
+            separator=";"
             tableName="person"
             usePreparedStatements="true">
         <column header="header1"
@@ -97,13 +95,13 @@ changeSet:
           index: 3
           name: name
           type: BOOLEAN
-      commentLineStartsWith: A String
+      commentLineStartsWith: //
       encoding: UTF-8
-      file: com/example/users.csv
+      file: example/users.csv
       quotchar: ''''
       relativeToChangelogFile: true
       schemaName: public
-      separator: ','
+      separator: ;
       tableName: person
       usePreparedStatements: true
 
@@ -135,13 +133,13 @@ changeSet:
               }
             }]
           ,
-          "commentLineStartsWith": "A String",
+          "commentLineStartsWith": "//",
           "encoding": "UTF-8",
-          "file": "com/example/users.csv",
+          "file": "example/users.csv",
           "quotchar": "'",
           "relativeToChangelogFile": true,
           "schemaName": "public",
-          "separator": ",",
+          "separator": ";",
           "tableName": "person",
           "usePreparedStatements": true
         }

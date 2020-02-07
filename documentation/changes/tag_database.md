@@ -19,9 +19,9 @@ Applies a tag to the database for future rollback
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>tag</td><td style='vertical-align: top'>Tag to apply</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name" required>tag</td><td class="desc">Tag to apply<span class="right"><span class="sample">E.g. <span class="val">&#x27;version_1.3&#x27;</span></span></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>

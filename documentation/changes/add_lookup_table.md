@@ -19,18 +19,18 @@ Creates a lookup table containing values stored in a column and creates a foreig
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of the foreign-key constraint to create between the existing table and the lookup table</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>existingColumnName</td><td style='vertical-align: top'>Name of the column containing the data to extract</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>existingTableCatalogName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>existingTableName</td><td style='vertical-align: top'>Name of the table containing the data to extract</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>existingTableSchemaName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>newColumnDataType</td><td style='vertical-align: top'>Data type of the new table column</td><td style='vertical-align: top'>informix, mariadb, mssql, mysql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>newColumnName</td><td style='vertical-align: top'>Name of the column in the new table to create</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>newTableCatalogName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>newTableName</td><td style='vertical-align: top'>Name of lookup table to create</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>newTableSchemaName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">constraintName</td><td class="desc">Name of the foreign-key constraint to create between the existing table and the lookup table<span class="right"><span class="sample">E.g. <span class="val">&#x27;fk_address_state&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>existingColumnName</td><td class="desc">Name of the column containing the data to extract<span class="right"><span class="sample">E.g. <span class="val">&#x27;state&#x27;</span></span></span></td></tr>
+<tr><td class="name">existingTableCatalogName</td><td class="desc"><span class="right"></span></td></tr>
+<tr><td class="name" required>existingTableName</td><td class="desc">Name of the table containing the data to extract<span class="right"><span class="sample">E.g. <span class="val">&#x27;address&#x27;</span></span></span></td></tr>
+<tr><td class="name">existingTableSchemaName</td><td class="desc"><span class="right"></span></td></tr>
+<tr><td class="name">newColumnDataType</td><td class="desc">Data type of the new table column<span class="right"><span class="sample">E.g. <span class="val">&#x27;char(2)&#x27;</span></span></span><span class="right"><b>Required for: </b>informix, mariadb, mssql, mysql</span></td></tr>
+<tr><td class="name" required>newColumnName</td><td class="desc">Name of the column in the new table to create<span class="right"><span class="sample">E.g. <span class="val">&#x27;abbreviation&#x27;</span></span></span></td></tr>
+<tr><td class="name">newTableCatalogName</td><td class="desc"><span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>newTableName</td><td class="desc">Name of lookup table to create<span class="right"><span class="sample">E.g. <span class="val">&#x27;state&#x27;</span></span></span></td></tr>
+<tr><td class="name">newTableSchemaName</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>

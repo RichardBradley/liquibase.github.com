@@ -19,10 +19,10 @@ Logs a message and continues execution.
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>message</td><td style='vertical-align: top'>Message to output</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>target</td><td style='vertical-align: top'>Target for message. Possible values: STDOUT, STDERR, FATAL, WARN, INFO, DEBUG. Default value: STDERR</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">message</td><td class="desc">Message to output<span class="right"><span class="sample">E.g. <span class="val">&#x27;Make sure you feed the cat&#x27;</span></span></span></td></tr>
+<tr><td class="name">target</td><td class="desc">Target for message. Possible values: STDOUT, STDERR, FATAL, WARN, INFO, DEBUG. Default value: STDERR<span class="right"><span class="sample">E.g. <span class="val">&#x27;STDERR&#x27;</span></span></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>

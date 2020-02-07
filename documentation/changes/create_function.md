@@ -19,21 +19,25 @@ Creates a stored function
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>asany, db2, db2z, derby, firebird, h2, hsqldb, informix, ingres, mariadb, mysql, oracle, postgresql, sqlite, sybase</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>comments</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>dbms</td><td style='vertical-align: top'>Logical expression of database type(s) on which the change must be applied. Valid database type names are listed on the <a href='../../databases.html'>supported databases page</a>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="support"><b>Supported by: </b>asany, db2, db2z, derby, firebird, h2, hsqldb, informix, ingres, mariadb, mysql, oracle, postgresql, sqlite, sybase</span><span class="right"><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name">comments</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
+<tr><td class="name">dbms</td><td class="desc">Logical expression of database type(s) on which the change must be applied. Valid database type names are listed on the <a href='../../databases.html'>supported databases page</a>
 It can be a comma separated list of multiple databases.
-Or You can also specify that a change is <b>NOT</b> applicable to a particular database type by prefixing with <code>!</code>. The keywords <code>all</code> and <code>none</code> are also available.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.1</td></tr>
-<tr><td style='vertical-align: top'>encoding</td><td style='vertical-align: top'>Encoding used in the file defined in the `path` attribute</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>functionBody</td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>functionName</td><td style='vertical-align: top'>Name of the function to drop</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>path</td><td style='vertical-align: top'>File containing the procedure text. Either this attribute or a nested procedure text is required.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>procedureText</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>relativeToChangelogFile</td><td style='vertical-align: top'>Whether the file path relative to the root changelog file rather than to the classpath.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>replaceIfExists</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+Or You can also specify that a change is <b>NOT</b> applicable to a particular database type by prefixing with <code>!</code>. The keywords <code>all</code> and <code>none</code> are also available.<span class="right"><span class="since">@ v3.1</span><span class="sample">E.g. <span class="val">&#x27;h2, oracle&#x27;</span></span></span></td></tr>
+<tr><td class="name">encoding</td><td class="desc">Name of the encoding (as specified in <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/charset/Charset.html">java.nio.Charset javadoc</a>) used in the file defined in the `path` attribute<span class="right"><span class="default">Default: <span class="val">&#x27;utf-8&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>functionBody</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>functionName</td><td class="desc">Name of the function to drop<span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
+<tr><td class="name">path</td><td class="desc">File containing the procedure text. Either this attribute or a nested procedure text is required.<span class="right"><span class="sample">E.g. <span class="val">&#x27;com/example/my-logic.sql&#x27;</span></span></span></td></tr>
+<tr><td class="name">procedureText</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;CREATE OR REPLACE PROCEDURE testHello
+    IS
+    BEGIN
+      DBMS_OUTPUT.PUT_LINE(&#x27;Hello From The Database!&#x27;);
+    END;&#x27;</span></span></span></td></tr>
+<tr><td class="name">relativeToChangelogFile</td><td class="desc">Whether the file path is relative to the root changelog file rather than to the classpath.<span class="right"></span></td></tr>
+<tr><td class="name">replaceIfExists</td><td class="desc"><span class="right"></span></td></tr>
+<tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -48,7 +52,7 @@ Or You can also specify that a change is <b>NOT</b> applicable to a particular d
     <pro:createFunction catalogName="cat"
             comments="A String"
             dbms="h2, oracle"
-            encoding="UTF-8"
+            encoding="utf8"
             functionName="A String"
             path="com/example/my-logic.sql"
             relativeToChangelogFile="true"
@@ -67,7 +71,7 @@ changeSet:
       catalogName: cat
       comments: A String
       dbms: h2, oracle
-      encoding: UTF-8
+      encoding: utf8
       functionBody: A String
       functionName: A String
       path: com/example/my-logic.sql
@@ -95,7 +99,7 @@ changeSet:
           "catalogName": "cat",
           "comments": "A String",
           "dbms": "h2, oracle",
-          "encoding": "UTF-8",
+          "encoding": "utf8",
           "functionBody": "A String",
           "functionName": "A String",
           "path": "com/example/my-logic.sql",

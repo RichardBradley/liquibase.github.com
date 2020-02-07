@@ -19,17 +19,17 @@ Converts an existing column to be an auto-increment (a.k.a 'identity') column
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>columnDataType</td><td style='vertical-align: top'>Current data type of the column to make auto-increment</td><td style='vertical-align: top'>asany, h2, hsqldb, informix, ingres, mariadb, mysql, sybase, unsupported</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>columnName</td><td style='vertical-align: top'>Name of the column</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>defaultOnNull</td><td style='vertical-align: top'>Using GenerationType 'BY DEFAULT' defaultOnNull = true allows the identity to be used if the identity column is referenced, but a value of NULL is specified.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>oracle</td><td style='vertical-align: top'>3.6</td></tr>
-<tr><td style='vertical-align: top'>generationType</td><td style='vertical-align: top'>Type of the generation in 'GENERATED %s AS IDENTITY'. ALWAYS | BY DEFAULT</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.6</td></tr>
-<tr><td style='vertical-align: top'>incrementBy</td><td style='vertical-align: top'>Integer value the increment increments at each call</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>startWith</td><td style='vertical-align: top'>Initial integer value of the increment</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name">columnDataType</td><td class="desc">Current data type of the column to make auto-increment<span class="required"><b>Required for: </b>asany, h2, hsqldb, informix, ingres, mariadb, mysql, sybase, unsupported</span><span class="right"><span class="sample">E.g. <span class="val">&#x27;int&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>columnName</td><td class="desc">Name of the column<span class="right"><span class="sample">E.g. <span class="val">&#x27;id&#x27;</span></span></span></td></tr>
+<tr><td class="name">defaultOnNull</td><td class="desc">When using generationType 'BY DEFAULT' then defaultOnNull = true allows the identity to be used if the identity column is referenced, but a value of NULL is specified.<span class="right"><span class="since">@ v3.6</span></span><span class="right"><b>Supported by: </b>oracle</span></td></tr>
+<tr><td class="name">generationType</td><td class="desc">Type of the generation in 'GENERATED %s AS IDENTITY'. ALWAYS | BY DEFAULT<span class="right"><span class="since">@ v3.6</span><span class="sample">E.g. <span class="val">&#x27;ALWAYS&#x27;</span></span></span></td></tr>
+<tr><td class="name">incrementBy</td><td class="desc"><span class="type">integer</span>Integer value the increment increments at each call<span class="right"><span class="sample">E.g. <span class="val">&#x27;1&#x27;</span></span></span></td></tr>
+<tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
+<tr><td class="name">startWith</td><td class="desc"><span class="type">integer</span>Initial integer value of the increment<span class="right"><span class="sample">E.g. <span class="val">&#x27;100&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>tableName</td><td class="desc">Name of the table<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>

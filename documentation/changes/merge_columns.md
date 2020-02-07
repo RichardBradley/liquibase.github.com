@@ -19,16 +19,16 @@ Concatenates the values in two columns, joins them by with string, and stores th
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>column1Name</td><td style='vertical-align: top'>Name of the column containing the first half of the data</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>column2Name</td><td style='vertical-align: top'>Name of the column containing the second half of the data</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>finalColumnName</td><td style='vertical-align: top'>Name of the column to create</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>finalColumnType</td><td style='vertical-align: top'>Data type of the column to create</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>joinString</td><td style='vertical-align: top'>String to place include between the values from column1 and column2 (may be empty)</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table containing the columns to join</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>column1Name</td><td class="desc">Name of the column containing the first half of the data<span class="right"><span class="sample">E.g. <span class="val">&#x27;first_name&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>column2Name</td><td class="desc">Name of the column containing the second half of the data<span class="right"><span class="sample">E.g. <span class="val">&#x27;last_name&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>finalColumnName</td><td class="desc">Name of the column to create<span class="right"><span class="sample">E.g. <span class="val">&#x27;full_name&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>finalColumnType</td><td class="desc">Data type of the column to create<span class="right"><span class="sample">E.g. <span class="val">&#x27;varchar(255)&#x27;</span></span></span></td></tr>
+<tr><td class="name">joinString</td><td class="desc">String to place include between the values from column1 and column2 (may be empty)<span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
+<tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>tableName</td><td class="desc">Name of the table containing the columns to join<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>

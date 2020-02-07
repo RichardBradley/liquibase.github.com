@@ -29,24 +29,22 @@ Note: By default it will attempt to split statements on a ';' or 'go' at the end
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>dbms</td><td style='vertical-align: top'>Logical expression of database type(s) on which the change must be applied. Valid database type names are listed on the <a href='../../databases.html'>supported databases page</a>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">dbms</td><td class="desc">Logical expression of database type(s) on which the change must be applied. Valid database type names are listed on the <a href='../../databases.html'>supported databases page</a>
 It can be a comma separated list of multiple databases.
-Or You can also specify that a change is <b>NOT</b> applicable to a particular database type by prefixing with <code>!</code>. The keywords <code>all</code> and <code>none</code> are also available.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>endDelimiter</td><td style='vertical-align: top'>Delimiter to apply to the end of the statement. Defaults to ';', may be set to ''.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>splitStatements</td><td style='vertical-align: top'>Set to false to not have liquibase split statements on ;'s and GO's. Defaults to true if not set</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>sql</td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>stripComments</td><td style='vertical-align: top'>Set to true to remove any comments in the SQL before executing, otherwise false.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+Or You can also specify that a change is <b>NOT</b> applicable to a particular database type by prefixing with <code>!</code>. The keywords <code>all</code> and <code>none</code> are also available.<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;!h2, oracle, mysql&#x27;</span></span></span></td></tr>
+<tr><td class="name">endDelimiter</td><td class="desc">Delimiter to apply to the end of the statement. Defaults to ';', may be set to ''.<span class="right"><span class="sample">E.g. <span class="val">&#x27;\nGO&#x27;</span></span></span></td></tr>
+<tr><td class="name">splitStatements</td><td class="desc">Set to false to not have liquibase split statements on ;'s and GO's. Defaults to true if not set<span class="right"><span class="default">Default: <span class="val">true</span></span></span></td></tr>
+<tr><td class="name" required>sql</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;insert into person (name) values (&#x27;Bob&#x27;)&#x27;</span></span></span></td></tr>
+<tr><td class="name">stripComments</td><td class="desc">Set to true to remove any comments in the SQL before executing, otherwise false.<span class="right"></span></td></tr>
 </table>
 
 ## Nested Properties ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Multiple&nbsp;Allowed</th></tr>
-<tr><td style='vertical-align: top'>comment</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align: top'>all</td><td style='vertical-align: top'>no</td></tr>
-</table>
-<div id='changelog-tabs'>
+<table id="nestedProps" class="attribs">
+<tr><th>Name</th><th>Description</th></tr><tr><td class="name">comment</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;What about Bob?&#x27;</span></span></span></td></tr>
+</table><div id='changelog-tabs'>
 <ul>
     <li><a href="#tab-xml">XML Sample</a></li>
     <li><a href="#tab-yaml">YAML Sample</a></li>

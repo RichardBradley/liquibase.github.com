@@ -19,19 +19,19 @@ Adds a primary key out of an existing column or set of columns.
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>clustered</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>columnNames</td><td style='vertical-align: top'>Name of the column(s) to create the primary key on. Comma separated if multiple</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Name of primary key constraint</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>forIndexCatalogName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>forIndexName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>db2, db2z, oracle</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>forIndexSchemaName</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Name of the table to create the primary key on</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tablespace</td><td style='vertical-align: top'></td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>validate</td><td style='vertical-align: top'>This is true if the primary key has 'ENABLE VALIDATE' set, or false if the primary key has 'ENABLE NOVALIDATE' set.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name">clustered</td><td class="desc"><span class="right"></span></td></tr>
+<tr><td class="name" required>columnNames</td><td class="desc">Name of the column(s) to create the primary key on. Comma separated if multiple<span class="right"><span class="sample">E.g. <span class="val">&#x27;id, name&#x27;</span></span></span></td></tr>
+<tr><td class="name">constraintName</td><td class="desc">Name of primary key constraint<span class="right"><span class="sample">E.g. <span class="val">&#x27;pk_person&#x27;</span></span></span></td></tr>
+<tr><td class="name">forIndexCatalogName</td><td class="desc"><span class="right"></span></td></tr>
+<tr><td class="name">forIndexName</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span><span class="right"><b>Supported by: </b>db2, db2z, oracle</span></td></tr>
+<tr><td class="name">forIndexSchemaName</td><td class="desc"><span class="right"></span></td></tr>
+<tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>tableName</td><td class="desc">Name of the table to create the primary key on<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span></td></tr>
+<tr><td class="name">tablespace</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
+<tr><td class="name">validate</td><td class="desc">This is true if the primary key has 'ENABLE VALIDATE' set, or false if the primary key has 'ENABLE NOVALIDATE' set.<span class="right"></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>

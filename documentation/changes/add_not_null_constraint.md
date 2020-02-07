@@ -19,16 +19,16 @@ Adds a not-null constraint to an existing table. If a defaultNullValue attribute
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>catalogName</td><td style='vertical-align: top'>Name of the catalog</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'>3.0</td></tr>
-<tr><td style='vertical-align: top'>columnDataType</td><td style='vertical-align: top'>Current data type of the column</td><td style='vertical-align: top'>informix, mariadb, mssql, mysql</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>columnName</td><td style='vertical-align: top'>Name of the column to add the constraint to</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>constraintName</td><td style='vertical-align: top'>Created constraint name (if database supports names for NOT NULL constraints)</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>defaultNullValue</td><td style='vertical-align: top'>Value to set all currently null values to. If not set, change will fail if null values exist</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>schemaName</td><td style='vertical-align: top'>Name of the schema</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>tableName</td><td style='vertical-align: top'>Adds a not-null constraint to an existing table. If a defaultNullValue attribute is passed, all null values for the column will be updated to the passed value before the constraint is applied.</td><td style='vertical-align: top'>all</td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
-<tr><td style='vertical-align: top'>validate</td><td style='vertical-align: top'>This is true if the not null constraint has 'ENABLE VALIDATE' set, or false if the not null constrain has 'ENABLE NOVALIDATE' set.</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name">columnDataType</td><td class="desc">Current data type of the column<span class="right"><span class="sample">E.g. <span class="val">&#x27;int&#x27;</span></span></span><span class="right"><b>Required for: </b>informix, mariadb, mssql, mysql</span></td></tr>
+<tr><td class="name" required>columnName</td><td class="desc">Name of the column to add the constraint to<span class="right"><span class="sample">E.g. <span class="val">&#x27;id&#x27;</span></span></span></td></tr>
+<tr><td class="name">constraintName</td><td class="desc">Created constraint name (if database supports names for NOT NULL constraints)<span class="right"><span class="sample">E.g. <span class="val">&#x27;const_name&#x27;</span></span></span></td></tr>
+<tr><td class="name">defaultNullValue</td><td class="desc">Value to set all currently null values to. If not set, change will fail if null values exist<span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
+<tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>tableName</td><td class="desc">Adds a not-null constraint to an existing table. If a defaultNullValue attribute is passed, all null values for the column will be updated to the passed value before the constraint is applied.<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span></td></tr>
+<tr><td class="name">validate</td><td class="desc">This is true if the not null constraint has 'ENABLE VALIDATE' set, or false if the not null constrain has 'ENABLE NOVALIDATE' set.<span class="right"></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>

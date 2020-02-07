@@ -19,9 +19,9 @@ Stops Liquibase execution with a message. Mainly useful for debugging and steppi
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
-<tr><td style='vertical-align: top'>message</td><td style='vertical-align: top'>Message to output when execution stops</td><td style='vertical-align: top'></td><td style='vertical-align:top'>all</td><td style='vertical-align: top'></td></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td class="name">message</td><td class="desc">Message to output when execution stops<span class="right"><span class="default">Default: <span class="val">&#x27;Stop command in changelog file&#x27;</span></span></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>

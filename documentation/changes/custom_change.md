@@ -25,8 +25,8 @@ For a sample custom change class, see liquibase.change.custom.ExampleCustomSqlCh
 
 ## Available Attributes ##
 
-<table>
-<tr><th>Name</th><th>Description</th><th>Required&nbsp;For</th><th>Supports</th><th>Since</th></tr>
+<table class='attribs'>
+<tr><th>Name</th><th>Description</th></tr>
 </table>
 
 <div id='changelog-tabs'>
@@ -38,7 +38,7 @@ For a sample custom change class, see liquibase.change.custom.ExampleCustomSqlCh
 <div id='tab-xml'>
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="customChange-example">
-    <customChange/>
+    <customChange class="com.example.CustomChange"/>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -48,7 +48,8 @@ changeSet:
   id: customChange-example
   author: liquibase-docs
   changes:
-  - customChange: {}
+  - customChange:
+      class: com.example.CustomChange
 
 {% endhighlight %}
 </div>
@@ -61,7 +62,8 @@ changeSet:
     "changes": [
       {
         "customChange": {
-          }
+          "class": "com.example.CustomChange"
+        }
       }]
     
   }

@@ -46,7 +46,10 @@ Create Table
             schemaName="public"
             tableName="person"
             tablespace="A String">
-        <column name="address"/>
+        <column name="id" type="int">
+            <constraints nullable="false"/>
+        </column>
+        <column name="address" type="varchar(50)"/>
     </createTable>
 </changeSet>
 {% endhighlight %}
@@ -61,7 +64,13 @@ changeSet:
       catalogName: cat
       columns:
       - column:
+          constraints:
+            nullable: false
+          name: id
+          type: int
+      - column:
           name: address
+          type: varchar(50)
       remarks: A String
       schemaName: public
       tableName: person
@@ -82,7 +91,17 @@ changeSet:
           "columns": [
             {
               "column": {
-                "name": "address"
+                "constraints": {
+                  "nullable": false
+                },
+                "name": "id",
+                "type": "int"
+              }
+            },
+            {
+              "column": {
+                "name": "address",
+                "type": "varchar(50)"
               }
             }]
           ,
@@ -104,7 +123,8 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-CREATE TABLE cat.person (address NULL NULL) COMMENT='A String';
+CREATE TABLE cat.person (id INT NOT NULL,
+ address VARCHAR(50) NULL) COMMENT='A String';
 
 ALTER TABLE cat.person COMMENT = 'A String';
 

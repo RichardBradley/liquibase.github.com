@@ -197,13 +197,23 @@ public class ChangeDocGenerator {
                     param.setValue(exampleChange, false);
                 } else if (Collection.class.isAssignableFrom(param.getDataTypeClass())) {
                     Collection exampleValue = (Collection) param.getExampleValue(defaultExampleDatabase);
+                    ConstraintsConfig constrNonNull = new ConstraintsConfig().setNullable(false);
                     if (param.getDataType().endsWith(" of columnConfig")) {
                         ColumnConfig columnConfig = new ColumnConfig().setName("address");
-                        if (exampleChange instanceof InsertDataChange ||
-                                exampleChange instanceof UpdateDataChange) {
-                            columnConfig.setValue("address value");
+                        switch(changeName) {
+                            case "insert":
+                            case "update":
+                                columnConfig.setValue("address value");
+                            case "dropColumn":
+                                exampleValue = Arrays.asList(columnConfig);
+                                break;
+                            case "createTable":
+                                ArrayList<ColumnConfig> columns =
+                                        new ArrayList<>( (Collection<ColumnConfig>) exampleValue);
+                                columns.get(0).setConstraints(constrNonNull);
+                                columns.add(columnConfig.setType("varchar(50)"));
+                                exampleValue = columns;
                         }
-                        exampleValue = Arrays.asList(columnConfig);
                     } else if (param.getDataType().endsWith(" of addColumnConfig")) {
                         AddColumnConfig columnConfig = new AddColumnConfig();
                         columnConfig.setName("address");
@@ -217,8 +227,7 @@ public class ChangeDocGenerator {
                             cfg2.setName("name");
                             cfg2.setType("varchar(50)");
                             cfg2.setAfterColumn("id");
-                            ConstraintsConfig constraint = new ConstraintsConfig().setNullable(false);
-                            exampleValue = Arrays.asList(columnConfig, cfg2.setConstraints(constraint));
+                            exampleValue = Arrays.asList(columnConfig, cfg2.setConstraints(constrNonNull));
                         }
                     }
 

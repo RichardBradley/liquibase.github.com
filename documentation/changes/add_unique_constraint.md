@@ -22,19 +22,19 @@ Adds a unique constrant to an existing column or set of columns.
 <table class='attribs'>
 <tr><th>Name</th><th>Description</th></tr>
 <tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
-<tr><td class="name">clustered</td><td class="desc">Whether create a clustered index<span class="right"></span><span class="right"><b>Supported by: </b>mssql</span></td></tr>
+<tr><td class="name">clustered</td><td class="desc"><span class="type">boolean</span>Whether create a clustered index<span class="right"></span><span class="right"><b>Supported by: </b>mssql</span></td></tr>
 <tr><td class="name" required>columnNames</td><td class="desc">Name of the column(s) to create the unique constraint on. Comma separated if multiple<span class="right"><span class="sample">E.g. <span class="val">&#x27;id, name&#x27;</span></span></span></td></tr>
 <tr><td class="name">constraintName</td><td class="desc">Name of the unique constraint<span class="right"><span class="sample">E.g. <span class="val">&#x27;const_name&#x27;</span></span></span></td></tr>
-<tr><td class="name">deferrable</td><td class="desc">True if this constraint is deferrable, False otherwise<span class="right"></span></td></tr>
-<tr><td class="name">disabled</td><td class="desc">True if this constraint is disabled, False otherwise<span class="right"></span></td></tr>
+<tr><td class="name">deferrable</td><td class="desc"><span class="type">boolean</span>True if this constraint is deferrable, False otherwise<span class="right"></span></td></tr>
+<tr><td class="name">disabled</td><td class="desc"><span class="type">boolean</span>True if this constraint is disabled, False otherwise<span class="right"></span></td></tr>
 <tr><td class="name">forIndexCatalogName</td><td class="desc"><span class="right"></span></td></tr>
 <tr><td class="name">forIndexName</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span><span class="right"><b>Supported by: </b>oracle</span></td></tr>
 <tr><td class="name">forIndexSchemaName</td><td class="desc"><span class="right"></span></td></tr>
-<tr><td class="name">initiallyDeferred</td><td class="desc">True if this constraint is initially deferred, False otherwise<span class="right"></span></td></tr>
+<tr><td class="name">initiallyDeferred</td><td class="desc"><span class="type">boolean</span>True if this constraint is initially deferred, False otherwise<span class="right"></span></td></tr>
 <tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
 <tr><td class="name" required>tableName</td><td class="desc">Name of the table to create the unique constraint on<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span></td></tr>
 <tr><td class="name">tablespace</td><td class="desc">'Tablespace' to create the index in. Corresponds to file group in mssql<span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
-<tr><td class="name">validate</td><td class="desc">Should be true if the unique constraint shall 'ENABLE VALIDATE' set, or false if the 'ENABLE NOVALIDATE' shall.<span class="right"><span class="default">Default: <span class="val">true</span></span></span></td></tr>
+<tr><td class="name">validate</td><td class="desc"><span class="type">boolean</span>Should be true if the unique constraint shall 'ENABLE VALIDATE' set, or false if the 'ENABLE NOVALIDATE' shall.<span class="right"><span class="default">Default: <span class="val">true</span></span></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>

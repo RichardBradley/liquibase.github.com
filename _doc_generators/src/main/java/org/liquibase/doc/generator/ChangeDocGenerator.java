@@ -578,10 +578,8 @@ public class ChangeDocGenerator {
             logger.info(statsMarker, "TYPE:{} / {}:{}",
                     change.getSerializedObjectName(), param.getParameterName(), param.getDataType());
             String type = typeDisplayName.get(param.getDataType());
-            if (null != type) {
-                description = span(attrs(".type"), (null == type ? param.getDataType() : type)).render()
-                        + description;
-            }
+            description = span(attrs(".type"), (null == type ? param.getDataType() : type)).render()
+                   + description;
         }
         return description;
     }

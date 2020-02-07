@@ -38,9 +38,9 @@ Or You can also specify that a change is <b>NOT</b> applicable to a particular d
 <tr><td class="name">encoding</td><td class="desc">Name of the encoding (as specified in <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/charset/Charset.html">java.nio.Charset javadoc</a>) used in the file defined in the `path` attribute<span class="right"><span class="default">Default: <span class="val">&#x27;utf-8&#x27;</span></span></span></td></tr>
 <tr><td class="name">endDelimiter</td><td class="desc">Delimiter to apply to the end of the statement. Defaults to ';', may be set to ''.<span class="right"><span class="sample">E.g. <span class="val">&#x27;\nGO&#x27;</span></span></span></td></tr>
 <tr><td class="name" required>path</td><td class="desc">The file path of the SQL file to load<span class="right"><span class="sample">E.g. <span class="val">&#x27;my/path/file.sql&#x27;</span></span></span></td></tr>
-<tr><td class="name">relativeToChangelogFile</td><td class="desc">Whether the file path is relative to the root changelog file rather than to the classpath.<span class="right"></span></td></tr>
-<tr><td class="name">splitStatements</td><td class="desc">Set to false to not have liquibase split statements on ;'s and GO's. Defaults to true if not set<span class="right"><span class="default">Default: <span class="val">true</span></span></span></td></tr>
-<tr><td class="name">stripComments</td><td class="desc">Set to true to remove any comments in the SQL before executing, otherwise false.<span class="right"></span></td></tr>
+<tr><td class="name">relativeToChangelogFile</td><td class="desc"><span class="type">boolean</span>Whether the file path is relative to the root changelog file rather than to the classpath.<span class="right"></span></td></tr>
+<tr><td class="name">splitStatements</td><td class="desc"><span class="type">boolean</span>Set to false to not have liquibase split statements on ;'s and GO's. Defaults to true if not set<span class="right"><span class="default">Default: <span class="val">true</span></span></span></td></tr>
+<tr><td class="name">stripComments</td><td class="desc"><span class="type">boolean</span>Set to true to remove any comments in the SQL before executing, otherwise false.<span class="right"></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>

@@ -28,7 +28,7 @@ Adds a not-null constraint to an existing table. If a defaultNullValue attribute
 <tr><td class="name">defaultNullValue</td><td class="desc">Value to set all currently null values to. If not set, change will fail if null values exist<span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
 <tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
 <tr><td class="name" required>tableName</td><td class="desc">Adds a not-null constraint to an existing table. If a defaultNullValue attribute is passed, all null values for the column will be updated to the passed value before the constraint is applied.<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span></td></tr>
-<tr><td class="name">validate</td><td class="desc">This is true if the not null constraint has 'ENABLE VALIDATE' set, or false if the not null constrain has 'ENABLE NOVALIDATE' set.<span class="right"></span></td></tr>
+<tr><td class="name">validate</td><td class="desc"><span class="type">boolean</span>This is true if the not null constraint has 'ENABLE VALIDATE' set, or false if the not null constrain has 'ENABLE NOVALIDATE' set.<span class="right"></span></td></tr>
 </table>
 
 <div id='changelog-tabs'>

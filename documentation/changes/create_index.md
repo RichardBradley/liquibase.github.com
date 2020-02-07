@@ -22,12 +22,12 @@ Creates an index on an existing column or set of columns.
 <table class='attribs'>
 <tr><th>Name</th><th>Description</th></tr>
 <tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
-<tr><td class="name">clustered</td><td class="desc">Create clustered index.<span class="right"></span></td></tr>
+<tr><td class="name">clustered</td><td class="desc"><span class="type">boolean</span>Create clustered index.<span class="right"></span></td></tr>
 <tr><td class="name">indexName</td><td class="desc">Name of the index to create<span class="right"><span class="sample">E.g. <span class="val">&#x27;idx_address&#x27;</span></span></span><span class="right"><b>Required for: </b>firebird, hsqldb</span></td></tr>
 <tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
 <tr><td class="name" required>tableName</td><td class="desc">Name of the table to add the index to<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span></td></tr>
 <tr><td class="name">tablespace</td><td class="desc">Tablespace to create the index in.<span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
-<tr><td class="name">unique</td><td class="desc">Unique values index<span class="right"><span class="since">@ v1.8</span></span></td></tr>
+<tr><td class="name">unique</td><td class="desc"><span class="type">boolean</span>Unique values index<span class="right"><span class="since">@ v1.8</span></span></td></tr>
 </table>
 
 ## Nested Properties ##

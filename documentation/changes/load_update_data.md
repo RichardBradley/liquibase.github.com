@@ -27,14 +27,14 @@ A value of NULL in a cell will be converted to a database NULL rather than the s
 <tr><td class="name">commentLineStartsWith</td><td class="desc">Lines starting with this are treated as comment and ignored.<span class="right"><span class="default">Default: <span class="val">&#x27;#&#x27;</span></span></span></td></tr>
 <tr><td class="name">encoding</td><td class="desc">Encoding of the CSV file (defaults to UTF-8)<span class="right"><span class="default">Default: <span class="val">&#x27;utf-8&#x27;</span></span></span></td></tr>
 <tr><td class="name" required>file</td><td class="desc">CSV file to load<span class="right"><span class="sample">E.g. <span class="val">&#x27;example/users.csv&#x27;</span></span></span></td></tr>
-<tr><td class="name">onlyUpdate</td><td class="desc">If true, records with no matching database record should be ignored<span class="right"><span class="since">@ v3.3</span></span></td></tr>
+<tr><td class="name">onlyUpdate</td><td class="desc"><span class="type">boolean</span>If true, records with no matching database record should be ignored<span class="right"><span class="since">@ v3.3</span></span></td></tr>
 <tr><td class="name" required>primaryKey</td><td class="desc">Comma delimited list of the columns for the primary key<span class="right"><span class="sample">E.g. <span class="val">&#x27;pk_id&#x27;</span></span></span></td></tr>
 <tr><td class="name">quotchar</td><td class="desc">The quote character for string fields containing the separator character.<span class="right"><span class="default">Default: <span class="val">&#x27;&quot;&#x27;</span></span></span></td></tr>
-<tr><td class="name">relativeToChangelogFile</td><td class="desc">Whether the file path is relative to the root changelog file rather than to the classpath.<span class="right"></span></td></tr>
+<tr><td class="name">relativeToChangelogFile</td><td class="desc"><span class="type">boolean</span>Whether the file path is relative to the root changelog file rather than to the classpath.<span class="right"></span></td></tr>
 <tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
 <tr><td class="name">separator</td><td class="desc">Character separating the fields.<span class="right"><span class="default">Default: <span class="val">&#x27;,&#x27;</span></span></span></td></tr>
 <tr><td class="name" required>tableName</td><td class="desc">Name of the table to insert or update data in<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span></td></tr>
-<tr><td class="name">usePreparedStatements</td><td class="desc">Use prepared statements instead of insert statement strings if the DB supports it<span class="right"></span></td></tr>
+<tr><td class="name">usePreparedStatements</td><td class="desc"><span class="type">boolean</span>Use prepared statements instead of insert statement strings if the DB supports it<span class="right"></span></td></tr>
 </table>
 
 ## Nested Properties ##

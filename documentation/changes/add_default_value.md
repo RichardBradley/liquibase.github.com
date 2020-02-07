@@ -26,7 +26,7 @@ One of defaultValue, defaultValueNumeric, defaultValueBoolean or defaultValueDat
 <tr><td class="name">columnDataType</td><td class="desc">Current data type of the column to add default value to<span class="right"><span class="sample">E.g. <span class="val">&#x27;varchar(50)&#x27;</span></span></span><span class="right"><b>Required for: </b>informix</span></td></tr>
 <tr><td class="name" required>columnName</td><td class="desc">Name of the column to add a default value to<span class="right"><span class="sample">E.g. <span class="val">&#x27;fileName&#x27;</span></span></span></td></tr>
 <tr><td class="name">defaultValue</td><td class="desc">Default value. Either this property or one of the other defaultValue* properties are required.<span class="right"><span class="sample">E.g. <span class="val">&#x27;Something Else&#x27;</span></span></span></td></tr>
-<tr><td class="name">defaultValueBoolean</td><td class="desc"><span class="right"></span></td></tr>
+<tr><td class="name">defaultValueBoolean</td><td class="desc"><span class="type">boolean</span><span class="right"></span></td></tr>
 <tr><td class="name">defaultValueComputed</td><td class="desc"><span class="right"></span></td></tr>
 <tr><td class="name">defaultValueConstraintName</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
 <tr><td class="name">defaultValueDate</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;2008-02-12T12:34:03&#x27;</span></span></span></td></tr>

@@ -36,8 +36,8 @@ Or You can also specify that a change is <b>NOT</b> applicable to a particular d
       DBMS_OUTPUT.PUT_LINE(&#x27;Hello From The Database!&#x27;);
     END;&#x27;</span></span></span></td></tr>
 <tr><td class="name">procedureName</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;new_customer&#x27;</span></span></span></td></tr>
-<tr><td class="name">relativeToChangelogFile</td><td class="desc">Whether the file path is relative to the root changelog file rather than to the classpath.<span class="right"></span></td></tr>
-<tr><td class="name">replaceIfExists</td><td class="desc"><span class="right"></span><span class="right"><b>Supported by: </b>mssql</span></td></tr>
+<tr><td class="name">relativeToChangelogFile</td><td class="desc"><span class="type">boolean</span>Whether the file path is relative to the root changelog file rather than to the classpath.<span class="right"></span></td></tr>
+<tr><td class="name">replaceIfExists</td><td class="desc"><span class="type">boolean</span><span class="right"></span><span class="right"><b>Supported by: </b>mssql</span></td></tr>
 <tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
 </table>
 

@@ -15,14 +15,16 @@ title: Docs | Change 'dropColumn'
 
 # Change: 'dropColumn'
 
-Drop existing column(s)
+Drop existing column(s).
+
+To drop a single column, use the simple form of this element where the tableName and columnName are specified as attributes. To drop several columns, specify the tableName as an attribute, and then specify a set of nested &lt;column&gt; tags. If nested &lt;column&gt; tags are present, the columnName attribute will be ignored.
 
 ## Available Attributes ##
 
 <table class='attribs'>
 <tr><th>Name</th><th>Description</th></tr>
 <tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
-<tr><td class="name">columnName</td><td class="desc">Name of the column to drop. Ignored if nested 'column's are defined<span class="right"><span class="sample">E.g. <span class="val">&#x27;id&#x27;</span></span></span></td></tr>
+<tr><td class="name">columnName</td><td class="desc">Name of the column to drop, if dropping a single column. Ignored if nested 'column's are defined<span class="right"><span class="sample">E.g. <span class="val">&#x27;id&#x27;</span></span></span></td></tr>
 <tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
 <tr><td class="name" required>tableName</td><td class="desc">Name of the table containing the column(s) to drop<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span></td></tr>
 </table>
@@ -30,7 +32,7 @@ Drop existing column(s)
 ## Nested Properties ##
 
 <table id="nestedProps" class="attribs">
-<tr><th>Name</th><th>Description</th></tr><tr><td class="name">columns&nbsp;/ <span class="right">column&nbsp;<sup>[0..N]</sup></span></td><td class="desc">Columns to be dropped.<span class="right"><b>Note: </b> columns tag not required in XML</span><div class="header">Attributes</div><table id="nestedAttrs">{%include DropColumnConfig.md%}</table></td></tr>
+<tr><th>Name</th><th>Description</th></tr><tr><td class="name">columns&nbsp;/ <span class="right">column&nbsp;<sup>[0..N]</sup></span></td><td class="desc">Columns to be dropped if dropping multiple columns. If this is populated, the columnName attribute is ignored.<span class="right"><b>Note:</b> <i>columns</i> tag not required in XML</span><div class="header">Attributes</div><table id="nestedAttrs">{%include DropColumnConfig.md%}</table></td></tr>
 </table><div id='changelog-tabs'>
 <ul>
     <li><a href="#tab-xml">XML Sample</a></li>

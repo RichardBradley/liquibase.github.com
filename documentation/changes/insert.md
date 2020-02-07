@@ -32,7 +32,7 @@ Or You can also specify that a change is <b>NOT</b> applicable to a particular d
 ## Nested Properties ##
 
 <table id="nestedProps" class="attribs">
-<tr><th>Name</th><th>Description</th></tr><tr><td class="name">columns&nbsp;/ <span class="right" required>column&nbsp;<sup>[1..N]</sup></span></td><td class="desc">Data to insert into columns<span class="right"><b>Note: </b> columns tag not required in XML</span><div class="header">Attributes</div><table id="nestedAttrs">{%include insertUpdateColumnConfig.md%}</table></td></tr>
+<tr><th>Name</th><th>Description</th></tr><tr><td class="name">columns&nbsp;/ <span class="right" required>column&nbsp;<sup>[1..N]</sup></span></td><td class="desc">Data to insert into columns<span class="right"><b>Note:</b> <i>columns</i> tag not required in XML</span><div class="header">Attributes</div><table id="nestedAttrs">{%include insertUpdateColumnConfig.md%}</table></td></tr>
 </table><div id='changelog-tabs'>
 <ul>
     <li><a href="#tab-xml">XML Sample</a></li>

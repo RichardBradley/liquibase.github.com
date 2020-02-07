@@ -29,7 +29,7 @@ Adds a new column to an existing table
 ## Nested Properties ##
 
 <table id="nestedProps" class="attribs">
-<tr><th>Name</th><th>Description</th></tr><tr><td class="name">columns&nbsp;/ <span class="right" required>column&nbsp;<sup>[1..N]</sup></span></td><td class="desc">Column constraint and foreign key information. Setting the "defaultValue" attribute will specify a default value for the column. Setting the "value" attribute will set all rows existing to the specified value without modifying the column default.<span class="right"><b>Note: </b> columns tag not required in XML</span><br><br>See the <a href="../column.html">column tag</a> documentation for more information</td></tr>
+<tr><th>Name</th><th>Description</th></tr><tr><td class="name">columns&nbsp;/ <span class="right" required>column&nbsp;<sup>[1..N]</sup></span></td><td class="desc">Column constraint and foreign key information. Setting the "defaultValue" attribute will specify a default value for the column. Setting the "value" attribute will set all rows existing to the specified value without modifying the column default.<span class="right"><b>Note:</b> <i>columns</i> tag not required in XML</span><br><br>See the <a href="../column.html">column tag</a> documentation for more information</td></tr>
 </table><div id='changelog-tabs'>
 <ul>
     <li><a href="#tab-xml">XML Sample</a></li>

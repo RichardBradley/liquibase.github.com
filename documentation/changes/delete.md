@@ -32,7 +32,7 @@ Deletes data from an existing table
 <tr><th>Name</th><th>Description</th></tr><tr><td class="name">where</td><td class="desc">Allows to define the 'where' condition(s) string<span class="right"><span class="sample">E.g. <span class="val">&#x27;name=&#x27;Bob&#x27; and :name=:value or id=:value&#x27;</span></span></span></td></tr>
 <tr><td class="name">whereParams&nbsp;/ <span class="right">param&nbsp;<sup>[0..N]</sup></span></td><td class="desc">Parameters for the 'where' condition.
 
-The 'param'(s) are inserted in the order they are defined in place of the <code>:name</code> and <code>:value</code> placeholders. See Sample below<div class="header">Attributes</div><table id="nestedAttrs">{%include Param.md%}</table></td></tr>
+The 'param'(s) are inserted in the order they are defined in place of the <code>:name</code> and <code>:value</code> placeholders. See generated SQL Sample below<div class="header">Attributes</div><table id="nestedAttrs">{%include Param.md%}</table></td></tr>
 </table><div id='changelog-tabs'>
 <ul>
     <li><a href="#tab-xml">XML Sample</a></li>

@@ -29,7 +29,7 @@ Executes a system command. Because this refactoring doesn't generate SQL like mo
 ## Nested Properties ##
 
 <table id="nestedProps" class="attribs">
-<tr><th>Name</th><th>Description</th></tr><tr><td class="name">args&nbsp;/ <span class="right">arg&nbsp;<sup>[0..N]</sup></span></td><td class="desc">Arguments for the executable<span class="right"><b>Note: </b> args tag not required in XML</span><div class="header">Attributes</div><table id="nestedAttrs">{%include Arg.md%}</table></td></tr>
+<tr><th>Name</th><th>Description</th></tr><tr><td class="name">args&nbsp;/ <span class="right">arg&nbsp;<sup>[0..N]</sup></span></td><td class="desc">Arguments for the executable<span class="right"><b>Note:</b> <i>args</i> tag not required in XML</span><div class="header">Attributes</div><table id="nestedAttrs">{%include Arg.md%}</table></td></tr>
 </table><div id='changelog-tabs'>
 <ul>
     <li><a href="#tab-xml">XML Sample</a></li>

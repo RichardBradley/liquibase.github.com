@@ -301,7 +301,7 @@ public class ChangeDocGenerator {
                     ContainerTag description = td(attrs(".desc"),
                        rawHtml(getParamDescription(changeMetaData, param, exampleChange)));
                     if (param.getSerializationType() != SerializationType.NESTED_OBJECT) {
-                        description.with(span(attrs(".right"), join(b("Note: "),
+                        description.with(span(attrs(".right"), join(b("Note:"),
                                 i(param.getParameterName()), "tag not required in XML")));
                     }
                     ContainerTag name = td(attrs(".name"), param.getParameterName());
@@ -321,7 +321,6 @@ public class ChangeDocGenerator {
                             description.with(div(attrs(".header"), "Attributes"),
                                     table(attrs("#nestedAttrs"), "{%include " + sNestedConfig + ".md%}"));
                         }
-                        //.condWith(param.getSerializationType() != SerializationType.NESTED_OBJECT,text("?"))
                         name.with(join("&nbsp;/",
                                 span(attrs(".right"), text(childName), rawHtml("&nbsp;"),
                                         sup((param.requiredForAll() ? "[1" : "[0") + "..N]"))

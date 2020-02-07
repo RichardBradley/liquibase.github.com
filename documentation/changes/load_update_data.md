@@ -43,7 +43,7 @@ A value of NULL in a cell will be converted to a database NULL rather than the s
 <tr><th>Name</th><th>Description</th></tr><tr><td class="name">columns&nbsp;/ <span class="right">column&nbsp;<sup>[0..N]</sup></span></td><td class="desc">Column mapping and defaults can be defined.
 
 The 'header' or 'index' attributes needs to be defined if the header name in the CSV is different than the column name needs to be inserted
-If no `column` defined at all, the type it is taken from the DB. Otherwise for non-string columns the type definition might be required<span class="right"><b>Note: </b> columns tag not required in XML</span><div class="header">Attributes</div><table id="nestedAttrs">{%include LoadDataColumnConfig.md%}</table></td></tr>
+If no `column` defined at all, the type it is taken from the DB. Otherwise for non-string columns the type definition might be required<span class="right"><b>Note:</b> <i>columns</i> tag not required in XML</span><div class="header">Attributes</div><table id="nestedAttrs">{%include LoadDataColumnConfig.md%}</table></td></tr>
 </table><div id='changelog-tabs'>
 <ul>
     <li><a href="#tab-xml">XML Sample</a></li>

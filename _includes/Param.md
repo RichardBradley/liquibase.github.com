@@ -32,5 +32,5 @@
     </tr>
     <tr>
       <td class="name">valueSequenceCurrent</td>
-      <td class="desc">>Name of the sequence which current value is used</td>
+      <td class="desc">Name of the sequence which current value is used</td>
     </tr>

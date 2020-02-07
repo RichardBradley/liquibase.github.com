@@ -446,6 +446,8 @@ a.pagination-item:hover {
   margin-top: 5px;
 }
 
-table#nestedAttrs{
+table#nestedAttrs {
   margin: 0 0 0 0;
 }
+
+#nestedAttrs tbody tr:nth-child(even) td, tbody tr.even td {background: #fff;}

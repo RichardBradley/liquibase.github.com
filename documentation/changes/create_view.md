@@ -29,7 +29,7 @@ Create a new database view
 <tr><td class="name">remarks</td><td class="desc">Comments stored for the view<span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
 <tr><td class="name">replaceIfExists</td><td class="desc"><span class="type">boolean</span>Use 'create or replace' syntax<span class="support"><b>Supported by: </b>db2, firebird, h2, hsqldb, ingres, mariadb, mssql, mysql, oracle, postgresql, sqlite, sybase</span><span class="right"><span class="since">@ v1.5</span></span></td></tr>
 <tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
-<tr><td class="name">[XML: text content] / selectQuery</td><td class="desc">SQL query of the view<span class="right"><span class="sample">E.g. <span class="val">&#x27;select id, name from person where id &gt; 10&#x27;</span></span></span><span class="right"><b>Required for: </b>informix</span><span class="right"><b>Note:</b> <i></i> the content of the tag in XML</span></td></tr>
+<tr><td class="name">[XML text content] / selectQuery</td><td class="desc">SQL query of the view<span class="right"><span class="sample">E.g. <span class="val">&#x27;select id, name from person where id &gt; 10&#x27;</span></span></span><span class="right"><b>Required for: </b>informix</span><span class="right"><b>Note:</b> <i></i> the content of the tag in XML</span></td></tr>
 <tr><td class="name" required>viewName</td><td class="desc">Name of the view to create<span class="right"><span class="sample">E.g. <span class="val">&#x27;v_person&#x27;</span></span></span></td></tr>
 </table>
 

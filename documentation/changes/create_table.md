@@ -31,7 +31,7 @@ Create Table
 ## Nested Properties ##
 
 <table id="nestedProps" class="attribs">
-<tr><th>Name</th><th>Description</th></tr><tr><td class="name">columns&nbsp;/ <span class="right" required>column&nbsp;<sup>[1..N]</sup></span></td><td class="desc"><span class="right"><b>Note:</b> <i>columns</i> tag not required in XML</span><br><br>See the <a href="../column.html">column tag</a> documentation for more information</td></tr>
+<tr><th>Name</th><th>Description</th></tr><tr><td class="name">columns&nbsp;/ <span class="right" required>column&nbsp;<sup>[1..N]</sup></span></td><td class="desc">Column definitions<span class="right"><b>Note:</b> <i>columns</i> tag not required in XML</span><br><br>See the <a href="../column.html">column tag</a> documentation for more information</td></tr>
 </table><div id='changelog-tabs'>
 <ul>
     <li><a href="#tab-xml">XML Sample</a></li>

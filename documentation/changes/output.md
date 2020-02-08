@@ -21,7 +21,7 @@ Logs a message and continues execution.
 
 <table class='attribs'>
 <tr><th>Name</th><th>Description</th></tr>
-<tr><td class="name">message</td><td class="desc">Message to output<span class="right"><span class="sample">E.g. <span class="val">&#x27;Make sure you feed the cat&#x27;</span></span></span></td></tr>
+<tr><td class="name">[XML: text content] / message</td><td class="desc">Message to output<span class="right"><span class="sample">E.g. <span class="val">&#x27;Make sure you feed the cat&#x27;</span></span></span><span class="right"><b>Note:</b> <i></i> the content of the tag in XML</span></td></tr>
 <tr><td class="name">target</td><td class="desc">Target for message. Possible values: STDOUT, STDERR, FATAL, WARN, INFO, DEBUG. Default value: STDERR<span class="right"><span class="sample">E.g. <span class="val">&#x27;STDERR&#x27;</span></span></span></td></tr>
 </table>
 

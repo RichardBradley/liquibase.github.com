@@ -160,6 +160,9 @@ public class ChangeDocGenerator {
         boolean requiredForAll() {
             return getRequiredForDatabase().contains(ALL);
         }
+
+        boolean isNested() {return getSerializationType() == SerializationType.NESTED_OBJECT;}
+        boolean isDirectValue() {return getSerializationType() == SerializationType.DIRECT_VALUE;}
     }
 
     /**
@@ -174,6 +177,80 @@ public class ChangeDocGenerator {
         specialColumnConfig.put("update", "insertUpdateColumnConfig");
     }
 
+    private static List<ChangeParamMetaData> setExamples(MySQLDatabase defaultExampleDatabase, Change exampleChange, ChangeMetaData changeMetaData) {
+        List<ChangeParamMetaData> params = new ArrayList<>();
+        for (ChangeParameterMetaData param : changeMetaData.getParameters().values()) {
+            if (param.getParameterName().equals("encoding")) {
+                param.setValue(exampleChange, "utf-8"); // Default value for encoding
+            }
+            params.add(new ChangeParamMetaData(defaultExampleDatabase, param, exampleChange));
+            if (param.getParameterName().equals("replaceIfExists")) {
+                param.setValue(exampleChange, false);
+            } else if (param.getParameterName().equals("defaultOnNull")) {
+                param.setValue(exampleChange, false);
+            } else if (Collection.class.isAssignableFrom(param.getDataTypeClass())) {
+                Collection exampleValue = (Collection) param.getExampleValue(defaultExampleDatabase);
+                ConstraintsConfig constrNonNull = new ConstraintsConfig().setNullable(false);
+                if (param.getDataType().endsWith(" of columnConfig")) {
+                    ColumnConfig columnConfig = new ColumnConfig().setName("address");
+                    switch(changeMetaData.getName()) {
+                        case "insert":
+                        case "update":
+                            columnConfig.setValue("address value");
+                        case "dropColumn":
+                            exampleValue = Arrays.asList(columnConfig);
+                            break;
+                        case "createTable":
+                            ArrayList<ColumnConfig> columns =
+                                    new ArrayList<>( (Collection<ColumnConfig>) exampleValue);
+                            columns.get(0).setConstraints(constrNonNull);
+                            columns.add(columnConfig.setType("varchar(50)"));
+                            exampleValue = columns;
+                    }
+                } else if (param.getDataType().endsWith(" of addColumnConfig")) {
+                    AddColumnConfig columnConfig = new AddColumnConfig();
+                    columnConfig.setName("address");
+                    if (exampleChange instanceof CreateIndexChange) {
+                        columnConfig.setDescending(true);
+                        exampleValue = Arrays.asList(columnConfig);
+                    } else {
+                        columnConfig.setType("varchar(255)");
+                        columnConfig.setPosition(2);
+                        AddColumnConfig cfg2 = new AddColumnConfig();
+                        cfg2.setName("name");
+                        cfg2.setType("varchar(50)");
+                        cfg2.setAfterColumn("id");
+                        exampleValue = Arrays.asList(columnConfig, cfg2.setConstraints(constrNonNull));
+                    }
+                }
+
+                if (null == exampleValue) {
+                    logger.warn("No example values for: " + param.getParameterName() + ": " + param.getDataType());
+                } else {
+                    ((Collection) param.getCurrentValue(exampleChange)).addAll(exampleValue);
+                }
+            } else {
+                Object exampleValue = param.getExampleValue(defaultExampleDatabase);
+                if (exampleValue != null && exampleValue.equals("A String")) {
+                    if (param.getParameterName().toLowerCase().contains("schema") || param.getParameterName().toLowerCase().contains("catalog")) {
+                        exampleValue = null;
+                    }
+                }
+                param.setValue(exampleChange, exampleValue);
+            }
+        }
+
+        if (CustomChangeWrapper.class.isAssignableFrom(exampleChange.getClass())) {
+            try {
+                CustomChangeWrapper custom = (CustomChangeWrapper) exampleChange;
+                custom.setClassLoader(exampleChange.getClass().getClassLoader());
+                custom.setClass("com.example.CustomChange");
+            } catch (Exception e) { // Expected
+            }
+        }
+        return params;
+    }
+
     private static void writeChangePages(Map<String, SortedSet<Class<? extends Change>>> definedChanges, List<Database> databases) throws Exception {
         List<Database> exampleDatabases = new ArrayList<Database>(databases);
         exampleDatabases.add(0, new HsqlDatabase());
@@ -185,76 +262,7 @@ public class ChangeDocGenerator {
         for (String changeName : definedChanges.keySet()) {
             Change exampleChange = ChangeFactory.getInstance().create(changeName);
             ChangeMetaData changeMetaData = ChangeFactory.getInstance().getChangeMetaData(exampleChange);
-            List<ChangeParamMetaData> params = new ArrayList<>();
-            for (ChangeParameterMetaData param : changeMetaData.getParameters().values()) {
-                if (param.getParameterName().equals("encoding")) {
-                    param.setValue(exampleChange, "utf-8"); // Default value for encoding
-                }
-                params.add(new ChangeParamMetaData(defaultExampleDatabase, param, exampleChange));
-                if (param.getParameterName().equals("replaceIfExists")) {
-                    param.setValue(exampleChange, false);
-                } else if (param.getParameterName().equals("defaultOnNull")) {
-                    param.setValue(exampleChange, false);
-                } else if (Collection.class.isAssignableFrom(param.getDataTypeClass())) {
-                    Collection exampleValue = (Collection) param.getExampleValue(defaultExampleDatabase);
-                    ConstraintsConfig constrNonNull = new ConstraintsConfig().setNullable(false);
-                    if (param.getDataType().endsWith(" of columnConfig")) {
-                        ColumnConfig columnConfig = new ColumnConfig().setName("address");
-                        switch(changeName) {
-                            case "insert":
-                            case "update":
-                                columnConfig.setValue("address value");
-                            case "dropColumn":
-                                exampleValue = Arrays.asList(columnConfig);
-                                break;
-                            case "createTable":
-                                ArrayList<ColumnConfig> columns =
-                                        new ArrayList<>( (Collection<ColumnConfig>) exampleValue);
-                                columns.get(0).setConstraints(constrNonNull);
-                                columns.add(columnConfig.setType("varchar(50)"));
-                                exampleValue = columns;
-                        }
-                    } else if (param.getDataType().endsWith(" of addColumnConfig")) {
-                        AddColumnConfig columnConfig = new AddColumnConfig();
-                        columnConfig.setName("address");
-                        if (exampleChange instanceof CreateIndexChange) {
-                            columnConfig.setDescending(true);
-                            exampleValue = Arrays.asList(columnConfig);
-                        } else {
-                            columnConfig.setType("varchar(255)");
-                            columnConfig.setPosition(2);
-                            AddColumnConfig cfg2 = new AddColumnConfig();
-                            cfg2.setName("name");
-                            cfg2.setType("varchar(50)");
-                            cfg2.setAfterColumn("id");
-                            exampleValue = Arrays.asList(columnConfig, cfg2.setConstraints(constrNonNull));
-                        }
-                    }
-
-                    if (null == exampleValue) {
-                        logger.warn("No example values for: " + param.getParameterName() + ": " + param.getDataType());
-                    } else {
-                        ((Collection) param.getCurrentValue(exampleChange)).addAll(exampleValue);
-                    }
-                } else {
-                    Object exampleValue = param.getExampleValue(defaultExampleDatabase);
-                    if (exampleValue != null && exampleValue.equals("A String")) {
-                        if (param.getParameterName().toLowerCase().contains("schema") || param.getParameterName().toLowerCase().contains("catalog")) {
-                            exampleValue = null;
-                        }
-                    }
-                    param.setValue(exampleChange, exampleValue);
-                }
-            }
-
-            if (CustomChangeWrapper.class.isAssignableFrom(exampleChange.getClass())) {
-                try {
-                    CustomChangeWrapper custom = (CustomChangeWrapper) exampleChange;
-                    custom.setClassLoader(exampleChange.getClass().getClassLoader());
-                    custom.setClass("com.example.CustomChange");
-                } catch (Exception e) { // Expected
-                }
-            }
+            List<ChangeParamMetaData> params = setExamples(defaultExampleDatabase, exampleChange, changeMetaData);
 
             String content = "---\n" +
                     "layout: default\n" +
@@ -288,16 +296,18 @@ public class ChangeDocGenerator {
 
             List<ChangeParamMetaData> nestedParams = new ArrayList<>();
             for (ChangeParamMetaData param : params) {
-                if (param.isContainer()
-                        || param.getSerializationType() == SerializationType.NESTED_OBJECT) {
+                if (param.isContainer() || param.isNested()) {
                     nestedParams.add(param);
                     continue;
                 }
 
                 content += tr(
-                        td(attrs(".name"), param.getParameterName()).withCondRequired(param.requiredForAll()),
+                        td(attrs(".name"),
+                                (param.isDirectValue() ? "[XML: text content] / " : "") + param.getParameterName())
+                                .withCondRequired(param.requiredForAll()),
                         td(attrs(".desc"), rawHtml(getParamDescription(changeMetaData, param, exampleChange)))
                                 .with(commonAttribs(param))
+                                .condWith(param.isDirectValue(),note("","the content of the tag in XML"))
                 ).render() + "\n";
             }
             content += "</table>\n\n";
@@ -309,9 +319,8 @@ public class ChangeDocGenerator {
                 for (ChangeParamMetaData param : nestedParams) {
                     ContainerTag description = td(attrs(".desc"),
                        rawHtml(getParamDescription(changeMetaData, param, exampleChange)));
-                    if (param.getSerializationType() != SerializationType.NESTED_OBJECT) {
-                        description.with(span(attrs(".right"), join(b("Note:"),
-                                i(param.getParameterName()), "tag not required in XML")));
+                    if (!param.isNested()) {
+                        description.with(note(param.getParameterName(),"tag not required in XML"));
                     }
                     ContainerTag name = td(attrs(".name"), param.getParameterName());
                     if (param.isContainer()) {
@@ -463,6 +472,11 @@ public class ChangeDocGenerator {
             logger.info("Writing content to '" + pathname + "'");
             new FileOutputStream(file).write(content.getBytes());
         }
+    }
+
+    private static ContainerTag note(String paramName, String text) {
+        return span(attrs(".right"), join(b("Note:"),
+                i(paramName), text));
     }
 
     final static String ALL = "all";

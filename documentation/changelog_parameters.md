@@ -17,11 +17,11 @@ Liquibase allows dynamic substitution of parameters in a changelog.  The paramet
 
 Parameter values are looked up in the following order:
 
-  1. Passed as a parameter to your Liquibase runner (see [Ant](ant/index.html), [Maven](maven/index.html) etc. documentation for how to pass them)
+  1. Passed as a parameter to your Liquibase runner (see [Ant](ant/index.html), [Maven](maven/index.html), [Servlet listener](servlet_listener.html)) etc. documentation for how to pass them)
   1. As a JVM system property
   1. As an environment variable
-  1. [command_line](command_line.html) parameter if used (executed from the command line)
-  1. [properties file](config_properties.html) if used (executed from the command line)
+  1. [command_line](command_line.html) parameter if executed from the command line
+  1. [properties file](config_properties.html) if used or executed from the command line
   1. In the parameters block (<code>property</code> element) of the [DatabaseChangeLog](/documentation/databasechangelog.html) file itself
 
 Once a parameter its value cannot be changed, only the first definition is used, other are skipped. 

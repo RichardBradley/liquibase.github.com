@@ -37,10 +37,10 @@ Each changeSet tag is uniquely identified by the combination of the "id" tag, th
 
 As Liquibase executes the databaseChangeLog, it reads the changeSets in order and, for each one, checks the "databasechangelog" table to see if the combination of id/author/filepath has been run. If it has been run, the changeSet will be skipped unless there is a true "runAlways" tag. After all the changes in the changeSet are run, Liquibase will insert a new row with the id/author/filepath along with an MD5Sum of the changeSet (see below) in the "databasechangelog".
 
+Note
+: <i>filepath</i> is the path how the changeLogFile parameter is defined. Even if the same file is referenced with a different path, that is considered a different file unless the <code>logicalFilePath</code> is defined.
+
 Liquibase attempts to execute each changeSet in a transaction that is committed at the end, or rolled back if there is an error. Some databases will auto-commit statements which interferes with this transaction setup and could lead to an unexpected database state. Therefore, it is usually best to have just one change per changeSet unless there is a group of non-auto-committing changes that you want applied as a transaction such as inserting data.
-
-
-
 
 ## Available Attributes ##
 

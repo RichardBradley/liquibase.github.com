@@ -25,8 +25,8 @@ Creates a synonym
 <tr><td class="name" required>objectName</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
 <tr><td class="name">objectSchemaName</td><td class="desc"><span class="right"></span></td></tr>
 <tr><td class="name">objectType</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span><span class="right"><b>Required for: </b>db2</span></td></tr>
-<tr><td class="name">private</td><td class="desc"><span class="right"></span></td></tr>
-<tr><td class="name">replaceIfExists</td><td class="desc"><span class="right"></span></td></tr>
+<tr><td class="name">private</td><td class="desc"><span class="type">boolean</span><span class="right"></span></td></tr>
+<tr><td class="name">replaceIfExists</td><td class="desc"><span class="type">boolean</span><span class="right"></span></td></tr>
 <tr><td class="name">synonymCatalogName</td><td class="desc"><span class="right"></span></td></tr>
 <tr><td class="name" required>synonymName</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
 <tr><td class="name">synonymSchemaName</td><td class="desc"><span class="right"></span></td></tr>
@@ -101,8 +101,8 @@ CREATE SYNONYM [A String] FOR [A String];
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2/LUW</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
+<tr><td>DB2/z</td><td><b>Supported</b></td><td><b>Yes</b></td></tr>
 <tr><td>Derby</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>Firebird</td><td>Not Supported</td><td><b>Yes</b></td></tr>
 <tr><td>H2</td><td>Not Supported</td><td><b>Yes</b></td></tr>

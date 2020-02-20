@@ -26,9 +26,9 @@ Converts an existing column to be an auto-increment (a.k.a 'identity') column
 <tr><td class="name" required>columnName</td><td class="desc">Name of the column<span class="right"><span class="sample">E.g. <span class="val">&#x27;id&#x27;</span></span></span></td></tr>
 <tr><td class="name">defaultOnNull</td><td class="desc"><span class="type">boolean</span>When using generationType 'BY DEFAULT' then defaultOnNull = true allows the identity to be used if the identity column is referenced, but a value of NULL is specified.<span class="right"><span class="since">@ v3.6</span></span><span class="right"><b>Supported by: </b>oracle</span></td></tr>
 <tr><td class="name">generationType</td><td class="desc">Type of the generation in 'GENERATED %s AS IDENTITY'. ALWAYS | BY DEFAULT<span class="right"><span class="since">@ v3.6</span><span class="sample">E.g. <span class="val">&#x27;ALWAYS&#x27;</span></span></span></td></tr>
-<tr><td class="name">incrementBy</td><td class="desc"><span class="type">integer</span>Integer value the increment increments at each call<span class="right"><span class="sample">E.g. <span class="val">&#x27;1&#x27;</span></span></span></td></tr>
+<tr><td class="name">incrementBy</td><td class="desc"><span class="type">integer</span>The value the increment incremented by each call<span class="right"><span class="sample">E.g. <span class="val">&#x27;1&#x27;</span></span></span></td></tr>
 <tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
-<tr><td class="name">startWith</td><td class="desc"><span class="type">integer</span>Initial integer value of the increment<span class="right"><span class="sample">E.g. <span class="val">&#x27;100&#x27;</span></span></span></td></tr>
+<tr><td class="name">startWith</td><td class="desc"><span class="type">integer</span>Initial value of the increment<span class="right"><span class="sample">E.g. <span class="val">&#x27;100&#x27;</span></span></span></td></tr>
 <tr><td class="name" required>tableName</td><td class="desc">Name of the table<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span></td></tr>
 </table>
 

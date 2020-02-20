@@ -22,7 +22,7 @@ Drops a synonym
 <table class='attribs'>
 <tr><th>Name</th><th>Description</th></tr>
 <tr><td class="name">objectType</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span><span class="right"><b>Required for: </b>db2</span></td></tr>
-<tr><td class="name">private</td><td class="desc"><span class="right"></span></td></tr>
+<tr><td class="name">private</td><td class="desc"><span class="type">boolean</span><span class="right"></span></td></tr>
 <tr><td class="name">synonymCatalogName</td><td class="desc"><span class="right"></span><span class="right"><b>Supported by: </b>db2, db2z, oracle</span></td></tr>
 <tr><td class="name" required>synonymName</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
 <tr><td class="name">synonymSchemaName</td><td class="desc"><span class="right"></span></td></tr>
@@ -91,8 +91,8 @@ DROP SYNONYM [A String];
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/LUW</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/z</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>Firebird</td><td>Not Supported</td><td>No</td></tr>
 <tr><td>H2</td><td>Not Supported</td><td>No</td></tr>

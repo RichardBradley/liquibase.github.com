@@ -33,11 +33,11 @@ Note: By default it will attempt to split statements on a ';' or 'go' at the end
 <tr><th>Name</th><th>Description</th></tr>
 <tr><td class="name">dbms</td><td class="desc">Logical expression of database type(s) on which the change must be applied. Valid database type names are listed on the <a href='../../databases.html'>supported databases page</a>
 It can be a comma separated list of multiple databases.
-Or You can also specify that a change is <b>NOT</b> applicable to a particular database type by prefixing with <code>!</code>. The keywords <code>all</code> and <code>none</code> are also available.<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;!h2, oracle, mysql&#x27;</span></span></span></td></tr>
+Or You can also specify that a change is <b>NOT</b> applicable to a particular database type by prefixing with <code>!</code>. The keywords <code>all</code> and <code>none</code> are also available.<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;h2, oracle&#x27;</span></span></span></td></tr>
 <tr><td class="name">endDelimiter</td><td class="desc">Delimiter to apply to the end of the statement. Defaults to ';', may be set to ''.<span class="right"><span class="sample">E.g. <span class="val">&#x27;\nGO&#x27;</span></span></span></td></tr>
 <tr><td class="name">splitStatements</td><td class="desc"><span class="type">boolean</span>Set to false to not have liquibase split statements on ;'s and GO's. Defaults to true if not set<span class="right"><span class="default">Default: <span class="val">true</span></span></span></td></tr>
-<tr><td class="name" required>[XML text content] / sql</td><td class="desc">The SQL to execute<span class="right"><span class="sample">E.g. <span class="val">&#x27;insert into person (name) values (&#x27;Bob&#x27;)&#x27;</span></span></span><span class="right"><b>Note:</b> <i></i> the content of the tag in XML</span></td></tr>
-<tr><td class="name">stripComments</td><td class="desc"><span class="type">boolean</span>Set to true to remove any comments in the SQL before executing, otherwise false.<span class="right"></span></td></tr>
+<tr><td class="name" required>[XML: text content] / sql</td><td class="desc">The SQL to execute<span class="right"><span class="sample">E.g. <span class="val">&#x27;insert into person (name) values (&#x27;Bob&#x27;)&#x27;</span></span></span><span class="right"><b>Note:</b> <i></i> the content of the tag in XML</span></td></tr>
+<tr><td class="name">stripComments</td><td class="desc"><span class="type">boolean</span>Set to true to remove any comments in the SQL before executing, otherwise false. Defaults to false if not set<span class="right"></span></td></tr>
 </table>
 
 ## Nested Properties ##
@@ -53,12 +53,10 @@ Or You can also specify that a change is <b>NOT</b> applicable to a particular d
 <div id='tab-xml'>
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="sql-example">
-    <sql dbms="!h2, oracle, mysql"
+    <sql dbms="h2, oracle"
             endDelimiter="\nGO"
             splitStatements="true"
-            stripComments="true">insert into person (name) values ('Bob')
-        <comment>What about Bob?</comment>
-    </sql>
+            stripComments="true">insert into person (name) values ('Bob')</sql>
 </changeSet>
 {% endhighlight %}
 </div>
@@ -70,7 +68,7 @@ changeSet:
   changes:
   - sql:
       comment: What about Bob?
-      dbms: '!h2, oracle, mysql'
+      dbms: h2, oracle
       endDelimiter: \nGO
       splitStatements: true
       sql: insert into person (name) values ('Bob')
@@ -88,7 +86,7 @@ changeSet:
       {
         "sql": {
           "comment": "What about Bob?",
-          "dbms": "!h2, oracle, mysql",
+          "dbms": "h2, oracle",
           "endDelimiter": "\\nGO",
           "splitStatements": true,
           "sql": "insert into person (name) values ('Bob')",

@@ -28,15 +28,15 @@ It can be a comma separated list of multiple databases.
 Or You can also specify that a change is <b>NOT</b> applicable to a particular database type by prefixing with <code>!</code>. The keywords <code>all</code> and <code>none</code> are also available.<span class="right"><span class="since">@ v3.1</span><span class="sample">E.g. <span class="val">&#x27;h2, oracle&#x27;</span></span></span></td></tr>
 <tr><td class="name">encoding</td><td class="desc">Name of the encoding (as specified in <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/charset/Charset.html">java.nio.Charset javadoc</a>) used in the file defined in the `path` attribute<span class="right"><span class="default">Default: <span class="val">&#x27;utf-8&#x27;</span></span></span></td></tr>
 <tr><td class="name" required>packageBodyName</td><td class="desc">Name of the package body to drop<span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
-<tr><td class="name" required>packageBodyText</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>[XML: text content] / packageBodyText</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;A String&#x27;</span></span></span><span class="right"><b>Note:</b> <i></i> the content of the tag in XML</span></td></tr>
 <tr><td class="name">path</td><td class="desc">File containing the procedure text. Either this attribute or a nested procedure text is required.<span class="right"><span class="sample">E.g. <span class="val">&#x27;com/example/my-logic.sql&#x27;</span></span></span></td></tr>
-<tr><td class="name">procedureText</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;CREATE OR REPLACE PROCEDURE testHello
+<tr><td class="name">[XML: text content] / procedureText</td><td class="desc"><span class="right"><span class="sample">E.g. <span class="val">&#x27;CREATE OR REPLACE PROCEDURE testHello
     IS
     BEGIN
       DBMS_OUTPUT.PUT_LINE(&#x27;Hello From The Database!&#x27;);
-    END;&#x27;</span></span></span></td></tr>
-<tr><td class="name">relativeToChangelogFile</td><td class="desc">Whether the file path is relative to the root changelog file rather than to the classpath.<span class="right"></span></td></tr>
-<tr><td class="name">replaceIfExists</td><td class="desc"><span class="right"></span></td></tr>
+    END;&#x27;</span></span></span><span class="right"><b>Note:</b> <i></i> the content of the tag in XML</span></td></tr>
+<tr><td class="name">relativeToChangelogFile</td><td class="desc"><span class="type">boolean</span>Whether the file path is relative to the root changelog file rather than to the classpath.<span class="right"></span></td></tr>
+<tr><td class="name">replaceIfExists</td><td class="desc"><span class="type">boolean</span><span class="right"></span></td></tr>
 <tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
 </table>
 
@@ -122,8 +122,8 @@ changeSet:
 
 <table style='border:1;'>
 <tr><th>Database</th><th>Notes</th><th>Auto Rollback</th></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
-<tr><td>DB2</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/LUW</td><td><b>Supported</b></td><td>No</td></tr>
+<tr><td>DB2/z</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Derby</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>Firebird</td><td><b>Supported</b></td><td>No</td></tr>
 <tr><td>H2</td><td><b>Supported</b></td><td>No</td></tr>

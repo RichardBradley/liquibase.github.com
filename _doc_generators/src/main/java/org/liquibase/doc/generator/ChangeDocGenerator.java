@@ -193,7 +193,7 @@ public class ChangeDocGenerator {
                 ConstraintsConfig constrNonNull = new ConstraintsConfig().setNullable(false);
                 if (param.getDataType().endsWith(" of columnConfig")) {
                     ColumnConfig columnConfig = new ColumnConfig().setName("address");
-                    switch(changeMetaData.getName()) {
+                    switch (changeMetaData.getName()) {
                         case "insert":
                         case "update":
                             columnConfig.setValue("address value");
@@ -202,7 +202,7 @@ public class ChangeDocGenerator {
                             break;
                         case "createTable":
                             ArrayList<ColumnConfig> columns =
-                                    new ArrayList<>( (Collection<ColumnConfig>) exampleValue);
+                                    new ArrayList<>((Collection<ColumnConfig>) exampleValue);
                             columns.get(0).setConstraints(constrNonNull);
                             columns.add(columnConfig.setType("varchar(50)"));
                             exampleValue = columns;
@@ -307,7 +307,7 @@ public class ChangeDocGenerator {
                                 .withCondRequired(param.requiredForAll()),
                         td(attrs(".desc"), rawHtml(getParamDescription(changeMetaData, param, exampleChange)))
                                 .with(commonAttribs(param))
-                                .condWith(param.isDirectValue(),note("","the content of the tag in XML"))
+                                .condWith(param.isDirectValue(), note("", "the content of the tag in XML"))
                 ).render() + "\n";
             }
             content += "</table>\n\n";
@@ -318,9 +318,9 @@ public class ChangeDocGenerator {
                 table.with(tr(th("Name"), th("Description")));
                 for (ChangeParamMetaData param : nestedParams) {
                     ContainerTag description = td(attrs(".desc"),
-                       rawHtml(getParamDescription(changeMetaData, param, exampleChange)));
+                            rawHtml(getParamDescription(changeMetaData, param, exampleChange)));
                     if (!param.isNested()) {
-                        description.with(note(param.getParameterName(),"tag not required in XML"));
+                        description.with(note(param.getParameterName(), "tag not required in XML"));
                     }
                     ContainerTag name = td(attrs(".name"), param.getParameterName());
                     if (param.isContainer()) {
@@ -521,7 +521,7 @@ public class ChangeDocGenerator {
             }
         }
 
-        if (!supportsDatabase.isEmpty() && !supportsDatabase.contains("all")) {
+        if (!supportsDatabase.isEmpty() && !supportsDatabase.contains(ALL)) {
             logger.info(statsMarker, "SUPPORTS:{} / {}: {}", param.change.getSerializedObjectName(),
                     param.getParameterName(), supports);
             Tag tSup = span(attrs(".support"), b("Supported by: "), text(supports));
@@ -540,7 +540,7 @@ public class ChangeDocGenerator {
             rAttribs.with(span(attrs(".since"), "@ v" + since));
         }
 
-        if (!param.getDefaultValue().isEmpty()) {
+        if (!param.requiredForAll() && !param.getDefaultValue().isEmpty()) {
             logger.info(statsMarker, "DEFAULT:{} / {}: {}", param.change.getSerializedObjectName(),
                     param.getParameterName(), param.getDefaultValue());
             rAttribs.with(span(attrs(".default"), text("Default: "),
@@ -602,7 +602,7 @@ public class ChangeDocGenerator {
                     change.getSerializedObjectName(), param.getParameterName(), param.getDataType());
             String type = typeDisplayName.get(param.getDataType());
             description = span(attrs(".type"), (null == type ? param.getDataType() : type)).render()
-                   + description;
+                    + description;
         }
         return description;
     }

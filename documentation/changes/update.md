@@ -21,7 +21,7 @@ Updates data in an existing table
 
 <table class='attribs'>
 <tr><th>Name</th><th>Description</th></tr>
-<tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
+<tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
 <tr><td class="name">schemaName</td><td class="desc">Name of the schema<span class="right"><span class="sample">E.g. <span class="val">&#x27;public&#x27;</span></span></span></td></tr>
 <tr><td class="name" required>tableName</td><td class="desc">Name of the table<span class="right"><span class="sample">E.g. <span class="val">&#x27;person&#x27;</span></span></span></td></tr>
 </table>
@@ -30,10 +30,7 @@ Updates data in an existing table
 
 <table id="nestedProps" class="attribs">
 <tr><th>Name</th><th>Description</th></tr><tr><td class="name">columns&nbsp;/ <span class="right" required>column&nbsp;<sup>[1..N]</sup></span></td><td class="desc">Data to update<span class="right"><b>Note:</b> <i>columns</i> tag not required in XML</span><div class="header">Attributes</div><table id="nestedAttrs">{%include insertUpdateColumnConfig.md%}</table></td></tr>
-<tr><td class="name">where</td><td class="desc">Allows to define the 'where' condition(s) string<span class="right"><span class="sample">E.g. <span class="val">&#x27;name=&#x27;Bob&#x27; and :name=:value or id=:value&#x27;</span></span></span></td></tr>
-<tr><td class="name">whereParams&nbsp;/ <span class="right">param&nbsp;<sup>[0..N]</sup></span></td><td class="desc">Parameters for the 'where' condition.
-
-The 'param'(s) are inserted in the order they are defined in place of the <code>:name</code> and <code>:value</code> placeholders. See generated SQL Sample below<div class="header">Attributes</div><table id="nestedAttrs">{%include Param.md%}</table></td></tr>
+<tr><td class="name">where</td><td class="desc">Allows to define the 'where' condition(s) string<span class="right"><span class="sample">E.g. <span class="val">&#x27;name=&#x27;Bob&#x27;&#x27;</span></span></span></td></tr>
 </table><div id='changelog-tabs'>
 <ul>
     <li><a href="#tab-xml">XML Sample</a></li>
@@ -47,11 +44,7 @@ The 'param'(s) are inserted in the order they are defined in place of the <code>
             schemaName="public"
             tableName="person">
         <column name="address" value="address value"/>
-        <where>name='Bob' and :name=:value or id=:value</where>
-        <whereParams>
-            <param name="id" value="str"/>
-            <param valueNumeric="123"/>
-        </whereParams>
+        <where>name='Bob'</where>
     </update>
 </changeSet>
 {% endhighlight %}
@@ -70,13 +63,7 @@ changeSet:
           value: address value
       schemaName: public
       tableName: person
-      where: name='Bob' and :name=:value or id=:value
-      whereParams:
-      - param:
-          name: id
-          value: str
-      - param:
-          valueNumeric: !!float '123'
+      where: name='Bob'
 
 {% endhighlight %}
 </div>
@@ -100,20 +87,7 @@ changeSet:
           ,
           "schemaName": "public",
           "tableName": "person",
-          "where": "name='Bob' and :name=:value or id=:value",
-          "whereParams": [
-            {
-              "param": {
-                "name": "id",
-                "value": "str"
-              }
-            },
-            {
-              "param": {
-                "valueNumeric": 123
-              }
-            }]
-          
+          "where": "name='Bob'"
         }
       }]
     
@@ -128,7 +102,7 @@ changeSet:
 ## SQL Generated From Above Sample (MySQL)
 
 {% highlight sql %}
-UPDATE cat.person SET address = 'address value' WHERE name='Bob' and id='str' or id='123';
+UPDATE cat.person SET address = 'address value' WHERE name='Bob';
 
 
 {% endhighlight %}

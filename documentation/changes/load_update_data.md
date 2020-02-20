@@ -24,9 +24,9 @@ A value of NULL in a cell will be converted to a database NULL rather than the s
 <table class='attribs'>
 <tr><th>Name</th><th>Description</th></tr>
 <tr><td class="name">catalogName</td><td class="desc">Name of the catalog<span class="right"><span class="since">@ v3.0</span><span class="sample">E.g. <span class="val">&#x27;cat&#x27;</span></span></span></td></tr>
-<tr><td class="name">commentLineStartsWith</td><td class="desc">Lines starting with this are treated as comment and ignored.<span class="right"><span class="default">Default: <span class="val">&#x27;#&#x27;</span></span></span></td></tr>
+<tr><td class="name">commentLineStartsWith</td><td class="desc">Lines starting with this character are treated as comment and ignored.<span class="right"><span class="default">Default: <span class="val">&#x27;#&#x27;</span></span></span></td></tr>
 <tr><td class="name">encoding</td><td class="desc">Encoding of the CSV file (defaults to UTF-8)<span class="right"><span class="default">Default: <span class="val">&#x27;utf-8&#x27;</span></span></span></td></tr>
-<tr><td class="name" required>file</td><td class="desc">CSV file to load<span class="right"><span class="sample">E.g. <span class="val">&#x27;example/users.csv&#x27;</span></span></span></td></tr>
+<tr><td class="name" required>file</td><td class="desc">CSV file to load<span class="right"><span class="sample">E.g. <span class="val">&#x27;com/example/users.csv&#x27;</span></span></span></td></tr>
 <tr><td class="name">onlyUpdate</td><td class="desc"><span class="type">boolean</span>If true, records with no matching database record should be ignored<span class="right"><span class="since">@ v3.3</span></span></td></tr>
 <tr><td class="name" required>primaryKey</td><td class="desc">Comma delimited list of the columns for the primary key<span class="right"><span class="sample">E.g. <span class="val">&#x27;pk_id&#x27;</span></span></span></td></tr>
 <tr><td class="name">quotchar</td><td class="desc">The quote character for string fields containing the separator character.<span class="right"><span class="default">Default: <span class="val">&#x27;&quot;&#x27;</span></span></span></td></tr>
@@ -40,10 +40,10 @@ A value of NULL in a cell will be converted to a database NULL rather than the s
 ## Nested Properties ##
 
 <table id="nestedProps" class="attribs">
-<tr><th>Name</th><th>Description</th></tr><tr><td class="name">columns&nbsp;/ <span class="right">column&nbsp;<sup>[0..N]</sup></span></td><td class="desc">Column mapping and defaults can be defined.
+<tr><th>Name</th><th>Description</th></tr><tr><td class="name">columns&nbsp;/ <span class="right">column&nbsp;<sup>[0..N]</sup></span></td><td class="desc">CSV -> table column mapping can be defined.
 
-The 'header' or 'index' attributes needs to be defined if the header name in the CSV is different than the column name needs to be inserted
-If no `column` defined at all, the type it is taken from the DB. Otherwise for non-string columns the type definition might be required<span class="right"><b>Note:</b> <i>columns</i> tag not required in XML</span><div class="header">Attributes</div><table id="nestedAttrs">{%include LoadDataColumnConfig.md%}</table></td></tr>
+Either the 'header' or 'index' attribute needs to be defined for columns if the header name in the CSV is different than the column needs to be inserted
+If no `column` defined at all, header names has to match the column names in the table.The column type it is taken from the DB. Otherwise for non-string columns the type definition might be required<span class="right"><b>Note:</b> <i>columns</i> tag not required in XML</span><div class="header">Attributes</div><table id="nestedAttrs">{%include LoadDataColumnConfig.md%}</table></td></tr>
 </table><div id='changelog-tabs'>
 <ul>
     <li><a href="#tab-xml">XML Sample</a></li>
@@ -54,9 +54,9 @@ If no `column` defined at all, the type it is taken from the DB. Otherwise for n
 {% highlight xml %}
 <changeSet author="liquibase-docs" id="loadUpdateData-example">
     <loadUpdateData catalogName="cat"
-            commentLineStartsWith="//"
+            commentLineStartsWith="/"
             encoding="UTF-8"
-            file="example/users.csv"
+            file="com/example/users.csv"
             onlyUpdate="true"
             primaryKey="pk_id"
             quotchar="'"
@@ -92,9 +92,9 @@ changeSet:
           index: 3
           name: name
           type: BOOLEAN
-      commentLineStartsWith: //
+      commentLineStartsWith: /
       encoding: UTF-8
-      file: example/users.csv
+      file: com/example/users.csv
       onlyUpdate: true
       primaryKey: pk_id
       quotchar: ''''
@@ -132,9 +132,9 @@ changeSet:
               }
             }]
           ,
-          "commentLineStartsWith": "//",
+          "commentLineStartsWith": "/",
           "encoding": "UTF-8",
-          "file": "example/users.csv",
+          "file": "com/example/users.csv",
           "onlyUpdate": true,
           "primaryKey": "pk_id",
           "quotchar": "'",

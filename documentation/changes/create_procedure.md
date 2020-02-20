@@ -29,7 +29,7 @@ It can be a comma separated list of multiple databases.
 Or You can also specify that a change is <b>NOT</b> applicable to a particular database type by prefixing with <code>!</code>. The keywords <code>all</code> and <code>none</code> are also available.<span class="right"><span class="since">@ v3.1</span><span class="sample">E.g. <span class="val">&#x27;h2, !oracle, mysql&#x27;</span></span></span></td></tr>
 <tr><td class="name">encoding</td><td class="desc">Name of the encoding (as specified in <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/charset/Charset.html">java.nio.Charset javadoc</a>) used in the file defined in the `path` attribute<span class="right"><span class="default">Default: <span class="val">&#x27;utf-8&#x27;</span></span></span></td></tr>
 <tr><td class="name">path</td><td class="desc">File containing the procedure text. Either this attribute or a nested procedure text is required.<span class="right"><span class="sample">E.g. <span class="val">&#x27;com/example/my-logic.sql&#x27;</span></span></span></td></tr>
-<tr><td class="name" required>[XML text content] / procedureText</td><td class="desc">The SQL creating the procedure. Either this or the <code>path</code> attribute needs to be defined.<span class="right"><span class="sample">E.g. <span class="val">&#x27;CREATE OR REPLACE PROCEDURE testHello
+<tr><td class="name" required>[XML: text content] / procedureText</td><td class="desc">The SQL creating the procedure. Either this or the <code>path</code> attribute needs to be defined.<span class="right"><span class="sample">E.g. <span class="val">&#x27;CREATE OR REPLACE PROCEDURE testHello
     IS
     BEGIN
       DBMS_OUTPUT.PUT_LINE(&#x27;Hello From The Database!&#x27;);

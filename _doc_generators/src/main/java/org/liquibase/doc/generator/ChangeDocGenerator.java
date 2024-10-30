@@ -1,5 +1,6 @@
 package org.liquibase.doc.generator;
 
+import freemarker.template.*;
 import j2html.tags.ContainerTag;
 import j2html.tags.Tag;
 import liquibase.change.*;
@@ -250,7 +251,18 @@ public class ChangeDocGenerator {
         }
         return params;
     }
+    public static class ChangeData {
+        public ChangeMetaData getMetaData() {
+            return metaData;
+        }
 
+        public List<ChangeParamMetaData> getParams() {
+            return params;
+        }
+
+        ChangeMetaData metaData;
+        List<ChangeParamMetaData> params;
+    }
     private static void writeChangePages(Map<String, SortedSet<Class<? extends Change>>> definedChanges, List<Database> databases) throws Exception {
         List<Database> exampleDatabases = new ArrayList<Database>(databases);
         exampleDatabases.add(0, new HsqlDatabase());
@@ -258,6 +270,33 @@ public class ChangeDocGenerator {
         exampleDatabases.add(0, new MSSQLDatabase());
         MySQLDatabase defaultExampleDatabase = new MySQLDatabase();
         exampleDatabases.add(0, defaultExampleDatabase);
+
+        Configuration cfg = new Configuration(Configuration.VERSION_2_3_31);
+        cfg.setClassForTemplateLoading(ChangeDocGenerator.class, "/templates");
+        Template xsdTemplate = cfg.getTemplate("changeDocTemplate.ftl");
+        Map<String, Object> xsdDataModel = new HashMap<>();
+        Map<String, ChangeData> changeDataModel = new HashMap<>();
+        for (String changeName : definedChanges.keySet()) {
+            Change exampleChange = ChangeFactory.getInstance().create(changeName);
+
+            ChangeData changeData = new ChangeData();
+            changeData.metaData = ChangeFactory.getInstance().getChangeMetaData(exampleChange);
+            changeData.params =  setExamples(defaultExampleDatabase, exampleChange, changeData.metaData);
+            if (changeData.metaData != null) {
+                changeDataModel.put(changeData.metaData.getName(), changeData);
+            }
+        }
+
+        xsdDataModel.put("changes", changeDataModel);
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("liquibase_changes.xsd"));
+        xsdTemplate.process(xsdDataModel, bufferedWriter);
+        bufferedWriter.close();
+
+
+
+
+
+
 
         for (String changeName : definedChanges.keySet()) {
             Change exampleChange = ChangeFactory.getInstance().create(changeName);

@@ -154,11 +154,11 @@ public class ChangeDocGenerator {
             return this.defaultValue;
         }
 
-        Class getContainedType() {
+        public Class getContainedType() {
             return containedType;
         }
 
-        boolean requiredForAll() {
+        public boolean requiredForAll() {
             return getRequiredForDatabase().contains(ALL);
         }
 
@@ -251,7 +251,18 @@ public class ChangeDocGenerator {
         }
         return params;
     }
+
+    /**
+     * Wrapper class to store the change metadata, parameters, and nested parameters for the FreeMarker template
+     */
     public static class ChangeData {
+
+        public ChangeData() {
+            this.nestedParams = new ArrayList<>();
+            this.metaData = null;
+            this.params = new ArrayList<>();
+        }
+
         public ChangeMetaData getMetaData() {
             return metaData;
         }
@@ -260,9 +271,62 @@ public class ChangeDocGenerator {
             return params;
         }
 
+        public List<ChangeParamMetaData> getNestedParams() {
+            return nestedParams;
+        }
+
+        /**
+         * Nested parameters of a change (children)
+         */
+        List<ChangeParamMetaData> nestedParams;
+
+        /**
+         * Metadata of a change
+         */
         ChangeMetaData metaData;
+
+        /**
+         * Parameters of a change, wrapped in ChangeParamMetaData
+         */
         List<ChangeParamMetaData> params;
     }
+
+    /**
+     * Generate XSD file using FreeMarker template
+     * @param definedChanges Changes to generate XSD for
+     * @param defaultExampleDatabase Default database to use for examples
+     * @throws IOException if an I/O error occurs
+     * @throws TemplateException if an error occurs while processing the template
+     */
+    private static void generateXSDwithFreeMarker(Map<String, SortedSet<Class<? extends Change>>> definedChanges, MySQLDatabase defaultExampleDatabase) throws IOException, TemplateException {
+        Configuration cfg = new Configuration(Configuration.VERSION_2_3_31);
+        cfg.setClassForTemplateLoading(ChangeDocGenerator.class, "/templates");
+        Template xsdTemplate = cfg.getTemplate("changeDocTemplate.ftl");
+
+        Map<String, ChangeData> changeDataModel = new HashMap<>(); /// Map for the processed changes
+        for (String changeName : definedChanges.keySet()) {
+            Change exampleChange = ChangeFactory.getInstance().create(changeName); /// Create an instance of the change
+            ChangeData changeData = new ChangeData();
+            changeData.metaData = ChangeFactory.getInstance().getChangeMetaData(exampleChange); /// Get the metadata of the change
+            changeData.params =  setExamples(defaultExampleDatabase, exampleChange, changeData.metaData); /// Set the examples for the change
+            for (ChangeParamMetaData param : changeData.params) {
+                if (param.isContainer()) { /// If the parameter is a container, add it to the nested parameters
+                    changeData.nestedParams.add(param);
+                }
+            }
+            if (changeData.metaData != null) { /// If the metadata is present, add it to the changeDataModel
+                changeDataModel.put(changeData.metaData.getName(), changeData);
+            }
+        }
+
+        Map<String, Object> xsdDataModel = new HashMap<>(); /// Map for the processed changes and for the template
+        xsdDataModel.put("changes", changeDataModel);
+
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("liquibase_changes.xsd"));
+        xsdTemplate.process(xsdDataModel, bufferedWriter);
+        bufferedWriter.close();
+    }
+
     private static void writeChangePages(Map<String, SortedSet<Class<? extends Change>>> definedChanges, List<Database> databases) throws Exception {
         List<Database> exampleDatabases = new ArrayList<Database>(databases);
         exampleDatabases.add(0, new HsqlDatabase());
@@ -271,27 +335,7 @@ public class ChangeDocGenerator {
         MySQLDatabase defaultExampleDatabase = new MySQLDatabase();
         exampleDatabases.add(0, defaultExampleDatabase);
 
-        Configuration cfg = new Configuration(Configuration.VERSION_2_3_31);
-        cfg.setClassForTemplateLoading(ChangeDocGenerator.class, "/templates");
-        Template xsdTemplate = cfg.getTemplate("changeDocTemplate.ftl");
-        Map<String, Object> xsdDataModel = new HashMap<>();
-        Map<String, ChangeData> changeDataModel = new HashMap<>();
-        for (String changeName : definedChanges.keySet()) {
-            Change exampleChange = ChangeFactory.getInstance().create(changeName);
-
-            ChangeData changeData = new ChangeData();
-            changeData.metaData = ChangeFactory.getInstance().getChangeMetaData(exampleChange);
-            changeData.params =  setExamples(defaultExampleDatabase, exampleChange, changeData.metaData);
-            if (changeData.metaData != null) {
-                changeDataModel.put(changeData.metaData.getName(), changeData);
-            }
-        }
-
-        xsdDataModel.put("changes", changeDataModel);
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("liquibase_changes.xsd"));
-        xsdTemplate.process(xsdDataModel, bufferedWriter);
-        bufferedWriter.close();
-
+        generateXSDwithFreeMarker(definedChanges, defaultExampleDatabase);
 
 
 
